@@ -1,0 +1,26 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1995pankyo 1995senmon)
+docs_ex=(1995pankyo2)
+
+_1995pankyo_title='1995年度実施 一般教育科目'
+_1995pankyo_cov=()
+_1995pankyo_prb=(1995engl.tex 1995math.tex 1995phys.tex)
+_1995pankyo_ans=(1995engl.tex 1995math.tex 1995phys.tex)
+_1995pankyo_dep=(1995engl-1.eps 1995math-1.eps 1995math-2.eps 1995phys-1.eps 1995phys-2.eps)
+
+_1995pankyo2_title='1995年度実施 一般教育科目 (英語なし)'
+_1995pankyo2_cov=()
+_1995pankyo2_prb=(1995math.tex 1995phys.tex)
+_1995pankyo2_ans=(1995math.tex 1995phys.tex)
+_1995pankyo2_dep=(1995engl-1.eps 1995math-1.eps 1995math-2.eps 1995phys-1.eps 1995phys-2.eps)
+
+_1995senmon_title='1995年度実施 物理専門科目'
+_1995senmon_cov=()
+_1995senmon_prb=(1995phy1.tex 1995phy2.tex 1995phy3.tex 1995phy4.tex 1995phy5.tex 1995phy6.tex 1995phy7.tex 1995phy8.tex)
+_1995senmon_ans=(1995phy1.tex 1995phy2.tex 1995phy3.tex 1995phy4.tex 1995phy5.tex 1995phy6.tex 1995phy7.tex 1995phy8.tex)
+_1995senmon_dep=(
+  1995phy1-1.eps 1995phy1-2.eps 1995phy2-1.eps 1995phy2-2.eps 1995phy3-1.eps 1995phy3-2.eps 1995phy4-1.eps 1995phy4-2.eps 1995phy4-3.eps
+  1995phy5-1.eps 1995phy5-2.eps 1995phy5-3.eps 1995phy5-4.eps 1995phy5-5.eps 1995phy6-1.eps 1995phy6-2.eps
+  1995phy7-1.eps 1995phy7-2.eps 1995phy8-1.eps 1995phy8-2.eps)
