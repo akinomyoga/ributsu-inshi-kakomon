@@ -1,0 +1,43 @@
+%-------------------------------------------------------------------------------
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+gsave
+  0.8 setlinewidth
+
+  % yokojiku
+  0 20 moveto
+  200 20 lineto
+  currentpoint
+  stroke
+  gsave
+    translate
+    mwg-arrow-headA
+  grestore
+  /Times-Italic findfont 18 scalefont setfont
+  195 5 moveto
+  (x) show
+
+  % tatejiku
+  100 0 moveto
+  100 200 lineto
+  currentpoint
+  stroke
+  gsave
+    translate
+    90 rotate
+    1 1 scale
+    mwg-arrow-headA
+  grestore
+  /Times-Italic findfont 18 scalefont setfont
+  105 195 moveto
+  (U) show
+
+grestore
+%-------------------------------------------------------------------------------

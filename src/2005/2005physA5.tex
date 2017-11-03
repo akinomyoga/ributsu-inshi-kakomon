@@ -1,0 +1,127 @@
+\subsection*{第５問 ～ Drude理論、Hall効果}
+
+\begin{enumerate}
+\def\<{\langle}
+\def\>{\rangle}
+\def\kB{k_{\mathrm B}}
+\item 
+  \begin{enumerate}
+  \item 
+    \begin{equation}
+    \frac{d \overrightarrow{v}(t)}{dt}
+    =-\frac{e}{m}(\overrightarrow{E}+\overrightarrow{v}(t)\times \overrightarrow{B})
+    \end{equation}
+  \item 
+    \begin{equation}
+    \frac{d \overrightarrow{v}(t)}{dt}
+    =-\frac{e}{m}(\overrightarrow{E}+\overrightarrow{v}(t)\times \overrightarrow{B})
+    -\frac{\overrightarrow{v}(t)}{\tau}
+    \end{equation}
+    $\overrightarrow{B}=0$のとき、電場に平行な方向について
+    \begin{equation}
+    \frac{dv}{dt}=-\frac{e}{m}E-\frac{v}{\tau}
+    \end{equation}
+    一階微分方程式の一般解から
+    \begin{equation}
+    v
+    =e^{-\int\frac{dt}{\tau}}(\int e^{\int\frac{dt}{\tau}}(-\frac{e}{m}Edt)+const.)
+    =-\frac{e\tau}{m}E +Ce^{-\frac{t}{\tau}}
+    \end{equation}
+    積分定数$C$を決めるため、$t=0$で$v(0)=0$より
+    \begin{equation}
+    0=-\frac{e\tau}{m}E+C
+    \end{equation}
+    よって
+    \begin{align}
+    v(t)&=-\frac{e\tau}{m}E(1-e^{-\frac{t}{\tau}})\\
+    v_{\infty}&=-\frac{e\tau}{m}E
+    \end{align}
+  \item 
+    \begin{equation}
+    j=-nev_{\infty}=\frac{e^2\tau n}{m}E
+    \end{equation}
+    電気伝導度$\sigma$は
+    \begin{equation}
+    \sigma =\frac{j}{E}=\frac{e^2n}{m}\tau
+    \end{equation}
+    $\tau$の温度依存性を高温、低温の場合に考える。\\
+    高温の場合、格子振動の寄与が大きい。\\
+    衝突断面積$S$、電子の平均速度$\<v\>$、フォノンの振幅$a$、フォノンの質量$M$として、
+    エネルギー等分配則を使うと
+    \begin{align}
+    \frac{1}{2}M\<a\>^2&=\frac{1}{2}\kB T\\
+    \frac{1}{2}m\<v\>^2&=\frac{1}{2}\kB T
+    \end{align}
+    $S \propto \<a\>^2$であり、
+    $\frac{1}{\tau} \propto (散乱頻度) \propto S\<v\> \propto T^{3/2}$なので
+    \begin{align}
+    \tau \propto T^{-3/2}
+    \end{align}
+    低温の場合、不純物散乱の寄与が大きい。\\
+    ラザフォード散乱では
+    \begin{equation}
+    S \propto \<v\>^{-4}
+    \end{equation}
+    これを示すのはかなり面倒なので、
+    力学か量子力学の何かの教科書（散乱）を見てください。
+    古典でも量子でも結果は同じです。
+    多分結果を記憶していたほうが良い。
+    \begin{align}
+    \frac{1}{2}m\<v\>^2=\frac{1}{2}\kB T
+    \end{align}
+    $\frac{1}{\tau} \propto \verb|(散乱頻度)| \propto S\<v\> \propto T^{-3/2}$なので
+    \begin{equation}
+    \tau \propto T^{3/2}
+    \end{equation}
+    ここではnの温度依存性は無視するようですから、
+    \begin{align}
+    \sigma &\propto \tau\\
+    &\propto T^{-3/2} \;\; (at 高温)\\
+    &\propto T^{3/2} \;\; (at 低温)
+    \end{align}
+  \item 
+    \begin{equation}
+    -e(E_y+v_xB)=0
+    \end{equation}
+    \begin{equation}
+    v_x=v_{\infty}=-\frac{j}{ne}
+    \end{equation}
+    \begin{equation}
+    E_H=E_y=-\frac{jB}{ne}
+    \end{equation}
+  \end{enumerate}
+\item 
+  \begin{equation}
+  E_H \propto -\frac{1}{n}
+  \end{equation}
+  なので、$n$ の温度依存性を考えればよい。高温、中間、低温の３つの領域に分けて考える。\\
+  高温領域（真性領域）\\
+  ドナーは全て伝導帯へ励起しており、かつ価電子帯からも伝導帯へ励起する領域。
+  \begin{equation}
+  \log(n) \propto -\frac{1}{T}
+  \end{equation}
+  中間領域（出払い領域)\\
+  ドナーが全て伝導帯へ励起して自由電子として振る舞う。価電子帯からの励起はない領域。
+  \begin{equation}
+  \log(n) \sim \mathrm{const}.
+  \end{equation}
+  低温領域（～凍結領域）\\
+  十分多数のドナーがイオン化していない（励起していない）領域。
+  \begin{equation}
+  \log(n) \propto -\frac{1}{T}
+  \end{equation}
+  図は略します。横軸は $T$ の逆数、縦軸は $\log$ スケールで描くと良いと思います。
+  高温領域の傾きは低温領域の傾きよりも急です。
+  詳しくは固体物理の教科書を参照（H.イバッハ、H.リュート著「固体物理学」１２章など）。
+  何故か$n$の表式を導くヒントが何も与えられていないので、
+  これくらいの特性は覚えていろということでしょうか。
+\item ブロック図は略します。図の概要のみ述べます。\\
+  設問の図１の装置（ドープした試料）の$y$-$z$面については、
+  片方の面に電流計を挟んで電流源を繋ぎ、
+  もう片方の面は接地します。\\
+  $z$-$x$面については、両端を抵抗を挟んで繋ぎ、回路にします。
+  抵抗と並列に電圧計を繋ぎます。\\
+  測定上の注意点としては、常に定電流、定磁場をかけて測定すること。
+  ドーピングするドナーは多すぎても少なすぎてもいけない。
+\end{enumerate}
+

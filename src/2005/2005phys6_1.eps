@@ -1,0 +1,177 @@
+%!
+%%BoundingBox: 0 0 270 250
+%-------------------------------------------------------------------------------
+
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+/mwg-arrow-rel {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-arrow-headA
+  grestore
+} def
+
+%-------------------------------------------------------------------------------
+gsave
+  70 100 translate
+  0.6 setlinewidth
+  
+  % machine
+  0 0 30 0 360 arc closepath
+  gsave 0.8 setgray fill grestore
+  stroke
+  0 0 40 0 360 arc closepath
+  stroke
+  
+  /chimny {
+    12 38.5 moveto
+    12 50 lineto
+    -12 38.5 moveto
+    -12 50 lineto
+    15 50 moveto
+    -15 50 lineto
+    -15 55 lineto
+    15 55 lineto
+    closepath
+  } def
+  chimny
+  90 rotate chimny
+  90 rotate chimny
+  90 rotate chimny
+  90 rotate
+  stroke
+  
+  -3 -90 moveto
+  -3  90 lineto
+   3 -90 moveto
+   3  90 lineto
+  stroke
+  
+  % axis
+  0 0 0 120 mwg-arrow-rel
+  0 0 170 0 mwg-arrow-rel
+  /Times-Italic-H findfont 22 scalefont setfont
+  -5 130 moveto (y) show
+  175 -5 moveto (x) show
+  
+  % rayline
+  gsave
+    1 0.7 scale
+    -52 10.4 moveto
+    75 -15 lineto
+    100 -15 lineto
+    -52 -10.4 moveto
+    75 15 lineto
+    100 15 lineto
+    stroke
+  grestore
+  75 15 moveto
+  72 5
+  72 -5
+  75 -15 curveto
+  78 -5
+  78 5
+  75 15 curveto
+  stroke
+  
+  % labels
+  /GothicBBB-Medium-EUC-H findfont 10 scalefont setfont
+  -60 25 moveto (\277\277\266\365\315\306\264\357) show % shinku youki
+  11 22 moveto (\316\251\302\316\263\321) show % rittaikaku
+  65 28 moveto (\275\270\270\367) show % shuukou
+  60 18 moveto (\245\354\245\363\245\272) show % renzu
+  -50 -55 moveto (\277\277\266\365\301\353) show % shinkuumado
+  -20 -15 moveto (\245\327\245\351\245\272\245\336) show % purazuma
+  %0 0 moveto  show
+  
+  gsave
+    18 7 translate
+    /Ryumin-Light-EUC-H findfont 16 scalefont setfont
+    0 0 moveto (\246\270) show % Omega
+    /Times-Roman-H findfont 12 scalefont setfont
+    13 -2 moveto (s) show
+  grestore
+  
+  0 0 0.5 setrgbcolor
+  
+  gsave
+    -22 -80 translate
+    /Times-Italic-H findfont 22 scalefont setfont
+    0 0 moveto (k) show
+    /Times-Roman-H findfont 16 scalefont setfont
+    10 -3 moveto (i) show
+    /Ryumin-Light-EUC-H findfont 14 scalefont setfont
+    1 12 moveto (\242\252) show
+    
+    22 -2 translate
+    0 25 moveto
+    -3 -12 rlineto
+    6 0 rlineto
+    closepath
+    fill
+    0 0 moveto
+    0 15 lineto
+    3 setlinewidth
+    stroke
+    
+    /GothicBBB-Medium-EUC-H findfont 10 scalefont setfont
+    10 5 moveto (\306\376\274\315\270\367) show % nyuushakou
+  grestore
+  
+  gsave
+    22 -25 translate
+    /Times-Italic-H findfont 22 scalefont setfont
+    0 0 moveto (k) show
+    /Times-Roman-H findfont 16 scalefont setfont
+    10 -3 moveto (s) show
+    /Ryumin-Light-EUC-H findfont 14 scalefont setfont
+    1 12 moveto (\242\252) show
+    
+    -3 25 translate
+    -90 rotate
+    0 25 moveto
+    -3 -12 rlineto
+    6 0 rlineto
+    closepath
+    fill
+    0 0 moveto
+    0 15 lineto
+    3 setlinewidth
+    stroke
+    90 rotate
+    
+    /GothicBBB-Medium-EUC-H findfont 10 scalefont setfont
+    -5 -40 moveto (\273\266\315\360\270\367) show % sanrankou
+  grestore
+  
+  gsave
+    110 0 translate
+    -90 rotate
+    0 40 moveto
+    -3 -12 rlineto
+    6 0 rlineto
+    closepath
+    fill
+    0 0 moveto
+    0 32 lineto
+    3 setlinewidth
+    stroke
+    90 rotate
+    
+    /GothicBBB-Medium-EUC-H findfont 10 scalefont setfont
+    -1 -15 moveto (\270\241\275\320\264\357\244\330) show % kenshutu-ki he
+  grestore
+grestore

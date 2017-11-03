@@ -1,0 +1,114 @@
+\subsection*{第６問 ～ ドップラー効果}
+
+\begin{enumerate}
+\def\<{\langle}
+\def\>{\rangle}
+\def\kB{k_{\mathrm B}}
+\item イオンは電子に比べて十分重いため、イオンの振動は電子に比べ遥かに緩やかで、無視できるから。
+\item 
+  \begin{enumerate}
+  \item 入射光を感じる電子は、$y$方向に
+    \begin{equation}
+    v_y=\frac{\overrightarrow{k_i}\cdot \overrightarrow{v}}{|\overrightarrow{k_i}|}
+    \end{equation}
+    の速度で動くため、ドップラー効果を考えると
+    \begin{align}
+    \omega_e&=\frac{c-v_y}{c}\omega_i\\
+    &=\frac{c-(\overrightarrow{k_i}\cdot \overrightarrow{v})/|\overrightarrow{k_i}|}{c}\omega_i
+    \end{align}
+  \item 
+    同様に電子が放射する際は、光源が
+    \begin{equation}
+    v_x=\frac{\overrightarrow{k_s}\cdot \overrightarrow{v}}{|\overrightarrow{k_s}|}
+    \end{equation}
+    で動くので、ドップラー効果を考えて、
+    \begin{align}
+    \omega_s&=\frac{c}{c-v_x}\omega_e\\
+    &=\frac{c}{c-v_x}\frac{c-v_y}{c}\omega_i\\
+    &=\frac{c-(\overrightarrow{k_i}\cdot \overrightarrow{v})/|\overrightarrow{k_i}|}{c-(\overrightarrow{k_s}\cdot \overrightarrow{v})/|\overrightarrow{k_s}|}\omega_i
+    \end{align}
+  \item 
+    \begin{equation}
+    \omega_s=\frac{3\times 10^8+3\times 10^6}{3\times 10^8-3\times 10^6}\omega_i
+    \end{equation}
+    $\omega=2\pi c/\lambda$から
+    \begin{equation}
+    \lambda_s=\frac{2.97}{3.03}\lambda_i
+    \end{equation}
+    散乱光は入射光より0.02$\mu$m 短くなる。
+  \end{enumerate}
+\item 電子の平均速度$\<\overrightarrow{v}\>=0$より$\omega_0=\omega_i$
+  （ドップラーシフトを受けないことに相当）。
+  \begin{equation}
+  \omega_e=\frac{c-v_y}{c}\omega_0
+  \end{equation}
+  より
+  \begin{equation}
+  v^2_y=\frac{(\omega_e-\omega_0)^2}{\omega^2_0}c^2
+  \end{equation}
+  Maxwell分布で考えるので、電子が$v_y$で動いているとき
+  （電子に入射する光の角振動数としては$\omega_e$）の
+  入射光の強度Iは
+  \begin{align}
+  I &\propto \exp(-\frac{m_e v^2_y}{2\kB T_e})\\
+  &= \exp(-\frac{m_e c^2(\omega_e-\omega_0)^2}{2\kB T_e \omega^2_0})
+  \end{align}
+  よって入射光の強度が$1/e$になるときの$\omega_e$は
+  \begin{equation}
+  \frac{1}{e}=\exp(-\frac{m_e c^2(\omega_e-\omega_0)^2}{2\kB T_e \omega^2_0})
+  \end{equation}
+  を満たす。
+  よって入射光の広がりの幅$\Delta \omega_1$は上の式で$\Delta \omega_1= \omega_e-\omega_0$として
+  \begin{equation}
+  \Delta \omega_1 = \omega_0\sqrt{\frac{2\kB T_e}{m_ec^2}}
+  \end{equation}
+  光が電子に入射する際と、光が電子から放射される際のドップラー広がりは同程度
+  と考えられるので、散乱光の広がりの幅$\Delta \omega_2=\Delta \omega_1$である。\\
+  最終的に検出される散乱光のスペクトルは、光が電子に入射した際のドップラー広がりと
+  光が電子から放射される際のドップラー広がりを合成したものと見なすことができる。
+  ２つのドップラー広がりを合成したスペクトル$G(\omega)$は
+  入射、放射のスペクトル$G_1(\omega),G_2(\omega)$を用いて
+  \begin{equation}
+  G(\omega)=\int^{\infty}_{-\infty}G_1(\nu)G_2(\omega+\omega_0-\nu)d\nu
+  \end{equation}
+  と書くことができる。今回の場合
+  \begin{align}
+  G_1(\omega)&=G_2(\omega)\\
+  &\propto \exp(-\frac{m_e c^2(\omega-\omega_0)^2}{2\kB T_e \omega^2_0})
+  \end{align}
+  だから、
+  \begin{equation}
+  G(\omega) \propto \exp(-\frac{m_e c^2((\omega-\nu)^2+(\omega_0-\nu)^2)}{2\kB T_e \omega^2_0})
+  \end{equation}
+  となる。ガウス積分して整理すると、
+  \begin{equation}
+  G(\omega) \propto \exp(-\frac{m_e c^2(\omega-\omega_0)^2}{4\kB T_e \omega^2_0})
+  \end{equation}
+  となるので、この広がりの幅$\Delta \omega = \omega-\omega_0$は
+  \begin{equation}
+  \frac{1}{e} = \exp(-\frac{m_e c^2(\Delta \omega)^2}{4\kB T_e \omega^2_0})
+  \end{equation}
+  から
+  \begin{equation}
+  \Delta \omega =2\omega_0\sqrt{\frac{\kB T_e}{m_ec^2}}
+  \end{equation}
+  ２つのガウス型曲線を合成した曲線の幅$\Delta \omega$は
+  各々のガウス型曲線の幅$\Delta \omega_1,\Delta \omega_2$を用いて
+  \begin{equation}
+  (\Delta \omega)^2= (\Delta \omega_1)^2+(\Delta \omega_2)^2
+  \end{equation}
+  となることを知っているとより簡単に答えられることに注意。\\
+  スペクトルの図は略します。いつものガウス曲線(縦軸に強度、横軸に$\omega$)を描いて、
+  ピークにあたる$\omega$を$\omega_0$、強度が$1/e$になる$\omega$と$\omega_0$との幅を$\Delta \omega$とすればよい。
+\item 散乱される光子の割合$\sigma_\mathrm{total}$は
+  \begin{align}
+  \sigma_\mathrm{total}
+  &=\int n_e \times L\times 10^{-2}\times \frac{d\sigma}{d\Omega_s} d\Omega_s\\
+  &=10^{20} \times 1 \times 10^{-2} \times r^2_e \times 10^{-2}\\
+  &=9 \times 10^{-14}
+  \end{align}
+\item モノクロメータのような分光器で特定の波長の光子を選択し、
+  光電子増倍管などで強度を測定すればよい。\\
+  迷光対策：レーザーの太さを絞る、真空容器のサイズを大きくする、真空容器壁を
+  光の反射率が低い材質のもので覆う、など。
+\end{enumerate}

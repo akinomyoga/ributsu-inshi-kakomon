@@ -1,0 +1,89 @@
+\subsection*{第３問 ～ 電磁波}
+
+\begin{enumerate}
+\item 
+  \begin{align}
+  \nabla \times(\nabla \times \overrightarrow{V})
+  &=\epsilon_{ijk} \partial_j \epsilon_{klm} \partial_l V_m\\
+  &=(\delta_{il} \delta_{jm} - \delta_{im} \delta_{jl})\partial_j \partial_l V_m\\
+  &=\partial_i \partial_m V_m - \partial_j \partial_j V_m\\
+  &=\nabla(\nabla \cdot \overrightarrow{V}) - \nabla^2 \overrightarrow{V}
+  \end{align}
+  ただし
+  \begin{equation}
+  \epsilon_{ijk}\epsilon_{klm}
+  =\delta_{il} \delta_{jm} - \delta_{im} \delta_{jl}
+  \end{equation}
+  を用いた。
+\item これ以降、$\overrightarrow{E}$などの上付き矢印をしばしば省略して電場$E$,磁場$B$,波数ベクトル$k$などと記す。ただし内積、外積に関しては$\cdot$や$\times$を明記する。
+  $E$について
+  \begin{align}
+  \nabla \times(\nabla \times \overrightarrow{E})
+  &=-\frac{\partial}{\partial t}(\nabla \times \overrightarrow{B})\\
+  &=-\frac{\partial}{\partial t}(\epsilon_0\mu_0\frac{\partial E}{\partial t})\\
+  &=-\epsilon_0\mu_0\frac{\partial^2 E}{\partial t^2}\\
+  &=\nabla(\nabla \cdot \overrightarrow{E}) - \nabla^2 \overrightarrow{E}
+  \end{align}
+  よって
+  \begin{equation}
+  (\nabla^2 - \epsilon_0\mu_0\frac{\partial^2}{\partial t^2})E=0
+  \end{equation}
+  $B$についても同様に
+  \begin{equation}
+  (\nabla^2 - \epsilon_0\mu_0\frac{\partial^2}{\partial t^2})B=0
+  \end{equation}
+\item 題の式(\ref{eq:2005phys3_1})(\ref{eq:2005phys3_2})を波動方程式に代入すると
+  $E$について
+  \begin{equation}
+  (-k^2+\frac{\omega^2}{c^2})\sin(k \cdot r - \omega t + \alpha)=0
+  \end{equation}
+  よって求める条件は$\omega^2=c^2k^2$。Bについても同様に$\omega^{2 \prime} =c^2k^{2 \prime}$。
+\item Maxwell方程式(\ref{eq:2005phys3-maxwell-1})(\ref{eq:2005phys3-maxwell-2})から
+  \begin{equation}
+  \nabla \cdot \overrightarrow{E} = \overrightarrow{E_0} \cdot \overrightarrow{k} \cos(k \cdot r -\omega t +\alpha)=0
+  \end{equation}
+  \begin{equation}
+  \nabla \cdot \overrightarrow{B} = \overrightarrow{B_0} \cdot \overrightarrow{k} \cos(k \cdot r -\omega t +\alpha)=0
+  \end{equation}
+  これが常に成り立つので
+  \begin{equation}
+   \overrightarrow{E_0} \cdot \overrightarrow{k} = \overrightarrow{B_0} \cdot \overrightarrow{k^{\prime}}=0
+  \end{equation}
+  よって$E$と$k$、$B$と$k^{\prime}$は垂直。
+\item 
+  \begin{equation}
+  \nabla \times \overrightarrow{E} = \overrightarrow{k} \times \overrightarrow{E_0} \cos(\overrightarrow{k} \cdot \overrightarrow{r} - \omega t +\alpha)
+  =- \frac{\partial \overrightarrow{B}}{\partial t}
+  =\overrightarrow{B_0} \omega^{\prime} \cos(\overrightarrow{k^{\prime}} \cdot \overrightarrow{r} -\omega^{\prime}t + \alpha^{\prime})
+  \end{equation}
+  $\overrightarrow{k} \times \overrightarrow{E_0}$と$\overrightarrow{B_0}  \omega^{\prime}$は定数ベクトルだから、これらが常に成り立つためには
+  \begin{equation}
+  k = k^{\prime}  ,\omega=\omega^{\prime}  ,\alpha=\alpha^{\prime}
+  \end{equation}
+\item 設問５の途中式から
+  \begin{equation}
+  k \times E_0 = wB_0
+  \end{equation}
+  \begin{align}
+  k \times (k \times E_0)&= \epsilon_{ijk}k_j\epsilon_{klm}k_lE_{0m}\\
+  &=(\delta_{il}\delta{jm}-\delta{im}\delta{jl})k_jk_lE_{0m}\\
+  &=k_ik_mE_{0m}-k_lk_lE_{0m}\\
+  &=k(k \cdot E_0)-k^2E_0\\
+  &=-k^2E_0\\
+  &=wk \times B_0
+  \end{align}
+  よって$E_0$と$B_0$は垂直で、$E$と$B$は垂直。
+\item 
+  位相速度
+  \begin{equation}
+  v_p=\frac{\omega}{k}=\frac{ck}{k}=c
+  \end{equation}
+\item 
+  アンペール則
+  \begin{equation}
+  \int_C \overrightarrow{B} \cdot ds = \int_S \mu_0 \overrightarrow{i} \;dS
+  \end{equation}
+  などから$H=B/ \mu_0$の単位は[A/m]。
+  $V=Ed$などから$E=V/d$の単位は[V/m]。
+  よって$E/H$の単位は [V/A] すなわち抵抗の単位。
+\end{enumerate}

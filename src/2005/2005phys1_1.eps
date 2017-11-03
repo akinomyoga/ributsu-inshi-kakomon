@@ -1,0 +1,68 @@
+%!
+%%BoundingBox: 0 0 200 210
+gsave
+%-------------------------------------------------------------------------------
+%(2005phys1_1.epsi) run
+%-------------------------------------------------------------------------------
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+gsave
+  0.8 setlinewidth
+
+  % yokojiku
+  0 20 moveto
+  200 20 lineto
+  currentpoint
+  stroke
+  gsave
+    translate
+    mwg-arrow-headA
+  grestore
+  /Times-Italic findfont 18 scalefont setfont
+  195 5 moveto
+  (x) show
+
+  % tatejiku
+  100 0 moveto
+  100 200 lineto
+  currentpoint
+  stroke
+  gsave
+    translate
+    90 rotate
+    1 1 scale
+    mwg-arrow-headA
+  grestore
+  /Times-Italic findfont 18 scalefont setfont
+  105 195 moveto
+  (U) show
+
+grestore
+%-------------------------------------------------------------------------------
+
+% potential
+ 50 190 moveto
+ 50  20 lineto
+150  20 lineto
+150 190 lineto
+2 setlinewidth
+stroke
+
+/Times-Italic findfont 18 scalefont setfont
+ 45 5 moveto
+(-a) show
+145 5 moveto
+(a) show
+/Times-Roman findfont 18 scalefont setfont
+ 90 5 moveto
+(0) show
+
+grestore
+

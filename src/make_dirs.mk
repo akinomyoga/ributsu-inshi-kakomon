@@ -8,7 +8,7 @@ include ../common.mk
 Makefile: make.in ../make_dirs.sh ../make_dirs.mk
 	cd .. && ./make_dirs.sh %year%
 
-OUTDIR := ../out/%year%
+OUTDIR := ../../out/%year%
 $(OUTDIR):
 	mkdir -p $@
 

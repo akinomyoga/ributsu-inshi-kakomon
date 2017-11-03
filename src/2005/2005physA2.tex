@@ -1,0 +1,104 @@
+\subsection*{第２問 ～ 黒体輻射}
+
+\begin{enumerate}
+\def\kB{k_\mathrm{B}}
+\item 
+  \begin{equation}
+  \epsilon_n=(n+\frac{1}{2})\hbar \omega
+  \end{equation}
+  より分配関数$Z$は
+  \begin{align}
+  Z&=\sum_n e^{-\epsilon_n /\kB T}\\
+  &=\sum_{n=0}^{\infty}\exp{(-\frac{(n+\frac{1}{2})\hbar \omega}{\kB T})}\\
+  &=\exp{(-\frac{\hbar \omega}{2\kB T})}\sum_{n=0}^{\infty}(\exp{(-\frac{\hbar \omega}{\kB T})})^n\\
+  &=\exp{(-\frac{\hbar \omega}{2\kB T})}\frac{1}{1-\exp{(-\frac{\hbar \omega}{\kB T})}}\\
+  &=(2\sinh (\frac{\hbar \omega}{2\kB T}))^{-1}
+  \end{align}
+\item 平均エネルギーを$\epsilon(\omega,T)$とおくと、$\beta=\frac{1}{\kB T}$とおいて
+  \begin{align}
+  \epsilon(\omega,T)
+  &=\frac{\sum_{n=0}^{\infty}(n+\frac{1}{2})\hbar \omega\exp{(-\frac{(n+\frac{1}{2})\hbar \omega}{\kB T})}}{\sum_{n=0}^{\infty}\exp{(-\frac{(n+\frac{1}{2})\hbar \omega}{\kB T})}}\\
+  &=\frac{-\frac{d}{d\beta}\sum_{n=0}^{\infty}\exp{(-(n+\frac{1}{2})\beta\hbar \omega)}}{\sum_{n=0}^{\infty}\exp{(-(n+\frac{1}{2})\beta\hbar \omega)}}\\
+  &=\frac{\hbar \omega}{2}\coth (\frac{\beta\hbar \omega}{2})\\
+  &=\frac{\hbar \omega}{2}+\frac{\hbar \omega}{\exp{(\frac{\hbar \omega}{\kB T})}-1}
+  \end{align}
+  低温（$\kB T\ll\hbar \omega$）ではWien則
+  \begin{align}
+  \epsilon(\omega,T)
+  &\simeq \frac{\hbar \omega}{2}+\hbar \omega\exp{(-\frac{\hbar \omega}{\kB T})}\\
+  &\simeq \exp{(-\frac{\hbar \omega}{\kB T})}
+  \end{align}
+  高温（$\kB T\gg\hbar \omega$）ではRayleigh-Jeans則
+  \begin{align}
+  \epsilon(\omega,T)
+  &\simeq \frac{\hbar \omega}{2}+\kB T\\
+  &\simeq T
+  \end{align}
+  物理的内容：低温ではエネルギー準位の量子化が効いて、$\omega$が大きい、すなわち遷移に必要なエネルギー$\hbar \omega$が大きい振動子は温度上昇によりエネルギー$\kB T$を得ても遷移ができず、平均エネルギーの温度上昇による増加は緩やかである。\\
+  一方高温では、$\kB T\gg\hbar \omega$よりエネルギー準位はほぼ連続的なものとみなすことができ、温度上昇によるエネルギー増加は$\kB T$がそのまま効く。
+\item 
+  \begin{equation}
+  \overrightarrow{k}=(\frac{\pi n_x}{L},\frac{\pi n_y}{L},\frac{\pi n_z}{L})
+  \end{equation}
+  ただし$n_x,n_y,n_z,$は正整数。
+\item 零点エネルギーを無視。$k$から$k+dk$の間の波数を持つ光子数は、k空間で半径k、幅dkの球殻を考え、偏光方向２通りを考慮して
+  \begin{equation}
+  2\times \frac{1}{8} \times 4\pi k^2dk \times (\frac{L}{\pi})^3
+  =\frac{Vk^2}{\pi^2}dk
+  \end{equation}
+  ただし$V=L^3$。設問２より平均エネルギー$\epsilon(\omega,T)=\epsilon(k,T)
+  =\frac{\hbar ck}{\exp{(\frac{\hbar ck}{\kB T})}-1}$なので
+  \begin{align}
+  E&=\int_0^{\infty} \frac{\hbar ck}{\exp{(\frac{\hbar ck}{\kB T})}-1} \frac{Vk^2}{\pi^2}dk\\
+  &=\int_0^{\infty} \frac{\hbar cV}{\pi^2} \frac{k^3}{\exp{(\frac{\hbar ck}{\kB T})}-1}dk
+  \end{align}
+  \begin{equation}
+  \epsilon(k)=\frac{\hbar cV}{\pi^2} \frac{k^3}{\exp{(\frac{\hbar ck}{\kB T})}-1}
+  \end{equation}
+\item $x=\frac{\hbar ck}{\kB T}$とおくと
+  \begin{equation}
+  E=\frac{V(\kB T)^4}{\pi^2(\hbar c)^3}\int_0^{\infty}\frac{x^3dx}{e^x-1}
+  \end{equation}
+  よって $T$ の4乗に比例（Stefan-Boltzmann則）。
+  一応積分の中身を計算すると、リーマンのツェータ関数
+  \begin{equation}
+  \zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}
+  \end{equation}
+  とガンマ関数
+  \begin{equation}
+  \gamma(s)=\int_0^{\infty}x^{s-1}e^{-x}dx=(s-1)!
+  \end{equation}
+  から
+  \begin{equation}
+  \int_0^{\infty}\frac{x^3dx}{e^x-1}
+  =\sum_{n=1}^{\infty}\int_0^{\infty}x^3e^{-nx}dx
+  =\gamma(4)\zeta(4)
+  =\frac{\pi^4}{15}
+  \end{equation}
+\item 設問4より
+  \begin{equation}
+  \epsilon(k)=\frac{\hbar cV}{\pi^2} \frac{k^3}{\exp{(\frac{\hbar ck}{\kB T})}-1}
+  \end{equation}
+  なので
+  \begin{align}
+  (\frac{d\epsilon(k)}{dk})_{k=k_{max}}
+  &=\frac{\hbar cV}{\pi^2(\exp{(\frac{\hbar ck}{\kB T})}-1)}(3k^2e^{\frac{\hbar ck}{\kB T}}-3k^2-k^3(\frac{\hbar c}{\kB T})e^{\frac{\hbar ck}{\kB T}})\\
+  &=0
+  \end{align}
+  よって
+  \begin{equation}
+  (3k^2e^{\frac{\hbar ck}{\kB T}}-3k^2-k^3(\frac{\hbar c}{\kB T})e^{\frac{\hbar ck}{\kB T}})
+  =0
+  \end{equation}
+  $x=\frac{\hbar ck}{\kB T}$とおくと$3e^x-3-xe^x=0$
+  \begin{equation}
+  (1-\frac{x}{3})e^x=1
+  \end{equation}
+  非常に低温なとき$e^x\gg1$なので$1-\frac{x}{3}\simeq 0$。よって$x\simeq 3$(実際プログラムに書かせると2.8くらい)。
+  \begin{equation}
+  k_{max} \simeq\frac{3\kB T}{\hbar c}
+  \end{equation}
+  \begin{equation}
+  \lambda =\frac{2\pi}{k_\mathrm{max}}\simeq 1.7\times 10^{-3}[m]
+  \end{equation}
+\end{enumerate}

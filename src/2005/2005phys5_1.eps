@@ -1,0 +1,163 @@
+%!
+%%BoundingBox: 0 0 330 180
+gsave
+
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+/mwg-arrow-rel {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-arrow-headA
+  grestore
+} def
+
+/mwg-gradient-inP {
+  % [begin end i s]
+  2 copy exch sub
+  % [begin end i s s-i]
+  5 4 roll mul
+  % [end i s (s-i)*b]
+  4 2 roll mul
+  % [s (s-i)*b i*e]
+  add exch div
+} def
+
+/mwg-gradient-rect {
+  begin gsave
+    1 1 n {
+      /i exch def
+      %i 30 mul i 30 mul 10 0 360 arc stroke
+      /p1x p1 0 get p2 0 get i 1 sub n mwg-gradient-inP def
+      /p1y p1 1 get p2 1 get i 1 sub n mwg-gradient-inP def
+      /p2x p1 0 get p2 0 get i n mwg-gradient-inP def
+      /p2y p1 1 get p2 1 get i n mwg-gradient-inP def
+      /q1x q1 0 get q2 0 get i 1 sub n mwg-gradient-inP def
+      /q1y q1 1 get q2 1 get i 1 sub n mwg-gradient-inP def
+      /q2x q1 0 get q2 0 get i n mwg-gradient-inP def
+      /q2y q1 1 get q2 1 get i n mwg-gradient-inP def
+      /r c1 0 get c2 0 get i 1 sub n 1 sub mwg-gradient-inP def
+      /g c1 1 get c2 1 get i 1 sub n 1 sub mwg-gradient-inP def
+      /b c1 2 get c2 2 get i 1 sub n 1 sub mwg-gradient-inP def
+      
+      p1x p1y moveto
+      p2x p2y lineto
+      q2x q2y lineto
+      q1x q1y lineto
+      closepath
+      r g b setrgbcolor
+      fill
+    } for
+    %0 setgray
+    %p1 aload pop moveto
+    %p2 aload pop lineto
+    %q2 aload pop lineto
+    %q1 aload pop lineto
+    %closepath
+    %stroke
+  grestore end
+} def
+
+/mwg-vec2-add {
+  aload pop 3 2 roll aload pop
+  % x1 y1 x2 y2
+  exch 4 1 roll add
+  % x1 x2 y
+  3 1 roll add exch
+  2 array astore
+} def
+
+/mwg-vec2-smul {
+  dup 3 2 roll aload pop
+  exch 4 1 roll mul
+  3 1 roll mul exch
+  2 array astore
+} def
+
+gsave << /dx [ 150 0 ] /dy [ 50 50 ] /dz [ 0 80 ] >> begin
+  /v0 [ 0 0 ] def
+  /vadd { mwg-vec2-add } def
+  /vmul { mwg-vec2-smul } def
+  /vlineto { aload pop lineto } def
+  /vmoveto { aload pop moveto } def
+  
+  /cS [ 0.5 0.5 0.5 ] def
+  /cM [ 0.75 0.75 0.75 ] def
+  /cE [ 1.1 1.1 1.1 ] def
+  
+  % axis
+  gsave
+    10 40 translate
+    0.5 0.5 scale
+    0 0 60 0 mwg-arrow-rel
+    0 0 42 42 mwg-arrow-rel
+    0 0 0 60 mwg-arrow-rel
+    
+    /Times-Italic-H findfont 24 scalefont setfont
+    65 -5 moveto (x) show
+    50 45 moveto (y) show
+    10 55 moveto (z) show
+  grestore
+  
+  55 10 translate
+  
+  % cube filling
+  /p [ 0 0 ] def
+  << /p1 p /p2 dx /q1 p /q2 dz /c1 cS /c2 cM /n 10 >> mwg-gradient-rect
+  /p dx dz vadd def
+  << /p1 p /p2 dx /q1 p /q2 dz /c1 cE /c2 cM /n 10 >> mwg-gradient-rect
+  /p dy dz vadd def
+  << /p1 p /p2 dz /q1 p /q2 dz dx vadd dy vadd /c1 cS /c2 cM /n 10 >> mwg-gradient-rect
+  /p dx dz vadd def
+  << /p1 p /p2 dz /q1 p /q2 dz dx vadd dy vadd /c1 cE /c2 cM /n 10 >> mwg-gradient-rect
+  /p dy dx vadd def
+  << /p1 p /p2 dx /q1 p /q2 dz dx vadd dy vadd /c1 cS /c2 cM /n 10 >> mwg-gradient-rect
+  /p dx dz vadd def
+  << /p1 p /p2 dx /q1 p /q2 dz dx vadd dy vadd /c1 cE /c2 cM /n 10 >> mwg-gradient-rect
+  
+  % cube frame
+  0.8 setlinewidth
+  0 0                 moveto
+  dx                  vlineto
+  dx dz vadd          vlineto
+  dz                  vlineto
+  closepath
+  dx                  vmoveto
+  dx dy vadd          vlineto
+  dx dy vadd dz vadd  vlineto
+  dx dz vadd          vlineto
+  dx dy vadd dz vadd  vmoveto
+  dz dy vadd          vlineto
+  dz                  vlineto
+  stroke
+  
+  % surface vector
+  /Times-Italic-H findfont 18 scalefont setfont
+  
+  /p dx dy vadd 0.5 vmul dz vadd def
+  p aload pop 0 45 mwg-arrow-rel
+  p [ 10 40 ] vadd vmoveto (B=\(0,0,B\)) show
+  
+  /q dz dy vadd 0.5 vmul dx vadd def
+  q aload pop 45 0 mwg-arrow-rel
+  q [ 30 -30 ] vadd vmoveto (J=\(j,0,0\)) show
+
+  /Ryumin-Light-EUC-H findfont 12 scalefont setfont
+  p [ 11 51 ] vadd vmoveto (\242\252) show
+  q [ 31 -19 ] vadd vmoveto (\242\252) show
+
+end grestore
+
+grestore

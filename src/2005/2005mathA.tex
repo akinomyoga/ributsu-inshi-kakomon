@@ -1,0 +1,112 @@
+{
+
+\newcommand{\trd}[1]{{}^{\dag}\hspace{-1mm}#1}
+\newcommand{\pdif}[2]{\frac{\partial #1}{\partial #2}}
+
+\subsection*{第１問　略解}
+\begin{enumerate}
+\item 
+  \begin{eqnarray}
+  P(a)P(a^{\prime} )&=&\bm{u}_a\bm{u}_{a}^{\dag}\bm{u}_{a^{\prime}}\bm{u}_{a^{\prime} }^{\dag}\\
+		  &=& \bm{u}_a(\bm{u}_a,\bm{u}_{a^{\prime} })\bm{u}_{a^{\prime} }^{\dag}\\
+                  &=& \delta_{a,a^{\prime} }P(a)
+  \end{eqnarray}
+\item 
+  \begin{eqnarray}
+  AP(a)\bm{x} = A\bm{u}_a\bm{u}_{a}^{\dag}\bm{x} = aP(a)\bm{x}
+  \end{eqnarray}
+\item 
+  \begin{eqnarray}
+  A\bm{x} = A\sum_a(\bm{u_a},\bm{x})\bm{u_a} = \sum_a a(\bm{u_a},\bm{x})\bm{u_a} = \sum_a aP(a)\bm{x}
+  \end{eqnarray}
+\item 
+  \begin{eqnarray}
+  f(A)\bm{u_a} &=& \sum_{a^{\prime}} f(a^{\prime} )P(a^{\prime} )\bm{u_a}\\
+		  &=& \sum_{a^{\prime}} f(a^{\prime} )\bm{u}_{a^{\prime}}\delta_{a,a^{\prime}}\\
+                  &=& f(a)\bm{u}_a
+  \end{eqnarray}
+\item 
+  \begin{eqnarray}
+  \bm{v} &=& \lim_{t\rightarrow \infty} \frac{e^{-At}\bm{x}}{\Vert e^{-At}\bm{x}\Vert}\\
+	  &=& \lim_{t\rightarrow \infty} \frac{\sum_{a}e^{-at}P(a)\bm{x}}{\Vert \sum_{a}e^{-at}P(a)\bm{x}\Vert}\\
+          &=& \lim_{t\rightarrow \infty} \frac{e^{a_0t}\sum_{a}e^{-at}P(a)\bm{x}}{e^{a_0t}\Vert \sum_{a}e^{-at}P(a)\bm{x}\Vert}\\
+          &=& \lim_{t\rightarrow \infty} \frac{P(a_0)\bm{x}+\sum_{a(\neq a_0)}e^{-(a-a_0)t}P(a)\bm{x}}{\sqrt{(P(a_0)\bm{x},P(a_0)\bm{x})+\sum_{a(\neq a_0)}e^{-2(a-a_0)t}(P(a)\bm{x},P(a)\bm{x})}}\\
+          &=& \frac{P(a_0)\bm{x}}{\Vert P(a_0)\bm{x}\Vert }
+  \end{eqnarray}
+\end{enumerate}
+
+\subsection*{第２問　略解}
+\begin{enumerate}
+\item 
+  $\delta y(x_0)=\delta y(x_1)=0$及び、$(\delta y)^{\prime}=\delta y^{\prime}$に注意して変形すると
+  \begin{eqnarray}
+  \delta S &=& \int_{x_0}^{x_1}\delta F(y(x),y^{\prime}(x))dx\\
+  &=& \int_{x_0}^{x_1} \left( \pdif{F(y(x),y^{\prime}(x))}{y}\delta y + \pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\delta y^{\prime}\right) dx\\
+  &=& \int_{x_0}^{x_1} \left( \pdif{F(y(x),y^{\prime}(x))}{y} - \frac{d}{dx}\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\right)\delta y dx \\
+  &&+ \left[\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\delta y\right]_{x_0}^{x_1}\\
+  &=& \int_{x_0}^{x_1} \left( \pdif{F(y(x),y^{\prime}(x))}{y} - \frac{d}{dx}\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\right)\delta y dx
+  \end{eqnarray}
+  ここで極値を取るためには\\
+  \begin{equation}
+  \delta S = 0
+  \end{equation}
+  これは\\
+  \begin{eqnarray}
+  \pdif{F(y(x),y^{\prime}(x))}{y} - \frac{d}{dx}\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}} &=& 0
+  \end{eqnarray}
+\item 
+  Fの全微分の式\\
+  \begin{eqnarray}
+  \frac{dF}{dx} = \pdif{F}{y}y^{\prime} + \pdif{F}{y^{\prime}}\frac{dy^{\prime}}{dx}
+  \end{eqnarray}
+  に注意して\\
+  (20)に$y^{\prime}$をかけて(21)を代入すれば\\
+  \begin{eqnarray}
+  0=\pdif{F}{y}y^{\prime}-y^{\prime}\frac{d}{dx}\pdif{F}{y^{\prime}} &=& \frac{dF}{dx} - \pdif{F}{y^{\prime}}\frac{dy^{\prime}}{dx}-y^{\prime}\frac{d}{dx}\pdif{F}{y^{\prime}}\\
+  &=& \frac{d}{dx}\left(F-y^{\prime}\pdif{F}{y^{\prime}} \right)\\
+  F-y^{\prime}\pdif{F}{y^{\prime}} &=& C
+  \end{eqnarray}
+\item 
+  \begin{eqnarray}
+  \int_{x_0}^{x_1} 2\pi y\sqrt{1+y^{\prime 2}}dx
+  \end{eqnarray}
+\item 
+  \begin{equation}
+  F = 2\pi y\sqrt{1+y^{\prime 2}}
+  \end{equation}
+  を(24)に代入して\\
+  \begin{eqnarray}
+  y\sqrt{1+y^{\prime 2}}-\frac{yy^{\prime 2}}{\sqrt{1+y^{\prime 2}}} &=& C\\
+  \frac{y}{\sqrt{1+y^{\prime 2}}} &=& C\\
+  1+ y^{\prime 2} &=& \left( \frac{y}{C}\right) ^2
+  \end{eqnarray}
+\item 
+  \begin{eqnarray}
+  \xi = \frac{x}{C}\\
+  \eta = \frac{y}{C}
+  \end{eqnarray}
+  とおくと(29)は\\
+  \begin{eqnarray}
+  \eta^2 = 1+\eta^{\prime 2}
+  \end{eqnarray}
+  $y(x)$が最小値をとる座標を$(l,C)$とおく((28)より$y^{\prime}=0のときy=C(>0)$)\\
+  $x \geq l(\xi \geq l/C)$の場合傾きは正だと考えられるので(32)から\\
+  \begin{eqnarray}
+  \sqrt{\eta^2 - 1} &=& \frac{d\eta}{d\xi}\\
+  \int_1^{\eta}\frac{d\eta}{\sqrt{\eta^2-1}}&=&\int_{l/C}^{\xi}d\xi\\
+  \ln(\eta+\sqrt{\eta^2-1})&=&\xi - l\\
+  \eta &=& \cosh(\xi-\frac{l}{C})\\
+  \end{eqnarray}
+  $x \leq l(\xi \leq l/C)$の場合も同様にして\\
+  \begin{eqnarray}
+  -\sqrt{\eta^2 - 1} &=& \frac{d\eta}{d\xi}\\
+  -\int_1^{\eta}\frac{d\eta}{\sqrt{\eta^2-1}}&=&\int_{l/C}^{\xi}d\xi\\
+  \eta &=& \cosh(\xi-\frac{l}{C})\\
+  \end{eqnarray}
+  よって\\
+  \begin{eqnarray}
+  y = C\cosh(\frac{x-l}{C})
+  \end{eqnarray}
+\end{enumerate}
+
+}

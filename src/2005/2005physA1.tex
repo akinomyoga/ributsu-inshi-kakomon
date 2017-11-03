@@ -1,0 +1,199 @@
+\subsection*{第１問 ～ 一次元ポテンシャル、摂動論}
+
+\begin{enumerate}
+\def\<{\langle}
+\def\>{\rangle}
+\item シュレディンガー方程式は
+  \begin{equation}
+  (-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+U(x))\phi(x)=E_{n}\phi(x)
+  \end{equation}
+  境界条件は
+  \begin{equation}
+  \phi(a)=\phi(-a)=0
+  \end{equation}
+  $U(x)=0$で
+  \begin{equation}
+  \frac{d^2}{dx^2}\phi(x)=-\frac{2mE_{n}}{\hbar^2}\phi(x)
+  \end{equation}
+  $\phi(a)=\phi(-a)=0$となるような解は
+  \begin{equation}
+  \phi(x)=A\sin(\frac{\pi n_{e}x}{2a})
+  \end{equation}
+  \begin{equation}
+  \phi(x)=B\cos(\frac{\pi n_{o}x}{2a})
+  \end{equation}
+  ただし$n_{e}$はnのうちの偶数、$n_{o}$はnのうちの奇数。規格化
+  \begin{equation}
+  \int_{-a}^{a}|\phi^2(x)|dx=1
+  \end{equation}
+  から
+  \begin{equation}
+  \phi_{n_e}(x)=\frac{1}{\sqrt{a}}\sin(\frac{\pi n_{e}x}{2a})
+  \end{equation}
+  \begin{equation}
+  \phi_{n_o}(x)=\frac{1}{\sqrt{a}}\cos(\frac{\pi n_{o}x}{2a})
+  \end{equation}
+  ただし、$n_{e}=0$で$\phi(x)=0$なので、基底状態は$n_{0}=1$。
+  よって固有関数は$n=0,1,2,...$に対して
+  \begin{equation}
+  \phi_n(x)=\frac{1}{\sqrt{a}}\sin(\frac{\pi(n+1)x}{2a}) \,\,\,(n:\mathrm{odd})
+  \end{equation}
+  \begin{equation}
+  \phi_n(x)=\frac{1}{\sqrt{a}}\cos(\frac{\pi(n+1)x}{2a}) \,\,\,(n:\mathrm{even})
+  \end{equation}
+  シュレディンガー方程式に代入して、
+  \begin{equation}
+  E_{n}=\frac{\pi^2\hbar^2(n+1)^2}{8ma^2}
+  \end{equation}
+  $n=0,1$から
+  \begin{equation}
+  \phi_0(x)=\frac{1}{\sqrt{a}}\cos(\frac{\pi x}{2a})
+  \end{equation}
+  \begin{equation}
+  \phi_1(x)=\frac{1}{\sqrt{a}}\sin(\frac{\pi x}{a})
+  \end{equation}
+\item $\phi_n$について、偶数のnに関しては偶関数、奇数のnに関しては奇関数である。よって
+  \begin{equation}
+  \phi_{n:\mathrm{even}}(-x)=\phi_{n:\mathrm{even}}(x)
+  \end{equation}
+  \begin{equation}
+  \phi_{n:\mathrm{odd}}(-x)=- \phi_{n:\mathrm{odd}}(x)
+  \end{equation}
+  この性質はハミルトニアンHのパリティ不変性から来ている。実際、パリティ変換$\hat P$に対して$[H,\hat P]=0$のとき$\hat PH\hat P=H$より
+  \begin{equation}
+  \hat PH\phi=H\hat P\phi=E_n\hat P\phi
+  \end{equation}
+  なので
+  \begin{equation}
+  \hat PH\hat P\phi=H\phi=E_n\hat P^2\phi=E_n\psi
+  \end{equation}
+  以上から固有値Pとして$\hat P\phi=P\phi$とおくと$\hat P^2\psi=P^2\psi=\psi$より$P=\pm1$。よってハミルトニアンがパリティ不変なら波動関数は偶関数または奇関数のいずれか。
+\item $U(x)$を摂動として扱う。エネルギーの０次は1.から
+  \begin{equation}
+  E_n^{(0)}=\frac{\pi^2\hbar^2(n+1)^2}{8ma^2}
+  \end{equation}
+  １次は
+  \begin{equation}
+  E_n^{(1)}=\<\phi_n|U(x)|\phi_n\>
+  \end{equation}
+  $n=0$では
+  \begin{align}
+  E_0^{(1)}&=\int \phi_0(x)U(x)\phi_0(x)dx \\
+  &=\int_0^a (\frac{1}{\sqrt{a}}\cos(\frac{\pi x}{2a}))(-w)(\frac{1}{\sqrt{a}}\cos(\frac{\pi x}{2a}))dx \\
+  &=... \\
+  &=- \frac{w}{2}
+  \end{align}
+  よって
+  \begin{equation}
+  E_0=E_0^{(0)}+E_0^{(1)}
+  =\frac{\pi^2\hbar^2}{8ma^2}- \frac{w}{2}
+  \end{equation}
+  $n=1$では
+  \begin{align}
+  E_1^{(1)}&=\int \phi_1(x)U(x)\phi_1(x)dx \\
+  &=\int_0^a (\frac{1}{\sqrt{a}}\sin(\frac{\pi x}{a}))(-w)(\frac{1}{\sqrt{a}}\sin(\frac{\pi x}{a}))dx \\
+  &=...\\
+  &=- \frac{w}{2}
+  \end{align}
+  よって
+  \begin{equation}
+  E_1=E_1^{(0)}+E_1^{(1)}
+  =\frac{\pi^2\hbar^2}{2ma^2}- \frac{w}{2}
+  \end{equation}
+\item
+  \begin{equation}
+  \psi_n(x)=\phi_n(x)+\sum _{m\ne n} \frac{\<\phi_m|U(x)|\phi_n\>}{E_n^{(0)}-E_m^{(0)}}\phi_m(x)
+  \end{equation}
+  から
+  \begin{equation}
+  \psi_0(x)=\phi_0(x)+\frac{\<\phi_1|U(x)|\phi_0\>}{E_0^{(0)}-E_1^{(0)}}\phi_1(x)+O(w^2)
+  \end{equation}
+  確率振幅は、$\phi_0(x)$については
+  \begin{equation}
+  1+O(w^2)
+  \end{equation}
+  $\phi_1(x)$については
+  \begin{equation}
+  \frac{\<\phi_1|U(x)|\phi_0\>}{E_0^{(0)}-E_1^{(0)}}
+  \end{equation}
+  計算すると、
+  \begin{equation}
+  {\<\phi_1|U(x)|\phi_0\>}=\int _0^a \phi_1 (-w) \phi_0 dx=...=- \frac{4w}{3\pi}
+  \end{equation}
+  \begin{equation}
+  E_0^{(0)}-E_1^{(0)}=\frac{\pi^2\hbar^2}{8ma^2} - \frac{\pi^2\hbar^2}{2ma^2}
+  =-\frac{3 \pi^2\hbar^2}{8ma^2}
+  \end{equation}
+  よって$\phi_1(x)$の確率振幅は
+  \begin{equation}
+  \frac{\frac{- 4w}{3\pi}}{\frac{-3\pi^2\hbar^2}{8ma^2}}=\frac{32ma^2w}{9\pi^3\hbar^2}
+  \end{equation}
+\item
+  \begin{align}
+  \<x\>&=\<\phi_0|x|\phi_0\> \\
+  &=\frac{1}{a} \int_{-a}^a x\cos^2(\frac{\pi x}{2a})dx
+  \end{align}
+  被積分関数は奇関数なので
+  \begin{equation}
+  \<x\>=0
+  \end{equation}
+  設問２から、すべての$\phi_n$は奇関数または偶関数であるから、
+  $\<\phi_n|x|\phi_n\>$の被積分関数は必ず奇関数になる。
+  よってすべての$n$に関して期待値は0になる。\\
+  なお、波動関数が有界に留まり、ポテンシャルがフラットで$x$について対称なので、
+  計算するまでもなく$x$の期待値は常に0とわかる。
+\item 設問４から
+  \begin{equation}
+  |\psi_0\>=|\phi_0\>+a^{(1)}|\phi_1\>
+  \end{equation}
+  とおける。ただし
+  \begin{equation}
+  a^{(1)}=\frac{32ma^2w}{9\pi^3\hbar^2}
+  \end{equation}
+  よって
+  \begin{align}
+  \<x\>&=\<\psi_0|x|\psi_0\>\\
+  &=\<\phi_0|x||\phi_0\>+a^{(1)}\<\phi_1|x|\phi_0\>+a^{(1)}\<\phi_0|x|\phi_1\>+O(w^2)\\
+  &=2a^{(1)}\<\phi_1|x|\phi_0\>+O(w^2)
+  \end{align}
+  ここで
+  \begin{equation}
+  \<\phi_1|x|\phi_0\>
+  =\frac{1}{a}\int_{-a}^a x\cos(\frac{\pi x}{2a})\sin(\frac{\pi x}{a})dx
+  \end{equation}
+  これを偶関数であることを用いたり、
+  \begin{equation}
+  \cos x=\frac{e^{ix}+e^{-ix}}{2} \;\; , \;\sin x=\frac{e^{ix}-e^{-ix}}{2i}
+  \end{equation}
+  にばらす等して計算すると、
+  \begin{equation}
+  \<\phi_1|x|\phi_0\>=\frac{32a}{9\pi^2}
+  \end{equation}
+  以上から
+  \begin{equation}
+  \<x\>=\frac{2048ma^3w}{81\pi^5\hbar^2}+O(w^2)
+  \end{equation}
+  このポテンシャルは$x>0$の方が低く設定されているため、粒子は$x\>0$に存在しやすく、xの期待値が正方向にずれた。
+\item これまで同様$U(x)$を摂動とする摂動論を用いると、
+  \begin{equation}
+  E_0^{(1)}=\<\phi_0|U(x)|\phi_0\>
+  =-\frac{u}{a^2}\int_{-a}^ax\cos^2(\frac{\pi x}{2a})dx
+  =0
+  \end{equation}
+  奇関数の性質を使った。よって
+  \begin{equation}
+  E_0=E_0^{(0)}+E_0^{(1)}
+  =\frac{\pi^2\hbar^2}{8ma^2}
+  \end{equation}
+  同様にして
+  \begin{equation}
+  E_1=E_1^{(0)}+E_1^{(1)}
+  =\frac{\pi^2\hbar^2}{2ma^2}
+  \end{equation}
+  以上からこのポテンシャルでは$u$の１次まで考えても、
+  ポテンシャルがない場合とエネルギーは変わらない。\\
+  ポテンシャルエネルギーの領域内の総和が変わらなければ、
+  箱を少し傾けたくらいではエネルギーは変化しない
+  （ポテンシャルが対称でないので期待値は当然変化する）。
+
+\end{enumerate}

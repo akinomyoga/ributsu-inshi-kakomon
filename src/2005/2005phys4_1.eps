@@ -1,0 +1,136 @@
+%!
+%%BoundingBox: -10 5 460 160
+gsave
+
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+/mwg-arrow-rel {
+  4 2 roll moveto
+  2 copy rlineto
+  stroke
+  gsave
+    2 copy translate
+    exch atan rotate
+    mwg-arrow-headA
+  grestore
+} def
+
+/mwg-wave-p1 {
+  10 5 20 10 30 10 curveto
+  30  0 translate
+} def
+
+/mwg-wave-p2 {
+  10 10 20 5 30 0 curveto
+  30  0 translate
+} def
+
+/mwg-wave-p3 {
+  10 -5 20 -10 30 -10 curveto
+  30  0 translate
+} def
+
+/mwg-wave-p4 {
+  10 -10 20 -5 30 0 curveto
+  30  0 translate
+} def
+
+/mwg-wave-repeat {
+  0.5 1 scale
+  1 1 3 2 roll {
+    4 mod
+    dup 1 eq {
+      mwg-wave-p1
+    } {
+      dup 2 eq {
+        mwg-wave-p2
+      } {
+        dup 3 eq {
+          mwg-wave-p3
+        } {
+          mwg-wave-p4
+        } ifelse
+      } ifelse
+    } ifelse
+    pop
+  } for
+  2 1 scale
+} def
+
+/mwg-wave-rel {
+  gsave
+    % [x y rx ry n w]
+    6 4 roll moveto
+    % [rx ry n w]
+    4 2 roll 2 copy exch atan rotate
+    % [n w rx ry]
+    dup mul exch dup mul add sqrt
+    % [n w r]
+    2 index 15 mul div exch
+    % [n sx w]
+    20 div
+    % [n sx sy]
+    2 copy scale
+    3 2 roll mwg-wave-repeat
+    1 exch div exch  1 exch div exch   scale
+    stroke
+  grestore
+} def
+
+gsave
+  100 110 translate
+
+  0 0 100 25 mwg-arrow-rel
+  0 0 100 -25 mwg-arrow-rel
+  0 0 -95 0 18 6 mwg-wave-rel
+  
+  0 -22 6 0 360 arc
+  gsave 0.7 setgray fill grestore
+  stroke
+  
+  /GothicBBB-Medium-EUC-H findfont 16 scalefont setfont
+  -90 -20 moveto
+  (\270\367\273\322) show % koushi
+  -20 -50 moveto
+  (\270\266\273\322\263\313) show % genshikaku
+  40 -35 moveto
+  (\305\305\273\322) show % denshi
+  40  25 moveto
+  (\315\333\305\305\273\322) show % youdenshi
+  
+  -85 -100 moveto
+  (\305\305\273\322\241\246\315\333\305\305\273\322\302\320\300\270\300\256\262\341\304\370) show
+grestore
+
+gsave
+  350 110 translate
+
+  0 0 100 25 18 6 mwg-wave-rel
+  0 0 100 -25 mwg-arrow-rel
+  0 0 moveto -95 0 rlineto stroke
+  
+  0 -22 6 0 360 arc
+  gsave 0.7 setgray fill grestore
+  stroke
+  
+  /GothicBBB-Medium-EUC-H findfont 16 scalefont setfont
+  -95 12 moveto
+  (\305\305\273\322\(\315\333\305\305\273\322\)) show % denshi(youdenshi)
+  -20 -50 moveto
+  (\270\266\273\322\263\313) show % genshikaku
+  60  30 moveto
+  (\270\367\273\322) show % koushi
+  
+  -45 -100 moveto
+  (\300\251\306\260\312\374\274\315\262\341\304\370) show
+grestore
+
+grestore
+
