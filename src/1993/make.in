@@ -1,0 +1,25 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1993pankyo 1993senmon)
+docs_ex=(1993pankyo2)
+
+_1993pankyo_title='1993年度実施 一般教育科目'
+_1993pankyo_cov=()
+_1993pankyo_prb=(1993engl.tex 1993math.tex 1993phys.tex)
+_1993pankyo_ans=(1993engl.tex 1993math.tex 1993phys.tex)
+_1993pankyo_dep=(1993math-1.eps 1993phys-1.eps 1993phys-2.eps 1993phys-3.eps 1993phys-4.eps)
+
+_1993pankyo2_title='1993年度実施 一般教育科目 (英語なし)'
+_1993pankyo2_cov=()
+_1993pankyo2_prb=(1993math.tex 1993phys.tex)
+_1993pankyo2_ans=(1993math.tex 1993phys.tex)
+_1993pankyo2_dep=(1993math-1.eps 1993phys-1.eps 1993phys-2.eps 1993phys-3.eps 1993phys-4.eps)
+
+_1993senmon_title='1993年度実施 物理専門科目'
+_1993senmon_cov=()
+_1993senmon_prb=(1993phy1.tex 1993phy2.tex 1993phy3.tex 1993phy4.tex 1993phy5.tex 1993phy6.tex 1993phy7.tex 1993phy8.tex)
+_1993senmon_ans=(1993phy1.tex 1993phy2.tex 1993phy3.tex 1993phy4.tex 1993phy5.tex 1993phy6.tex 1993phy7.tex 1993phy8.tex)
+_1993senmon_dep=(
+  1993phy1-1.eps 1993phy2-1.eps 1993phy3-1.eps 1993phy3-2.eps 1993phy3-3.eps 1993phy4-1.eps 1993phy5-1.eps
+  1993phy6-1.eps 1993phy6-2.eps 1993phy6-3.eps 1993phy8-1.eps 1993phy8-2.eps 1993phy8-3.eps 1993phy8-4.eps)
