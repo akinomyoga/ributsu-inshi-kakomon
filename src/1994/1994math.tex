@@ -1,0 +1,437 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{教育 数学}{}
+
+\begin{subquestions}
+\SubQuestion
+  漸化式
+%
+  \begin{equation}
+    x_{n+3}-4x_{n+2}+x_{n+1}+6x_{n}=0 \eqname{1-1}
+  \end{equation}
+%
+  を満たす実数列$x_{n}\;(n=0,1,2,...)$について、以下の設問に答えよ。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    漸化式\eqhref{1-1}を満たす数列は、最初の3項 $x_{0},x_{1},x_{2}$
+    を指定すれば一意的に定まる。式\eqhref{1-1}を変形して、
+%
+    \[ \vect{x_3}{x_2}{x_1} = T \vect{x_2}{x_1}{x_0} \]
+%
+    を満たす行列$T$を求めよ。
+
+
+  \SubSubQuestion
+    設問(i)で求めた行列$T$の固有値 $\lambda_1, \lambda_2, \lambda_3$
+    (ただし、$\lambda_1 \leq  \lambda_2 \leq  \lambda_3$ とする)
+    を求めよ。
+
+
+  \SubSubQuestion
+    設問(ii)で求めた固有値に対応する、規格化された右固有ベクトル
+    $\vec{u}_1, \vec{u}_2, \vec{u}_3$を求めよ。
+    ただし、右固有ベクトルとは、
+    $T\vec{u}_i=\lambda_i \vec{u}_i \;(i=1,2,3)$
+    を満たすベクトルである。
+
+  \SubSubQuestion
+    $x_{n}\;(n \geq 3)$を$x_0,x_1,x_2$によって表せ。
+
+  \end{subsubquestions}
+
+
+
+
+\SubQuestion
+  微分方程式
+%
+  \begin{equation}
+    \Deriver{^{2}y(s)}{s^{2}} = -K(s)y(s) \eqname{2-1}
+  \end{equation}
+%
+  について、以下の設問に答えよ。ただし、以下で、$'$ は$s$に関する
+  微分を表すものとする。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    $K(s)=K_{0}$ (正の定数)のとき、初期条件$y(0)=a, y'(0)=b$
+    に対する式\eqhref{2-1}の解を求めよ。
+
+  \SubSubQuestion
+    式\eqhref{2-1}は、$y_{1}(s)=w(s)\exp[i\psi (s)]$および
+    $y_{2}(s)=w(s)\exp[-i\psi (s)]$の2つの独立解をもつ。ただし\\
+    $i=\sqrt{-1}$である。このとき、次の関係式が成り立つことを示せ。
+%
+    \begin{eqnarray}
+      w'' + Kw - {\psi'}^2 w = 0                \eqname{2-2} \\
+      \psi' = \frac{c}{w^{2}} \;\;\; (cは定数)  \eqname{2-3}
+    \end{eqnarray}
+%
+
+  \SubSubQuestion
+    式\eqhref{2-1}の一般解は、2つの独立解の線形結合で表される。
+    任意の一般解に対して、$s=s_{0}$から$s=s$までの変化を、変換行列
+    により、
+%
+    \[ \begin{pmatrix} y \\ y' \end{pmatrix}%
+      =%
+      \begin{pmatrix}%
+         A & B \\
+         C & D
+      \end{pmatrix}%
+      \begin{pmatrix} y_{0} \\ y'_{0} \end{pmatrix} \]
+%
+    と表現したとき、$A,B$を$w,w',\psi ,w_{0},w'_{0},\psi_{0}$で表せ。
+    ただし、添字のない関数は$s=s$での値、添字$0$のついた関数は
+    $s=s_{0}$での値を表すものとする。また、ここでは式\eqhref{2-3}
+    の$c$は$1$とする。
+
+  \end{subsubquestions}
+
+
+
+\newpage
+\SubQuestion
+  非負の実数に対して定義された関数$u$を関数$w$へ、以下のように変換する
+  演算子$\cal A$を考える:
+%
+  \begin{eqnarray}
+    w      &=& {\cal A}u \nonumber\\
+    w(\xi) &=& \pi^{-1/2}\Dint{0}{\xi}{\d{\zeta}}%
+               (\xi-\zeta)^{-1/2} u(\zeta)%
+               \hspace{15mm} (\xi \geq 0) \eqname{3-2}
+  \end{eqnarray}
+%
+  関数$w$が既知のとき、関数$u$を求めたい。以下の設問に答えよ。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    $\sin^{2}t=(\zeta-\eta )/(\xi-\eta)$と変数変換することにより、
+    次の定積分
+%
+    \[ I \equiv \Dint{\eta}{\xi}{\d{\zeta}} (\xi -\zeta )^{-1/2}(\zeta -\eta )^{-1/2} \]
+
+    を求めよ。ただし、$\eta<\xi$とする。
+
+  \SubSubQuestion
+    式\eqhref{3-2}にさらに$\cal A$を作用させた
+%
+    \begin{equation}
+      {\cal A}w={\cal A}^{2}u%
+      =\pi^{-1/2}\Dint{0}{\xi}{\d{\zeta}}%
+      (\xi-\zeta)^{-1/2}w(\zeta)  \eqname{3-3}
+    \end{equation}
+%
+    を、$u$の一重積分で表せ。
+
+  \SubSubQuestion
+    設問(ii)の結果を考慮すると、${\cal A}u=w$から関数$u$を求めるため
+    の $\cal A$の逆演算子${\cal A}^{-1}$は、具体的にどう表現されるか。
+
+  \SubSubQuestion
+    $w(\xi )=\xi^{2}$の場合について、$u={\cal A}^{-1}w$を求めよ。
+
+
+  \end{subsubquestions}
+\end{subquestions}
+\end{question}
+\begin{answer}{教育 数学}{}
+
+\begin{subanswers}
+\SubAnswer
+
+  \begin{subsubanswers}
+  \SubSubAnswer
+    行列 $T$により
+%
+    \[ T \vect{x_{n+2}}{x_{n+1}}{x_{n}\hfill}%
+       = \vect{x_{n+3}}{x_{n+2}}{x_{n+1}}%
+       = \vect{4x_{n+2}-x_{n+1}-6x_{n}}{x_{n+2}}{x_{n+1}}%
+       = \begin{pmatrix}%
+           4  & -1 & -6 \\
+           1  &  0 & 0  \\
+           0  &  1 & 0 \end{pmatrix}%
+        \vect{x_{n+2}}{x_{n+1}}{x_{n}\hfill}
+    \]
+%
+    よって
+%
+    \[ T= \begin{pmatrix}%
+           4  & -1 & -6 \\
+           1  &  0 & 0  \\
+           0  &  1 & 0 \end{pmatrix}%
+    \]
+
+
+  \SubSubAnswer
+    固有値 $\lambda_i$ は、
+%
+    \[ \lambda_i^3 - 4\lambda_i^2 + \lambda_i + 6%
+       = (\lambda_i +1)(\lambda_i -2)(\lambda_i -3) = 0  \hspace{15mm}%
+       \Yueni \lambda_1=-1,\; \lambda_2=2,\; \lambda_3=3 \]
+
+  \SubSubAnswer
+    各固有値$\lambda_i$ に対応する規格化された固有ベクトルは
+    次の通りに求まる。
+%
+    \[ \vec{u}_1=\frac{1}{\sqrt{ 3}} \vect{1}{-1}{1} \hspace{10mm}%
+       \vec{u}_2=\frac{1}{\sqrt{21}} \vect{4}{2}{1} \hspace{10mm}%
+       \vec{u}_3=\frac{1}{\sqrt{91}} \vect{9}{3}{1} \]
+
+  \SubSubAnswer
+    前問で得られた固有ベクトルを大きさを適当に調整して並べた行列
+%
+    \[ P \equiv \begin{pmatrix}%
+             1 & 4 & 9 \\
+            -1 & 2 & 3 \\
+             1 & 1 & 1 \end{pmatrix} \hspace{15mm}%
+       P^{-1} = \frac{1}{12}\begin{pmatrix}%
+             1 & -5 &  6 \\
+            -4 &  8 & 12 \\
+             3 & -3 & -6 \end{pmatrix} \]
+%
+    を用いて行列$T$を対角化する。すなわち、
+%
+    \[ \vect{x_{n+2}}{x_{n+1}}{x_{n}\hfill}%
+        = P \vect{x_{n+2}^\prime}{x_{n+1}^\prime}{x_{n}^\prime\hfill} \]
+%
+    と数列を変換すれば、漸化式は
+%
+    \[ \vect{x_{n+3}^\prime}{x_{n+2}^\prime}{x_{n+1}^\prime}%
+        = P^{-1}TP \vect{x_{n+2}^\prime}{x_{n+1}^\prime}{x_{n}^\prime\hfill}%
+        = \begin{pmatrix}%
+           -1 & 0 & 0 \\
+            0 & 2 & 0 \\
+            0 & 0 & 3 \end{pmatrix}%
+          \vect{x_{n+2}^\prime}{x_{n+1}^\prime}{x_{n}^\prime\hfill} \]
+%
+    と簡単になる。この漸化式を解いて
+%
+    \[ \vect{x_{n+2}^\prime}{x_{n+1}^\prime}{x_{n}^\prime\hfill}%
+        = \begin{pmatrix}%
+           (-1)^n & 0 & 0 \\
+            0 & 2^n & 0 \\
+            0 & 0 & 3^n \end{pmatrix}%
+          \vect{x_2^\prime}{x_1^\prime}{x_0^\prime} \]
+%
+    逆変換してもとの数列にもどす。
+%
+    \[ \vect{x_{n+2}}{x_{n+1}}{x_{n}\hfill}%
+       = \begin{pmatrix}%
+           1 & 4 & 9 \\
+          -1 & 2 & 3 \\
+           1 & 1 & 1 \end{pmatrix}%
+         \begin{pmatrix}%
+           (-1)^n & 0     & 0 \\
+           0      & 2^{n} & 0 \\
+           0      & 0     & 3^n \end{pmatrix}%
+         \frac{1}{12}\begin{pmatrix}%
+             1 & -5 &  6 \\
+            -4 &  8 & 12 \\
+             3 & -3 & -6 \end{pmatrix}
+         \vect{x_2}{x_1}{x_0} \]
+%
+    簡単な代数計算の後に
+%
+    \[
+      x_{n} =%
+        \left(%
+          \frac{1}{2}x_0 - \frac{5}{12}x_1 + \frac{1}{12}x_2%
+        \right)(-1)^n%
+      + \left(%
+          x_0 + \frac{2}{3}x_1 - \frac{1}{3}x_2%
+        \right)2^n%
+      + \left(%
+          -\frac{1}{2}x_0 - \frac{1}{4}x_1 + \frac{1}{4}x_2
+        \right)3^n
+    \]
+%
+    を得る。
+
+  \end{subsubanswers}
+
+  
+\SubAnswer
+
+  \begin{subsubanswers}
+  \SubSubAnswer
+    微分方程式
+%
+    \[ \Deriver{^{2}y(s)}{s^{2}} = -K_{0}y(s) \]
+%
+    は調和振動子方程式の形なので、その一般解は
+%
+    \[ y(s) = C_{1}\cos (\sqrt{K_{0}}s) + C_{2}\sin (\sqrt{K_{0}}s) \]
+%
+    で与えられる。初期条件$y(0)=a, y'(0)=b$より、次の解を得る。
+%
+    \[ y(s) = a\cos (\sqrt{K_{0}}s) + \frac{b}{\sqrt{K_{0}}}\sin (\sqrt{K_{0}}s) \]
+%
+
+
+  \SubSubAnswer
+    与えられた$y_1,y_2$の微分を求めておく。
+%
+    \begin{eqnarray*}
+      \Deriver{y_{1}}{s} &=& \Deriver{}{s}[w\exp (+i\psi)]%
+                         = w'\exp (+i\psi) + i\psi' w\exp (i\psi)\\
+      \Deriver{y_{2}}{s} &=& \Deriver{}{s}[w\exp (-i\psi)]%
+                         = w'\exp (-i\psi) - i\psi' w\exp (-i\psi)
+    \end{eqnarray*}
+    \begin{eqnarray*}
+      \Deriver{^{2}y_{1}}{s^{2}}%
+        &=& w''\exp (+i\psi) + 2i\psi'w'\exp (+i\psi)%
+             +i\psi''w\exp (+i\psi)-{\psi'}^{2}w\exp (i\psi)\\
+      \Deriver{^{2}y_{2}}{s^{2}}%
+        &=& w''\exp (-i\psi) - 2i\psi'w'\exp (-i\psi)%
+             -i\psi''w\exp (-i\psi)-{\psi'}^{2}w\exp (-i\psi)
+    \end{eqnarray*}
+%
+    これらを式\eqhref{2-1}に代入して
+%
+    \begin{eqnarray*}
+      w'' + 2i\psi' w' + i\psi'' w - {\psi'}^{2}w + Kw &=& 0\\
+      w'' - 2i\psi' w' - i\psi'' w - {\psi'}^{2}w + Kw &=& 0
+    \end{eqnarray*}
+%
+    を得る。両辺足すと
+%
+    \[ w'' + Kw - {\psi'}^{2}w = 0 \]
+%
+    となり式\eqhref{2-2}が示された。また両辺引くことにより
+%
+    \[ 2\psi' w' + \psi'' w = 0 \]
+%
+    となり $w$ をかけて変形して
+%
+    \[ 2\psi' w' w + \psi'' w^{2} = (\psi' w^{2})' = 0 \hspace{15mm}%
+       \Yueni \psi' = \frac{c}{w^{2}} \]
+%
+    となり式\eqhref{2-3}が示された。
+
+
+  \SubSubAnswer
+    解は2つの基底関数の線形結合なので、変換
+%
+    \begin{equation}
+      y = Ay_{0} + By'_{0}
+    \end{equation}
+%
+    は $y=y_{1}(s)$だけを用いて検証すればよい。代入して計算していく。
+%
+    \[ w\exp (i\psi) = Aw_{0}\exp (i\psi_{0})%
+       + B[w'_{0}\exp (i\psi_{0}) + i\psi'_{0}w_{0}\exp(i\psi_{0})] \]
+    \[ Aw_{0}\exp i(\psi_{0} -\psi) + B[w'_{0}\exp i(\psi_{0}-\psi)%
+       + i\psi'_{0}w_{0}\exp i(\psi_{0}-\psi)] - w = 0 \]
+%
+    上の式が恒等的に成り立つためには実部と虚部がゼロでなくては
+    ならない。すなわち、
+%
+    \begin{eqnarray*}
+      Aw_{0}\cos (\psi_{0}-\psi) + B[w'_{0}\cos (\psi_{0}-\psi) 
+         - \psi'_{0}w_{0}\sin (\psi_{0}-\psi)] - w  &=& 0\\
+      Aw_{0}\sin (\psi_{0}-\psi) + B[w'_{0}\sin (\psi_{0}-\psi)
+         + \psi'_{0}w_{0}\cos(\psi_{0} -\psi)]        &=& 0
+    \end{eqnarray*}
+%
+    あとはこの連立方程式を解けばよい。簡単な計算の後に次のような
+    答を得る。
+%
+    \begin{eqnarray*}
+      A &=& +w'_{0}w\sin (\psi_{0}-\psi)%
+            +\frac{w}{w_{0}}\cos (\psi_{0}-\psi)\\
+      B &=& -w_{0}w\sin (\psi_{0}-\psi)
+    \end{eqnarray*}
+%
+  \end{subsubanswers}
+
+\newpage  
+\SubAnswer
+＊ギリシャ文字がややこしいので注意。
+  \begin{subsubanswers}
+  \SubSubAnswer
+    与えられた変数変換により
+%
+    \begin{eqnarray*}
+      \zeta-\eta &=& (\xi-\eta)\sin^2{t} \\
+      \xi-\zeta  &=& (\xi-\eta)\cos^2{t} \\
+      \d{\zeta} &=& (\xi-\eta) 2\sin{t}\cos{t} \d{t}
+    \end{eqnarray*}
+%
+    であり定積分 $I$は
+%
+    \[ I = \Dint{0}{\pi/2}{\d{t}}%
+             (\xi-\eta)^{-1/2}(\cos{t})^{-1}\cdot%
+             (\xi-\eta)^{-1/2}(\sin{t})^{-1}\cdot%
+             (\xi-\eta) 2\sin{t}\cos{t}%
+         =  \Dint{0}{\pi/2}{\d{t}} 2 = \pi \]
+
+
+  \SubSubAnswer
+    式\eqhref{3-3}の$w(\zeta)$を式\eqhref{3-2}の積分変数を$\eta$
+    とした式で表す。
+%
+    \[ {\cal A}w%
+       = \pi^{-1/2}\Dint{0}{\xi}{\d{\zeta}} (\xi-\zeta)^{-1/2}%
+         \pi^{-1/2}\Dint{0}{\zeta}{\d{\eta}}(\zeta-\eta)^{-1/2}u(\eta) \]
+%
+    $\zeta$と$\eta$の積分順序を交換して
+%
+    \[ {\cal A}w%
+       = \pi^{-1}\Dint{0}{\xi}{\d{\eta}} u(\eta)%
+                 \Dint{\eta}{\xi}{\d{\zeta}}%
+                 (\xi-\zeta)^{-1/2}(\zeta-\eta)^{-1/2} \]
+%
+    この2項目の積分は前問で得られているので結局
+%
+    \begin{equation}
+      {\cal A}w = \Dint{0}{\xi}{\d{\eta}} u(\eta) \eqname{3-4}
+    \end{equation}
+%
+    となる。
+
+
+  \SubSubAnswer
+    前問の結果の式\eqhref{3-4}の両辺を$\xi$で微分すると
+%
+    \[ \Deriver{}{\xi} {\cal A}w%
+         = \Deriver{}{\xi}\Dint{0}{\xi}{\d{\eta}} u(\eta)%
+         = u(\eta) \]
+%
+    すなわち、この左辺は $w$の逆写像 ${\cal A}^{-1}w$に他ならない。
+    よって、
+%
+    \[ {\cal A}^{-1} = \Deriver{}{\xi}{\cal A} \]
+%
+    と表すことができる。
+
+
+  \SubSubAnswer
+    式\eqhref{3-3}に $w(\xi)=\xi^2 $を代入して計算していく
+%
+    \begin{eqnarray*}
+      {\cal A}w%
+        &=&  \pi^{-1/2}\Dint{0}{\xi}{\d{\zeta}}(\xi-\zeta)^{-1/2}\zeta^2 %
+         = 4\pi^{-1/2}\Dint{0}{\xi}{\d{\zeta}}(\xi-\zeta)^{1/2} \zeta   \\
+        &=& \frac{8}{3}\pi^{-1/2}\Dint{0}{\xi}{\d{\zeta}}(\xi-\zeta)^{3/2}%
+         =  \frac{16}{15}\pi^{-1/2}\xi^{5/2}
+    \end{eqnarray*}
+%
+    前問の結果より
+%
+    \[ u(\xi ) = {\cal A}^{-1}w = \Deriver{}{\xi}{\cal A}w%
+               =  \frac{8}{3}\pi^{-1/2}\xi^{3/2} \]
+%
+    となる。
+
+  \end{subsubanswers}
+
+\end{subanswers}
+\end{answer}
+
+
+\end{document}
