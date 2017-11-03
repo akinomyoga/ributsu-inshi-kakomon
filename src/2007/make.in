@@ -1,0 +1,27 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2007math 2007phys)
+
+_2007math_title='2007年度実施 数学'
+_2007math_cov=(2007mathC.tex)
+_2007math_prb=(2007mathQ.tex) # 2007mathQ2.tex)
+_2007math_ans=(2007mathA.tex) #(2007mathA1.tex 2007mathA2.tex)
+_2007math_dep=(2007mathQ2_1r.eps)
+#
+# 解答作成: ochi (inshi20phys-ochi.tex)
+# 問題入力: 村瀬功一
+#
+
+_2007phys_title='2007年度実施 物理'
+_2007phys_cov=(2007physC.tex)
+_2007phys_prb=(2007physQ.tex)
+_2007phys_ans=(2007physA1.tex 2007physA2.tex)
+_2007phys_dep=(
+  2007physQ3_1.eps 2007physQ4_1.eps 2007physQ4_2.eps
+  2007physQ4_3r.eps 2007physQ4_4r.eps 2007physQ5_1r.eps 2007physQ5_2r.eps
+  2007physA6_1r.eps)
+#
+# 解答作成 (A1-A3): ochi (inshi20phys-ochi.tex)
+# 問題入力 村瀬功一
+#

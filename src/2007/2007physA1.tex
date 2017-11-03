@@ -1,0 +1,274 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-17, Koichi Murase, inshi20phys-ochi.tex より転載、編集。
+%%
+\begin{answer}{第１問}{ochi}
+※使い方の注意\\
+脚注は気になった人のためのものなので、基本的には本文だけ読めば事足ります。
+\begin{enumerate}
+\item
+  $[ a_k^\dag, a_l^\dag ]=[a_k, a_l]=0, [a_k, a_l^\dag]=\delta_{kl}　(k,l=1,2),　
+  \mathcal{H}=\sum_{k=1}^2 \hbar \omega(a_k^\dag a_k+\frac{1}{2})$.
+
+\item
+  $p_k\to(\hbar/i)(\partial/\partial x_k)$に換えた以下が微分方程式。
+  \begin{equation}
+    (x_k+\frac{\hbar}{m\omega}\frac{\partial}{\partial x_k} )\psi (x)=0
+  \end{equation}
+  解は$exp(-(m\omega/2\hbar)r^2)$。（変数分離法から、各座標成分
+  $x_k$ごとに$exp(-(m\omega/2\hbar)x_k^2)$が解になるので。）
+
+\item
+  固有状態は$(1/\sqrt{n!m!})(a_1^\dag )^{n_1}(a_2^\dag)^{n_2}
+  | 0\rangle$,　$n_1,n_2=0,1,2\dots$。規格化は$\| (a^\dag)^n |0 \rangle\|^2
+  =\langle 0|a^n(a^\dag)^n |0\rangle=\langle 0|a^{n-1}(a(a^\dag)^n)|0\rangle
+  =\langle 0|a^{n-1}(a^\dag)^{n-1}|0\rangle \times n
+  =\| (a^\dag)^{n-1} |0\rangle \|^2 \times n$
+  のように帰納的にわかります。\footnote{途中、$a(a^\dag)^n=n(a^\dag)^{n-1}+(a^\dag)^na$
+  を使いました。証明は以下。まず左辺を$b_n$とおくと
+  $b_n=(aa^\dag)(a^\dag)^{n-1}=(1+a^\dag a)(a^\dag)^{n-1}=(a^\dag)^{n-1}+a^\dag b_{n-1}$
+  と帰納法。特に$a(a^\dag)^n|0\rangle=n(a^\dag)^{n-1}|0\rangle$。なお、本質的には
+  $a$を交換関係使って右に動かしていくときに、1つ動かすにつき$+1$の因子が出るというだけなので、
+  わざわざこう式の形で示さなくても、言葉で説明すれば十分でしょう。}\\
+
+  固有値を出すために、1番で求めた$\mathcal{H}$をこれに作用させます。脚注4の式を使って
+  $\hbar \omega (n_1+n_2+1)$。縮退度は$n=n_1+n_2$に対して$n+1$。
+
+\item
+  気合です。$n$は、波動関数の一価性のために$\Theta(\theta)$は周期$2\pi$の関数でなくては
+  いけないので、整数でなくてはいけません。（ちゃんと$\Theta(\theta)=exp(in\theta)$となることも
+  式で示しましょう。）
+
+\item
+  条件より$\alpha\geq 0$。
+  $r\to 0$で$f(r)\sim r^{\alpha}$。微分方程式は$f''+(1/r)f'-(n^2/r^2)f\sim 0$。
+  代入して$\alpha(\alpha -1)+\alpha -n^2=0$。解いて$\alpha=n$。
+
+\item
+  べき級数を代入して気合で整理します。すると
+  $f_1(2n+1)r^{n-1}+\sum_{s=0}^\infty [
+  f_{s+2}\{ (n+s+2)(n+s)-n^2 \} +2f_s\{
+  E-(1+n+s) \} ] r^{n+s}=0$となります。（多分。違うかもしれません。）
+  すると各$r^{n+s}$の係数は0になるはずですが、
+  ある$s'$以上で$f_{s'}=0$となるので、その境目あたりで
+  $E=1+n+s$となるはずです。\footnote{もう少し議論を精緻化すると、
+  全ての$f_s$が0でなく、かつべき級数が有限の項からなるのならば、
+  $f_s=0(s\geq s'),f_s\neq 0(s=s'-1)$なる$s'$が存在するはずで、
+  そのとき$r^{n+s'-1}$の係数に着目すれば。}$n,s$ともに0以上の整数より設問3と一致。
+  \footnote{さらに、角度方向の量子数が、動径方向の量子数以下であることもわかります。}
+\end{enumerate}
+\end{answer}
+
+\begin{answer}{第２問}{ochi}
+\begin{enumerate}
+\item
+  $Z=(2+exp(-\beta \epsilon))^N$より、以下のように求まります。
+  \begin{equation}
+    E=-\frac{\partial}{\partial \beta}(\ln Z)
+      =-N\frac{-\epsilon e^{-\beta \epsilon}}{2+e^{-\beta \epsilon}}
+      =\frac{N\epsilon e^{-\beta \epsilon}}{2+e^{-\beta \epsilon}}.
+  \end{equation}
+
+\item
+  \begin{equation}
+    S=\frac{E-F}{T}=k_B \beta (E+\frac{1}{\beta}\ln Z)
+    =Nk_B \left( \ln{(2+e^{-\beta \epsilon})} +\frac{\beta \epsilon e^{-\beta \epsilon}}
+    {2+e^{-\beta \epsilon}} \right).
+  \end{equation}
+
+  ここで$\beta = \infty(T = 0)$とすると
+  \begin{equation}
+    S(T=0)=Nk_B\begin{cases}
+      \ln 2 & \epsilon >0\\
+      \ln 3 & \epsilon =0\\
+      0(=\ln 1) & \epsilon <0
+    \end{cases}
+  \end{equation}
+  と求まります。説明は、
+  それぞれ上から、各分子の最低のエネルギーが$2,3,1$重縮退をしていること、$S=k_B\ln W$という
+  表現、絶対零度で系は基底状態を取ることに触れればいいでしょう。
+
+  以下、$p=exp(-\beta \epsilon)/(2+exp(-\beta \epsilon))$とおきます。いまの系は、
+  各分子のエネルギーが確率$p$で$\epsilon$、$1-p$で$0$にあるものと考えられます。
+
+\item
+  $P(N_{\epsilon})={}_NC_{N_\epsilon} p^{N_\epsilon} (1-p)^{N-N_\epsilon}$.
+  二項分布そのまま。
+
+\item
+  以下の変形がわからなかったら、${}_nC_m=n!/((n-m)!m!)$を思い出してください。
+  \begin{equation}
+    \langle N_\epsilon\rangle =\sum_{n=0}^N {}_NC_m p^m (1-p)^{N-m}m
+      =Np\sum_{n=1}^N {}_{N-1}C_{m-1} p^{m-1} (1-p)^{(N-1)-(m-1)}
+      =Np(p+(1-p))^{N-1}=Np
+  \end{equation}
+  なお設問で与えられた公式を使いました。
+  ここに$p$の定義式を代入してグラフを描くのは略します。$T=0$だと
+  $\langle N_\epsilon\rangle =N(\epsilon <0),\ N/3(\epsilon=0),\ 0(\epsilon >0)$に注意して、
+  有限温度ならそれを緩めればOKです。$\epsilon\sim 0$で
+  一次関数的に振る舞い（テイラー展開より）、$\epsilon\to \pm \infty$
+  では$T=0$での値にexponentialに近づきます。\footnote{
+  これは、エネルギーギャップ大きい=飛び移りにくい
+  =極限では$T=0$と同じ状況に、ということ。さらに飛び移りにくさがエネルギーに対して
+  exponentialになるのはカノニカル分布から。}温度が2倍になれば、
+  (pは$\beta \epsilon$の関数なので）グラフは横に2倍に伸びるだけです。
+
+\item
+  \begin{equation}
+    \langle N_\epsilon^2-N_\epsilon\rangle =\sum_{n=0}^N {}_NC_m p^m (1-p)^{N-m}m(m-1)
+    =N(N-1)p^2,\quad\text{（示し方は上と全く同じ）}
+  \end{equation}
+  \begin{equation}
+    \langle N_\epsilon^2\rangle -\langle N_\epsilon\rangle ^2=Np(1-p).\quad\text{（式(23)も使って）}
+  \end{equation}
+  例えば$p=0,1$で分散0は見ればわかりますね。
+
+\item
+  単に微分して$\chi=-\beta(\langle 
+  N_\epsilon^2\rangle -\langle N_\epsilon \rangle^2)$。ちゃんと$\epsilon$とかで
+  表すのは省略します。
+\end{enumerate}
+\end{answer}
+
+\begin{answer}{第３問}{ochi}
+\begin{enumerate}
+\item
+  マクスウェル方程式は以下の通り。
+  \begin{align}
+    \mathbf{\nabla}\cdot \mathbf{\tilde{E}}&=0\\
+    \mathbf{\nabla}\times \mathbf{\tilde{E}}&=-\frac{\partial \mathbf{\tilde{B}}}{\partial t}\\
+    \mathbf{\nabla}\cdot \mathbf{\tilde{B}}&=0\\
+    \mathbf{\nabla}\times \mathbf{\tilde{B}}&=\frac{1}{c^2}\frac{\partial \mathbf{\tilde{E}}}{\partial t}
+  \end{align}
+  $(\partial/\partial t)$（式29）$-\mathbf{\nabla}\times$（式27）で$\mathbf{\tilde{E}}$の式。ここで
+  $\mathbf{\nabla}\times(\mathbf{\nabla}\times \mathbf{A})=\mathbf{\nabla}
+  (\mathbf{\nabla}\cdot \mathbf{A})-\nabla^2 \mathbf{A}$
+  を使いました。
+
+\item
+  これは波動方程式に代入するだけ。$\gamma^2=(\omega/c)^2-k^2$.\\
+
+  問題とは少しズレますが、せっかくだしマクスウェル方程式全部に、いまの
+  電磁場の関数系を代入してそのまんま計算すると、以下の方程式系を得ます。（実際に計算すれば
+  わかりますが、これ以上の式は出てこないので、これらは（今の関数系に対する仮定の下で）
+  マクスウェル方程式全体と等価になります。）\footnote{方針としては、まずrotの第1,2成分の計4式から
+  $E_x,E_y,B_x,B_y$を$E_z,B_z$のみで表し、その後はそれら4式を残り全てに代入。
+  なお$\gamma=0$でもこれらの式は成り立ちますが、そのときは等価にはなりません。
+  これは必要になったら考えます。（その場合でも、これらの式が成り立つのなら、これからの
+  議論に支障はないので。）}
+  \begin{align}
+    \gamma^2 E_x&=
+      i(\omega \frac{\partial B_z}{\partial y}+k\frac{\partial E_z}{\partial x}),\\
+    \gamma^2 E_y&=
+      i(-\omega \frac{\partial B_z}{\partial x}+k\frac{\partial E_z}{\partial y}),\\
+    \gamma ^2B_x&=
+      i(-\frac{\omega}{c^2} \frac{\partial E_z}{\partial y}+k\frac{\partial B_z}{\partial x}),\\
+    \gamma ^2B_y&=
+      i(\frac{\omega}{c^2}\frac{\partial E_z}{\partial x}+k\frac{\partial B_z}{\partial y}),\\
+    \left( \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\gamma^2 \right)E_z&=0,\\
+    \left( \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\gamma^2 \right)B_z&=0.
+  \end{align}
+
+  さて、これを見ると下の二つの方程式を解いて$E_z,B_z$を求めてしまえば、
+  残りは全部わかるようです。境界条件も、上の式を使えば全て$E_z,B_z$に対するものとして
+  表すことができます。（例えば$E_x$に対する境界条件があれば、1番目の式を使って。）これ以降
+  、$E_z,B_z$に絞って解析を進めているのは、そのためです。
+
+\item
+  $E_z(x,y)=f(x)g(y)$とおいて代入すると、$(f''/f)+(g''/g)+\gamma^2=0$より、
+  $f,g$ともに三角関数で表されることがわかります。\footnote{細かいこと言うと、
+  これだけだと指数関数や一次関数になる可能性もあります。
+  が、そのときは$E_z$の境界条件を満たすことができません。
+  （指数関数については、
+  $f=ae^{\alpha x}+be^{-\alpha x}$とでもおいてみてください。$x=0$で$f=0$だと$f\propto \sinh$より
+  単調関数なので$x=a$では$f\neq 0$でアウト。定数関数でない一次関数については、
+  明らかですね。）磁場も同様。
+  なお定数関数な可能性は含めて「三角関数」と書いてあります。
+  （後の設問でも$n=0$とか考えてるし。）
+  }境界条件$E_z=0$（「導体表面に平行な$\mathbf{E}$成分は0」）より、
+  $E_z=E\sin[ (m\pi/a)x ]\sin[ (n\pi/b)y]$となって、答えを得ます。
+  \footnote{平行成分は他にもありますが、そちらの境界条件は
+  （$\gamma\neq 0$であれば）自動的に満たされます。設問4での$B_z$に対する
+  境界条件を使うと、例えば式(30)の右辺は$y=0$において常に$0$になります。}\\
+
+\item
+  設問にはなっていませんが、$B_z$を$\cos$で書ける理由にも触れておきます。いま磁場については
+  「導体表面に垂直な$\mathbf{B}$成分は0」が成り立ちます。これは$\partial B_z/\partial n=0$と
+  表すことができます。（$n$は法線方向の微分。）
+  それは、例えば$x=0$平面上では$B_x=0$ですが、式(32)右辺の第一項は
+  $E_z=0$ on $x=0$という境界条件より$0$（$y$で微分していますが、境界条件より$x=0$の平面上で
+  $y$方向にどう動かしたところでずっと$0$です。）で、結局第二項の
+  $\partial B_z/\partial x$のみ残るからです。よってそれを満たす関数ということで$\cos$になります。\\
+
+  さらに、設問3と同じ整数の組$(m,n)$を使えるのは、設問3で$\gamma^2$を$(m,n)$で表しましたが、
+  $B_z$についても同じことが出来るからです。共通の$\gamma^2$を$a\neq b$のときに、このように同じ形で
+  書くためには、$(m,n)$も共通でなくてはいけません。\footnote{証明。$(m\pi/a)^2+(n\pi/b)^2=(m'\pi/a)^2
+  +(n'\pi/b)^2$とする。変形して$b^2(m-m')(m+m')=a^2(n'-n)(n'+n)$。もしも$b^2$と$a^2$の比が有理数比
+  でなければ、これで証明終わり。（$m,n$の符合については、$\cos$の対称性に吸収させればOK。）
+  ちょうどぴったり都合のいい有理数比（のモデル）だと。。どうなるんでしょう？}\\
+
+  設問自体は、式(30)から(33)に$E_z,B_z$の関数系を代入するだけなのですぐです。
+  \begin{align}
+    \gamma^2E_x&=i(-\omega\beta B+k\alpha E)\cos \alpha x \sin \beta y,\\
+    \gamma^2E_y&=i(\omega\alpha B+k\beta E)\sin \alpha x \cos \beta y,\\
+    \gamma^2B_x&=i(-\frac{\omega}{c^2}\beta E-k\alpha B)\sin \alpha x \cos \beta y,\\
+    \gamma^2B_y&=i(\frac{\omega}{c^2}\alpha E-k\beta B)\cos \alpha x \sin \beta y.
+  \end{align}
+  この両辺を$\gamma^2=(m\pi/a)^2+(n\pi/b)^2$で割ったものが答えです。\\
+
+  \textgt{（以下の補足は、おそらく院試の答案には不要なんじゃないかと思います。
+  それか、もっと簡単な論理で言えるのかもしれませんが。。いずれにせよ、調べたわけでも
+  ないし自信はかなりありません。）}
+  ところでもし
+  $n=m=0$だとその操作は許されません（$\gamma^2=0$より）が、そのときは上の式の両辺が$0$
+  なので、そもそも上の式がただのtrivialな等式になってしまいます。脚注8で触れたように
+  このとき式(30)から(35)はマクスウェル方程式に等価ではなく、いま$n=m=0$より$E_z=0,B_z=B$
+  に留意して（式(30)から(35)が成り立つことには変わりないので、今までの議論を捨てる必要は
+  ありません。）、この場合は
+  \begin{align}
+    E_y &=-cB_x,\\
+    E_x &=cB_y,\\
+    \frac{\partial E_x}{\partial x}+\frac{\partial E_y}{\partial y}&=0,\\
+    \frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}&=i\omega B
+  \end{align}
+  が等価な条件式として出てきます。
+  （マクスウェル方程式を$E_z=0,B_z=B$として単純に計算すれば出てきます。
+  $\gamma^2=0$より$\omega=ck$ともしました。）また脚注10で触れたように、ここには
+  さらに$E_x,E_y$に関する境界条件を課す必要があります。\textgt{以下、さらに自信が
+  ないので注意してください。}下の2つの式からすぐに、$(\partial^2/\partial x^2+
+  \partial^2/\partial y^2)E_x=0$がわかります。これを設問と同じように変数分離法で
+  解く（ただし、$E_x=0$ in $y=0,b$）と、$E_x=E_1(c_1exp((n'\pi/b)x)+c_2exp(-(n'\pi/b)x)
+  )\sin ((n'\pi/b)y)$という形がわかります。全く同じように$E_y$も（こちらは$x$成分が
+  $\sin$で）求まるのですが、
+  これを元々の式(42),(43)に入れるとできる恒等式は、明らかに係数が全部$0$でないと
+  恒等式でなくなるので、$E_x=E_y=B=0$。また、式(40),(41)から$B_x=B_y=0$になるので
+  結局全部消えます。よって伝播する電磁場の解にはなりません。
+
+\item
+  上の考察から、$n=m=0$は弾いていいでしょう。残りの$(n,m)$ならどれも$E_z=0$を
+  もちろん満たし、かつ他の成分（の一部）はちゃんと（例えばポインティングベクトルが
+  ノンゼロなようには）生き残るので伝播する電磁場の解と認められます。
+  よって$(m,n)=(1,0)$がよく（理由は後述）、そのとき$\gamma^2=(\pi/a)^2=(\omega/c)^2-k^2$
+  を解いて$\omega=c\sqrt{k^2+(\pi/a)^2}$。$(0,1)$を選ばなかったのは、$a>b$だから。（この
+  解の形を見ればわかりますよね。）
+  （振動数とあるので、角振動数を$2\pi$で割ったほうがいいのかも？）
+
+\item
+  $B_z=0$なら$B=0$でなくてはいけません。これで$E=0$だと電磁場が全て$0$になってしまうので$E\neq 0$。
+  \footnote{混乱を招くかもしれないので念のため断っておきますが、
+  $E$や$B$は（本文中の定義から）あくまで$E_z,B_z$の係数であって、例えば$B=0$になったからといって
+  磁場がなくなるわけじゃありません。
+  ただ設問4で$E,B$を使って電磁場の各成分を表した式(36)-(39)からわかるように、
+  $E=B=0$だと電磁場の全成分が0になります。}
+  さらに設問4で得た式をちゃんとチェックすると、$m,n$の少なくとも一方が
+  $0$のときも、電磁場の成分が全て$0$になってしまいます。
+  \footnote{後で見返したらわかりにくかった
+  ので、補足します。例えば式(36)で$B=0$とします。もし$m=0$なら係数の$\alpha=0$なのでゼロ、
+  $n=0$なら$\beta=0$よりサインのせいでゼロ。あるいはもっと簡単に考えれば、
+  $m,n$のどちらか一方がゼロなら$E_z=0$なので$E=0$を考えているのと同じになるから、
+  でもいいでしょう。なお、5番の問題のときはこの問題は起こりません。（チェックしてみてください。）}
+  よって$(m,n)=(1,1)$。（このときは大丈夫。）
+  このとき$\gamma^2=(\pi/a)^2+(\pi/b)^2=(\omega/c)^2-k^2$を解いて$\omega=c\sqrt{k^2+(\pi/a)^2
+  +(\pi/b)^2}$。（$2\pi$で割るうんぬんは、設問5と同じ。）
+\end{enumerate}
+\end{answer}

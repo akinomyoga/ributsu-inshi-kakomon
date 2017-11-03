@@ -1,0 +1,199 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-17, Koichi Murase, inshi20phys-ochi.tex より転載、編集。
+%%
+\begin{answer}{第１問}{ochi}
+※使い方の注意\\
+脚注は気になった人のためのものなので、基本的には本文だけ読めば事足ります。
+\begin{enumerate}
+\item
+  順にT,F,T,F,T(T=True, F=False)\\
+
+  解説は略します。今考えているSO(3)の定義が「直交かつdet=1」なことに
+  注意すれば大丈夫です。(b)は回転軸変えればだいたい非可換になるし、
+  (d)の反例としては鏡映など。\\
+
+\item
+  z軸を中心とした回転なので、普通に2次元の回転行列を考えます。これを$\Omega_0$とおいときます。
+  \begin{equation}
+  \Omega_0(\theta)=
+  \begin{pmatrix}
+  \cos \theta & -\sin \theta & 0\\
+  \sin \theta & \cos \theta & 0\\
+  0 & 0 & 1\\
+  \end{pmatrix}
+  \end{equation}
+  固有値の出し方はいいでしょう。exp($\pm$i$\theta$),$1$。あと$(0,0,1)=\mathbf{n_0}$としときます。\\
+
+\item
+  固有値は上と同じです。(任意の$\mathbf{n}$に対して、その方向をz軸の方向として
+  基底を変換すれば(1)の話に帰着するので。
+  基底の変換(もとい座標の向きの決め方)に対して固有値は
+  不変です。\footnote{もしもっと形式的に議論をしたければ、例えば$(0,0,1)=\mathbf{n_0}$
+  を$\mathbf{n}$に
+  回転させてもっていく行列を$R$とします。すると(1)の行列を$\Omega_0$,(2)の行列を$\Omega$と
+  したとき、$\Omega=R\Omega_0 R^{-1}$となることがわかります。（右辺は右から順に、
+  「回転軸を$\mathbf{n}$から$(0,0,1)$に動かした」「まわした」「戻した」（結局、二つの回転軸
+  のまわりの世界を$R$や$R^{-1}$で行ったり来たりできると思えば、わかるはずです。））あとは
+  すぐわかるでしょう。例えば$\Omega_0 v=\lambda v$なら$R\Omega_0 R^{-1} (R v)=\lambda (R v)$と
+  なるので、$\Omega$も固有値$\lambda$を持ち、逆も同様なので二つの行列の固有値の集合は一致。
+  $det[ \Omega-\lambda I]=det[R]det[\Omega-\lambda I]det[R^{-1}]=
+  det[ \Omega_0 - \lambda I]$でもいいでしょう。})
+
+\item
+  単純計算でも絵を描いても出来ますが、面倒なので楽に。
+  まず、求めたい式の両辺に$\Omega(\mathbf{n},-\theta)$を掛けて
+  \begin{equation}
+    (\Omega(\mathbf{n}, \Delta \theta) -I)\mathbf{v_0}=
+    \mathbf{n}\times \mathbf{v_0} \Delta \theta
+  \end{equation}
+  とします。\footnote{右辺では、ベクトルの外積が回転行列$\Omega$に対して$\Omega
+  (\mathbf{a}\times\mathbf{b})
+  =(\Omega\mathbf{a})\times(\Omega\mathbf{b})$のように、要はベクトル的に変換することを使いました。
+  （$\mathbf{n}$
+  は$\mathbf{n}$まわりでいくら回転させても$\mathbf{n}$のままなのに注意。）
+  ベクトルの外積の意味
+  を考えても当たり前ですが、数式的にこれを証明するには、
+  テンソルの記法で$\Omega_{ij}a_kb_l\epsilon_{klj}=\epsilon_{imn}\Omega_{mp}a_p\Omega_{nq}b_q$を
+  示せばできます。（テンソル苦手なんで、全部下つきの添え字で書いちゃいました。）これを示すには、
+  右辺に$\epsilon_{imn}\Omega_{mp}\Omega_{nq}=\Omega_{ir}\epsilon_{pqr}$
+  （直交行列の各列ベクトルは正規直交基底を
+  成すので、第p列と第q列のベクトルの外積の第i成分を左辺が示すと思えば。例えば$p=1,q=2$なら
+  それは第3列のベクトルの第i成分ですよね。）を代入します。}
+  さらに脚注1で書いた$R^{-1}$を左から掛けて（その脚注にあるように$\Omega=R\Omega_0 R^{-1}$に注意。）
+  \begin{equation}
+    (\Omega_0(\Delta \theta)-I)(R^{-1}\mathbf{v_0})
+    =\mathbf{n_0} \times (R^{-1}\mathbf{v_0}) \Delta \theta
+  \end{equation}
+  を示せばいいことになります。（ここでも脚注2の性質を使いました。）
+  $R^{-1}\mathbf{v_0}=(x,y,z)$とおいて、式(1)を元に、この式(4)の成分を$O(\Delta \theta)$
+  まであらわに書くと
+  \begin{equation}
+    \begin{pmatrix}
+      0 & -\Delta \theta & 0\\
+      \Delta \theta & 0 & 0\\
+      0 & 0 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+      x\\
+      y\\
+      z
+    \end{pmatrix}=
+    \begin{pmatrix}
+      0\\
+      0\\
+      1
+    \end{pmatrix}\times
+    \begin{pmatrix}
+      x\\
+      y\\
+      z
+    \end{pmatrix}
+    \Delta \theta
+  \end{equation}
+  となりますが、これは明らかでしょう。\\
+
+  （式変形が少しややこしかったかもしれませんが、この解答は本質的には「一般の回転軸のまわりで
+  $\theta \to \theta+\Delta \theta$」だとめんどいから、$z$軸まわりで$\theta=0$にしちゃえ、って
+  してるだけです。）\\
+
+\item
+  設問(3)で与えられた式の両辺を$\Delta \theta$で割ることによって得られる微分方程式は
+  \begin{equation}
+    \frac{d \Omega}{d \theta}(\mathbf{n}, \theta) \mathbf{v_0}
+    =\mathbf{n}\times \mathbf{v_0}
+  \end{equation}
+  です。ここで設問に与えられた$A$を使うと\footnote{このような$A$の存在証明を一応しときます。
+  $\mathbf{u}\mapsto \mathbf{a}\times\mathbf{u}$は$\mathbf{u}$について線形なので、線形変換
+  を行列表示したものを$A(\mathbf{a})$とすれば$A(\mathbf{a})\mathbf{u}=\mathbf{a}\times \mathbf{u}$と
+  書ける。これが実の行列であることは、任意のベクトル$\mathbf{u}$に対して右辺が実だから。}
+  右辺は$A(\mathbf{n})\mathbf{v_0}$と書けるので
+  \begin{equation}
+    \frac{d \Omega}{d \theta}(\mathbf{n}, \theta)=A(\mathbf{n})
+  \end{equation}
+  となります。あとはいいでしょう。（$\theta=0$を考慮して積分定数を決めるのも忘れずに。）
+
+\item
+  $X\mathbf{u}=\mathbf{a_0}\times\mathbf{u}$。$\mathbf{a_0}=(x,y,z)$とおきます。
+  $\mathbf{u}=(0,0,1),(0,1,0)$を代入して
+  \begin{equation}
+    \begin{pmatrix} x_{13} \\ x_{23} \\ 0 \end{pmatrix}
+      = \begin{pmatrix} y \\ -x \\ 0 \end{pmatrix},\quad
+    \begin{pmatrix} x_{12} \\ 0 \\ x_{32} \end{pmatrix}
+      = \begin{pmatrix} -z \\ 0 \\ x \end{pmatrix}
+  \end{equation}
+  を得ます。よって$\mathbf{a_0}=(x_{32},x_{13},x_{21})$。
+
+\item
+  $X$が実交代$\Leftrightarrow {}^tX=-X$。いま、$Y$が「直交、かつdet=1」
+  ならいいので、順に見てくと
+  \begin{equation}
+  {}^tYY={}^t(e^X)e^X=e^{{}^tX}e^X=e^{-X}e^X=I,　同様にY{}^tY=I
+  \end{equation}
+  \begin{equation}
+  det[Y]=det [e^X]=e^{\lambda_1+\lambda_2+\lambda_3}=e^{tr X}=e^0=1
+  \end{equation}
+  より示せました。ただし$\lambda$は$X$の固有値。\\
+
+  下については少し補足すると、
+  「detは固有値全ての積、trは固有値全ての和」という性質を使いました。（これは
+  対角化すれば明らかです。対角化不可能な行列についても、固有値出すための
+  方程式に解と係数の関係使えばわかります。）$tr X=0$
+  は、交代行列なら定義から対角成分が$0$になるからです。（例えば(5)の設問の式。）
+  exponentialの扱いで気になったら、テイラー展開すれば多分わかります。
+\end{enumerate}
+\end{answer}
+
+\begin{answer}{第２問}{ochi}
+\begin{enumerate}
+\item
+  $n$次。これは帰納法で。$n=0$なら明らか。あとは以下の関係式に注意。
+  \begin{equation}
+    f_n(x)
+      =e^{x^2}\frac{d^n}{dx^n}(e^{-x^2})=e^{x^2}\frac{d}{dx}(e^{-x^2}f_{n-1}(x))
+      =-2xf_{n-1}(x)+\frac{d}{dx}f_{n-1}(x).
+  \end{equation}
+
+\item
+  $n\geq 2$を使うと、部分積分などから以下がわかります。
+  \begin{equation}
+    \int_{-\infty}^{\infty}xf_n(x)e^{-x^2}dx=\int_{-\infty}^{\infty}x\frac{d^n}{dx^n}(e^{-x^2})dx=
+      -\int_{\infty}^{\infty}\frac{d^{n-1}}{dx^{n-1}}(e^{-x^2})dx=0.
+  \end{equation}
+
+\item
+  上と同様に部分積分を繰り返すとわかります。
+  \begin{equation}
+    \int_{-\infty}^{\infty}x^nf_n(x)e^{-x^2}dx=\int_{-\infty}^{\infty}x^n\frac{d^n}{dx^n}(e^{-x^2})dx
+      =\dots=(-1)^n n! \int_{-\infty}^{\infty}e^{-x^2}dx=(-1)^nn!\sqrt{\pi}.
+  \end{equation}
+
+\item
+  与えられた式に$f_n(x)$の定義式を代入すると、結局
+  \begin{equation}
+    \sum_{n=0}^{\infty}\frac{t^n}{n!}\frac{d^n}{dz^n}(e^{-z^2})=e^{-(t+z)^2}
+  \end{equation}
+  を示せればいいことがわかります。ここで与えられた積分の式を左辺に入れて
+  \begin{align}
+    (l.h.s)=\sum_{n=0}^{\infty}\frac{t^n}{n!}\frac{d^n}{dz^n}\frac{1}{2\pi i}\oint_C
+      \frac{e^{-\omega ^2}}{\omega -z}d\omega
+      &=\sum_{n=0}^{\infty}\frac{t^n}{2\pi i}\oint_C
+        \frac{e^{-\omega ^2}}{(\omega -z)^{n+1}}d\omega \\
+      &=\frac{1}{2\pi i}\oint_C \sum_{n=0}^{\infty} t^n
+        \frac{e^{-\omega ^2}}{(\omega -z)^{n+1}}d\omega \\
+      &=\frac{1}{2\pi i}\oint_C \frac{e^{-\omega ^2}}{\omega -z-t}d\omega \\
+      &=e^{-(t+z)^2}
+  \end{align}
+  となるので示せました。ただし最後から二番目の等号は$\sum z^n=1/(1-z)$という普通の幾何級数
+  を、最後の等号は$|t|<1$より（poleがCの内側にあるので）
+  普通の留数計算（あるいは、本文で与えられた公式）です。
+
+\item
+  この設問で与えられた微分方程式に、(iv)で示した式をそのまま代入して
+  \begin{equation}
+    \sum_{n=0}^{\infty}\frac{t^n}{n!}(f_n''(z)-2zf_n'(z)+2nf_n(z))=0
+  \end{equation}
+  を得ます。これが恒等式なので、各$n$について、sumされている中身は0にならなくては
+  いけません。(tの多項式だとでも思って。。）よって$\lambda=2n$。
+\end{enumerate}
+\end{answer}
