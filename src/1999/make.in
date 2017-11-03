@@ -1,0 +1,34 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1999pankyo 1999senmon)
+docs_ex=(1999pankyo2)
+
+_1999pankyo_title='1999年度実施 一般教育科目'
+_1999pankyo_cov=()
+_1999pankyo_prb=(1999engl.tex 1999math.tex 1999phys.tex)
+_1999pankyo_ans=(1999engl.tex 1999math.tex 1999phys.tex)
+_1999pankyo_dep=(1999math-1.eps 1999phys2-1.eps 1999phys2-2.eps 1999phys2-3.eps 1999phys3-1.eps 1999phys3-2.eps 1999phys3-3.eps)
+
+_1999pankyo2_title='1999年度実施 一般教育科目 (英語なし)'
+_1999pankyo2_cov=()
+_1999pankyo2_prb=(1999math.tex 1999phys.tex)
+_1999pankyo2_ans=(1999math.tex 1999phys.tex)
+_1999pankyo2_dep=(1999math-1.eps 1999phys2-1.eps 1999phys2-2.eps 1999phys2-3.eps 1999phys3-1.eps 1999phys3-2.eps 1999phys3-3.eps)
+
+_1999senmon_title='1999年度実施 物理専門科目'
+_1999senmon_cov=()
+_1999senmon_prb=(1999phy1.tex 1999phy2.tex 1999phy3.tex 1999phy4.tex 1999phy5.tex 1999phy6.tex 1999phy7.tex 1999phy8.tex)
+_1999senmon_ans=(1999phy1.tex 1999phy2.tex 1999phy3.tex 1999phy4.tex 1999phy5.tex 1999phy6.tex 1999phy7.tex 1999phy8.tex)
+_1999senmon_dep=(
+  1999phy1-1.eps 1999phy1-2.eps 1999phy1-3.eps 1999phy2-1.eps 1999phy3-0.eps
+  1999phy4-1.eps 1999phy4-10.eps 1999phy4-2.eps 1999phy4-3.eps 1999phy4-4.eps 1999phy4-5.eps 1999phy4-6.eps 1999phy4-7.eps 1999phy4-8.eps 1999phy4-9.eps
+  1999phy5-1.eps 1999phy5-2.eps 1999phy5-3.eps 1999phy5-4.eps 1999phy5-5.eps 1999phy5-6.eps
+  1999phy8-1.eps 1999phy8-2.eps 1999phy8-3.eps 1999phy8-4.eps 1999phy8-5.eps 1999phy8-6.eps
+  1999phy8-7.eps 1999phy8-8.eps 1999phy8-9.eps 1999phy8-10.eps 1999phy8-11.eps 1999phy8-12.eps)
+
+#
+# 問題入力・解答作成 第1問: 竹井洋(s91546)
+# 問題入力・解答作成 第5問: 吉川真
+# 問題入力・解答作成 第7,8問: 石井
+#
