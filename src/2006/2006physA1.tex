@@ -1,0 +1,60 @@
+%% -*- coding:sjis -*-
+\newcommand{\bra}[1]{\left\langle {#1} \right|}
+\newcommand{\ket}[1]{\left| {#1} \right\rangle}
+\begin{answer}{第１問}{見上敬洋}
+\begin{enumerate}
+\item[1,2,3.]
+  角運動量$l_a = \epsilon_{acd}x_c p_d$と，座標$x_b$の交換関係は次のように計算できます
+  \footnote{以下，連続した添え字は和を取ります．当然$a,b,c,\cdots$は$x,y,z$のことです．}． 
+  \begin{equation}
+  [l_a,x_b] = \epsilon_{acd}[x_c p_d, x_b]
+  = \epsilon_{acd}\Big( x_c[p_d,x_b] + [x_c,x_b]p_d \Big)
+  = \epsilon_{acd} x_c (-i\hbar \delta_{db}) 
+  = i\hbar \epsilon_{abc} x_c . \notag
+  \end{equation}
+  以下同様に計算すれば，次が得られます．
+  \begin{align}
+  [l_a,x_b] &= i\hbar \epsilon_{abc} x_c ,\notag\\
+  [l_a,p_b] &= i\hbar \epsilon_{abc} p_c ,\notag\\
+  [l_a,l_b] &= i\hbar \epsilon_{abc} l_c . \notag
+  \end{align}
+
+\setcounter{enumi}{3}
+\item[4,5.]\ilabel{2006physA4}
+  計算は簡単なので結論だけ述べると，
+  \begin{align}
+  A^\dagger A &= B - J_z^2 + \hbar J_z, \notag\\
+  AA^\dagger  &= B - J_z^2 - \hbar J_z \notag
+  \end{align}
+  となります．また$[B,J_a] = 0$がわかり，$B$は全ての力学変数$J_a$と交換するので，$B$は演算子としてはc-数です．
+
+\setcounter{enumi}{5}
+\item\ilabel{2006physA6}
+  $[J_z, A] = -\hbar A$と計算でき，$J_z\cdot A \ket{\Theta_z} = (AJ_z -\hbar A)\ket{\Theta_z} = (\Theta_z-\hbar) A\ket{\Theta_z}$となるので，$A\ket{\Theta_z}$は固有値$\Theta_z-\hbar$を持ちます．
+  同様にして$A^\dagger\ket{\Theta_z} $も固有値$\Theta_z + \hbar$を持ちます．
+
+\item\ilabel{2006physA7}
+  %% 問題\iref{2006physA4}の結果を使うと，
+  問題4の結果を使うと，
+  \begin{align}
+  \bra{\Theta_z} A^\dagger A \ket{\Theta_z} &= B - (\Theta_z ^2 - \hbar \Theta_z) = (m+\Theta_z)(m-\Theta_z+\hbar) \notag, \\
+  \bra{\Theta_z} AA^\dagger  \ket{\Theta_z} &= B - (\Theta_z ^2 + \hbar \Theta_z) = (m-\Theta_z)(m+\Theta_z+\hbar) \notag
+  \end{align}
+  が得られます．ここで$B=m(m+\hbar)$を使いました．これらはそれぞれ$A\ket{\Theta_z},A^\dagger \ket{\Theta_z}$のノルム2乗なので$\geq 0$です．これを連立すれば$-m\leq \Theta_z \leq m$が得られます．
+
+\item
+  問題\iref{2006physA6}と問題\iref{2006physA7}を総合すると，
+  \begin{align}
+  A \ket{\Theta_z} &= \sqrt{(m+\Theta_z)(m-\Theta_z+\hbar) }\ket{\Theta_z - \hbar} , \notag\\
+  A^\dagger \ket{\Theta_z} &= \sqrt{(m-\Theta_z)(m+\Theta_z+\hbar) }\ket{\Theta_z + \hbar}  \ilabel{1shoukou}
+  \end{align}
+  となることに注意します．今$\Theta_z$には上限と下限があることが分かったので，$\Theta_z$の最大値$\Theta_\mathrm{max}$，最小値$\Theta_\mathrm{min}$とします．このとき$\ket{\Theta_\mathrm{max}},\ket{\Theta_\mathrm{min}}$はそれぞれ，$A^\dagger,A$を施して新しい状態を作ってはならないので，式\ieqref{1shoukou}から
+  \begin{equation}
+  (m-\Theta_\mathrm{max})(m+\Theta_z+\hbar)  = 0, \quad (m+\Theta_\mathrm{min})(m-\Theta_\mathrm{min}+\hbar) = 0 \notag
+  \end{equation}
+  を満たす必要があります．この解は，$\Theta_\mathrm{max} = m, \Theta_\mathrm{min} =-m$となります．
+
+  また，$\ket{-m}$の状態に次々に$A^\dagger$を作用させていくと，固有値が$\hbar $ずつ上昇していきますが，もしこれで$\ket{m}$に到達しなければ，式\ieqref{1shoukou}にしたがっていくらでも大きな固有値を持つ状態が生まれてしまうので不適です．ゆえに，$-m$と$m$の間はちょうど，$\hbar$の整数倍だけ空いていなければならず，$2m = \hbar \times (\text{整数})$が成立します．
+
+\end{enumerate}
+\end{answer}

@@ -1,0 +1,42 @@
+\documentclass{jsarticle}
+
+\usepackage{amsmath,amssymb,bm,mymacros,wrapfig}
+\usepackage[dvipdfm]{graphicx}
+%フォント指定
+\usepackage{mathpazo}
+%囲み枠と影付け
+\usepackage{framed,color}
+\definecolor{shadecolor}{gray}{0.80}
+%小文字gの変更→\varg
+\DeclareSymbolFont{lettersA}{U}{pxmia}{m}{it}
+\SetSymbolFont{lettersA}{bold}{U}{pxmia}{bx}{it}
+\DeclareFontSubstitution{U}{pxmia}{m}{it}
+
+\DeclareMathSymbol{\mathvarg}{\mathord}{lettersA}{`1}
+
+\DeclareRobustCommand*\varg{%
+   \ifmmode \mathvarg
+   \else    {\fontencoding{U}\fontfamily{pxmia}\fontshape{it}\selectfont 1}%
+   \fi}		
+	
+%定理環境の設定
+\newtheorem{dfn}{定義}[section]
+\newtheorem{thm}{定理}[section]
+\newtheorem{prop}{命題}[section]
+
+%式番号を節ごとにリセット．
+\makeatletter
+\renewcommand{\thesection}{[\@arabic\c@section]}
+   \@addtoreset{equation}{section}
+ \makeatother
+
+\pagestyle{headings}
+
+\begin{document}
+\include{q1}
+\include{q2}
+\include{q3}
+\include{q4}
+\include{q5}
+\include{q6}
+\end{document}

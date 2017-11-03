@@ -1,0 +1,60 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-16, KM, 入力
+%%
+\begin{question}{第２問}{村瀬}
+二つの実変数 $x,y$ の実関数$u(x,y),\, v(x,y)$ は至るところで有限な値を持ち、任意回微分可
+能で、さらに関係式
+\begin{align}
+  \frac{\partial u(x,y)}{\partial x} = \frac{\partial v(x,y)}{\partial y}, \quad
+  \frac{\partial u(x,y)}{\partial y} = -\frac{\partial v(x,y)}{\partial x} \ilabel{2006mathQ2.1}
+\end{align}
+を満たしているものとする。
+\begin{enumerate}
+\item
+  以下の等式が成り立つことを示せ。
+  \begin{align}
+    \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} =0, \quad
+    \frac{\partial^2 v(x,y)}{\partial x^2} + \frac{\partial^2 v(x,y)}{\partial y^2} =0. \ilabel{2006mathQ2.2}
+  \end{align}
+
+\item
+  ストークスの定理は、微分可能なベクトル場 $\bm{A}(\bm{x})$ の、閉曲線$\mathrm{C}$を一周する線積分と、$\mathrm{C}$
+  を縁とする面$\mathrm{S}$上の面積分との関係を表し、次式で与えられる。
+  \begin{align}
+    \oint_{\mathrm{C}} \bm{A}(\bm{x})
+    &= \iint_{\mathrm{S}} [\bm{\nabla}\times\bm{A}(\bm{x})]\cdot\bm{n}(\bm{x})dS. \ilabel{2006mathQ2.3}
+  \end{align}
+  ただし、ベクトル$\bm{n}(\bm{x})$は、面$\mathrm{S}$上の点$\bm{x}$におけるこの面の法線ベクトルである。この定
+  理を用いて、$xy$平面上の任意の閉じた経路$\mathrm{C}$に関する線積分に対して、以下の二式が成
+  り立つことを示せ。
+  \begin{align}
+    \oint_{\mathrm{C}}[u(x,y)dx - v(x,y)dy] = 0, \quad
+    \oint_{\mathrm{C}}[u(x,y)dy + v(x,y)dx] = 0. \ilabel{2006mathQ2.4}
+  \end{align}
+
+\item
+  $i$を虚数単位とし、複素数$z$を$z=x+iy$によって定義する。また、複素関数$f(z)$は実
+  関数 $u(x,y),\, v(x,y)$を用いて、$f(z)=u(x,y)+iv(x,y)$のように表されるものとする。
+  式\ieqref{2006mathQ2.4}が成り立っているとき、複素平面上の任意の閉じた経路$\mathrm{C}$に関する線積分に対し
+  て、以下の等式が成り立つことを示せ。
+  \begin{align}
+    \oint_{\mathrm{C}}f(z)dz &= 0. \ilabel{2006mathQ2.5}
+  \end{align}
+
+\item
+  複素関数 $f(z)$ の例として、$f(z)=e^{-x^2}$ を考える。\\
+  $f(x+iy)$ の実部を $u(x,y)$, 虚部を$v(x,y)$としたとき、式\ieqref{2006mathQ2.1}が成り立つことを示せ。
+
+\item
+  以上の結果を用いて、実数$p$に対して、定積分
+  \begin{align}
+    \int_{-\infty}^{\infty} e^{-x^2} \cos(2px) dx \ilabel{2006mathQ2.6}
+  \end{align}
+  を求めよ。ただし、
+  \begin{align}
+    \int_{-\infty}^{\infty} e^{-x^2} dx &= \sqrt{\pi} \ilabel{2006mathQ2.7}
+  \end{align}
+  となることは既知としてよい。
+\end{enumerate}
+\end{question}

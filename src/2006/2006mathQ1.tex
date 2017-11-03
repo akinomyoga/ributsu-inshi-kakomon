@@ -1,0 +1,57 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-16, KM, 入力
+%%
+\begin{question}{第１問}{村瀬}
+正方行列$A$に対して、$U^{-1}AU$が対角行列になるようなユニタリ行列$U$が存在するためには、
+$A$ が正規行列であることが必要十分である。正規行列とは、$A^*A=AA^*$ を満たす行列であり、
+$A^*$ は行列$A$を転置し複素共役をとった行列である。実ユニタリ行列を直交行列と呼ぶ。以下
+の設問に答えよ。
+\begin{enumerate}
+\item
+  行列
+  \begin{align*}
+    B &= \begin{pmatrix}
+      \cos\theta & -\sin\theta \\
+      \sin\theta & \cos\theta
+    \end{pmatrix}
+  \end{align*}
+  は直交行列であることを示せ。ここで、$\theta$ は実数。
+
+\item
+  任意の正方行列$A$について、
+  \begin{align*}
+    \exp A &\equiv \sum_{m=0}^\infty \frac{A^m}{m!}
+  \end{align*}
+  は収束し、$\exp A$ を定義することができる。ただし、$A^0$ は単位行列とする。
+  $A=\begin{pmatrix} 0 & -\theta \\ \theta & 0 \end{pmatrix}$ のとき、
+  \begin{align*}
+    \exp A &= \begin{pmatrix}
+      \cos\theta & -\sin\theta\\
+      \sin\theta & \cos\theta
+    \end{pmatrix} = B
+  \end{align*}
+  を示せ。
+
+\item
+  行列$B$を対角化せよ。
+\end{enumerate}
+次に、一般の次元をもつ行列の例として、変数の組$\{x_1,\ldots,x_n\}$ について
+\begin{align*}
+  C &= \begin{pmatrix}
+    1 & 1 & \ldots & 1\\
+    x_1 & x_2 & \ldots & x_n\\
+    \vdots & \vdots & \vdots & \vdots\\
+    x_1^{n-1} & x_2^{n-1} & \ldots & x_n^{n-1}
+  \end{pmatrix}
+\end{align*}
+を考えよう。
+
+\begin{enumerate}\setcounter{enumi}{3}
+\item
+  $|C|\propto\prod_{i<j}(x_j-x_i)$ を示せ。ここで $|C|$ は行列$C$の行列式。
+\item
+  この結果を用いて、上記の行列$C$が正則である (逆行列をもつ) のはどのような場合か
+  を述べよ。
+\end{enumerate}
+\end{question}

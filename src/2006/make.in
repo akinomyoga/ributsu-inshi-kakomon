@@ -1,0 +1,25 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2006math 2006phys)
+_2006math_title='2006年度実施 数学'
+_2006math_cov=(2006mathC.tex)
+_2006math_prb=(2006mathQ1.tex 2006mathQ2.tex)
+_2006math_ans=(2006mathA.tex)
+_2006math_dep=()
+#
+# 解答作成: ishikawa
+# 問題入力: 村瀬功一
+#
+
+_2006phys_title='2006年度実施 物理'
+_2006phys_cov=(2006physC.tex)
+_2006phys_prb=(2006physQ.tex) # 2006physQ2.tex)
+_2006phys_ans=(2006physA1.tex 2006physA2.tex 2006physA3.tex 2006physA4.tex 2006physA5.tex 2006physA6.tex)
+_2006phys_dep=(2006physA4_Fig1.tex 2006physA5_Fig1.tex
+  2006physQ3_1r.eps 2006physQ3_2r.eps 2006physQ4_1r.eps 2006physQ4_2r.eps 2006physQ5_1r.eps 2006physQ5_2r.eps
+  2006physQ5_3r.eps 2006physQ5_4r.eps 2006physQ5_5r.eps 2006physQ6_1r.eps 2006physQ6_2r.eps 2006physQ6_3r.eps)
+#
+# 解答作成: 見上敬洋 (学生証番号 71565, 理学部物理学科 4年)
+# 問題入力: 村瀬功一
+#

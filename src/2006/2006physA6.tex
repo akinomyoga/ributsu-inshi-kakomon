@@ -1,0 +1,45 @@
+%% -*- coding:sjis -*-
+\newcommand{\ket}[1]{\left| {#1} \right\rangle}
+\newcommand{\bra}[1]{\left\langle {#1} \right|}
+\newcommand{\bracket}[2]{\left\langle {#1} \,\right|\left. {#2} \right\rangle}
+\begin{answer}{第６問}{見上敬洋}
+\begin{enumerate}
+\item
+  水素原子の$\mathrm{(2s)},\mathrm{(1s)}$間のエネルギー差は$-13.6\mathrm{eV}\left( \dfrac 1{2^2} - 1 \right) = 10.2 \mathrm{eV}$となるので，電子に励起エネルギー分を持たせるために$10.2\mathrm{V}$印加すべし．
+
+\item
+  始状態$\ket{i}$，終状態$\ket f$とすると， 遷移確率は$\bra f \bm{r} \ket i$の二乗に比例します．したがって$\bracket{\bm{r}}{i}$と$\bracket {\bm{r}}{f}$の座標反転に関するパリティが同じ場合，積分$\int d\bm{r} \bracket{f}{\bm{r}}\bm{r}\bracket{\bm{r}}{i}$はゼロになり，遷移は起こりません．
+
+  ゆえに，$2S_{1/2} \to 1S_{1/2}$の遷移は，双極子遷移の確率はゼロであり，$2S_{1/2}$の寿命は長いのです．ただ，双極子遷移は電磁場との相互作用の最低次項であって，その下には四重極子遷移が続きます．こちらによる遷移確率は消えないので遷移は起こっても良さそうです．
+
+\item
+  $\mathcal{H}_Z = \dfrac{\mu_B}{\hbar}(l_z + 2s_z)B$によるエネルギーシフトを考えると，
+  \begin{align}
+  \alpha(2S_{1/2},m=1/2) &\to \Delta E_\alpha = \frac{\mu_B}{\hbar}\left(0 + 2 \times \frac 12 \right)B = \frac{\mu_B}{\hbar} B \notag, \\
+  a(2P_{1/2},m=3/2) &\to \Delta E_a = \frac{\mu_B}{\hbar}\left(1 + 2\times \frac 12 \right) B = 2\frac{\mu_B}{\hbar} B \notag
+  \end{align}
+  となるので，差を取れば $h \Delta \nu = \dfrac{\mu_B}{\hbar}B$となります．
+
+\item
+  エネルギー差$h\nu_1 + h\Delta \nu$は，$B$を増すと広がってゆき，照射中のエネルギー$11.5\mathrm{GHz}\times h$になると，共鳴が起こります．したがって
+  \begin{equation}
+  h\nu_1 + \frac{\mu_B}{\hbar}B = 11.5 \mathrm{GHz}\times h \notag
+  \end{equation}
+  となります．たぶん問題文では$\hbar = 1$として$\mu_B/h = 14 \mathrm{GHz/T}$と書いているので，$\hbar = 1$とし，共鳴曲線より$B = 0.12\pm 0.01 \mathrm{T}$として計算すれば
+  \begin{equation}
+  \nu_1 = 11.5\mathrm{GHz} - 14\mathrm{\frac{GHz}{T}}\times(0.12 \pm 0.01)\mathrm{T} = (9.8\pm 0.1)\mathrm{GHz} \notag
+  \end{equation}
+
+\item
+  寿命から来る線幅は$\Delta E = \hbar/\tau$より，$\Delta B = \dfrac{\hbar}{\mu_B}\,\Delta E = \dfrac{\hbar^2}{\tau\mu_B} =  \dfrac{1}{2\pi\times 1.6 \mathrm{ns}\times 14\mathrm{GHz}} \mathrm{T} = 0.0071 \mathrm{T}$
+
+  それ以外の線幅の原因には例えば，原子の熱振動によるドップラー効果があげられると思います．
+
+\item
+  電荷が有限の領域に分布しているとするとしましょう．古典電磁気でやるように，電荷分布（球対称，中心Oとします）中に点電荷Cをおくと，半径OCの球外の電荷は寄与できず，Coulomb力が弱まります．
+
+  同様に大きさを持った電子と陽子が十分近づくと，電荷がお互いに入り込んで，Coulomb力を弱めてしまい，エネルギーが上昇することになります．
+
+  電子が陽子付近によく分布する$2S_{1/2}$の方が，$2P_{1/2}$よりも先の効果がつよいので，$2S_{1/2}$のエネルギーが上昇します．
+\end{enumerate}
+\end{answer}

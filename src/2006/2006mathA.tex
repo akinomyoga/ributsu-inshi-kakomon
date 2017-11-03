@@ -1,0 +1,228 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-16, KM, math-19-ishikawa.tex から作成
+%%
+\newcommand{\tr}[1]{{}^t\hspace{-1mm}#1}
+\newcommand{\pdif}[2]{\frac{\partial #1}{\partial #2}}
+
+\begin{answer}{第１問}{石川}
+\begin{enumerate}
+\item
+  \begin{eqnarray}
+  B\tr{B} &=& 
+  \left(
+    \begin{array}{cc}
+     \cos\theta & -\sin\theta \\
+     \sin\theta  & \cos\theta 
+    \end{array}
+   \right)
+   \left(
+    \begin{array}{cc}
+     \cos\theta & \sin\theta \\
+     -\sin\theta  & \cos\theta 
+    \end{array}
+   \right)\\
+   &=&
+   \left(
+    \begin{array}{cc}
+     1 & 0 \\
+     0  & 1 
+    \end{array}
+   \right).
+  \end{eqnarray}
+
+\item
+  \begin{eqnarray}
+    A^2 = -\theta^2 I
+  \end{eqnarray}
+  なので
+  \begin{eqnarray}
+    \exp{A}
+      &=& \sum^{\infty}_{m=0}\frac{A^m}{m!}\\
+      &=& \sum^{\infty}_{m=0}\frac{A^{2m}}{2m!}+\sum^{\infty}_{m=0}\frac{A^{2m+1}}{(2m+1)!}\\
+      &=& \sum^{\infty}_{m=0}\frac{(-\theta^2)^{m}}{2m!}I+\sum^{\infty}_{m=0}\frac{(-\theta^2)^m}{(2m+1)!}A\\
+      &=& \sum^{\infty}_{m=0}\frac{(-1)^m\theta^{2m}}{2m!}
+        \left(
+          \begin{array}{cc}
+           1 & 0 \\
+           0 & 1 
+          \end{array}
+        \right)
+        +\sum^{\infty}_{m=0}\frac{(-1)^m\theta^{2m+1}}{(2m+1)!}
+        \left(
+          \begin{array}{cc}
+           0 & -1 \\
+           1 & 0 
+          \end{array}
+        \right)\\
+      &=& 
+        \left(
+          \begin{array}{cc}
+           \cos\theta & -\sin\theta \\
+           \sin\theta  & \cos\theta 
+          \end{array}
+        \right) = B.
+  \end{eqnarray}
+
+\item
+  \begin{eqnarray}
+  \left|
+    \begin{array}{cc}
+     \cos\theta-\lambda & -\sin\theta \\
+     \sin\theta  & \cos\theta-\lambda 
+    \end{array}
+   \right| &=& 0,\\
+   \lambda = e^{\pm i \theta}
+  \end{eqnarray}
+  となるので固有ベクトルとして\\
+  \begin{equation}
+    \bm{x}_{\pm}=\frac{1}{\sqrt{2}}\left(
+      \begin{array}{c}
+        1 \\
+        \mp i  
+      \end{array}
+    \right)
+  \end{equation}
+  がとれる。\\
+  \begin{align}
+    U \equiv \left(
+      \begin{array}{cc}
+        \bm{x}_{+}  & \bm{x}_{-} 
+      \end{array}
+    \right) &= \frac{1}{\sqrt{2}}\left(
+      \begin{array}{cc}
+       1 & 1 \\
+       -i  & i 
+      \end{array}
+    \right),\\
+    U^{-1}BU &= \left(
+      \begin{array}{cc}
+        e^{i\theta} & 0 \\
+        0 & e^{-i\theta} 
+      \end{array}
+    \right).
+  \end{align}
+
+\item
+  $n$に関する数学的帰納法で示す：\\
+  \begin{equation}
+    |C|= \prod _{i<j}(x_j-x_i) \ilabel{2006mathA1.1}
+  \end{equation}
+  と仮定する. $n=2$のときは成立.\\
+  式\ieqref{2006mathA1.1}が$n-1$のとき正しいと仮定する.\\
+  第$i$行から第$i-1$行の$x_1$倍をひく、という操作を$i=n,n-1,\ldots,3,2$の順に行うと\\
+  \begin{eqnarray}
+    |C|
+      &=& \begin{vmatrix}
+         1 & 1 & 1 & \cdots  & x_n\\
+         0 & x_2-x_1 & x_3-x_1 & \cdots  & x_n-x_1 \\
+         \vdots & \vdots & \vdots & & \vdots\\
+         0 & x_2^{n-2}(x_2-x_1) & x_3^{n-2}(x_3-x_1) & \cdots  & x_n^{n-2}(x_n-x_1) 
+        \end{vmatrix}\\
+      &=&(x_2-x_1)(x_3-x_1)\cdots (x_n-x_1)
+        \begin{vmatrix}
+          1 & 1 & \cdots  & 1\\
+          x_2 & x_3 & \cdots  & x_n \\
+          \vdots & \vdots & & \vdots\\
+          x_2^{n-2} & x_3^{n-2} & \cdots  & x_n^{n-2} 
+        \end{vmatrix}\\
+      &=&\prod_{j=2}^n (x_j-x_1) \prod_{i,j\geq 2 , i<j}(x_j-x_i) = \prod_{i<j}(x_j-x_i).
+  \end{eqnarray}
+  よって$n\geq 2$のとき式\ieqref{2006mathA1.1}が成り立つ.
+\item
+  $|C|\neq 0$であればよいので、任意の互いに異なる$i,j$について$x_i\neq x_j$であること.
+\end{enumerate}
+\end{answer}
+
+\begin{answer}{第２問}{石川}
+\begin{enumerate}
+\item
+  \begin{eqnarray}
+    \pdif{^2u(x,y)}{x^2}+\pdif{^2u(x,y)}{y^2} &=& \pdif{^2v(x,y)}{x\partial y} - \pdif{^2v(x,y)}{y\partial x}
+      = 0,\\
+    \pdif{^2v(x,y)}{x^2}+\pdif{^2v(x,y)}{y^2} &=& -\pdif{^2u(x,y)}{x\partial y} + \pdif{^2u(x,y)}{y\partial x}
+      = 0.
+  \end{eqnarray}
+
+\item
+  \begin{eqnarray}
+    \nabla \times \left(
+      \begin{array}{c}
+        u(x,y) \\
+        -v(x,y)\\
+        0
+      \end{array}
+    \right)
+      &=&
+      \left(
+        \begin{array}{c}
+          0\\
+          0\\
+          -\pdif{v(x,y)}{x} -\pdif{u(x,y)}{y}
+        \end{array}
+      \right) = \bm{0},\\
+  \nabla \times \left(
+    \begin{array}{c}
+      v(x,y) \\
+      u(x,y)\\
+      0
+    \end{array}
+  \right)
+    &=&
+    \left(
+      \begin{array}{c}
+        0\\
+        0\\
+        \pdif{u(x,y)}{x} -\pdif{v(x,y)}{y}
+      \end{array}
+    \right) = \bm{0}.
+  \end{eqnarray}
+
+\item
+  \begin{eqnarray}
+    \oint _{C}f(z)dz &=& \oint_{C}\{u(x,y)+iv(x,y)\}d(x+iy)\\
+      &=& \oint_{C}u(x,y)dx-v(x,y)dy + i\oint_{C}u(x,y)dy+v(x,y)dx\\
+      &=& 0.
+  \end{eqnarray}
+
+\item
+  \begin{eqnarray}
+    u(x,y) &=& e^{y^2-x^2}\cos(2xy),\\
+    v(x,y) &=& -e^{y^2-x^2}\sin(2xy)
+  \end{eqnarray}
+  となるので\\
+  \begin{eqnarray}
+  \pdif{u(x,y)}{x} = -2xe^{y^2-x^2}\cos(2xy)-2ye^{y^2-x^2}\sin(2xy) = \pdif{v(x,y)}{y},\\
+  \pdif{u(x,y)}{y} = 2ye^{y^2-x^2}\cos(2xy)-2xe^{y^2-x^2}\sin(2xy) = -\pdif{v(x,y)}{x}.
+  \end{eqnarray}
+
+\item
+  $f(z)=e^{-z^2}$を、$p,R$を実数として経路$C_1→C_2→C_3→C_4$で複素積分する.\\
+  ただし\\
+  $C_1:-R→R$,\\
+  $C_2:R→R+ip$,\\
+  $C_3:R+ip→-R+ip$,\\
+  $C_4:-R+ip→-R$.
+  \begin{eqnarray}
+    \lim_{R\rightarrow \infty}\oint_{C}f(z)dz = \lim_{R\rightarrow \infty}\int_{C_1}f(z)dz+\oint_{C_2}f(z)dz+\oint_{C_3}f(z)dz+\oint_{C_4}f(z)dz.
+  \end{eqnarray}
+  $R$が無限大の極限で経路$C_2,C_4$は無視できるので\\
+  \begin{eqnarray}
+    \lim_{R\rightarrow \infty}\oint_{C}f(z)dz &=& \int_{C_1}f(z)dz+\oint_{C_3}f(z)dz\\
+      &=&\int_{-\infty}^{\infty}f(z)dz+\oint_{\infty + ip}^{-\infty + ip}f(z)dz.
+  \end{eqnarray}
+  問題文\ieqref{2006mathQ2.5}より
+  \begin{eqnarray}
+    \lim_{R\rightarrow \infty}\oint_{C}f(z)dz &=& 0,\\
+    \int_{-\infty+ip}^{\infty+ip}e^{-z^2}dz&=&\int_{-\infty}^{\infty}e^{-z^2}dz,\\
+    \int_{-\infty}^{\infty}e^{-(x+ip)^2}dx&=&\sqrt{\pi}. \ilabel{2006mathA2.1}
+  \end{eqnarray}
+  となるので\\
+  \ieqref{2006mathA2.1}をもちいて問題文\ieqref{2006mathQ2.6}の定積分を計算すればよい\\
+  \begin{eqnarray}
+    \int_{-\infty}^{\infty}e^{-x^2}\cos(2px)dx &=& \frac{1}{2}\left(\int_{-\infty}^{\infty}e^{-x^2+i2px}dx+\int_{-\infty}^{\infty}e^{-x^2-i2px}dx\right)\\
+      &=& \frac{e^{-p^2}}{2}\left(\int_{-\infty}^{\infty}e^{-(x-ip)^2}dx+\int_{-\infty}^{\infty}e^{-(x+ip)^2}dx\right)\\
+      &=& \sqrt{\pi}e^{-p^2}.
+  \end{eqnarray}
+\end{enumerate}
+\end{answer}
