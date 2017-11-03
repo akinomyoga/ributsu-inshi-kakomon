@@ -1,0 +1,65 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-15, Koichi Murase, 作成・入力
+%%
+\begin{question}{第１問}{村瀬}
+\begin{enumerate}
+\item\ilabel{item:2012mathQ1.1}
+  $z_1,z_2,z_3,z_4$ を複素数とし, $\vec{z}=(z_1,z_2,z_3,z_4)$ とする。それを用いた行列式により $\Delta(\vec{z})$
+  を以下のように定義する。
+  \begin{align*}
+    \Delta(\vec{z})
+      &= \begin{vmatrix}
+        1 & 1 & 1 & 1\\
+        z_1 & z_2 & z_3 & z_4\\
+        (z_1)^2 & (z_2)^2 & (z_3)^2 & (z_4)^2\\
+        (z_1)^3 & (z_2)^3 & (z_3)^3 & (z_4)^3
+      \end{vmatrix}.
+  \end{align*}
+  $\Delta(\vec{z})$ が次の形に因数分解できることを以下の小問に従って示せ。
+  \begin{align}
+    \Delta(\vec{z})
+      &= \prod_{1\le i<j\le 4} (z_i - z_j) \ilabel{eq:2012mathQ1.1}\\
+      &= (z_1-z_2)(z_1-z_3)(z_1-z_4)(z_2-z_3)(z_2-z_4)(z_3-z_4). \nonumber
+  \end{align}
+
+  \begin{enumerate}
+  \item
+    式(\iref{eq:2012mathQ1.1})の両辺が $\vec{z}$ についての6次の同次(斉次)多項式であることを示せ。ここ
+    で, 多変数関数に対し, $z_1^{a_1}z_2^{a_2}\cdots$ という項の次数は $a_1+a_2+\cdots$ であると定義す
+    る。また, 同次とは, 全ての項の次数が等しいことをいう。
+  \item
+    $\Delta(\vec{z})$ は, 互いに異なる $i$ と $j$ に対して $z_i$ が $z_j$ に一致するときゼロとなることを
+    示せ。
+  \item
+    これから, 式(\iref{eq:2012mathQ1.1})の両辺が比例定数を除いて等しいことが示せる。これを用いて, 
+    係数を比較することにより比例定数が1であることを示せ。
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    複素変数 $z$ の関数で, 考えている領域で正則である $g(z)$ の表式
+    \begin{align*}
+      \frac1{g(z)} \frac{dg(z)}{dz},\quad
+      \frac1{g(z)} \frac{d^2g(z)}{dz^2}
+    \end{align*}
+    を $\lambda(z)=\log(g(z))$ を用いてそれぞれ書き換えよ。
+  \item
+    設問\iref{item:2012mathQ1.1}で定義された $\Delta(\vec{z})$ について, 微分
+    \begin{align*}
+      f(\vec{z}) &= \frac1{\Delta(\vec{z})} \frac{\partial^2 \Delta(\vec{z})}{\partial z_1^2}
+    \end{align*}
+    を求めよ。また, $f(\vec{z})$を $z_1$ の関数と見なしたとき, 複素平面内で2次の極が無い
+    ことを示せ。ただし, ここおよび以下では $z_2, z_3, z_4$ は互いに異なるものとする。
+  \item
+    複素積分
+    \begin{align*}
+      \oint_C\frac{dz_1}{2\pi\i} z_1 f(\vec{z})
+    \end{align*}
+    を求めよ。ここで積分経路 $C$ は内部に $z_2, z_3, z_4$ を含む円を反時計回りに一周す
+    る経路であり, $\i$ は虚数単位である。
+  \end{enumerate}
+\end{enumerate}
+\end{question}

@@ -1,0 +1,96 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-15, Koichi Murase, 作成・入力
+%%
+\begin{question}{第２問}{村瀬}
+$\mathcal{L}$ を微分演算子, $\psi(x_1,x_2)$ を2個の実変数 $x_1,x_2$ の関数として,
+微分方程式 $\mathcal{L}\psi(x_1,x_2)=E\psi(x_1,x_2)$ を考える。
+ここで, $E$ は定数である。$\mathcal{L}$ の形を
+\begin{align*}
+  \mathcal{L}
+    &= \sum_{i=1}^2 \sum_{j=1}^2 a_{i,j} \frac{\partial^2}{\partial x_i \partial x_j}
+     + \sum_{i=1}^2 b_i \frac{\partial}{\partial x_i}
+\end{align*}
+とする。ここで $a_{i,j},b_i\;(i,j=1,2)$ は実定数で, $a_{i,j}\;(i,j=1, 2)$ のうち少なくとも一つはゼ
+ロでないとし, $a_{j,i}=a_{i,j}$ とする。また, $\{a_{i,j}\}$ を2行2列の行列とみなしたときの行列式を
+$D$ とする。この微分方程式の解の性質について, 以下の設問に答えよ。
+
+\begin{enumerate}
+\item
+  或る実行列 $C=\{c_{i,j}\}\; (i,j=1,2)$ を用いて, 変数を
+  \begin{align*}
+    \begin{pmatrix} \xi_1 \\ \xi_2 \end{pmatrix}
+      &= C \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}
+  \end{align*}
+  のように線形変換したときに, 微分演算子 $\dfrac{\partial}{\partial x_1}, \dfrac{\partial}{\partial x_2}$ を
+  $\dfrac{\partial}{\partial \xi_1}, \dfrac{\partial}{\partial \xi_2}$ で表せ。
+  ただし, $C$ の行列式はゼロでないとする。
+
+\item
+  $\mathcal{L}$ の中の2階徴分の項に関して, 適当な $C$ を選ぶと, $D>0$ の場合は
+  \begin{align*}
+    \pm\left(\dfrac{\partial^2}{\partial\xi_1^2} + \dfrac{\partial^2}{\partial \xi_2^2}\right)
+  \end{align*}
+  となり, $D=0$ の場合は
+  \begin{align*}
+    \pm\dfrac{\partial^2}{\partial\xi_2^2}
+  \end{align*}
+  となり, $D<0$ の場合は
+  \begin{align*}
+    \dfrac{\partial^2}{\partial\xi_1^2}
+    - \dfrac{\partial^2}{\partial\xi_2^2}
+  \end{align*}
+  となることを示せ。
+
+\item
+  次に, $\psi(\xi_1,\xi_2) = e^{\lambda_1\xi_1+\lambda_2\xi_2} \phi(\xi_1,\xi_2)$ のように書き換える。
+  ここで, $\lambda_i \; (i=1,2)$ は定数である。
+  これにより $\mathcal{L}$ の1階微分の項を変換でき, 
+  $\phi$ に対する微分方程式は, $\lambda_i\;(i=1,2)$
+  を適当に選べば, $D>0$ の場合には
+  \begin{align}
+    \left(\dfrac{\partial^2}{\partial\xi_1^2}
+      + \dfrac{\partial^2}{\partial\xi_2^2}\right)
+    \phi(\xi_1,\xi_2) &= F\phi(\xi_1,\xi_2) \ilabel{eq:2012mathQ2a},
+  \end{align}
+  $D=0$ の場合には
+  \begin{align}
+    \left(\beta \dfrac{\partial}{\partial\xi_1}
+      - \dfrac{\partial^2}{\partial\xi_2^2}\right)
+    \phi(\xi_1,\xi_2) &= F\phi(\xi_1,\xi_2) \ilabel{eq:2012mathQ2b},
+  \end{align}
+  $D<0$ の場合には
+  \begin{align}
+    \left(\frac{\partial^2}{\partial\xi_1^2}
+      - \frac{\partial^2}{\partial\xi_2^2} \right)
+    \phi(\xi_1,\xi_2) &= F\phi(\xi_1,\xi_2) \ilabel{eq:2012mathQ2c}
+  \end{align}
+  の形になることを示せ。ここで, $F, \beta$ はそれぞれ定数であるが、具体的に与えなくて
+  よい。
+
+\item
+  式(\iref{eq:2012mathQ2b})において $F=0, \beta=1$ とする。
+  \begin{enumerate}
+  \item $\xi_1>0$ に対して
+    \begin{align*}
+      \phi(\xi_1,\xi_2) &= \int_{-\infty}^\infty f(y) e^{-y^2\xi_1} e^{\i y \xi_2} dy
+    \end{align*}
+    は, 式(\iref{eq:2012mathQ2b})を満たすことを示せ。ここで $\i$ は虚数単位,
+    また, $f(y)$ は実変数 $y$ の関数であり, この積分の収束条件を満たすとする。
+  \item
+    $\xi_1=0$ で $\phi(\xi_1,\xi_2)=\delta(\xi_2)$ の場合に,
+    $\xi_1>0$ に対して, この方程式の解を求めよ。
+    ここで $\delta(x)$ はデルタ関数である。また、
+    $\displaystyle \int_{-\infty}^\infty e^{-x^2} dx = \sqrt{\pi}$ であることは既知としてよい。
+  \end{enumerate}
+
+\item
+  式(\iref{eq:2012mathQ2c})において $F=0$ の場合を考える。
+  \begin{align*}
+    \phi(\xi_1,\xi_2)=G_1(\xi_1-\xi_2)+G_2(\xi_1+\xi_2)
+  \end{align*}
+  は, 式(\iref{eq:2012mathQ2c})を満たすことを示せ。ここで $G_i\; (i=1, 2)$ は微分可能な任意の関数である。
+
+\end{enumerate}
+\end{question}
