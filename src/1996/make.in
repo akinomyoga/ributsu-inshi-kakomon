@@ -1,0 +1,25 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1996pankyo 1996senmon)
+docs_ex=(1996pankyo2)
+
+_1996pankyo_title='1996年度実施 一般教育科目'
+_1996pankyo_cov=()
+_1996pankyo_prb=(1996engl.tex 1996math.tex 1996phys.tex)
+_1996pankyo_ans=(1996engl.tex 1996math.tex 1996phys.tex)
+_1996pankyo_dep=(1996phys-1.eps 1996phys-2.eps 1996phys-3.eps)
+
+_1996pankyo2_title='1996年度実施 一般教育科目 (英語なし)'
+_1996pankyo2_cov=()
+_1996pankyo2_prb=(1996math.tex 1996phys.tex)
+_1996pankyo2_ans=(1996math.tex 1996phys.tex)
+_1996pankyo2_dep=(1996phys-1.eps 1996phys-2.eps 1996phys-3.eps)
+
+_1996senmon_title='1996年度実施 物理専門科目'
+_1996senmon_cov=()
+_1996senmon_prb=(1996phy1.tex 1996phy2.tex 1996phy3.tex 1996phy4.tex 1996phy5.tex 1996phy6.tex 1996phy7.tex 1996phy8.tex)
+_1996senmon_ans=(1996phy1.tex 1996phy2.tex 1996phy3.tex 1996phy4.tex 1996phy5.tex 1996phy6.tex 1996phy7.tex 1996phy8.tex)
+_1996senmon_dep=(
+  1996phy2-1.eps 1996phy2-2.eps 1996phy2-3.eps 1996phy2-4.eps 1996phy2-5.eps 1996phy3-1.eps 1996phy4-1.eps 1996phy4-2.eps 1996phy4-3.eps
+  1996phy5-1.eps 1996phy5-2.eps 1996phy5-3.eps 1996phy7-1.eps 1996phy7-2.eps 1996phy8-1.eps 1996phy8-2.eps 1996phy8-3.eps)

@@ -3,21 +3,34 @@
 
 \begin{document}
 
-\begin{question}{専攻 問題6}{}
-
 % Definition of local macros
-\def\haH{\LowerState{a}\ssub{H}}
+\def\haH{\LowerState{a}{}\ssub{H}}
 \def\hp{\Operator{p}}
 \def\hq{\Operator{q}}
 \def\hH{\Operator{H}}
 \def\ha{\LowerState{a}}
 \def\had{\RaiseState{a}}
 
+%%-----------------------------------------------------------------------------
+%% 2013-07-21, KM <murase@nt.phys.s.u-tokyo.ac.jp>
+%%
+%% 元々 \uchi, \uphi 等というコマンドを定義して、ギリシャ文字の位置が変更されていた。
+%% しかし、その様な変更を行う理由はないと思われるので、以下のコマンドを廃止した。
+%% \def\uchi{\raisebox{0.5ex}{$\chi$}}
+%% \def\uphi{\raisebox{0.5ex}{$\varphi$}}
+%%
+%% もし元々の解答の様にギリシャ文字の位置を変更したければ以下のコメントを外す事。
+%% \let\inshioriginalchi\chi
+%% \let\inshioriginalvarphi\varphi
+%% \def\chi{\raisebox{0.5ex}{$\inshioriginalchi$}}
+%% \def\varphi{\raisebox{0.5ex}{$\inshioriginalvarphi$}}
+%%
+%%-----------------------------------------------------------------------------
 
+\begin{question}{専攻 問題6}{}
 一様密度 $\rho_0$ で非圧縮性の液滴を考えよう。液滴は、ある初期条件
 のもとでその内部に渦のない流れを生じ、時間とともに形を変えていく
 ものとする。
-
 \begin{subquestions}
 
 \SubQuestion
@@ -27,11 +40,11 @@
   \SubSubQuestion
     連続の方程式を用いて、非圧縮性の条件を $\Vec{v}(\Vec{r},t)$ 
     に対する式として表せ。また、流れに渦がないときには、
-    $\Vec{v} = -\Grad{\uchi}$ となる速度ポテンシャル $\uchi(\Vec{r},t)$
+    $\Vec{v} = -\Grad{\chi}$ となる速度ポテンシャル $\chi(\Vec{r},t)$
     が存在してラプラスの方程式
 %
     \begin{equation}
-      \Laplacian{\uchi (\Vec{r},t)} = 0 \eqname{Q1}
+      \Laplacian{\chi (\Vec{r},t)} = 0 \eqname{Q1}
     \end{equation}
 %
     を満たすことを示せ。
@@ -40,7 +53,7 @@
     上式の解は
 %
     \begin{equation}
-      \uchi(\Vec{r},t) = \sum_{\ell m} a_{\ell m}(t)f_\ell(r)Y_{\rm\ell m}(\theta,\uphi) \eqname{Q2}
+      \chi(\Vec{r},t) = \sum_{\ell m} a_{\ell m}(t)f_\ell(r)Y_{\rm\ell m}(\theta,\varphi) \eqname{Q2}
     \end{equation}
 %
     と書ける。このとき、動径関数は
@@ -57,10 +70,10 @@
   \end{subsubquestions}
 
 \SubQuestion
-  液滴の重心から$(\theta,\uphi)$ 方向を見たとき、表面までの距離が
+  液滴の重心から$(\theta,\varphi)$ 方向を見たとき、表面までの距離が
 %
   \begin{equation}
-    R(\theta,\uphi,t) = R_0 + q(t)Y_{\rm 20}(\theta,\uphi)
+    R(\theta,\varphi,t) = R_0 + q(t)Y_{\rm 20}(\theta,\varphi)
     \eqname{Q4}
   \end{equation}
 %
@@ -73,18 +86,18 @@
     よって変化する。そこで、
 %
     \begin{equation}
-      \Partial{}{t} R(\theta,\uphi,t)%
-      = -\Partial{}{r} \uchi (r,\theta,\uphi,t) \bigm|_{r=R}%
+      \Partial{}{t} R(\theta,\varphi,t)%
+      = -\Partial{}{r} \chi (r,\theta,\varphi,t) \bigm|_{r=R}%
       \eqname{Q5}
     \end{equation}
 %
-    の関係が成り立つとして、速度ポテンシャル $\uchi(\Vec{r},t)$ を 
+    の関係が成り立つとして、速度ポテンシャル $\chi(\Vec{r},t)$ を 
     $\dot{q}(t) \left( \equiv \tDeriver{q}{t} \right) $ を用いて
     表せ。ただし、変形は微小なので、右辺で $r=R$ を $r=R_0$ と
     近似して良いものとする。
 
   \SubSubQuestion
-    液滴内部の速度分布 $(v_x,v_y,v_z)$ を、$Y_{20}(\theta,\uphi)%
+    液滴内部の速度分布 $(v_x,v_y,v_z)$ を、$Y_{20}(\theta,\varphi)%
     = \sqrt{\ds \frac{5}{16\pi}}(3\cos^2\theta - 1)$
     を使って求めよ。次に、液滴内部の全運動エネルギーを計算せよ。
     ただし、積分は変形が小さいとして、半径 $R_0$ の球内で行なえば良い。
@@ -173,16 +186,8 @@
   \end{subsubquestions}
 \end{subquestions}
 \end{question}
+
 \begin{answer}{専攻 問題6}{}
-% Definition of local macros
-\def\haH{\LowerState{a}\ssub{H}}
-\def\hp{\Operator{p}}
-\def\hq{\Operator{q}}
-\def\hH{\Operator{H}}
-\def\ha{\LowerState{a}}
-\def\had{\RaiseState{a}}
-
-
 \begin{subanswers}
 \SubAnswer
   \begin{subsubanswers}
@@ -194,11 +199,11 @@
     であり、非圧縮性より $\rho={\rm const}$ したがって $\Grad{\rho}=0$
     である。渦無しなので $\Vec{v}$を任意の経路で周回積分しても$0$。
     よって、2点間の任意の経路の積分の値は一定となり、$\Vec{v}$に
-    対するポテンシャル$\Vec{v}=-\Grad{\uchi}$が存在する。
+    対するポテンシャル$\Vec{v}=-\Grad{\chi}$が存在する。
     これの$\Div{}$を計算すると、以下の通りラプラスの方程式\eqhref{Q1}
     が示される。
 %
-    \[ \Div{\Vec{v}}=-\Div{\Grad{\uchi}} =-\Laplacian{\uchi} =0 \]
+    \[ \Div{\Vec{v}}=-\Div{\Grad{\chi}} =-\Laplacian{\chi} =0 \]
 %
   \SubSubAnswer
     $f_\ell(r)=r^\lambda\sum_{n}a_nr^{n}\quad(a_0=1)$と仮定し、
@@ -237,20 +242,20 @@
        \Yueni%
        a_{20}(t) = -\frac{\dot{q}(t)}{2R_0} \]
 %
-    である。よって$\uchi$は式\eqhref{Q2}より次の通り。
+    である。よって$\chi$は式\eqhref{Q2}より次の通り。
 %
-    \[ \uchi = a_{20}(t)r^2Y_{20}(\theta, \varphi)%
+    \[ \chi = a_{20}(t)r^2Y_{20}(\theta, \varphi)%
              = -\frac{r^2}{2R_0}\dot{q}Y_{20}(\theta, \varphi) \]
 %
   \SubSubAnswer
     ひたすら計算する。
 %
     \begin{eqnarray*}
-      \uchi%
+      \chi%
        &=& -\frac{\dot{q}}{8R_0}\sqrt{\frac{5}{\pi}}(3z^2-r^2)%
         =  -\frac{\dot{q}}{8R_0}\sqrt{\frac{5}{\pi}}(2z^2-x^2-y^2)\\
       \Vec{v}%
-       &=& -\Grad{\uchi}%
+       &=& -\Grad{\chi}%
         =  \frac{\dot{q}}{8R_0}\sqrt{\frac{5}{\pi}}(-2x, -2y, +4z)%
         =  \frac{\dot{q}}{4R_0}\sqrt{\frac{5}{\pi}}(-x, -y, +2z)\\
       \Norm{\Vec{v}}^2%
