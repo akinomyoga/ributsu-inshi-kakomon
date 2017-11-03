@@ -1,0 +1,34 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1998pankyo 1998senmon)
+docs_ex=(1998pankyo2)
+
+_1998pankyo_title='1998年度実施 一般教育科目'
+_1998pankyo_cov=()
+_1998pankyo_prb=(1998engl.tex 1998math.tex 1998phys.tex)
+_1998pankyo_ans=(1998engl.tex 1998math.tex 1998phys.tex)
+_1998pankyo_dep=(
+  1998eng2.eps 1998engl.eps 1998math1.eps
+  1998phys-3.eps 1998phys1-1.eps 1998phys1-2.eps 1998phys2-1.eps 1998phys2-2.eps 1998phys3-1.eps 1998phys3-2.eps)
+
+# 1998phys-1.eps : 使われていない? ファイル。
+
+_1998pankyo2_title='1998年度実施 一般教育科目 (英語なし)'
+_1998pankyo2_cov=()
+_1998pankyo2_prb=(1998math.tex 1998phys.tex)
+_1998pankyo2_ans=(1998math.tex 1998phys.tex)
+_1998pankyo2_dep=(
+  1998math1.eps
+  1998phys-3.eps 1998phys1-1.eps 1998phys1-2.eps 1998phys2-1.eps 1998phys2-2.eps 1998phys3-1.eps 1998phys3-2.eps)
+
+_1998senmon_title='1998年度実施 物理専門科目'
+_1998senmon_cov=()
+_1998senmon_prb=(1998phy1.tex 1998phy2.tex 1998phy3.tex 1998phy4.tex 1998phy5.tex 1998phy6.tex 1998phy7.tex 1998phy8.tex)
+_1998senmon_ans=(1998phy1.tex 1998phy2.tex 1998phy3.tex 1998phy4.tex 1998phy5.tex 1998phy6.tex 1998phy7.tex 1998phy8.tex)
+_1998senmon_dep=(
+  1998phy1-1.eps 1998phy1-2.eps 1998phy2-1.eps 1998phy2-2.eps 1998phy3-1.eps 1998phy3-2.eps
+  1998phy4-1.eps 1998phy5-1.eps 1998phy5-1-1.eps 1998phy5-1-2.eps 1998physQ4_0r.eps 1998physQ4_2r.eps)
+
+# 1998phy4-0.eps 1998phy4-2.eps
+

@@ -8,20 +8,20 @@ Maxwellは、いくつかの実験事実から４つの方程式（Maxwell方程式）
 
 \begin{eqnarray}
   \nabla \cdot \vec{E} = \frac {\rho}{\varepsilon_{0}} 
-  \label{Q01}
+  \ilabel{Q01}
 \end{eqnarray} 
 \begin{eqnarray}
   \nabla \cdot \vec{B} = 0
-  \label{Q02}
+  \ilabel{Q02}
 \end{eqnarray} 
 \begin{eqnarray}
   \nabla \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}
-  \label{Q03}
+  \ilabel{Q03}
 \end{eqnarray} 
 \begin{eqnarray}
   \frac{1}{\varepsilon_{0} \mu_{0}}\nabla \times \vec{B} = %
   \frac{\vec{j}}{\varepsilon_{0}} + \frac{\partial \vec{E}}{\partial t}      
-  \label{Q04}
+  \ilabel{Q04}
 \end{eqnarray} 
 
 を与え、電磁気学を完成させた。ただし$\vec{E}$は電場、$\vec{B}$は磁束密
@@ -30,11 +30,11 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
 
 \begin{subquestions}
 \SubQuestion
-  式\ref{Q01}はGaussの法則を表す。
+  式\iref{Q01}はGaussの法則を表す。
   \begin{subsubquestions}
   \SubSubQuestion
   閉じた中空の導体があると、導体の外部にある電荷が作る電場は、導体に囲
-  まれた中空の導体には侵入できない。このことを、式\ref{Q01}を用いて証明せよ。
+  まれた中空の導体には侵入できない。このことを、式\iref{Q01}を用いて証明せよ。
   ただし、中空の空間には、もともと電荷は存在しなかったものとする。
 
   \SubSubQuestion
@@ -49,12 +49,12 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
   \SubSubQuestion
   電荷の保存則を用いて、Amp\`{e}reの法則、すなわち、「ある閉曲線が囲む
   定常電流$I$によって生じる磁場$\vec{B}/\mu_{0}$をその閉曲線に沿って線
-  積分すると、$I$に等しい」を非定常電流の場合に一般化し、式\ref{Q04}を導け。
+  積分すると、$I$に等しい」を非定常電流の場合に一般化し、式\iref{Q04}を導け。
 
   \SubSubQuestion
   ある瞬間に電流密度$\vec{j}$が局所的に発生し、短時間で消滅したとする。
   その後の$\vec{B}$と$\vec{E}$はどのように変動するか。
-  式\ref{Q03}と\ref{Q04}を用い
+  式\iref{Q03}と\iref{Q04}を用い
   て、直観的に説明せよ。
 
   \SubSubQuestion
@@ -81,7 +81,7 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
   \begin{subsubanswers}
   \SubSubAnswer
     \parbox[t]{100mm}{
-   中空の空間には電荷が存在しない($\rho=0$)ので、\ref{Q01}より$\Div \vec{E}=0
+   中空の空間には電荷が存在しない($\rho=0$)ので、\iref{Q01}より$\Div \vec{E}=0
    $。\\
    従って、中空の空間には電場の湧き出しやすいこみがなく、中空の空間に
    電場が侵入するとすれば、電気力線は右図のように導体内側表面の２点A、
@@ -119,7 +119,7 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
     \begin{eqnarray}
       \int_{S} \vec{j} \cdot \vec{n} {\d{S}} = -\frac{d}{dt}
       \int_{V} \rho {\d{V}}
-      \label{Q1}
+      \ilabel{Q1}
     \end{eqnarray}
     定常電流の時は
     \[
@@ -127,14 +127,14 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
     \]
     が成立するが、非定常電流の時は
     \begin{eqnarray}
-    \label{Q3}
+    \ilabel{Q3}
       \frac{d}{dt} \int_{V} \rho {\d{V}} = 
       \frac{d}{dt} \int_{V} \varepsilon_0 \nabla \cdot \vec{E} {\d{V}} = 
       \frac{d}{dt} \int_{S} \varepsilon_0 \vec{E} \cdot \vec{n} {\d{S}} = 
       \int_{S} \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \cdot %
       \vec{n} {\d{S}}
     \end{eqnarray}
-    \ref{Q3}を\ref{Q1}に代入して
+    \iref{Q3}を\iref{Q1}に代入して
     \[
       \int_{S} \left( \vec{j} + \varepsilon_0 \frac{\partial \vec{E}} %
       {\partial t} \right) \cdot \vec{n} {\d{S}} = 0
@@ -144,7 +144,7 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
     \begin{eqnarray}
       \oint_{C} \vec{B} \cdot \vec{r} = %
       \mu_{0} \int_{S'} \vec{j} \cdot \vec{n} {\d{S}}
-      \label{Q4}
+      \ilabel{Q4}
     \end{eqnarray}
     を非定常電流の場合に一般化するには、
     \[
@@ -156,7 +156,7 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
       \oint_{C} \vec{B} \cdot {\d{\vec{r}}} = %
       \mu_{0} \int_{S'} \left( \vec{j} + \varepsilon_0 \frac %
       {\partial \vec{E}}{\partial t} \right) \cdot \vec{n} {\d{S}}
-      \label{Q5}
+      \ilabel{Q5}
     \end{eqnarray}
     とすればよい。
     Stokesの定理より
@@ -164,7 +164,7 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
       \oint_{C} \vec{B} \cdot {\d{\vec{r}}} = %
       \int_{S'} \nabla \times \vec{B} \cdot \vec{n} {\d{S}}
     \]
-    であるから、\ref{Q5}は
+    であるから、\iref{Q5}は
     \[
       \int_{S'} \nabla \times \vec{B} \cdot \vec{n} {\d{S}} = %
       \int_{S'} \mu_{0} \left( \vec{j} + \varepsilon_0 \frac %
@@ -175,12 +175,12 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
       \nabla \times \vec{B} = \mu_{0} \left( \vec{j} + %
       \varepsilon_0 \frac {\partial \vec{E}}{\partial t} \right)
     \]
-    これで、\ref{Q04}が導かれた
+    これで、\iref{Q04}が導かれた
   \SubSubAnswer
-    局所的な$\vec{j}$が一瞬生じると、\ref{Q04}によって近傍に$\vec{B}$
-    が生じ、$\vec{B}$の変化があるので\ref{Q03}によって近傍に$\vec{E}$が生じ、
-    $\vec{E}$の変化があるので、再び\ref{Q04}によって近傍に$\vec{B}$が生じる\\
-    $\vec{j}$が消滅した後\ref{Q02}も、引き続き\ref{Q03},\ref{Q04}
+    局所的な$\vec{j}$が一瞬生じると、\iref{Q04}によって近傍に$\vec{B}$
+    が生じ、$\vec{B}$の変化があるので\iref{Q03}によって近傍に$\vec{E}$が生じ、
+    $\vec{E}$の変化があるので、再び\iref{Q04}によって近傍に$\vec{B}$が生じる\\
+    $\vec{j}$が消滅した後\iref{Q02}も、引き続き\iref{Q03},\iref{Q04}
     によって$\vec{E}$,$\vec{B}$の
     変化がそれぞれ近傍に$\vec{E}$、$\vec{B}$を生むので、電磁波のパルスが
     空間を伝わっていく。
@@ -189,22 +189,22 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
     $\rho=0,\ \vec{j}=0$のとき、Maxwell方程式は
     \begin{eqnarray}
       \Div \vec{E} = 0
-      \label{c1}
+      \ilabel{c1}
     \end{eqnarray}
     \begin{eqnarray}
       \Div \vec{B} = 0
-      \label{c2}
+      \ilabel{c2}
     \end{eqnarray}
     \begin{eqnarray}
       \Rot \vec{E} = - \frac { \partial \vec{B} } { \partial t}
-      \label{c3}
+      \ilabel{c3}
     \end{eqnarray}
     \begin{eqnarray}
       \Rot \vec{B} = \varepsilon_{0}\mu_{0}\frac{\partial \vec{E}}{\partial t}
-      \label{c4}
+      \ilabel{c4}
     \end{eqnarray}
     となる。
-    \ref{c3}のrotをとると
+    \iref{c3}のrotをとると
     \[
       \nabla \times \nabla \times \vec{E} =
       \nabla \left( \nabla \cdot \vec{E} \right) - \nabla^{2} \vec{E} 
@@ -214,20 +214,20 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
       \Grad \Div \vec{E} - \nabla^{2} \vec{E} =
       - \frac{\partial}{\partial t}\left( \Rot \vec{B} \right) 
     \]
-    これに\ref{c1},\ref{c4}を代入すると
+    これに\iref{c1},\iref{c4}を代入すると
     \begin{eqnarray}
       \nabla^{2} \vec{E} = %
       \varepsilon_{0}\mu_{0}\frac{\partial^{2} \vec{E}}{\partial t^{2}}
-      \label{c5}
+      \ilabel{c5}
     \end{eqnarray}
-    が得られる。同様に\ref{c4}のrotをとれば
+    が得られる。同様に\iref{c4}のrotをとれば
     \begin{eqnarray}
       \nabla^{2} \vec{B} = %
       \varepsilon_{0}\mu_{0}\frac{\partial^{2} \vec{B}}{\partial t^{2}}
-      \label{c6}
+      \ilabel{c6}
     \end{eqnarray}
     が得られる。\\
-    \ref{c5},\ref{c6}は波動方程式であるから、電磁場の存在が示された。
+    \iref{c5},\iref{c6}は波動方程式であるから、電磁場の存在が示された。
     位相速度は
     \[
       c = \frac{1}{\sqrt{\varepsilon_{0} \mu_{0}}}
@@ -235,13 +235,13 @@ $\mu_{0}$は真空の透磁率で、以下では真空中の電磁場のみを考える。
     である。
 
   \SubSubAnswer
-    $\Div \Grad=0$であるから、\ref{Q02}より
+    $\Div \Grad=0$であるから、\iref{Q02}より
     \begin{eqnarray}
       \vec{B}=\Rot \vec{A}
-      \label{31}
+      \ilabel{31}
     \end{eqnarray}
     なるベクトル場$\vec{A}$が存在することが分かる。\\
-    \ref{31}を\ref{Q03}に代入すると
+    \iref{31}を\iref{Q03}に代入すると
 
     \[
       \Rot \vec{E}= -\Rot \frac{\partial \vec{A}}{\partial t}
