@@ -1,0 +1,70 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-14, Koichi Murase, 作成・入力
+%%
+\begin{question}{第２問}{村瀬}
+\begin{enumerate}
+\item
+  以下の連立偏微分方程式を考える。
+  \begin{align}
+    \left.\begin{aligned}
+      \frac{\partial u_1}{\partial t}
+      +4 \frac{\partial u_2}{\partial x} &= 0\\
+      \frac{\partial u_2}{\partial t}
+      + \frac{\partial u_1}{\partial x} &= 0
+    \end{aligned}\right\} \ilabel{eq:2011mathQ2.1.1}
+  \end{align}
+  ここで $u_1(x, t), u_2(x, t)$ は $-\infty<t<+\infty$ および $-\infty<x<+\infty$
+  で定義された2変数関数である。以下の設問に答えよ。
+
+  \begin{enumerate}
+  \item\ilabel{item:2011mathQ2.1.1}
+    式(\iref{eq:2011mathQ2.1.1})を以下のようにベクトル表記する。
+    \begin{align*}
+      \frac{\partial \bm{u}}{\partial t} + A\frac{\partial \bm{u}}{\partial x}=0,\quad
+      \bm{u}=\begin{pmatrix} u_1(x,t) \\ u_2(x,t) \end{pmatrix}.
+    \end{align*}
+    このとき, 係数行列 $A$ の固有値 $\lambda_1$, $\lambda_2$
+    と固有ベクトル $\bm{q}_1, \bm{q}_2$ を求めよ。
+
+  \item\ilabel{item:2011mathQ2.1.2}
+    設問(\iref{item:2011mathQ2.1.1})で求めた $\bm{q}_1, \bm{q}_2$ を並べた2次元正方行列 $P=(\bm{q}_1\; \bm{q}_2)$ を用いて変換
+    \begin{align*}
+      \begin{pmatrix} s_1(x,t) \\ s_2(x,t) \end{pmatrix} &= P^{-1} \bm{u}.
+    \end{align*}
+    を行い, 式(\iref{eq:2011mathQ2.1.1}) を $s_1(x, t), s_2(x, t)$ に対する偏微分方程式に書き換えよ。
+
+  \item
+    設問(\iref{item:2011mathQ2.1.2})で得られた式は
+    $s_1(x, t), s_2(x, t)$ に対してそれぞれ独立な線形方程式であり,
+    初期条件を与えれば解くことができる。さらに, その解から $u_1(x, t), u_2(x, t)$
+    を求めることができる。このことを用いて, 初期条件
+    \begin{align*}
+      u_1(x, t=0)=e^{-x^2},\quad
+      u_2(x, t=0)=0
+    \end{align*}
+    のもとに, 連立偏微分方程式(\iref{eq:2011mathQ2.1.1})の解 $u_1(x, t), u_2(x, t)$ を求めよ。
+    また $t=1$ での解の概形を図示せよ。
+  \end{enumerate}
+
+\item
+  2つの関数 $f_1(x, t), f_2(x, t)$ に対する連立偏微分方程式
+  \begin{align*}
+    \left.\begin{aligned}
+      \frac{\partial f_1}{\partial t}
+      + \frac{\partial^2 f_1}{\partial x^2}
+      -6 \frac{\partial^2 f_2}{\partial x^2} &= 0\\
+      \frac{\partial f_2}{\partial t}
+      + \frac{\partial^2 f_1}{\partial x^2}
+      -4 \frac{\partial^2 f_2}{\partial x^2} &= 0
+    \end{aligned}\right\}
+  \end{align*}
+  を初期条件
+  \begin{align*}
+    f_1(x, t=0)=e^{-x^2},\quad
+    f_2(x, t=0)=0
+  \end{align*}
+  のもとに解け。関数の定義域は $0\le t<+\infty$ および $-\infty<x<+\infty$ とする。
+\end{enumerate}
+\end{question}

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docs=(2011math)
+
+_2011math_title='2011年度実施 数学'
+_2011math_cov=(2011mathC.tex)
+_2011math_prb=(2011mathQ1.tex 2011mathQ2.tex)
+_2011math_ans=() # (2011mathA1.tex 2011mathA2.tex)
+

@@ -1,0 +1,51 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-14, Koichi Murase, 作成・入力
+%%
+\begin{question}{第１問}{村瀬}
+\begin{enumerate}
+\item
+  以下の設問に答えよ。ただし単位行列 $I$ およびパウリ行列 $\sigma_j\;(j=1, 2, 3)$ を
+  \begin{align*}
+    I=\begin{pmatrix} 1&0 \\ 0 & 1 \end{pmatrix},\quad
+    \sigma_1=\begin{pmatrix} 0&1 \\ 1&0 \end{pmatrix},\quad
+    \sigma_2=\begin{pmatrix} 0&-i \\ i&0 \end{pmatrix},\quad
+    \sigma_3=\begin{pmatrix} 1&0 \\ 0&-1 \end{pmatrix}.
+  \end{align*}
+  で定義する。$i$ は虚数単位である。
+
+  \begin{enumerate}
+  \item パウリ行列の積 $\sigma_j \sigma_k (j,k=1，2, 3)$ を求めよ。
+  \item 実3元ベクトル $\bm{v}$ に対して行列
+    $S(\bm{v})$ を $S(\bm{v})=\bm{v}\cdot\sigma=v_1\sigma_1+v_2\sigma_2+v_3\sigma_3$ で定
+    義する。$S$ の積 $S(\bm{a})S(\bm{b})$ を単位行列 $I$ とパウリ行列 $\sigma_j$ の線形結合で表せ。
+  \item 実3元単位ベクトル $\bm{n}$ および実数 $\theta$ に対して, 行列 $X(\bm{n}, \theta)$ を
+    \begin{align*}
+      X(\bm{n}, \theta) &=\e^{-\i\theta S(\bm{n})}
+    \end{align*}
+    で定義する。ただし行列 $A$ に対して
+    \begin{align*}
+      \e^A &= \sum_{k=0}^\infty \frac{A^k}{k!}
+    \end{align*}
+    である。$X(\bm{n}, \theta)$ を単位行列 $I$ とパウリ行列 $\sigma_j$ の線形結合で表せ。
+  \item\ilabel{item:2011mathQ1.1.4}
+    $X(\bm{n}, \theta)S(\bm{v})X(\bm{n},-\theta)$ が $S(\bm{v}')$ の形に表せることを示し, $\bm{v}'$ を $\bm{n}, \bm{v}, \bm{n}\times\bm{v}$ の
+    線形結合で表せ。ただし $\times$ はベクトル積(外積)を表す。
+  \item $\bm{n}$ と $\bm{v}$ が直交しているとき, $0\le\theta\le2\pi$ において
+    設問(\iref{item:2011mathQ1.1.4})の $\bm{r}'$ がどのように変化するか説明せよ。
+  \end{enumerate}
+\item
+  2行2列の複素行列すべての集合を $G$ とする。また, $H$ を2行2列のエルミート行列
+  の集合 ($X\in G$ かつ $X^\dag=X$ を満たす $X$ の集合)とし, $U$ を2行2列のユニタリー
+  行列の集合 ($X\in G$ かつ $X^\dag X = XX^\dag=I$ を満たす $X$ の集合)とする。ただし $X^\dag$
+  は $X$ のエルミート共役(転置の複素共役)を表す。以下の各命題について真偽を答え, 
+  「真」の場合は命題を証明し, 「偽」の場合には具体的な反例を1つ示せ。\\
+  (a) $A\in U$ かつ $B\in U$ ならば, $AB\in U$ である。\\
+  (b) $A\in H$ かつ $B\in H$ ならば, $AB\in H$ である。\\
+  (c) $A\in H$ ならば $A∈U$ である。\\
+  (d) $A\in H$ かつ $A\in U$ ならば, $A=I$ である。\\
+  (e) $X\in G$ かつ $X^2=O$ ならば, $X=O$ である(ただし $O$ は全ての成分が0の行列)。\\
+  (f) $X\in G$ かつ $X^3=O$ ならば, $X^2=O$ である。
+\end{enumerate}
+\end{question}
