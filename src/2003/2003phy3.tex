@@ -1,0 +1,222 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\begin{document}
+    \begin{question}{問題3}{芝隼人、田中雄}
+	電磁場中での電荷$q$、静止質量$m$をもつ粒子の加速を考える。電場$\vec{E}$、磁場$\vec{B}$の下で荷電粒子はローレンツ力
+	    \begin{eqnarray}
+		\vec{F}=q(\vec{E}+\vec{v}\times\vec{B})
+    \end{eqnarray}
+	を受ける。ここで、$\vec{v}$は粒子の速度で、磁場$\vec{B}$は常に$z$方向に一様で一定、つまり、$\vec{B}=(0,0,B)$とする。また、荷電粒子の運動に伴う電磁場の放出を無視する。
+
+	まず、粒子の速度は光速度$c$に比べて十分小さく、したがって、相対論的効果を考えなくて良いとする。
+	\begin{enumerate}
+	    \item
+		 電場が存在せず、一様な磁場だけがある場合、粒子を時刻$t=0$に初速度$\vec{v}=(v_0,0,0)$で$\vec{x}=(0,0,0)$から放出した場合にこの粒子の時刻$t$での速度と位置を求めよ。
+	    \item
+		 一様磁場に周期的に変動する電場$\vec{E}=(-E\sin (\Omega t),-E\cos (\Omega t) ,0)$を加え、設問１と同じ初期条件で荷電粒子を放出した場合、時刻$t$での粒子の速度を求めよ。ただし、$E$は定数である。
+	    \item
+		 $\Omega = qB/m$のとき十分時間がたてば荷電粒子の運動エネルギーが時間ともに増大することを示せ。
+    \end{enumerate}
+	次に、粒子の速度が光速度に比べて無視できない（相対論的）場合を考える。このときは粒子の運動量$\vec{p}$、エネルギー$\mathcal{E}$は相対論的表式
+	\begin{eqnarray*}
+	    \vec{p} = \frac{m\vec{v}}{\sqrt{1-(v^2/c^2)}},\qquad \mathcal{E} = \frac{mc^2}{\sqrt{1-(v^2/c^2)}}
+    \end{eqnarray*}
+	で与えられる。ここで、$v=|\vec{v}|$である。また、相対論的な場合も式(1)で与えられるローレンツ力$\vec{F}$を使って運動方程式は$d\vec{p}/dt=\vec{F}$と書ける。
+	\begin{enumerate}[4]
+	    \item
+		 設問１と同じく一様な磁場だけがあり、電場がない場合、粒子の速度が相対論的のときも、運動方程式の両辺と速度$\vec{v}$との内積をとることによって粒子の速さ$v$が運動中一定であることを示せ。
+	    \item
+		 前問までの結果を使って運動方程式を解き、粒子の速度$\vec{v}(t)$を求めよ。
+	    \item
+		 相対論的な場合の結果を考慮して、設問３と同じく一様な磁場と振動数$\Omega =qB/m$で変動する電場が存在する場合、粒子の運動エネルギー$(\mathcal{E}-mc^2)$の増加はとまる。その理由を述べよ。ただし、最初荷電粒子の速さは光速に比べて小さいとして、具体的に相対論的な運動方程式を解く必要はない。
+    \end{enumerate}
+\end{question}
+
+    \begin{answer}{問題3}{芝隼人、田中雄}
+	\begin{enumerate}
+	    \item
+		 磁場の中の荷電粒子は進行方向と垂直な方向に$\vec{F}=q\vec{v}\times\vec{B}$の力を受ける。最初は相対論効果を考えなくてもよい場合を考える。
+
+		 磁場は仕事をしないので荷電粒子の速さは一定であり、進行方向と垂直に一定の力が働き続けるので、$xy$平面内で円運動を行う。運動方程式は
+		 \begin{eqnarray}
+		     m\frac{d\vec{v}}{dt} = q\vec{v}\times\vec{B} \quad \Leftrightarrow\quad \frac{d}{dt}\left(
+													  \begin{array}{c}{}
+		 v_x \\ v_y \\ \end{array}
+		     \right) = \frac{qB}{m}\left( \begin{array}{c}{}
+		     v_y  \\ -v_x \end{array} \right)
+		     \end{eqnarray}
+		     である。この方程式は$v_x,v_y$それぞれについての線形２階同次微分方程式に変形することができ、
+		     \begin{eqnarray}
+		     \frac{d^2v_x}{dt^2} = -\left(\frac{qB}{m}\right)^2 v_x, \qquad \frac{d^2v_y}{dt^2} = -\left(\frac{qB}{m}\right)^2 v_y
+		     \end{eqnarray}
+		     により、解は三角関数の線形重ね合わせ$v_{x,y} = c_1\cos (\omega t)+c_2\sin (\omega t)$となる。ここに$\omega =qB/m$と定める。$v_x(0)=v_0,\ v_y(0)=0 $を代入することにより、
+		     \begin{eqnarray}
+			 \left( \begin{array}{c}{}
+				   v_x \\ v_y \end{array}\right) =v_0 \left( \begin{array}{c}{}
+				   \cos (\omega t) \\ -\sin (\omega t) \end{array}\right)
+				   \end{eqnarray}
+				   となる。時間について積分を行って初期条件を代入することにより、
+				   \begin{eqnarray}
+				       \left( \begin{array}{c}{}
+					   x \\ y \end{array}\right) = \frac{mv_0}{qB}\left( \begin{array}{c}{}
+					   \sin (\omega t) \\ \cos (\omega t) -1 \end{array} \right)
+					   \end{eqnarray}
+					   となる。
+					   \item
+					   運動方程式(1)は変更されて、
+					   \begin{eqnarray}
+					       \frac{d}{dt}\left( \begin{array}{c}{}
+					  v_x \\ v_y \end{array}\right) =\frac{q}{m}\left( \begin{array}{c}{}
+					  -E\sin (\Omega t)+v_y B \\ -E\cos (\Omega t) -v_x B
+					  \end{array}\right)
+					  \end{eqnarray}
+					  となる。1.と同じように２階の微分方程式に変形すると今度は非同次となり、
+					  \begin{eqnarray}
+					  && \begin{array}{rl}
+					  \displaystyle\frac{d^2 v_x}{dt^2} &= \displaystyle\frac{d}{dt}\left[ -\frac{qE}{m}\sin (\Omega t)+\frac{qB}{m}v_y \right] = -\frac{qE\Omega}{m}\cos (\Omega t) +\frac{qB}{m}\left[ -\frac{qE}{m}\cos (\Omega t) -\frac{qB}{m}v_x \right] \\
+					  &= -\displaystyle\frac{qE}{m}\left( \Omega +\frac{qB}{m}\right) \cos (\Omega t) -\left( \frac{qB}{m}\right)^2 v_x
+					  \end{array}\\
+					  &&\ \frac{d^2 v_y}{dt^2}\quad = \frac{qE}{m}\left( \Omega +\frac{qB}{m}\right) \sin (\Omega t) -\left( \frac{qB}{m}\right)^2 v_y
+					  \end{eqnarray}
+					  となる。$v_x$に関する２階非同次線形微分方程式を解くことを考える。定数変化法を用いればよい。すなわち同次方程式(2)の第１式の一般解は
+					  \begin{eqnarray}
+					  v_x = C_1 \cos (\omega t) +C_2 \sin (\omega t)
+					  \end{eqnarray}
+					  であった。今はこれに非同次項$\varphi (t) = -\frac{qE}{m}\left( \Omega +\frac{qB}{m}\right) \sin (\Omega t)$が加わっているだけである。定数変化法の精神は(6)の特殊解として$C_1,\ C_2$の代わりに$t$依存の変数に置き換えたものを持ってきて、問題の微分方程式を満たすものをひとつ見つけることである。これがみつかれば後は元の非同次項のない微分方程式の一般解(3))に足すだけで一般解が求まる。
+					  \begin{eqnarray}
+					  v_x = c_1 (t) \cos (\omega t) +c_2(t) \sin (\omega t)
+					  \end{eqnarray}
+					  すると、
+					  \begin{eqnarray}
+					  \frac{dv_x}{dt} = c_1' \cos (\omega t) +c_2' \sin (\omega t) - c_1 \omega \sin (\omega t) +c_2 \omega \cos (\omega t)
+					  \end{eqnarray}
+					  となる。定数$c_1,\ c_2$を
+					  \begin{eqnarray}
+					  c_1' \cos (\omega t) +c_2' \sin (\omega t)=0
+					  \end{eqnarray}
+					  となるように選ぶと、
+					  \begin{eqnarray}
+					  \frac{dv_x}{dt} = -c_1\omega \sin (\omega t) +c_2\omega \cos (\omega t)
+					  \end{eqnarray}
+					  となる。さらに微分して、
+					  \begin{eqnarray}
+					  \frac{d^2 v_x}{dt^2} = -c_1' \omega\sin (\omega t) + c_2' \omega \cos (\omega t)-c_1 \omega^2 \cos (\omega t) -c_2 \omega^2 \sin(\omega t)
+					  \end{eqnarray}
+					  問題の微分方程式に代入すると、
+					  \begin{eqnarray}
+					  -c_1' \omega \sin (\omega t) +c_2' \omega\cos (\omega t) = -\frac{qE}{m}\left( \Omega +\omega\right) \cos (\Omega t)
+					  \end{eqnarray}
+					  となる。(11),(14)から
+					  \begin{eqnarray}
+					  c_1'(t) &=& \frac{qE}{m\omega}(\Omega +\omega )\cos (\Omega t)\sin (\omega t) \\
+					  c_2'(t) &=& -\frac{qE}{m\omega}(\Omega +\omega )\cos (\Omega t)\cos (\omega t)
+					  \end{eqnarray}
+					  と解かれ、これらを積分して(9)式に代入することにより、
+					  \begin{eqnarray}
+					  \begin{array}{rl}{}
+					  v_x(t) = & -\displaystyle\frac{qE}{m\omega}(\Omega +\omega)\cos(\omega t) \left[ \frac{\cos (\Omega +\omega )t}{2(\Omega +\omega )}-\frac{\cos (\Omega -\omega )t}{2(\Omega -\omega )}\right] \\
+ 					  & \quad - \displaystyle\frac{qE}{m\omega} (\Omega +\omega )\sin (\omega t)\left[ \frac{\sin (\Omega +\omega )t}{2(\Omega +\omega)}+\frac{\sin (\Omega -\omega )t}{2(\Omega -\omega)}\right]
+					  \end{array}
+					  \end{eqnarray}
+					  という特殊解が求まる。従って、一般解は
+					  \begin{eqnarray}
+					  \begin{array}{rl}{}
+					  v_x (t) &= C_1 \cos (\omega t)+C_2 \sin (\omega t)  - \displaystyle\frac{qE}{m\omega}(\Omega +\omega)\cos(\omega t) \left[ \frac{\cos (\Omega +\omega )t}{2(\Omega +\omega )}-\frac{\cos (\Omega -\omega )t}{2(\Omega -\omega )}\right] \\
+					  & \quad \qquad - \displaystyle\frac{qE}{m\omega} (\Omega +\omega )\sin (\omega t)\left[ \frac{\sin (\Omega +\omega )t}{2(\Omega +\omega)}+\frac{\sin (\Omega -\omega )t}{2(\Omega -\omega)}\right] \\
+					  &= \displaystyle C_1\cos (\omega t) + C_2 \sin (\omega t) + \frac{qE}{m(\Omega -\omega )} \cos(\Omega t)
+					  \end{array}
+					  \end{eqnarray}
+					  と求まる。初期条件は$v_x(0) = v_0, v_x'(0) = 0\ $(i.e. $ v_y(0)=0)$なので、$C_1 = v_0,\ C_2 = -c_2 (0) = 0$となる。以上から、
+					  \begin{eqnarray}
+					  v_x (t) = \left( v_0 -\frac{qE}{m(\Omega -\omega)}\right)\cos (\omega t) +\frac{qE}{m(\Omega-\omega )}\cos (\Omega t)
+					  \end{eqnarray}
+					  と求まる。同様にして$v_y$も
+					  \begin{eqnarray}
+					  v_y(t) = -\left( v_0 -\frac{qE}{m(\Omega -\omega )}\right)\sin (\omega t) -\frac{qE}{m(\Omega -\omega)}\sin (\Omega t)
+					  \end{eqnarray}
+					  と分かる。
+					  \item
+					  $\Omega =\omega = \frac{qB}{m}$の場合には、例えば(15)(16)式の箇所から解き直さなくてはならない。この場合に(15)(16)を積分し特殊解を求めると、
+					  \begin{eqnarray}
+					  v_x(t) = -\frac{qE}{m}\left[ \frac{1}{2\omega}\cos (\omega t) +t\sin (\omega t)\right]
+					  \end{eqnarray}
+					  これを同次方程式の一般解$v_x = C_1 \cos (\omega t)+C_2 \sin (\omega t)$に付け加える際に、第１項は係数$C_1$に込めてしまうことができる。これを考慮した上で初期条件を適用すると$v_x$の解は
+					  \begin{eqnarray}
+					  v_x(t) = v_0\cos (\omega t) -\frac{qE}{m}t \sin (\omega t)
+					  \end{eqnarray}
+					  となる。同じ様にして$v_y$の解は
+					  \begin{eqnarray}
+					  v_y(t) = -v_0\sin (\omega t) -\frac{qE}{m}t\cos (\omega t)
+					  \end{eqnarray}
+					  である。以上より、運動エネルギーは
+					  \begin{eqnarray}
+					  K = \frac{m}{2}(v_x^2 + v_y^2)= \frac{m}{2}v_0^2 + \frac{q^2 E^2}{2m}  t^2
+					  \end{eqnarray}
+					  となり、時間の２乗に比例して増加することが分かる。
+					  \item
+					  運動方程式に相対論的補正を加えた場合、$\gamma$ファクターが運動量にかかるため、
+					  \begin{eqnarray}
+					      \frac{d}{dt}\left[ \frac{1}{\sqrt{1-(v^2/c^2 )}}\left( \begin{array}{c}{}
+					      v_x \\ v_y \end{array}\right) \right]
+=\frac{qB}{m}\left(\begin{array}{c}{}
+v_y \\ -v_x \end{array}\right) 
+\end{eqnarray}
+となる。$\vec{v}$との内積を取ると右辺が消えるので、
+\begin{eqnarray}
+\left( \begin{array}{c}{}
+v_x \\ v_y \end{array}\right) \cdot \frac{d}{dt}\left[ \frac{1}{\sqrt{1-(v^2/c^2)}} \left( \begin{array}{c}{}
+v_x \\ v_y \end{array}\right) \right] =0
+\end{eqnarray}
+である。両辺に$\gamma = \frac{1}{\sqrt{ 1-(v^2/c^2) }}$をかけて整理すると、
+\begin{eqnarray}
+\frac{d}{dt} \frac{1}{2}\left[\frac{1}{\sqrt{1-(v^2/c^2)}}\left( \begin{array}{c}{}
+v_x \\ v_y \end{array}\right)\right]^2 =0\quad \textrm{i.e.}\quad \frac{v^2}{\sqrt{1-(v^2/c^2)}}=\textrm{time independent}
+\end{eqnarray}
+であることが分かる。すなわち、速さ$v$は時間によらず一定である。
+\item
+以上より、運動方程式(1)において$\gamma$は時間微分の外に出すことができるので、
+\begin{eqnarray}
+\frac{d}{dt}\left( \begin{array}{c}{}
+v_x \\ v_y \end{array}\right) =\frac{qB}{m\gamma}\left( \begin{array}{c}{}
+v_y \\ -v_x \end{array}\right) 
+\end{eqnarray}
+となる。あとは1.番と全く同様に解くことができて、
+\begin{eqnarray}
+\left( \begin{array}{c}{}
+v_x \\ v_y \end{array}\right) = -v_0\left( \begin{array}{c}{}
+\cos(\omega t) \\ \sin(\omega t) \end{array}\right) ,\quad \textrm{where}\ \omega = \frac{qB}{m\gamma}
+\end{eqnarray}
+である。
+\item
+最初は非相対論的に運動を開始し、3.番で求めたように速さが増加してゆく時間発展を取る。速さが増加して$\gamma$が無視できなくなってくる（相対論的）と運動方程式(28)で速さの変化が押さえられてゆく。そのとき、回転周期$\omega$が電場の周期$\Omega$からずれるために、粒子の振舞は3.番のようなエネルギー増加の挙動から、2.番のようなエネルギーが平均的に一定の振舞いに切り替わる。その時点で運動エネルギーの正味の増加は抑えられてしまうことになる。
+
+
+\end{enumerate}
+\paragraph{【別解】}
+\begin{enumerate}[1.]
+\item
+運動方程式(1)について、$w=v_x+ iv_y$を考えることによって、問題を１階の微分方程式に落とすことができる。
+\begin{eqnarray}
+\frac{dw}{dt} = -i\frac{qB}{m}w
+\end{eqnarray}
+これに初期条件$w(0) = v_0$を適用すると解として$w(t) = v_0e^{-i\omega t}$が求まる（$\omega = \frac{qB}{m}$）。
+\item
+上と同様に行うと運動方程式(5)は
+\begin{eqnarray}
+\frac{dw}{dt} = -i\frac{q}{m}\left( Ee^{-i\Omega t} +Bw \right)
+\end{eqnarray}
+となる。やはり定数変化法を用いてこれを解く。同次方程式である(30)式の定数部分を変化させたものとして、$w(t) = C(t)e^{-i\omega t}$を考え、これを(31)式に代入すると、
+\begin{eqnarray}
+C'(t)e^{-i\omega t}= -i\frac{qE}{m}e^{-i\Omega t}
+\end{eqnarray}
+が求まる。よって、
+\begin{eqnarray}
+C(t) = \frac{qE}{m(\Omega -\omega )}e^{-i(\Omega -\omega )t}\qquad\textrm{i.e.}\qquad w(t) = \frac{qE}{m(\Omega -\omega )}e^{-i\Omega t} 
+\end{eqnarray}
+という$w(t)$の特殊解が得られ、これを同次方程式の一般解に足すことで$w(t)$の一般解となる。初期条件を適用して実部虚部を分離すると、(20)式と同じ式が得られる。
+
+２元ベクトルを残したまま１階非同次線形微分方程式の解き方を敷衍しても、同等の解答が得られ、また同じように簡潔である。
+\end{enumerate}
+\end{answer}
+
+\end{document}

@@ -1,0 +1,300 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+
+\begin{document}
+
+
+%%%%%%    TEXT START    %%%%%%
+\newcommand{\p}{\mathbf{p}} %pベクトル
+\newcommand{\x}{\mathbf{x}} %xベクトル
+\newcommand{\mH}{\mathbf{H}}
+\newcommand{\mN}{\mathbf{N}}
+
+
+
+
+\begin{question}{問題1}{小西　功記}
+質量$m$、振動数$\omega$をもつ一次元調和振動子のハミルトニアン演算子$\mH$は
+\[
+\mH=\frac{\p^2}{2m}+\frac{m\omega^2}{2}\x^2
+\]
+で与えられる。ここで、$\x$と$\p$はそれぞれ位置座標演算子と運動量演算子である。この系を解析するために、ハイゼンベルグ表示を用いる。また、演算子
+\[
+a=\sqrt{\frac{m\omega}{2\hbar}} (\x(0)+i\frac{\p(0)}{m\omega}),\ \ \ \ \ \ a^\dagger=\sqrt{\frac{m\omega}{2\hbar}}(\x(0)-i\frac{\p(0)}{m\omega})
+\]
+を導入する。ここで、$\x(0)$と$\p(0)$は時刻$t=0$での演算子である。以下の問いに答えよ。
+\begin{enumerate}
+	\item 演算子$\mN=a^\dagger a$と$a^\dagger$との交換関係および$\mN$と$a$との交換関係を求めよ。
+	\item 演算子$\mN$の固有状態を$|n>$とし、その固有値を$n$とすると、
+	\[
+	\mN|n>=n|n>
+	\]
+	が成り立つ。ここで、$a^\dagger|n>=C|n+1>$および$a|n>=D|n-1>$であることを示し、係数$CとD$を求めよ。ただし、係数$CとD$は正の数とし、状態$|n>$は$<n|n>=1$と規格化されているとする。
+	\item 上の結果を用いて$n$がゼロ又は正の整数であることを証明せよ。
+
+\end{enumerate}
+さて、ハイゼンベルグ表示では演算子$\x(t)$および演算子$\p(t)$は時刻$t$に依存する。それらの演算子の時間変化はハイゼンベルグ方程式で与えられる。以下の問いに答えよ。
+\begin{enumerate}[4]
+	\item $\x(t)$および$\p(t)$についてのハイゼンベルグ方程式を書け。
+	\item 上記の方程式を解いて$x(t)と\p(t)$を求め、それらが古典解と類似の時間変動をすることを示せ。
+	\item 期待値$<n|\x(t)|n>および<n|\p(t)|n>$を求めよ。
+	\item 期待値$<\lambda|\x(t)|\lambda>$および$<\lambda|\p(t)|\lambda>$が調和振動子の古典解と類似の時間変動を示すような状態$|\lambda>$は、基底状態$|G>$に演算子$aおよびa^\dagger$を作用して作ることができる。つまり、この状態$|\lambda>は|\lambda>=F(a,a^\dagger)|G>$と書ける。関数$F(a,a^\dagger)$の具体例を示せ。ただし、基底状態は$a|G>=0$を満たすものとする。また、状態$|\lambda>$の規格化条件は無視してよい。
+\end{enumerate}
+\end{question}
+\newpage
+
+\begin{answer}{問題1}{小西　功記}
+\begin{enumerate}
+
+%%%%%%%%%%%%%　小問1　%%%%%%%%%%%%%%%%%%
+
+\item
+まず、$aとa^\dag$の交換関係を求める。
+\begin{eqnarray}
+[a,a^\dag]&=&\frac{m\omega}{2\hbar}\left\{\left(\mathbf{x}+i\frac{\mathbf{p}}{m\omega}\right)\left(\mathbf{x}-i\frac{\mathbf{p}}{m\omega}\right)-\left(\mathbf{x}-i\frac{\mathbf{p}}{m\omega}\right)\left(\mathbf{x}+i\frac{\mathbf{p}}{m\omega}\right)\right\}\\
+&=&\frac{i}{\hbar}[\mathbf{p},\mathbf{x}]
+\end{eqnarray}
+ここで、$\mathbf{p}=-i\hbar\displaystyle\frac{\partial}{\partial\mathbf{x}}$より、$[\mathbf{p},\mathbf{x}]=-i\hbar$であるから、
+\begin{eqnarray}
+[a,a^\dag]=1
+\end{eqnarray}
+
+$N$と$a^{\dag}$の交換関係は
+\begin{align}
+[N,a^{\dag}]&=Na^{\dag}-a^{\dag}N \notag \\
+               &=a^{\dag}aa^{\dag}-a^{\dag}a^{\dag}a \notag \\
+               &=a^{\dag}(aa^{\dag}-a^{\dag}a) \notag \\
+	   &=a^{\dag}[a,a^{\dag}]
+\end{align}
+昇降演算子の交換関係は$[a,a^{\dag}]=1$だから
+\begin{align}
+[N,a^{\dag}]=a^{\dag}
+\end{align}
+
+$N$と$a$の交換関係は
+\begin{align}
+[N,a]&=Na-aN \notag \\
+       &=a^{\dag}aa-aa^{\dag}a \notag \\
+       &=a[a^{\dag},a]
+\end{align}
+昇降演算子の交換関係は$[a,a^{\dag}]=1$だから
+\begin{align}
+[N,a]=-a
+\end{align}
+
+%%%%%%%%%%%%%　小問2　%%%%%%%%%%%%%%%%%%
+
+\item まず$a^{\dag}|n>=C|n+1>$であることを示す。
+\begin{equation}
+N|n>=n|n>
+\end{equation}
+において$|n>$の左から演算子$a^{\dag}$を作用させると
+\begin{align}
+Na^{\dag}&=a^{\dag}aa^{\dag}|n> \notag\\
+	&=a^{\dag}(a^{\dag}a+1)|n> \notag\\
+	&=a^{\dag}(n+1)|n> \notag\\
+	&=(n+1)a^{\dag}|n> 
+\end{align}
+一方$|n+1>$も同じ固有値$(n+1)$を持つ演算子$N$の固有関数なので$a^{\dag}|n>$と$|n+1>$は定数倍すると一致する関係であり
+\begin{equation}
+a^{\dag}|n>=C|n+1>
+\end{equation}
+と書くことができる。
+Cは次のようにして求められる。すなわち、
+\begin{align}
+<n|aa^{\dag}|n>&=<n|N+1|n>=n+1\\
+		&=|C|^2<n+1|n+1>=|C|^2
+\end{align}
+よって$C=\sqrt{n+1}$である。
+
+次に$a|n>=D|n-1>$であることを示す。
+\begin{equation}
+N|n>=n|n>
+\end{equation}
+において$|n>$の右から演算子$a$を作用させると
+\begin{align}
+Na|n>&=a^{\dag}aa|n> \notag\\
+	&=(aa^{\dag}-1)a|n> \notag\\
+	&=an|n>-a|n> \notag\\
+	&=(n-1)a|n>
+\end{align}
+一方$|n-1>$も同じ固有値$(n-1)$を持つ演算子$N$の固有関数なので$a|n>$と$|n-1>$は定数倍すると一致する関係であり
+\begin{equation}
+a|n>=D|n-1>
+\end{equation}
+と書くことができる。
+Dは次のようにして求められる。すなわち、
+\begin{align}
+<n|a^{\dag}a|n>&=<n|N|n>=n\\
+		&=|D|^2<n-1|n-1>=|D|^2
+\end{align}
+よって$D=\sqrt{n}$である。
+
+%%%%%%%%%%%%%　小問3　%%%%%%%%%%%%%%%%%%
+
+\item 与えられたハミルトニアン演算子は
+\begin{equation}
+H=\hbar \omega(a^{\dag}a+\frac{1}{2})
+\end{equation}
+と書き換えることができるのでこの演算子の固有値方程式は
+\begin{equation}
+H|n>=\hbar \omega(n+\frac{1}{2})|n>
+\end{equation}
+となる。いま、
+\begin{align}
+[a,H]&=\hbar \omega [a,a^{\dag}a] \notag\\
+	&=\hbar \omega(a^{\dag}[a,a]+[a,a^{\dag}]a) \notag\\ 
+	&=\hbar \omega a 
+\end{align}
+\begin{align}
+[a^{\dag},H]&=\hbar \omega [a^{\dag},a^{\dag}a] \notag\\
+	&=-\hbar \omega a^{\dag} 
+\end{align}
+
+演算子$H$の固有値を$E$とし、$|n>$に対して(17)、(18)を作用させると、
+\begin{equation}
+H(a|n>)=(E-\hbar \omega)(a|n>)
+\end{equation}
+\begin{equation}
+H(a^{\dag}|n>)=(E+\hbar \omega)(a^{\dag}|n>)
+\end{equation}
+$a|n>$と$a^{\dag}|n>$はそれぞれ固有値$E-\hbar \omega$、$E+\hbar \omega$に属する固有関数だから
+$a$または$a^{\dag}$をｎ回$|n>$に作用させて$a^n|n>$または$(a^{\dag})^n|n>$とすればそれぞれは$E \mp n\hbar \omega$に属する固有関数である。
+
+さて、$|a|n>|^2=<n|a^{\dag}a|n>\ge 0$なので
+\begin{align}
+<a|(\frac{1}{\hbar \omega}H-\frac{1}{2})|n>&=\frac{1}{\hbar \omega}E-\frac{1}{2} \ge 0 \notag
+\end{align}
+となる。よって、$E \ge \frac{1}{2}\hbar \omega$。\\
+これらより、ｎはゼロまたは正の整数である。
+
+
+%%%%%%%%%%%%%　小問4　%%%%%%%%%%%%%%%%%%
+
+\item
+時間に依存するシュレディンガー方程式は、
+\begin{eqnarray}
+i\hbar\frac{d}{dt}\Psi(x,t)=H\Psi(x,t)
+\end{eqnarray}
+このことより、形式的に、
+\begin{eqnarray}
+\Psi(x,t)=e^{-i\frac{H}{\hbar}t}\Psi(x,0)
+\end{eqnarray}
+と書くことができる。このとき、$A$という物理量の期待値$<A>$は
+\begin{eqnarray}
+<A>&=&<\Psi(x,t)|A|\Psi(x,t)>\\
+&=&<\Psi(x,0)|e^{i\frac{H}{\hbar}t} A e^{-i\frac{H}{\hbar}}|\Psi(x,0)>
+\end{eqnarray}
+
+同様に、時間に依存する位置演算子$\mathbf{ｘ}(t)$は
+\begin{eqnarray}
+\mathbf{x}(t)=\exp(-\frac{1}{i\hbar}H(t-t_0))\mathbf{x}\exp(\frac{1}{i\hbar}H(t-t_0))\label{konishi3}
+\end{eqnarray}
+と表されるから、この両辺を微分することによって
+\begin{equation}
+\frac{d\mathbf{x}(t)}{dt}=\frac{1}{i\hbar}[\mathbf{x}(t),H]
+\end{equation}
+となる。時間に依存する運動量演算子もこれと同様にして、
+\begin{equation}
+\frac{d\mathbf{p}(t)}{dt}=\frac{1}{i\hbar}[\mathbf{p}(t),H]
+\end{equation}
+
+%%%%%%%%%%%%%　小問5　%%%%%%%%%%%%%%%%%%
+
+\item ハイゼンベルグ表示でハミルトニアンHは
+\begin{equation}
+H=\frac{1}{2m}\mathbf{p}(t)^2+\frac{m\omega^2}{2}\mathbf{x}(t)^2
+\end{equation}
+ここで、
+\begin{align}
+[\mathbf{x}(t)^2,H]&=\frac{1}{2m}[\mathbf{x}(t),\mathbf{p}(t)^2] \notag\\
+		&=\frac{1}{2m}\biggl (\mathbf{p}(t)[\mathbf{x}(t),\mathbf{p}(t)]+[\mathbf{x}(t),\mathbf{p}(t)]\mathbf{p}(t)\biggr) \notag\\
+		&=\frac{1}{m}i\hbar \mathbf{p}(t)
+\end{align}
+\begin{align}
+[\mathbf{p}(t)^2,H]&=\frac{m\omega^2}{2}[\mathbf{p}(t),\mathbf{x}(t)^2] \notag\\
+		&=\frac{m\omega^2}{2}\biggl (\mathbf{x}(t)[\mathbf{p}(t),\mathbf{x}(t)]+[\mathbf{p}(t),\mathbf{x}(t)]\mathbf{x}(t)\biggr) \notag\\
+		&=-m\omega^2 i\hbar \mathbf{x}(t)
+\end{align}
+であるから、$\mathbf{x}(t)$および$\mathbf{p}(t)$のハイゼンベルグ方程式は
+\begin{eqnarray}
+\frac{d\mathbf{x}(t)}{dt}&=&\frac{1}{m}\mathbf{p}(t)\label{konishi1}\\
+\frac{d\mathbf{p}(t)}{dt}&=&-m\omega^2\mathbf{x}(t)\label{konishi2}
+\end{eqnarray}
+と書ける。\\
+(\ref{konishi1})および(\ref{konishi2})より
+\begin{eqnarray}
+\frac{d^2\mathbf{x}(t)}{dt^2}=-\omega^2\mathbf{x}(t)\label{siki1}
+\end{eqnarray}
+初期条件は演算子の定義式(\ref{konishi3})において$t=0$を代入して$\mathbf{x}(0)=\mathbf{x}$、$\mathbf{p}(0)=\mathbf{p}$(ハイゼンベルグ表示の演算子の$t=0$における演算子はシュレディンガー表示の演算子に等しい)。
+これを用いて(\ref{siki1})を解くと、
+\begin{eqnarray}
+\mathbf{x}(t)=\mathbf{x}\cos(\omega t)+\mathbf{p}\frac{1}{m\omega}\sin(\omega t)\label{konishi5}\\
+\mathbf{p}(t)=\mathbf{p}\cos(\omega t)-\mathbf{x}m\omega\sin(\omega t)\label{konishi6}
+\end{eqnarray}
+であるので、$\mathbf{x}(t)$と$\mathbf{p}(t)$は古典解と類似の時間変動をすることが分かる。
+
+
+%%%%%%%%%%%%%　小問6　%%%%%%%%%%%%%%%%%%
+
+\item 
+定義式より、
+\begin{eqnarray}
+\mathbf{x}&=&\sqrt{\frac{\hbar}{2m\omega}}(a+a^\dag)\\
+\mathbf{p}&=&-i\sqrt{\frac{\hbar m\omega}{2}}(a-a^\dag)
+\end{eqnarray}
+より、$<n|\mathbf{x}|n>=<n|\mathbf{p}|n>=0$だから
+\begin{align}
+<n|\mathbf{x}(t)|n>&=<n|\mathbf{x}\cos(\omega t)|n>+<n|\mathbf{p}\frac{1}{m\omega}\sin(\omega t)|n>\notag\\
+		&=\cos(\omega t)<n|\mathbf{x}|n>+\frac{1}{m\omega}\sin(\omega t)<n|\mathbf{p}|n>\\
+		&=0
+\end{align}
+\begin{align}
+<n|\mathbf{p}(t)|n>&=<n|\mathbf{p}\cos(\omega t)|n>+<n|-\mathbf{x}m\omega\sin(\omega t)|n>\notag\\
+		&=\cos(\omega t)<n|\mathbf{p}|n>-m\omega\sin(\omega t)<n|\mathbf{x}|n>=0\\
+		&=0
+\end{align}
+となる。
+
+%%%%%%%%%%%%%　小問7　%%%%%%%%%%%%%%%%%%
+
+\item
+$|\lambda>=e^{\lambda a^\dag}|0>$のコヒーレント状態を考える。ここで$\lambda$は複素数である。
+
+このとき、(\ref{konishi5})より
+\begin{eqnarray}
+<\lambda|\mathbf{x}(t)|\lambda>&=&<\lambda|\mathbf{x}|\lambda>\cos(\omega t)+<\lambda|\mathbf{p}|\lambda>\frac{1}{m\omega}\sin(\omega t)
+\end{eqnarray}
+ここで、
+\begin{eqnarray}
+<\lambda|\mathbf{x}|\lambda>&=&\sqrt{\frac{\hbar}{2m\omega}}<\lambda|(a+a^\dag)|\lambda>\\
+&=&\sqrt{\frac{\hbar}{2m\omega}}\{<\lambda|a|\lambda>+<\lambda|a^\dag|\lambda>\}
+\end{eqnarray}
+となるが、ここでコヒーレント状態は以下のように展開できるから、
+\begin{eqnarray}
+|\lambda>=\sum_{n=0}^\infty \frac{\lambda^n(a^\dag)^n}{n!}|0>=\sum_{n=0}^\infty \frac{\lambda^n}{\sqrt{n!}}|n>
+\end{eqnarray}
+これを利用して、
+\begin{eqnarray}
+a|\lambda>&=&\sum_{n=0}^\infty \frac{\lambda^{n+1}}{\sqrt{n!}}|n>=\lambda|\lambda>\\
+<\lambda|a^\dag&=&\lambda^*<\lambda|
+\end{eqnarray}
+とできる。したがって、
+\begin{eqnarray}
+<\lambda|\mathbf{x}|\lambda>=\sqrt{\frac{\hbar}{2m\omega}}\{\lambda<\lambda|\lambda>+\lambda^*<\lambda|\lambda>\}=<\lambda|\lambda>\sqrt{\frac{\hbar}{2m\omega}}(\lambda+\lambda^*)
+\end{eqnarray}
+同様に、
+\begin{eqnarray}
+<\lambda|\mathbf{p}|\lambda>=-i<\lambda|\lambda>\sqrt{\frac{\hbar m\omega}{2}}(\lambda-\lambda^*)
+\end{eqnarray}
+これらの値は単なる定数なので、(\ref{konishi5})と(\ref{konishi6})をコヒーレント状態$|\lambda>$で期待値を出せば、古典解と同様の振動を意味することが示される。
+したがって$F(a,a^\dagger)$の具体例は
+\begin{eqnarray}
+F(a,a^\dagger)=e^{\lambda a^\dag}
+\end{eqnarray}
+である。
+\end{enumerate}
+\end{answer}
+
+\end{document}
