@@ -1,0 +1,500 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 25 10 435 270
+/2002physQ8_1.save save def
+<< >> begin
+
+%-------------------------------------------------------------------------------
+%   矩形
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+
+% mwg-draw-rrect -> rectstroke
+% mwg-fill-rrect -> rectfill
+
+%-------------------------------------------------------------------------------
+%  ベクトル
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2scal {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+%: <vec> <scal> mwg-v2div <vec>
+/mwg-v2div {
+  1 exch div mwg-v2scal
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2norm {
+  dup mwg-v2abs mwg-v2div
+} def
+
+/mwg-v2abs {
+  aload pop
+  dup mul exch dup mul add sqrt
+} def
+
+/mwg-v2arg {
+  aload pop exch atan
+} def
+
+/mwg-v2rot {
+  dup 3 2 roll aload pop 3 1 roll
+  %: a y a x
+  4 copy
+  exch cos mul 3 1 roll exch sin mul sub
+  5 1 roll
+  exch sin mul 3 1 roll exch cos mul add
+  2 array astore
+  %: [xc-ys xs+yc]
+} def
+
+/mwg-v2iprod {
+  aload pop 3 2 roll aload pop
+  exch 3 1 roll
+  mul 3 1 roll mul add
+} def
+
+%-------------------------------------------------------------------------------
+%  曲線
+%-------------------------------------------------------------------------------
+%: <i0> <iM> mwg-path-curve-impl
+/mwg-path-curve-impl {
+  data 0 get aload pop moveto
+  1 exch {
+    /i exch def
+    /p0 i 1 sub getpt def
+    /p1 i       getpt def
+    /p2 i 1 add getpt def
+    /p3 i 2 add getpt def
+    
+    p2 p0 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2scal
+      p1 vadd aload pop
+      
+    p1 p3 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2scal
+      p2 vadd aload pop
+    
+    p2 aload pop
+    
+    curveto
+  } for
+} def
+
+/mwg-path-curve {
+  << >> begin
+    /data exch def
+    /len data length def
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      dup -1 eq {
+        pop
+        data 0 get data 1 get vsub
+          data 0 get vadd
+      }{
+        dup len eq {
+          pop
+          data len 1 sub get data len 2 sub get vsub
+            data len 1 sub get vadd
+        }{
+          data exch get
+        } ifelse
+      } ifelse
+    } def
+    0 len 2 sub mwg-path-curve-impl
+  end
+} def
+
+/mwg-path-ccurve {
+  << >> begin
+    /data exch def
+    /len data length def
+    
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      len add len mod
+      data exch get
+    } def
+    0 len 1 sub mwg-path-curve-impl
+  end
+} def
+
+/mwg-draw-curve  {mwg-path-curve stroke} def
+/mwg-draw-ccurve {mwg-path-ccurve stroke} def
+/mwg-fill-curve  {mwg-path-curve fill} def
+/mwg-fill-ccurve {mwg-path-ccurve fill} def
+
+%-------------------------------------------------------------------------------
+%   フォント設定
+%-------------------------------------------------------------------------------
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-helv {
+  /Helvetica-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-center-show {
+  dup stringwidth pop 2 div neg 0 rmoveto show
+} def
+
+%-------------------------------------------------------------------------------
+
+100 50 280 210 mwg-draw-rrect
+gsave
+  100 50 translate
+  
+  gsave
+    1.5 setlinewidth
+    [
+      [ 23.012811 99.307404 ]
+      [ 24.332627 101.548171 ]
+      [ 29.293112 103.776456 ]
+      [ 48.804339 111.411695 ]
+      [ 65.008190 116.816344 ]
+      [ 83.528031 121.575329 ]
+      [ 104.028583 127.296291 ]
+      [ 113.938719 133.052364 ]
+      [ 125.805714 147.807438 ]
+      [ 133.369891 162.258031 ]
+      [ 136.654454 169.646918 ]
+      [ 139.949608 173.499332 ]
+      [ 141.929826 174.781902 ]
+      [ 144.910352 173.489672 ]
+      [ 153.552531 160.283630 ]
+      [ 161.857738 149.647414 ]
+      [ 168.487258 145.769518 ]
+      [ 179.742102 143.809516 ]
+      [ 194.958976 144.091936 ]
+      [ 214.471351 145.651896 ]
+      [ 238.290497 145.590876 ]
+      [ 249.867847 145.883562 ]
+    ] mwg-draw-curve
+    [
+      [ 22.939257 139.404063 ]
+      [ 28.890160 141.633766 ]
+      [ 41.783520 146.092390 ]
+      [ 65.586831 152.774339 ]
+      [ 91.375338 157.852515 ]
+      [ 114.516676 162.299353 ]
+      [ 142.618854 166.097080 ]
+      [ 178.982246 171.170198 ]
+      [ 205.104557 172.406136 ]
+      [ 234.865376 173.314140 ]
+      [ 240.162373 172.014587 ]
+      [ 242.798438 174.265580 ]
+      [ 247.106144 172.323157 ]
+      [ 255.707774 171.661327 ]
+    ] mwg-draw-curve
+    [
+      [ 22.495182 20.400304 ]
+      [ 32.101295 20.991216 ]
+      [ 40.713427 21.587604 ]
+      [ 45.353414 20.600415 ]
+      [ 49.324074 22.826135 ]
+      [ 55.288518 22.152924 ]
+      [ 69.529868 23.683645 ]
+      [ 85.760803 24.241369 ]
+      [ 105.625754 28.315465 ]
+      [ 121.831899 36.912022 ]
+      [ 131.721497 52.296875 ]
+      [ 139.276708 71.878973 ]
+      [ 147.162709 90.501379 ]
+      [ 154.405857 102.376795 ]
+      [ 162.328642 108.462274 ]
+      [ 172.252926 109.716086 ]
+      [ 186.156613 108.703813 ]
+      [ 202.053842 105.751984 ]
+      [ 218.283117 102.796936 ]
+      [ 233.184092 101.133520 ]
+      [ 244.779869 98.513838 ]
+      [ 261.347294 94.584860 ]
+    ] mwg-draw-curve
+    [
+      [ 240.844530 167.178678 ]
+      [ 241.835368 167.498918 ]
+      [ 241.471432 175.235071 ]
+      [ 25.150859 17.499193 ]
+      [ 25.137727 24.556568 ]
+      [ 27.125362 24.546247 ]
+      [ 37.720306 27.379088 ]
+      [ 39.381806 24.803470 ]
+      [ 42.361934 25.429820 ]
+      [ 43.680370 28.632161 ]
+      [ 43.374308 16.438981 ]
+      [ 50.986688 19.928726 ]
+      [ 45.686716 19.635863 ]
+      [ 49.318597 25.393811 ]
+      [ 53.624405 25.692505 ]
+      [ 57.601775 24.708894 ]
+      [ 55.623338 20.546166 ]
+      [ 59.930808 20.202375 ]
+      [ 62.898467 26.286642 ]
+      [ 69.521530 27.215762 ]
+      [ 76.144453 28.145151 ]
+      [ 79.456259 28.449361 ]
+      [ 68.542075 21.120072 ]
+      [ 65.894020 20.170817 ]
+      [ 64.233878 21.784906 ]
+      [ 73.844203 20.449858 ]
+      [ 82.127231 20.084866 ]
+      [ 86.096170 22.633553 ]
+      [ 86.083077 27.773042 ]
+      [ 76.491380 21.720446 ]
+      [ 80.794878 22.982513 ]
+      [ 78.809577 22.029414 ]
+      [ 91.724591 23.889062 ]
+      [ 93.369145 28.378195 ]
+      [ 97.013000 28.359549 ]
+      [ 97.687566 23.857964 ]
+      [ 101.660260 24.801210 ]
+      [ 104.622231 31.855386 ]
+      [ 104.616917 33.783476 ]
+      [ 105.275844 35.065576 ]
+      [ 111.900538 35.032634 ]
+      [ 109.257880 32.474764 ]
+      [ 107.600762 32.804462 ]
+      [ 118.205224 31.144002 ]
+      [ 123.170155 32.404779 ]
+      [ 121.509195 34.020450 ]
+      [ 118.184652 38.215770 ]
+      [ 119.506725 39.173631 ]
+      [ 115.545973 34.371662 ]
+      [ 31.114242 17.467306 ]
+      [ 32.766990 19.383507 ]
+      [ 36.410565 19.685038 ]
+      [ 124.812951 36.897314 ]
+      [ 124.464482 42.685735 ]
+      [ 126.107984 46.857268 ]
+      [ 128.082507 51.027570 ]
+      [ 132.682416 62.903316 ]
+      [ 136.336864 59.028557 ]
+      [ 133.041234 53.898526 ]
+      [ 131.725434 51.010719 ]
+      [ 141.262271 72.192294 ]
+      [ 144.875435 81.182805 ]
+      [ 145.527219 84.396534 ]
+      [ 148.163097 88.246063 ]
+      [ 147.135673 98.864195 ]
+      [ 149.783641 98.854713 ]
+      [ 154.418652 98.516420 ]
+      [ 150.104131 102.070203 ]
+      [ 151.755881 103.029431 ]
+      [ 155.057137 105.591499 ]
+      [ 156.373507 107.838934 ]
+      [ 157.355625 111.052757 ]
+      [ 162.311122 113.610328 ]
+      [ 167.933772 114.557370 ]
+      [ 155.728718 102.693862 ]
+      [ 158.703226 103.970356 ]
+      [ 163.663482 105.240181 ]
+      [ 167.962775 106.190749 ]
+      [ 169.281048 107.795233 ]
+      [ 170.592522 111.330679 ]
+      [ 173.898606 112.285231 ]
+      [ 175.556766 111.314249 ]
+      [ 161.660166 110.394998 ]
+      [ 166.622239 111.022037 ]
+      [ 179.196056 111.624070 ]
+      [ 180.854286 110.652951 ]
+      [ 181.194549 108.076758 ]
+      [ 175.901449 107.450963 ]
+      [ 173.584701 107.458827 ]
+      [ 192.763746 111.901200 ]
+      [ 204.353160 110.252733 ]
+      [ 201.049802 108.653636 ]
+      [ 199.396233 108.337198 ]
+      [ 205.026325 107.352030 ]
+      [ 197.765914 101.902712 ]
+      [ 195.772700 103.841636 ]
+      [ 190.474659 104.503942 ]
+      [ 187.823292 105.478905 ]
+      [ 185.831558 107.095331 ]
+      [ 189.806731 106.115971 ]
+      [ 202.721996 104.139517 ]
+      [ 205.710816 101.552702 ]
+      [ 211.645625 107.329528 ]
+      [ 215.284952 107.639276 ]
+      [ 216.286888 105.380964 ]
+      [ 211.322303 105.398056 ]
+      [ 207.691693 102.833996 ]
+      [ 212.997645 100.238576 ]
+      [ 215.640419 101.517682 ]
+      [ 219.603133 103.758777 ]
+      [ 223.235993 105.679214 ]
+      [ 227.546621 103.731138 ]
+      [ 229.198837 104.369831 ]
+      [ 232.508601 104.358358 ]
+      [ 226.242633 98.902668 ]
+      [ 224.922617 97.940827 ]
+      [ 230.881972 97.597097 ]
+      [ 230.532151 102.109593 ]
+      [ 234.505329 101.773364 ]
+      [ 236.175273 98.222502 ]
+      [ 238.475791 102.081660 ]
+      [ 258.334913 102.011784 ]
+      [ 245.126241 94.966919 ]
+      [ 249.429397 94.951110 ]
+      [ 245.436271 99.800823 ]
+      [ 242.800823 96.909367 ]
+      [ 252.435570 88.814736 ]
+      [ 256.066892 91.057782 ]
+      [ 257.722026 91.051559 ]
+      [ 256.387846 93.313471 ]
+      [ 260.673630 97.166892 ]
+      [ 261.016280 94.586079 ]
+    ] /data exch def
+    data length /len exch def
+    0 1 len 1 sub {
+      data exch get aload pop 1.2 0 360 arc fill
+    } for
+  grestore
+  
+  gsave
+    13 mwg-font-roman
+    278 2 344 {
+      8 0 translate
+      0 0 moveto
+      
+      dup 10 mod 0 eq {
+        0 8 rlineto stroke
+        0 -13 moveto 
+        5 string cvs mwg-center-show
+      }{
+        0 4 rlineto stroke
+        pop
+      } ifelse
+      
+    } for
+  grestore
+  
+  gsave
+    13 mwg-font-roman
+    -36 1 -3 {
+      0 6 translate
+      0 0 moveto
+      dup 5 mod 0 eq {
+        8 0 rlineto stroke
+        -45 -4 moveto
+        dup 10000 div 10 string cvs show
+        10 mod 0 eq { (0) show } if
+      }{
+        4 0 rlineto stroke
+        pop
+      } ifelse
+    } for
+  grestore
+  
+  gsave
+    280 0 translate
+    13 mwg-font-roman
+    -21 1 7 {
+      0 7 translate
+      0 0 moveto
+      dup 5 mod 0 eq {
+        -8 0 rlineto stroke
+        4 -4 moveto
+        5 string cvs show
+      }{
+        -4 0 rlineto stroke
+        pop
+      } ifelse
+    } for
+  grestore
+  
+  13 mwg-font-helv
+  22 33 moveto (C) show
+  22 113 moveto (A) show
+  22 148 moveto (B) show
+  
+  gsave
+    15 mwg-font-gothic
+    110 -30 moveto (\262\271\305\331\241\241) show % ondo
+    15 mwg-font-roman
+    ( (K)) show
+  grestore
+  gsave
+    -55 65 translate
+    90 rotate 0 0 moveto
+    15 mwg-font-gothic
+    (\307\256\315\306\316\314\241\241) show % netsu-youryou
+    15 mwg-font-roman
+    ( (kJ/K)) show
+  grestore
+  gsave
+    325 25 translate
+    90 rotate 0 0 moveto
+    15 mwg-font-roman
+    (230 nm ) show
+    15 mwg-font-gothic
+    (\244\316\261\337\306\363\277\247\300\255) show % no en-nishoku-sei
+    15 mwg-font-roman
+    (   (mdeg)) show
+  grestore
+grestore
+
+%25 10 435 270 mwg-draw-rect
+end
+showpage 2002physQ8_1.save restore

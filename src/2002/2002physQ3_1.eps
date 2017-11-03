@@ -1,0 +1,119 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 0 0 340 230
+/2002physQ3_1.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   矢印
+%-------------------------------------------------------------------------------
+
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+%: <x> <y> <dx> <dy> mwg-draw-rarrow
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+%: <x> <y> <X> <Y> mwg-draw-arrow
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+%-------------------------------------------------------------------------------
+%   フォント設定
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+%-------------------------------------------------------------------------------
+gsave
+  110 110 translate
+  
+  0 0 100 0 360 arc stroke
+  0 0 200 0 mwg-draw-arrow
+  0 0 30 0 2 1 atan arc stroke  
+  gsave
+    0 0 moveto 25 50 lineto
+    3 3 rmoveto -6 -6 rlineto
+    6 0 rmoveto -6 6 rlineto
+    stroke
+    125 rotate
+    50 0 100 0 mwg-draw-arrow
+    50 0 0 0 mwg-draw-arrow
+  grestore
+  
+  
+  % dousen
+  60 0 3 0 360 arc fill
+  0 0 moveto 0 -20 rlineto
+  60 0 moveto 0 -20 rlineto stroke
+  30 -10 60 -10 mwg-draw-arrow
+  30 -10 0 -10 mwg-draw-arrow
+  60 0 moveto 60 -30 rlineto stroke
+  20 mwg-font-mincho 125 -45 moveto (\306\263\300\376) show
+  
+  % Doutai
+  gsave
+    40 rotate
+    100 0 moveto 40 0 rlineto stroke
+  grestore
+  20 mwg-font-mincho 110 92 moveto (\261\337\305\373\306\263\302\316) show
+  
+  % 文字達
+  20 mwg-font-mincho 28 15 moveto (\246\325) show
+  20 mwg-font-math 25 -30 moveto (x) show
+  12 mwg-font-roman 0 -4 rmoveto (0) show
+  20 mwg-font-math 2 25 moveto (r) show
+  
+  20 mwg-font-roman 23 60 moveto (A) show
+  20 mwg-font-math -57 42 moveto (R) show
+  20 mwg-font-roman -23 -16 moveto (O) show
+  
+  20 mwg-font-math 208 -8 moveto (x) show
+grestore
+
+%340 0 moveto 0 230 rlineto stroke
+
+end
+showpage 2002physQ3_1.save restore

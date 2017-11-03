@@ -1,0 +1,348 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 10 10 380 270
+/2002physA8_1.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   矩形
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+%-------------------------------------------------------------------------------
+%  曲線
+%-------------------------------------------------------------------------------
+%: <i0> <iM> mwg-path-curve-impl
+/mwg-path-curve-impl {
+  data 0 get aload pop moveto
+  1 exch {
+    /i exch def
+    /p0 i 1 sub getpt def
+    /p1 i       getpt def
+    /p2 i 1 add getpt def
+    /p3 i 2 add getpt def
+    
+    p2 p0 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2scal
+      p1 vadd aload pop
+      
+    p1 p3 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2scal
+      p2 vadd aload pop
+    
+    p2 aload pop
+    
+    curveto
+  } for
+} def
+
+/mwg-path-curve {
+  << >> begin
+    /data exch def
+    /len data length def
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      dup -1 eq {
+        pop
+        data 0 get data 1 get vsub
+          data 0 get vadd
+      }{
+        dup len eq {
+          pop
+          data len 1 sub get data len 2 sub get vsub
+            data len 1 sub get vadd
+        }{
+          data exch get
+        } ifelse
+      } ifelse
+    } def
+    0 len 2 sub mwg-path-curve-impl
+  end
+} def
+
+/mwg-path-ccurve {
+  << >> begin
+    /data exch def
+    /len data length def
+    
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      len add len mod
+      data exch get
+    } def
+    0 len 1 sub mwg-path-curve-impl
+    stroke
+  end
+} def
+
+/mwg-draw-curve  {mwg-path-curve stroke} def
+/mwg-draw-ccurve {mwg-path-ccurve stroke} def
+/mwg-fill-curve  {mwg-path-curve fill} def
+/mwg-fill-ccurve {mwg-path-ccurve fill} def
+
+%-------------------------------------------------------------------------------
+%  ベクトル
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2scal {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+%: <vec> <scal> mwg-v2div <vec>
+/mwg-v2div {
+  1 exch div mwg-v2scal
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2norm {
+  dup mwg-v2abs mwg-v2div
+} def
+
+/mwg-v2abs {
+  aload pop
+  dup mul exch dup mul add sqrt
+} def
+%-------------------------------------------------------------------------------
+%   フォント設定
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+%-------------------------------------------------------------------------------
+%   矢印
+%-------------------------------------------------------------------------------
+
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+%: <x> <y> <dx> <dy> mwg-draw-rarrow
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+%: <x> <y> <X> <Y> mwg-draw-arrow
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+
+%-------------------------------------------------------------------------------
+gsave
+  50 50 translate
+  
+  % 枠
+  0 0 320 210 mwg-draw-rect
+  
+  % 目盛
+  1 1 34 {
+    /i exch def
+    0 6 i mul moveto
+    i 5 mod 0 eq {4}{2} ifelse 0 rlineto
+  } for
+  1 1 39 {
+    /i exch def
+    8 i mul 0 moveto
+    0 i 5 mod 0 eq {5}{3} ifelse rlineto
+  } for
+  stroke
+  
+  10 mwg-font-roman
+   -5 -15 moveto (20) show
+   35 -15 moveto (30) show
+   75 -15 moveto (40) show
+  115 -15 moveto (50) show
+  155 -15 moveto (60) show
+  195 -15 moveto (70) show
+  235 -15 moveto (80) show
+  275 -15 moveto (90) show
+  313 -15 moveto (100) show
+  
+  -18 -3 moveto (-10) show
+  -9  27 moveto (0) show
+  -14  57 moveto (10) show
+  -14  87 moveto (20) show
+  -14 117 moveto (30) show
+  -14 147 moveto (40) show
+  -14 177 moveto (50) show
+  -14 207 moveto (60) show
+  
+  % ラベル
+  gsave
+    12 mwg-font-roman 120 -30 moveto (Temperature \() show
+    12 mwg-font-gothic 0 0 rmoveto (\241\353) show
+    12 mwg-font-roman -7 0 rmoveto (C\)) show
+    
+    -23 15 translate
+    90 rotate
+    12 mwg-font-roman 0  0 moveto (Excess heat capacity \(kJ K) show
+     8 mwg-font-roman 0  5 rmoveto (-1) show
+    12 mwg-font-roman 0 -5 rmoveto ( mol) show
+     8 mwg-font-roman 0  5 rmoveto (-1) show
+    12 mwg-font-roman 0 -5 rmoveto (\)) show
+  grestore
+  
+  % グラフ
+  gsave
+    [
+      [ 0.365297 30.330637 ]
+      [ 80.000000 30.000445 ]
+      [ 97.168950 31.049960 ]
+      [ 109.589041 32.119637 ]
+      [ 117.625571 34.702671 ]
+      [ 124.931507 40.279579 ]
+      [ 130.410959 48.734021 ]
+      [ 135.159817 59.183300 ]
+      [ 139.908676 75.616201 ]
+      [ 144.292237 97.661356 ]
+      [ 149.041096 125.317706 ]
+      [ 152.694064 148.867287 ]
+      [ 155.981735 170.550531 ]
+      [ 158.538813 180.643564 ]
+      [ 160.365297 184.754539 ]
+      [ 161.826484 185.874244 ]
+      [ 164.018265 184.748730 ]
+      [ 165.614155 181.380715 ]
+      [ 168.036530 171.650644 ]
+      [ 170.958904 156.682690 ]
+      [ 173.515982 142.088201 ]
+      [ 177.534247 118.136050 ]
+      [ 183.744292 90.058270 ]
+      [ 188.127854 77.696621 ]
+      [ 193.972603 67.198975 ]
+      [ 198.721461 62.316969 ]
+      [ 205.296804 58.924521 ]
+      [ 208.584475 57.415169 ]
+      [ 217.716895 56.258120 ]
+      [ 228.675799 55.842706 ]
+      [ 242.922374 55.414796 ]
+      [ 269.223744 55.315992 ]
+      [ 320.000000 55.500000 ]
+    ] mwg-draw-curve
+    
+    [
+      [ 81.095890 30.485895 ]
+      [ 113.607306 30.487126 ]
+      [ 137.716895 32.629878 ]
+      [ 160.365297 44.130351 ]
+      [ 170.593607 50.449158 ]
+      [ 187.031963 54.876132 ]
+      [ 200.547945 55.499546 ]
+      [ 213.698630 55.898810 ]
+      [ 229.771689 55.838600 ]
+    ] mwg-path-curve [2 2] 0 setdash stroke
+    
+    130 30 moveto 320 30 lineto [15 6 3 6] 0 setdash stroke
+  grestore
+  
+  % 説明
+  gsave
+    /mwg-option-arrow-head-scale 0.5 def
+    270 40 270 55 mwg-draw-arrow
+    270 40 270 30 mwg-draw-arrow
+    
+    [2 1] 0 setdash
+    194 158 165 135 mwg-draw-arrow
+    125 195 155 186 mwg-draw-arrow
+    
+    10 mwg-font-math 113 193 moveto (T) show
+    7 mwg-font-math 0 -2 rmoveto (m) show
+    
+    10 mwg-font-roman 196 157 moveto (Area = ) show
+    10 mwg-font-mincho -2 0 rmoveto (\246\244) show
+    10 mwg-font-math -2 0 rmoveto (H) show
+    7 mwg-font-math 0 -2 rmoveto (m) show
+    
+    10 mwg-font-mincho 275 40 moveto (\246\244) show
+    10 mwg-font-math -2 0 rmoveto (C) show
+    7 mwg-font-math 0 -2 rmoveto (p) show
+  grestore
+grestore
+%10 10 380 270 mwg-draw-rect
+end
+showpage 2002physA8_1.save restore

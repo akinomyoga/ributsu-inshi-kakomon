@@ -1,0 +1,231 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\usepackage{txfonts}
+
+%%%% TEXT START %%%%
+\begin{document}
+
+\begin{question}{問題7}{高見 一}
+
+相対論的な高エネルギー陽子(p)ビームを静止している陽子(p)ターゲットに
+照射することにより、陽子(p)と反陽子($\bar{p}$)の対を生成する反応:
+\begin{eqnarray*}
+p + p \longrightarrow p + p + p + \bar{p}
+\end{eqnarray*}
+を考える。ここで陽子の質量を$m_p$ ( = 1.7 $\times 10^{-27}$kg )、
+陽子の電荷を$e$ ( = 1.6 $\times 10^{-19}$C )、
+真空中の光速度を$c$ ( = 3.0 $\times 10^8$m/s )とする。
+
+\begin{enumerate}
+\item 左手座標系で$+z$方向に磁束密度の大きさが$B$ （ Wb/m$^2$ )の
+一様磁場をかけたとする。実験室系で運動量の大きさが$P_p$ ( kg m/s )の
+高エネルギー陽子が$x$軸上を$+x$方向に磁場と垂直に入射された場合、
+陽子は回転運動を始める。その回転軸と回転方向を磁場と陽子の運動方向も
+含めて図示せよ。また、その回転運動の曲率半径を$P_p$、$B$、$e$
+を用いて表せ。
+
+\item 陽子と反陽子の持つ固有の物理量のうち、等しくなる例と
+異なる例をそれぞれ2つずつ挙げよ。
+
+\item 設問2.で挙げた陽子と反陽子の性質の差異を用いて、
+陽子と反陽子を区別する手段を2通り簡潔に述べよ。
+
+\item 上記反応の始状態で$x$軸上を$+x$方向に入射された
+ビーム陽子が実験室系で持つ運動量の大きさを$P_p$とする。
+ビーム陽子とターゲット陽子の実験室系での全エネルギーと
+運動量を$P_p$、$m_p$、$c$を用いて各々書き表せ。
+また、ビーム陽子が重心系で持つ運動量の大きさを$P_p^*$とする。ビーム陽子と
+ターゲット陽子の重心系での全エネルギーと運動量を
+$P_p^*$、$m_p$、$c$を用いて各々書き表せ。ただし、
+本設問以下においては磁場はかかっていないものとする。
+
+\item 上記反応を生じさせるのに必要な高エネルギー陽子ビームの
+実験室系での最低運動エネルギー$E_{min}$を$m_p$と$c$を
+用いて表せ。
+
+\item 陽子ビームの運動エネルギーを上記反応の起こる最低運動エネルギー
+$E_{min}$とする。この反応の始状態を重心系で見たときに、
+実験室系で静止していたターゲット陽子の重心系での速さ$v^*$は
+光速度$c$の何倍になるかを計算せよ。また、始状態の反陽子の実験室系での
+運動量の大きさを$m_p$と$c$を用いて表せ。
+\end{enumerate}
+\end{question}
+
+
+\begin{answer}{問題7}{高見 一}
+
+\begin{enumerate}
+\item 
+運動方程式は、
+\begin{eqnarray}
+\dot{\textbf{p}} = e \textbf{v} \times \textbf{B} \qquad
+\left( \textbf{p} = \frac{m_0 \textbf{v}}{\sqrt{1 - \beta^2}} \right)
+\label{motion}
+\end{eqnarray}
+と書ける。式(\ref{motion})の両辺に$\textbf{p}$を内積して、
+\begin{eqnarray}
+\textbf{p} \cdot \dot{\textbf{p}} &=& e \textbf{p} \cdot 
+( \textbf{v} \times \textbf{B} ) = 0 \nonumber \\
+\frac{d}{dt}\textbf{p}^2 &=& 0 \nonumber \\
+p^2 &=& Const. = {P_p}^2
+\label{conservation}
+\end{eqnarray}
+さて、式(\ref{motion})を陽に書くと、
+\[
+\left(
+\begin{array}{@{\,}ccc}
+\dot{p_x} \\
+\dot{p_y} \\
+\dot{p_z}
+\end{array}
+\right)
+= e
+\left(
+\begin{array}{@{\,}ccc}
+v_y B \\
+-v_x B \\
+0
+\end{array}
+\right)
+\]
+$v_x = \dot{x}$等より、
+\[
+\left(
+\begin{array}{@{\,}ccc}
+p_x \\
+p_y \\
+p_z
+\end{array}
+\right)
+=
+\left(
+\begin{array}{@{\,}ccc}
+e y B + C_1 \\
+-e x B + C_2 \\
+C_3
+\end{array}
+\right)
+\]
+今、$t=0$で$x=y=z=0$、$p_x = P_p , p_y = p_z = 0$とすると、
+\[
+\left(
+\begin{array}{@{\,}ccc}
+p_x \\
+p_y \\
+p_z
+\end{array}
+\right)
+=
+\left(
+\begin{array}{@{\,}ccc}
+e y B + P_p \\
+-e x B \\
+0
+\end{array}
+\right)
+\]
+これを式(\ref{conservation})に代入して、
+\begin{eqnarray}
+(e y B + P_p )^2 + (- e x B )^2 = {P_p}^2 \nonumber \\
+x^2 + \left(y + \frac{P_p}{e B} \right)^2 = \left(\frac{P_p}{e B} \right)^2
+\end{eqnarray}
+よって陽子は中心$(0, -\frac{P_p}{eB}, 0 )$、半径$\frac{P_p}{eB}$の
+円運動をする。（図略）
+
+
+\item 
+等しい物理量: （静止)質量、寿命、スピン 等  
+異なる物理量: 電荷、磁気モーメント
+
+\item 
+陽子と反陽子は電荷が反対であることを用いる。
+\begin{enumerate}
+\item{電場をかけ、陽子と反陽子をsplittingさせる。}
+\item{磁場をかけ、陽子と反陽子の回転方向が逆であることを利用する。}
+\end{enumerate}
+
+\item
+実験室系ではターゲットは静止しているので、全運動量$\textbf{P}$は、
+\[
+\textbf{P} = \left(
+\begin{array}{ccc}
+P_p \\
+0 \\
+0 
+\end{array}
+\right)
++ \left(
+\begin{array}{ccc}
+0 \\
+0 \\
+0 
+\end{array}
+\right) 
+= \left(
+\begin{array}{ccc}
+P_p \\
+0 \\
+0 
+\end{array}
+\right)
+\]
+ビーム陽子とターゲット陽子にはそれぞれ相対論的な関係式
+\begin{eqnarray*}
+E^2 = (pc)^2 + (m_p c^2)^2
+\end{eqnarray*}
+が成立するから、全エネルギー$E$は、
+\begin{eqnarray*}
+E = \sqrt{(P_p c)^2 + (m_p c^2)} + m_p c^2
+\end{eqnarray*}
+となる。重心系($\textbf{p}_{beam} + \textbf{p}_{target} =0$)でも同様に
+\begin{eqnarray*}
+\textbf{P} = \textbf{0} \\
+E = 2 \sqrt{(P_p^* c)^2 + (m_p c^2)}
+\end{eqnarray*}
+となる。
+
+\item
+重心系での全エネルギー$M$が生成粒子の（静止）質量の和より
+大きいときに反応が起こる。4元ベクトルの内積はLorentz invariantだから、
+実験室系と重心系でこの値は等しく、
+\begin{eqnarray*}
+\left(\frac{E_{beam} + E_{target}}{c} \right)^2 - (\textbf{p}_{beam} + 
+\textbf{p}_{target})^2 = \left(\frac{M}{c} \right)^2 \\
+M = \sqrt{2(m_p c^2)^2 + 2m_p c^2 E_{beam}}
+\end{eqnarray*}
+$M \geq 4m_p c^2$であれば良いので、$E_{beam} = E_{min} + m_p c^2$に
+注意して、
+\begin{eqnarray*}
+E_{min} = 6 m_p c^2
+\end{eqnarray*}
+
+\item
+ターゲット陽子に固定した実験室系から$x$軸方向に$v^*$だけboostした系が
+重心系になるとする。（この時ターゲット陽子の速度は$-v^*$となる。）
+このとき、$E$,$\textbf{P}$はLorentz変換に従い、$E'$,$\textbf{p}'$に
+変換される。具体的には$\beta^* = \frac{v^*}{c}$として、
+\[ \displaystyle 
+\left\{
+\begin{array}{cc}
+{p'}_{beam}^x = \frac{p_{beam}^x - \beta^* \frac{E_{beam}}{c}}
+{\sqrt{1 - {\beta^*}^2}} \\
+{p'}_{target}^x = \frac{p_{target}^x - \beta^* \frac{E_{target}}{c}}
+{\sqrt{1 - {\beta^*}^2}} 
+\end{array}
+\right.
+\]
+いま、$E_{kin} = E_{min} = 6 m_p c^2$より、$E_{beam} = 7 m_p c^2$、
+$E_{target} = m_p c^2$、$p_{target}^x = 0$であり、
+ビーム粒子についての相対論的な関係式より$p_{beam}^x = 4 \sqrt{3}m_p c$が
+導ける。これらを上式に代入して、$p'_{beam} + p'_{target} = 0$を
+用いれば、
+\begin{eqnarray*}
+\beta^* = \frac{\sqrt{3}}{2}
+\end{eqnarray*}
+$E_{kin} = E{min}$の時、終状態の運動量は$z$成分のみで、
+4粒子に等分配される(重心系でみると生成した粒子はすべて静止しているので、
+生成した粒子の運動量の大きさは等しい)
+ので、$p_{\bar{p}} = \sqrt{3} m_p c$
+\end{enumerate}
+\end{answer}
+\end{document}

@@ -1,0 +1,406 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\usepackage{txfonts}
+
+%%%% TEXT START %%%%
+\begin{document}
+
+\begin{question}{問題1}{桂  法称}
+定数ベクトル
+$\overrightarrow{v} = \left(
+\begin{array}{c}
+   2\\
+   1\\
+  -1
+\end{array}\right)$
+を用いた微分方程式
+
+$$\frac{d}{dt}\overrightarrow{x} =
+  \overrightarrow {v} \times \overrightarrow{x}$$
+
+を考える。\\
+
+\begin{enumerate}
+\item
+上の方程式に$A$を用いて
+$$\frac {d}{dt} \overrightarrow{x} =
+  A \bullet \overrightarrow{x}$$
+という形に書き換える。行列$A$を求めよ。
+
+\item
+次の性質を持つ正規直行基底
+    $\overrightarrow{e_i}(i=1,2,3)
+    (\overrightarrow{e_i} \bullet
+     \overrightarrow{e_j} = \delta_ij)$
+と係数$\lambda (\lambda > 0)$を求めよ。
+
+$$\overrightarrow{v} \times \overrightarrow{e_1} =
+      \lambda \overrightarrow{e_2} , \qquad
+      \overrightarrow{v} \times \overrightarrow{e_2} =
+     -\lambda \overrightarrow{e_1} , \qquad
+      \overrightarrow{v} \times \overrightarrow{e_3} =
+      0$$
+
+\item
+上で得られた結果を用いると、行列$A$は実直行行列$U$を用いて
+
+$$ A = U  \left(
+      \begin{array}{ccc}
+        0 & -\lambda & 0 \\
+        \lambda  & 0 & 0 \\
+        0 & 0 & 0        \\
+      \end{array} \right)
+      U^t , \qquad
+       UU^t = \left(
+      \begin{array}{ccc}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+      \end{array} \right)$$
+
+とかけることを示せ(ただし$U^t$は$U$の転地行列)。
+また$U$求めよ。
+
+\item
+$\overrightarrow{x}$を基底$\overrightarrow{e_i}$を用いて
+
+$$\overrightarrow{x} =
+      \sum_{i=1} ^3 q_i(t) \overrightarrow{e_i}$$
+
+と展開する。係数$q_i(t)$に対する微分方程式に書き下し、その一般解を求めよ。
+また解の振る舞いを定性的に論じよ。
+\end{enumerate}
+\end{question}
+\begin{answer}{問題1}{桂  法称}
+\begin{enumerate}
+\item 
+$\overrightarrow{x}=\left(
+     \begin{array}{c}
+       x_1\\
+       x_2\\
+       x_3
+     \end{array}\right)$とすると、
+$\overrightarrow{v}$と$\overrightarrow{x}$の外積は、
+
+$\overrightarrow{v} \times \overrightarrow{x} =
+     \left(
+     \begin{array}{c}
+       x_2 +x_3\\
+       -2x_3 - x_1\\
+       -x_1 + 2x_2
+     \end{array}\right)$\\
+よって、
+
+$$\frac{d}{dt}\overrightarrow{x} =
+      \overrightarrow{v} \times \overrightarrow{x} = \left(
+      \begin{array}{ccc}
+        0 & 1 & 1 \\
+       -1 & 0 & -2 \\
+       -1 & 2 & 0 \\
+      \end{array} \right)\left(
+      \begin{array}{c}
+       x_1\\
+       x_2\\
+       x_3
+      \end{array}\right) =
+      A \overrightarrow{x}$$
+
+ゆえに求める行列は、
+$$\left(
+      \begin{array}{ccc}
+        0 & 1 & 1 \\
+       -1 & 0 & -2 \\
+       -1 & 2 & 0 \\
+      \end{array} \right) $$
+である。
+
+\item
+$\overrightarrow{e_1} = \left(
+     \begin{array}{c}
+       0\\
+       a\\
+       b
+     \end{array}\right), (a^2+b^2=1)$
+とおくと、
+
+$\overrightarrow{v} \times \overrightarrow{e_1} =  \left(
+     \begin{array}{c}
+       a+b\\
+       -2b\\
+       2a
+     \end{array}\right) = \lambda \overrightarrow{e_2}$
+
+この関係式を、
+$\overrightarrow{v} \times \overrightarrow{e_2} =
+     -\lambda \overrightarrow{e_1}$
+に代入すると、\\
+$\overrightarrow{v} \times \lambda \overrightarrow{e_2} = \left(
+     \begin{array}{c}
+       2a-2b\\
+       -5a-b\\
+       -a-5b
+     \end{array}\right), \qquad
+-{\lambda}^2 \overrightarrow{e_1}=\left(
+     \begin{array}{c}
+       0\\
+       -{\lambda}^2 a\\
+       -{\lambda}^2 b \\
+    \end{array}\right)$\\
+これより、
+$$a = \frac{1}{\sqrt 2} , \qquad  b = \frac{1}{\sqrt 2} , \qquad \lambda = 
+\sqrt 6$$
+ゆえに、\\
+$\overrightarrow{e_1} = \left(
+     \begin{array}{c}
+       0\\
+       \frac{1}{\sqrt 2}\\
+       \frac{1}{\sqrt 2}
+     \end{array}\right), \qquad
+\overrightarrow{e_2} = \left(
+     \begin{array}{c}
+       \frac{1}{\sqrt 3}\\
+      -\frac{1}{\sqrt 3}\\
+       \frac{1}{\sqrt 3}
+     \end{array}\right), \qquad
+\overrightarrow{e_3} = \left(
+     \begin{array}{c}
+       \frac{2}{\sqrt 6}\\
+       \frac{1}{\sqrt 6}\\
+      -\frac{1}{\sqrt 6}
+     \end{array}\right)$
+\item
+
+$\overrightarrow{x}=q_1 \overrightarrow{e_1}
+                   +q_2 \overrightarrow{e_2}
+                   +q_3 \overrightarrow{e_3}$とおくと、
+(2)より、
+
+$\left(
+     \begin{array}{c}
+       x_1\\
+       x_2\\
+       x_3
+     \end{array}\right) =
+\left(
+      \begin{array}{ccc}
+        0 & \frac{1}{\sqrt 3}& \frac{2}{\sqrt 6}\\
+        \frac{1}{\sqrt 2}& -\frac{1}{\sqrt 3}& \frac{1}{\sqrt 6}\\
+        \frac{1}{\sqrt 2} & \frac{1}{\sqrt 3}& -\frac{1}{\sqrt 6}\\
+      \end{array} \right)
+\left(
+     \begin{array}{c}
+       q_1\\
+       q_2\\
+       q_3
+     \end{array}\right)$\\
+上を形式的に$\overrightarrow{x}=U\overrightarrow{q}$
+とかくことにする。\\
+
+ここで、(2)で導入した$\overrightarrow{e_i}$の性質から、\\
+$\overrightarrow{v} \times \overrightarrow{x} = 
+q_1(\overrightarrow{v} \times \overrightarrow{e_1})
++q_2(\overrightarrow{v} \times \overrightarrow{e_2})
++q_3(\overrightarrow{v} \times \overrightarrow{e_3}) =
+\lambda q_1 \overrightarrow{e_2} 
+-\lambda q_2 \overrightarrow{e_1} = U  \left(
+     \begin{array}{c}
+       \lambda q_2\\
+      -\lambda q_1\\
+       0
+     \end{array}\right) = U \left(
+      \begin{array}{ccc}
+        0 & -\lambda & 0 \\
+        \lambda  & 0 & 0 \\
+        0 & 0 & 0        \\
+      \end{array} \right)  \left(
+     \begin{array}{c}
+       q_1\\
+       q_2\\
+       q_3
+     \end{array}\right)$\\
+
+$\overrightarrow{x}=U\overrightarrow{q}$より、
+$\overrightarrow{q}=U^{-1} \overrightarrow{x}$
+(なぜならば$U$は実直行行列)\\
+これを前の式に代入すれば、
+$\overrightarrow{v} \times \overrightarrow{x} = U \left(
+      \begin{array}{ccc}
+        0 & -\lambda & 0 \\
+        \lambda  & 0 & 0 \\
+        0 & 0 & 0        \\
+      \end{array} \right)  U^t \overrightarrow{x}$\\
+(1)で書き換えた関係から、$A$は上の
+$U \left(
+      \begin{array}{ccc}
+        0 & -\lambda & 0 \\
+        \lambda  & 0 & 0 \\
+        0 & 0 & 0        \\
+      \end{array} \right)  U^t$
+であることが分かる。\\
+また、$U = \left(
+      \begin{array}{ccc}
+        0 & \frac{1}{\sqrt 3}& \frac{2}{\sqrt 6}\\
+        \frac{1}{\sqrt 2}& -\frac{1}{\sqrt 3}& \frac{1}{\sqrt 6}\\
+        \frac{1}{\sqrt 2} & \frac{1}{\sqrt 3}& -\frac{1}{\sqrt 6}\\
+      \end{array} \right)$
+\item
+$\overrightarrow{x} =
+      \sum_{i=1} ^3 q_i(t) \overrightarrow{e_i}$を
+$\frac{d}{dt}\overrightarrow{x}=
+      \overrightarrow{v} \times \overrightarrow{x}$に代入して、
+両辺の$\overrightarrow{e_i}$の係数を比較すれば、
+
+$$\dot q_1(t) = -\lambda q_2(t), \qquad
+  \dot q_2(t) = \lambda q_1(t), \qquad
+  \dot q_3(t) = 0$$
+
+これより、\\
+$$q_1(t) = Ae^{i \lambda t} + B e^{-i \lambda t}, \qquad
+  q_2(t) = -iAe^{i \lambda t} + iB e^{-i \lambda t}, \qquad
+  q_3(t) = Const.$$
+$\overrightarrow{x}$が実のベクトルであるとすると、
+$\overrightarrow{q}$も実のベクトルなので、$A=-B$
+であることが必要である。
+よって、
+$$q_1(t) = 2A \cos(\lambda t), \qquad
+  q_2(t) = 2A \sin(\lambda t), \qquad
+  q_3(t) = Const.$$
+
+解の振る舞いは、$\overrightarrow{v}$を中心軸とする円運動を
+表していると考えられる。\\
+これは回転座標系で見たベクトル$\overrightarrow{x}$の変化が,
+角速度ベクトルを$\overrightarrow{\omega}$とすると、\\
+$$\frac{d \overrightarrow{x}}{dt} = 
+\overrightarrow{\omega} \times \overrightarrow{x}$$
+となることを示している。
+\end{enumerate}
+\end{answer}
+
+\begin{question}{問題2}{桂 法称}
+球対称の関数$u(t, r)$に対する波動方程式は、以下のように書くことができる:
+\begin{eqnarray*}
+\frac{\partial^2 u}{\partial t^2} = c^2 \left( 
+\frac{\partial^2 u}{\partial r^2} + \frac{2}{r} 
+\frac{\partial u}{\partial r} \right)
+\end{eqnarray*}
+ここで、$r$は動径座標、$t$は時間座標、$c$は速度の次元の定数である。
+以下の問に答えよ。
+\begin{enumerate}
+\item 上の偏微分方程式の一般解を求めよ。なおここで一般解とは
+2個の任意関数で表された解を指す。
+\label{1-2002-math2}
+
+\item 初期条件、$t = 0$で$u = e^{-r^2/(2r_0^2)}$、$\partial u / 
+\partial t = 0$の場合の$t > 0$に対する解を求めよ。
+ただし、$r_0$は波束の広がりをあらわす実定数である。
+
+\item 初期条件、$t = 0$で$u = 0$、$\partial u / 
+\partial t = e^{-r^2/(2r_0^2)}$の場合の$t > 0$に対する解を求めよ。
+\label{3-2002-math2}
+
+\item \ref{3-2002-math2}で求めた関数を、時間に対してフーリエ変換せよ。
+ただしここでフーリエ変換は、
+\begin{eqnarray*}
+U(\omega, r) = \int _{- \infty} ^{\infty} u(t ,r)e^{i\omega t}dt
+\end{eqnarray*}
+と定義する。
+
+\item $g(\omega) \equiv U(\omega, r=0)$は、$\omega$の関数である。
+$g(\omega)$が最大値となる$\omega$の値を求めよ。
+\end{enumerate}
+\end{question}
+
+\begin{answer}{問題2}{桂 法称}
+\begin{enumerate}
+\item 右辺の$\displaystyle \frac{\partial^2 u}{\partial r^2}$は
+$\displaystyle \frac{1}{r}\frac{\partial^2}{\partial r^2}(ru)$と書き換える
+ことができるので、新たに$\displaystyle u(t, r) \equiv 
+\frac{\chi(t, r)}{r}$と定義すれば、関数$\xi(t, r)$について、
+\begin{eqnarray*}
+\frac{\partial^2 \chi}{\partial t^2} = c^2 \frac{\partial^2 \chi}{\partial r^2}
+\end{eqnarray*}
+が成立する。これは1次元の波動方程式で一般解は
+\begin{eqnarray*}
+\chi(t, r) = f(r - ct) + g(r + ct)
+\end{eqnarray*}
+（ダランベールの解。$f(r - ct)$が$r$の正方向に、$g(r + ct)$が$r$の
+負方向に進む波を表す。）
+よって、与えられた偏微分方程式の一般解は、
+\begin{eqnarray*}
+u(t, r) = \frac{1}{r} \left\{ f(r - ct) + g(r + ct) \right\}
+\end{eqnarray*}
+
+\item 初期条件より、
+\[
+\left\{
+\begin{array}{@{\,}ll}
+f(r) + g(r) = r e^{-r^2/2r_0^2} \\
+f'(r) - g'(r) = 0
+\end{array}
+\right.
+\]
+よって、$\displaystyle f(r) = g(r) = \frac{1}{2}r e^{-r^2/(2r_0^2)}$
+\ref{1-2002-math2}で得られた結果に代入して、
+\begin{eqnarray*}
+u(t, r) = \frac{1}{2r} \left\{ (r - ct)e^{-(r-ct)^2/(2r_0^2)} 
++ (r + ct)e^{-(r+ct)^2/(2r_0^2)} \right\}
+\end{eqnarray*}
+
+\item 初期条件より、
+\[
+\left\{
+\begin{array}{@{\,}ll}
+f(r) + g(r) = 0\\
+f'(r) - g'(r) = -\frac{1}{c}r e^{-r^2/(2r_0^2)}
+\end{array}
+\right.
+\]
+よって、$\displaystyle f(r) = \frac{r_0^2}{2c}e^{-r^2/(2r_0^2)}, 
+g(r) = -\frac{r_0^2}{2c}e^{-r^2/(2r_0^2)}$
+\ref{1-2002-math2}で得られた結果に代入して、
+\begin{eqnarray*}
+u(t, r) = \frac{r_0^2}{2c}\frac{1}{r} \left\{ e^{-(r-ct)^2/(2r_0^2)} 
+- e^{-(r+ct)^2/(2r_0^2)} \right\}
+\end{eqnarray*}
+
+\item \ref{3-2002-math2}で求めた$u(t, r)$のフーリエ変換は、
+\begin{eqnarray*}
+U(\omega, r) &=& \int_{-\infty}^{\infty} u(t, r)e^{i\omega t}dt \\
+&=& \frac{r_0^2}{2c}\frac{1}{r}e^{-r^2/(2r_0^2)}
+\int_{-\infty}{\infty}\left\{ e^{-c^2t^2/(2r_0^2) + 
+(i \omega + \frac{cr}{r_0^2})t}-e^{-c^2t^2/(2r_0^2) + 
+(i \omega - \frac{cr}{r_0^2})t}\right\} dt
+\end{eqnarray*}
+ここでGauss積分の公式
+\begin{eqnarray*}
+\int_{-\infty}^{\infty}e^{-at^2 + bt}dt = \sqrt{\frac{\pi}{a}}
+e^{\frac{b^2}{4a}}
+\end{eqnarray*}
+を用いれば、
+\begin{eqnarray*}
+U(\omega, r) &=& \frac{r_0^2}{2c}\frac{1}{r}e^{-r^2/2r_0^2}
+\frac{\sqrt{2 \pi r_0^2}}{c}\left\{ e^{\frac{r_0^2}{2c^2}}
+(i \omega + \frac{cr}{r_0^2})^2 
+- e^{\frac{r_0^2}{2c^2}}(i \omega - \frac{cr}{r_0^2})^2 \right\} \\
+&=& \sqrt{2 \pi}i \frac{r_0^3}{r c^2}e^{-\frac{r_0^2}{2c^2}\omega^2}
+\sin (\frac{r}{c}\omega)
+\end{eqnarray*}
+
+\item \begin{eqnarray*}
+g(\omega) \equiv U(\omega, r=0) &=& i \sqrt{2 \pi}\frac{r_0^3}{c^3}
+\omega e^{-\frac{r_0^2}{2c^2}\omega^2 }\lim_{r \rightarrow 0}
+\frac{\sin(\frac{\omega}{c}r)}{\frac{\omega}{c}r} \\
+&=& i \sqrt{2 \pi}\frac{r_0^3}{c^3}
+\omega e^{-\frac{r_0^2}{2c^2}\omega^2} 
+\end{eqnarray*}
+$|g(\omega)| \propto \omega e^{-r_0^2\omega^2/(2c^2)}$より
+\begin{eqnarray*}
+\frac{d}{d\omega}\left( \omega e^{\frac{r_0^2}{2c^2}\omega^2} \right)
+= \left( 1 - \frac{r_0^2}{c^2}\omega^2 \right)
+e^{\frac{r_0^2}{2c^2}\omega^2} = 0
+\end{eqnarray*}
+とすると、$\omega = c/r_0$の時、$g(\omega)$最大。
+
+\end{enumerate}
+\end{answer}
+\end{document}
