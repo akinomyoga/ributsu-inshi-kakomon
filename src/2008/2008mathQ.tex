@@ -1,0 +1,98 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-18, Koichi Murase, 入力
+%%
+\def\Tr{\mathop{\mathrm{Tr}}}
+\begin{question}{第１問}{村瀬}
+\begin{enumerate}
+\item
+  実変数$\theta$に依存する2行2列の実対称行列
+  \begin{align*}
+    A=\frac14\begin{pmatrix}
+      \cos\theta + 3 \sin\theta & -\sqrt3 \cos\theta + \sqrt3 \sin\theta\\
+      -\sqrt3\cos\theta+\sqrt3\sin\theta & 3\cos\theta + \sin\theta
+    \end{pmatrix}
+  \end{align*}
+  に対し、次の問に答えよ。なお$\theta$の範囲は$0\le\theta\le\frac\pi2$であるとする。
+
+  \begin{enumerate}
+  \item
+    行列$A$の2つの固有値を求めよ。
+  \item
+    $A$の対角成分の和$\Tr A$の3乗$(\Tr A)^3$と$A^3$の対角成分の和$\Tr(A^3)$の差を$\theta$の
+    関数として
+    \begin{align*}
+      f(\theta) = (\Tr A)^3 - \Tr(A^3)
+    \end{align*}
+    と置くとき、$f(\theta)$の最大値と最小値を求めよ。
+  \item
+    $I$を単位行列とするとき、$A$の多項式から作られる行列
+    \begin{align*}
+      B = A^4 - A^2 + A + (\cos^2\theta \sin^2\theta -1) I
+    \end{align*}
+    が逆行列を持たないような$\theta$の値を求めよ。
+  \item
+    $B$が逆行列$B^{-1}$を持つとき、$B^{-1}$を行列$A$の1次式、すなわち係数$a_1(\theta),\,a_0(\theta)$
+    を用いて$B^{-1}=a_1(\theta)A+a_0(\theta)I$の形に表せ。
+  \end{enumerate}
+
+\item
+  $N$行$N$列の実対称行列$X$の全ての固有値$\lambda_i\;(i=1,\ldots,N)$が非負$\lambda_i\ge0$であると
+  する。
+  \begin{enumerate}
+  \item
+    任意の自然数$n$に対して不等式
+    \begin{align*}
+      (\Tr X)^n \ge \Tr(X^n)
+    \end{align*}
+    が成り立つことを証明せよ。
+  \item
+    上の不等式で等号$(\Tr X)^n=\Tr(X^n)$が成立するのは、固有値$\lambda_i$がどのような
+    場合に限られるか。ただし$n\ge2$とする。
+  \end{enumerate}
+
+\end{enumerate}
+\end{question}
+
+\begin{question}{第２問}{村瀬}
+実変数$t$の関数$f_1(t),\,f_2(t)$が次の連立1階常微分方程式を満たす。
+  \begin{align}
+    i\frac{d}{dt}\begin{pmatrix} f_1(t) \\ f_2(t) \end{pmatrix}
+    = \begin{pmatrix} a(t) & b(t) \\ b(t) & c(t) \end{pmatrix}
+      \begin{pmatrix} f_1(t) \\ f_2(t) \end{pmatrix} \ilabel{eq:Q2.1}
+  \end{align}
+  ただし$a(t), b(t), c(t)$は$t$の実関数であり、$i=\sqrt{-1}$とする。
+
+\begin{enumerate}
+\item
+  $|f_1(t)|^2+|f_2(t)|^2$が$t$に依存しないことを示せ。
+\item
+  $f_1(t) = e^{-i\int_0^t a(\tau) d\tau} \tilde{f}_1(t), f_2(t) = e^{-i\int_0^t c(\tau)d\tau} \tilde{f}_2(t)$
+  によって$\tilde{f}_1(t)$と$\tilde{f}_2(t)$を定義する
+  と、これらが
+  \begin{align*}
+    i\frac{d}{dt}\begin{pmatrix} \tilde{f}_1(t) \\ \tilde{f}_2(t) \end{pmatrix}
+    = \begin{pmatrix} 0 & \tilde{b}(t) \\ \tilde{b}(t)^* & 0 \end{pmatrix}
+      \begin{pmatrix} \tilde{f}_1(t) \\ \tilde{f}_2(t) \end{pmatrix}
+  \end{align*}
+  という形の常微分方程式を満たすことを示せ。またこのときの$\tilde{b}t)$の表式を求めよ。
+  ただし$\tilde{b}(t)^*$は$\tilde{b}(t)$の複素共役を表す。
+
+\item
+  $a(t)=c(t)=0$であり、$b(t)$が定数$b_0$であるとする。式\ieqref{eq:Q2.1}の解$f_1(t)$を、$b_0$および
+  $f_1(0)$, $f_2(0)$を用いて表せ。
+
+\item\ilabel{Q2.4}
+  $a(t)=c(t)=0$であり、$b(t)$は$t\to-\infty$で十分はやく減衰する関数であるとする。
+  このとき、式\ieqref{eq:Q2.1}の解$f_1(t)$を、$b(t)$および$f_1(-\infty), f_2(-\infty)$を用いて表せ。ただし
+  $f_1(-\infty)=\displaystyle\lim_{t\to-\infty} f_1(t)$などである。
+
+\item
+  設問\iref{Q2.4}で、$b(t)$が正の定数$\beta, \omega, t_0$を用いて
+  \begin{align*}
+    b(t) = \frac{\beta\cos\omega t}{t^2+t_0^2}
+  \end{align*}
+  で与えられる場合を考える。$f_1(-\infty)=1, f_2(-\infty) = 0$のとき、$|f_1(+\infty)|^2, |f_2(+\infty)|^2$
+  の値を求めよ。
+\end{enumerate}
+\end{question}

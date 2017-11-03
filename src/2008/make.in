@@ -1,0 +1,13 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2008math)
+_2008math_title='2008年度実施 数学'
+_2008math_cov=(2008mathC.tex)
+_2008math_prb=(2008mathQ.tex)
+_2008math_ans=(2008mathA.tex)
+_2008math_dep=()
+#
+# 問題入力 村瀬功一 2013-07-18
+# 解答作成 渡辺悠樹 2009-06-09 (再入力 村瀬 2013-07-18)
+#

@@ -1,0 +1,167 @@
+%% -*- coding:sjis -*-
+%%
+%% 2009-06-09, 渡辺悠樹, 作成
+%% 2013-07-18, Koichi Murase, 入力
+%%
+\def\Tr{\mathop{\mathrm{Tr}}}
+\begin{answer}{第１問}{渡辺悠樹}
+\begin{enumerate}
+\item
+  \begin{enumerate}
+  \item
+    $\det(A-xI) = x^2+ (\cos\theta + \sin\theta)x + \cos\theta\sin\theta = 0$
+    $\therefore x = \cos\theta,\sin\theta$
+  \item
+    実対称行列はエルミート行列の特殊場合であり, ユニタリ行列を用いて対角化できるので,
+    \begin{align*}
+      A=U\begin{pmatrix}\cos\theta & 0 \\ 0 & \sin\theta\end{pmatrix}U^\dag
+    \end{align*}
+    とおく. このとき, 
+    \begin{align*}
+      A^3=U\begin{pmatrix}\cos^3\theta & 0 \\ 0 & \sin^3\theta\end{pmatrix}U^\dag
+    \end{align*}
+    であるが, trace はユニタリ不変なので,
+    \begin{align*}
+      f(\theta) =(\cos\theta +\sin\theta)^3 - (\cos^3\theta+\sin^3\theta) =3\sqrt2(t^3-\frac t2)
+    \end{align*}
+    ここに, $t =\frac{\cos\theta + \sin\theta}{\sqrt2} = \sin\left(\theta +\frac\pi4\right)$
+    とおいた. $0\le\theta\le\frac\pi2$
+    であるから $\frac1{\sqrt2}\le t\le 1$ である. 区間 $[\frac{1}{\sqrt2}, 1]$ における
+    3 次関数 $3\sqrt2(t^3-\frac t2)$ の最大最小値問題と考えれば, 直ちに
+    \begin{align*}
+      最大値\; \frac{3\sqrt2}{2}\; (t=1 \Leftrightarrow \theta =\frac\pi4 のとき),\quad
+      最小値\; 0\; (t=\frac1{\sqrt2} \Leftrightarrow \theta =0, \frac\pi2 のとき)
+    \end{align*}
+    を得る.
+  \item
+    \begin{align*}
+      B
+      &=U\begin{pmatrix}
+        \cos^4\theta -\cos^2\theta +\cos\theta +(\cos^2\theta \sin^2\theta - 1) & 0 \\
+        0 & \sin^4\theta -\sin^2\theta + \sin\theta + (\cos^2\theta\sin^2\theta -1 )
+      \end{pmatrix}U^\dag\\
+      &=U\begin{pmatrix}
+        \cos\theta-1 & 0 \\
+        0 & \sin\theta -1
+      \end{pmatrix}U^\dag
+    \end{align*}
+    したがって $\det B = (\cos\theta-1)(\sin\theta-1)$ なので, $\theta=0,\frac\pi2$
+  \item
+    $\theta\neq0,\frac\pi2$ のとき,
+    \begin{align*}
+      B^{-1}
+      &=U\begin{pmatrix}
+        \frac1{\cos\theta-1} & 0 \\
+        0 & \frac1{\sin\theta -1}
+      \end{pmatrix}U^\dag
+      =U\begin{pmatrix}
+        a_1(\theta)\cos\theta +a_0(\theta) & 0 \\
+        0 & a_1(\theta)\sin\theta +a_0(\theta)
+      \end{pmatrix}U^\dag
+    \end{align*}
+    だから, 両辺を比べて連立方程式を作ることにより $a_1(\theta),a_0(\theta)$ が求まる. 結局, 
+    \begin{align*}
+      B^{-1} = \frac{-1}{(\cos\theta-1)(\sin\theta-1)}A
+        + \frac{\cos\theta +\sin\theta+1}{(\cos\theta-1)(\sin\theta-1)} I
+    \end{align*}
+    と表すことができる. ($B=A-I$ を利用して, もっとうまく求める方法があるのかもしれません.)
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    前問と同様に, 実対称行列はユニタリ行列を用いて対角化可能であり, かつ trace はユニタリ不変であるため, 
+    \begin{align*}
+      \Tr X &= \sum_i \lambda_i, \quad \Tr(X^n)=\sum_i\lambda_i^n
+    \end{align*}
+    となるから, 
+    \begin{align*}
+      g(\bm{\lambda}) = \left(\sum_i \lambda_i \right)^n - \sum_i \lambda_i^n
+    \end{align*}
+    とおくと, 
+    \begin{align*}
+      \frac{\partial g}{\partial \lambda_j}(\bm{\lambda})
+      &= n\left(\sum_i \lambda_i\right)^{n-1} -n\lambda_j^{n-1} \ge 0
+    \end{align*}
+    かつ $g(\bm{\lambda}=0) = 0$ より, 題意は示された. (Cauchy-Schwarz の不等式みたいな定理があるんでしょうか?
+    知ってる人がいたら教えてください.)
+  \item
+    $n\ge2$ のとき前問の証明から, $\lambda_j$が 0 でない有限の値で $g(\bm{\lambda})=0$ となるためには, まず
+    $\frac{\partial g}{\partial \lambda_j} (\bm{\lambda})= 0$となる
+    ために $\lambda_j$以外の固有値は全てゼロであることが必要である. このとき明らかに
+    $g(\bm{\lambda}) = (\lambda_j)^n -\lambda_j^n$ であるから, これで十分である.
+    したがって, $\lambda_i= c\delta_{ij}, \; (c\ge0)$
+    が求める条件である.
+  \end{enumerate}
+\end{enumerate}
+\end{answer}
+
+\begin{answer}{第２問}{渡辺悠樹}
+\begin{enumerate}
+\item
+  \begin{align*}
+    \bm{f}(t) = \begin{pmatrix} f_1(t) \\ f_2(t) \end{pmatrix},\quad
+    A(t) = \begin{pmatrix} a(t) & b(t) \\  b(t) & c(t) \end{pmatrix}
+  \end{align*}
+  などとおくと,
+  \begin{align*}
+    i\dot{\bm{f}} = A\bm{f},\quad
+    -i\dot{\bm{f}}^\dag = \bm{f}^\dag A^\dag,\quad
+    i\frac{d}{dt} \bm{f}^\dag \bm{f} = \cdots = \bm{f}^\dag (A-A^\dag)\bm{f} = 0
+  \end{align*}
+
+\item
+  \begin{align*}
+    U = \begin{pmatrix}
+      e^{i\int_0^ta(\tau)d\tau} & 0 \\
+      0 & e^{i\int_0^t c(\tau)d\tau}
+    \end{pmatrix}, \quad \tilde{\bm{f}}=U\bm{f}
+  \end{align*}
+  とおくと,
+  \begin{align*}
+    i\dot{\tilde{\bm{f}}}
+    = U(i\dot{\bm{f}}) + i\dot{U}\bm{f}
+    = UA\bm{f} - U\begin{pmatrix} a & 0 \\ 0 & c\end{pmatrix} \bm{f}
+    = U \begin{pmatrix} 0 & b \\ b & 0 \end{pmatrix} U^\dag \tilde{\bm{f}}
+    = \begin{pmatrix}
+      0 & b(t)e^{i\int_0^t(a(\tau)-c(\tau))d\tau} \\
+      b(t)e^{-i\int_0^t(a(\tau)-c(\tau))d\tau} & 0
+    \end{pmatrix} \tilde{\bm{f}}
+  \end{align*}
+
+\item
+  \begin{align*}
+    \dot{\bm{f}} = -ib_0 \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \bm{f}
+    \quad\Leftrightarrow\quad \bm{f}(t) = \exp\left(-ib_0 \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} t \right) \bm{f}(0)
+    = \begin{pmatrix} \cos(b_0t) & -i\sin(b_0t) \\ -i\sin(b_0t) & \cos(b_0t) \end{pmatrix} \bm{f}(0)
+  \end{align*}
+
+\item\ilabel{A2.4}
+  \begin{align*}
+    \bm{f} = \exp\left(-i\int_{-\infty}^t b(\tau)d\tau \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}\right) \bm{f}(-\infty)
+    = \begin{pmatrix}
+      \cos(\int_{-\infty}^t b(\tau)d\tau) & -i\sin(\int_{-\infty}^t b(\tau)d\tau) \\
+      -i\sin(\int_{-\infty}^t b(\tau)d\tau) & \cos(\int_{-\infty}^t b(\tau)d\tau)
+    \end{pmatrix} \bm{f}(-\infty)
+  \end{align*}
+
+\item
+  \begin{gather*}
+    \int_{-\infty}^\infty b(\tau)d\tau = \omega\beta\int_{-\infty}^\infty \frac{\cos z}{z^2 + z_0^2} dz
+    = \omega\beta\frac{\pi}{z_0 e^{z_0}} = \frac{\pi\beta}{t_0 e^{\omega t_0}} \\
+    \left(\because
+      \int_{-\infty}^\infty \frac{\cos z}{z^2 + z_0^2} dz
+      = \int_{-\infty}^\infty \frac{e^{iz}}{z^2 + z_0^2} dz
+      = \int_C \frac{e^{iz}}{(z-iz_0)(z+iz_0)} dz
+      = 2\pi i \frac{e^{-z_0}}{(iz_0 + iz_0)} = \frac{\pi}{z_0 e^{z_0}}
+    \right)
+  \end{gather*}
+  途中 $z_0=\omega t_0$とおいた．なお, $C$ は「実軸 + 上半円」ととった. 小問\iref{A2.4}の結果と合わせて, 直ちに
+  \begin{align*}
+    |f_1(+\infty)|^2 = \cos^2\left(\frac{\pi\beta}{t_0e^{\omega t_0}}\right),\quad
+    |f_2(+\infty)|^2 = \sin^2\left(\frac{\pi\beta}{t_0e^{\omega t_0}}\right)
+  \end{align*}
+  を得る.
+  
+\end{enumerate}
+\end{answer}
