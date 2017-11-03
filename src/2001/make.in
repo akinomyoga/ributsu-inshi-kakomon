@@ -1,0 +1,47 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2001pankyo 2001senmon)
+docs_ex=(2001pankyo2)
+
+_2001pankyo_title='2001年度実施 一般教育科目'
+_2001pankyo_cov=()
+_2001pankyo_prb=(2001engl.tex 2001math.tex)
+_2001pankyo_ans=(2001engl.tex 2001math.tex)
+_2001pankyo_dep=(2001engl.tpc 2001math1.tpc 2001math1-1.tpc 2001math1-2.tpc)
+#
+# 作成者
+#               問題入力    解答作成     
+#   ----------  ----------  -------------
+#   英語 第1問  八木        久松康子
+#   英語 第2問  鈴木＋八木  久松康子
+#   数学        岡村圭祐    山本哲朗
+#
+
+_2001pankyo2_title='2001年度実施 一般教育科目 (英語なし)'
+_2001pankyo2_cov=()
+_2001pankyo2_prb=(2001math.tex)
+_2001pankyo2_ans=(2001math.tex)
+_2001pankyo2_dep=(2001engl.tpc 2001math1.tpc 2001math1-1.tpc 2001math1-2.tpc)
+
+_2001senmon_title='2001年度実施 物理専門科目'
+_2001senmon_cov=()
+_2001senmon_prb=(2001phy1.tex 2001phy2.tex 2001phy3.tex 2001phy4.tex 2001phy5.tex 2001phy6.tex 2001phy7.tex 2001phy8.tex 2001phy9.tex)
+_2001senmon_ans=(2001phy1.tex 2001phy2.tex 2001phy3.tex 2001phy4.tex 2001phy5.tex 2001phy6.tex 2001phy7.tex 2001phy8.tex 2001phy9.tex)
+_2001senmon_dep=(
+  2001phy2.tpc 2001phy2-1.tpc 2001phy2-2.tpc 2001phy3.tpc 2001phy3-1.tpc 2001phy3-2.tpc 2001phy4.tpc 2001phy4-2.tpc
+  2001phy5.tpc 2001phy5-0.tpc 2001phy5-1.tpc 2001phy5-2.tpc 2001phy6.tpc 2001phy6-1.tpc 2001phy7.tpc 2001phy8.tpc)
+#
+# 作成者
+#          問題入力    解答作成     
+#   -----  ----------  -------------
+#   問題1  岡村        岡村         
+#   問題2  藤岡        湯淺吉晴     
+#   問題3  藤岡        湯淺吉晴     
+#   問題4  岡村        大河原斉揚   
+#   問題5  岡村        八木太       
+#   問題6  岡村        辰己創一     
+#   問題7  岡村        新原         
+#   問題8  鈴木了      渡辺＋鈴木了 
+#   問題9  岡村        石田良       
+#

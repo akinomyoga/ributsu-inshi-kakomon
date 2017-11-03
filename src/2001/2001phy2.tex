@@ -17,7 +17,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[hbt]
 \begin{center}
-%\caption[]{\label{}}
+%\caption[]{\ilabel{}}
 \vspace{0.5cm}
 \input{2001phy2-2.tpc}
 \vfill
@@ -99,7 +99,7 @@ X = \left.\frac{\partial F}{\partial x_N}\right|_T
         
         \item 　$x_N / L \ll 1$のとき
 \begin{align}
-X &= \frac{k_BT}{2b}\left[\log \left(1 + \frac{x_N}{L}\right) - \log \left(1 - \frac{x_N}{L}\right)\right] \simeq \frac{k_BT}{2b}\left(\frac{x_N}{L} + \frac{x_N}{L}\right) = \frac{k_BT}{Nb^2}x_N \label{1c}
+X &= \frac{k_BT}{2b}\left[\log \left(1 + \frac{x_N}{L}\right) - \log \left(1 - \frac{x_N}{L}\right)\right] \simeq \frac{k_BT}{2b}\left(\frac{x_N}{L} + \frac{x_N}{L}\right) = \frac{k_BT}{Nb^2}x_N \ilabel{1c}
 \end{align}
 関係式$(7)$はこの分子がHookeの法則（外力$X$が変位$x_N$に比例する）に従うゴム状の弾性体であることを表している。\\
 \end{enumerate}
@@ -119,7 +119,7 @@ X &= \frac{k_BT}{2b}\left[\log \left(1 + \frac{x_N}{L}\right) - \log \left(1 - \
 \begin{align}
 Z_N &= \sum_{\mu_i = \pm 1}e^{- \beta H} \\
  &= \bigl(e^{NA} + e^{- NA}\bigr)\bigl(e^{(N - 1)A} + e^{- (N - 1)A}\bigr)\cdots \bigl(e^{A} + e^{- A}\bigr) \nonumber \\
- &= \prod_{l = 1}^{N}\left(e^{lA} + e^{- lA}\right) \label{z1}
+ &= \prod_{l = 1}^{N}\left(e^{lA} + e^{- lA}\right) \ilabel{z1}
 \end{align}
         
         \item 　$(11)$より$\mu_i$の平均値は
@@ -133,7 +133,7 @@ Z_N &= \sum_{\mu_i = \pm 1}e^{- \beta H} \\
 \left\langle x_N \right\rangle &= b\biggl\langle \sum_{i = 1}^{N}\mu_i \biggr\rangle = b\sum_{i = 1}^{N}\left\langle \mu_i \right\rangle = b\sum_{i = 1}^{N}\tanh A(N + 1 - i) \nonumber \\
  &\simeq b\sum_{i = 1}^{N}A(N + 1 - i) = \frac12N(N + 1)Ab = \frac{(N + 1)b^2}{2k_BT}(NQE) \\
 NQE &\simeq \frac{2k_BT}{Nb^2}\left\langle x_N \right\rangle \qquad \text{($N \gg 1$)}
-\label{2c}
+\ilabel{2c}
 \end{align}
 $(14)$の外力$NQE$は微視的な力の合力である。一方，$(7)$の外力$X$は，$dF = -SdT + Xdx_N$で定まる巨視的な熱，統計力学的力である。$(7)$と$(14)$を比較すると，外力の総和$NQE$は端点に働く$X = NQE/2$の張力に相当することが分かる。$1/2$の因子がついたのは，始点に近い要素$i$の電荷に働く力が，実効的な張力$X$にほとんど寄与しないためである。 
 \end{enumerate}
@@ -142,12 +142,12 @@ $(14)$の外力$NQE$は微視的な力の合力である。一方，$(7)$の外力$X$は，$dF = -SdT + 
 \begin{align}
 Z_N &= \sum_{x_N}We^{\beta Xx_N} \qquad (\text{$W$は端点位置が$x_N$となる状態数})\nonumber \\
  &= \sum_{\mu_i = \pm 1}\exp \biggl(\beta Xb\sum_i\mu_i\biggr) = {\left(e^{\beta Xb} + e^{-\beta Xb}\right)}^N = 2^N{\left(\cosh \beta Xb\right)}^N \\
-\left\langle x_N \right\rangle &= \frac{1}{\beta}\frac{\partial \log Z_N}{\partial X} = Nb\tanh (\beta Xb) \simeq \frac{Nb^2}{k_BT}X \label{a1}
+\left\langle x_N \right\rangle &= \frac{1}{\beta}\frac{\partial \log Z_N}{\partial X} = Nb\tanh (\beta Xb) \simeq \frac{Nb^2}{k_BT}X \ilabel{a1}
 \end{align}
 $(16)$の最後で$\beta Xb \ll 1$とした。これは1(c)の$N \gg x_N/b$に対応する。よって
 \begin{equation}
 X = \frac{k_BT}{Nb^2}\left\langle x_N \right\rangle
-\label{a2}
+\ilabel{a2}
 \end{equation}
 となり，$(7)$と同じ結果が得られる。\\
 \end{enumerate}

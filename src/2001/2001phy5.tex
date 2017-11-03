@@ -6,7 +6,7 @@
 
 \newcommand{\no}{\nonumber \\}
 \newcommand{\R}[1]{(\mathrm{#1})}
-\newcommand{\siki}[1]{(\ref{#1})式}
+\newcommand{\siki}[1]{(\iref{#1})式}
 \newcommand{\sisuu}[1]{\times 10^{#1}}
 %% Defined by YAGI 
 
@@ -62,7 +62,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[hbt]
 \begin{center}
-%\caption[]{\label{}}
+%\caption[]{\ilabel{}}
 %\vspace{1.0cm}
 \input{2001phy5.tpc}
 \vfill
@@ -90,12 +90,12 @@
 p+p \to p+p+\pi^0
 \end{equation}
 という反応を考察する。
-図\ref{重心系}のように，
+図\iref{重心系}のように，
 反応前は，
 2つの陽子が同じエネルギー${E_p}^\prime$で反対向き
 （互いに近づく向き）に運動する。
 そして${E_p}^\prime$がしきい値をとるとき，反応後は
-%図\ref{反応後}のように
+%図\iref{反応後}のように
 3粒子が静止する。
 
 \begin{figure}[htbp]
@@ -103,7 +103,7 @@ p+p \to p+p+\pi^0
     \input{2001phy5-1.tpc}
     \vspace{3mm}
     \caption{重心系から見た，最低エネルギーでの$\pi^0$生成反応}
-    \label{重心系}
+    \ilabel{重心系}
 \end{figure}
 
 この場合についてエネルギー保存則を用いると，
@@ -111,7 +111,7 @@ p+p \to p+p+\pi^0
 &&2{E_p}^\prime = 2{m_p}^2 c^2 + {m_{\pi}}^2 c^2 \no
 & & \cr
 &\Rightarrow & {E_p}^\prime = \frac{2{m_p}^2 c^2 + {m_{\pi}}^2 c^2}{2}
-\label{energy}
+\ilabel{energy}
 \end{eqnarray}
 より，
 重心系で見たときの
@@ -127,7 +127,7 @@ $\beta=v/c$，$\gamma=1/\sqrt{1-\beta^2}$
 \begin{equation}
 \gamma = \frac{{E_p}^\prime}{m_p c^2}
     = \frac{2{m_p}^2 + {m_{\pi}}^2}{2m_p}
-\label{gamma1}
+\ilabel{gamma1}
 \end{equation}
 
 次に，反応を実験室系で考察する。
@@ -160,14 +160,14 @@ T_p
 $m_{\pi}c^2$が2つの$\gamma$線のエネルギー${E_{\gamma}}^\prime$になるので，
 \begin{equation}
 {E_{\gamma}}^\prime=\frac{m_{\pi}c^2}{2}
-\label{E}
+\ilabel{E}
 \end{equation}
 である。また，運動量の大きさは，
 \begin{equation}
 {p_{\gamma}}^\prime
 = \frac{{E_{\gamma}}^\prime}{c}
 = \frac{m_{\pi}c}{2}
-\label{p}
+\ilabel{p}
 \end{equation}
 である。
 
@@ -177,14 +177,14 @@ $\gamma$は，実験室系で見たときの$\pi^0$のエネルギーとの関係から
 次のように求まる。
 \begin{equation}
 E_{\pi}=m_{\pi}\gamma c^2\quad \Rightarrow \quad \gamma=\frac{E_{\pi}}{m_{\pi}c^2}
-\label{gamma}
+\ilabel{gamma}
 \end{equation}
 また，$\beta$は$\gamma$との関係から次のように求まる。
 \begin{equation}
 \gamma = \frac{1}{\sqrt{1-\beta^2}}\quad \Rightarrow \quad \beta = -\sqrt{1-\frac{1}{\gamma^2}}
 =-\sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
 =-\sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
-\label{beta}
+\ilabel{beta}
 \end{equation}
 %
 (実験室系は重心系に対して，
@@ -205,7 +205,7 @@ $\beta$の符号はマイナスになっている。)
 &=&\frac{E_{\pi}}{2} \left( 1 
         + \sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
         \cos\theta^*\right)
-\label{エネルギー}
+\ilabel{エネルギー}
 \end{eqnarray}
 となる。
 
@@ -219,14 +219,14 @@ $\beta$の符号はマイナスになっている。)
 \begin{equation}
 \frac{d\sigma}{dE_{\gamma}}
 =\frac{d\sigma}{d\Omega}\frac{d\Omega}{d\theta^*}\frac{d\theta^*}{dE_{\gamma}}
-\label{計算方針}
+\ilabel{計算方針}
 \end{equation}
 ただし，$d\Omega$は$\pi^0$静止系で見たときの微小立体角である。
 %
 まず，$\pi^0$静止系においては$\gamma$線の角分布は等方的であることから，
 \begin{equation}
 \frac{d\sigma}{d\Omega}=\mathrm{Const}
-\label{その1}
+\ilabel{その1}
 \end{equation}
 である。
 %
@@ -235,7 +235,7 @@ $\theta^*$～$\theta^*+d\theta^*$に対応する部分の面積は
 $2\pi\sin\theta^* d\theta^*$であるから，
 \begin{equation}
 \frac{d\Omega}{d\theta^*}\propto \sin\theta^*
-\label{その2}
+\ilabel{その2}
 \end{equation}
 である。
 %
@@ -244,7 +244,7 @@ $2\pi\sin\theta^* d\theta^*$であるから，
 \frac{d\theta^*}{dE_{\gamma}}
 =\frac{1}{\ds \frac{dE_{\gamma}}{d\theta^*}}
 \propto \frac{1}{\sin\theta^*}
-\label{その3}
+\ilabel{その3}
 \end{equation}
 である。
 従って，(12)式，(13)式，(14)式より，
@@ -254,12 +254,12 @@ $2\pi\sin\theta^* d\theta^*$であるから，
 となり，$E_{\gamma}$の分布が一様であることが示された。\\
     
 %%%% b %%%%
-    \item 　図\ref{崩壊}のように$x,y$方向及び角度$\theta_1,\theta_2$を定義する。
+    \item 　図\iref{崩壊}のように$x,y$方向及び角度$\theta_1,\theta_2$を定義する。
 \begin{figure}[htbp]
     \centering
     \input{2001phy5-2.tpc}
     \caption{実験室系での$\pi^0$崩壊反応}
-    \label{崩壊}
+    \ilabel{崩壊}
 \end{figure}
 (6)式，(7)式，(8)式，(9)式を用いて，
 ローレンツ変換により，
@@ -274,7 +274,7 @@ p_x
          \frac{m_{\pi}c}{2} \right) \no
 &=& \frac{E_{\pi}}{2c} \left( \cos\theta^* 
         + \sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2} \right) \no
-&\simeq& \frac{E_{\pi}}{2c} \left( 1+\cos\theta^* \right) \label{px}\\
+&\simeq& \frac{E_{\pi}}{2c} \left( 1+\cos\theta^* \right) \ilabel{px}\\
 & & \nonumber
 \end{eqnarray}
 
@@ -300,14 +300,14 @@ $\tan\theta_1$の値は非常に小さく，
 \theta_1
 \simeq \tan\theta_1
 = \frac{m_{\pi}c^2}{E_{\gamma}} \frac{\sin\theta^*}{1+\cos\theta^*}
-\label{theta1}
+\ilabel{theta1}
 \end{equation}
 と近似できる。
 同様にしてもう一方の$\gamma$の角度$\theta_2$についても求めると，
 \begin{equation}
 \theta_2
 \simeq  \frac{m_{\pi}c^2}{E_{\gamma}} \frac{\sin\theta^*}{1-\cos\theta^*}
-\label{theta2}
+\ilabel{theta2}
 \end{equation}
 となる。
 2光子の成す角は，(19)式+(20)式，で計算できて，
@@ -318,7 +318,7 @@ $\tan\theta_1$の値は非常に小さく，
     \left( \frac{\sin\theta^*}{1+\cos\theta^*} 
     + \frac{\sin\theta^*}{1-\cos\theta^*} \right) \no
 &=& \frac{m_{\pi}c^2}{E_{\gamma}} \frac{2}{\sin\theta^*}
-\label{答え} \\
+\ilabel{答え} \\
 &\ge& \frac{2m_{\pi}c^2}{E_{\gamma}} 
     \qquad \Big(等号成立は\theta^*=\frac{\pi}{2}の時\Big)\no
 &=& \frac{2 \times 135~\R{MeV}}{30~\R{GeV}} \no
@@ -377,7 +377,7 @@ P_d=(-1)^0P_pP_n=1
 系全体のパリティは，
 \begin{equation}
 P=(-1)^0P_{d}P_{\pi}=P_{\pi}
-\label{始}
+\ilabel{始}
 \end{equation}
 である。\\
 
@@ -419,7 +419,7 @@ $S=1,L=1$のみである。\\
     \item 　軌道角運動量の大きさが1であることから，終状態のパリティは
 \begin{equation}
 P=(-1)^1P_nP_n=-1
-\label{終}
+\ilabel{終}
 \end{equation}
 である。
 この問題で考察している反応は，強い相互作用による反応であるから，

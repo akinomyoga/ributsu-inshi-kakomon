@@ -33,7 +33,7 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[hbtp]
 \begin{center}
-%\caption[]{\label{}}
+%\caption[]{\ilabel{}}
 %\vspace{1.0cm}
 \input{2001phy3-2.tpc}
 \end{center}
@@ -105,10 +105,10 @@ $$
 真電荷と伝導電流のない等方一様な媒質を考えているので，Maxwell方程式は次のようになる。
 %\begin{multicols}{2}
 \begin{align}
-\nabla \cdot (\epsilon \boldsymbol{E}) &= 0 \label{m1} \\
-\nabla \cdot \boldsymbol{B} &= 0 \label{m2} \\
-\nabla \times \boldsymbol{E} &= -\frac{\partial \boldsymbol{B}}{\partial t} \label{m3} \\
-\nabla \times \left(\frac{\boldsymbol{B}}{\mu}\right) &= \frac{\partial \,(\epsilon \boldsymbol{E})}{\partial t} \label{m4}
+\nabla \cdot (\epsilon \boldsymbol{E}) &= 0 \ilabel{m1} \\
+\nabla \cdot \boldsymbol{B} &= 0 \ilabel{m2} \\
+\nabla \times \boldsymbol{E} &= -\frac{\partial \boldsymbol{B}}{\partial t} \ilabel{m3} \\
+\nabla \times \left(\frac{\boldsymbol{B}}{\mu}\right) &= \frac{\partial \,(\epsilon \boldsymbol{E})}{\partial t} \ilabel{m4}
 \end{align}
 
 \begin{align}
@@ -129,7 +129,7 @@ $$
 \begin{figure}[hbtp]
 \begin{center}
 \caption[境界面$x = 0$における電磁場の接線成分（左），法線成分（右）の連続性]{
-境界面$x = 0$における電磁場の接線成分（左），法線成分（右）の連続性\label{fig1}}
+境界面$x = 0$における電磁場の接線成分（左），法線成分（右）の連続性\ilabel{fig1}}
 \vspace{2mm}
 \input{2001phy3-1.tpc}
 \end{center}
@@ -140,10 +140,10 @@ $$
 
 
   %%%%%% 1.-(a) %%%%%%
-\item 　境界面に平行な任意の単位ベクトルを$\hat{\boldsymbol t}$とし，$x$軸方向（法線方向）の単位ベクトルを$\hat{\boldsymbol x}$とする。図\ref{fig1}（左）のような長方形の積分路ABCD（$\overline{\text{AB}} = \Delta l$，$\overline{\text{BC}} = \delta$）をとり，これを縁とする平面$S$上で(3)の両辺を面積分する。
+\item 　境界面に平行な任意の単位ベクトルを$\hat{\boldsymbol t}$とし，$x$軸方向（法線方向）の単位ベクトルを$\hat{\boldsymbol x}$とする。図\iref{fig1}（左）のような長方形の積分路ABCD（$\overline{\text{AB}} = \Delta l$，$\overline{\text{BC}} = \delta$）をとり，これを縁とする平面$S$上で(3)の両辺を面積分する。
 \begin{equation}
 \int_{S}\left(\nabla \times \boldsymbol{E}\right)\cdot d\boldsymbol{S} = -\frac{\partial}{\partial t}\int_{S}\boldsymbol{B}\cdot d\boldsymbol{S}   
-\label{bc1}
+\ilabel{bc1}
 \end{equation}
 磁場$\boldsymbol{B}$は有限なので，$\delta \to 0$とすると$\text{（右辺）} \to 0$となる。（左辺）にStokesの定理を適用すると
 \begin{align}
@@ -151,34 +151,34 @@ $$
  &= \oint_{\text{ABCD}}\boldsymbol{E}\cdot d\boldsymbol{l} && \text{Stokesの定理} \nonumber \\
  &\to \int_{\text{AB}}\boldsymbol{E}\cdot d\boldsymbol{l} + \int_{\text{CD}}\boldsymbol{E}\cdot d\boldsymbol{l} && (\delta \to 0) \nonumber \\
  &= (E_{d,t} - E_{v,t})\Delta l = 0 && \nonumber \\
-\therefore E_{v,t}(0,\,y,\,z,\,t) &= E_{d,t}(0,\,y,\,z,\,t) && (\Delta l \to 0) \label{bc12}
+\therefore E_{v,t}(0,\,y,\,z,\,t) &= E_{d,t}(0,\,y,\,z,\,t) && (\Delta l \to 0) \ilabel{bc12}
 \end{align}
 (4)についても同様にして
 \begin{align}
 \frac{1}{\mu_0}\int_{S}\left(\nabla \times \boldsymbol{B}\right)\cdot d\boldsymbol{S}
  &= \frac{\partial}{\partial t}\int_{S}\epsilon \boldsymbol{E}\cdot d\boldsymbol{S} \to 0 \qquad (\delta \to 0) \nonumber \\
 \oint_{\text{ABCD}}\boldsymbol{B}\cdot d\boldsymbol{l}
- &\to (B_{d,t} - B_{v,t})\Delta l = 0 \label{bc2}
+ &\to (B_{d,t} - B_{v,t})\Delta l = 0 \ilabel{bc2}
 \end{align}
-次に，図\ref{fig1}（右）のような底面積$\Delta S$，高さ$\delta$の円柱$V$を考え，その表面を$S$とする。(1)の両辺を$V$で積分するとGaussの定理より
+次に，図\iref{fig1}（右）のような底面積$\Delta S$，高さ$\delta$の円柱$V$を考え，その表面を$S$とする。(1)の両辺を$V$で積分するとGaussの定理より
 \begin{align}
 \int_{V}\nabla \cdot (\epsilon \boldsymbol{E}) dV
- &= \int_{S}\epsilon \boldsymbol{E}\cdot d\boldsymbol{S} && \text{Gaussの定理} \label{bc31} \\
+ &= \int_{S}\epsilon \boldsymbol{E}\cdot d\boldsymbol{S} && \text{Gaussの定理} \ilabel{bc31} \\
  &\to (\epsilon_1E_{d,x} - \epsilon_0E_{v,x})\Delta S = 0 && (\delta \to 0) \nonumber \\
-\therefore \epsilon_0E_{v,x}(0,\,y,\,z,\,t) &= \epsilon_1E_{d,x}(0,\,y,\,z,\,t) && (\Delta S \to 0) \label{bc3}
+\therefore \epsilon_0E_{v,x}(0,\,y,\,z,\,t) &= \epsilon_1E_{d,x}(0,\,y,\,z,\,t) && (\Delta S \to 0) \ilabel{bc3}
 \end{align}
 以上(6)，(9)，(7)より境界$x = 0$において，(10)，(11)，(12)がそれぞれ成り立つ。
 \begin{gather}
-E_{0,t}(0,\,y,\,z,\,t) + E_{2,t}(0,\,y,\,z,\,t) = E_{1,t}(0,\,y,\,z,\,t) \label{bc101} \\
-\epsilon_0\left[E_{0,x}(0,\,y,\,z,\,t) + E_{2,x}(0,\,y,\,z,\,t)\right] = \epsilon_1E_{1,x}(0,\,y,\,z,\,t) \label{bc102} \\
-B_{0,t}(0,\,y,\,z,\,t) + B_{2,t}(0,\,y,\,z,\,t) = B_{1,t}(0,\,y,\,z,\,t) \label{bc103}
+E_{0,t}(0,\,y,\,z,\,t) + E_{2,t}(0,\,y,\,z,\,t) = E_{1,t}(0,\,y,\,z,\,t) \ilabel{bc101} \\
+\epsilon_0\left[E_{0,x}(0,\,y,\,z,\,t) + E_{2,x}(0,\,y,\,z,\,t)\right] = \epsilon_1E_{1,x}(0,\,y,\,z,\,t) \ilabel{bc102} \\
+B_{0,t}(0,\,y,\,z,\,t) + B_{2,t}(0,\,y,\,z,\,t) = B_{1,t}(0,\,y,\,z,\,t) \ilabel{bc103}
 \end{gather}
 
   %%%%%% 1.-(b) %%%%%%
 \item 
 \begin{equation}
 \epsilon_0\nabla \cdot \boldsymbol{E} = \rho 
-\label{m0}
+\ilabel{m0}
 \end{equation}
 (13)を(8)$\sim$(9)と同様にして$V$で積分すると
 \begin{equation}
@@ -194,8 +194,8 @@ B_{0,t}(0,\,y,\,z,\,t) + B_{2,t}(0,\,y,\,z,\,t) = B_{1,t}(0,\,y,\,z,\,t) \label{
 %%%%%%【2.】%%%%%%
 \item 　各波数成分について独立にMaxwell方程式は成り立つ。真空中$x < 0$では
 \begin{gather}
-\boldsymbol{k}\cdot \boldsymbol{E}(\boldsymbol{k},\omega) = 0,\qquad \boldsymbol{k}\cdot \boldsymbol{B}(\boldsymbol{k},\omega) = 0 \label{mk2} \\
-\boldsymbol{k}\times \boldsymbol{E}(\boldsymbol{k},\omega) = \omega\boldsymbol{B}(\boldsymbol{k},\omega),\qquad \boldsymbol{k}\times \boldsymbol{B}(\boldsymbol{k},\omega) = -\epsilon_0\mu_0\omega\boldsymbol{E}(\boldsymbol{k},\omega) \label{mk4}
+\boldsymbol{k}\cdot \boldsymbol{E}(\boldsymbol{k},\omega) = 0,\qquad \boldsymbol{k}\cdot \boldsymbol{B}(\boldsymbol{k},\omega) = 0 \ilabel{mk2} \\
+\boldsymbol{k}\times \boldsymbol{E}(\boldsymbol{k},\omega) = \omega\boldsymbol{B}(\boldsymbol{k},\omega),\qquad \boldsymbol{k}\times \boldsymbol{B}(\boldsymbol{k},\omega) = -\epsilon_0\mu_0\omega\boldsymbol{E}(\boldsymbol{k},\omega) \ilabel{mk4}
 \end{gather}
 となる。
 
@@ -205,19 +205,19 @@ B_{0,t}(0,\,y,\,z,\,t) + B_{2,t}(0,\,y,\,z,\,t) = B_{1,t}(0,\,y,\,z,\,t) \label{
 \item $k_0\boldsymbol{n}_0$成分（$\boldsymbol{E}_0$）について考えると(17)より
 \begin{align}
 k_0\boldsymbol{n}_0 \times \left(k_0\boldsymbol{n}_0 \times \boldsymbol{E}_0\right) &= -\epsilon_0\mu_0{\omega}^2\boldsymbol{E}_0 \\
-(k_0\boldsymbol{n}_0\cdot \boldsymbol{E}_0)k_0\boldsymbol{n}_0 - (k_0\boldsymbol{n}_0\cdot k_0\boldsymbol{n}_0)\boldsymbol{E}_0 &= -\epsilon_0\mu_0{\omega}^2\boldsymbol{E}_0 \label{k02}
+(k_0\boldsymbol{n}_0\cdot \boldsymbol{E}_0)k_0\boldsymbol{n}_0 - (k_0\boldsymbol{n}_0\cdot k_0\boldsymbol{n}_0)\boldsymbol{E}_0 &= -\epsilon_0\mu_0{\omega}^2\boldsymbol{E}_0 \ilabel{k02}
 \end{align}
 (19)の（左辺）第1項は(16)より0なので
 \begin{align}
 {k_0}^2 &= \epsilon_0\mu_0{\omega}^2 &
-\therefore k_0 &= \omega\sqrt{\epsilon_0\mu_0} \label{k03}
+\therefore k_0 &= \omega\sqrt{\epsilon_0\mu_0} \ilabel{k03}
 \end{align}
 
   %%%%%% 2.-(b) %%%%%%
 \item 　(17)，(20)より
 \begin{equation}
 \boldsymbol{E}_0 = \frac{- k_0B_0}{\epsilon_0\mu_0\omega}\boldsymbol{n}_0 \times \hat{\boldsymbol{z}} = \frac{\omega B_0}{k_0}\hat{\boldsymbol{z}}\times \boldsymbol{n}_0
-\label{k04}
+\ilabel{k04}
 \end{equation}
 \end{enumerate}
 
@@ -225,7 +225,7 @@ k_0\boldsymbol{n}_0 \times \left(k_0\boldsymbol{n}_0 \times \boldsymbol{E}_0\rig
 \item 　屈折波と反射波の電場振幅$\boldsymbol{E}_1$，$\boldsymbol{E}_2$についても(21)と同様にして
 \begin{align}
 \boldsymbol{E}_1 &= \frac{\omega B_1}{k_1}\hat{\boldsymbol{z}}\times \boldsymbol{n}_1, & \boldsymbol{E}_2 &= \frac{\omega B_2}{k_0}\hat{\boldsymbol{z}}\times \boldsymbol{n}_2
-\label{f2}
+\ilabel{f2}
 \end{align}
 が成り立つ。
 \begin{enumerate}
@@ -234,23 +234,23 @@ k_0\boldsymbol{n}_0 \times \left(k_0\boldsymbol{n}_0 \times \boldsymbol{E}_0\rig
 \item 　(12)より
 \begin{equation}
 B_0\exp \,[i(k_0\boldsymbol{n}_0 \cdot \boldsymbol{r} - \omega t)] + B_2\exp \,[i(k_0\boldsymbol{n}_2 \cdot \boldsymbol{r} - \omega t)] = B_1\exp \,[i(k_1\boldsymbol{n}_1 \cdot \boldsymbol{r} - \omega t)]
-\label{s1}
+\ilabel{s1}
 \end{equation}
 これが任意の$y,\,z,\,t$で成り立つためには
 \begin{align}
 k_0n_{0,y} = k_0n_{2,y} &= k_1n_{1,y} &&\Longrightarrow &&k_0\sin \theta_0 = k_1\sin \theta_1
-\label{s2}
+\ilabel{s2}
 \end{align}
 
   %%%%%% 3.-(b) %%%%%%
 \item 
 \begin{align}
-&\text{(23)，(24)より} && B_0 + B_2 = B_1 \label{f3} \\
-&\text{(10)，(22)，(24)より} && \frac{\omega B_0}{k_0}\cos \theta_0 - \frac{\omega B_2}{k_0}\cos \theta_0 = \frac{\omega B_1}{k_1}\cos \theta_1 \label{f4}
+&\text{(23)，(24)より} && B_0 + B_2 = B_1 \ilabel{f3} \\
+&\text{(10)，(22)，(24)より} && \frac{\omega B_0}{k_0}\cos \theta_0 - \frac{\omega B_2}{k_0}\cos \theta_0 = \frac{\omega B_1}{k_1}\cos \theta_1 \ilabel{f4}
 \end{align}
 (25)，(26)を解いて
 \begin{align}
-B_1 &= \frac{2k_1\cos \theta_0}{k_1\cos \theta_0 + k_0\cos \theta_1}B_0, & B_2 &= \frac{k_1\cos \theta_0 - k_0\cos \theta_1}{k_1\cos \theta_0 + k_0\cos \theta_1}B_0 \label{f5}
+B_1 &= \frac{2k_1\cos \theta_0}{k_1\cos \theta_0 + k_0\cos \theta_1}B_0, & B_2 &= \frac{k_1\cos \theta_0 - k_0\cos \theta_1}{k_1\cos \theta_0 + k_0\cos \theta_1}B_0 \ilabel{f5}
 \end{align}
 
   %%%%%% 3.-(c) %%%%%%
