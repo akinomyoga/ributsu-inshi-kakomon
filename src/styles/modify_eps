@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "usage: $0 <file.eps>"
+    exir
+fi
+file=$1
+
+# backup
+old=$file.bk
+#while [ -e $old ]; do old=$old.bk; done
+[ -e $old ] || mv $file $old
+
+#sed1='s#^/Times-Roman-Ryumin-Light-EUC-H \(.\+ makefont setfont\)$#/Times-Roman \1#'
+#sed2='s#^/Symbol-Ryumin-Light-EUC-H \(.\+ makefont setfont\)$#/Symbol \1#'
+#sed3='s#^/Times-Roman-Ryumin-Light-EUC-H#%%/Times-Roman-Ryumin-Light-EUC-H#'
+#sed4='s#^/Symbol-Ryumin-Light-EUC-H#%%/Symbol-Ryumin-Light-EUC-H#'
+
+sed1='s#^\(/[-a-zA-Z]\+\)-Ryumin-Light-EUC-H \(.\+ makefont setfont\)$#\1 %R \2#'
+sed2='s#^\(/[-a-zA-Z]\+\)-GothicBBB-Medium-EUC-H \(.\+ makefont setfont\)$#\1 %G \2#'
+sed3='s#^\(/[-a-zA-Z]\+-Ryumin-Light-EUC-H\)#%%\1#'
+sed4='s#^\(/[-a-zA-Z]\+-GothicBBB-Medium-EUC-H\)#%%\1#'
+
+cat $old | sed -e "$sed1" -e "$sed2" -e "$sed3" -e "$sed4" > $file
+#touch -r $old $file
