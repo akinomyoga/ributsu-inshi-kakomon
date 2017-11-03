@@ -1,0 +1,388 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題6}{}
+
+% Definition of local macros
+\def\haH{\LowerState{a}\ssub{H}}
+\def\hp{\Operator{p}}
+\def\hq{\Operator{q}}
+\def\hH{\Operator{H}}
+\def\ha{\LowerState{a}}
+\def\had{\RaiseState{a}}
+
+
+一様密度 $\rho_0$ で非圧縮性の液滴を考えよう。液滴は、ある初期条件
+のもとでその内部に渦のない流れを生じ、時間とともに形を変えていく
+ものとする。
+
+\begin{subquestions}
+
+\SubQuestion
+  液滴内部の速度分布を $\Vec{v}(\Vec{r},t)$ として、以下の問に答えよ。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    連続の方程式を用いて、非圧縮性の条件を $\Vec{v}(\Vec{r},t)$ 
+    に対する式として表せ。また、流れに渦がないときには、
+    $\Vec{v} = -\Grad{\uchi}$ となる速度ポテンシャル $\uchi(\Vec{r},t)$
+    が存在してラプラスの方程式
+%
+    \begin{equation}
+      \Laplacian{\uchi (\Vec{r},t)} = 0 \eqname{Q1}
+    \end{equation}
+%
+    を満たすことを示せ。
+
+  \SubSubQuestion
+    上式の解は
+%
+    \begin{equation}
+      \uchi(\Vec{r},t) = \sum_{\ell m} a_{\ell m}(t)f_\ell(r)Y_{\rm\ell m}(\theta,\uphi) \eqname{Q2}
+    \end{equation}
+%
+    と書ける。このとき、動径関数は
+%
+    \begin{equation}
+      \Bigl\{ \frac{1}{r^2}\Deriver{}{r}r^2\Deriver{}{r} - \frac{\ell(\ell+1)}{r^2} \Bigr\} f_\ell(r) = 0 \eqname{Q3}
+    \end{equation}
+
+%
+    に従う。この方程式の液滴内部で正則な解は $f_\ell(r)=r^\ell$で
+    あることを示せ。\\
+    その際、他の独立解は原点 $(r=0)$ で正則でないことを確かめよ。
+
+  \end{subsubquestions}
+
+\SubQuestion
+  液滴の重心から$(\theta,\uphi)$ 方向を見たとき、表面までの距離が
+%
+  \begin{equation}
+    R(\theta,\uphi,t) = R_0 + q(t)Y_{\rm 20}(\theta,\uphi)
+    \eqname{Q4}
+  \end{equation}
+%
+  と変動する場合を考える。以下では、変動の大きさ $\Norm{q(t)}$ が
+  $R_0$に比べて十分に小さいものとする。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    液滴表面までの距離は、内部から表面へ向かって液体が流れることに
+    よって変化する。そこで、
+%
+    \begin{equation}
+      \Partial{}{t} R(\theta,\uphi,t)%
+      = -\Partial{}{r} \uchi (r,\theta,\uphi,t) \bigm|_{r=R}%
+      \eqname{Q5}
+    \end{equation}
+%
+    の関係が成り立つとして、速度ポテンシャル $\uchi(\Vec{r},t)$ を 
+    $\dot{q}(t) \left( \equiv \tDeriver{q}{t} \right) $ を用いて
+    表せ。ただし、変形は微小なので、右辺で $r=R$ を $r=R_0$ と
+    近似して良いものとする。
+
+  \SubSubQuestion
+    液滴内部の速度分布 $(v_x,v_y,v_z)$ を、$Y_{20}(\theta,\uphi)%
+    = \sqrt{\ds \frac{5}{16\pi}}(3\cos^2\theta - 1)$
+    を使って求めよ。次に、液滴内部の全運動エネルギーを計算せよ。
+    ただし、積分は変形が小さいとして、半径 $R_0$ の球内で行なえば良い。
+
+  \SubSubQuestion
+    体積を保存した上記の変形にともない、液滴の表面積は球形のとき
+    より $2q^2(t)$ だけ増加することが知られている。液滴の表面張力を
+    $\sigma$ として、変形によるポテンシャル・エネルギーの変形を求めよ。
+
+  \end{subsubquestions}
+
+\SubQuestion
+  ここで、量子的サイズの液滴の運動を考えよう。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    上記 {\bf 2}の液滴の変形に伴うハミルトニアンは、お互いに正準共役
+    な演算子 $\hq$、$\hp$を用いて
+%
+    \begin{equation}
+      \Operator{H}%
+      = \frac{1}{2M}\{ \hp^2 + (M\omega \hq)^2\}%
+      \eqname{Q6}
+    \end{equation}
+%
+    と表される。ここで、
+%
+    \begin{equation}
+      \Operator{q}%
+      = \sqrt{\frac{\hbar}{2M\omega}}%
+        (\had + \ha ) \hspace{20mm} %
+      \Operator{p}%
+      = i \sqrt{\frac{\hbar M \omega}{2}}%
+        (\had - \ha )
+      \eqname{Q7}
+    \end{equation}
+%
+    の関係にある演算子 $\had$ および $\ha$
+    (交換関係は $[\ha,\,\had] = 1$ )を導入すれば、
+    そのハミルトニアンは
+%
+    \begin{equation}
+     \Operator{H}%
+      = \hbar \omega (\had\ha + \frac{1}{2})%
+      \eqname{Q8}
+    \end{equation}
+%
+    と書ける。$M$ および $\omega$ を $\rho_0$,$R_0$,$\sigma$ を
+    用いて表せ。
+
+  \SubSubQuestion
+    ハイゼンベルク表示の演算子
+    $\haH(t) \equiv%
+    e^{i\hH t/\hbar} \ha e^{-i\hH t/\hbar}$
+    の運動方程式を考えて、
+%
+    \begin{equation}
+      \haH(t)%
+      = e^{-i\omega t}\ha
+      \eqname{Q9}
+    \end{equation}
+%
+    が成り立つことを示せ。
+
+  \SubSubQuestion
+    演算子 $\ha$ の固有状態 $\Ket{z_0}$;
+%
+    \begin{equation}
+      \ha\Ket{z_0} = z_0 \Ket{z_0}, \hspace{20mm}%
+      z_0 = i \sqrt{\frac{M\omega}{2\hbar}}A_0%
+      \eqname{Q10}
+    \end{equation}
+%
+    を考える。$A_0$ は実定数で、$R_0$ に比べれば十分に小さい値で
+    あるとする。この $\Ket{z_0}$ を初期状態とする状態
+    $\Ket{\psi(t)} (= e^{-i\hH t/\hbar}\Ket{z_0}$ は、
+    任意の時刻においてもやはり $\ha$ の固有状態である
+    ことを示せ。また、その固有値 $z(t)$ を求めよ。
+
+  \SubSubQuestion
+    状態 $\Ket{\psi(t)}$ における $\hq$ および
+    $\hp$ の期待値を求め、$A_0$ が何を意味するかについて
+    述べよ。また、 $A_0 \to 0$ のとき、エネルギーの値がどうなるか
+    を答えよ。
+
+  \end{subsubquestions}
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題6}{}
+% Definition of local macros
+\def\haH{\LowerState{a}\ssub{H}}
+\def\hp{\Operator{p}}
+\def\hq{\Operator{q}}
+\def\hH{\Operator{H}}
+\def\ha{\LowerState{a}}
+\def\had{\RaiseState{a}}
+
+
+\begin{subanswers}
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    連続の方程式は、
+%
+    \[ \Div{\rho\Vec{v}}+\Deriver{\rho}{t}=0 \]
+%
+    であり、非圧縮性より $\rho={\rm const}$ したがって $\Grad{\rho}=0$
+    である。渦無しなので $\Vec{v}$を任意の経路で周回積分しても$0$。
+    よって、2点間の任意の経路の積分の値は一定となり、$\Vec{v}$に
+    対するポテンシャル$\Vec{v}=-\Grad{\uchi}$が存在する。
+    これの$\Div{}$を計算すると、以下の通りラプラスの方程式\eqhref{Q1}
+    が示される。
+%
+    \[ \Div{\Vec{v}}=-\Div{\Grad{\uchi}} =-\Laplacian{\uchi} =0 \]
+%
+  \SubSubAnswer
+    $f_\ell(r)=r^\lambda\sum_{n}a_nr^{n}\quad(a_0=1)$と仮定し、
+    これを式\eqhref{Q3}に代入する。
+%
+    \[ \sum_n \{ (\lambda+n)(\lambda+n+1)%
+               -\ell (\ell +1)\} a_nr^{\lambda+n}%
+     - \sum_n \ell (\ell +1) a_nr^{\lambda+n} = 0 \]
+    \[ \Yueni \{ (\lambda+n)(\lambda+n+1)-\ell (\ell +1) \}a_n=0 \]
+%
+    $n=0$の項に関しては$a_0=1$としているので
+    $\lambda=\ell ,-\ell -1$となる。一般の$n$では、$a_n=0(n>0)$となる。
+    また、$\lambda=-\ell -1$では$r=0$で$f$が正則でない。したがって、 
+    $f_\ell(r)=r^\ell$である。
+
+  \end{subsubanswers}
+
+
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    前問の結果と式\eqhref{Q2},\eqhref{Q4}を式\eqhref{Q5}に用いると
+%
+    \[ \dot{q}(t)Y_{20}(\theta, \varphi)
+       = - \Partial{}{r}\sum_{\ell m}%
+           a_{\ell m}(t)r^\ell Y_{\ell m}(\theta, \varphi)%
+           \Bigm|_{r=R_0}
+       = - \sum_{\ell m}a_{\ell m}(t)%
+           \ell R_0^{\ell -1}Y_{\ell m}(\theta, \varphi) \]
+%
+    $Y_{\ell m}$の直交性より最右辺の和は$(\ell ,m)=(2,0)$以外では
+    $a_{\ell m}=0$である。よって、
+%
+    \[ \dot{q}(t)Y_{20}(\theta, \varphi)
+       = -2R_0a_{20}(t)Y_{20}(\theta, \varphi) \hspace{15mm}%
+       \Yueni%
+       a_{20}(t) = -\frac{\dot{q}(t)}{2R_0} \]
+%
+    である。よって$\uchi$は式\eqhref{Q2}より次の通り。
+%
+    \[ \uchi = a_{20}(t)r^2Y_{20}(\theta, \varphi)%
+             = -\frac{r^2}{2R_0}\dot{q}Y_{20}(\theta, \varphi) \]
+%
+  \SubSubAnswer
+    ひたすら計算する。
+%
+    \begin{eqnarray*}
+      \uchi%
+       &=& -\frac{\dot{q}}{8R_0}\sqrt{\frac{5}{\pi}}(3z^2-r^2)%
+        =  -\frac{\dot{q}}{8R_0}\sqrt{\frac{5}{\pi}}(2z^2-x^2-y^2)\\
+      \Vec{v}%
+       &=& -\Grad{\uchi}%
+        =  \frac{\dot{q}}{8R_0}\sqrt{\frac{5}{\pi}}(-2x, -2y, +4z)%
+        =  \frac{\dot{q}}{4R_0}\sqrt{\frac{5}{\pi}}(-x, -y, +2z)\\
+      \Norm{\Vec{v}}^2%
+       &=& \frac{\dot{q}^2}{16R_0^2}\cdot\frac{5}{\pi}(x^2+y^2+4z^2)%
+        =  \frac{5\dot{q}^2}{16\pi R_0^2}r^2(3\cos^2\theta+1)
+    \end{eqnarray*}
+%
+    よって運動エネルギー$K$は、
+%
+    \[
+      K%
+        =  \frac{1}{2}\int_{V}dV\rho_0\Norm{\Vec{v}}^2%
+        =  \Dint{0}{R_0}{r^2\d{r}}\bquad%
+           \Dint{0}{\pi}{\d{\theta}}%
+           \sin\theta\;2\pi\frac{\rho_0}{2}\Norm{\Vec{v}}^2
+        =  \frac{5\rho_0\dot{q}^2}{16R_0^2}%
+           \Dint{0}{R_0}{r^4\d{r}}\bquad%
+           \Dint{0}{\pi}{\d{\theta}}%
+           (3\sin\theta\cos^2\theta+\sin\theta)%
+        =  \frac{R_0^3\rho_0}{4}\dot{q}^2
+    \]
+
+  \SubSubAnswer
+    $(\mbox{表面張力})=\sigma=\Partial{U}{S}\Bigm|_v$より、この体積を保
+    存した変形におけるポテンシャルエネルギーの変化を$\Delta U$、表
+    面積の変化を$\Delta S$とすると、
+    \[\Delta U=\sigma \Delta S=2\sigma q^2\]
+
+  \end{subsubanswers}
+
+
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    {\bf 2}(iii)までより、 古典的ハミルトニアンは、 
+%
+    \[H=2\sigma q^2+\frac{R_0^3\rho_0}{4}\dot{q}^2\]
+%
+    $\dot{q}$と$p$の対応を探るため、 $\dot{q}=\alpha p$とおくと、 
+%
+    \[H=2\sigma q^2+\frac{R_0^3\rho_0}{4}\alpha^2p^2\]
+%
+    $p,q$は正準共役な変数であるから、
+%
+    \[ \dot{q}  = \Partial{H}{p} \quad\Longleftrightarrow\quad%
+       \alpha p = \frac{R_0^3\rho_0}{2}\alpha^2p \hspace{10mm}%
+       \Yueni \alpha=\frac{2}{R_0^3\rho_0} \]
+%
+    したがって、 
+%
+    \[ H=2\sigma q^2+\frac{p^2}{R_0^3\rho_0} \hspace{15mm}%
+       \Yueni%
+       \hH=2\sigma\hq^2+\frac{\hp^2}{R_0^3\rho_0} \]
+%
+    \[ \Yueni%
+       M = \frac{R_0^3\rho_0}{2} \hspace{10mm}%
+       \omega = \sqrt{\frac{8\sigma}{R_0^3\rho_0}} \]
+
+  \SubSubAnswer
+    与えられた$\haH$の時間微分を計算すると
+%
+    \begin{eqnarray*}
+      \Deriver{\haH}{t}%
+       &=& \frac{i}{\hbar} e^{i\hH t/\hbar} \,\hH \ha \,e^{-i\hH t/\hbar}
+         - \frac{i}{\hbar} e^{i\hH t/\hbar} \,\ha \hH \,e^{-i\hH t/\hbar}
+        =  \frac{i}{\hbar} e^{i\hH t/\hbar} \,[\hH,\,\ha] \, e^{-i\hH t/\hbar} \\
+       &=& \frac{i}{\hbar} e^{i\hH t/\hbar} \,(-\hbar\omega \ha)\, e^{-i\hH t/\hbar}
+        = -i\omega \haH
+    \end{eqnarray*}
+%
+    $t=0$で$\haH=\ha$なので、積分して
+%
+    \[\haH=e^{-i\omega t}\ha\]
+
+
+  \SubSubAnswer
+    前問の結果より、
+%
+    \[ e^{i\hH t/\hbar}\ha e^{-i\hH t/\hbar} = e^{-i\omega t}\ha \]
+%
+    これに、$\Ket{z_0}$をかけると、 
+%
+    \[ e^{i\hH t/\hbar}\ha e^{-i\hH t/\hbar}\Ket{z_0}      = e^{-i\omega t}\ha \Ket{z_0}%
+       \quad\Longleftrightarrow\quad%
+       e^{i\hH t/\hbar}\ha \Ket{\psi(t)} = e^{-i\omega t}z_0\Ket{z_0} \]
+%
+    両辺に$e^{-i\hH t/\hbar}$をかけることによって、 
+%
+    \[ \ha\Ket{\psi(t)}%
+       =  e^{-i\hH t/\hbar}e^{-i\omega t}z_0\Ket{z_0}
+       =  z_0 e^{-i\omega t}\Ket{\psi(t)} \]
+%
+    したがって、 $\Ket{\psi(t)}$は$\ha$の固有状態。 固有値$z(t)$は
+    $z_0e^{-i\omega t}$ であることがわかる。
+
+
+  \SubSubAnswer
+    前問より
+%
+    \[ \ha\Ket{\psi}  = z_0 e^{-i\omega t}\Ket{\psi} \hspace{15mm}%
+       \Bra{\psi}\had = \Bra{\psi} z_0^{\ast} e^{+i\omega t} \]
+%
+    よって
+%
+    \[ \Mean{\had} = \Bracket{\psi}{\had}{\psi}%
+                   = \Bracket{\psi}{z_0^{\ast} e^{+i\omega t}}{\psi}%
+                   = z_0^{\ast} e^{+i\omega t}%
+                   = -i\sqrt{\frac{M\omega}{2\hbar}}A_0 e^{+i\omega t} \]
+    \[ \Mean{\ha} = \Bracket{\psi}{\ha}{\psi}%
+                   = \Bracket{\psi}{z_0 e^{-i\omega t}}{\psi}%
+                   = z_0 e^{-i\omega t}%
+                   = +i\sqrt{\frac{M\omega}{2\hbar}}A_0 e^{-i\omega t} \]
+%
+    したがって、
+%
+    \[ \Mean{\hq}  = i\sqrt{\frac{\hbar}{2M\omega}}\Bigl(\Mean{\had}+\Mean{\ha}\Bigr)%
+                   = i\sqrt{\frac{\hbar}{2M\omega}}i\sqrt{\frac{M\omega}{2\hbar}}A_0(-e^{+i\omega t}+e^{-i\omega t})%
+                   = A_0 \sin{\omega t} \]
+    \[ \Mean{\hp}  = i\sqrt{\frac{\hbar M\omega}{2}}\Bigl(\Mean{\had}-\Mean{\ha}\Bigr)%
+                   = i\sqrt{\frac{\hbar M\omega}{2}}i\sqrt{\frac{M\omega}{2\hbar}}A_0(-e^{+i\omega t}-e^{-i\omega t})%
+                   = M\omega A_0 \cos{\omega t} \]
+%
+    これは液滴の振幅$A_0$の振動を表している。
+    この液滴のエネルギー$E$の平均は
+%
+    \[ \Mean{E} = \Bracket{\psi}{\hat{H}}{\psi}%
+                = \hbar\omega \left<\psi\right|\hat{a}^\dagger\hat{a}+\frac{1}{2}\left|\psi\right> = \frac{M\omega^2}{2}A_0^2 + \frac{\hbar\omega}{2} \]
+%
+    $A_0=0$の状態は零点振動を表す。
+  \end{subsubanswers}
+\end{subanswers}
+\end{answer}
+
+
+\end{document}

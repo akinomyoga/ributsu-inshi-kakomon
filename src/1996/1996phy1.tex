@@ -1,0 +1,471 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題1}{}
+
+% Definition of local macros
+\def\WF#1{\psi\raisebox{-0.5ex}{\scriptsize$#1$}}
+\def\WFHC#1{\psi\raisebox{1.0ex}{\hbox to 0pt{\scriptsize$\ast$\hss}}\raisebox{-0.5ex}{\scriptsize$#1$}}
+\def\vr{\vec{r}\,}
+
+
+水素原子の中の陽子と電子の相対運動のシュレディンガー方程式は、
+相対座標を$\vr$、換算質量を$m$とすると、cgsガウス系を単位系に
+用いた場合、通常次の形に書かれる。
+%
+\begin{equation} 
+  \Bigl[ -\frac{\hbar^2}{2m} \nabla^2 +V(\vr) \Bigr]\psi(\vr)%
+  = E \psi(\vr) \eqname{Q1}
+\end{equation}
+\begin{equation}
+  V = -e^2/r \eqname{Q2}
+\end{equation}
+%
+この固有エネルギー$E_n$と固有関数$\psi_{\rm n\ell m}(\vr)$は
+次のように求まる:
+%
+\begin{equation}
+  E_n =-\frac{R_{\rm y}}{n^2} \qquad (n=1,2,...) \eqname{Q3}
+\end{equation}
+%
+\begin{equation}
+  \WF{\rm n\ell m}(\vr)%
+  = R_{\rm n\ell}(r)Y_{\rm \ell m}(\theta,\phi) \qquad%
+  (\ell=0,1,...,n\!-\!\!1; \quad m=0,\pm 1,...,\pm \ell)  \eqname{Q4}
+\end{equation}
+%
+ただし $R_{\rm y}\equiv me^4/2\hbar^2$は Rydberg定数である。
+ここで、$(r,\theta,\phi)$は極座標、$Y_{\rm \ell m}(\theta,\phi)$は
+規格化された球面調和関数であり、たとえば、$Y_{00}=1/\sqrt{4\pi}$で
+ある。波動関数の動径部分 $R_{\rm n\ell}(r)$ は、
+\Orbit{1s}状態($n\!=\!1,\,\ell\!=\!0$)、
+\Orbit{2s}状態($n\!=\!2,\,\ell\!=\!0$)および、
+\Orbit{2p}状態 ($n\!=\!2,\,\ell\!=\!1$)についてはそれぞれ、
+%
+\begin{eqnarray}
+  R_{10}(r) &=& \frac{2}{\sqrt{a^3}}%
+                \exp{\Bigl( -\frac{r}{a}\Bigr)}   \eqname{Q5} \\
+  R_{20}(r) &=& \frac{1}{\sqrt{8a^3}}%
+                \Bigl( 2-\frac{r}{a} \Bigr)%
+                \exp{\bigl( -\frac{r}{2a} \Bigr)} \eqname{Q6} \\
+  R_{21}(r) &=& \frac{1}{\sqrt{24a^5}}%
+                r \exp{\Bigl(-\frac{r}{2a}\Bigr)} \eqname{Q7}
+\end{eqnarray}
+%
+で与えられる。ただし、$a \equiv \hbar^2/me^2$ は Bohr 半径である。\\
+以上の知識を手がかりにして、以下の問いに答えよ。
+
+
+
+\begin{subquestions}
+\SubQuestion
+  絶縁体に弱い光を当てると、電子と正孔のペアができる。絶縁体の中では、
+  電子は電荷$-e$で質量が$m_e$の粒子のように、正孔は電荷$+e$で質量が
+  $m_h$の粒子のようにふるまい、両者の間にはたらくポテンシャルは、
+  絶縁体の(比)誘電率を$\varepsilon$(定数とする)として、
+%
+  \begin{equation}
+    V = - \frac{e^2}{\varepsilon r} \eqname{Q8}
+  \end{equation}
+%
+  で与えられると仮定する。電子と正孔の束縛状態について、以下の問いに
+  答えよ。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    最も低いエネルギーを持つ束縛状態の束縛エネルギーを求めよ。
+
+  \SubSubQuestion
+    この束縛状態の空間的広がりの目安として、$r$の期待値$\Mean{r}$を
+    求めよ。
+
+  \end{subsubquestions}
+
+\SubQuestion
+  電子が実際に感じるポテンシャルは、式\eqhref{Q2}や式\eqhref{Q8}
+  から少しずれていることが分かっている。たとえば水素原子の場合、
+  陽子のごく近くでは、電子・陽子対が仮想的に生成・消滅している
+  「雲」の内側にはいるためにポテンシャルが修正される。それが何を
+  もたらすかを大ざっぱにみるために、式\eqhref{Q2}のポテンシャルを
+  次のように修正してみよう。
+%
+  \begin{equation}
+    V(\vr) = -\frac{e^2}{r} - \lambda \delta^3(\vr) \eqname{Q9}
+  \end{equation}
+%
+  ただし、$\lambda$はある正の定数であり、$\delta^3(\vr)$ は3次元の
+  デルタ関数である。
+
+\newpage
+  \begin{subsubquestions}
+  \SubSubQuestion
+    $V$の右辺第2項を摂動とみなし、摂動を受けた\Orbit{1s}状態、
+    \Orbit{2s}状態、\Orbit{2p}状態のエネルギーを、それぞれ
+    $\lambda$の一乗の精度で求めよ。
+
+  \SubSubQuestion
+    摂動を受けた\Orbit{1s}状態の電子について、電子を見いだす確率密度
+    の$r=0$における値が、$\lambda=0$の場合の何倍になっているかを
+    求めよ。ただし、摂動計算に用いる非摂動状態としては、
+    \Orbit{1s},\Orbit{2s},\Orbit{2p}状態だけを考慮すればよく、また、
+    $\lambda$の一乗の精度まででよい。
+
+  \SubSubQuestion
+    この確率密度が$\lambda=0$の場合に比べて増加しているか減少して
+    いるかを述べ、式\eqhref{Q9}の形のポテンシャルがそのような確率
+    密度の増加(あるいは減少)をもたらした理由を直感的に説明せよ。
+
+  \end{subsubquestions}
+
+\SubQuestion
+  通常のクーロンポテンシャルで記述される系、式\eqhref{Q1}-\eqhref{Q7}
+  に戻って、量子力学における確率の意味を考えよう。\\
+  時刻$t=t_0$に、電子を、\Orbit{1s}状態と \Orbit{2s}状態の次のような
+  重ね合わせ状態に置く:
+%
+  \begin{equation}
+    \psi(\vr,t\!=\!t_0)%
+    = \frac{1}{\sqrt{2}}\bigl[%
+        \psi_{100}(\vr) + \psi_{200}(\vr)%
+      \bigr]%
+    \eqname{Q10}
+  \end{equation}
+%
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    この状態では、確率密度$\Norm{\psi(\vr,t)}^2$が$t$の周期関数
+    になることを示し、その周期を求めよ。
+
+  \SubSubQuestion
+    電子のエネルギーの期待値$\Mean{E}$はいくらか? また、実際に電子の
+    エネルギー$E$を一度だけ測定した場合に測定値として得られる可能性
+    がある$E$の値をすべて挙げ、その値が得られる確率を書け。
+
+  \SubSubQuestion
+    一度目の測定を終了してから、もういちど式\eqhref{Q10}の状態の電子
+    を用意し、その$E$を測定する。さらにもう一度式\eqhref{Q10}の状態
+    の電子を用意し、その$E$を測定する、...、ということを繰り返し、
+    全部で$N$回の測定を行うとする。$i$番目$(i=1,2,...,N)$の測定で得た
+    $E$の測定値を$\eps_i$と記すと、通常、その平均値
+%
+    \begin{equation}
+      \bar{\eps}_N = \frac{1}{N} \sum_{i=1}^N \eps_i \eqname{Q11}
+    \end{equation}
+%
+    を「$E$の実験値」として、理論値と比較することになる。しかしながら、
+    測定の回数$N$が有限である以上、$\bar{\eps}_N$は一般には
+    上で計算した$\Mean{E}$とは異なる。この、実験値
+    $\bar{\eps}_N$と理論値$\Mean{E}$ のずれを$\delta$と記すこと
+    にする。その自乗期待値
+%
+    \begin{equation}
+      \Mean{\delta^2}  \equiv \Mean{(\bar{\eps}_N - \Mean{E} )^2 }
+      \eqname{Q12}
+    \end{equation}
+%
+    を求めよ。そして、無限回の測定を繰り返せば$\bar{\eps}_N$が
+    $\Mean{E}$に一致すると期待できること、即ち、$N \to \infty$ で 
+    $\Mean{\delta^2} \to 0$となることを確かめよ。
+
+  \end{subsubquestions}
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題1}{}
+% Definition of local macros
+\def\WF#1{\psi\raisebox{-0.5ex}{\scriptsize$#1$}}
+\def\WFHC#1{\psi\raisebox{1.0ex}{\hbox to 0pt{\scriptsize$\ast$\hss}}\raisebox{-0.5ex}{\scriptsize$#1$}}
+\def\vr{\vec{r}\,}
+\def\Comb#1#2{\mbox{\tiny$#1$}{\rm C}\mbox{\tiny$#2$}}
+\def\HI{{\cal H}^\prime\,}
+\def\zpar{\kern-0.7ex\raisebox{1.1ex}{\tiny$(0)$}}
+\def\fpar{\kern-0.7ex\raisebox{1.1ex}{\tiny$(1)$}}
+
+
+\begin{subanswers}
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer 
+    この系では換算質量が $m=\ds\frac{m_em_h}{m_e+m_h}$
+    、電荷が $e^2\rightarrow \ds\frac{e^2}{\varepsilon}$と
+    置き換えられるので、Rydberg定数は、\vspace*{-2mm}
+%
+    \[ R_{\rm y} = \frac{m_em_he^4}{2\hbar^2(m_e\!+\!m_h)} \frac{1}{\varepsilon^2} \]
+%
+    と変更される。よって最低エネルギーは、
+%
+    \[ E_1 = -R_{\rm y}%
+           = -\frac{m_em_he^4}{(m_e\!+\!m_h)2\varepsilon^2\hbar^2} \]
+%
+    である。ついでにBohr半径 $a$ は
+%
+    \[ a = \frac{\hbar^2\varepsilon(m_e\!+\!m_h)}{m_em_he^2} \]
+%
+    と変更される。以後この表式での$R_{\rm y}$と$a$を用いる。
+
+  \SubSubAnswer
+    \Orbit{1s}状態での$r$の期待値$\Mean{r}$は
+%
+    \[ \Mean{r}%
+       = \Bracket{\Orbit{1s}}{\hat{r}}{\Orbit{1s}}%
+       =  \Uint{\d{\vr}}%
+            \WFHC{\Orbit{1s}}(\vr)\,r\,\WF{\Orbit{1s}}(\vr)%
+       =  \Dint{0}{\infty}{\d{r}}\bquad
+          \Dint{0}{\pi}{\d{\theta}}\bquad%
+          \Dint{0}{2\pi}{\d{\varphi}} r^2\sin\theta\cdot%
+          r\bigl| R_{10}(r)Y_{00}(\theta,\varphi) \bigr|^2 \]
+
+    球面調和関数$Y_{00}$は球面積分に対して規格化されているので
+%
+    \[ \Dint{0}{\pi}{\d{\theta}}\bquad\Dint{0}{2\pi}{\d{\varphi}}%
+       \sin\theta\bigl|Y_{00}(\theta,\varphi)\bigr|^2 = 1 \]
+%
+    である。先の積分を続けると、
+%
+    \[ \Mean{r}%
+       = \Dint{0}{\infty}{\d{r}} r^3 \Bigl[\frac{2}{\sqrt{a^3}}%
+         \exp\left(-\frac{r}{a}\right)\Bigr]^2%
+       = \frac{a}{4} \Dint{0}{\infty}{\d{\left(\frac{2r}{a}}\right)}%
+         \left(\frac{2r}{a}\right)^3 \exp\left(-\frac{2r}{a}\right)%
+       = \frac{a}{4}3! = \frac{3a}{2} \]
+%
+    となる。
+
+
+  \end{subsubanswers}
+
+
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    ハミルトニアンの摂動項を$\HI\equiv -\lambda\delta^3(\vr)$
+    で表すことにする。$4\pi r^2\delta^3(\vr)=\delta(r)$であることに
+    注意する。\\
+%
+    \Orbit{1s}状態のエネルギーの1次摂動 $E_{\Orbit{1s}}\fpar$ は
+%
+    \begin{eqnarray*}
+      E_{\Orbit{1s}}\fpar%
+        &=&  \Bracket{\Orbit{1s}}\HI{\Orbit{1s}}%
+         =  -\lambda\Uint{\d{\vr}}%
+             \WFHC{\Orbit{1s}}\zpar(\vr)%
+             \delta^3(\vr)%
+             \WF{\Orbit{1s}}\zpar(\vr)\\
+        &=& -\lambda\Dint{0}{\infty}{\d{r}}%
+             r^2\frac{\delta(r)}{4\pi r^2}|R_{10}(r)|^2%
+             \Dint{0}{\pi}{\d{\theta}}\bquad%
+             \Dint{0}{2\pi}{\d{\varphi}}\sin\theta
+             \left|Y_{00}(\theta,\varphi)\right|^2%
+         =  -\frac{\lambda}{4\pi} |R_{10}(0)|^2%
+         =  -\frac{\lambda}{a^3\pi}
+    \end{eqnarray*}
+%
+    同様に\Orbit{2s}状態のエネルギーの1次摂動
+    $E_{\Orbit{2s}}\fpar$ は
+%
+    \[ E_{\Orbit{2s}}\fpar%
+       =  \Bracket{\Orbit{2s}}\HI{\Orbit{2s}}%
+       =  -\frac{\lambda}{4\pi} |R_{20}(0)|^2%
+       =  -\frac{\lambda}{8a^3\pi} \]
+%
+    となる。\Orbit{2p}の各状態の1次摂動は $R_{21}(0)=0$なので
+%
+    \[ E_{\Orbit{2p}}\fpar = 0 \]
+%
+
+  \SubSubAnswer
+    \Orbit{1s}状態が\Orbit{2s}または\Orbit{2p}状態に遷移する
+    状況を考えるので、1次摂動まで考慮した$\WF{\Orbit{1s}}$ は
+%
+    \[ \WF{\Orbit{1s}}%
+       = \WF{\Orbit{1s}}\zpar + \sum_i c_i\WF{i}\zpar%
+       \hspace{20mm}%
+       i=\{\Orbit{2s},\Orbit{2p_x},\Orbit{2p_y},\Orbit{2p_z}\} \]
+%
+    と表される。この係数 $c_i$ は次の通り。
+%
+    \[ c_i = \frac{\Bracket{{\;}i{\;}}{\HI}{\Orbit{1s}}}%
+                  {E_1\zpar - E_i\zpar}%
+           =  \frac{\Bracket{{\;}i{\;}}{\HI}{\Orbit{1s}}}%
+                  {E_1\zpar - E_2\zpar}%
+           =  \frac{\Bracket{{\;}i{\;}}{\HI}{\Orbit{1s}}}%
+                  {-R_{\rm y}+R_{\rm y}/4}%
+           =  -\frac{4}{3R_{\rm y}}%
+               \Bracket{{\;}i{\;}}{\HI}{\Orbit{1s}} \]
+%
+    \Orbit{2p}の各状態の$c_i$は、$\HI=-\lambda\delta^3(\vr)$
+    、$R_{21}(0)=0$を考慮すると $0$であることがわかる。
+    \Orbit{2s}の状態の$c_i$のみ$0$でない値をもつ。
+%
+    \begin{eqnarray*}
+      c_{\Orbit{2s}}%
+        &=&  \frac{4\lambda}{3R_{\rm y}}%
+             \Dint{0}{\infty}{\d{r}}%
+             r^2\frac{\delta(r)}{4\pi r^2}R_{20}(r)R_{10}(r)%
+             \Dint{0}{\pi}{\d{\theta}}\bquad%
+             \Dint{0}{2\pi}{\d{\varphi}}\sin\theta%
+             \left|Y_{00}(\theta,\varphi)\right|^2 \\
+        &=&  \frac{4\lambda}{3R_{\rm y}}\cdot \frac{1}{4\pi}\cdot%
+             R_{20}(0)R_{10}(0)%
+         =   \frac{\lambda}{3\pi R_{\rm y}}\cdot%
+             \frac{2}{\sqrt{8a^3}}\cdot%
+             \frac{2}{\sqrt{a^3}}%
+         =   \frac{\sqrt{2}\lambda}{3\pi a^3 R_{\rm y}}
+    \end{eqnarray*}
+%
+    よって
+%
+    \[ \WF{\Orbit{1s}}(\vr)%
+       = \WF{\Orbit{1s}}\zpar(\vr)
+         +\frac{\sqrt{2}\lambda}{3\pi a^3 R_{\rm y}}
+         \WF{\Orbit{2s}}\zpar(\vr) \]
+%
+    である。中心$(\vr=0)$における電子密度は
+%
+    \[ |\WF{\Orbit{1s}}(0)|^2%
+       \simeq |\WF{\Orbit{1s}}\zpar(0)|^2%
+             +\frac{2\sqrt{2}\lambda}{3\pi a^3 R_{\rm y}}%
+              \WFHC{\Orbit{2s}}\zpar(0)\WF{\Orbit{1s}}\zpar(0)%
+       =      \frac{2}{a^3}%
+              \Bigl( 1+\frac{2\lambda}{3a^3\pi R_{\rm y}} \Bigr) \]
+%
+    となり、$\lambda=0$にくらべて$(\ )$で囲んだ係数だけ密度が高く
+    なっている。
+
+  \SubSubAnswer
+    ポテンシャルが深くなって電子がより集まったから。
+
+  \end{subsubanswers}
+
+
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    エネルギー$E$の定常状態の波動関数の時間依存性は$e^{-iEt/\hbar}$
+    であるので、式\eqhref{Q10}は次のように時間発展する。ただし$t_0=0$
+    としている。
+%
+    \[ \psi(\vr,t)%
+       = \frac{1}{\sqrt{2}}\Bigl(%
+           \WF{100}(\vr)\cdot e^{-iE_1t/\hbar}%
+          +\WF{200}(\vr)\cdot e^{-iE_2t/\hbar}%
+         \Bigr) \]
+%
+    $\WF{100},\WF{200}$は実数なので$\psi(\vr,t)$の複素共役は
+%
+    \[ \psi^\ast(\vr,t)%
+       = \frac{1}{\sqrt{2}}\Bigl(%
+           \WF{100}(\vr)\cdot e^{+iE_1t/\hbar}%
+          +\WF{200}(\vr)\cdot e^{+iE_2t/\hbar}%
+         \Bigr) \]
+%
+    となるので確率密度は
+%
+    \begin{eqnarray*}
+      |\psi(\vr,t)|^2%
+      &=& \frac{1}{2}\Bigl(%
+            |\WF{100}|^2 + |\WF{200}|^2%
+            + \WF{100}\WF{200}\cdot e^{+i(E_1\!-\!E_2)t/\hbar}%
+            + \WF{200}\WF{100}\cdot e^{-i(E_1\!-\!E_2)t/\hbar}%
+          \Bigr) \\
+      &=& \frac{1}{2}\Bigl(%
+            |\WF{100}|^2 + |\WF{200}|^2
+            +2\WF{100}\WF{200}\cdot\cos{\frac{E_1\!-\!E_2}{\hbar}t}
+          \Bigr) \\
+    \end{eqnarray*}
+%
+    よって時間の周期関数である。その周期$T$は、
+%
+    \[ T = \frac{2\pi\hbar}{E_2-E_1} = \frac{8\pi\hbar}{3R_y} \]
+
+  \SubSubAnswer
+    式\eqhref{Q10}で表される状態を測定して$\WF{100}$を見出す
+    確率$P_1$は
+%
+    \[ P_1 = \left| \Uint{\d{\vr}}\WFHC{100}%
+             \frac{1}{\sqrt{2}}\bigl[%
+               \psi_{100}(\vr) + \psi_{200}(\vr)%
+             \bigr]%
+             \right|^2 = \frac{1}{2} \]
+%
+    この時、電子のエネルギーは$E_1$である。$\WF{200}$を見出す
+    確率$P_2$も同じである。\\
+%
+    よって電子のエネルギーの平均値$\Mean{E}$は
+%
+    \[ \Mean{E} = \frac{1}{2}(E_1+E_2) \]
+
+
+  \SubSubAnswer
+    $N$回の測定でエネルギー$E_1$を$n$回測定し、
+    $E_2$を$N-n$回測定する確率$P(n)$は、
+%
+    \[ P(n)%
+       = \Bigl(\frac{1}{2}\Bigr)^{n}%
+         \Bigl(\frac{1}{2}\Bigr)^{N-n}%
+         \Comb{N}{n}%
+       = \frac{\Comb{N}{n}}{2^N} \]
+%
+    である。次に $\IDelta E \equiv (E_2-E_1)/2 = 3R_{\rm y}/8$
+    と定義して $E_1 = \Mean{E}-\IDelta E$、
+    $E_2 = \Mean{E}+\IDelta E$と表すことにする。
+    $N$回の測定でのエネルギーの平均値 $\bar{\eps}\mbox{\tiny$N$}$ は
+%
+    \[ \bar{\eps}\mbox{\tiny$N$}%
+       = \frac{E_1n+E_2(N-n)}{N}%
+       = \Mean{E} + \frac{\IDelta E}{N}(2n-N) \]
+%
+    となる。よって$\Mean{\delta^2}$は
+%
+    \begin{eqnarray*}
+     \Mean{\delta^2}%
+      &=& \Mean{(\bar{\eps}\mbox{\tiny$N$} - \Mean{E} )^2 }
+       =  \sum_{n=0}^{N}(\bar{\eps}_N-\Mean{E})^2 P(n)
+       =  \sum_{n=0}^{N}%
+          \frac{\IDelta E^2}{N^2}(2n-N)^2%
+          \frac{\Comb{N}{n}}{2^N} \\
+      &=& \frac{\IDelta E^2}{2^NN^2} \Bigl[%
+              4 \sum_{n=0}^{N} n^2 \Comb{N}{n}%
+            -4N \sum_{n=0}^{N} n   \Comb{N}{n}%
+            +N^2\sum_{n=0}^{N}     \Comb{N}{n} \Bigr]
+    \end{eqnarray*}
+%
+    ここで $\Comb{N}{n}$ の種々の公式
+%
+    \[ n   \Comb{N}{n} = N \Comb{N\!-\!1}{n\!-\!1}%
+       \hspace{10mm}%
+       n^2 \Comb{N}{n} = N(N\!-\!1) \Comb{N\!-\!2}{n\!-\!2}%
+                       + N \Comb{N\!-\!1}{n\!-\!1}%
+       \hspace{10mm}%
+       \sum_{n=0}^{N} \Comb{N}{n} = 2^N \]
+%
+    を思い出して計算を進めると、
+%
+    \begin{eqnarray*}
+     \Mean{\delta^2}%
+      &=& \frac{\IDelta E^2}{2^NN^2} \Bigl[%
+            4N(N\!-\!1)\sum_{n=0}^{N} \Comb{N\!-\!2}{n\!-\!2}%
+          + 4N     \sum_{n=0}^{N} \Comb{N\!-\!1}{n\!-\!1}%
+          - 4N^2   \sum_{n=0}^{N} \Comb{N\!-\!1}{n\!-\!1}%
+          +  N^2   \sum_{n=0}^{N} \Comb{N}{n}  \Bigr] \\
+      &=& \frac{\IDelta E^2}{2^NN^2} \Bigl[%
+            4N(N\!-\!1)2^{N-2}%
+          + 4N     2^{N-1}%
+          - 4N^2   2^{N-1}%
+          +  N^2   2^{N}  \Bigr] \\
+     &=& \frac{\IDelta E^2}{N^2} \Bigl[%
+            N^2-N+2N-2N^2+N^2 
+         \Bigr] \\
+     &=& \frac{\IDelta E^2}{N}%
+      =  \frac{1}{N}\Bigl(\frac{3R_{\rm y}}{8}\Bigr)^2
+    \end{eqnarray*}
+%
+    となる。確かに$N\to\infty$で$\Mean{\delta^2}\to 0$となる。
+       
+  \end{subsubanswers}
+\end{subanswers}
+\end{answer}
+
+\end{document}

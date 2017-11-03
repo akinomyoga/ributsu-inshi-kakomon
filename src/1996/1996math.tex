@@ -1,0 +1,531 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{教育 数学}{}
+
+\begin{subquestions}
+\SubQuestion
+  実変数$x,y,z$に関する二次形式
+%
+  \begin{equation}
+    f(x,y,z)=2x^2+3y^2+4z^2-\sqrt{6}xy+\sqrt{6}yz \eqname{Q1-1}
+  \end{equation}
+%
+  について、以下の設問に答えよ。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    ベクトル$\vec{r}$を
+    \[ \vec{r}=\left(\begin{array}{c}x\\y\\z\end{array} \right) \] 
+    とし、$f(x,y,z)=\Trans{\vec{r}} A \vec{r}$と表したとき、
+    対称行列$A$の固有値と単位固有ベクトル(第2成分は非負)を求めよ。
+    ここでは$\Trans{\vec{r}}\,$は$\vec{r}\,$の転置を表す。
+
+  \SubSubQuestion
+    上で求めた$A$の固有値$\lambda_1,\lambda_2,\lambda_3$に対応する
+    単位固有ベクトル$\vec{p_1},\vec{p_2},\vec{p_3}$を並べて
+    3行3列の行列$P=(\vec{p_1},\vec{p_2},\vec{p_3})$を作る。
+    $P$による座標変換
+%
+    \begin{equation}
+      \vec{r}=P\vec{r}^\prime, \hspace{15mm} %
+      \vec{r}^\prime=\left(\begin{array}{c}x^\prime\\y^\prime\\z^\prime\end{array}\right) \eqname{Q1-2}
+    \end{equation}
+%
+    を行った場合、$f(x,y,z)$がどのような形に変換されるかを求めよ。
+    また、$P$によって変換されるベクトルはその大きさを変えないこと
+    を示せ。
+
+  \SubSubQuestion
+    $P$による変換をある軸のまわりの回転とみなした時、
+    この回転軸の方向ベクトルを求めよ。
+
+  \SubSubQuestion
+    $P^n=E$となる最小の自然数$n$を求めよ。
+    ただし$E$は3次の単位行列である。
+
+  \end{subsubquestions}
+
+
+\SubQuestion
+  2次元$(x,y)$平面の上半面$(-\infty < x < \infty,y>0)$における、
+  なめらかな曲線を考える。
+  曲線は、実数パラメータ$s$によって$(x(s),y(s))$と表され、
+  次の微分方程式を満たすものとする。
+%
+  \begin{equation}
+    y x^{\prime\prime}-2x^\prime y^\prime   = 0 \hspace{15mm}%
+    yy^{\prime\prime}+{x^\prime}^2-{y^\prime}^2 = 0%
+    \eqname{Q2-1}
+  \end{equation}
+%
+  ただし、関数$x(s)$は2階微分可能で、
+  $x^\prime=\tDeriver{x}{s},\,x^{\prime\prime}=\tDeriver{^2x}{s^2}$
+  および
+  ${x^\prime}^2=(\tDeriver{x}{s})^2$
+  である。関数$y(s)$についても同様である。以下の設問に答えよ。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    新しい変数
+%
+    \begin{equation}
+      X={\frac{x^\prime}{y}},\hspace{15mm} Y={\frac{y^\prime}{y}} \eqname{Q2-2}
+    \end{equation}
+%
+    を導入して変数$X(s)$と$Y(s)$の満たすべき方程式を求めよ。\\
+    さらに次の関係
+%
+    \begin{equation}
+      X^2+Y^2=C \eqname{Q2-3}
+    \end{equation}
+%
+    が成り立つことを示せ。ただし、$C$は定数である。
+
+  \SubSubQuestion
+    方程式\eqhref{Q2-1}を満たす$(x(s),y(s))$はどのような曲線群を
+    表すか。$X=0$と$X\neq 0$の場合に分けて、それぞれについて求めよ。
+    ただし$C=1$としてよい。
+
+  \end{subsubquestions}
+
+\newpage
+\SubQuestion
+%
+  \begin{equation}
+    x^2+y^2=z^2 \eqname{Q3-1}
+  \end{equation}
+%
+  を満たす正の整数$x,y,z$の組み合わせを全て求める方法を考える。
+  ここで$x,y,z$のどの2つも、たがいに素(最大公約数が$1$)とする。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+    $x$と$y$は、一方が偶数、もう一方が奇数であることを証明せよ。
+
+  \SubSubQuestion
+    以下では、偶数の方を$x$とする。
+    残りの$y$と$z$の2数から、$A=(z+y)/2,B=(z-y)/2$と定義するとき、
+    $A$と$B$は整数であり、かつ、たがいに素であることを証明せよ。
+
+  \SubSubQuestion
+    一般に、たがいに素な正の整数$A$と$B$の積が正の整数の$2$乗、すなわち
+%
+    \begin{equation}
+      A\cdot B=C^2 \eqname{Q3-2}
+    \end{equation}
+%
+    で表せる場合、$A=\alpha^2,B=\beta^2$となる整数$\alpha,\beta$が
+    存在することを証明せよ。
+
+  \SubSubQuestion
+    式\eqhref{Q3-1}を満たす3つの整数$x,y,z$を2つの整数$\alpha,\beta$
+    (ここで$\alpha >\beta > 0$)から導く式を示せ。
+
+  \SubSubQuestion
+    前問の結果を用いて、$ \alpha \leq 6 $の範囲で、たがいに素な
+    すべての$x,y,z$の組み合わせを示せ。
+
+  \end{subsubquestions}
+\end{subquestions}
+\end{question}
+\begin{answer}{教育 数学}{}
+
+% Definition of local macros
+\def\vr{\vec{r}\,}
+
+% ---- 3次元横ベクトルの成分表示
+\def\vectT#1#2#3{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
+
+\begin{subanswers}
+\SubAnswer
+
+  \begin{subsubanswers}
+  \SubSubAnswer
+    式\eqhref{Q1-1}は次のように表される。
+%
+    \[ f(x,y,z)=%
+       \vectT{x}{y}{z}
+       \begin{pmatrix}
+         2          & -\sqrt{6}/2 & 0          \\
+        -\sqrt{6}/2 & 3           & \sqrt{6}/2 \\
+         0          & \sqrt{6}/2  & 4          \end{pmatrix}
+       \vect{x}{y}{z} \]
+%
+    この行列が$A$である。$A$の固有値
+    $\lambda$ は $\det(A-\lambda E)=0 $ より、
+%
+    \begin{eqnarray*}
+      \lefteqn{\det \begin{pmatrix}%
+         2-\lambda  & -\sqrt{6}/2 & 0          \\
+        -\sqrt{6}/2 & 3-\lambda   & \sqrt{6}/2 \\
+         0          & \sqrt{6}/2  & 4-\lambda  \end{pmatrix}}\\
+       &=&  (2-\lambda)(3-\lambda)(4-\lambda)%
+           -(2-\lambda)\left( \sqrt{6}/2\right)^2%
+           -(4-\lambda)\left(-\sqrt{6}/2\right)^2 \\
+       &=& -\lambda^3 + 9\lambda^2 - 23\lambda + 15%
+        =  -(\lambda-5)(\lambda-3)(\lambda-1)%
+        =  0 \\
+       &\Yueni& \lambda=1,\,3,\,5
+    \end{eqnarray*}
+%
+    各固有値を、次の問いの形式に従って
+    $\lambda_1=1,\,\lambda_2=3,\,\lambda_3=5$と置く。
+    それぞれの単位固有ベクトル\\
+    $\vec{p}_1,\,\vec{p}_2,\,\vec{p}_3$は
+%
+    \[ A\vec{p}_i=\lambda \vec{p}_i  \quad (i=1,2,3) \hspace{15mm}%
+       |\vec{p}_i|=1  \quad (i=1,2,3) \]
+%
+    から計算すると以下の通りとなる。
+%
+    \[ \vec{p}_1 = \vect{\hfill 3/4}{\sqrt{6}/4}{-1/4}%
+       \hskip 0.4 in%
+       \vec{p}_2 = \vect{-\sqrt{6}/4}{1/2}{-\sqrt{6}/4}%
+       \hskip 0.4 in%
+       \vec{p}_3 = \vect{-1/4}{\sqrt{6}/4}{\hfill 3/4} \]
+%
+
+  \SubSubAnswer
+    行列$P$の成分は次の通りである。
+%
+    \[ P = \vectT{\vec{p}_1}{\vec{p}_2}{\vec{p}_3}
+         = \begin{pmatrix}
+            \hfill 3/4 & -\sqrt{6}/4 & -1/4       \\
+            \sqrt{6}/4 &  1/2        & \sqrt{6}/4 \\
+            -1/4       & -\sqrt{6}/4 & \hfill 3/4 \end{pmatrix} \]
+%
+    $\vec{p}_1 ,\vec{p}_2 ,\vec{p}_3 $は単位ベクトルで異なる固有値
+    に属するため直交し、$\vec{p}_i \cdot \vec{p}_j=\delta_{i,j}$
+    である。$\Trans{P}P$を計算すると
+%
+    \[ \Trans{P}P%
+       = \vect{\Trans{\vec{p}_1}}{\Trans{\vec{p}_2}}{\Trans{\vec{p}_3}}
+         \vectT{\vec{p}_1}{\vec{p}_2}{\vec{p}_3}
+       = \begin{pmatrix}
+           \vec{p}_1\cdot\vec{p}_1 &
+           \vec{p}_1\cdot\vec{p}_2 &
+           \vec{p}_1\cdot\vec{p}_3 \\
+           \vec{p}_2\cdot\vec{p}_1 &
+           \vec{p}_2\cdot\vec{p}_2 &
+           \vec{p}_2\cdot\vec{p}_3 \\
+           \vec{p}_3\cdot\vec{p}_1 &
+           \vec{p}_3\cdot\vec{p}_2 &
+           \vec{p}_3\cdot\vec{p}_3 \end{pmatrix}
+       = \begin{pmatrix}
+           1 & 0 & 0 \\
+           0 & 1 & 0 \\
+           0 & 0 & 1 \end{pmatrix} \]
+%
+    よって $P^{-1}=\Trans{P}$である。また$AP$を計算すると
+%
+    \[ A\vectT{\vec{p}_1}{\vec{p}_2}{\vec{p}_3}
+       = \vectT{\lambda_1\vec{p}_1}%
+               {\lambda_2\vec{p}_2}%
+               {\lambda_3\vec{p}_3}%
+       = \vectT{\vec{p}_1}{\vec{p}_2}{\vec{p}_3}%
+         \begin{pmatrix}
+           \lambda_1 & 0         & 0         \\
+           0         & \lambda_2 & 0         \\
+           0         & 0         & \lambda_5 \end{pmatrix}
+       = P%
+         \begin{pmatrix}
+           1 & 0 & 0 \\
+           0 & 3 & 0 \\
+           0 & 0 & 5 \end{pmatrix} \]
+%
+    \[ \Yueni P^{-1} A P = \Trans{P} A P =
+          \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 3 & 0 \\
+            0 & 0 & 5 \end{pmatrix} \]
+%
+    $\vr=P\vr^{\prime}$の変換によって、$f$は
+%
+    \[ f(x,y,z)%
+         =   \Trans{\vr} A\vr%
+         =   \Trans{(P\vr^{\prime})} A (P\vr^{\prime})%
+         =   \Trans{\vr^{\prime}}\Trans{P} A P \vr^{\prime}%
+         =   \Trans{\vr^{\prime}} (P^{-1} A P) \vr^{\prime} \]
+%
+    と書きかわる。よって、
+%
+    \[ f(x,y,z)%
+       = \vectT{x^{\prime}}{y^{\prime}}{z^{\prime}}
+         \begin{pmatrix}
+           1 & 0 & 0 \\
+           0 & 3 & 0 \\
+           0 & 0 & 5 \end{pmatrix}
+         \vect{x^{\prime}}{y^{\prime}}{z^{\prime}}
+       ={x^{\prime}}^2 + 3{y^{\prime}}^2 + 5{z^{\prime}}^2 \]
+%
+    となる。また、
+%
+    \[ \vr\cdot\vr%
+       = \Trans{\vr}\vr
+       = \Trans{(P \vr^{\prime})}
+         (P \vr^{\prime})
+       = \Trans{\vr^{\prime}} \Trans{P} P \vr
+       = \Trans{\vr^{\prime}} \vr \]
+%
+    であるから$P$による座標変換によって、ベクトルの大きさは不変である。
+
+  \SubSubAnswer
+    この回転軸の方向ベクトルを$\vec{a}$と置くと$\vec{a}$は$P$による
+    回転によって向きが変わらない。また、$P$による回転ではベクトルの
+    長さは変わらないので、$P\vec{a}=\vec{a}$となるはずである。
+    これを解いて
+%
+    \[ \vec{a} = \vect{1}{0}{-1} \times {\rm  const} \]
+%
+
+  \SubSubAnswer
+    $P$はベクトル$\vec{a}$のまわりの回転だから、その回転角度を
+    $\theta$とする。$\vec{a}$に垂直なベクトル$\vec{u}$を適当にとる。
+    $\vec{u}$を回転して移したベクトル$P\vec{u}$ と$\vec{u}$のなす
+    角度は$\theta$である。すなわち、
+%
+    \[ \vec{u} \equiv \vect{0}{1}{0} \hspace{10mm}%
+       P\vec{u}= \vect{-\sqrt{6}/4}{1/2}{-\sqrt{6}/4} \hspace{10mm}%
+      \cos\theta%
+       = \frac{\vec{u}\cdot P\vec{u}}{|\vec{u}||P\vec{u}|}%
+       = \frac{1}{2} \hspace{10mm}%
+       \Yueni \theta=60\deg \]
+%
+    $P$はベクトル$\vec{a}=(1,0,-1)$のまわりの$60\deg$の回転だから、
+    $P^6$が$360\deg$の回転になる。$P^6=E$。よって$n=6$である。
+
+  \end{subsubanswers}
+
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    式\eqhref{Q2-2}より、
+%
+    \[ x^{\prime}=yX \hspace{15mm}%
+       x^{\prime\prime}=y^{\prime}X+yX^{\prime}=yXY +yX^{\prime} \]
+    \[ y^{\prime}=yY \hspace{15mm}%
+       y^{\prime\prime}=y^{\prime}Y+yY^{\prime}=yY^2+yY^{\prime} \]
+%
+    これらの式を微分方程式\eqhref{Q2-1}に代入する。
+%
+    \begin{eqnarray}
+      && yx^{\prime\prime}-2x^{\prime}y^{\prime}=0 \hspace{26mm}
+      \Yueni  X^{\prime}-XY=0  \eqname{A2-2} \\
+      && yy^{\prime\prime}+(x^{\prime})^2-(y^{\prime})^2=0 \hspace{15mm}
+      \Yueni  Y^{\prime}+X^2=0 \eqname{A2-3}
+    \end{eqnarray}
+%
+    $\eqhref{A2-2}\times X+\eqhref{A2-3}\times Y $を計算すると、
+%
+    \begin{equation}
+      XX^{\prime}+YY^{\prime}=0 \hspace{10mm}
+      \Yueni X^2+Y^2={\rm const}%
+      \equiv c^2 \hskip 0.3 in ( c>0 ) \eqname{A2-4}
+    \end{equation}
+%
+
+
+  \SubSubAnswer
+    $X\equiv 0$の場合
+%
+    \[ Y = \pm c
+       \quad\Leftrightarrow\quad
+       \frac{y^{\prime}}{y}
+       = \pm c
+       \quad\Leftrightarrow\quad%
+       y=A\exp (\pm cs)\hskip 0.3 in (A>0) \]
+    \[ X=0%
+       \quad\Leftrightarrow\quad%
+       x^{\prime}=0%
+       \quad\Leftrightarrow\quad%
+       x={\rm const} \equiv B \]
+%
+    よって、$ X\equiv 0$の場合、$x=$一定、$y>0$の半直線である。
+    $ X \neq 0 $の場合は、$Y^2-c^2 \neq 0$。式\eqhref{A2-3}より、
+    $X^2=-Y^{\prime}$を式\eqhref{A2-4}に代入すると、$Y$だけの微分方程式になる。 
+%
+    \[ Y^{\prime}-Y^2+c^2=0%
+       \quad\Leftrightarrow\quad%
+       1=\frac{Y^{\prime}}{Y^2-c^2} \]
+    \[ \Yueni \int 1 \d{s}%
+       = \int {\frac{\d{Y}}{Y^2-c^2}}%
+       = \frac{1}{2c} \int \left( {\frac{1}{Y-c}}-{\frac{1}{Y+c}}\right) \d{Y}  \]
+%
+    これより、
+%
+    \[ \log\left|{\frac{Y-c}{Y+c}}\right|%
+       = 2cs+\alpha \hskip 0.3 in (\alpha= {\rm const}) \]
+%
+    となる。式\eqhref{A2-4}より$Y$の範囲は$-c<Y<c$である。このとき、
+%
+    \begin{equation}
+      Y = {\frac{y^{\prime}}{y}}%
+        = (-c)\times{\frac{\sinh(cs+\alpha)}{\cosh(cs+\alpha)}} \eqname{A2-5}
+    \end{equation}
+%
+    \[ \Yueni \log y=-\log[\cosh(cs+\alpha)]+ {\rm const} \]
+%
+    \begin{equation}
+      \Yueni y={\frac{a}{\cosh(cs+\alpha)}}\hskip 0.3 in (a>0) \eqname{A2-6}
+    \end{equation}
+%
+    式\eqhref{A2-4},\eqhref{A2-5}より、
+%
+    \begin{equation}
+      X^2 = c^2-c^2{\frac{\sinh^2(cs+\alpha)}{\cosh^2(cs+\alpha)}}%
+          = \frac{c^2}{\cosh^2(cs+\alpha)} \hspace{15mm}%
+      \Yueni%
+        X = {\frac{\pm c}{\cosh(cs+\alpha)}} \eqname{A2-7}
+    \end{equation}
+%
+    式\eqhref{A2-6},\eqhref{A2-7}より、
+%
+    \[ x^{\prime}=yX={\frac{\pm ac}{\cosh^2(cs+\alpha)}} \hspace{15mm}%
+      \Yueni
+      x=\pm a \tanh(cs+\alpha)+b \hskip 0.3 in%
+      (b:{\rm const}) \]
+%
+    $s$をパラメータとした$2$つの変数$(x,y)$が描く曲線は、
+    $1-\tanh^2(cs+\alpha)=1/\cosh^2(cs+\alpha)$の関係を用いて、
+%
+    \[ 1-\Bigl( \frac{x-b}{a} \Bigr)^2 = \Bigl( \frac{y}{a} \Bigr)^2 \hspace{15mm}%
+       \Yueni (x-b)^2+y^2=a^2 \hskip 0.3 in (y>0) \]
+    となる。ただし、$y>0$である。これは半径$a$、中心$(b,0)$の円の$y>0$の部分である。\\
+    以上より、$ X \equiv 0 $と$ X \neq 0 $の場合をまとめて、\\
+%
+    \qquad {\bf $x$一定、$y>0$の半直線。または$x$軸上に中心を持つ円の$y>0$の部分}\\
+    である。
+
+
+  \end{subsubanswers}
+
+  
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+    まず、$x,y,z$のどの$2$つも互いに素であるから、\\
+    (a)\quad $z$が偶数で$x,y$は奇数\\
+    (b)\quad $z$が奇数で$x,y$のどちらかが偶数\\
+    (c)\quad $x,y,z$はすべて奇数\\
+    の$3$つの場合のどれかであることが分かる。
+
+\vspace*{1mm}
+    {\bf (a)}の場合\\
+    正の整数$l,m,n$を用いて$z=2l,x=2m-1,y=2n-1$と書ける。このとき
+%
+    \[ x^2+y^2=(2m-1)^2+(2n-1)^2=4(m^2+n^2-m-n)+2\neq \mbox{$4$の倍数} \]
+%
+    である。一方
+%
+    \[ z^2=4l^2 =\mbox{$4$の倍数} \]
+%
+    だから、$x^2+y^2=z^2$を満たさない。
+
+\vspace*{1mm}
+    {\bf (b)}の場合\\
+    $z=2l-1,\,x=2m,\,y=2n-1$としてよい。このとき、
+%
+    \[ x^2+y^2=(2m)^2+(2n-1)^2=4(m^2+n^2-n)+1 \]
+%
+    であり、
+%
+    \[ z=(2l-1)^2=4(l^2-l)+1 \]
+%
+    なので、$x^2+y^2,\,z^2$のどちらも$4$の倍数$+1$で矛盾はしない。
+
+\vspace*{1mm}
+    {\bf (c)}の場合\\
+    $z=2l-1,\,x=2m-1,\,y=2n-1$とすると、
+    $x^2+y^2=4(n^2+m^2-m-n)+2=\mbox{偶数}$、\\
+    $z^2=4(l^2-l)+1=\mbox{奇数}$となって$x^2+y^2=z^2$に反する。
+
+\vspace*{2mm}
+    よって、$z$は奇数、$x,y$の片方は奇数、片方は偶数であることが言えた。
+
+  \SubSubAnswer
+    $x$を偶数、$y$を奇数と決めると、正の整数$l,m,n$を用いて
+    $x=2m,y=2n-1,z=2l-1$と書ける。
+    $A=(z+y)/2,\,B=(z-y)/2$と置く。逆に、$z,y$は$A,B$を用いて
+%
+    \[ z=A+B \hskip 0.3 in y=A-B \]
+%
+    と書かれる。
+%
+    \[ A = {\frac{(2l-1)+(2n-1)}{2}}=l+n-1, \hskip 0.3 in%
+       B = {\frac{(2l-1)-(2n-1)}{2}}=l-n \]
+%
+    である。よって、$A,B$は整数である。
+
+    もし、$A$と$B$が共通の因子$k$(整数)を持ち、
+    $A=ka,\,B=kb\;$($a,b$:整数)と書けると仮定すると、 
+%
+    \[ z=A+B=k(a+b) \hskip 0.3 in  y=A-B=k(a-b) \]
+%
+    となり、$z,y$が互いに素であるという条件に矛盾する。
+    したがって、$A$ と $B$ は互いに素である。
+
+  \SubSubAnswer
+    $C$を素因数分解する。
+%
+    \[ C=(c_1)^{n_1}\cdot (c_2)^{n_2} \cdots (c_p)^{n_p} \]
+%
+    と書けたとすると
+%
+    \[ A\cdot B=C^2=(c_1)^{2n_1}\cdot (c_2)^{2n_2} \cdots (c_p)^{2n_p} \]
+%
+    である。問題文の仮定より、$A,B$は互いに素な整数であるから、$C^2$の
+    因数の$c_1,\cdot c_2,\cdots c_p$は$A,B$どちらかのみの因数である。
+    $c_1,\cdot c_2,\cdots c_p$を適当に並び替えて、$c_1,\cdots c_q$は$A$
+    の因数、$c_{q+1},\cdots c_p$は$B$の因数とすることができる。すなわち、
+%
+    \[ A\cdot B=C^2%
+        =\overbrace{(c_1)^{2n_1}\cdot (c_2)^{2n_2} \cdots (c_q)^{2n_q}}^A
+         \overbrace{(c_{q+1})^{2n_{q+1}}\cdots (c_p)^{2n_p}}^B \]
+    \[ \alpha \equiv (c_1)^{n_1}\cdots (c_q)^{n_q} \hspace{15mm}
+       \beta  \equiv (c_{q+1})^{n_{q+1}}\cdots (c_p)^{n_p} \]
+%
+    とおけば$A=\alpha^2,\,B=\beta^2$である。
+
+  \SubSubAnswer
+    $x=2C$と置くと、$x^2=z^2-y^2$より、$(2C)^2=(A+B)^2-(A-B)^2=4A\cdot B$、
+    つまり、$C^2=A\cdot B$となる。(ii)で、$A=(z+y)/2,B=(z-y)/2$が互いに素な正
+    の整数であることを示したので、(iii)の結果を使うことができて、$2$つの
+    整数$\alpha,\beta$を用いて$A=\alpha^2,\,B=\beta^2$と書ける。このとき、
+    $C=\alpha\beta$である。よって、
+%
+    \[ x=2C=2\alpha\beta,\hskip 0.3 in
+       y=A-B=\alpha^2-\beta^2,\hskip 0.3 in
+       z=A+B=\alpha^2+\beta^2 \]
+%
+    とすればよい。ただし、$y,z$は奇数なので、$\alpha,\beta$の片方は奇数、
+    片方は偶数でなければならない。$\alpha,\beta$は互いに素でなければ
+    ならない。そうでなければ$y$ と$z$が共通の因数を持つことになって
+    互いに素であるという条件を満たさない。
+
+  \SubSubAnswer
+    (iv)の結果から
+    \begin{center}
+      \begin{tabular}{cccccc}\hline
+$\alpha$ & $\beta$ &              & x  & y  & z \\\hline
+2        & 1       &\hskip 0.5 in & 4  & 3  & 5 \\
+3        & 2       &\hskip 0.5 in & 12 & 5  & 13\\  
+4        & 1       &\hskip 0.5 in & 8  & 15 & 17\\
+4        & 3       &\hskip 0.5 in & 24 & 7  & 25\\
+5        & 2       &\hskip 0.5 in & 20 & 21 & 29\\
+5        & 4       &\hskip 0.5 in & 40 & 9  & 41\\
+6        & 1       &\hskip 0.5 in & 12 & 35 & 37\\
+6        & 5       &\hskip 0.5 in & 60 & 11 & 61\\\hline
+      \end{tabular}
+    \end{center}
+    となる。
+
+  \end{subsubanswers}
+\end{subanswers}
+
+\end{answer}
+
+
+\end{document}
