@@ -1,0 +1,25 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1994pankyo 1994senmon)
+docs_ex=(1994pankyo2)
+
+_1994pankyo_title='1994年度実施 一般教育科目'
+_1994pankyo_cov=()
+_1994pankyo_prb=(1994engl.tex 1994math.tex 1994phys.tex)
+_1994pankyo_ans=(1994engl.tex 1994math.tex 1994phys.tex)
+_1994pankyo_dep=(1994phys-1.eps 1994phys-2.eps 1994phys-3.eps)
+
+_1994pankyo2_title='1994年度実施 一般教育科目 (英語なし)'
+_1994pankyo2_cov=()
+_1994pankyo2_prb=(1994math.tex 1994phys.tex)
+_1994pankyo2_ans=(1994math.tex 1994phys.tex)
+_1994pankyo2_dep=(1994phys-1.eps 1994phys-2.eps 1994phys-3.eps)
+
+_1994senmon_title='1994年度実施 物理専門科目'
+_1994senmon_cov=()
+_1994senmon_prb=(1994phy1.tex 1994phy2.tex 1994phy3.tex 1994phy4.tex 1994phy5.tex 1994phy6.tex 1994phy7.tex 1994phy8.tex)
+_1994senmon_ans=(1994phy1.tex 1994phy2.tex 1994phy3.tex 1994phy4.tex 1994phy5.tex 1994phy6.tex 1994phy7.tex 1994phy8.tex)
+_1994senmon_dep=(
+  1994phy1-1.eps 1994phy1-2.eps 1994phy1-3.eps 1994phy2-1.eps 1994phy2-2.eps 1994phy2-3.eps 1994phy3-1.eps 1994phy3-2.eps 1994phy3-3.eps
+  1994phy4-1.eps 1994phy5-1.eps 1994phy5-2.eps 1994phy5-3.eps 1994phy6-1.eps 1994phy6-2.eps 1994phy6-3.eps 1994phy8-1.eps)
