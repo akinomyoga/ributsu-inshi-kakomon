@@ -1,0 +1,20 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2005pankyo2 2005senmon)
+
+_2005pankyo2_title='2005年度実施 一般教育科目 (英語なし)'
+_2005pankyo2_cov=(2005mathC.tex)
+_2005pankyo2_prb=(2005mathQ1.tex 2005mathQ2.tex)
+_2005pankyo2_ans=(2005mathA.tex)
+_2005pankyo2_dep=()
+# 解答作成: ishikawa
+# 問題入力: 村瀬 功一 2011/02/01
+
+_2005senmon_title='2005年度実施 物理専門科目'
+_2005senmon_cov=(2005physC.tex)
+_2005senmon_prb=(2005physQ1.tex 2005physQ2.tex 2005physQ3.tex 2005physQ4.tex 2005physQ5.tex 2005physQ6.tex)
+_2005senmon_ans=(2005physA1.tex 2005physA2.tex 2005physA3.tex 2005physA4.tex 2005physA5.tex 2005physA6.tex)
+_2005senmon_dep=(2005phys1_1.eps 2005phys1_2.eps 2005phys1_3.eps 2005phys4_1.eps 2005phys5_1.eps 2005phys6_1.eps)
+# 解答作成: 平塚 淳一 2008/08/20
+# 問題入力: 村瀬 功一 2011/02/01

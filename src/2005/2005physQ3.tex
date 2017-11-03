@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------
 % 2005年度実施 2006年度入学 物理学 問題 3
 %-------------------------------------------------------------------------------
-\subsubsection*{第３問}
+\begin{question}{第３問}{村瀬}
 以下に示す真空中での Maxwell の方程式を出発点として平面電磁波の
 性質を導き出したい。ここで、$\vec E$ と $\vec B$ はそれぞれ電場と磁束密度、$\epsilon_0$ と
 $\mu_0$ はそれぞれ真空の誘電率と透磁率である。また、 $t$ は時間であり、$\nabla$ は
@@ -9,10 +9,10 @@ $\mu_0$ はそれぞれ真空の誘電率と透磁率である。また、 $t$ は時間であり、$\nabla$ 
 の存在しない場合を考える。
 
 \begin{eqnarray}
-\nabla\cdot\vec E &=& 0 \label{eq:2005phys3-maxwell-1}\\
-\nabla\times\vec B &=& \epsilon_0\mu_0\frac{\partial \vec E}{\partial t} \label{eq:2005phys3-maxwell-2}\\
-\nabla\cdot\vec B &=& 0 \label{eq:2005phys3-maxwell-3}\\
-\nabla\times\vec E &=& -\frac{\partial \vec B}{\partial t} \label{eq:2005phys3-maxwell-4}
+\nabla\cdot\vec E &=& 0 \ilabel{eq:2005phys3-maxwell-1}\\
+\nabla\times\vec B &=& \epsilon_0\mu_0\frac{\partial \vec E}{\partial t} \ilabel{eq:2005phys3-maxwell-2}\\
+\nabla\cdot\vec B &=& 0 \ilabel{eq:2005phys3-maxwell-3}\\
+\nabla\times\vec E &=& -\frac{\partial \vec B}{\partial t} \ilabel{eq:2005phys3-maxwell-4}
 \end{eqnarray}
 
 以下の設問に答えよ。
@@ -29,20 +29,21 @@ $\mu_0$ はそれぞれ真空の誘電率と透磁率である。また、 $t$ は時間であり、$\nabla$ 
   は定数ベクトル、$\omega$、$\omega'$、$\alpha$、$\alpha$ はそれぞれ定数で、$0\leq<\alpha<\pi$、
   $0\leq\alpha'<\pi$ である。
   \begin{eqnarray}
-  \vec E &=& \vec E_0\sin(\vec k\cdot\vec r -\omega t + \alpha) \label{eq:2005phys3_1}\\
-  \vec B &=& \vec B_0\sin(\vec k'\cdot\vec r -\omega' t + \alpha') \label{eq:2005phys3_2}
+  \vec E &=& \vec E_0\sin(\vec k\cdot\vec r -\omega t + \alpha) \ilabel{eq:2005phys3_1}\\
+  \vec B &=& \vec B_0\sin(\vec k'\cdot\vec r -\omega' t + \alpha') \ilabel{eq:2005phys3_2}
   \end{eqnarray}
 \item
-  式(\ref{eq:2005phys3_1})と式(\ref{eq:2005phys3_2})で表される $\vec E$ および $\vec B$ がそれぞれの波数ベクトルに
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}で表される $\vec E$ および $\vec B$ がそれぞれの波数ベクトルに
   垂直であること、すなわち横波であることを示せ。
 \item
-  式(\ref{eq:2005phys3_1})と式(\ref{eq:2005phys3_2})において、$\vec k=\vec k'$、$\omega=\omega'$ および $\alpha=\alpha'$ であること
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}において、$\vec k=\vec k'$、$\omega=\omega'$ および $\alpha=\alpha'$ であること
   を示せ。
 \item
-  式(\ref{eq:2005phys3_1})と式(\ref{eq:2005phys3_2})で表される $\vec E$ と $\vec B$ は互いに直交していることを示せ。
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}で表される $\vec E$ と $\vec B$ は互いに直交していることを示せ。
 \item
   平面電磁波の位相速度を求めよ。
 \item
-  式(\ref{eq:2005phys3_1})と式(\ref{eq:2005phys3_2})で電場 $\vec E$ と磁場 $\vec H (=\vec B/\mu_0)$ の大きさの比 $|\vec E|/|\vec H|$ が
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}で電場 $\vec E$ と磁場 $\vec H (=\vec B/\mu_0)$ の大きさの比 $|\vec E|/|\vec H|$ が
   常に一定であること、およびこの比は抵抗の次元をもつことを示せ。
 \end{enumerate}
+\end{question}
