@@ -1,0 +1,161 @@
+
+
+
+2013-07-21 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2007/2007physA2.tex: 第6問解答 入力
+	* 2007/2007physA6_1r.eps: pdf から抽出して eps に変換
+	* 2006/2006physQ*r.eps, 2007/2007physQ*r.eps, 2007/2007mathQ2_1r.eps: キャプチャして eps に変換 (17 figures)
+	* 1998physQ4_0r.eps, 1998physQ4_2r.eps: 1998phy4-0.eps, 1998phy4-2.eps のファイルサイズが大きいので、再度 eps に変換。
+	* inshi.sty (\ssub): 定義の変更。
+	* inshi.sty (\uchi, \uphi): 以下の理由により削除する。
+	  1 これらのマクロは "1996物理第6問" でしか使われていない。
+	  2 検索してみたがこの様なマクロを定義する文化は存在しない。
+	  3 縦の位置の違いで異なる意味を持たせている訳でもない。
+	  2 始めにこのマクロを作成した人はギリシャ文字の位置が気にくわなかったのかも知れないが、
+	    TeX の出力するギリシャ文字の位置の方が正統な位置である。
+	* 1996/1996phy6.tex: \uchi を \chi に \uphi を \varphi に変更。
+
+2013-07-20 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2007/2007physQ.tex: 第1-3問 入力
+	* 1999phy3.tex, 1999phy4.tex, 1999phy5.tex, 1999phys.tex: 文字コード統一 Sj
+	* 2000phy9.tex: 文字コード統一 Sj
+	* 2002phy5.tex: 文字コード統一 Js
+	* 2007/2007physQ.tex: 第4-6問 入力
+	* 2007/2007physA2.tex: 第4-5問解答 入力
+
+	* TODO (2009mathA.tex): A2.6 グラフを作成する
+	* TODO (2007mathQ.tex): 図1 を作成する。<del>直接 "図1" と書いている部分を \iref で置換する。</del>
+	* TODO: 2006phys: 図作成。参照を貼る。
+	* TODO: 20??: \ilabel, \iref に。直接文字列で書いている部分に参照を貼る。
+
+2013-07-19 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2007/2007mathQ.tex, 2008/2008mathQ.tex: 入力
+	* 2006/2006physC.tex, 2007/2007physC.tex, 2008/2008physC.tex: 入力
+	* 2006/2006physQ.tex: 入力
+
+2013-07-18 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2009/2009mathQ.tex: 入力
+	* 2009/2009mathC.tex: 入力
+	* 2009/2009mathA.tex: 作成、入力。
+	* 2007/2007mathC.tex, 2008/2008mathC.tex: 入力。
+
+2013-07-17 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2007/2007mathA.tex: 2007年度数学 A1-A2 移植
+	* 2007/2007physA1.tex: 2007年度数学 A1-A3 移植
+
+2013-07-16 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* inshi.sty (package option `fleqn'): 追加
+	* inshi.sty: \label, \ref のローカライズ機能が正しく機能していない。
+	  どうやら、\begin{align} の中では \label が再定義されている様で、
+	  こちらで定義した \label が使われない様である。
+	  - \align を再定義して original の \align の直後に再度 \label を上書きする
+	    事で解決したかに思われたが、どうやら & や \\ でも \label が再定義される
+	    様である。つまりこれらのコマンドの動作も変更しなければならない。
+	    また、\begin{gather} やら \begin{cases} など他の AmS-TeX 環境についても
+	    一つ一つ適用していく必要があり、馬鹿らしい。
+	  - 結局 \ilabel 及び \iref, \ieqnref というコマンドを新しく定義する事にする。
+	  - ローカライズされたラベル \label, \ref の定義を削除
+	* inshi.sty (\ref, \label):
+	  既存のファイル中の \ref 及び \label を \iref \ilabel に置換
+	* 1992, 1998: sources → murase 移植
+	* 1998phy8.tex: \AA が math mode で使用されていた。\textrm で囲む。
+	* 1993, 1994, 1995, 1996, 1997, 1999: sources → murase 移植
+	* 2000: source → murase 移植
+	* 2000/2000phy2.tex: \begin{enumerate} にオプションを指定していた。\setcounter に変更。
+	  (これは、\begin{enumerate} を physpub の \begin{subquestions} にしていた名残。
+	  \setcounter{enumi}{数字-1} とすれば良い。)
+	* 2000/2000phy5.tex: \begin{enumerate} のオプションを \setcounter に。
+	* 2000/2000phy7.tex: 文字コードを JIS に変更。\begin{enumerate} のオプションを \setcounter に。
+	* 2000/2000math.tex: \ref を \iref に。
+	* 2001: source → murase 移植
+	* 2001/2001math.tex, 2001/2001phy1.tex, 2001/2001phy2.tex, 2001/2001phy3.tex, 2001/2001phy4.tex: \label, \ref → \ilabel, \iref
+	* 2001/2001phy5.tex, 2001/2001phy6.tex, 2001/2001phy7.tex, 2001/2001phy8.tex, 2001/2001phy9.tex: \label, \ref → \ilabel, \iref
+	* 2002: source → murase 移植
+	* 2002/2002math.tex, 2002/2002phy3.tex, 2002/2002phy4.tex, 2002/2002phy7.tex, 2002/2002phy8.tex: \label, \ref → \ilabel, \iref
+	* 2002/2002phy5.tex: \begin{enumerate} のオプションを \setcounter に。
+	* 2002/2002phy9.tex: \usepackage{txfonts} の \varg に依存していたので、\ifx\inshiNotDefined\varg\def\varg{g}\fi を追加。
+	* 2003: source → murase 移植
+	* 2003/2003math.tex, 2003/2003phy4.tex, 2003/2003phy5.tex, 2003/2003phy6.tex, 2003/2003phy7.tex: \label, \ref → \ilabel, \iref
+	* 2003/2003phy1.tex: 文字コード変更(J->S)。\label, \ref → \ilabel, \iref
+	* 2003/2003phy1.tex, 2003/2003phy2.tex, 2003/2003phy3.tex, 2003/2003phy7.tex, 2003/2003phy8.tex, 2003/2003phy9.tex: \begin{enumerate} のオプションを \setcounter に。
+	* 2004: source → murase 移植
+	* 2004/2004math.tex, 2004/2004phy1.tex, 2004/2004phy2.tex, 2004/2004phy4.tex, 2004/2004phy5.tex: \label, \ref, \eqref → \ilabel, \iref, \ieqref
+	* 1998/1998phys.tex, 1999/1999phy6.tex: \clearpage が指定されていたのでこれを削除。(\clearpage はより上の階層で制御されるべき。)
+	* 2004/2004math.tex: 節構造を再構築。( \subsection{(1)} や (1) などを直接書いているのを \begin{enumerate} に変更。)
+	* 2004/2004math.tex: 全角空白の削除/半角空白への置換。
+	* 2004/2004math.tex: \Somark, \Bemark を \therefore, \because に変更。\Somark, \Bemark を削除
+	* 2004/2004math.tex: その他、数式表現の細かい部分を修正。(日本語もおかしい気がするがやり出すときりがないので放置。)
+	* inshi.sty (\ExcludeComment):
+	  何故か無駄に改ページが入っていると思ったら、\excludecomment だけでは、
+	  環境の中身がコメントとして扱われるだけで、環境を囲む部分
+	  (\newenvironment{foo}{A}{Z} の A と Z の部分) は依然として出力されていた。
+	  \renewenvironment でこの部分も削除する \ExcludeComment を定義して利用。
+	* 2004/2004math.tex: 重複ラベルを解決。
+	* inshi.sty (\underlineeng): 高さや空白などが気に食わないので書き直し。
+	* 2005: source → murase 移植
+	* 2005/2005mathC.tex, 2005/2005physC.tex: \begin{inshicover} で書き直し
+	* 2005/2005math??.tex, 2005/2005phys??.tex: \begin{question}, \begin{answer} で書き直し
+	* 2006/2006mathA.tex: math-19-ishikawa.tex から作成。式番号を参照に書き換え。
+	* 2006/2006mathQ1.tex, 2006/2006mathQ2.tex, 2006/2006C.tex: 作成、入力。
+	* 2006/2006phys: h19phys から 移植。
+	* 2006/2006phys: \label, \ref, \refer → \ilabel, \iref に。
+	* 2005/2005math, 2005/2005phys: \label, \ref → \ilabel, \iref に。
+	* 2011/2011mathQ1.tex, 2011/2011mathQ2.tex: \label, \ref → \ilabel, \iref に。
+	* 2012/2012mathQ1.tex, 2012/2012mathQ2.tex: \label, \ref → \ilabel, \iref に。
+
+2013-07-15 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2012/2012mathC.tex, 2012/2012mathQ1.tex, 2012/2012mathQ2.tex: 作成
+	* inshi.sty: physpub.sty からコピー
+	* inshi.sty (\i, \e): \i (虚数単位), \e (自然対数の底) の追加。
+	* inshi.sty (\Yueni, \Naze): amssymb.sty の \therefore, \because で定義。
+	* inshi.sty (\prechaptername, \postchaptername): 定義を \def... に変更。
+	  \documentclass{book} 以外 (article など) だと抑も定義されていないので、
+	  \renewcommand でなく \def を使って上書き定義しないとならない。
+	* inshi.sty (\physpubSetSectionMark): question, answer 環境共通部分を纏める。
+	* inshi.sty (\begin{question}, \begin{answer}, ...): 簡単な定義の物を追加。
+	* inshi.sty (\inshikamoku{2013test}): コマンド追加。
+	* inshi.sty (question, answer, ...): 元々の question, answer 環境を廃止。
+	* inshi.sty (\begin{inshicover}): 追加
+	* inshi.sty (package option `book'): 作成
+	* inshi.sty (\@evenhead, \@oddhead): ヘッダの空白の調整
+
+2013-07-14 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2010/2010mathA1.tex, 2010/2010mathA2.tex: 作成
+	* 2010/2010mathC.tex, 2010/2010mathQ1.tex, 2010/2010mathQ2.tex: 作成
+	* 2011/2011mathC.tex, 2011/2011mathQ1.tex, 2011/2011mathQ2.tex: 作成
+
+2012-07-31 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2004/2004phys4_3.eps: 図修正。
+	* 2004/2004senmon: 解答4.I.1 修正。
+	* 2005/2005phys 誤字修正。御指摘有り難う御座います。
+
+2011-05-02 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2000/2000senmon, 2007/2007senmon: 図を幾つか PostScript に。
+	  (2000/2000physQ7_1.eps, 2000/2000physQ9_1.eps, 2007/2007physQ4_2.eps, 2007/2007physQ4_1.eps, 2007/2007physQ3_1.eps)
+
+2011-04-30 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 1997senmon, 1998pankyo, 1998pankyo2: コンパイルし直したら図の文字化けが直った。今迄 latex の設定が誤っていた様だ。
+	* 1998/1998phys-3.eps, 1997/1997phy4-1.eps: 図の修正
+	* 2002/2002senmon, 2004/2004senmon: 以前に書いた PostScript の修正:
+	  (2002/2002physQ8_3.eps, 2002/2002physQ8_1.eps, 2002/2002physQ1_1.eps,
+	  2002/2002physQ4_1.eps, 2002/2002physQ3_1.eps, 2002/2002physA8_1.eps, 2004/2004phys4_5.eps,
+	  2004/2004phys5_3.eps, 2004/2004phys5_4.eps, 2004/2004phys2_0.eps, 2004/2004phys4_6.eps,
+	  2004/2004phys1_0.eps, 2004/2004phys5_5.eps, 2004/2004phys4_4.eps)
+
+2011-02-06 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2002/2002senmon: 図を幾つか PostScript に。/index: ファイルサイズの表示が違っていた事に気付き修正。
+	  (2002physQ8_3.eps, 2002physQ8_1.eps, 2002physQ1_1.eps, 2002physQ4_1.eps, 2002physQ3_1.eps, 2002physA8_1.eps)
+2011-02-05 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2004/2004senmon: ファイルサイズが大きいので図を PostScript で書き直し。後、式番号・図番号が潰れているのを修正。
+	  (2004phys4_5.eps, 2004phys5_3.eps, 2004phys5_4.eps, 2004phys2_0.eps, 2004phys4_6.eps, 2004phys1_0.eps, 2004phys5_5.eps, 2004phys4_4.eps)
+
+2011-02-02 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 2005/2005phys1_3.eps, 2005/2005phys1_1.eps, 2005/2005phys1_2.eps, 2005/2005phys6_1.eps, 2005/2005phys5_1.eps, 2005/2005phys4_1.eps: 作成
+	* 2005: 問題文を TeX で書き直した物に置き換え。
+	* 2006, 2007, 2008: PDF から PostScript に変換した物を追加 (元々 pdf しか持っていなかった)。
+
+2010-09-11 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 1997/1997phy9-8.eps, 	1997/1997phy9-4.eps, 1997/1997phy9-7.eps, 1997/1997phy9-3.eps, 1997/1997phy9-17.eps, 1997/1997phy6-5.eps, 1997/1997phy6-3.eps, 1997/1997phy5-5.eps, 1997/1997phy2-2.eps, 1997/1997phy9-15.eps, 1997/1997phy9-14.eps, 1997/1997phy9-13.eps, 1997/1997phy9-12.eps, 1998/1998phys2-1.eps, 1998/1998phys2-2.eps: 図のエラーを修正。
+
+2010-08-26 Koichi Murase <murase@nt.phys.s.u-tokyo.ac.jp>
+	* 1992pankyo, 1992pankyo2: 式に簡単な間違いがあったのを指摘されたので、修正。
