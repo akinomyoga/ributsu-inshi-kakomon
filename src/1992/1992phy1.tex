@@ -1,0 +1,265 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題1}{}
+\begin{subquestions}
+\SubQuestion
+
+次のような一次元ポテンシャル$V(x)$中にある質量$m$，電荷$e$を持つ粒子を
+考える。
+\[V(x)=\left\{\begin{array}{ll}-V_0\cos x&-\pi\leq x\leq\pi \\
+\infty & x<-\pi,x>\pi \end{array}\right.\]
+ただし，$V_0$は正とする。
+
+\begin{subsubquestions}
+\SubSubQuestion
+
+$x=0$の近傍でポテンシャルが調和近似できるとし
+$(V(x)\sim-V_0(1-x^2/2))$，エネルギー固有値と固有関数を求めよ。また，$n$
+番目の量子状態に対してこの近似が成り立つ条件を示せ。
+
+ここで，$n$を整数とした微分方程式
+\[\frac{d^2f}{d\xi^2}-2\xi\frac{df}{d\xi}+2nf=0\]
+の解は，次の二つの式を満たすエルミート多項式$H_n(\xi)$を用いて与えられること
+に注意せよ。
+\begin{eqnarray*}
+&\displaystyle{
+H_n(\xi)=(-1)^n\exp(\xi^2)\frac{d^n}{d\xi^n}(\exp(-\xi^2))} &\\
+&\displaystyle{\int_{-\infty}^{\infty}H_n(\xi)H_m(\xi)\exp(-\xi^2)d\xi=
+\sqrt{\pi}
+2^nn!\delta_{n,m}} \end{eqnarray*}
+
+\SubSubQuestion
+$x=0$の近傍で，ポテンシャルの非調和項
+$\Delta V(x)\equiv V(x)+V_0(1-x^2/2)$を$x$について最低次の項で近似する。
+エネルギー固有値のずれをこの項について一次の摂動計算で求めよ。
+
+ここで，必要ならば，以下に与えられるエルミート多項式の漸化式を用いよ。
+\[\xi H_n(\xi)=\frac{1}{2}H_{n+1}(\xi)+nH_{n-1}(\xi) \]
+
+\SubSubQuestion
+$x$方向に弱い電場$E$をかけたときのエネルギー固有値を，$V(x)$が調和近似
+できるとして求めよ。このとき，$V(x)$の調和近似が成り立つための電場$E$の条件を
+示せ。
+\end{subsubquestions}
+
+
+\SubQuestion
+ 次のような一次元ポテンシャル$V(x)$中にある質量$m$を持つ粒子を考える。
+\[ V(x)=\left\{\begin{array}{ll}V_0(\cos x +1)&-2\pi\leq x\leq 2\pi \\
+\infty & x<-2\pi,x>2\pi \end{array}\right.\]
+ただし，$V_0$は正とする。
+
+この粒子の$x$の期待値が$t=0$で正であるとき，$x$の期待値の時間発展を述べよ。
+ここで，粒子のエネルギー期待値は$V_0$より十分低く，状態は基底状態と第一励起状
+態だけを用いて記述できるとする。
+\end{subquestions}
+
+\end{question}
+\begin{answer}{専攻 問題1}{}
+\begin{subanswers}
+\SubAnswer
+
+\begin{subsubanswers}
+\SubSubAnswer
+$x\simeq 0$ で
+\begin{eqnarray}
+V(x) &\simeq & -V_{0}(1-\frac{x^{2}}{2}+\frac{x^{4}}{24}+\cdots )\nonumber\\
+&\simeq &-V_{0}(1-\frac{x^{2}}{2}) \eqname{eq1}
+\end{eqnarray}
+と調和近似できたとする。この時Schr\"{o}dinger eq.は、
+\begin{eqnarray}
+\frac{\hbar^{2}}{2m}\frac{d^{2}}{dx^{2}}\psi +\left(
+E+V_{0}-\frac{m\omega^{2}}{2}
+x^{2}\right)\psi&=&0\nonumber \\
+\frac{d^{2}}{dx^{2}}\psi +\left\{
+ \frac{2m(E+V_{0})}{\hbar^{2}}-\left( \frac{m\omega}
+{\hbar}\right)^{2}x^{2}\right\} \psi &=&0 \eqname{eq2}
+（V_{0}=m\omega^{2}とした）
+\end{eqnarray}
+$x=\alpha X$の変数変換を考えると
+\begin{displaymath}
+\frac{d^{2}}{dx^{2}}=\frac{1}{\alpha^{2}}\frac{d^{2}}{dX^{2}},\ x^{2}=(\alpha X)^{2} 
+\end{displaymath}
+より、
+\begin{equation}
+\alpha^{4}=\left( \frac{\hbar}{m\omega}\right)^{2},\ \lambda =\frac{2m(E+V_{0})}
+{\hbar^{2}}\alpha^{2}=\frac{2(E+V_{0})}{\hbar\omega} \eqname{eq3}
+\end{equation}
+とすると式\eqhref{eq2}は
+\begin{equation}
+\frac{d^{2}}{dX^{2}}\psi +(\lambda -X^{2})\psi=0 \eqname{eq4}
+\end{equation}
+となる。
+
+ここで$u=e^{\pm \frac{X^{2}}{2}}$は$u''+(\mp 1-X^{2})u=0$をみたし、これは$X
+\rightarrow \pm \infty$で式\eqhref{eq4}と一致するので式\eqhref{eq4}の解は近似の効く範囲で
+$e^{\pm \frac{X^{2}}{2}}$に漸近する解を持つ。波動関数の収束からこのうち
+$e^{-\frac{X^{2}}{2}}$が許される。式\eqhref{eq4}の一般解を求めるために、
+\begin{displaymath}
+\psi(X)=e^{-\frac{X^{2}}{2}}\varphi(X)
+\end{displaymath}
+と置いて式\eqhref{eq4}に代入すると、
+\begin{equation}
+\frac{d^{2}}{dX^{2}}\varphi
+-2X\frac{d\varphi}{dX}+(\lambda-1)\varphi=0 \eqname{eq5}
+\end{equation}
+となる。この方程式の解は$(\lambda-1)=2n(n=0,1,2\cdots)$のときのみ$X\rightarrow
+\infty$で$e^{-\frac{X^{2}}{2}}$をかけて収束する（そうでないときは、
+$e^{-\frac{X^{2}}{2}}$をかけても発散する）。よって、
+\begin{equation}
+\lambda=2n+1(n=0,1,2\cdots) \eqname{eq6}
+\end{equation}
+式\eqhref{eq3}からこれは
+\begin{equation}
+E=E_{n}=(n+\frac{1}{2})\hbar\omega-V_{0} \eqname{eq7}
+\end{equation}
+一方、式\eqhref{eq7}に対する固有関数は式\eqhref{eq6}をみたすとき式\eqhref{eq5}の解が$n$次Hermite
+多項式になることから、規格化定数$N$を用いて
+\begin{equation}
+\psi _{n}(X)=Ne^{-\frac{X^{2}}{2}}H_{n}(X)
+\end{equation}
+規格化条件$\displaystyle{\int_{-\infty}^{\infty}|\psi(x)|^{2}dx=1}$より
+\begin{eqnarray*}
+1&=&\int_{-\infty}^{\infty}N^{2}e^{-X^{2}}{H_{n}(X)}^{2}\alpha dX=\alpha N^{2}
+\sqrt{\pi}2^{n}n!\\
+よってN&=&(\alpha \sqrt{\pi}2^{n}n!)^{-\frac{1}{2}}=
+\left\{\sqrt{\frac{\pi \hbar}
+{m\omega}}2^{n}n!\right\}^{-\frac{1}{2}}\\
+よって\psi_{n}(x)&=&\left\{\sqrt{\frac{\pi 
+\hbar}{m\omega}}2^{n}n!\right\}^{-\frac{1}{2}}
+\exp\left[-\frac{m\omega}{2\hbar}x^{2}\right]
+H_{n}\left(\sqrt{\frac{m\omega}{\hbar}}x\right)
+\end{eqnarray*}
+ただしこの調和近似が良いのは
+\begin{displaymath}
+x\sim 0 \Longleftrightarrow E_{n}\sim -V_{0}\Longleftrightarrow 
+\left(n+\frac{1}{2}\right)\hbar
+\omega \ll V_{0}
+\end{displaymath}
+%
+
+\SubSubAnswer
+摂動項
+\begin{eqnarray*}
+\Delta V(x)&=&-V_{0}\left(\cos x -1+\frac{x^{2}}{2}\right)
+\simeq -\frac{V_{0}}{24}x^{4}\\
+\Delta E_{n}&=&\langle n|\Delta V(x)|n\rangle
+=\int_{-\infty}^{\infty}N^{2}e^{-
+\left(\frac{x}{\alpha}\right)^{2}}H_{n}^{2}\left(\frac{x}{\alpha}\right)
+\left(-\frac{V_{0}}{24}x^{4}\right)dx\\
+&=&\int_{-\infty}^{\infty}N^{2}e^{-X^{2}}H_{n}^{2}(X)\left(-\frac{V_{0}}{24}
+\alpha^{4}X^{4}\right)\alpha dX\\
+&=&-\frac{V_{0}}{24}N^{2}\alpha^{5}\int_{-\infty}^{\infty}e^{-X^{2}}H_{n}^{2}(X)X^{4}dX
+\end{eqnarray*}
+\begin{eqnarray*}
+\lefteqn{\int_{-\infty}^{\infty}e^{-X^{2}}H_{n}^{2}(X)X^{4}dX}&&\\
+&=&\int_{-\infty}^{\infty}e^{-X^{2}}(XH_{n}(X))^{2}X^{2}dX\\
+&=&\int_{-\infty}^{\infty}e^{-X^{2}}\left[
+\frac{1}{2}H_{n+1}+nH_{n-1}\right]^{2}X^{2}dX\\
+&=&\int_{-\infty}^{\infty}e^{-X^{2}}\left[\frac{1}{4}(XH_{n+1})^{2}
++n(XH_{n+1})(XH_{n-1})+n^{2}(XH_{n-1})^{2}\right]dX\\
+&=&\int_{-\infty}^{\infty}e^{-X^{2}}\left[\frac{1}{4}\left\{\frac{1}{2}H_{n+2}
++(n+1)H_{n}\right\}^{2}+n\left\{
+\frac{1}{2}H_{n+2}+(n+1)H_{n}\right\}\right.\cdot\\
+&&\cdot\left.\quad\left\{\frac{1}{2}H_{n}+(n-1)
+H_{n-2}\right\}+n^{2}\left\{\frac{1}{2}H_{n}+(n-1)H_{n-2}\right\}^{2}\right]dX
+\end{eqnarray*}
+ここで$H_{n}$の直交性から積分すると$[\cdots]$の中のクロスタームは消えるので
+\begin{eqnarray*}
+&=&\int_{-\infty}^{\infty}e^{-X^{2}}\left[\frac{1}{4}\frac{1}{4}H_{n+2}^{2}
++\left\{\frac{1}{4}(n+1)^{2}+n(n+1)\frac{1}{2}+n^{2}\frac{1}{4}\right\}
+H_{n}^{2}
++n^{2}(n-1)^{2}H_{n-2}^{2}\right]dX\\
+&=&\int_{-\infty}^{\infty}e^{-X^{2}}\left[\frac{1}{16}H_{n+2}^{2}
++\frac{(2n+1)^{2}}{4}H_{n}^{2}+n^{2}(n-1)^{2}H_{n-2}^{2}\right]dX\\
+&=&\frac{1}{16}\sqrt{\pi}2^{n+2}(n+2)!+\frac{(2n+1)^{2}}{4}\sqrt{\pi}2^{n}n!+
+n^{2}(n-1)^{2}\sqrt{\pi}2^{n-2}(n-2)!\\
+&=&\sqrt{\pi}2^{n}n!\left\{\frac{(n+1)(n+2)}{4}+\frac{(2n+1)^{2}}{4}+
+\frac{n(n-1)}{4}\right\}\\
+&=&\sqrt{\pi}2^{n}n!\frac{6n^{2}+6n+3}{4}
+\end{eqnarray*}
+よって
+\begin{eqnarray*}
+\Delta E_n&=&\langle n|\Delta V(x)|n\rangle
+=-\frac{V_{0}}{24}N^{2}\alpha^{5}\sqrt{\pi}2^{n}n!
+\frac{6n^{2}+6n+3}{4}\\
+&=&-\frac{V_{0}}{24}\frac{\alpha^{5}\sqrt{\pi}2^{n}n!}{\alpha\sqrt{\pi}2^{n}n!}
+\frac{6n^{2}+6n+3}{4}\\
+&=&-\frac{V_{0}}{32}\left(\frac{\hbar}{m\omega}\right)^{2}(2n^{2}+2n+1)\\
+&=&-\frac{\hbar^{2}}{32m}(2n^{2}+2n+1)\quad (V_{0}=m\omega^{2})
+\end{eqnarray*}
+%
+
+\SubSubAnswer
+\begin{eqnarray*}
+&&\\*[-15mm]
+V(x)&=&-V_{0}\cos x-eEx\\
+&=&-V_{0}\left(1+\frac{eE}{V_{0}}x-\frac{1}{2}x^{2}+
+\frac{1}{24}x^{4}-\cdots\right)\\
+&=&-V_{0}\left(1-\frac{1}{2}\left(x-\frac{eE}{V_{0}}\right)^{2}
++\frac{e^{2}E^{2}}{2V_{0}^{2}}+
+\frac{1}{24}x^{4}-\cdots\right)
+\end{eqnarray*}
+これが調和近似できるためには$\left(x-\frac{eE}{V_{0}}\right)^{2}$
+の項の$x^{2}$からのずれが
+\begin{displaymath}
+\frac{eE}{V_{0}} \ll 1
+\end{displaymath}
+となれば良い。この時エネルギー固有値は$\displaystyle{
+\frac{e^{2}E^{2}}{2V_{0}^{2}}}$の項の
+ずれの効果で、
+\begin{displaymath}
+E_{n}=\left(n+\frac{1}{2}\right)\hbar\omega-V_{0}-\frac{e^{2}E^{2}}{2V_{0}}
+\end{displaymath}
+
+\end{subsubanswers}
+
+%
+
+\SubAnswer
+系はground stateと1st excited stateだけで記述される。それぞれの状態の
+エネルギー固有関数とエネルギー固有値は求まっているとする。\\
+\begin{tabular}{ccc}
+{ } & {エネルギー} & {波動関数}\\
+ground & $E_{0}$ & $\psi_{0}(x)$\\
+1st excited & $E_{1}$ & $\psi_{1}(x)$
+\end{tabular}\\
+一般にground stateと1st excited stateのパリティはそれぞれ正と負で
+ある。
+
+（注）正確には例えば$\psi_{0}$は中央がへこんでいるかも知れないがここで問題
+なのはパリティだけである。
+
+ここで$\psi_{0}(x),\psi_{1}(x)$の時間発展はSchr\"{o}dinger eq.
+\begin{displaymath}
+i\hbar\frac{\partial}{\partial t}\psi_{n}(x,t)=E_{n}\psi_{n}(x,t)\quad (n=0,1)
+\end{displaymath}
+で決まるので、
+\[
+\psi_{0}(x,t)=\exp\left[-\frac{iE_{0}t}{\hbar}\right]\psi_{0}(x), 
+\qquad
+\psi_{1}(x,t)=\exp\left[-\frac{iE_{1}t}{\hbar}\right]\psi_{1}(x)
+\]
+となる。したがって
+\[
+\psi(x,t)=C_0\psi_{0}(x,t)+C_1\psi_{1}(x,t)=\exp\left[-\frac{iE_{0}t}{\hbar}\right]\left\{C_0\psi_{0}(x)+C_1\exp\left[\frac{-i(E_{1}-E_{0})t}{\hbar}\right]\psi_{1}(x)\right\}
+\]
+よって、パリティを考慮すれば、
+\[
+\psi(x,t+\frac{\pi\hbar}{E_1-E_0}) = \psi(-x,t), \qquad
+\psi(x,t+\frac{2\pi\hbar}{E_1-E_0})= \psi(x,t)
+\]
+よって、粒子は角振動数$\displaystyle{\omega=
+\frac{E_{1}-E_{0}}{\hbar}}$で$x>0$と$x<0$との間を
+行き来する。
+
+\end{subanswers}
+
+\end{answer}
+
+
+
+\end{document}

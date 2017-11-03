@@ -1,0 +1,236 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題6}{}
+進化した星の中心部には重元素からなる中心核が形成される。特に重い星の場合，こ
+の中心核は重力崩壊を起こし重力崩壊型超新星爆発を起こす。このとき，解放される
+重力エネルギーは中心核を暖め，最終的に熱的ニュートリノとして外部に放出される。
+
+\begin{subquestions}
+\SubQuestion
+質量$M=3.0\times10^{30}{\rm kg}$の中心核が，重力崩壊に伴いその半径が
+$R_1=10^6{\rm m}$から$R_2=10^4{\rm m}$に収縮するとする。このときに放出される
+重力エネルギー$\Delta U$を求めよ（数式だけでよい）。ただし，中心核内部の物質
+密度は一様であると仮定し，重力定数を$G$とせよ。
+
+\SubQuestion
+
+  超新星爆発が銀河中心（地球からの距離は$L=3\times10^{20}{\rm m}$）で
+ 起こったとして，地球上で単位面積あたりを通過するニュートリノの数
+ $n_{\nu}$を数式で表せ。設問{\bf{1}}で得られた重力エネルギー$\Delta U$
+ がすべてニュートリノとして等方的に放出されるとし，ニュートリノの平均
+ エネルギーを$\bar{E_{\nu}}$とする。
+
+\SubQuestion
+放出された全ニュートリノ数の1/6は反電子ニュートリノ$\bar{\nu_e}$であり，検出
+器内で以下の反応により$\bar{\nu_e}$が検出されるとする。
+\[\bar{\nu_e}+p\rightarrow n+e^+ \]
+質量$M_D=3\times10^6{\rm kg}$の巨大な検出器により検出される事象の数を数式で表
+し，有効数字１桁で値を求めよ。ただし，単位面積あたり$n_{\nu}$個のニュートリノ
+が通過したとし，上記の反応の断面積を$\sigma=10^{-46}{\rm m^2}$とする。
+また，検出器内の陽子含有率（質量比）は1/2であり，ニュートリノの平均エネルギー
+を$\bar{E_{\nu}}=10{\rm MeV}$とする。
+
+\SubQuestion
+
+観測されたニュートリノ事象の時間幅は$\Delta t$，エネルギーの分布は
+$E_{\rm min}$から$E_{\rm max}$にわたったとする。全てのニュートリノが同
+時に放出されたと仮定することにより，ニュートリノ質量の上限値が与えられ
+る。この上限値を求めよ。
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+重力定数 & $G=6.67\times10^{-11}{\rm m^3kg^{-1}s^{-2}}$\\
+アボガドロ数 & $N_A=6.02\times10^{23}$ \\
+エネルギー換算 &$ 1{\rm eV}=1.6\times10^{-19}{\rm J} $\\ \hline
+\end{tabular}
+\end{center}
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題6}{}
+
+\begin{subanswers}
+\SubAnswer
+%半径が$R$のとき、星の密度$\rho$は、
+%\[
+%\rho (R) = \frac{M}{\frac{4}{3}\pi R^{3}}
+%\]
+%と書くことができる。
+%中心から$r$のところにある微小体積$dV$のもつポテンシャルエネルギーは
+%次のように表される。
+%\[
+%dU =  - \frac{G}{r}\frac{4}{3}\pi r^{3}\rho \rho dV
+%   = -\frac{4}{3}\pi Gr^{2}\rho ^{2}dV
+%\]
+%よって、
+%\[
+%U(R_{1})  =  \int_{0}^{R_{1}}-\frac{4}{3}\pi Gr^{2}\rho ^{2}4\pi r^{2}dr
+%           = -\frac{16}{3}\pi ^{2}G\rho ^{2}\int_{0}^{R_{1}}r^4 dr\\
+%          =  -\frac{16}{3}\pi ^{2}G \frac{M^{2}}{\frac{16}{9}\pi ^{2}
+%               R_{1}^{6}}\frac{1}{5}R_{1}^{5}
+%           = -\frac{3}{5}\frac{GM^{2}}{R_{1}}
+%\]
+%同様に、
+%\[
+%U(R_2)=-\frac{3}{5}\frac{GM^{2}}{R_{2}}
+%\]
+%以上より、重力崩壊によって放出されるエネルギーは、
+%\[
+%\Delta U = U(R_{1}) - U(R_{2}) 
+%= \frac{3}{5}GM^{2}\left(\frac{1}{R_{2}}-\frac{1}{R_{1}}\right)
+%\]
+%となる。
+
+%『密度一様』$\Longleftrightarrow$ 『半径$r$の球の質量$M(r)=M\times\ds{\left(\frac{r}{R}\right)^3}$』だから、中心から$r\sim r+{\rm d}r$の球殻のもつポテンシャルエネルギー${\rm d}U(r)$は、
+%\[ {\rm d}U(r)=-\frac{GM(r)}{r}{\rm d}M(r)=-\frac{G}{r}\cdot M\left(\frac{r}{R}\right)^3 \cdot M\cdot \frac{3r^2{\rm d}r}{R^3}=-\frac{3GM^2 r^4}{R^6}{\rm d}r \]
+%よって、
+%\[ U(R)=\int_0^R{\rm d}U(r)=-\frac{3GM^2}{5R} \]
+%\[\Yueni \Delta U=U(R_1)-U(R_2)=\frac{3GM^2}{5}\left(\frac{1}{R_2}-\frac{1}{R_1}\right) \]
+
+% yet another correction... by yuji tachikawa, 7/23/2001
+\noindent\textbf{解き方1}\quad
+無限遠から物質を少しずつ持ってきて球を組み立てることを考えると、
+密度一様なので
+半径$r$の球の質量は$M(r)=M\times\ds{\left(\frac{r}{R}\right)^3}$だから、
+そのすぐ外側でのポテンシャルは$-\frac{GM(r)}{r}$なので、
+$r$から$r+{\rm d}r$までの球殻を作る際に出るエネルギー${\rm d}U(r)$は、
+\[ {\rm d}U(r)=-\frac{GM(r)}{r}{\rm d}M(r)=-\frac{G}{r}\cdot M\left(\frac{r}{R}\right)^3 \cdot M\cdot \frac{3r^2{\rm d}r}{R^3}=-\frac{3GM^2 r^4}{R^6}{\rm d}r \]
+よって、
+\[ U(R)=\int_0^R{\rm d}U(r)=-\frac{3GM^2}{5R} \]
+\[\Yueni \Delta U=U(R_1)-U(R_2)=\frac{3GM^2}{5}\left(\frac{1}{R_2}-\frac{1}{R_1}\right) \]
+
+\noindent\textbf{解き方2}\quad
+重力エネルギーは$(1/2)\int \rho\phi dV$である。
+$1/2$は2粒子間のポテンシャルを2重に数えるから必要である。
+また、ポテンシャル$\phi$は無限遠でゼロになるように原点を定める。
+さて$\phi$はがんばって計算すると\begin{align*}
+-GM/r&\qquad(r>R)&GM/R(r^2/2R^2-3/2)&\qquad(r<R)
+\end{align*}となるので、\[
+U(R)=\frac12\int_0^R \frac{GM}{R}\left(\frac{r^2}{2R^2}-\frac 32\right)\mathrm{d}M(r)=\left(\frac3{20}-\frac 34\right)\frac{GM^2}{R}=-\frac{3GM^2}{5R}.
+\]
+
+\SubAnswer
+$\displaystyle{
+4\pi L^{2}n_{\nu} = \frac{\Delta U}{\bar{E}_{\nu}}
+}$
+だから、
+\[
+n_{\nu} = \frac{\Delta U}{4\pi L^{2}\bar{E}_{\nu}}
+        = \frac{3GM^{2}}{20\pi L^{2}\bar{E}_{\nu}}
+                    \left(\frac{1}{R_{2}}-\frac{1}{R_{1}}\right)
+\]
+
+\SubAnswer
+検出される事象の数が、
+\[
+N = \frac{n_{\nu}}{6}\sigma N_{p}
+\]
+で表せると仮定する。但し、$N_{p}$は陽子の数である。
+陽子１モルは水素原子１モルとほぼ同じ質量をもつと考えれば、
+$M_{D}=3 \times 10^{6} \rm kg$の測定器に含まれる陽子数は、
+陽子の含有率（質量比）を考慮して、次のように書くことができる。
+\[
+N_{p} = \frac{M_{D} \times 1/2}{1 \times 10^{-3}} \times N_{A}
+\]
+$N_{A}$はアボガドロ数である。$M = 3 \times 10^{30} {\rm kg}, 
+L = 3 \times 10^{20}{\rm m}
+, G = 7 \times 10^{-11}{\rm m^{3}kg^{-1}s^{-2}},\\
+\bar{E}_{\nu} = 10 {\rm MeV}, R_{1} = 10^{6}{\rm m}, R_{2} = 10^{4}
+{\rm m}$より、
+\[
+n_{\nu} = 2 \times 10^{16} {\rm m^{-2}}
+\]
+$M_{D} = 3 \times 10^{6}kg, N_{A} = 6 \times 10^{23}$より、
+\[
+N_{p} = 9 \times 10^{32}
+\]
+この結果を用いて、仮定の妥当性を示す。検出される事象の数が、$\ds{\frac{n_{\nu}}{6}\sigma N_{p}}$と書けるのは、
+\[ \frac{\sigma N_{p}}{1[{\Unit{m^2}}]} \ll 1 \]
+が成り立っている場合である。実際、
+\[ \sigma N_{p} \simeq 10^{-46}[{\Unit{m^2}}]\cdot 9\times 10^{32}=9\times 10^{-14}[{\Unit{m^2}}]
+\]
+となるので、条件を満たしている。
+よって、
+\[
+N = 3 \times 10^{2}
+\]
+
+\SubAnswer
+$E_{\rm max}, E_{\rm min}$に対応して添字1,2を用いることにする。
+\begin{equation}
+\Delta t = t_{2}-t_{1} = \frac{L}{v_{2}}-\frac{L}{v_{1}}
+        = \frac{L}{c}\left(\frac{1}{\beta_{2}}-\frac{1}{\beta_{1}}\right)
+\eqname{shiki1}
+\end{equation}
+\begin{equation}
+E_{1} = \frac{mc^{2}}{\sqrt{1-\beta_{1}^{2}}}
+\eqname{shiki2}
+\end{equation}
+\begin{equation}
+E_{2} = \frac{mc^{2}}{\sqrt{1-\beta_{2}^{2}}}
+\eqname{shiki3}
+\end{equation}
+%\eqhref{shiki1}から
+%\begin{equation}
+%\beta_{2} = \frac{\beta_{1}}{\beta_{1}c\Delta t/L + 1}
+%\eqname{shiki4}
+%\end{equation}
+%\eqhref{shiki4}を\eqhref{shiki3}に代入して、
+%\begin{equation}
+%E_{2}^{2} = \frac{(mc^{2})^{2}}{\left[ 1-\beta_{1}^{2}/
+%            (1+\frac{c\Delta t\beta_{1}}{L})^{2}\right]}
+%\eqname{shiki5}
+%\end{equation}
+%\eqhref{shiki2}と\eqhref{shiki5}より、
+%\[
+%E_{1}^{2}(1-\beta_{1}^{2}) = mc^{2}
+%=E_{2}^{2}\left[ 1-\frac{\beta_{1}^{2}}
+%            {(1+\frac{c\Delta t\beta_{1}}{L})^{2}}\right]
+%\]
+%\[\hspace{-10mm}
+%1-\beta_{1}^{2}  =       \left(\frac{E_{2}}{E_{1}}\right)^{2}
+%                           \left[ 1-\frac{\beta_{1}^{2}}
+%                           {(1+\frac{c\Delta t\beta_{1}}{L})^{2}}\right]
+%                 \simeq  \left(\frac{E_{2}}{E_{1}}\right)^{2}
+%                           \left[ 1-\beta_{1}^{2}
+%                           (1-2\frac{c\Delta t}{L}\beta_{1})\right]
+%                 =       \left(\frac{E_{2}}{E_{1}}\right)^{2}
+%(1-\beta_{1}^{2})
+%  + \left(\frac{E_{2}}{E_{1}}\right)^{2}\frac{2c\Delta t}{L}
+%                             \beta_{1}^{3}
+%\]
+%\[
+%\left[ 1-\left(\frac{E_{2}}{E_{1}}\right)^{2} \right](1-\beta_{1}^{2})
+%= \left(\frac{E_{2}}{E_{1}}\right)^{2}\frac{2c\Delta t}{L}\beta_{1}^{3}
+%\]
+%よって、
+%\[
+%(mc^{2})^{2}  =  E_{1}^{2}(1-\beta_{1}^{2})
+%              =  E_{1}^{2}\frac{(\frac{E_{2}}{E_{1}})^{2}}
+%                   {1-(\frac{E_{2}}{E_{1}})^{2}}
+%                    \frac{2c\Delta t}{L}\beta_{1}^{3}
+%              <  \frac{E_{1}^{2}E_{2}^{2}}{E_{1}^{2}-E_{2}^{2}}
+%                   \frac{2c\Delta t}{L}
+%\]
+
+$\beta_1,\beta_2>0$を考慮して、\eqhref{shiki1}〜\eqhref{shiki3}より、
+\[ \frac{c \Delta t}{L}=\left\{1-\left(\frac{mc^2}{E_2}\right)^2\right\}^{-\frac{1}{2}}-\left\{1-\left(\frac{mc^2}{E_1}\right)^2\right\}^{-\frac{1}{2}}
+\] 
+ニュートリノの運動が相対論的である$\left(\ds\frac{mc^2}{E} \ll 1\right)$として、
+\[\frac{c \Delta t}{L}\simeq \left\{1+\frac{1}{2}\left(\frac{mc^2}{E_2}\right)^2\right\}-\left\{1+\frac{1}{2}\left(\frac{mc^2}{E_1}\right)^2\right\} =\frac{(mc^2)^2}{2}\left(\frac{1}{E_2^2}-\frac{1}{E_1^2}\right)\]
+$mc^2>0$より、
+\[ \Yueni \quad mc^2\simeq \left[\left(\frac{2c\Delta t}{L}\right)\left/ \left(\frac{1}{E_2^2}-\frac{1}{E_1^2}\right)\right]^{1/2}\right. \]
+
+{\bf{[注]}}『上限』とは、「ニュートリノが同時に放出された」という仮定による。つまり\eqhref{shiki1}を立てたことで、上限を求めていることになる。$\beta^3 \leq 1$とすることではない。
+\end{subanswers}
+\end{answer}
+
+
+
+\end{document}
+
+

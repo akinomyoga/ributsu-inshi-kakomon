@@ -1,0 +1,248 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題5}{}
+面積$S$の２次元空間を運動する２個の電子が短距離間の引力ポテンシャル
+$-V_0\delta(\vec{r}_1-\vec{r}_2)$（$V_0$は正の定数，$\delta(\vec{r})$は２次元
+空間でのディラックのデルタ関数，$\vec{r}_1,\vec{r}_2$は電子の座標）によって相
+互作用している。この時，２個の電子のスピンが逆向きであれば，束縛状態が出現す
+る。重心は静止しているとして，次の順序で束縛エネルギーを求めよ。この束縛エネ
+ルギーはシュレディンガー方程式
+\begin{equation}
+\left[\frac{\vec{p}_1^2}{2m}+\frac{\vec{p}_2^2}{2m}-V_0\delta(\vec{r}_1-
+\vec{r}_2)\right]\psi(\vec{r}_1,\vec{r}_2)=\varepsilon\psi(\vec{r}_1,
+\vec{r}_2) \eqname{Q1} \end{equation}
+の最低固有値により決定される。（$m$は電子の質量，$\vec{p}_1,\vec{p}_2$
+は運動量）
+
+\begin{subquestions}
+\SubQuestion
+２個の電子のスピンが逆向きの場合，空間部分の波動関数
+$\psi(\vec{r}_1,\vec{r}_2)$は$\vec{r}_1$と$\vec{r}_2$の入れ換えに関してどのよ
+うな性質を持つか説明せよ。２個の電子のスピンが同じ向きの場合の\\
+$\psi(\vec{r}_1,\vec{r}_2)$はどうなるか。また，このとき引力ポテンシャルは
+$\psi(\vec{r}_1,\vec{r}_2)$にどのような影響を及ぼすか。
+
+\SubQuestion
+ $\psi(\vec{r}_1,\vec{r}_2)$をフーリエ展開すると波数$\vec{k}$に関して偶対
+称である関数$g(\vec{k})$を用いて
+\begin{equation}
+\psi(\vec{r}_1,\vec{r}_2)=\sum_{\vec{k}}e^{i\vec{k}\cdot(\vec{r}_1-\vec{r}_2)}
+g(\vec{k}) \eqname{Q2} \end{equation}
+と書けることを示せ。
+
+\SubQuestion
+シュレディンガー方程式を$g(\vec{k})$を用いて表現すると，次式が得られる
+ことを示せ。
+\begin{equation}
+\left[2\varepsilon(\vec{k})g(\vec{k})-V_0\frac{1}{S}\sum_{\vec{q}}
+g(\vec{k}-\vec{q})\right]=\varepsilon g(\vec{k}) \eqname{Q3} 
+\end{equation}
+ここで，$\varepsilon(\vec{k})=\hbar^2k^2/2m$であり，$\delta(\vec{r})
+=\frac{1}{S}\sum_{\vec{q}}e^{i\vec{q}\cdot\vec{r}}$に注意する。
+
+\SubQuestion
+\eqhref{Q3}式を解くために，$\sum_{\vec{q}}g(\vec{k}-\vec{q})$は$k$に依存しない
+ことに注意し，$\frac{1}{S}\sum_{\vec{q}}g(\vec{k}-\vec{q})=C$と書く。この定数
+$C$を用いると，\eqhref{Q3}は$g(\vec{k})$について解けて
+\[g(\vec{k})=\frac{V_0C}{2\varepsilon(\vec{k})-\varepsilon} \]
+となり，$\varepsilon$を決定する方程式が次式で与えられることを示せ。
+\begin{equation}
+\frac{V_0}{S}\sum_{\vec{k}}\frac{1}{2\varepsilon(\vec{k})-\varepsilon}=1
+\eqname{Q4}
+\end{equation}
+
+\SubQuestion
+ \eqhref{Q4}の左辺を，$\vec{k}$に関する積分に書き直す。このとき，$\vec{k}$についての積分の領域が$\varepsilon(\vec{k})\leq \varepsilon_0$（$\varepsilon_0$は適
+当な正のエネルギー）であるとして$\varepsilon$を求めよ。\eqhref{Q4}を満たす
+$\varepsilon$は負となることを確認せよ。特に，$mV_0/2\pi\hbar^2\ll1$の場合，束
+縛エネルギー$E=-\varepsilon$は
+\[
+E=2\varepsilon_0\exp\left[-\frac{4\pi\hbar^2}{mV_0}\right]
+\]
+で与えられることを示せ。
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題5}{}
+
+\begin{subanswers}
+\SubAnswer
+2つの電子のスピンが逆向きのとき、
+つまり状態ケットのスピン成分が反対称のときは、
+\[
+\psi(\vec{r}_1,\vec{r}_2)=\psi(\vec{r}_2,\vec{r}_1)
+\]
+逆に、状態ケットのスピン成分が対称（スピンが同じ向き）ならば、
+\[
+\psi(\vec{r}_1,\vec{r}_2)=-\psi(\vec{r}_2,\vec{r}_1)
+\]
+となる。
+
+$\psi(\vec{r}_1,\vec{r}_2)$ が反対称状態のとき $r_1=r_2$ なら $\psi=0$ より
+\[
+\delta(\vec{r}_1-\vec{r}_2)\psi(\vec{r}_1,\vec{r}_2)=0
+\]
+になり、このとき Schr\"{o}dinger 方程式は自由粒子の場合と同じで、
+束縛状態は出現しない。
+
+$\psi(\vec{r}_1,\vec{r}_2)$ が対称状態のとき、結合エネルギーの期待値は
+\[
+\int \psi^{*}(\vec{r}_1,\vec{r}_2)
+\{-V_0 \delta(\vec{r}_1-\vec{r}_2) \} \psi(\vec{r}_1,\vec{r}_2)
+d^{2}r_1 d^{2}r_2 = -V_0 \int | \psi(\vec{r},\vec{r})|^2 d^{2}r < 0
+\]
+となりエネルギーが下がる。これにより束縛状態が出現する。
+
+\SubAnswer
+重心は静止しているから
+\begin{equation}
+(\vec{p_{1}}+\vec{p_{2}}) \psi(\vec{r}_1,\vec{r}_2) = 0
+\eqname{cm}
+\end{equation}
+である。ここで重心座標$\vec{R}$、相対座標$\vec{r'}$を
+\[
+\vec{R} \equiv \frac {1}{2} (\vec{r_{1}} + \vec{r}_2),\hspace{0.5cm}
+\vec{r'} \equiv \vec{r_{1}} - \vec{r}_2
+\]
+とおき
+\[
+\psi(\vec{r}_1,\vec{r}_2) \equiv \psi(\vec{R},\vec{r'})
+\]
+とすると\eqhref{Q1}式は、\eqhref{cm}式を使って、
+\[
+(\vec{p_{1}}+\vec{p_{2}}) \psi(\vec{r}_1,\vec{r}_2) =
+ \frac {\hbar}{i} \left(\frac{\partial}{\partial \vec{r}_1 } + 
+\frac{\partial}{\partial \vec{r}_2 }\right)\psi(\vec{r}_1,\vec{r}_2) =
+\frac {\hbar}{i} \frac{\partial}{\partial \vec{R}} \psi(\vec{R},\vec{r'}) = 0
+\]
+
+となり、$\psi(\vec{R},\vec{r'})$ は $\vec{r'}$ のみの関数であることがわかる。
+したがって
+\[ 
+\psi(\vec{r}_1,\vec{r}_2) = \sum_{\vec{k}} e^{i\vec{k}(\vec{r}_1 - \vec{r}_2)}
+g(\vec{k})
+\]
+のように展開することができる。
+
+束縛状態では $\psi(\vec{r}_1,\vec{r}_2)=\psi(\vec{r}_2,\vec{r}_1)$
+だから
+
+\[
+\sum_{\vec{k}} e^{i\vec{k}(\vec{r}_1 - \vec{r}_2)}g(\vec{k}) =
+\sum_{\vec{k}} e^{i\vec{k}(\vec{r}_1 - \vec{r}_2)}g(-\vec{k})
+\]
+となり、$g(\vec{k}) = g(-\vec{k})$である。すなわち$g(\vec{k})$は偶対称である。
+
+\SubAnswer
+\begin{eqnarray*}
+\\*[-15mm]
+\vec{p_{1}}^2+\vec{p_{2}}^2 &=& \frac {1}{2} \left\{ 
+(\vec{p_{1}}+\vec{p_{2}})^2 - 
+ (\vec{p_{1}}-\vec{p_{2}})^2 \right\}\\
+\vec{p_{1}}+\vec{p_{2}} &=& \frac {\hbar}{i} 
+\left (\frac{\partial}{\partial \vec{r}_1 } +
+\frac{\partial}{\partial \vec{r}_2 } \right) =
+\frac {\hbar}{i} \frac{\partial}{\partial \vec{R}}\\
+\vec{p_{1}}-\vec{p_{2}} &=& \frac {\hbar}{i} 
+\left(\frac{\partial}{\partial \vec{r}_1 } -
+\frac{\partial}{\partial \vec{r}_2 }\right) =
+\frac {2\hbar}{i} \frac{\partial}{\partial \vec{r'}}
+\end{eqnarray*}
+を用いて Schr\"{o}dinger 方程式を書き換える。$\psi(\vec{R},\vec{r'})$
+は$\vec{R}$に依存しないので
+\[
+\left[\frac {\vec{p_{1}}^2}{2m} + \frac {\vec{p_{2}}^2}{2m} -
+V_0 \delta(\vec{r'}) \right]   
+\psi(\vec{r'}) =
+\left[ - \frac {\hbar^2} {m} \frac {d^2}{d \vec{r'}^2} - V_0 \delta(\vec{r'}) 
+\right] 
+\psi(\vec{r'}) =
+\varepsilon \psi(\vec{r'})
+\]
+となる。この式に
+\[
+\psi(\vec{r'}) = \sum_{\vec{k}} e^{i\vec{k}\vec{r'}} g(\vec{k}), 
+\hspace{0.5cm}
+\delta(\vec{r'}) = \frac {1}{S} \sum_{\vec{q}} e^{i\vec{q}\vec{r'}}
+\]
+を代入すると
+\[
+\sum_{\vec{k}} \frac {\hbar^2 k^2} {m} e^{i\vec{k}\vec{r'}} g(\vec{k}) -
+\frac {V_0}{S} \sum_{\vec{k}} \sum_{\vec{q}} e^{i(\vec{k}+\vec{q})\vec{r'}}
+g(\vec{k}) = \varepsilon \sum_{\vec{k}} e^{i\vec{k}\vec{r'}} g(\vec{k})
+\]
+となり、$e^{i\vec{k}\vec{r'}}$の成分に着目すれば
+\begin{equation}
+\left[\frac {\hbar^2 k^2} {m} g(\vec{k}) - \frac {V_0}{S} \sum_{\vec{q}}
+g(\vec{k}-\vec{q})\right] = \varepsilon g(\vec{k})
+\eqname{8}
+\end{equation}
+を得る。
+
+\SubAnswer
+\begin{eqnarray*}
+\\*[-12mm]
+\frac {1}{S} \sum_{\vec{q}} g(\vec{k}-\vec{q}) = C
+\end{eqnarray*}
+を\eqhref{8}に代入すれば直ちに
+\begin{equation}
+g(\vec{k})=\frac{V_0C}{2\varepsilon(\vec{k})-\varepsilon}
+\eqname{g9}
+\end{equation}
+を得る。そして
+\[
+\frac{1}{S}\sum_{\vec{q}}g(\vec{k}-\vec{q})= C
+\]
+に$\vec{k} = 0$を代入し$g(\vec{q}) = g(-\vec{q})$を用い、添字を$\vec{q}$
+から$\vec{k}$に
+変えると
+\begin{equation}
+\frac {1}{S} \sum_{\vec{k}} g(\vec{k}) = C
+\eqname{sum}
+\end{equation}
+
+となり\eqhref{g9}を\eqhref{sum}に代入すると
+\[
+\frac{V_0}{S}\sum_{\vec{k}}\frac{1}{2\varepsilon(\vec{k})-\varepsilon}=1
+\]
+となる。
+\SubAnswer
+\begin{eqnarray*}
+\\*[-15mm]
+\frac{V_0}{S}\sum_{\vec{k}}\frac{1}{\frac {\hbar^2 k^2} {m}-\varepsilon}=1
+\end{eqnarray*}
+これを積分に直すと
+\[
+\frac {S} {4\pi^2} \frac {V_0}{S}
+\int^{k_0}_{0} \frac {2\pi k}{\frac {\hbar^2 k^2} {m}-\varepsilon} dk =
+\frac {mV_0}{4\pi \hbar^2} \int^{\varepsilon_0}_{0}
+\frac {dE} {E- \frac {\varepsilon} {2}} = 1
+\]
+となる。
+$\varepsilon > 0$ のときは積分が発散するので $\varepsilon < 0$ でなければ
+ならない。このとき
+\[
+\frac {mV_0}{4\pi \hbar^2} \log (1-\frac {2\varepsilon_0}{\varepsilon}) = 1
+\]
+\[
+\varepsilon = \frac {2\varepsilon_0}{1- \exp \frac{4\pi \hbar^2}{mV_0}} < 0
+\]
+特に$\displaystyle{
+\frac {mV_0}{2\pi \hbar^2} \ll 1}$の場合、分母の 1 が無視できて
+\[
+E = 2\varepsilon_0 \exp \left(- \frac {4\pi \hbar^2}{mV_0}\right)
+\]
+となる。
+
+\end{subanswers}
+
+\end{answer}
+
+
+\end{document}
+
+
+

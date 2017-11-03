@@ -1,0 +1,210 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題3}{}
+面積$S=L_x\times L_y$の平面上は自由に動けるが，面に垂直な方向には動けない電子
+の系（２次元電子系）を考える。$L_x,L_y$は，それぞれ平面の$x$方向，$y$方向の長
+さであり，巨視的な大きさであるとする。また，電子間の相互作用は無視できるもの
+とする。電子の質量を$m$，電子密度を$n$，ボルツマン定数を$k_B$，プランク定数を
+$2\pi\hbar$，絶対温度を$T$とする。このとき，以下の設問に答えよ。
+
+\begin{subquestions}
+\SubQuestion
+周期的境界条件を用いて，１個の電子に対する固有状態，固有エネルギーを求めよ。
+
+\SubQuestion
+状態密度$\rho(E)$は$dN(E)/dE$で定義される。$\rho(E)$および化学ポテンシ
+ャル$\mu$を用いて，有限温度での全電子数を与える式をしるせ。この式のここでの状
+態密度の表式を代入して，$\mu$を$n$および$T$の関数として求めよ。また，$E_F$と
+$T$の関数としても表してみよ。
+
+\SubQuestion
+$k_BT\ll E_F$のときの比熱の最重要項を求めよ。このとき，必要ならば次の公
+式を用いよ。
+\[\int_{-\infty}^{\infty}x^2\frac{df}{dx}dx=-\frac{\pi^2}{3},
+\hspace{1cm} ここで、f(x)=\frac{1}{e^x+1}\] である。
+
+\SubQuestion
+電子の状態密度が$E_F-\Delta E\leq E\leq E_F+\Delta E$で
+$\rho(E)=|E-E_F|^{\alpha}$である系を考える。ここで，$\alpha>-1$である。
+このとき十分低温（$k_BT\ll\Delta E$）での比熱が温度の関数としてどのような振る
+舞いをするか調べよ。
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題3}{}
+
+\begin{subanswers}
+\SubAnswer
+２次元での自由粒子の Schr\"{o}dinger 方程式は、 
+\begin{equation}
+ -\frac{\hbar^2}{2m}\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\right)\Psi 
+=E\Psi \eqname{A1} \end{equation}
+である。この式を$\Psi=X(x)Y(y)$と変数分離して解く\eqhref{A1}へ代入すれば、
+\[ -\frac{\hbar^2}{2m}\left(\frac{X''}{X}+\frac{Y''}{Y}\right)=E \]
+を得る。ここで、$X''/X=-k_x^2,Y''/Y=-k_y^2$とおけば、
+\[X=A_xe^{ik_xx},Y=A_ye^{ik_yy}\]
+と解が求まる。次に周期的境界条件により
+$k_x,k_y$を求めると、
+$X(x)=X(x+L_x)$より$e^{ik_xL_x}=1$、つまり、
+$k_x=2\pi n_x/L_x\;(n_x=0,\pm1,\pm2,\cdots)$
+が得られ、同様にして、$k_y=2\pi n_y/L_y\;(n_y=0,\pm1,\pm2,\cdots)$
+が得られる。
+
+従って、\eqhref{A1}の解は、
+\[\Psi=X(x)Y(y)=Ae^{2i\pi\left(\frac{n_x}{L_x}x+\frac{n_y}{L_y}y\right)}
+\;\;\;\;\;(A=A_xA_y) \]
+と書け、さらに、規格化条件から、
+$A=1/\sqrt{S}$となる。結局固有ベクトル、固有値はそれぞれ、
+\begin{eqnarray*}
+\Psi&=&\frac{1}{\sqrt{S}}e^{2i\pi\left(\frac{n_x}{L_x}x+
+\frac{n_y}{L_y}y\right)} \\
+E&=&\frac{\hbar^2}{2m}(k_x^2+k_y^2) =\frac{(2\pi\hbar)^2}{2m}\left\{\left(\frac{n_x}{L_x}\right)^2+\left(\frac{n_y}{L_y}\right)^2\right\}, \;\;\;\;( n_x,n_y=0,\pm1,\pm2,\cdots)
+\end{eqnarray*}
+となる。
+
+\SubAnswer
+あるエネルギー$E$までの状態数は、$n_x$-$n_y$面での$E=$一定
+という線内の格子点数に対応する。
+
+いま、$L_x,L_y$は十分に大きいとしているので、エネルギー準位の間隔は小さい
+とできる。そこで、状態数を、軸の長さがそれぞれ$\sqrt{2mE}L_x/\pi\hbar,
+\sqrt{2mE}L_y/\pi\hbar$の楕円の面積と考えることができる。
+
+従って、
+\begin{equation}
+N(E)= 2\cdot\pi\cdot\sqrt{2mE}\frac{L_x}{2\pi \hbar}\cdot\sqrt{2mE}\frac{
+L_y}{2\pi \hbar} = \frac{mS}{\pi \hbar^2}E \eqname{A2}
+\end{equation}
+ここで、因数２はスピンの自由度によるものである。
+
+また、$N(E_F)=nS$より、
+\[\frac{mS}{\pi\hbar^2}E_F=nS
+\Longrightarrow E_F=\frac{\pi\hbar^2}{m}n
+\]
+が得られる。
+
+有限温度$T$での全電子数$N$は、fermi 分布関数$f(E)$を用いて、
+\[
+N=\int_0^{\infty}\rho(E)f(E)dE 
+=\int_{0}^{\infty}\rho(E)\frac{1}{e^{\frac{E-\mu}
+{k_{\scriptscriptstyle{B}}T}}+1}dE
+\]
+と書き表せる。
+
+さて、\eqhref{A2}式より、
+$\rho(E)$は、
+\[\rho(E)=\frac{dN(E)}{dE}=\frac{mS}{\pi\hbar^2}\]
+を代入して、
+\[
+N=\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{dE}{e^{
+\frac{E-\mu}{k_{\scriptscriptstyle{B}}T}}+1} 
+=\frac{mS}{\pi\hbar^2}
+k_{\scriptscriptstyle{B}}T\ln\left(
+e^{\frac{\mu}{k_{\scriptscriptstyle{B}}T}}+1\right)=nS
+\]
+となる。よって、$\mu$は、$T$と$n$、$T$と$E_F$を使って、それぞれ
+\begin{equation}
+\mu=k_{\scriptscriptstyle{B}}
+T\ln\left(e^{\frac{\pi\hbar^2}{m}n
+\frac{1}{k_{\scriptscriptstyle{B}}T}}-1\right)= k_{\scriptscriptstyle{B}}T\ln\left(
+e^{\frac{E_F}{k_{\scriptscriptstyle{B}}T}}-1\right) \eqname{A3}
+\end{equation}
+と表せる。
+
+\SubAnswer
+内部エネルギー$U(T)$は、
+\[
+U(T)=\int_0^{\infty}E\rho(E)f(E)dE 
+=\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{EdE}
+{e^{\frac{E-\mu}{k_{\scriptscriptstyle{B}}T}}+1} 
+\]
+である。ここで、低温近似
+$k_{\scriptscriptstyle{B}}T\ll E_F$を使うと、\eqhref{A3}
+式より$\mu\simeq E_F$として良いから、
+$\beta\equiv 1/k_{\scriptscriptstyle{B}}T$として、
+\[U(T)\simeq\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{EdE}{e^{\beta(E-E_F)}
++1} \]
+と表せる。すると、比熱$C(T)$は、
+\[
+C(T)=\frac{\partial U(T)}{\partial T} 
+\simeq-\frac{1}{k_{\scriptscriptstyle{B}
+}T^2}\frac{\partial }{\partial \beta}\left(\frac{mS}{\pi\hbar^2}
+\int_0^{\infty}\frac{EdE}{e^{\beta(E-E_F)}+1}\right)
+=\frac{mS}{\pi\hbar^2}\frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_0^{\infty}
+\frac{E(E-E_F)e^{\beta(E-E_F)}}{\left(e^{\beta(E-E_F)}+1\right)^2}dE
+\]
+ここで、$x\equiv \beta(E-E_F)$とすると、$dx=\beta dE$などより、
+\[
+C(T)=\frac{mS}{\pi\hbar^2}\frac{1}
+{k_{\scriptscriptstyle{B}}T^2}\int_{-\beta E_F}^{\infty}
+\frac{\left(\frac{x}{\beta}+E_F\right)\frac{x}{\beta}e^x}
+{\left(e^x+1\right)^2}\frac{dx}{\beta}
+= \frac{mS}{\pi\hbar^2}\frac{1}{k_{\scriptscriptstyle{B}
+}T^2}\int_{-\beta E_F}^{\infty}
+\frac{1}{\beta^3}\frac{(x+\beta E_F)xe^x}{\left(e^x+1\right)^2}dx 
+\]
+
+$1/\beta \ll E_F$、つまり、$\beta E_F\gg 1$より、
+\begin{eqnarray*}
+&\simeq&\frac{mS}{\pi\hbar^2}\frac{1}{k_{\scriptscriptstyle{B}}T^2}
+\int^{\infty}_{-\infty}\frac{1}{\beta^3}\frac{(x+\beta E_F)x
+e^x}{\left(e^x+1\right)^2}dx
+\end{eqnarray*}
+が得られる。
+
+積分を計算する際に、$(x+\beta E_F)$という部分に注目すると、
+残った部分が奇関数になっているから、第二項から来る積分は消える。また、
+\[\frac{d}{dx}f(x)=\frac{d}{dx}\left(\frac{1}{e^x+1}\right)=
+\frac{-e^x}{\left(e^x+1\right)^2}\]
+であるから、結局、
+\[
+C(T)\simeq-\frac{mS}{\pi\hbar^2}
+\frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_{-\infty}^{\infty}
+\frac{1}{\beta^3}x^2\frac{d}{dx}f(x)dx 
+=-\frac{mS}{\pi\hbar^2}\frac{1}
+{k_{\scriptscriptstyle{B}}T^2}(k_{\scriptscriptstyle{B}}T)^3
+\left(-\frac{\pi^2}{3}\right) 
+=\frac{mS\pi k_{\scriptscriptstyle{B}}^2}{3\hbar^2}T
+\]
+となる。
+
+\SubAnswer
+状態密度の仮定式$\rho(E)=|E-E_F|^{\alpha},\alpha>-1(
+{\rm for} \; E_F-\Delta E \leq E \leq
+ E_F+\Delta E)$を代入すると、内部エネルギーとして、
+\[U(T)=\int_{E_F-\Delta E}^{E_F+\Delta E}E|E-E_F|^{\alpha}
+\frac{dE}{e^{\beta(E-\mu)}+1} \]
+を考えればよく、
+$k_{\scriptscriptstyle{B}}T\ll E_F,\Delta E$で低温近似をすれば、
+\begin{eqnarray*}
+C(T)&\simeq& -\frac{1}{k_{\scriptscriptstyle{B}}T^2}
+\int_{E_F-\Delta E}^{E_F+\Delta E}
+\frac{\partial }{\partial \beta}\left(E|E-E_F|^{\alpha}\frac{1}{e^{\beta(E-E_F)}+1}\right)dE\\
+&=&\frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_{E_F-\Delta E}^{E_F+\Delta E}
+E|E-E_F|^{\alpha}\frac{(E-E_F)e^{\beta(E-E_F)}}{\left(e^{\beta(E-E_F)}
++1\right)^2}dE 
+\end{eqnarray*}
+$x\equiv\beta(E-E_F)$とすると、
+\begin{eqnarray*}
+&=& \frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_{-\beta\Delta E}^{\beta\Delta E}
+\left(\frac{x}{\beta}+E_F\right)\left|\frac{x}{\beta}\right|^{\alpha}
+\frac{\frac{x}{\beta}e^x}{\left(e^x+1\right)^2}\frac{dx}{\beta} \\
+&=& \frac{1}{k_{\scriptscriptstyle{B}}T^2}
+\cdot\beta^{-\alpha-3}\int_{-\infty}^{\infty}
+(x+\beta E_F)|x|^{\alpha}\frac{xe^x}{\left(e^x+1\right)^2}dx \\
+&=& \frac{1}{k_{\scriptscriptstyle{B}}T^2}
+\beta^{-\alpha-3}\int_{-\infty}^{\infty}
+\frac{|x|^{\alpha}x^2e^x}{\left(e^x+1\right)^2}dx 
+\;\;\;（偶奇性より。{\bf{4}}番を参照）\\
+&\propto& T^{\alpha+1}
+\end{eqnarray*}
+という結果を得る。
+
+\end{subanswers}
+\end{answer}
+
+
+\end{document}
