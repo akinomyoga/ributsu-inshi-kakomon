@@ -1,0 +1,225 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+\begin{question}{専攻 問題7}{}
+
+高分子の稀薄溶液をごく少量だけ、試験管に入れた溶媒の上に静かに積層する。
+高分子は重力により試験管の底に向かって沈降を始めるが、十分に時間がたつと、
+試験管内の全体に一様な濃度で分布するようになる。これは高分子が熱運動する
+溶媒分子との衝突により、重力よりはるかに大きな揺動力を受けるためである。し
+かし、試験管を高速に回転するなどして、実効的に重力加速度の大きさを非常に大
+きくすると、高分子の濃度分布は一様ではなくなり、試験管の上部では薄く、底部
+では濃くなる。この現象から、高分子の分子量を求めることができる。問題を簡単
+にするために、一定で強い実効重力加速度$g$が鉛直下向きに働くとして、以下の設
+問に答えよ。ただし高分子は球形をもつとし、高分子の分子量を$M$、アボガドロ数
+を$N_A$をとする。
+\begin{subquestions}
+\SubQuestion
+  まず最初に、熱運動する溶媒分子との衝突により高分子が受ける揺動力を無視し
+  た場合を考える。
+  \begin{subsubquestions}
+  \SubSubQuestion
+    個々の高分子には、重力、浮力、およびストークスの法則による速度に比例し
+    た粘性抵抗力（比例定数$\beta$）が働く。１個の高分子に対する運動方程式
+    を求めよ。ただし、注目している高分子の液面からの距離$x$を（下向きを正
+    とする）、比容（単位質量の物体が占める体積）を$V$、溶媒の密度を$\rho$
+    とする。また稀薄溶液であることから、注目している高分子が他の高分子から
+    受ける浮力は無視できる。
+  \SubSubQuestion
+    粘性抵抗力が大きいために、高分子は一定の速度$s$で試験管の底部に向かっ
+    て沈降する。沈降速度$s$を求めよ。
+  \end{subsubquestions}
+
+\SubQuestion
+  次に、揺動力も考慮した場合を考える。この場合、高分子は重力により沈降する
+  と同時に、揺動力により拡散する。拡散により単位時間に単位面積を法線方向に
+  通過する高分子の数は、その方向の濃度勾配の大きさに比例する。その比例定数
+  が高分子の拡散定数$D$である。
+  \begin{subsubquestions}
+  \SubSubQuestion
+    液面から$x$の距離にある水平な単位面積を、試験管の上部から底部に向かっ
+    て単位時間に通過する高分子の数$j(x,t)$を求めよ。ただし、$x$の位置での
+    高分子の濃度は$C(x,t)$である。
+  \SubSubQuestion
+    高分子の濃度$C(x,t)$の時間変化とその流れ$j(x,t)$との関係を求めよ。
+  \SubSubQuestion
+    設問(i),(ii)の結果から、高分子の沈降現象を記述する方程式を求めよ。
+  \SubSubQuestion
+    十分に時間が経つと。試験管内での高分子の濃度分布は時間に依存しない定常
+    状態に達する。その理由を定性的に説明せよ。
+  \SubSubQuestion
+    定常状態に達したとき、$x=x_1$での濃度$C_1$と$x=x_2$での濃度$C_2$の比
+    $C_1/C_2$を測定すると。沈降速度と拡散定数の比$s/D$が求められることを示
+    せ。
+  \SubSubQuestion
+    拡散定数$D$と粘性係数$\beta$は、アインシュタインの関係式$D=k_BT/\beta$
+    で結ばれている。ただし$k_B$はボルツマン定数、$T$は溶液の温度である。
+    $s/D$から生体高分子の分子量$M$が求められることを示せ。
+  \end{subsubquestions}
+\end{subquestions}
+
+
+\end{question}
+\begin{answer}{専攻 問題7}{}
+
+
+
+\begin{subanswers}
+\SubAnswer
+
+\begin{subsubanswers}
+
+\SubSubAnswer
+
+1個の高分子は図1の様に力を受けるので、運動方程式は
+\[
+m \ddot x =\underbrace{mg}_{\mbox{重力}} 
+\quad \underbrace{- \beta \dot x}_{\mbox{抵抗}} 
+\quad \underbrace{- \rho \mu g}_{\mbox{浮力}}
+\]
+となる。ただし、
+\[m: \quad \mbox{高分子1個の質量}=\frac{M}{N_A}\]
+\[\mu : \quad \mbox{高分子1個の体積}=mV=\frac{MV}{N_A}\]
+で、これを上の式に代入すると
+\begin{equation}
+\frac{M}{N_A} \ddot x =
+\frac{M}{N_A} g - \beta \dot x - \rho g \frac{MV}{N_A} \eqname{Q1}
+\end{equation}
+となり、これが答え。
+
+ 
+\begin{figure}[h]
+\begin{center}
+%図1始め
+\begin{picture}(65,80)
+\put(5,10){$x$}
+\thicklines
+\put(15,70){\vector(0,-1){65}}
+\thinlines
+\put(40,35){\circle*{7}}
+\put(25,38){$m$}
+\put(40,26){\vector(0,-1){17}}
+\put(44,14){$mg$}
+\put(40,44){\vector(0,1){17}}
+\put(44,50){$\beta \dot x$}
+\put(60,44){\vector(0,1){17}}
+\put(64,50){$\rho \mu g$}
+\end{picture}
+\caption{高分子の受ける力}
+%図1終り
+\end{center}
+\end{figure}
+
+
+(注)…単位系はCGS単位系を考えた。(すると、$N_A$個で質量M[g]とな
+り上の様な式になる)。もしMKS単位系にしたいならば、Mの代わりにM/1000とす
+れば良い。
+
+\SubSubAnswer
+ $\dot x =s$(一定)の時、$\ddot x =\dot s = 0$より式\eqhref{Q1}は
+\[
+0 =\frac{M}{N_A} g - \beta s - \rho g \frac{MV}{N_A}
+=\frac{M g (1 - \rho V)}{N_A} -\beta s \qquad \mbox{となる。よって、}
+\]
+\begin{equation}
+s=\frac{M g (1 - \rho V)}{\beta N_A}
+\end{equation}
+となり、これが答え。今回の問題では「試験管の上部では薄く、底部では濃
+くなる」とあり、sは正の値だとわかるので、以下sが正であるとする。 
+
+\end{subsubanswers}
+\SubAnswer
+
+\begin{subsubanswers}
+
+\SubSubAnswer
+$j(x,t)$の符号が正となる向きと、Dが正の定数であることを
+踏まえて、(濃度の高い方から低い方へ拡散は起きる)
+\begin{equation}
+j(x,t)=\underbrace{sC(x,t)}_{\mbox{上から流れて来る分}}
+\qquad \underbrace{-D\frac{\partial}{\partial x}C(x,t)}_{
+\mbox{拡散して広がる分}} \eqname{Q3}
+\end{equation}
+
+\SubSubAnswer
+粒子数保存より
+\begin{equation}
+\frac{\partial}{\partial t}C(x,t) +\frac{\partial}{\partial x}j(x,t)=0 \eqname{Q2}
+\end{equation} 
+(マクスウェル方程式から出る電荷保存則
+\[\frac{\partial}{\partial t} \rho + \Div \Vec{j} =0\]
+の1次元バージョン)
+
+\SubSubAnswer
+式\eqhref{Q2}の$j(x,t)$に式\eqhref{Q3}を代入すると(sはxやtに依らない定数)、
+\begin{equation}
+\frac{\partial}{\partial t}C(x,t)
++s \frac{\partial}{\partial x}C(x,t) 
+-D\frac{\partial^2}{\partial x^2}C(x,t)
+=0 \eqname{Q5}
+\end{equation}
+となりこれが答え。
+
+\SubSubAnswer
+高分子が重力によって下へ落ちてゆくため、時間が経つごとに
+上の方は濃度が低くなって下の方は濃度が高くなってゆき、上と下で濃度差
+が広がってゆくが、濃度差があると拡散が起きて高濃度の方から低濃度の方
+へ高分子が流れてゆくので幾らかの高分子は上へ戻される。濃度差が大きく
+なると上の高分子の数が減るので下に落ちる量が減るのに対し、拡散は
+濃度差が大きいほど強くなるので上に戻される量が増えるので、ある濃度差
+になった時点で収支が平衡状態となり、そこで定常状態となる。
+
+\SubSubAnswer
+定常状態の時
+$\displaystyle{\frac{\partial}{\partial t}C(x,t)=0}$より、C(x,t)=C(x)
+として、式\eqhref{Q5}は 
+\[sC^{\prime}(x)-DC^{\prime \prime}(x)=0 \qquad (\prime 
+\mbox{はxに関する微分})\]
+となる。$C^{\prime}(x) \equiv f(x)$として、前の式は
+\[f^{\prime}(x)=\frac{s}{D}f(x)\]
+となるので、これを解くと
+\[f(x)=A^{\prime}e^{\frac{s}{D}x} \qquad(A^{\prime} \mbox{は適当な定数})\]
+となり、これをxで積分すると
+\[C(x)=Ae^{\frac{s}{D}x} +B \qquad(A,B \mbox{は適当な定数})\]
+となる。さて、このC(x)を(3)式\eqhref{Q3}に代入すると
+\[j(x)=s(Ae^{\frac{s}{D}x} +B)-D\frac{s}{D}Ae^{\frac{s}{D}x}=sB\]
+となるが、x=0は液面で上から高分子は流れてこないので、
+j(0)=0 でないとC(0)が減っていってしまい、定常状態ではない。
+よって$sB=0$で$s \neq 0$ より$B=0$となる。
+\[\mbox{よって、} \qquad C(x)=Ae^{\frac{s}{D}x} \qquad \mbox{なので、}\] 
+\[\frac{C_1}{C_2}=\frac{C(x_1)}{C(x_2)}
+=\frac{Ae^{\frac{s}{D}x_1}}{Ae^{\frac{s}{D}x_2}}
+=e^{\frac{s}{D}(x_1-x_2)}\]
+となり両辺$\log$をとって、
+\begin{equation}
+\log \frac{C_1}{C_2}=\frac{s}{D}(x_1-x_2)
+\qquad→ \qquad  \frac{s}{D}=\frac{\log \frac{C_1}{C_2}}{x_1-x_2}
+\end{equation}
+となるので、$C_1,C_2,x_1,x_2$がわかれば$s/D$が求められることがわかる。
+
+\SubSubAnswer
+$\displaystyle{
+s=\frac{Mg(1 - \rho V)}{\beta N_A}
+\quad , \quad D=\frac{k_B T}{\beta} \qquad \mbox{より、}
+}$\\
+\[\frac{s}{D}=\frac{\frac{Mg(1 - \rho V)}{\beta N_A}}
+{\frac{k_B T}{\beta}}
+=\frac{M g (1-\rho V)}{N_A k_B T} \qquad \mbox{となる。}\]
+よって、
+\begin{equation}
+M=\frac{N_A k_B T}{g(1-\rho V)}\frac{s}{D}
+\end{equation}
+となり、(7)式の右辺は$s/D$の他はすべて計測可能な量なので、$s/D$がわかれば
+$M$が求められることがわかる。
+\end{subsubanswers}
+\end{subanswers}
+\end{answer}
+
+\end{document}
+
+
+
+
+
+

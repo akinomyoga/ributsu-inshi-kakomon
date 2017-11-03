@@ -1,0 +1,218 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題6}{}
+真空中では点電荷の間の静電相互作用はクーロンの法則に従うので、
+互いに$3\mbox{\AA}$離れた一価の電荷の間には、約$460\Unit{kJ/mol}(=110\Unit{kcal/mol})$
+もの静電エネルギーが働く。しかし核酸やタンパク質などの
+生体分子は水中に存在するので、$(\hspace {10mm})$ のために、
+静電エネルギーは真空中の約$1/80$に減少する。また生理的条件の下では、
+水中に多くの電解質イオンが存在するため、
+静電ポテンシャルはこれらの遮蔽効果により、さらに減少する。
+Debye-H\"ukelの理論によれば、このようなイオンの遮蔽効果を考慮したとき、
+位置$\Vec r$における静電ポテンシャル$\phi(\Vec r)$は
+\begin{equation}
+\nabla^2\phi(\Vec r) 
+= -\frac{1}{\varepsilon}\sum_{i}n_i Z_i q\cdot
+\exp\left[- \frac{Z_i q \phi(\Vec r)}{kT} \right] \eqname{Q1}
+\end{equation}
+で与えられる。ここに和は異なるイオン種についてとるものとし、
+$\varepsilon$は電解質溶液の誘電率、$q$は素電荷、$k$はBoltzmann定数、
+$T$は絶対温度、そして$n_i$と$Z_i$はそれぞれ第$i$種イオンの濃度（数密度）
+と電荷数（イオン価）を表す。以下の問いに答えよ。
+
+\begin{subquestions}
+
+\SubQuestion
+上の$(\hspace {10mm})$の中を埋めよ。
+
+\SubQuestion
+上の式\eqhref{Q1}は、Poisson-Boltzmannの方程式と呼ばれる。
+この式はどのようにして導かれるかを説明せよ。
+
+\SubQuestion
+静電エネルギーが熱エネルギーよりも十分に小さいときは、
+式\eqhref{Q1}は線形微分方程式
+\begin{equation}
+\nabla^2\phi(\Vec r) = \kappa^2\phi(\Vec r) \eqname{Q2}
+\end{equation}
+で表されることを示せ。
+ただし$\kappa^2\equiv(q^2/\varepsilon kT)\sum_{i}n_i Z_i^2$とする。
+
+\SubQuestion
+原点に電荷数$Z_0$の中心イオンをおき、
+他のイオンはその周りに球対称に分布していると仮定したとき、
+式\eqhref{Q2}の解を求めよ。またイオン濃度をゼロに近づけたとき、
+その解はどのようになるか。
+ただし、各イオンの大きさは無視できるほど小さいとする。
+
+\SubQuestion
+設問4で、イオン濃度がゼロのときの静電ポテンシャルを$\phi_0(\Vec r)$
+とする。$\phi(\Vec r)$が$\phi_0(\Vec r)$の$1/e(e = 2.7183..)$
+となるときの$r$をDebye長（またはイオン雰囲気の厚さ）という。
+温度が25${}^{\circ}$Cで、イオン強度$(= \frac{1}{2}\sum_{i}n_iZ_i^2)$
+が生理的条件下の値$8.4\times10^{25}\mathrm{m^{-3}(=0.14 mol/liter)}$
+に等しい電解質のDebye長を求めよ。ただし水溶液の誘電率を
+$\varepsilon = 7.0\times10^{-10}\mathrm{Fm^{-1}}$とし、
+$q = 1.6\times 10^{-19}$Cおよび
+$k= 1.38\times10^{-23}\mathrm{JK^{-1}}$を、用いてよい。
+
+\SubQuestion
+二本の鎖よりなるDNAは、負に帯電したリン酸基をもち、
+リン酸基どうしの間隔は約$10\mbox{\AA}$である。
+これらの電荷が水溶液中のイオンにより遮蔽されることは、
+DNAの二重螺旋構造を安定化する上で重要である。
+いまDNA水溶液中のイオン強度を生理的条件下の値より
+さらに小さくしていったとき、DNAが熱融解する温度は、
+どのように変化すると期待されるか。理由を付して述べよ。
+
+\SubQuestion
+簡単なDebye-h\"ukelの理論だけでは、
+核酸やタンパク質など生体分子のもつ立体構造の安定性を、
+定量的に説明できないことが知られている。
+これらの生体分子の立体構造安定性に
+大きく寄与している他の要因を二つ以上あげ、
+それらについて知るところを述べよ。
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題6}{}
+
+\begin{subanswers}
+\SubAnswer
+
+水の誘電分極
+
+\SubAnswer
+
+位置$\Vec r$の静電ポテンシャルは$\phi(\Vec r)$だから、この点で
+イオンが電荷$Z_i q$を持つ確率はBoltzmann分布
+\[ e^{-Z_i q \phi(\Vec r)/kT} \]
+に従う。
+それゆえ、位置$\Vec r$での第i種イオンの密度は
+\[ n_i \exp\left[- \frac{Z_i q \phi(\Vec r)}{kT} \right] \]
+となる。それゆえ、電荷密度は
+\[ \rho(\Vec r) = \sum_i n_i Z_i q \exp \left[ - \frac{Z_i q \phi(\Vec r)}
+{kT} \right]. \]
+これとPoisson方程式
+\[ \nabla^2 \phi( \Vec r) = - \frac{\rho(\Vec r)}{\varepsilon} \]
+より、件のPoisson-Boltzmann方程式
+\[
+\nabla^2 \phi(\Vec r) = -\frac{1}{\varepsilon} \sum_i n_i Z_i q
+\exp \left[ - \frac{Z_i q \phi(\Vec r)}{kT} \right]
+\]
+を得る。
+
+\SubAnswer
+
+ 溶液全体は電気的に中性だから、
+\[ \sum_i n_i Z_i q = 0.\]
+となる。さらに、
+\[\left| \frac{Z_i q \phi(\Vec r)}{kT} \right|  << 1\]
+となることに注意して、
+\begin{eqnarray*}
+\nabla^2 \phi(\Vec r) & \approx &-\frac{1}{\varepsilon} \sum_i
+n_i Z_i q \left[ 1 - \frac{Z_i q \phi(\Vec r)}{kT} \right] \\
+&=& -\frac{1}{\varepsilon} \sum_i n_i Z_i q + \frac{q^2}{\varepsilon kT}
+\phi(\Vec r) \sum_i n_i {Z_i}^2 \\
+&=&  \frac{q^2}{\varepsilon kT} \sum_i n_i {Z_i}^2 \phi(\Vec r) \\
+&=& \kappa^2 \phi(\Vec r)
+\end{eqnarray*}
+を得る。
+
+\SubAnswer
+
+球対称であるから、$ \phi(\Vec r) = \phi(r).$
+この時、方程式は
+\[
+\nabla^2 \phi(\Vec r) = \frac{1}{r^2} \frac{\d}{\d r} \left(
+r^2 \frac{\d \phi(r)}{\d r} \right)
+\]
+を使って
+\[
+\frac{1}{r^2} \frac{\d}{\d r} \left( r^2 \frac{\d \phi(r)}
+{\d r} \right) = \kappa^2 \phi(r).
+\]
+
+一般に中性ではあっても媒質中を荷電粒子が運動する場合、周囲の電荷を
+引きずっているために余分に質量を纏っているように見える。これは
+電磁相互作用を運ぶ光子についても同様で、ポテンシャルは質量を持った
+光子によって媒介されるように見える。
+これはYukawa型相互作用だから、方程式を最初から解かずに、
+\[ \phi(r) = a \frac{e^{-\alpha r}}{r} \]
+とおくことができる。ここで、$ a \propto Z_0, \alpha > 0$である。
+これを方程式に代入すると、
+\begin{eqnarray*}
+a \alpha^2 \frac{e^{-\alpha r}}{r} &=& \kappa^2 a \frac{e^{-\alpha r}}{r} \\
+\alpha^2 &=& \kappa^2 \\
+\alpha &=& \kappa. 
+\end{eqnarray*}
+
+を得る。更に、上の述べた考察により、$n_i \rightarrow 0$のとき、
+イオンの衣による遮蔽効果は小さくなり、$\phi(r)$はCoulomb相互作用に
+近づく。つまり、
+\[ \phi(r) \rightarrow \frac{1}{4 \pi \varepsilon} \frac{Z_0}{r}. \]
+であるから、これにより、
+\[ a = \frac{Z_0}{4 \pi \varepsilon} \]
+がわかる。まとめると、
+\[ \phi(r) = \frac{Z_0}{4 \pi \varepsilon} \frac{e^{-\kappa r}}{r}.\]
+$n_i \rightarrow 0$のとき、$\kappa \rightarrow 0$であって、
+\[ \phi(r) \rightarrow \frac{1}{4 \pi \varepsilon} \frac{Z_0}{r}\]
+となり、Coulomb相互作用になる。
+
+\SubAnswer
+
+上の考察から、
+\begin{eqnarray*}
+\phi_0(r) &=& \frac{Z_0}{4 \pi \varepsilon} \frac{1}{r} \\
+\phi(r) &=& \frac{Z_0}{4 \pi \varepsilon} \frac{e^{-\kappa r}}{r} \\
+\frac{\phi(r)}{\phi_0(r)} &=& e^{-\kappa r}.
+\end{eqnarray*}
+それゆえ、Debye長は
+\begin{eqnarray*}
+r_D &=& \frac{1}{\kappa} 
+= \frac{1}{\sqrt{\displaystyle{\frac{q^2}{\varepsilon kT}} \sum_i n_i {Z_i}^2} }\\
+&=& \frac{1}{\sqrt{\displaystyle{\frac{2 q^2}{\varepsilon kT}}}} \frac{1}{\sqrt{
+\displaystyle{\frac{1}{2}}{\
+\sum_i n_i {Z_i}^2}}} \\
+&\approx& 8.18 \times 10^{-10} \approx 8.2 \mbox{\AA}
+\end{eqnarray*}
+
+\SubAnswer
+イオン強度を下げていくと
+\[ r_D \propto \frac{1}{\sqrt{イオン強度}} \]
+であるから、$r_D$は大きくなる。ここで、生理条件下では$r_D \approx 8.2$\AA
+で、DNAのリン酸基の間隔は10\AA 程度であるから、イオン強度を下げていくと
+容易にDebye長は10\AA よりも大きくなり、互いに反発力を及ぼし、DNAは
+不安定になる。それゆえ、DNAが熱融解する温度は下がると期待される。
+
+\SubAnswer
+\begin{itemize}
+\item{イオンの大きさ}
+
+Debye-H\"uckelの理論ではイオンの大きさを無視して方程式を解いたが、
+実際はイオンは数\AA 程度の大きさを持つのでイオンの占めることができる
+は空間的領域は制限される。
+
+\item{熱力学的要素}
+
+Debye-H\"uckelの理論はイオン同士の静電エネルギーのみを考慮したが、
+実際はエントロピーとエネルギーの兼ね合いによって構造が決まる。
+つまり、Gibbs自由エネルギーが最小になるように原子が配置される。
+
+\item{水素結合、van der Waals相互作用}
+
+分子を構成している原子間の電気陰性度の差により偏極がおこり、
+そのために水素結合やvan der Waals力が働き立体構造を変化させる。
+なお、この力は分子を構成する原子のうち、互いに接近した組に対して
+働く。
+
+\end{itemize}
+
+
+\end{subanswers}
+\end{answer}
+
+\end{document}

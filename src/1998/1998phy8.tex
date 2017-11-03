@@ -1,0 +1,239 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+\begin{question}{専攻 問題8}{}
+
+金属中の電子には、固体内をほぼ自由に動き回る価電子と、原子核近傍に局在する内殻電子がある。このうち価電子の状態を、自由電子模型により近似する。温度が十分低いとして、以下の問いに答えよ。
+
+\begin{subquestions}
+
+\SubQuestion
+
+価電子の状態を特徴づける物理量に、フェルミエネルギー $ \epsilon_{F} $ がある。自由電子模型において、 $ \epsilon_{F} $ がどのような物理的理由で決まるかを説明し、 $ \epsilon_{F} $ と電子密度 $ n $ の関係式を導け。
+
+\SubQuestion
+
+ ナトリウム(Na)の $ \epsilon_{F} $ をeV単位で概算せよ。ただし一価金属であるNa（平均原子量23）の比重は0.97であり、計算には以下の数値を用いても良い。
+\[
+\frac{\hbar^{2}}{m e^{2}} = 0.529\ \mathrm{\AA}  \quad \frac{m e^{4}}{\hbar^{2}} = 27.2\ \mathrm{eV}
+\]
+ここで$m$,$e$はそれぞれ電子の質量と素電荷である。また、アボガドロ数は$ 6.02 \times 10^{23}$ mol$^{-1}$ である。
+
+\end{subquestions}
+
+適当な入射エネルギーで金属固体に打ち込まれた陽電子は、短時間に運動エネルギーを失って静止した後、電子と対消滅を起こす。このとき放出される２個の光子（$\gamma$線）の角度分布から、価電子の運動量分布についての情報が得られる。以下では、この陽電子消滅実験の原理について考えよう。
+
+\begin{subquestions}[3]
+\SubQuestion
+
+陽電子が金属中で運動エネルギーを失う理由として、どのようなものが考えられるか。重要と思われる理由を３つあげよ。
+
+\SubQuestion
+
+静止した陽電子が速さ$v$の電子と対消滅する場合、２つの光子は重心系では正反対の方向に放出されるが、実験室系では180度から$\Delta \theta$だけずれた方向に放出される。重心系で電子の初速度方向と光子（光速を$c$とする）の放射方向のなす角を$\theta$としたとき、$v$, $\Delta \theta$, $\theta$の関係式を、$\frac{v}{c} (\ll 1)$の1次の精度で求めよ。
+
+\SubQuestion
+
+$\Delta \theta$を測定することによって、金属のフェルミエネルギーを知ることが出来る。その理由を説明せよ。
+
+\SubQuestion
+
+実際の金属には内殻電子もあるが、金属中に陽電子を打ち込んでも、上の方法で内殻電子に関する情報を得ることは難しい。その理由を簡単に説明せよ。
+
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題8}{}
+
+\begin{subanswers}
+
+\SubAnswer
+
+電子は本来金属イオンの作る周期場、他の電子からのクーロン力等により複雑な運動をするが、それらの電子を理想フェルミ気体として扱うのが金属に対する自由電子模型である。
+
+電子は一辺$L$の箱に閉じ込められているとする。シュレディンガー方程式は
+
+\[
+- \frac{\hbar^{2}}{2 m}\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}\right) \psi(\mathbf{r}) = E \psi(\mathbf{r})
+\]
+
+境界条件は
+
+\[
+\psi(0,y,z) = \psi(L,y,z) = 0 \quad （yとzについても同様）
+\]
+
+である。この解は
+
+\[
+\psi(\mathbf{r}) = \exp(i \mathbf{k} \cdot \mathbf{r})
+\]
+
+ただし、
+
+\[
+k_{x} = 0 , \pm \frac{2 \pi}{L} , \pm \frac{4 \pi}{L} \cdots \quad （k_{y},k_{z}についても同様）
+\]
+
+従って$\mathbf{k}$空間の体積要素$ (\frac{2 \pi}{L})^3 $ 当たりにただ一つの状態が存在する。
+
+さて、フェルミ分布関数は
+
+\[
+f_{r} = \frac{1}{e^{\beta(\epsilon - \mu)} + 1}
+\]
+
+で与えられる。ここで電子の総数$N$は、スピンの自由度による因子2も考慮に入れれば
+
+\[
+N = \frac{2}{(\frac{2 \pi}{L})^3} \int f_{r} d^3 k = \frac{2 V}{(2 \pi)^3} \int f_{r} d^3 k
+\]
+とできる。
+
+いま、金属において自由電子模型ならば、室温程度は事実上の絶対零度となる。よって$T \rightarrow 0 $の極限をとる。この時
+
+\[
+f_{r} = 
+\left\{
+\begin{array}{cc}
+0 & \epsilon > \mu \\
+1 & \epsilon < \mu 
+\end{array}
+\right.
+\]
+
+ここで$f_{r}$が不連続になる$\mu$をフェルミエネルギー$ \epsilon_{F} $と呼ぶ。
+
+フェルミ波数$k_{F}$を$\epsilon_{F} = \frac{\hbar^2 k_{F}^2}{2 m}$によって導入すれば
+
+\[
+\left\{
+\begin{array}{c}
+k<k_{F} で f_{r}=1 \\
+k>k_{F} で f_{r}=0
+\end{array}
+\right.
+\]
+
+となるので、
+
+\begin{eqnarray*}
+N &=& \frac{2 V}{(2 \pi)^3} \int f_{r} d^3 k \\
+  &=& \frac{2 V}{(2 \pi)^3} \int_{k<k_{F}} d^3 k \\
+  &=& \frac{2 V}{(2 \pi)^3} \frac{4 \pi}{3} k_{F}^3 \\
+  &=& \frac{V k_{F}^3}{3 \pi^2}
+\end{eqnarray*}
+
+よって
+
+\[
+k_{F} = (3 \pi^2 n)^{\frac{1}{3}} \quad (n = \frac{N}{V} : 数密度)
+\]
+
+従って最終的に
+
+\[
+\epsilon_{F} = \frac{\hbar^2 k_{F}^2}{2 m} = \frac{\hbar^2}{2 m}(3 \pi^2 n)^{\frac{2}{3}}
+\]
+
+としてフェルミエネルギーが求まる。つまりフェルミエネルギーは電子の数密度によって決定される。
+
+
+\SubAnswer
+ １で求めた式に値を代入する。
+
+\[
+n = \frac{電子の個数}{体積} = \frac{Naの個数}{体積} = \frac{6.02 \times 10^{23}}{\frac{23 \mathrm{g}}{0.97 \mathrm{g/cm^3}}} 
+\]
+
+によって
+
+\[
+k_{F} = (3 \pi^2 n)^{\frac{1}{3}} = 0.91 \mathrm{\AA^{-1}}
+\]
+
+よって
+
+\[
+\epsilon_{F} = \frac{\hbar^2 k_{F}^2}{2 m} = \frac{1}{2} \left(\frac{\hbar^2}{m e^2}\right)^2 \frac{m e^4}{\hbar^2} k_{F}^2 = 3.2\ \mathrm{eV}
+\]
+
+となる。
+
+\SubAnswer
+
+理由として
+
+\begin{itemize}
+\item 金属原子核との弾性散乱
+\item 金属電子によるクーロン散乱
+\item 制動放射
+\end{itemize}
+
+が考えられる。
+
+\SubAnswer
+
+対消滅後の光子のエネルギーを$E_{1}$,$E_{2}$とする。４元運動量保存の式を立てると
+
+\begin{eqnarray}
+E_{1} + E_{2} &=& 2 m c^{2} \eqname{eq1} \\
+\frac{E_{1}}{c} \cos \theta - \frac{E_{2}}{c} \cos(\theta + \Delta \theta) &=& mv \eqname{eq2} \\
+\frac{E_{1}}{c} \sin \theta - \frac{E_{2}}{c} \sin(\theta + \Delta \theta) &=& 0 \eqname{eq3} 
+\end{eqnarray}
+
+ここで運動エネルギー$\frac{1}{2}mv^2$は$m c^2$に比べて十分に小さいので無視した。
+
+$\Delta \theta \ll 1$として
+
+\begin{eqnarray}
+\eqhref{eq2} \rightarrow E_{1} \cos \theta - E_{2} \cos \theta + E_{2} \sin \theta \Delta \theta &=& m c v \eqname{eq4} \\
+\eqhref{eq3} \rightarrow E_{1} \sin \theta - E_{2} \sin \theta - E_{2} \cos \theta \Delta \theta &=& 0 \eqname{eq5} 
+\end{eqnarray}
+
+$ \eqhref{eq4} \times \sin \theta - \eqhref{eq5} \times \cos \theta $ より
+
+\begin{eqnarray}
+E_{2} \Delta \theta = m c v \sin \theta \eqname{eq6} 
+\end{eqnarray}
+
+$ \eqhref{eq4} \times \cos \theta + \eqhref{eq5} \times \sin \theta $ より
+
+\begin{eqnarray}
+E_{1}-E_{2} = m c v \cos \theta \eqname{eq7}
+\end{eqnarray}
+
+\eqhref{eq1}と\eqhref{eq7}より
+
+\begin{eqnarray}
+E_{2} = m c^2 - \frac{1}{2} m c v \cos \theta \eqname{eq8} 
+\end{eqnarray}
+
+\eqhref{eq6}と\eqhref{eq8}より
+
+\begin{eqnarray}
+(mc^2 - \frac{1}{2} m c v \cos \theta) \Delta \theta = m c v \sin \theta
+\end{eqnarray}
+
+$ v \Delta \theta $ の項は無視して、結局
+
+\begin{eqnarray}
+\Delta \theta = \frac{v}{c} \sin \theta
+\end{eqnarray}
+
+となる。
+
+\SubAnswer
+
+ $ \Delta \theta = \frac{v}{c} \sin \theta $ において、ある$\theta$に対する$\Delta \theta$を測定できれば電子の速度$v$が求まる。全ての$\theta$に対して$\Delta \theta$を測定していき求まった$v$の中で最大のものを$v_{max}$とするとフェルミエネルギー$\epsilon_{F}$は$\epsilon_{F} = \frac{1}{2} m v_{max}^2 $となる。よって$\Delta \theta$を測定することで金属のフェルミエネルギーを知ることが出来る。
+
+\SubAnswer
+
+ 伝導電子や外殻の電子と遭遇し、そこで対消滅してしまうから。
+
+\end{subanswers}
+\end{answer}
+
+
+\end{document}
