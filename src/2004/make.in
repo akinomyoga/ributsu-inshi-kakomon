@@ -1,0 +1,26 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2004pankyo 2004senmon)
+docs_ex=(2004pankyo2)
+
+_2004pankyo_title='2004年度実施 一般教育科目'
+_2004pankyo_cov=()
+_2004pankyo_prb=(2004engl.tex 2004math.tex)
+_2004pankyo_ans=(2004engl.tex 2004math.tex)
+_2004pankyo_dep=(2004engl2-1.eps)
+
+_2004pankyo2_title='2004年度実施 一般教育科目 (英語なし)'
+_2004pankyo2_cov=()
+_2004pankyo2_prb=(2004math.tex)
+_2004pankyo2_ans=(2004math.tex)
+_2004pankyo2_dep=(2004engl2-1.eps)
+
+_2004senmon_title='2004年度実施 物理専門科目'
+_2004senmon_cov=()
+_2004senmon_prb=(2004phy1.tex 2004phy2.tex 2004phy3.tex 2004phy4.tex 2004phy5.tex 2004phy6.tex)
+_2004senmon_ans=(2004phy1.tex 2004phy2.tex 2004phy3.tex 2004phy4.tex 2004phy5.tex 2004phy6.tex)
+_2004senmon_dep=(
+  2004phy1-1.tex 2004phy1-2.tex 2004phy1-3.eps 2004phy2-1.tex 2004phy2-2.tex 2004phy4-1.eps
+  2004phy4-2.eps 2004phy5-1.eps 2004phy5-2.eps 2004phys1_0.eps 2004phys2_0.eps 2004phys4_3.eps
+  2004phys4_4.eps 2004phys4_5.eps 2004phys4_6.eps 2004phys5_3.eps 2004phys5_4.eps 2004phys5_5.eps)
