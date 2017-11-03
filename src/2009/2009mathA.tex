@@ -1,0 +1,255 @@
+%% -*- coding:sjis -*-
+\newcommand{\pdiff}[2][]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ddiff}[2][]{\frac{d#1}{d#2}}
+\def\transpose{^{\mathrm{t}}}
+\def\qed{■}
+\begin{answer}{第１問}{村瀬}
+\begin{enumerate}
+\item
+  $f(\bm{x})$ の停留条件は,
+  \begin{align}
+    0 &= \pdiff[f(\bm{x})]{x_i} = \frac12(A_{ij}x_j + x_i A_{ij}) -b_i \nonumber\\
+      &= A_{ij} x_j -b_i. \ilabel{eq:2009mathA1.dfdx}
+  \end{align}
+  従って、方程式 $A_{ij} x_j = b_i$ の解が $f$ の停留点となる。
+  特に、この時 Hesse 行列は
+  \begin{align*}
+    \frac{\partial^2 f(\bm{x})}{\partial x_i \partial x_j}
+      &= A_{ij}
+  \end{align*}
+  であり全ての $\bm{x}$ について正定値行列 (固有値が全て正) なので、
+  この停留点は最小値を与える\qed。
+
+\item
+  式\ieqref{eq:2009mathA1.dfdx}を用いて
+  \begin{align*}
+    r_i &= -(A_{ij} x_i^{(m)} - b_i) = -(A_{ij} x_i^{(m)} - A_{ij}\bar x_j) \\
+      &= - A_{ij}(x_j^{(m)}-\bar{x}_j).
+  \end{align*}
+  つまり $\bm{r}=-A(\bm{x}^{(m)}-\bar{\bm{x}})$\qed.
+
+\item
+  $\alpha$ を動かして $f(\bm{x}^{(m+1)})$の最小値を求めれば良い。
+  \begin{align*}
+    0 &= \pdiff[f(\bm{x}^{(m+1)})]\alpha
+        = \pdiff[x_i^{(m+1)}]{\alpha} \left.\pdiff[f(\bm{x})]{x_i}\right|_{\bm{x}=\bm{x}^{(m+1)}}\\
+      &= - r_i A_{ij} (x_j^{(m+1)}-\bar{x}_j) \\
+      &= - \alpha r_i A_{ij} r_j - r_i A_{ij} (x_j^{(m)}-\bar{x}_j)\\
+      &= - \alpha r_i A_{ij} r_j + r_i r_i
+        = - \alpha \|\bm{r}\|_A^2  + \|\bm{r}\|^2,\\
+    \alpha &= \frac{\|\bm{r}\|^2}{\|\bm{r}\|_A^2}.
+  \end{align*}
+
+\item
+  $\delta x_i^{(m+1)} = \delta x_i^{(m)} + \alpha\bm{r}$,
+  $\bm{r} = -A\delta\bm{x}^{(m)}$ に注意して、そのまま計算する。
+  \begin{align*}
+    \|\delta\bm{x}^{(m+1)}\|^2_A
+      &= (\delta\bm{x}^{(m)} + \alpha\bm{r})\transpose A(\delta\bm{x}_j^{(m)} + \alpha\bm{r})\\
+      &= \delta\bm{x}^{(m)\mathrm{t}} A\delta\bm{x}^{(m)}
+        + 2\alpha\bm{r}\transpose A \delta\bm{x}^{(m)}
+        + \alpha^2 \bm{r}\transpose A\bm{r}\\
+      &= \|\delta\bm{x}^{(m)}\|^2
+        - 2\alpha \bm{r}\transpose \bm{r} + \alpha^2 \|\bm{r}\|^2_A\\
+      &= \|\delta\bm{x}^{(m)}\|^2
+        - 2 \frac{\|\bm{r}\|^2}{\|\bm{r}\|_A^2}\|\bm{r}\|^2
+        + \frac{\|\bm{r}\|^4}{\|\bm{r}\|_A^4} \|\bm{r}\|^2_A\\
+      &= \|\delta\bm{x}^{(m)}\|^2
+        - \frac{\|\bm{r}\|^4}{\|\bm{r}\|_A^2},\\
+    \|\delta\bm{x}^{(m+1)}\|_A
+      &= \sqrt{\|\delta\bm{x}^{(m)}\|^2
+        - \frac{\|\bm{r}\|^4}{\|\bm{r}\|_A^2}}.
+  \end{align*}
+
+\item
+  \def\nsum#1{\sum_{#1=1}^n}
+  \begin{align*}
+    R^2 &= \frac{\|\delta\bm{x}^{(m+1)}\|^2_A}{\|\delta\bm{x}^{(m)}\|^2_A}
+      = 1 -\frac{\|\bm{r}\|^4}{\|\bm{r}\|_A^2 \cdot\|\delta\bm{x}^{(m)}\|^2_A}.
+  \end{align*}
+  ここで、$\|\bm{r}\|^2, \|\bm{r}\|_A^2, \|\delta\bm{x}^{(m)}\|^2_A$ をそれぞれ $\lambda_i,\,\rho_i,\,\bm{a}_i$ を用いて表す。
+  \begin{align*}
+    \bm{r} &= -A \delta\bm{x}^{(m)} = -\nsum{i}\rho_i A\bm{a}_i = -\nsum{i}\rho_i \lambda_i \bm{a}_i,\\
+    \|\bm{r}\|^2
+      &= \nsum{i}\nsum{j} \rho_i\lambda_i \rho_j\lambda_j \bm{a}_i\transpose\bm{a}_j 
+       = \nsum{i}\nsum{j} \rho_i\lambda_i \rho_j\lambda_j \delta_{ij} = \nsum{i} \rho_i^2 \lambda_i^2,\\
+    \|\bm{r}\|^2_A
+      &= \nsum{i}\nsum{j} \rho_i\lambda_i \rho_j\lambda_j \bm{a}_i A\transpose\bm{a}_j \\
+      &= \nsum{i}\nsum{j} \rho_i\lambda_i \rho_j\lambda_j^2 \bm{a}_i \transpose\bm{a}_j
+       = \nsum{i} \rho_i^2 \lambda_i^3,\\
+    \|\delta\bm{x}^{(m)}\|^2_A
+      &= \nsum{i}\nsum{j} \rho_i \rho_j \bm{a}_i A\transpose\bm{a}_j \\
+      &= \nsum{i}\nsum{j} \rho_i \rho_j \lambda_j \bm{a}_i \transpose\bm{a}_j
+       = \nsum{i} \rho_i^2 \lambda_i,\\
+  \end{align*}
+  従って、
+  \begin{align*}
+    R &= \sqrt{
+      1 -\frac{\left(\nsum{i} \rho_i^2\lambda_i^2\right)^2}{
+        \left(\nsum{i} \rho_i^2\lambda_i\right)
+        \left(\nsum{i} \rho_i^2\lambda_i^3\right)}
+    }.
+  \end{align*}
+
+\item
+  $R$ の中に共通に現れる因子$\nsum{i}\rho_i^2\lambda_i^n$を整理する。
+  \begin{align*}
+    \nsum{i} \rho_i^2 \lambda_i^n
+      &= \rho_2^2 \lambda_2^n [1 + (\rho_1^2/\rho_2^2) (\lambda_1^n/\lambda_2^n)]
+       = \rho_2^2 \lambda_2^n (1+yp^n).
+  \end{align*}
+  但し、$y := \rho_1^2/\rho_2^2\,(>0)$ と定義した。これを用いると、
+  \begin{align*}
+    R^2
+      %% &= 1-\frac{\rho_2^4\lambda_2^4}{\rho_2^4\lambda_2^4}
+      %%   \frac{(1+yp^2)^2}{(1+yp)(1+yp^3)}
+      &= 1-\frac{(1+yp^2)^2}{(1+yp)(1+yp^3)}
+  \end{align*}
+  となる。ここで、$R^2$ に含まれる変数は $y$ だけであるので、
+  $R^2$ の上限を調べる為に $y$ を動かして停留値を探す。
+  %% \begin{align*}
+  %%   0 &= \pdiff[R^2]y\\
+  %%   0 &= \pdiff[\ln(R^2-1)]y
+  %%      = -\frac{2p^2}{1+yp^3} + \frac{p}{1+yp} + \frac{p^3}{1+yp^3}\\
+  %%   0 &= 2p (1+yp)(1+yp^3) - (1+yp^2)[ (1+yp^3) + p^2(1+yp) ]\\
+  %%     &= 2p (1+yp)(1+yp^3) - (1+yp^2)(1+p^2 +2yp^3)
+  %%     &= 2yp^5 +2y(p^2+p^4) +2p -[2yp^5 + y(p^2+p^4) + 2yp^3 + 1+p^2]\\
+  %%     &= y(p^2-2p^3+p^4) -(1-2p+p^2)\\
+  %%     &= (1-p)^2 (yp^2-1),\\
+  %%   y &= 1/p^2.
+  %% \end{align*}
+  \begin{align*}
+    %% 0 &= \pdiff[R^2]y
+    %%   &= -\frac{2(1+yp^2)p^2(1+yp)(1+yp^3)-(1+yp^2)^2[p(1+yp^3)+p^3(1+yp)]}{[(1+yp)(1+yp^3)]^2}\\
+    %%   &= -\frac{p(1+yp^2)}{[(1+yp)(1+yp^3)]^2} [2p(1+yp)(1+yp^3) - (1+yp^2)[(1+yp^3)+p^2(1+yp)]]\\
+    %%   &= -\frac{p(1+yp^2)}{[(1+yp)(1+yp^3)]^2} [y(p^2-2p^3+p^4) -(1-2p+p^2)]\\
+    %%   &= -\frac{p^3(1+yp^2)(1-p^2)}{[(1+yp)(1+yp^3)]^2} \left(y-\frac1{p^2}\right).
+    0 = \pdiff[(R^2)]y
+      = -\frac{p^3(1+yp^2)(1-p^2)}{[(1+yp)(1+yp^3)]^2} \left(y-\frac1{p^2}\right).
+  \end{align*}
+  因子 $(y-1/p^2)$ 以外の因子は常に正である。従って $y=1/p^2$ が唯一つの停留点である。
+  また、$y-1/p^2$ が負から正へと符号を変える時、上記の導関数は正から負へと符号を変えるので、
+  $R^2$ は点 $y=1/p^2$ の周りで上に凸であり、この点で最大値を与える\qed。
+  更に、最大値は
+  \begin{align*}
+    R_{\max}^2
+      &:= R^2|_{y=1/p^2}
+      %% &= 1-\frac{4}{(1+1/p)(1+p)}\\
+      = 1-\frac{4p}{(1+p)^2} < 1,\\
+    R &\le R_{\max} <1.
+  \end{align*}
+  であるので、
+  \begin{gather*}
+    \|\delta\bm{x}^{(m)}\|_A
+      %% &= R \|\delta\bm{x}^{(m-1)}\|_A\\
+      \le \|\delta\bm{x}^{(m-1)}\|_A R_{\max} \le \cdots
+      \le \|\delta\bm{x}^{(0)}\|_A R_{\max}^m,\\
+    0 \le \left\| \lim_{m\to\infty} \delta\bm{x}^{(m)}\right\|_A
+      = \lim_{m\to\infty} \|\delta\bm{x}^{(m)}\|_A
+      \le \|\delta\bm{x}^{(0)}\|_A \lim_{m\to\infty} R_{\max}^m  = 0,\\
+    \left\| \lim_{m\to\infty} \delta\bm{x}^{(m)}\right\|_A = 0.
+  \end{gather*}
+  ここで $A$-ノルム$\|\cdot\|_A$ は $A$ が正定値である事から、ノルムの条件
+  $\forall\bm{y}\,(\|\bm{y}\|_A=0\leftrightarrow\bm{y}=\bm{0})$ を満たす。
+  %% 任意のベクトル $\bm{y}$ について $\|\bm{y}\|_A=0$ と $\bm{y}=\bm{0}$ が同値である。
+  よって、
+  \begin{align*}
+    \lim_{m\to\infty} \delta\bm{x}^{(m)} &= \bm{0},\\
+    \lim_{m\to\infty}(\bm{x}^{(m)} - \bar{\bm{x}}) &= \bm{0},\\
+    \lim_{m\to\infty}\bm{x}^{(m)} &= \bar{\bm{x}}.
+  \end{align*}
+  即ち、任意の初期ベクトルから初めて、$\bm{x}^{(m)}$ は必ず線形方程式の解 $\bar{\bm{x}}$ に収束する。
+\end{enumerate}
+\end{answer}
+
+
+\begin{answer}{第２問}{村瀬}
+\begin{enumerate}
+\item
+  $(\xi,\,\eta)$ による偏微分で書き直せばよい。$(x,\,t)$ による偏微分はそれぞれ以下の様に書ける。
+  \begin{align*}
+    \pdiff x &= \pdiff[\xi]x \pdiff\xi +\pdiff[\eta]x \pdiff\eta = \pdiff\xi + \pdiff\eta,\\
+    \pdiff t &= \pdiff[\xi]t \pdiff\xi +\pdiff[\eta]t \pdiff\eta = v\left(\pdiff\xi - \pdiff\eta\right).
+  \end{align*}
+  これらを方程式に代入する。
+  \begin{align*}
+    0
+      &= \left[\frac1{v^2}\pdiff[^2]{t^2} - \pdiff[^2]{x^2}\right] u\\
+      &= \left[\frac1{v}\pdiff t + \pdiff x\right]\left[\frac1{v}\pdiff t - \pdiff x\right] u\\
+      &= -4\pdiff\xi\pdiff\eta u,
+  \end{align*}
+  \begin{align}
+    \pdiff\xi\pdiff\eta u &=0. \ilabel{eq:2009mathQ2.1.ans}
+  \end{align}
+
+\item
+  式 \ieqref{eq:2009mathQ2.1.ans} を積分すれば良い。
+  \begin{align*}
+    \pdiff\eta u &= C(\eta),\quad\mbox{($C(\eta)$ は$\tfrac{\partial}{\partial\xi}$についての積分定数)}\\
+    u &= \int_0^\eta d\eta C(\eta)+D(\xi),\quad\mbox{($D(\xi)$ は$\tfrac{\partial}{\partial\eta}$についての積分定数)}\\
+      &= f(\xi) + g(\eta). \quad\mbox{($f(\xi)\;(:=D(\xi))$ 及び $g(\eta)\;(:=\int_0^\eta d\eta C(\eta))$ は任意の関数)}
+  \end{align*}
+
+\item
+  $I$ はエネルギーであろうと当たりをつけて、その時間微分を表面項の形に書き換える事を目指す。
+  \begin{align*}
+    \ddiff[I]t
+      %% &= \frac12\int_{-\infty}^{+\infty}dx\pdiff t\left[
+      %%   \frac1{v^2}\left(\pdiff[u]t\right)^2
+      %%   + \left(\pdiff[u]x\right)^2
+      %% \right]\\
+      &= \int_{-\infty}^{+\infty}dx\left[
+        \frac1{v^2}\pdiff[u]t \frac{\partial^2 u}{\partial t^2}
+        + \frac{\partial^2 u}{\partial x\partial t} \pdiff[u]x
+      \right]\\
+      &= \int_{-\infty}^{+\infty}dx\left[
+        \pdiff[u]t \frac{\partial^2 u}{\partial x^2}
+        + \frac{\partial^2 u}{\partial x\partial t} \pdiff[u]x
+      \right]\\
+      &= \int_{-\infty}^{+\infty}dx\pdiff x\left[\pdiff[u]t \pdiff[u]x\right]\\
+      &= \left.\pdiff[u]t \pdiff[u]x\right|_{-\infty}^{+\infty}=0.
+  \end{align*}
+  従って、積分$I$は$t$ に依存しない。
+
+\item
+  初期条件を $f(\xi)$ と $g(\eta)$ で書き表す。
+  \begin{align*}
+    u_0(x) &= u(x,0) = f(x)+g(x),\\
+    u_1(x)
+      &= \left.\pdiff[u(x,t)]t\right|_{t=0} = v(f'(x)-g'(x)).
+  \end{align*}
+  但し、$f'$ 及び $g'$ はそれぞれ $f(\xi),\, g(\eta)$ の導関数である。これを$f(x),\,g(x)$ について解く。
+  \begin{align*}
+    \frac1v\int_0^x dx' u_1(x') + C &= f(x)-g(x),\quad\mbox{($C$ は積分定数)}\\
+    f(x) &= \frac12\left[ u_0(x) + \frac1v\int_0^x dx' u_1(x') -C \right],\\
+    g(x) &= \frac12\left[ u_0(x) - \frac1v\int_0^x dx' u_1(x') +C \right].\\
+  \end{align*}
+  従って、
+  \begin{align*}
+    u(x,t)
+      &=\frac12\left[ u_0(x+vt) + u_0(x-vt) + \frac1v\int_{x-vt}^{x+vt} dx' u_1(x')\right].
+  \end{align*}
+
+\item
+  \begin{align*}
+    \frac1v\int_{x-vt}^{x+vt} dx' u_1(x')
+      &= \frac{v}\pi\int_{x-vt}^{x+vt} \frac{dx'}b \frac1{(x'-a)^2/b^2 + 1}\\
+      &= \frac{v}\pi\left. \arctan \frac{x'-a}b \right|_{x'=x-vt}^{x'=x+vt},\\
+    u(x,t) &= \frac{v}{2\pi}\left[ \arctan \frac{x-a+vt}b - \arctan \frac{x-a-vt}b\right].
+  \end{align*}
+
+\item
+  \def\sgn{\mathop{\mathrm{sgn}}}
+  $b\to0$ で $\arctan(y/b)\to\frac\pi2\sgn(y)$となる。但し、$\sgn(y)=1\;(y>0),-1\;(y<0)$ である。
+  従って、
+  \begin{align*}
+    u(x,t)
+      &= \frac{v}{4}[ \sgn(x-a+vt) - \sgn(x-a-vt)]\\
+      &= \begin{cases}
+        \frac v2 & |x-a|<vt,\\
+        0 & |x-a|>vt.
+      \end{cases}
+  \end{align*}
+
+\end{enumerate}
+\end{answer}

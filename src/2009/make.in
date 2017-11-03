@@ -1,0 +1,10 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2009math)
+_2009math_title='2009年度実施 数学'
+_2009math_cov=(2009mathC.tex) #(2009mathC.tex)
+_2009math_prb=(2009mathQ.tex) #(2009mathQ1.tex 2009mathQ2.tex)
+_2009math_ans=(2009mathA.tex) #(2009mathA1.tex 2009mathA2.tex)
+_2009math_dep=()
+

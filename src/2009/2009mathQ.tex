@@ -1,0 +1,90 @@
+%% -*- coding:sjis -*-
+%%
+%% 2013-07-17, Koichi Murase, 入力
+%%
+\begin{question}{第１問}{村瀬}
+\def\transpose{^{\mathrm{t}}}
+$A$は$n$行$n$列の実対称行列で, その固有値はすべて正とする。$\bm{x}$と$\bm{b}$は$n$行1列の実数値を
+とる縦ベクトルとする。$\bm{x}$に関する線形方程式$A\bm{x}=\bm{b}$の解$\bar{\bm{x}}$を求めたい。任意の初期ベ
+クトル$\bm{x}^{(0)}$から始めて, $\bm{x}^{(0)}\to\bm{x}^{(1)}\to\bm{x}^{(2)}\to\cdots\to\bar{\bm{x}}$のような逐次的なステップにより$\bar{\bm{x}}$
+を探索する手続きを考える。$n$行1列の実数値をとる任意の縦ベクトル$\bm{y}$に対して, その大
+きさを表す二種類のノルムとして, $\|\bm{y}\|=\sqrt{\bm{y}\transpose\bm{y}}$と$\|\bm{y}\|_A=\sqrt{\bm{y}\transpose A\bm{y}}$を定義する。ここで, $\bm{y}\transpose$
+は$\bm{y}$の転置ベクトルを表す。以下の設問に答えよ。
+\begin{enumerate}
+\item
+  線形方程式$A\bm{x}=\bm{b}$の解$\bar{\bm{x}}$は, 次の量
+  \begin{align*}
+    f(\bm{x})
+      = \frac12 \bm{x}\transpose A\bm{x} - \bm{b}\transpose\bm{x}
+      = \frac12\sum_{i=1}^n \sum_{j=1}^n x_i A_{ij} x_j - \sum_{i=1}^n b_i x_i
+  \end{align*}
+  の最小値で与えられる事を示せ。ここで, $x_i$と$b_i$はそれぞれ, 縦ベクトル$\bm{x}$と$\bm{b}$の
+  $i$番目の成分を表す。また, $A_{ij}$は行列$A$の$(i, j)$成分を表す。
+
+\item
+  $f(\bm{x})$最小値を与えるベクトル$\bar{\bm{x}}$を探索する時に, $m$回後のステップのベクトル$\bm{x}^{(m)}$
+  から$(m+1)$回後のステップのベクトル$\bm{x}^{(m+1)}$を次の手順で求める。まず, 適当な実
+  数パラメーター$\alpha$を選び, $\bm{x}^{(m+1)} = \bm{x}^{(m)} + \alpha\bm{r}$とおく。ここで, 探索方向ベクトル$\bm{r}$
+  は, その成分を$r_i=-\left.\frac{\partial f(\bm{x})}{\partial x_i}\right|_{\bm{x}=\bm{x}^{(m)}}$として, $f(\bm{x})$の勾配ベクトルと反対方向にとる。
+  このとき, $\bm{r}=-A(\bm{x}^{(m)}-\bar{\bm{x}})$であることを示せ。
+
+\item
+  一回のステップで$f(\bm{x})$が最も大きく減少するようにパラメーター$\alpha$を選ぶ。このと
+  き, $\alpha$を$\|\bm{r}\|$と$\|\bm{r}\|_A$を用いて表せ。
+
+\item
+  $\bm{x}^{(m)}$の$\bar{\bm{x}}$からのズレを$\delta\bm{x}^{(m)}=\bm{x}^{(m)}-\bar{\bm{x}}$とする。このとき, $\|\delta\bm{x}^{(m+1)}\|_A$を$\|\delta\bm{x}^{(m)}\|_A$, 
+  $\|\bm{r}\|$および$\|\bm{r}\|_A$を用いて表せ。
+
+\item\ilabel{2009mathQ1.5}
+  $A$の$n$個の固有値を$\lambda_i$, 対応する規格直交化された固有ベクトルを$\bm{a}_i\;(i=1,2,\cdots,n)$
+  とする。さらに, $\delta\bm{x}^{(m)}$の固有ベクトル$\bm{a}_i$による展開を$\delta\bm{x}^{(m)}=\sum_{i=1}^n\rho_i\bm{a}_i$とする。
+  このとき, ノルムの変化, $R=\frac{\|\delta\bm{x}^{(m+1)}\|_A}{\|\delta\bm{x}^{(m)}\|_A}$を固有値$\lambda_i$と展開係教$\rho_i$を用いて表せ。
+
+\item
+  $A$を2行2列とし, その固有値の比$p=\lambda_1/\lambda_2$が$0<p\le 1$を満たすとする。このと
+  き, 設問\iref{2009mathQ1.5}の結果を用いて$R$に上限があることを示し, 任意の初期ベクトル$\bm{x}^{(0)}$か
+  ら始めた探索が必ず収束することを示せ。
+
+\end{enumerate}
+\end{question}
+
+\begin{question}{第2問}{村瀬}
+以下の偏微分方程式を考える。
+\begin{align}
+  \frac1{v^2}\frac{\partial^2 u}{\partial t^2} - \frac{\partial^2 u}{\partial x^2} = 0. \ilabel{eq:2009mathQ2.1}
+\end{align}
+ここで$v$は正の定数であり, $u(x,t)$は$-\infty<t<+\infty$および$-\infty<x<+\infty$で定義された
+二変数関数である。以下の設問に答えよ。
+
+\begin{enumerate}
+\item
+  変数$\xi=x+vt$および$\eta=x-vt$を用いて\ieqref{eq:2009mathQ2.1}式を書き直せ。
+
+\item\ilabel{2009mathQ2.2}
+  \ieqref{eq:2009mathQ2.1}式の一般解が, 適当な関数$f$と$g$を用いて$u(x,t)=f(x+vt)+g(x-vt)$と表せる
+  ことを示せ。
+
+\item
+  任意の時間$t$に対して, \ieqref{eq:2009mathQ2.1}式の解が$\left.\frac{\partial u(x,t)}{\partial x}\right|_{x\to\pm\infty}=0$を満たしているとする。このと
+  き, 以下の積分$I$が$t$に依存しないことを示せ。ただし, $I$は発散しないとする。
+  \begin{align*}
+    I =\frac12\int_{-\infty}^{L\infty}\left(
+      \frac1{v^2}\left(\frac{\partial u}{\partial t}\right)^2
+      + \left(\frac{\partial u}{\partial x}\right)^2
+    \right)dx.
+  \end{align*}
+
+\item
+  $u(x,t)$の初期条件として, $u(x,0)=u_0(x),\, \left.\frac{\partial u(x,t)}{\partial t}\right|_{t=0}=u_1(x)$が与えられているとす
+  る。このとき, 設問\iref{2009mathQ2.2}の結果を利用して, 解$u(x,t)$を$u_0$と$u_1$を用いて表せ。
+
+\item\ilabel{2009mathQ2.5}
+  $u_0(x)=0$および$u_1(x)=\frac{v^2}{\pi}\frac{b}{(x-a)^2+b^2}$なる初期条件のもとで, $t>0$での解$u(x,t)$を求
+  めよ。ここで, $a$と$b$は正の定数とする。
+
+\item
+  $b\to0$なる極限の場合に, 設問\iref{2009mathQ2.5}で求めた解$u(x,t)$を図示せよ。
+
+\end{enumerate}
+\end{question}
