@@ -1,0 +1,204 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{専攻 問題7}{}
+
+\begin{subquestions}
+\SubQuestion
+
+  温血動物の細胞内のイオン組成は、細胞外液(例えば血液)のイオン組成とは
+  大きく異なっている。一価の無機イオンに関して表1にモル濃度で示す。
+
+  \begin{subsubquestions}
+  \SubSubQuestion
+  \parbox[t]{102mm}{
+    神経細胞や筋肉細胞のように電気的に「興奮」し、活動電位を生じる
+    細胞では、静止時の細胞内電位は細胞外に対して負である。これは静止時
+    の細胞が$K^+$に対してのみ高い透過性を示し、$K^+$の濃淡電池とみな
+    せるからである。静止時の細胞内電位を表1に基づいて計算せよ。
+    但し、ガス定数を$R$、ファラデー定数を$F$とするとき、
+%
+    \[ \frac{RT}{F\log_{10}e}=60{\rm mV}\]
+%
+    を用いよ。
+
+  }\parbox[t]{50mm}{\vspace*{-5mm}
+  \begin{center}
+    表1\\\begin{tabular}{|c|c|c|}\hline
+      &細胞内&細胞外 \\ 
+      &(mol/$\ell$)&(mol/$\ell$) \\ \hline
+      $\rm K^+$ & 0.100 & 0.005 \\
+      $\rm Na^+$&0.010& 0.150 \\
+      $\rm Cl^-$&0.010&0.155 \\ \hline
+    \end{tabular}
+  \end{center}}
+
+  \SubSubQuestion
+    活動電位を生じる時は、細胞内電位は一過性に正となる。この時、
+    細胞膜の一価性のイオンの透過性はどのように変化していると考え
+    られるか、三行以内で簡潔に述べよ。
+
+  \SubSubQuestion
+    一価性イオンの細胞内外の濃度勾配を表1のように変化させ、細胞を
+    「充電」状態に保っている機構について、三行以内で簡潔に述べよ。
+
+  \SubSubQuestion
+    細胞内外の濃度勾配はある二価の陽イオンに関して特に著名である。
+    この陽イオンについて、その細胞活性制御の働きに触れつつ述べよ。
+
+  \end{subsubquestions}
+
+\SubQuestion
+  タンパク質のアミノ酸配列は、DNAの塩基配列が先ずRNAに転写され、
+  これが遺伝暗号表にしたがって翻訳されて、決定される。表2に示した
+  RNA$\rightarrow$アミノ酸の暗号表を参考にして次の問題に答えよ。
+
+  \parbox[t]{80mm}{
+  \begin{subsubquestions}
+  \SubSubQuestion
+    暗号表やタンパク質のアミノ酸組成はあまり生物種によらないが、
+    DNAの塩基組成は、種によって大きく異なる。たとえば、高温に耐える
+    生物では、\mbox{Cytosine(C)}や\mbox{Guanine(G)}が多く、低温に
+    生きる生物では\mbox{Adenine(A)}や\mbox{Thymine(T)}が多い。
+
+    \begin{itemize}
+    \item このようなアミノ酸組成とDNA塩基組成の配列は暗号表のどのような
+          性質に基づいているか。
+    \item DNAの塩基組成の上記のような多様性の理由は何か。
+    \end{itemize}
+
+  \SubSubQuestion
+    第一塩基と第二塩基が同じアミノ酸(例えば、PheとLeu、IleとMet、
+    AspとGlu、SerとArg)は互いに類似している。
+
+    \begin{itemize}
+    \item 上記4つの組は、それぞれどのような点で類似しているか。
+    \item 上記のような暗号表の性質は、どのような点で生物に有利か。
+    \end{itemize}
+
+  \end{subsubquestions}
+  }\parbox[t]{78mm}{
+  \begin{center}\small
+    表2\\\begin{tabular}{|c|c|c|c|c|c|}\hline
+      First&\multicolumn{4}{|c|}{}&Third \\ 
+      position&\multicolumn{4}{|c|}{Second position}&position \\
+      (5' end)&\multicolumn{4}{|c|}{}&(3' end) \\ \hline
+      &U&C&A&G& \\ \cline{2-5}
+      U&Phe&Ser&Tyr&Cys&U \\
+      &Phe&Ser&Tyr&Cys&C\\
+      &Leu&Ser&Stop&Stop&A\\
+      &Leu&Ser&Stop&Trp&G\\ \hline
+      C&Leu&Pro&His&Arg&U\\
+      &Leu&Pro&His&Arg&C\\
+      &Leu&Pro&Gln&Arg&A\\
+      &Leu&Pro&Gln&Arg&G\\ \hline
+      A&Ile&Thr&Asn&Ser&U\\
+      &Ile&Thr&Asn&Ser&C\\
+      &Ile&Thr&Lys&Arg&A\\
+      &Met&Thr&Lys&Arg&G\\ \hline
+      G&Val&Ala&Asp&Gly&U\\
+      &Val&Ala&Asp&Gly&C\\
+      &Val&Ala&Glu&Gly&A\\
+      &Val&Ala&Glu&Gly&G\\ \hline
+    \end{tabular}
+  \end{center}}
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題7}{}
+
+\begin{subanswers}
+\SubAnswer
+  \begin{subsubanswers}
+  \SubSubAnswer
+$\rm Na^+$と$\rm Cl^-$とは内でも外でも互いに同じ濃度なので、$\rm K^+$のみを
+電位の原因として計算する。
+
+Nernstの式より、活動電位$V$は、
+
+\begin{equation}
+V=\frac{RT}{zF}\ln\frac{C_o}{C_i}
+\end{equation}
+
+と表記できる
+
+つまり、
+\begin{equation}
+V=\frac{RT}{zF\log_{10}e}\log_{10}\frac{C_o}{C_i}
+\end{equation}
+
+いま、$\log_{10}\frac{C_o}{C_i}=\log_{10}\frac{1}{20}\sim
+-1.3$、また、$z=1$なので、$V\sim-80\Unit{[mV]}$ である。
+
+  \SubSubAnswer
+ナトリウムイオンに対して細胞膜の透過性が増し、細胞内にナトリウム
+イオンが流入することによって細胞内電位が正になる。
+
+  \SubSubAnswer
+$\rm Na^+-K^+$ポンプ($\rm Na^+-K^+ATPase$)によって、ATP消費を伴って
+ナトリウムイオンが細胞外へ、カリウムイオンが細胞内へ
+能動輸送される。
+
+  \SubSubAnswer
+この二価イオンは$\rm Ca^{2+}$である。カルシウムイオンは通常は
+細胞内濃度が細胞外濃度に対して著しく低い。しかし、刺激によって
+チャンネルが開くことによって細胞内でカルシウムイオンが高濃度になる。
+
+骨格筋においては、カルシウムイオンが制御に重要である。骨格筋細胞は
+刺激伝達物質をうけとると、それによってカルシウムイオンの細胞内濃度を
+高くして、カルシウムイオンを制御タンパクに到達させ、筋収縮を
+起こさせる、という構造になっている。
+
+  \end{subsubanswers}
+
+\SubAnswer 
+   \begin{subsubanswers} 
+       \SubSubAnswer \begin{itemize} 
+
+   \item 暗号表を見ると、おなじアミノ酸がいくつかの塩基配列に対応して
+        いる。たとえば、ProはCCU,CCC,\\CCA,CCG,と3番目の塩基については
+        何でもよいことになっている。そのため、おなじアミノ酸配列に対し
+        ていくつかの塩基配列が対応し得、全体としての塩基の割合にも自由
+        度がある。
+
+    \item 生物がその機能を発揮する際に直接関わるのはタンパク質の
+          機能である。タンパク質の機能はその構造により、その構造は、
+          一次構造、すなわち配列によって決定されるといわれている。
+          生物にとって重要なタンパク質は種をこえておおむね保存されて
+          いるので、アミノ酸配列も種を越えて似ていなくてはならない。
+          ところで、これを逆にとると、塩基配列がどうであっても、その
+          結果としてのアミノ酸配列があっていれば構わない、ということ
+          がいえる。自然界では塩基配列による突然変異がつねに起こって
+          いる。それによってもしアミノ酸配列に重大な変更が起こった
+          場合、多くは致死にいたってその塩基配列を子孫に残すことは
+          できない。しかし、塩基配列が変わったからといって必ずしも
+          アミノ酸が変異となるわけではなく、結果としてその塩基配列を
+          子孫に残す。\\
+          このようなことが進化の過程で多く繰り返されることによって、
+          同じタンパクでも塩基配列には種によってばらつくことがおこる
+          ことになる。また、もしある種に対して、生存に関して有利な
+          塩基の割合が存在するのなら、その種の塩基の割合はそれに従う
+          ことが塩基配列の自由度によって可能になる。(例に出ているの
+          は、高温では水素結合数が多くて結合がつよいGC対を好み、低温
+          では逆に水素結合数の少ないAT対を好むためである。)
+     \end{itemize}
+
+
+  \SubSubAnswer
+    \begin{itemize}
+    \item Phe-Leu,Ile-Met:どちらも疎水性が強い。\\
+          Asp-Glu:$\rm COO^-$をもつ。\\
+          Ser-Arg:どちらも親水性。
+    \item 突然変異がおきても、タンパク質の性質があまり変化しなくなる
+          ようになるので、突然変異に対する耐性が強くなる。
+    \end{itemize}
+
+  \end{subsubanswers}
+\end{subanswers}
+
+\end{answer}
+
+
+\end{document}
