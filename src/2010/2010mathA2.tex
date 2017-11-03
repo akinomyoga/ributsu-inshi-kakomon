@@ -1,0 +1,135 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-14, Koichi Murase, 作成
+%%
+\begin{answer}{第２問}{村瀬}
+\begin{enumerate}
+\item
+  \begin{enumerate}
+  \item
+    先ず区間 $0\le x<y$ で考える.
+    この区間では $u'' = 0$ が成立するので, これを積分して
+    $u = Ax + B$ ($A$, $B$ は積分定数) を得る.
+    境界条件より, $0=u(1)=B$, つまり $B=0$ である.
+
+    また区間 $y< x \le 1$ でも同様にして,
+    $u = A'x +B'$ ($A'$, $B'$ は積分定数) を得る.
+    境界条件から, $0=u(1)=A'+B'$, つまり $B'=-A'$ である.
+
+    次に、$\epsilon$を微少量 ($\epsilon>0$)として,
+    微分方程式を区間 $(y-\epsilon, y+\epsilon)$ で積分する。
+    \begin{align*}
+      \left.\frac{du}{dx}\right|_{y-\epsilon}^{y+\epsilon}
+        &= -\int_{y-\epsilon}^{y+\epsilon} dx\delta(x-y),\\
+      u'(y+\epsilon) - u'(y-\epsilon) &= -1,\\
+      A' - A &= -1,\\
+      A' = A - 1.
+    \end{align*}
+
+    また、$x=y$ での連続性から、
+    \begin{align*}
+      u(y+\epsilon) &= u(y-\epsilon),\\
+      (A-1)(y-1) &= A y,\\
+      -y -A +1 &= 0,\\
+      A &=1-y.
+    \end{align*}
+
+    よって、
+    \begin{align*}
+      u(x) &= \begin{cases}
+        (1-y) x   & 0 \le x \le y,\\
+        -y (x -1) & y < x \le 1.
+      \end{cases}
+    \end{align*}
+
+  \item
+    \begin{align*}
+      \frac{d^2v}{dx^2} &= -\int_0^1 dy \rho(y)(-\delta(x-y)),\\
+      v(x) &= - \int_0^1 dy \rho(y)G(x,y).\\
+    \end{align*}
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    \begin{align*}
+      u_n(x,y) &= z^n + \bar z^n = 2 \Re z^n\\
+        &= 2\Re (re^{i\theta})^n = 2 r^n \cos n\theta,\\
+      \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right) u_n(x,y)
+        &= \left(\frac{\partial^2}{\partial r^2}
+          +\frac1r\frac{\partial}{\partial r}
+          +\frac1{r^2}\frac{\partial^2}{\partial \theta^2}\right) 2 r^n \cos n\theta\\
+        &= \frac{n(n-1)}{r^2} u_n + \frac{n}{r^2} u_n + \frac{-n^2}{r^2} u_n\\
+        &= \frac{n^2 -n + n -n^2}{r^2} u_n = 0\text{■}.
+    \end{align*}
+    また, $u_n|_{r=1} = 2\cos n\theta$ である.
+
+  \item
+    \begin{align*}
+      |\theta| &= C + \sum_{n=1}^\infty B_n \cos n\theta,\\
+      C
+       &= \frac1{2\pi} \int_{-\pi}^\pi d\theta |\theta|
+        = \frac1\pi \int_0^\pi \theta d\theta = \frac\pi2,\\
+      B_n
+       &= \frac1{\pi}\int_{-\pi}^\pi d\theta |\theta|\cos n\theta
+        = \frac2{\pi} \int_0^\pi d\theta\, \theta\cos n\theta\\
+       &= \left. \frac2{n\pi} \theta\sin n\theta \right|_0^\pi
+          - \frac2{n\pi}\int_0^\pi d\theta \sin n\theta\\
+       &= \left. \frac2{n^2\pi}\cos n\theta \right|_0^\pi
+        = \begin{cases}
+          \frac4{n^2\pi} & \text{$n$: even},\\
+          0 & \text{$n$: odd}.
+        \end{cases}
+    \end{align*}
+    よって,
+    \begin{align*}
+      |\theta|
+        &= \frac\pi2 + \sum_{m=1}^\infty \frac{\cos 2m\theta}{m^2\pi}\\
+        &= \frac\pi2 \left[ 1 + \sum_{m=1}^\infty \frac{2\cos 2m\theta}{(m\pi)^2} \right],\\
+      u(x,y)
+        &= \frac\pi2 \left[ 1 + \sum_{m=1}^\infty \frac{u_{2m}(x,y) }{(m\pi)^2} \right].
+    \end{align*}
+    
+  \end{enumerate}
+
+\item{}
+  \paragraph{球対称な解}
+  (H1) $u(\bm{x})$ を球対称な関数と仮定する: $u(\bm{x}) =u(r);\; r = |\bm{x}|$。
+  この時, $V$ として半径 $R$ の球を考えると,
+  \begin{align*}
+    \int_{\partial V} dS\,\bm{n}\cdot\nabla u(r) &= \int_{V} d^dx \nabla\cdot\nabla u(\bm{x}),\\
+    \int_{\partial V} R^{d-1} d\Omega \left. \frac{\partial}{\partial r} u(r) \right|_{r=R}
+      &= -\int_{V} \prod_{a=1}^d dx_a \delta(x_a),\\
+    \frac{2\pi^{d/2}R^{d-1}}{\Gamma(d/2)}\frac{\partial}{\partial R} u(R) &= -1,\\
+    u(R)
+      &= -\frac{\Gamma(d/2)}{2\pi^{d/2}} \int dR \frac1{R^{d-1}}\\
+      &= -\frac{\Gamma(d/2)}{2\pi^{d/2}}\cdot \frac{-1}{(d-2)R^{d-2}} + C \quad\text{($C$ 積分定数)}.\\
+  \end{align*}
+  ここで、境界条件 $0 = \lim_{|\bm{x}|\to\infty} u(\bm{x}) = \lim_{r\to\infty} u(r)$ より, $C=0$.
+  \begin{align*}
+    u(r)
+      &= \frac{\Gamma(d/2)}{2(d-2)\pi^{d/2} r^{d-2}}.
+  \end{align*}
+
+  \paragraph{解の一意性}
+  解として $u_1(\bm x)$, $u_2(\bm x)$ が存在する時,
+  $f(\bm x) :=u_1(\bm x) - u_2(\bm x)$ とする.
+  \begin{align*}
+  \nabla\cdot\nabla f
+    &= \nabla\cdot\nabla u_1 - \nabla\cdot\nabla u_2\\
+    &= -(\prod_{a=1}^d \delta(x_a) - \prod_{a=1}^d \delta(x_a)) = 0,\\
+  f &= \bm A \cdot \bm x  + B,\\
+  \end{align*}
+  ここで, 境界条件より,
+  $\lim_{|\bm{x}|\to\infty} f(\bm x)
+  = \lim_{|\bm{x}|\to\infty} (u_1(\bm x) - u_2(\bm{x})) = 0$ より $\bm{A} = B = 0$.
+  従って, $f\equiv0$, つまり $u_1(\bm x) \equiv u_2(\bm{x})$ であり, 解は一意に存在する.
+  この事から先に求めた球対称な解がそれであると分かり,
+  仮定 (H1) が妥当であった事が分かる.
+  \begin{align*}
+    u(\bm{x}) &= \frac{\Gamma(d/2)}{2(d-2)\pi^{d/2} |\bm{x}|^{d-2}}.
+  \end{align*}
+
+\end{enumerate}
+\end{answer}

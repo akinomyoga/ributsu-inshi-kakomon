@@ -1,0 +1,112 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-14, Koichi Murase, 作成
+%%
+\begin{answer}{第１問}{村瀬}
+\begin{enumerate}
+\item
+  固有値を $\alpha$ とすると, 
+  $A^2=E$ より $\alpha^2=1$。
+  従って, $\alpha=\pm1$.
+\item
+  \begin{align*}
+    C^2   &= (-iAB)^2 = -ABAB = -A(-AB)B = A^2 B^2 = E,\\
+    BC+CB &= -i(BAB+ABB) = -i (BA+AB) B = O,\\
+    CA+AC &= -i(ABA+AAB) = -i A (BA+AB) = O \text{■}.
+  \end{align*}
+\item
+  \begin{align*}
+    D^2 = (A+iB)^2 = A^2 - B^2 + i (AB + BA) = O.
+  \end{align*}
+  また、$D=O$ と仮定 (H1) すると,
+  \begin{align*}
+    D &= A+iB = O,\\
+    A &= -iB,\\
+    E &= A^2 = (-iB)^2 = -B^2 = -E
+  \end{align*}
+  となり矛盾するので仮定 (H1) は誤りであり, $D \ne O$■.
+
+\item
+  \begin{enumerate}
+  \item
+    \begin{align*}
+      C\bm{p}
+        &= -iAB (A+iB) \bm{r}= (-i ABA + ABB) \bm{r} \\
+        &= (-i(-BA)A + A)\bm{r} = (A+iB)\bm{r} = \bm{p},\\
+      C\bm{q}
+        &= C\frac12(A-iB)\bm{p}\\
+        &= -\frac12(A-iB)C\bm{p}= -\frac12(A-iB)\bm{p} = -\bm{q}.
+    \end{align*}
+    また,
+    \begin{align}
+      D\bm{q}
+        &= \frac12(A+iB)(A-iB)\bm{p} = \frac12(A^2+B^2-iAB+iBA)\bm{p}\nonumber\\
+        &= (E+C)\bm{p} = 2\bm{p} \ne \bm{0} \ilabel{eq:2010mathA1.Dq}
+    \end{align}
+    より $\bm{q} \ne \bm{0}$.
+    従って, $\bm{p}, \bm{q}$ は $C$ の固有ベクトルであり,
+    固有値はそれぞれ $1, -1$ である.
+  \item
+    $\bm{p}, \bm{q}$ は異なる固有値を持つので線形独立である.
+    (仮に線形従属とすると、
+    \begin{align*}
+      0 &= x\bm{p} + y \bm{q};\quad (x,y)\ne(0,0),\\
+      0 &= C(x\bm{p} + y \bm{q}) \\
+        &= x\bm{p} - y \bm{q} \\
+        &= 2 x\bm{p} = - 2 y \bm{q},\\
+      x = y &= 0
+    \end{align*}
+    となり矛盾する。)
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    $\bm{p}, \bm{q}$ は線形独立なので,
+    $\mathrm{rank} P = 2 = \dim P$. 従って $P$ は正則である.
+  \item
+    \begin{align*}
+      CP &= \begin{pmatrix}C\bm p&C\bm q\end{pmatrix}
+          = \begin{pmatrix}\bm p&-\bm q\end{pmatrix}\\
+         &= \begin{pmatrix}\bm p&\bm q\end{pmatrix} \begin{pmatrix}1& 0 \\ 0 & -1\end{pmatrix}
+          = P \begin{pmatrix}1& 0 \\ 0 & -1\end{pmatrix},\\
+      P^{-1}CP &= \begin{pmatrix}1& 0 \\ 0 & -1\end{pmatrix}.
+    \end{align*}
+  \item
+    \begin{align*}
+      P^{-1} (A+iB)P
+       &= P^{-1} DP
+        = P^{-1} \begin{pmatrix}D\bm p & D\bm q\end{pmatrix}
+        = P^{-1} \begin{pmatrix}\bm{0} & 2\bm{p}\end{pmatrix} \quad\because\text{(式\iref{eq:2010mathA1.Dq})}\\
+       &= P^{-1} \begin{pmatrix}\bm p&\bm q\end{pmatrix} \begin{pmatrix}0& 2 \\ 0 & 0\end{pmatrix}
+        = \begin{pmatrix}0& 2 \\ 0 & 0\end{pmatrix},\\
+      P^{-1} (A-iB)P
+       &= P^{-1} \begin{pmatrix}(A-iB)\bm p & (A-iB)\bm q\end{pmatrix}\\
+       &= P^{-1} \begin{pmatrix}2\bm{q} & \frac12 (A-iB)^2 \bm{p}\end{pmatrix}\\
+       &= P^{-1} \begin{pmatrix}2\bm{q} & \frac12 (A^2-B^2-i(AB+BA)) \bm{p}\end{pmatrix}\\
+       &= P^{-1} \begin{pmatrix}2\bm{q} & \bm{0}\end{pmatrix}
+        = P^{-1} \begin{pmatrix}\bm p&\bm q\end{pmatrix} \begin{pmatrix}0& 0 \\ 2 & 0\end{pmatrix}
+        = \begin{pmatrix}0& 0 \\ 2 & 0\end{pmatrix}.\\
+    \end{align*}
+    よって、
+    \begin{align*}
+      P^{-1} AP
+       &= \frac12[P^{-1} (A+iB)P +P^{-1} (A-iB)P]\\
+       &= \frac12\left[ \begin{pmatrix}0& 2 \\ 0 & 0\end{pmatrix} + \begin{pmatrix}0& 0 \\ 2 & 0\end{pmatrix} \right]
+        = \begin{pmatrix}0& 1 \\ 1 & 0\end{pmatrix},\\
+      P^{-1} BP
+       &= \frac1{2i}[P^{-1} (A+iB)P - P^{-1} (A-iB)P]\\
+       &= \frac1{2i}\left[ \begin{pmatrix}0& 2 \\ 0 & 0\end{pmatrix} - \begin{pmatrix}0& 0 \\ 2 & 0\end{pmatrix} \right]
+        = \begin{pmatrix}0& -i \\ i & 0\end{pmatrix}.
+    \end{align*}
+  \end{enumerate}
+
+\item
+  \begin{align*}
+    A = \begin{pmatrix}0& 1 \\ 1 & 0\end{pmatrix},\quad
+    B = \begin{pmatrix}0& -i \\ i & 0\end{pmatrix},\quad
+    C = \begin{pmatrix}1& 0 \\ 0 & -1\end{pmatrix}.
+  \end{align*}
+\end{enumerate}
+\end{answer}

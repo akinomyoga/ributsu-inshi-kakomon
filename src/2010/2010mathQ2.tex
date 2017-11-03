@@ -1,0 +1,64 @@
+%% -*- coding:sjis -*-
+%%
+%% ChangeLog
+%% 2013-07-14, Koichi Murase, 入力
+%%
+\begin{question}{第２問}{村瀬}
+
+以下ではポアソン方程式, またはラプラス方程式の解を様々な次元($d$), 境界条件の下で求
+める。
+
+\begin{enumerate}
+\item まず1次元($d=1$)の場合を考える。
+  \begin{enumerate}
+  \item 領域 $x\in[0,1]$ で定義された連続関数 $u(x)$ に対する微分方程式
+    \begin{align*}
+      \frac{d^2 u}{dx^2} &= -\delta(x-y),\; 0<y<1
+    \end{align*}
+    を境界条件 $u(0)=u(1)=0$ の下で解け。ここで $\delta(x)$ はデルタ関数である。
+  \item 上で得られた解 $u(x)$ を $G(x,y)$ と書く。このとき領域 $x\in[0,1]$で定義される,
+    より一般的な微分方程式
+    \begin{align*}
+      \frac{d^2 v}{dx^2} &= \rho(x)
+    \end{align*}
+    の解 $v(x)$ を $G(x, y)$ を用いて書き下せ。ただし境界条件は $v(0)=v(1)=0$ とし,
+    右辺の $\rho(x)$ は $\rho(0)=\rho(1)=0$ を満たす任意関数とする。
+  \end{enumerate}
+
+\item 次に2次元($d=2$)の場合を考える。2次元平面の直交座標を$(x,y)$, 複素座標を
+  $z=x+iy, \bar z = x-iy$, 極座標を $r, \theta$ ($x=r\cos\theta, y=r\sin\theta$）とする。
+  \begin{enumerate}
+  \item
+    単位円の内部($r<1$)で定義された関数 $u_n(x,y)=z^n + \bar z^n\; (n=0, 1, 2, \cdots)$ はラ
+    プラス方程式
+    \begin{align*}
+      \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)u(x,y) &= 0
+    \end{align*}
+    の解であることを示せ。またこの関数は境界($r=1$)でどのような値をとるのか, 
+    $\theta$ の関数として表せ。
+  \item
+    単位円の内部 $r<1$ でラプラス方程式を満たし, 境界条件
+    \begin{align*}
+      u(x,y)\bigr|_{r=1}=|\theta|,\; -\pi \le \theta \le \pi
+    \end{align*}
+    を満たす関数 $u$ を, 境界値に対するフーリエ級数展開を用いて求めよ。
+  \end{enumerate}
+
+\item
+  $d$次元($d\ge3$)ポアソン方程式
+  \begin{align*}
+    \nabla\cdot\nabla u(\bm{x}) = -\prod_{a=1}^d \delta(x_a),\quad
+    \bm{x} = (x_1,\ldots,x_d),\quad
+    \nabla=\left(\frac{\partial}{\partial x_1}, \ldots, \frac{\partial}{\partial x_d}\right)
+  \end{align*}
+  を，定義域 $\mathbf{R}^d$, 境界条件 $\displaystyle \lim_{|\bm{x}|\to \infty}u(\bm{x})=0$ の下で考える。発散定理
+  \begin{align*}
+    \int_V d^dx \nabla\cdot \bm{F} = \int_{\partial V} dS\,\bm{n} \cdot \bm{F}
+  \end{align*}
+  を用いて解 $u(\bm{x})$ を求めよ。ここで $V$ は $\mathbf{R}^d$ 内のなめらかな境界 $\partial V$ を持つ有界な領域,
+  $\bm{F}$ はベクトル値関数, $\bm{n}$ は $\partial V$ 上の単位法線ベクトル, $dS$ は $\partial V$ の超面積要素であ
+  る。(必要であれば$d$次元空間内の半径1の超球面 $\sum_{i=1}^d (x_i)^2=1$ の超面積が$\frac{2\pi^{d/2}}{\Gamma(d/2)}$
+  であることを用いても良い。ここで $\Gamma(z)$ はガンマ関数である。)
+
+\end{enumerate}
+\end{question}
