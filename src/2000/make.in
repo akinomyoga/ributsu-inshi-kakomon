@@ -1,0 +1,43 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2000pankyo 2000senmon)
+docs_ex=(2000pankyo2)
+
+_2000pankyo_title='2000年度実施 一般教育科目'
+_2000pankyo_cov=()
+_2000pankyo_prb=(2000engl.tex 2000math.tex)
+_2000pankyo_ans=(2000engl.tex 2000math.tex)
+_2000pankyo_dep=(2000math-1.tpc 2000math-2.tpc)
+#
+# 作成者
+#   英語: 1:yt 2:黒沼
+#   数学: 手塚
+#
+
+_2000pankyo2_title='2000年度実施 一般教育科目 (英語なし)'
+_2000pankyo2_cov=()
+_2000pankyo2_prb=(2000math.tex)
+_2000pankyo2_ans=(2000math.tex)
+_2000pankyo2_dep=(2000math-1.tpc 2000math-2.tpc)
+
+_2000senmon_title='2000年度実施 物理専門科目'
+_2000senmon_cov=()
+_2000senmon_prb=(2000phy1.tex 2000phy2.tex 2000phy3.tex 2000phy4.tex 2000phy5.tex 2000phy6.tex 2000phy7.tex 2000phy8.tex 2000phy9.tex)
+_2000senmon_ans=(2000phy1.tex 2000phy2.tex 2000phy3.tex 2000phy4.tex 2000phy5.tex 2000phy6.tex 2000phy7.tex 2000phy8.tex 2000phy9.tex)
+_2000senmon_dep=(
+  2000phy1-1.tpc 2000phy3-1.tpc 2000phy5-1.tpc 2000phy5-2.tpc 2000phy5-3.tpc 2000phy6-1.tpc 2000phy6-2.tpc
+  2000phy7-1.tpc 2000phy7-2.tpc 2000phy7-3.tpc 2000phy7-4.tpc 2000phy7-6.tpc
+  2000phy8-1.tpc 2000phy8-2.tpc 2000phy8-3.tpc 2000phy8-4.tpc 2000phy8-5.tpc 2000physQ7_1.eps 2000physQ9_1.eps)
+#
+# 作成者
+#   問題1: 黒沼
+#   問題2: 小山？
+#   問題3: yt
+#   問題4: 中山優
+#   問題5: 日下
+#   問題6: yt
+#   問題7: 野村
+#   問題8: 立川
+#   問題9: 立川
+#
