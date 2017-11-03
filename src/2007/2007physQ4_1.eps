@@ -1,0 +1,188 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 5 10 215 110
+%%Creator: murase@nt.phys.s.u-tokyo.ac.jp (Koichi MURASE)
+%%CreationDate: 2011/05/01
+%%Title: 2007physQ4_1
+/2007physQ4_1.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   矢印
+%-------------------------------------------------------------------------------
+
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+%: <x> <y> <dx> <dy> mwg-draw-rarrow
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+%: <x> <y> <X> <Y> mwg-draw-arrow
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+
+%-------------------------------------------------------------------------------
+%   矩形
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+
+% mwg-draw-rrect -> rectstroke
+% mwg-fill-rrect -> rectfill
+%-------------------------------------------------------------------------------
+%   フォント設定 / 文字列表示
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-isym {
+  /Symbol-H findfont
+  [1 0 0.2 1 0 0] makefont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-sym {
+  /Symbol-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-helv {
+  /Helvetica-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-center-show {
+  dup stringwidth pop 2 div neg 0 rmoveto show
+} def
+%-------------------------------------------------------------------------------
+%5 10 215 110 mwg-draw-rect
+
+/M_A1 -25 def
+/M_A2 -40 def
+/M_WIDTH 1.5 def
+
+110 60 translate
+0.5 setlinewidth
+gsave
+  0 0 moveto -100 0 rlineto stroke
+  M_WIDTH setlinewidth [5 4] 0 setdash
+  0 0 100 0 mwg-draw-arrow
+grestore
+
+gsave
+  0 0 30 M_A1 0 arc stroke
+  gsave
+    180 rotate
+    0 0 30 M_A1 0 arc stroke
+  grestore
+  M_A1 rotate
+  
+  0 0 moveto 100 0 rlineto stroke
+  
+  gsave
+    M_WIDTH setlinewidth [5 4] 0 setdash
+    -100 0 0 0 mwg-draw-arrow
+  grestore
+  
+  0 0 20 M_A2 0 arc stroke
+  0 0 23 M_A2 0 arc stroke
+  M_A2 rotate
+  M_WIDTH setlinewidth 0 0 40 0 mwg-draw-arrow
+grestore
+
+0 0 3 0 360 arc fill
+
+gsave
+  10 mwg-font-mincho
+  -20 -15 moveto (\305\305\273\322) show % denshi
+  -72 36 moveto (\245\254\245\363\245\336\300\376) show % gamma sen
+  53 5 moveto (\245\254\245\363\245\336\300\376) show % gamma sen
+  
+  10 mwg-font-isym
+  32 -12 moveto (q) show % theta
+  -40 4 moveto (q) show % theta
+  18 -24 moveto (f) show % phi
+  
+  -35 25 moveto
+  10 mwg-font-math (E) show
+  6 mwg-font-isym
+  0 -1 rmoveto (g) show
+
+  70 -10 moveto
+  10 mwg-font-math (E) show
+  10 mwg-font-sym (\242) show
+  6 mwg-font-isym
+  -1 -1 rmoveto (g) show
+  
+  10 mwg-font-math
+  -6 -30 moveto (p) show
+  
+  % \245\254\245\363\245\336\300\376 % gamma sen
+  % \246\303 \246\310 \246\325 % gamma theta phi
+grestore
+
+%-------------------------------------------------------------------------------
+end
+showpage 2007physQ4_1.save restore
