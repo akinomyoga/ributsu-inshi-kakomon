@@ -1,0 +1,777 @@
+%!
+%%BoundingBox: 17 436 278 834
+%%Title: 97phy1-1
+%%CreationDate: Sun May 24 16:25:22 1998
+%%Creator: Tgif-3.0J-p17 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 11 dict def
+tgifdict begin
+
+%%Title: eucfont.ps
+% old eucfont.ps(OCFeucfont) and new eucfont.ps(CIDeucfont) were combined.
+%  1996-09, kawamata@sra.co.jp
+% Sample Usage:
+%   Operands are only font names permitted. Don't put fontdict itself.
+% /Courier-Ryumin /Courier /Ryumin-Light-EUC-V eucfont
+
+%%Title: CIDeucfont.ps
+%%Creator: yohtaki@cis.ibaraki.ac.jp
+%%CreationDate: 1996-9-29
+%%EndComments
+%
+% <newfont> <asciifont> <kanjifont> CIDeucfont
+/CIDeucfont {
+dup findfont /WMode get 1 eq 4 1 roll % push direction info.
+12 dict begin
+  /CIDInit /ProcSet findresource begin
+  exch [ 3 1 roll ] beginrearrangedfont
+      3 -1 roll {   % pop direction info
+         /WMode 1 def	% vertical font
+         0 beginusematrix [ 0 1 -1 0 0 0.3 ] endusematrix
+      } if
+      1 usefont
+      1 beginbfrange
+         <00> <7F> <00>
+       endbfrange
+     endrearrangedfont
+  end
+end
+} def
+
+%%Title: OCFeucfont.ps
+%%Creator: shikida@cs.titech.ac.jp, ueno@cs.titech.ac.jp
+%%CreationDate: 1991-2-27
+%%EndComments
+% <font> OCFcopyfont <font>
+/OCFcopyfont {
+    dup maxlength 1 add dict begin
+    {
+	1 index /FID ne 2 index /UniqueID ne and
+	{def} {pop pop} ifelse
+    } forall
+    currentdict
+    end
+} bind def
+% <newfont> <asciifont> <kanjifont> OCFeucfont
+/OCFeucfont {
+      12 dict begin
+	dup type /nametype eq { findfont } if
+	dup /WMode known {
+	    dup /WMode get /WMode exch def
+	    WMode 1 eq {
+		[0.0 1.0 -1.0 0.0 0.0 0.30] makefont
+	    } if
+	} if
+	OCFcopyfont dup begin
+	    /Encoding Encoding
+	    FMapType dup 2 eq {
+		pop 128 128
+	    } { 5 eq {
+		256 256
+	    } {
+		/compositefont errordict /invalidfont get exec
+	    } ifelse
+	    } ifelse
+	    getinterval def
+	end
+	/kanjifont exch definefont
+	exch
+
+	dup type /nametype eq { findfont } if
+	exch
+
+	/FDepVector [ 4 2 roll ] def
+	/FontType 0 def
+	/FMapType 4 def
+	/FontMatrix matrix def
+	/Encoding [ 0 1 ] def
+	/FontBBox {0 0 0 0} def
+	dup /FontName exch def
+	currentdict
+    end
+    definefont pop
+} def
+
+% <newfont> <asciifont> <kanjifont> eucfont
+/eucfont {
+	dup findfont
+	/FMapType get 9 eq
+		{ CIDeucfont}
+		{ OCFeucfont} ifelse
+} def
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarcdict 8 dict def
+tgifarcdict /mtrx matrix put
+
+/tgifarcn
+ { tgifarcdict begin
+      /endangle exch def
+      /startangle exch def
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 startangle endangle arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarc
+ { tgifarcdict begin
+      /endangle exch def
+      /startangle exch def
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 startangle endangle arcn
+      savematrix setmatrix
+   end
+ } def
+
+end
+
+%%PageBoundingBox: 17 436 278 834
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      64 608 moveto
+      -560 0 atan dup cos 8.000 mul 64 exch sub
+      exch sin 8.000 mul 48 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      64 48 8.000 3.000 0 -560 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      64 48 8.000 3.000 0 -560 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      32 576 moveto
+      0 448 atan dup cos 8.000 mul 480 exch sub
+      exch sin 8.000 mul 576 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      480 576 8.000 3.000 448 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      480 576 8.000 3.000 448 0 tgifarrowtip
+   closepath fill
+grestore
+
+% ARC
+0 setgray
+gsave
+   gsave
+      newpath
+         64 576 512 512 -90 -35 tgifarcn
+      stroke
+   grestore
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   [4 12] 0 setdash
+   newpath
+      192 64 moveto
+      192 608 lineto
+      192 592 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+   [] 0 setdash
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   [4 12] 0 setdash
+   newpath
+      320 64 moveto
+      320 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+   [] 0 setdash
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   [4 12] 0 setdash
+   newpath
+      448 64 moveto
+      448 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+   [] 0 setdash
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      448 64 moveto
+      444.00 262.67 438.50 390.50 431.50 447.50 curveto
+      424.50 504.50 408.67 547.33
+      384 576 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      320 64 moveto
+      316.00 262.67 310.50 390.50 303.50 447.50 curveto
+      296.50 504.50 280.67 547.33
+      256 576 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      192 64 moveto
+      188.00 262.67 182.50 390.50 175.50 447.50 curveto
+      168.50 504.50 152.67 547.33
+      128 576 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      128 576 moveto
+      85.33 618.67 64.00 666.67
+      64 720 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      256 576 moveto
+      213.33 618.67 192.00 661.33
+      192 704 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 576 moveto
+      341.33 618.67 320.00 656.00
+      320 688 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H /Symbol /GothicBBB-Medium-EUC-H eucfont
+/Symbol-GothicBBB-Medium-EUC-H findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      64 37 moveto (r) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      48 597 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H /Times-Roman /GothicBBB-Medium-EUC-H eucfont
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      480 583 moveto (k) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      192 79 moveto
+      192.00 79.67 192.00 80.17 192.00 80.50 curveto
+      192.00 80.83 192.00 80.83 192.00 80.50 curveto
+      192.00 80.17 192.00 79.83 192.00 79.50 curveto
+      192.00 79.17 192.00 78.83 192.00 78.50 curveto
+      192.00 78.17 192.00 78.17 192.00 78.50 curveto
+      192.00 78.83 191.83 79.00 191.50 79.00 curveto
+      191.17 79.00 190.83 79.00 190.50 79.00 curveto
+      190.17 79.00 190.17 79.00 190.50 79.00 curveto
+      190.83 79.00 191.17 79.00 191.50 79.00 curveto
+      191.83 79.00 192.17 79.00 192.50 79.00 curveto
+      192.83 79.00 193.00 79.17 193.00 79.50 curveto
+      193.00 79.83 193.00 80.17 193.00 80.50 curveto
+      193.00 80.83 193.00 81.17 193.00 81.50 curveto
+      193.00 81.83 193.00 81.83 193.00 81.50 curveto
+      193.00 81.17 193.00 80.83 193.00 80.50 curveto
+      193.00 80.17 193.00 79.67
+      193 79 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      316 129 moveto
+      316.67 129.00 317.17 129.00 317.50 129.00 curveto
+      317.83 129.00 318.00 129.17 318.00 129.50 curveto
+      318.00 129.83 318.00 130.17 318.00 130.50 curveto
+      318.00 130.83 318.00 131.17 318.00 131.50 curveto
+      318.00 131.83 318.00 132.17 318.00 132.50 curveto
+      318.00 132.83 317.83 133.00 317.50 133.00 curveto
+      317.17 133.00 316.83 133.00 316.50 133.00 curveto
+      316.17 133.00 315.83 133.00 315.50 133.00 curveto
+      315.17 133.00 314.83 133.00 314.50 133.00 curveto
+      314.17 133.00 314.00 132.83 314.00 132.50 curveto
+      314.00 132.17 314.00 131.83 314.00 131.50 curveto
+      314.00 131.17 314.17 131.00 314.50 131.00 curveto
+      314.83 131.00 315.17 131.00 315.50 131.00 curveto
+      315.83 131.00 316.17 131.00 316.50 131.00 curveto
+      316.83 131.00 317.17 131.00 317.50 131.00 curveto
+      317.83 131.00 318.17 131.00 318.50 131.00 curveto
+      318.83 131.00 319.17 131.00 319.50 131.00 curveto
+      319.83 131.00 320.00 131.17 320.00 131.50 curveto
+      320.00 131.83 320.00 132.17 320.00 132.50 curveto
+      320.00 132.83 320.00 132.83 320.00 132.50 curveto
+      320.00 132.17 320.00 131.83 320.00 131.50 curveto
+      320.00 131.17 320.00 131.17 320.00 131.50 curveto
+      320.00 131.83 320.00 132.17 320.00 132.50 curveto
+      320.00 132.83 320.00 133.17 320.00 133.50 curveto
+      320.00 133.83 319.83 134.17 319.50 134.50 curveto
+      319.17 134.83 318.83 135.00 318.50 135.00 curveto
+      318.17 135.00 318.00 134.83 318.00 134.50 curveto
+      318.00 134.17 318.17 133.83 318.50 133.50 curveto
+      318.83 133.17 319.17 133.00 319.50 133.00 curveto
+      319.83 133.00 319.83 133.00 319.50 133.00 curveto
+      319.17 133.00 318.83 133.00 318.50 133.00 curveto
+      318.17 133.00 317.83 133.00 317.50 133.00 curveto
+      317.17 133.00 316.83 133.00 316.50 133.00 curveto
+      316.17 133.00 316.00 132.83 316.00 132.50 curveto
+      316.00 132.17 316.00 131.83 316.00 131.50 curveto
+      316.00 131.17 316.00 130.83 316.00 130.50 curveto
+      316.00 130.17 315.83 130.00 315.50 130.00 curveto
+      315.17 130.00 314.83 130.00 314.50 130.00 curveto
+      314.17 130.00 313.83 130.00 313.50 130.00 curveto
+      313.17 130.00 313.17 130.00 313.50 130.00 curveto
+      313.83 130.00 314.33 130.00 315.00 130.00 curveto
+      315.67 130.00 316.17 130.00 316.50 130.00 curveto
+      316.83 130.00 317.00 130.33
+      317 131 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      443 235 moveto
+      443.00 234.33 442.83 233.83 442.50 233.50 curveto
+      442.17 233.17 442.00 232.83 442.00 232.50 curveto
+      442.00 232.17 442.00 231.83 442.00 231.50 curveto
+      442.00 231.17 442.00 230.83 442.00 230.50 curveto
+      442.00 230.17 442.17 230.00 442.50 230.00 curveto
+      442.83 230.00 443.17 230.00 443.50 230.00 curveto
+      443.83 230.00 444.00 230.17 444.00 230.50 curveto
+      444.00 230.83 444.00 231.17 444.00 231.50 curveto
+      444.00 231.83 443.83 232.00 443.50 232.00 curveto
+      443.17 232.00 443.00 231.83 443.00 231.50 curveto
+      443.00 231.17 443.00 230.83 443.00 230.50 curveto
+      443.00 230.17 443.00 229.83 443.00 229.50 curveto
+      443.00 229.17 443.17 229.17 443.50 229.50 curveto
+      443.83 229.83 444.00 230.17 444.00 230.50 curveto
+      444.00 230.83 444.00 231.17 444.00 231.50 curveto
+      444.00 231.83 444.00 232.17 444.00 232.50 curveto
+      444.00 232.83 443.83 233.00 443.50 233.00 curveto
+      443.17 233.00 442.83 233.00 442.50 233.00 curveto
+      442.17 233.00 442.00 232.83 442.00 232.50 curveto
+      442.00 232.17 442.00 231.83 442.00 231.50 curveto
+      442.00 231.17 442.00 230.83 442.00 230.50 curveto
+      442.00 230.17 442.17 230.00 442.50 230.00 curveto
+      442.83 230.00 443.17 230.00 443.50 230.00 curveto
+      443.83 230.00 444.17 230.00 444.50 230.00 curveto
+      444.83 230.00 445.17 230.00 445.50 230.00 curveto
+      445.83 230.00 446.00 230.17 446.00 230.50 curveto
+      446.00 230.83 446.00 231.17 446.00 231.50 curveto
+      446.00 231.83 446.00 232.17 446.00 232.50 curveto
+      446.00 232.83 446.00 233.17 446.00 233.50 curveto
+      446.00 233.83 445.83 234.17 445.50 234.50 curveto
+      445.17 234.83 444.83 235.00 444.50 235.00 curveto
+      444.17 235.00 443.83 235.00 443.50 235.00 curveto
+      443.17 235.00 442.83 235.00 442.50 235.00 curveto
+      442.17 235.00 441.83 235.00 441.50 235.00 curveto
+      441.17 235.00 441.00 234.83 441.00 234.50 curveto
+      441.00 234.17 441.00 233.83 441.00 233.50 curveto
+      441.00 233.17 441.00 232.83 441.00 232.50 curveto
+      441.00 232.17 441.00 231.83 441.00 231.50 curveto
+      441.00 231.17 441.00 230.83 441.00 230.50 curveto
+      441.00 230.17 441.00 229.83 441.00 229.50 curveto
+      441.00 229.17 441.00 228.83 441.00 228.50 curveto
+      441.00 228.17 441.17 228.00 441.50 228.00 curveto
+      441.83 228.00 442.17 228.17 442.50 228.50 curveto
+      442.83 228.83 443.00 229.17 443.00 229.50 curveto
+      443.00 229.83 443.00 230.17 443.00 230.50 curveto
+      443.00 230.83 443.00 231.33
+      443 232 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      194 82 moveto
+      193.33 82.00 193.00 81.83 193.00 81.50 curveto
+      193.00 81.17 193.00 80.83 193.00 80.50 curveto
+      193.00 80.17 193.00 79.83 193.00 79.50 curveto
+      193.00 79.17 192.83 79.00 192.50 79.00 curveto
+      192.17 79.00 191.83 79.00 191.50 79.00 curveto
+      191.17 79.00 190.83 79.00 190.50 79.00 curveto
+      190.17 79.00 189.83 79.00 189.50 79.00 curveto
+      189.17 79.00 189.00 79.17 189.00 79.50 curveto
+      189.00 79.83 189.17 80.00 189.50 80.00 curveto
+      189.83 80.00 190.17 80.00 190.50 80.00 curveto
+      190.83 80.00 191.17 80.00 191.50 80.00 curveto
+      191.83 80.00 192.17 80.00 192.50 80.00 curveto
+      192.83 80.00 193.17 80.00 193.50 80.00 curveto
+      193.83 80.00 194.00 79.83 194.00 79.50 curveto
+      194.00 79.17 193.83 79.00 193.50 79.00 curveto
+      193.17 79.00 192.83 79.00 192.50 79.00 curveto
+      192.17 79.00 191.83 79.00 191.50 79.00 curveto
+      191.17 79.00 190.83 79.00 190.50 79.00 curveto
+      190.17 79.00 189.83 79.00 189.50 79.00 curveto
+      189.17 79.00 189.00 79.17 189.00 79.50 curveto
+      189.00 79.83 189.17 80.00 189.50 80.00 curveto
+      189.83 80.00 190.17 80.00 190.50 80.00 curveto
+      190.83 80.00 191.17 80.00 191.50 80.00 curveto
+      191.83 80.00 192.17 80.00 192.50 80.00 curveto
+      192.83 80.00 193.17 80.00 193.50 80.00 curveto
+      193.83 80.00 194.00 79.83 194.00 79.50 curveto
+      194.00 79.17 193.83 79.00 193.50 79.00 curveto
+      193.17 79.00 192.83 79.00 192.50 79.00 curveto
+      192.17 79.00 192.00 79.33
+      192 80 curveto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      224 64 moveto
+      16 -32 atan dup cos 8.000 mul 192 exch sub
+      exch sin 8.000 mul 80 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      192 80 8.000 3.000 -32 16 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      192 80 8.000 3.000 -32 16 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [20 0 0 -20 0 0] makefont setfont
+   gsave
+      224 66 moveto (-k cot kr) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [12 0 0 -12 0 0] makefont setfont
+   gsave
+      288 76 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      128 600 moveto ( p) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      176 600 moveto (p) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      256 600 moveto (3p) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      304 600 moveto (2p) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      384 600 moveto (5p) show
+   grestore
+
+% TEXT
+0 setgray
+/Symbol-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      448 600 moveto (3p) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      128 630 moveto (2r) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      256 630 moveto (2r) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      176 630 moveto (r) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      304 630 moveto ( r) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      384 630 moveto (2r) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [24 0 0 -24 0 0] makefont setfont
+   gsave
+      448 630 moveto ( r) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      128 608 moveto
+      160 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      176 608 moveto
+      192 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      256 608 moveto
+      288 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      304 608 moveto
+      336 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 608 moveto
+      416 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      448 608 moveto
+      480 608 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      144 638 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      272 638 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      320 638 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      400 638 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      464 638 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman-GothicBBB-Medium-EUC-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      192 638 moveto (0) show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Sun May 24 16:25:22 1998

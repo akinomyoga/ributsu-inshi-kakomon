@@ -1,0 +1,318 @@
+%!
+%%BoundingBox: 90 604 255 763
+%%Title: 97phy9-14
+%%CreationDate: Mon Jun  1 22:06:09 1998
+%%Creator: Tgif-2.16J-p12 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 5 dict def
+tgifdict begin
+
+%
+%%Title: eucfont.ps
+%%Creator: shikida@cs.titech.ac.jp, ueno@cs.titech.ac.jp
+%%CreationDate: 1991-2-27
+%%EndComments
+
+% <font> copyfont <font>
+/copyfont {
+    dup maxlength 1 add dict begin
+    {
+	1 index /FID ne 2 index /UniqueID ne and
+	{def} {pop pop} ifelse
+    } forall
+    currentdict
+    end
+} bind def
+
+% <newfont> <asciifont> <kanjifont> eucfont
+/eucfont {
+    12 dict begin
+	dup type /nametype eq { findfont } if
+	dup /WMode known {
+	    dup /WMode get /WMode exch def
+	    WMode 1 eq {
+		[0.0 1.0 -1.0 0.0 0.0 0.30] makefont
+	    } if
+	} if
+	copyfont dup begin
+	    /Encoding Encoding
+	    FMapType dup 2 eq {
+		pop 128 128
+	    } { 5 eq {
+		256 256
+	    } {
+		/compositefont errordict /invalidfont get exec
+	    } ifelse
+	    } ifelse
+	    getinterval def
+	end
+	/kanjifont exch definefont
+	exch
+
+	dup type /nametype eq { findfont } if
+	exch
+
+	/FDepVector [ 4 2 roll ] def
+	/FontType 0 def
+	/FMapType 4 def
+	/FontMatrix matrix def
+	/Encoding [ 0 1 ] def
+	/FontBBox {0 0 0 0} def
+	dup /FontName exch def
+	currentdict
+    end
+    definefont pop
+} def
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+end
+
+%%PageBoundingBox: 90 604 255 763
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100 mul 100 div dup neg scale
+
+gsave
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      192 352 moveto
+      448 352 lineto
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      192 352 moveto
+      -192 0 atan dup cos 10 mul 192 exch sub
+      exch sin 10 mul 160 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      192 160 10 4 0 -192 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      448 352 moveto
+      -192 0 atan dup cos 10 mul 448 exch sub
+      exch sin 10 mul 160 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      448 160 10 4 0 -192 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      224 352 moveto
+      224 176 lineto
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      252 352 moveto
+      252 240 lineto
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      292 352 moveto
+      292 300 lineto
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   [8 8] 0 setdash
+   newpath
+      432 176 moveto
+      432 352 lineto
+   stroke
+   [] 0 setdash
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   [8 8] 0 setdash
+   newpath
+      296 300 moveto
+      296 356 lineto
+   stroke
+   [] 0 setdash
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   [8 8] 0 setdash
+   newpath
+      352 240 moveto
+      352 352 lineto
+   stroke
+   [] 0 setdash
+   1 setlinewidth
+grestore
+
+% TEXT
+0 setgray
+%%/NewCenturySchlbk-Roman-Ryumin-Light-EUC-H /NewCenturySchlbk-Roman /Ryumin-Light-EUC-H eucfont
+/Ryumin-Light-EUC-H findfont [20 0 0 -20 0 0] makefont setfont
+   gsave
+      292 391 moveto (\307\310\304\271) show
+      292 414 moveto () show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      244 364 moveto
+      0 152 atan dup cos 8 mul 396 exch sub
+      exch sin 8 mul 364 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      396 364 8 3 152 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [20 0 0 -20 0 0] makefont setfont
+   gsave
+      196 163 moveto ( \266\257\305\331) show
+      196 186 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      268 320 moveto (\245\242) show
+      268 339 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      232 252 moveto (\245\244) show
+      232 271 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      200 192 moveto (\245\246) show
+      200 211 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      408 184 moveto (\245\250) show
+      408 203 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      360 252 moveto (\245\252) show
+      360 271 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Ryumin-Light-EUC-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      304 320 moveto (\245\253) show
+      304 339 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [20 0 0 -20 0 0] makefont setfont
+   gsave
+      192 387 moveto (fig.10) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [20 0 0 -20 0 0] makefont setfont
+   gsave
+      164 183 moveto (\(c\)) show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Mon Jun  1 22:06:09 1998

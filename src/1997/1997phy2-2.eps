@@ -1,0 +1,437 @@
+%!
+%%BoundingBox: 107 531 433 809
+%%Title: 97phy2-2
+%%CreationDate: Mon Jun  1 23:26:48 1998
+%%Creator: Tgif-2.16J-p12 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 7 dict def
+tgifdict begin
+
+%
+%%Title: eucfont.ps
+%%Creator: shikida@cs.titech.ac.jp, ueno@cs.titech.ac.jp
+%%CreationDate: 1991-2-27
+%%EndComments
+
+% <font> copyfont <font>
+/copyfont {
+    dup maxlength 1 add dict begin
+    {
+	1 index /FID ne 2 index /UniqueID ne and
+	{def} {pop pop} ifelse
+    } forall
+    currentdict
+    end
+} bind def
+
+% <newfont> <asciifont> <kanjifont> eucfont
+/eucfont {
+    12 dict begin
+	dup type /nametype eq { findfont } if
+	dup /WMode known {
+	    dup /WMode get /WMode exch def
+	    WMode 1 eq {
+		[0.0 1.0 -1.0 0.0 0.0 0.30] makefont
+	    } if
+	} if
+	copyfont dup begin
+	    /Encoding Encoding
+	    FMapType dup 2 eq {
+		pop 128 128
+	    } { 5 eq {
+		256 256
+	    } {
+		/compositefont errordict /invalidfont get exec
+	    } ifelse
+	    } ifelse
+	    getinterval def
+	end
+	/kanjifont exch definefont
+	exch
+
+	dup type /nametype eq { findfont } if
+	exch
+
+	/FDepVector [ 4 2 roll ] def
+	/FontType 0 def
+	/FMapType 4 def
+	/FontMatrix matrix def
+	/Encoding [ 0 1 ] def
+	/FontBBox {0 0 0 0} def
+	dup /FontName exch def
+	currentdict
+    end
+    definefont pop
+} def
+
+/tgifellipsedict 6 dict def
+tgifellipsedict /mtrx matrix put
+
+/tgifellipse
+ { tgifellipsedict begin
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 0 360 arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+end
+
+%%PageBoundingBox: 107 531 433 809
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100 mul 100 div dup neg scale
+
+gsave
+
+% POLY/OPEN-SPLINE
+0 setgray
+newpath
+   384 128 moveto
+   373.33 170.67 309.33 256.00
+   192 384 curveto
+closepath 1 setgray eofill
+0 setgray
+gsave
+   newpath
+      384 128 moveto
+      373.33 170.67 309.33 256.00
+      192 384 curveto
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+newpath
+   384 128 moveto
+   448.00 160.00 576.00 181.33
+   768 192 curveto
+closepath 1 setgray eofill
+0 setgray
+gsave
+   newpath
+      384 128 moveto
+      448.00 160.00 576.00 181.33
+      768 192 curveto
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+newpath
+   768 192 moveto
+   725.33 234.67 640.00 341.33
+   512 512 curveto
+closepath 1 setgray eofill
+0 setgray
+gsave
+   newpath
+      768 192 moveto
+      725.33 234.67 640.00 341.33
+      512 512 curveto
+   stroke
+grestore
+
+% OVAL
+0 setgray
+newpath 480 336 96 32 tgifellipse
+closepath 1 setgray fill
+0 setgray
+gsave
+   [8 8] 0 setdash
+   newpath 480 336 96 32 tgifellipse stroke
+   [] 0 setdash
+grestore
+
+% OVAL
+0 setgray
+newpath 480 288 96 32 tgifellipse
+closepath 1 setgray fill
+0 setgray
+gsave
+   newpath 480 288 96 32 tgifellipse stroke
+grestore
+
+% OVAL
+0 setgray
+newpath 480 240 96 32 tgifellipse
+closepath 1 setgray fill
+0 setgray
+gsave
+   newpath 480 240 96 32 tgifellipse stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      576 240 moveto
+      576 288 lineto
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 240 moveto
+      384 288 lineto
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   [8 8] 0 setdash
+   newpath
+      576 288 moveto
+      576 336 lineto
+   stroke
+   [] 0 setdash
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   [8 8] 0 setdash
+   newpath
+      384 288 moveto
+      384 336 lineto
+   stroke
+   [] 0 setdash
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      256 512 moveto
+      -144 160 atan dup cos 8 mul 416 exch sub
+      exch sin 8 mul 368 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      416 368 8 3 160 -144 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+newpath
+   192 384 moveto
+   224.00 384.00 280.00 397.33 360.00 424.00 curveto
+   440.00 450.67 490.67 480.00
+   512 512 curveto
+closepath 1 setgray eofill
+0 setgray
+gsave
+   newpath
+      192 384 moveto
+      224.00 384.00 280.00 397.33 360.00 424.00 curveto
+      440.00 450.67 490.67 480.00
+      512 512 curveto
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      480 240 moveto
+      -176 0 atan dup cos 8 mul 480 exch sub
+      exch sin 8 mul 64 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      480 64 8 3 0 -176 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      512 240 moveto
+      -144 144 atan dup cos 8 mul 656 exch sub
+      exch sin 8 mul 96 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      656 96 8 3 144 -144 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      608 240 moveto
+      96 0 atan dup cos 8 mul exch sin 8 mul rmoveto
+      96 0 atan dup cos 8 mul 608 exch sub
+      exch sin 8 mul 336 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      608 240 8 3 0 -96 tgifarrowtip
+   closepath fill
+grestore
+gsave
+   newpath
+      608 336 8 3 0 96 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      663 92 moveto
+      0 26 atan dup cos 8 mul 689 exch sub
+      exch sin 8 mul 92 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      689 92 8 3 26 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      490 63 moveto
+      0 28 atan dup cos 8 mul 518 exch sub
+      exch sin 8 mul 63 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      518 63 8 3 28 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      226 501 moveto
+      0 25 atan dup cos 8 mul 251 exch sub
+      exch sin 8 mul 501 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      251 501 8 3 25 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+newpath
+   492 64 moveto 512 64 lineto 512 104 lineto 492 104 lineto
+closepath 1 setgray fill
+0 setgray
+/Times-Italic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      494 96 moveto (S) show
+   grestore
+
+% TEXT
+0 setgray
+newpath
+   661 98 moveto 721 98 lineto 721 138 lineto 661 138 lineto
+closepath 1 setgray fill
+0 setgray
+/Times-Italic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      663 130 moveto (D\(I\)) show
+   grestore
+
+% TEXT
+0 setgray
+newpath
+   625 281 moveto 644 281 lineto 644 321 lineto 625 321 lineto
+closepath 1 setgray fill
+0 setgray
+/Times-Italic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      627 313 moveto (h) show
+   grestore
+
+% TEXT
+0 setgray
+newpath
+   432 218 moveto 452 218 lineto 452 258 lineto 432 258 lineto
+closepath 1 setgray fill
+0 setgray
+/Times-Italic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      434 250 moveto (S) show
+   grestore
+
+% TEXT
+0 setgray
+newpath
+   225 509 moveto 296 509 lineto 296 549 lineto 225 549 lineto
+closepath 1 setgray fill
+0 setgray
+/Times-Italic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      227 541 moveto (D\(II\)) show
+   grestore
+
+% TEXT
+0 setgray
+newpath
+   613 465 moveto 681 465 lineto 681 507 lineto 613 507 lineto
+closepath 1 setgray fill
+0 setgray
+%%/NewCenturySchlbk-Roman-Ryumin-Light-EUC-H /NewCenturySchlbk-Roman /Ryumin-Light-EUC-H eucfont
+/NewCenturySchlbk-Roman findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      615 499 moveto (fig.2) show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Mon Jun  1 23:26:48 1998

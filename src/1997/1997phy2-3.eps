@@ -1,0 +1,448 @@
+%!
+%%BoundingBox: 120 631 207 747
+%%Title: 97phy2-3
+%%CreationDate: Thu Jun  4 13:38:29 1998
+%%Creator: Tgif-2.16J-p12 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 39 dict def
+tgifdict begin
+
+/tgifellipsedict 6 dict def
+tgifellipsedict /mtrx matrix put
+
+/tgifellipse
+ { tgifellipsedict begin
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 0 360 arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+/tgifsetuserscreendict 22 dict def
+tgifsetuserscreendict begin
+   /tempctm matrix def
+   /temprot matrix def
+   /tempscale matrix def
+
+   /concatprocs
+    { /proc2 exch cvlit def
+      /proc1 exch cvlit def
+      /newproc proc1 length proc2 length add array def
+      newproc 0 proc1 putinterval
+      newproc proc1 length proc2 putinterval
+      newproc cvx
+    } def
+   /resmatrix matrix def
+   /findresolution
+    { 72 0 resmatrix defaultmatrix dtransform
+      /yres exch def /xres exch def
+      xres dup mul yres dup mul add sqrt
+    } def
+end
+
+/tgifsetuserscreen
+ { tgifsetuserscreendict begin
+      /spotfunction exch def
+      /screenangle exch def
+      /cellsize exch def
+
+      /m tempctm currentmatrix def
+      /rm screenangle temprot rotate def
+      /sm cellsize dup tempscale scale def
+
+      sm rm m m concatmatrix m concatmatrix pop
+
+      1 0 m dtransform /y1 exch def /x1 exch def
+
+      /veclength x1 dup mul y1 dup mul add sqrt def
+      /frequency findresolution veclength div def
+
+      /newscreenangle y1 x1 atan def
+
+      m 2 get m 1 get mul m 0 get m 3 get mul sub 0 gt
+
+      {{neg} /spotfunction load concatprocs
+         /spotfunction exch def
+      } if
+
+      frequency newscreenangle /spotfunction load setscreen
+   end
+ } def
+
+/tgifsetpatterndict 18 dict def
+tgifsetpatterndict begin
+   /bitison
+    { /ybit exch def /xbit exch def
+      /bytevalue bstring ybit bwidth mul xbit 8 idiv add get def
+
+      /mask 1 7 xbit 8 mod sub bitshift def
+      bytevalue mask and 0 ne
+    } def
+end
+
+/tgifbitpatternspotfunction
+ { tgifsetpatterndict begin
+      /y exch def /x exch def
+
+      /xindex x 1 add 2 div bpside mul cvi def
+      /yindex y 1 add 2 div bpside mul cvi def
+
+      xindex yindex bitison
+       { /onbits onbits 1 add def 1 }
+       { /offbits offbits 1 add def 0 }
+       ifelse
+   end
+ } def
+
+/tgifsetpattern
+ { tgifsetpatterndict begin
+      /cellsz exch def
+      /angle exch def
+      /bwidth exch def
+      /bpside exch def
+      /bstring exch def
+
+      /onbits 0 def /offbits 0 def
+      cellsz angle /tgifbitpatternspotfunction load tgifsetuserscreen
+      {} settransfer
+      offbits offbits onbits add div setgray
+   end
+ } def
+
+/pat3 <8000000008000000> def
+/pat4 <8800000022000000> def
+/pat5 <8800220088002200> def
+/pat6 <8822882288228822> def
+/pat7 <aa55aa55aa55aa55> def
+/pat8 <77dd77dd77dd77dd> def
+/pat9 <77ffddff77ffddff> def
+/pat10 <77ffffff77ffffff> def
+/pat11 <7fffffff7fffffff> def
+/pat12 <8040200002040800> def
+/pat13 <40a00000040a0000> def
+/pat14 <ff888888ff888888> def
+/pat15 <ff808080ff080808> def
+/pat16 <f87422478f172271> def
+/pat17 <038448300c020101> def
+/pat18 <081c22c180010204> def
+/pat19 <8080413e080814e3> def
+/pat20 <8040201008040201> def
+/pat21 <8844221188442211> def
+/pat22 <77bbddee77bbddee> def
+/pat23 <c1e070381c0e0783> def
+/pat24 <7fbfdfeff7fbfdfe> def
+/pat25 <3e1f8fc7e3f1f87c> def
+/pat26 <0102040810204080> def
+/pat27 <1122448811224488> def
+/pat28 <eeddbb77eeddbb77> def
+/pat29 <83070e1c3870e0c1> def
+/pat30 <fefdfbf7efdfbf7f> def
+/pat31 <7cf8f1e3c78f1f3e> def
+
+end
+
+%%PageBoundingBox: 120 631 207 747
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100 mul 100 div dup neg scale
+
+gsave
+
+% BOX
+0 setgray
+gsave
+   pat21 8 1 0 72 300 32 div div tgifsetpattern
+   newpath
+      256 192 moveto 320 192 lineto 320 320 lineto 256 320 lineto
+   closepath fill
+grestore
+gsave
+   1.415 setmiterlimit
+   newpath
+      256 192 moveto 320 192 lineto 320 320 lineto 256 320 lineto
+   closepath 1 setgray stroke 0 setgray
+   1 setmiterlimit
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      256 256 moveto
+      0 96 atan dup cos 10 mul 352 exch sub
+      exch sin 10 mul 256 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      352 256 10 4 96 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   2 setlinewidth
+   newpath
+      256 320 moveto
+      -144 0 atan dup cos 10 mul 256 exch sub
+      exch sin 10 mul 176 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      256 176 10 4 0 -144 tgifarrowtip
+   closepath fill
+grestore
+
+% OVAL
+0 setgray
+gsave
+   newpath 256 254 8 10 tgifellipse stroke
+grestore
+
+% OVAL
+0 setgray
+newpath 256 254 4 6 tgifellipse fill
+gsave
+   2 setlinewidth
+   newpath 256 254 4 6 tgifellipse stroke
+   1 setlinewidth
+grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [18 0 0 -18 0 0] makefont setfont
+   gsave
+      264 189 moveto (y) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [18 0 0 -18 0 0] makefont setfont
+   gsave
+      356 261 moveto (x) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [18 0 0 -18 0 0] makefont setfont
+   gsave
+      236 261 moveto (z) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      268 250 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      324 246 moveto (L) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      216 288 moveto
+      0 24 atan dup cos 8 mul 240 exch sub
+      exch sin 8 mul 288 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      240 288 8 3 24 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      268 288 moveto
+      0 44 atan dup cos 8 mul 312 exch sub
+      exch sin 8 mul 288 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      312 288 8 3 44 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      328 296 moveto
+      0 36 atan dup cos 8 mul 364 exch sub
+      exch sin 8 mul 296 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      364 296 8 3 36 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      308 304 moveto
+      0 -40 atan dup cos 8 mul 268 exch sub
+      exch sin 8 mul 304 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      268 304 8 3 -40 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      236 304 moveto
+      0 -20 atan dup cos 8 mul 216 exch sub
+      exch sin 8 mul 304 exch sub lineto
+   stroke
+grestore
+gsave
+   newpath
+      216 304 8 3 -20 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      348 320 moveto (E) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      284 280 moveto (E') show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      220 280 moveto (E) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      220 324 moveto (E) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      284 324 moveto (E'') show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [12 0 0 -12 0 0] makefont setfont
+   gsave
+      232 280 moveto (0) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [12 0 0 -12 0 0] makefont setfont
+   gsave
+      232 324 moveto (r) show
+   grestore
+
+% TEXT
+0 setgray
+/Times-Roman findfont [12 0 0 -12 0 0] makefont setfont
+   gsave
+      360 320 moveto (t) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      228 222 moveto (k) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      280 222 moveto (k') show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      336 222 moveto (k) show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      276 350 moveto (fig.3) show
+      276 367 moveto () show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Thu Jun  4 13:38:29 1998

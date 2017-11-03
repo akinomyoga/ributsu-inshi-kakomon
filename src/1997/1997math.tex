@@ -1,0 +1,246 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{教育 数学}{}
+\begin{subquestions}
+
+\SubQuestion
+3行3列の実行列
+\[ A =\left( \begin{array}{ccc}
+a+1 & 0 & 0 \\
+0 & a+1 & -1 \\
+-1 & 1 & a-1 
+\end{array}\right)
+\]
+について以下の設問に答えよ。
+
+\begin{subsubquestions}
+\SubSubQuestion
+$A\vec{e_1}=\lambda_1 \vec{e_1}, A\vec{e_2}=\lambda_2 \vec{e_2},
+A\vec{e_3}=\vec{e_2}+\lambda_2 \vec{e_3}$を満たす実数値
+$\lambda_1,\lambda_2$および$R^3$の単位ベクトル
+$\vec{e_1},\vec{e_2},\vec{e_3}$を求めよ。ただし、
+$\vec{e_1},\vec{e_2},\vec{e_3}$の第２成分は正とする。
+
+\SubSubQuestion
+$A^n\vec{e_1}, A^n\vec{e_2}, A^n\vec{e_3}$を
+$\vec{e_1},\vec{e_2},\vec{e_3}$の一次結合で表せ。
+
+\SubSubQuestion
+$\vec{r},\vec{d}$を$R^3$のベクトルとする。このときベクトル列
+$\vec{r_0},\vec{r_1},\vec{r_2},\cdots $を$\vec{r_0}=\vec{r},
+\vec{r_{n+1}}=A\vec{r_n}+\vec{d} \quad (n=0,1,2,\cdots)$によって定める。ベク
+トル列の極限$\ds{\lim_{n\rightarrow\infty} \vec{r_n}}$が任意の
+$\vec{r},\vec{d}$について常に存在するような$a$の範囲を求めよ。
+
+\end{subsubquestions}
+
+\SubQuestion
+関数$y(x)$に関する常微分方程式
+\[ \frac{d^2 y}{dx^2}+\omega^2 y =f(x) \]
+について以下の設問に答えよ。ただし$\omega$は正の定数であり、$x$の範囲
+は$x\geq0$とする。
+
+\begin{subsubquestions}
+\SubQuestion
+$y=a(x)\cos\omega x+b(x)\sin\omega x$とおいて上式に代入し, $\ds{\frac{da}{dx}}$と$\ds{\frac{db}{dx}}$に対する関係式を求めよ。ただし、\\
+$\ds{\frac{da}{dx}\cos\omega x+\frac{db}{dx}\sin\omega x =0}$とする。
+
+\SubQuestion
+$a(x)$と$b(x)$を求めよ。
+
+\SubQuestion
+$f(x)=1/\lambda \quad (0 \leq x \leq \lambda),\quad 0 \quad (x >
+\lambda)$のとき, $y(x)$を求めよ。ただし$\lambda$は正の定数であり、$x=0$で、$y=\frac{dy}{dx}=0$とする。
+
+\SubQuestion
+
+(iii)で得られた$y(x)$の$\lambda\rightarrow 0$の極限を求めよ。
+
+\end{subsubquestions}
+
+\SubQuestion
+A,B２人があるゲームを繰り返し行なう。Aが２回続けて勝つまでゲームを続ける。各々のゲームでAが勝つ確率は2/3とする。
+
+\begin{subsubquestions}
+\SubSubQuestion
+$N$回目のゲームでも終了しない確率を$x_N$とする。$x_N$を$x_{N-1}, x_{N-2}$で表せ。
+
+\SubSubQuestion
+$x_N$を$N$の関数として求めよ。
+
+\SubSubQuestion
+行なわれるゲームの回数の期待値を求めよ。
+
+\end{subsubquestions}
+\end{subquestions}
+\end{question}
+\begin{answer}{教育 数学}{}
+\begin{subanswers}
+\SubAnswer
+\begin{subsubanswers}
+\SubSubAnswer
+
+行列$A$の固有値を$\lambda$とすると、
+\begin{eqnarray*}
+\det(\lambda E -A) & = & \left| \begin{array}{ccc}
+\lambda-(a+1) & 0 & 0 \\
+0 & \lambda-(a+1) & 1 \\
+1 & -1 & \lambda-(a-1) 
+\end{array}\right| \\
+ & = & (\lambda - a)^2 \{ \lambda-(a+1) \}
+\end{eqnarray*}
+から、$\lambda_1=a+1,\lambda_2=a$となる。それぞれに対する固有ベクトルを求めると、
+\[ \vec{e_1}=\left( \begin{array}{c}
+\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} \\
+0
+\end{array}\right)
+, \quad 
+\vec{e_2}=\left( \begin{array}{c}
+0 \\
+\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} \\
+\end{array}\right)
+\]
+さらに、$\vec{e_3}=(x,y,z)$とすると、$A\vec{e_3}=\vec{e_2}+\lambda_2 \vec{e_3}$に代入し、さらに、大きさが$1$なので、
+\[ x=0 , \quad y-z=\frac{1}{\sqrt{2}}, \quad x^2+y^2+z^2=1 \]
+第二成分が正であることを用いて解くと、$\ds{x=0, \quad  y=\frac{\sqrt{6}+\sqrt{2}}{4} , \quad z=\frac{\sqrt{6}-\sqrt{2}}{4}}$
+となるから、
+\[ \vec{e_3}=\left( \begin{array}{c}
+0 \\
+\frac{\sqrt{6}+\sqrt{2}}{4} \\
+\frac{\sqrt{6}-\sqrt{2}}{4}
+\end{array}\right)
+\]
+
+\SubSubAnswer
+$\ds{B\equiv\left(\begin{array}{ccc}
+\lambda_1 & 0 & 0 \\
+0 & \lambda_2 & 0 \\
+0 & 0  & \lambda_2 
+\end{array}\right),\quad J\equiv\left(\begin{array}{ccc}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 1 & 0 
+\end{array}\right) }$とすると、\\
+$\ds{BJ=JB=\left( \begin{array}{ccc}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & \lambda_2 & 0 
+\end{array}\right) }$となるから、
+$\ds{(J+B)^n=\left( \begin{array}{ccc}
+\lambda_1^n & 0 & 0 \\
+0 & \lambda_2^n & 0 \\
+0 & n\lambda_2^{n-1} & \lambda_2^n 
+\end{array}\right) }$ \\
+よって、
+\[ A^n\vec{e_1}=\lambda_1^n\vec{e_1},\quad A^n\vec{e_2}=\lambda_2^n\vec{e_2},\quad A^n\vec{e_3}=n\lambda_2^{n-1}\vec{e_2}+\lambda_2^n \vec{e_3} \]
+
+\SubSubAnswer
+\[ \vec{r_n}=A^n \vec{r_0}+(E+A+A^2+\cdots+A^{n-1})\vec{d} \]
+と、任意の$\vec{r},\vec{d}$に対して収束するので、$\vec{e_1},\vec{e_2},\vec{e_3}$が、$\vec{r},\vec{d}$のとき、収束すれば良い。よって、$A^n$と$\ds{\sum_{k=0}^{\infty}A^k}$が収束すればよい。
+
+$A^n$が収束するための必要十分条件は、$-1 <\lambda_1  \leq 1$かつ
+$|\lambda_2| < 1$なので、$-1 < a \leq 0 $。さらに、
+\[\sum_{k=0}^{\infty}k\alpha^{k-1}=\frac{\partial}{\partial \alpha}\sum_{k=0}^{\infty}\alpha^k\]
+に注意して、$\ds{\sum_{k=0}^{\infty}A^k}$が収束するための必要十分条件
+は、$|\lambda_1 |< 1$かつ$|\lambda_2| <1$なので、$-1<a<0$。よって求める
+解は、$-1<a<0$である。
+
+\end{subsubanswers}
+
+\SubAnswer
+ドットは、$\Deriver{}{x}$を表すものとする。($\Deriver{y}{x} \equiv \dot{y}$)
+\begin{subsubanswers}
+\SubSubAnswer
+$\dot{a}\cos\omega x+\dot{b}\sin\omega x=0$に注意すると、
+\[
+\ddot{y} = \omega(-\dot{a}\sin\omega x+\dot{b}\cos\omega
+x)-\omega^2y 
+\qquad 
+\Yueni \omega(-\dot a \sin\omega x + \dot b \cos\omega x)=f(x) 
+\]
+
+\SubSubAnswer
+\[ 
+\left\{ 
+\begin{array}{l}
+\dot a \cos\omega x + \dot b \sin\omega x=0\\
+-\dot a \sin\omega x + \dot b \cos\omega x=\frac{f(x)}{\omega}
+\end{array}
+\right. 
+\]
+\[ 
+\Yueni \dot a = -\frac{f(x)}{\omega}\sin\omega x,
+\quad \dot b = \frac{f(x)}{\omega}\cos\omega x 
+\]
+\[ 
+\Yueni a = - \int \frac{f(x)}{\omega}\sin\omega x \,dx,
+\quad b = \int \frac{f(x)}{\omega}\cos\omega x \,dx 
+\]
+
+\SubSubAnswer
+$x=0$で$y=\dot y=0$より、$a(0)=b(0)=0$であるから、
+\[ a = - \int_0^x \frac{f(x)}{\omega}\sin\omega x \,dx
+= \left\{ \begin{array}{ll}
+\frac{1}{\omega^2
+  \lambda}\cos\omega x-\frac{1}{\omega^2\lambda} & 0 \leq x \leq \lambda\\
+\frac{1}{\omega^2
+  \lambda}\cos\omega \lambda-\frac{1}{\omega^2\lambda} & x > \lambda
+\end{array} \right. \]
+\[ b = \int_0^x \frac{f(x)}{\omega}\cos\omega x\,dx=
+\left\{ \begin{array}{ll}
+\frac{1}{\omega^2\lambda}\sin\omega x & 0 \leq x \leq \lambda\\
+\frac{1}{\omega^2\lambda}\sin\omega\lambda & x > \lambda
+\end{array} \right. \]
+以上まとめれば、
+\[ y(x) = \left\{ \begin{array}{ll}
+\frac{1}{\omega^2\lambda}(1-\cos\omega x) & 0 \leq x \leq \lambda\\
+\frac{1}{\omega^2\lambda}(\cos\omega(x-\lambda)-\cos\omega x) & x > \lambda
+\end{array} \right.
+\]
+
+\SubSubAnswer
+$\lambda\rightarrow0$では、$x \neq 0$のとき$x > \lambda$なる
+$\lambda$がつねに存在するので、
+\[
+y(x) = \lim_{\lambda\rightarrow0}
+\frac{1}{\omega^2\lambda}(\cos\omega(x-\lambda)-\cos\omega x) 
+= \frac{1}{\omega}\sin\omega x 
+\]
+これは、y(0)=0もみたしている。
+\end{subsubanswers}
+
+\SubAnswer
+\begin{subsubanswers}
+\SubSubAnswer
+\[ x_N=\frac{1}{3}x_{N-1}+\frac{2}{9}x_{N-2} \]
+
+\SubSubAnswer
+$x_1=1,x_2=\frac{5}{9}$であるから、
+\[ \left(x_N+\frac{1}{3}x_{N-1}\right)=\frac{2}{3}\left(x_{N-1}+\frac{1}{3}x_{N-2}\right)=2\left(\frac{2}{3}\right)^N \]
+\[ \left(x_N-\frac{2}{3}x_{N-1}\right)=-\frac{1}{3}\left(x_{N-1}-\frac{2}{3}x_{N-2}\right)=-\left(-\frac{1}{3}\right)^N \]
+従って、
+\[ x_N=2\left(\frac{2}{3}\right)^{N+1}+\left(-\frac{1}{3}\right)^{N+1} \]
+
+\SubSubAnswer
+N回目におわる確率は、$x_{N-1}-x_N$であるから、求める期待値は、
+\begin{eqnarray*}
+\sum_{N=1}^{\infty}N(x_{N-1}-x_N)&=&\sum_{N=1}^{\infty}x_{N-1}\\
+&=&\sum_{N=1}^{\infty}\left(2\left(\frac{2}{3}\right)^N+\left(-\frac{1}{3}\right)^N\right)\\
+&=&\frac{15}{4}
+\end{eqnarray*}
+ただし、途中
+$\sum_{N=1}^{\infty}Nx_N=\sum_{N=1}^{\infty}(N-1)x_{N-1}$を用いた。
+\end{subsubanswers}
+
+\end{subanswers}
+
+\end{answer}
+
+
+\end{document}
+
