@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function init-make.in {
-  local year="$1"
-  local fmin="$2"
-  if test ! -s "$fmin"; then
+  local year=$1
+  local fmin=$2
+  if [[ ! -s $fmin ]]; then
     cat <<EOF > "$fmin"
 #!/bin/bash
 # -*- coding:utf-8 -*-
@@ -20,49 +20,58 @@ EOF
 }
 
 function generate-Makefile {
-  if test -s "$fmak" -a -s "$fmin" -a "$fmak" -nt "$fmin" -a "$fmak" -nt "$0"; then
+  if [[ -s $fmak && -s $fmin && $fmak -nt $fmin && $fmak -nt $0 ]]; then
     echo "$fmak: up to date" >&2
     return
   fi
 
-  cat <<EOF > "$fmak"
-# -*- mode: makefile-gmake -*-
-
-include ../common.mk
-
-all: 
-.PHONY: all clean
-clean:
-	-rm -rf *.aux *.toc *.log *.dvi *.te_
-
-Makefile: make.in ../make_dirs.sh
-	cd .. && ./make_dirs.sh "$year"
-
-EOF
-
   init-make.in "$year" "$fmin"
   source "$fmin"
 
-  local doc
+  local doc rules=
+  local -a src_all=() tex_files=()
   for doc in "${docs[@]}" "${docs_ex[@]}"; do
-    eval "local deps=\"\${_${doc}_cov[@]} \${_${doc}_prb[@]} \${_${doc}_ans[@]} \${_${doc}_dep[@]}\""
-    cat <<EOF >> "$fmak"
-all: ${doc}.pdf ${doc}.ps.gz
-${doc}.pdf: ${doc}.dvi
-	\$(DVIPDF) \$<
-${doc}.ps.gz: ${doc}.ps
-	gzip -c \$< > \$@
-${doc}.ps: ${doc}.dvi
-	\$(DVIPS) \$<
-${doc}.dvi: ${doc}.te_ ${deps}
-	\$(LATEX) \$<
-	\$(LATEX) \$<
-	\$(LATEX) \$<
-${doc}.te_: ../make_tex.sh make.in
-	../make_tex.sh ${doc} \$@
+    eval "local -a deps=(\"\${_${doc}_cov[@]}\" \"\${_${doc}_prb[@]}\" \"\${_${doc}_ans[@]}\" \"\${_${doc}_dep[@]}\")"
+    local pdf='$(OUTDIR)'/$doc.pdf
+    local dvi='$(OUTDIR)'/$doc.dvi
+    local tex='$(OUTDIR)'/$doc.tex
+    printf -v dep_files ' $(OUTDIR)/%s' "${deps[@]}"
 
-EOF
+    src_all+=("${deps[@]}")
+    tex_files+=("$tex")
+    rules+="
+all: $pdf
+$pdf: $dvi
+	cd \$(OUTDIR) && \$(DVIPDF) ${dvi##*/}
+$dvi: $tex $dep_files \$(common_deps)
+	cd \$(OUTDIR) && \$(LATEX) ${tex##*/} && \$(LATEX) ${tex##*/} && \$(LATEX) ${tex##*/}
+"
   done
+
+  sources=$(printf '  $(OUTDIR)/%s \\\n' "${src_all[@]}" | sort -u)
+  sources=${sources%' \'}
+  export sources
+
+  sources_dep=$(for src in "${src_all[@]}"; do printf '$(OUTDIR)/%s: %s | $(OUTDIR)\n' "$src" "$src"; done | sort -u)
+  sources_dep=${sources_dep%' \'}
+  export sources_dep
+
+  printf -v generated '  %s \\\n' "${tex_files[@]}"
+  generated=${generated%$' \\\n'}
+  export generated
+
+  export rules
+  export year
+  awk '
+    /^%sources%$/ {print ENVIRON["sources"]; next;}
+    /^%sources_dep%$/ {print ENVIRON["sources_dep"]; next;}
+    /^%generated%$/ {print ENVIRON["generated"]; next;}
+    /^%rules%$/ {print ENVIRON["rules"]; next;}
+    {
+      gsub(/%year%/, ENVIRON["year"]);
+      print
+    }
+  ' make_dirs.mk > "$fmak"
 }
 
 function create_subdir {

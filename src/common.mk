@@ -1,5 +1,7 @@
 # -*- makefile-gmake -*-
 
-LATEX:=platex
-DVIPDF:=dvipdfmx
-DVIPS:=dvipsk
+SHELL := /bin/bash
+LATEX := platex
+DVIPDF := dvipdfmx
+DVIPS := dvipsk
+COPY := cp

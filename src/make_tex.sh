@@ -11,7 +11,7 @@ function make_tex {
 
   {
     cat <<EOF
-\documentclass{article}
+\documentclass{jsarticle}
 %% \usepackage[dvipdfm]{graphicx}
 \usepackage{inshi}
 \allowdisplaybreaks
