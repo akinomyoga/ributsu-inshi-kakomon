@@ -1,5 +1,5 @@
 # -*- makefile-gmake -*-
 
 LATEX:=platex
-DVIPDF:=dvipdfm
+DVIPDF:=dvipdfmx
 DVIPS:=dvipsk

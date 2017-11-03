@@ -8,13 +8,12 @@ function make_tex {
   eval "local prb=(\"\${_${doc}_prb[@]}\")"
   eval "local ans=(\"\${_${doc}_ans[@]}\")"
   eval "local title=\"\${_${doc}_title}\""
-  title="$(echo "$title"|iconv -c -f utf-8 -t cp932)"
 
   {
     cat <<EOF
-\documentclass{jsarticle}
+\documentclass{article}
 %% \usepackage[dvipdfm]{graphicx}
-\usepackage{../inshi}
+\usepackage{inshi}
 \allowdisplaybreaks
 \begin{document}
 \inshikamoku{$doc}{$title}

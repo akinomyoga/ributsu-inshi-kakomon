@@ -77,7 +77,8 @@
 
 % ==== 図を張り付けるパッケージ
 %%\usepackage[dvips]{graphicx}
-\usepackage[dvipdfm]{graphicx}
+%%\usepackage[dvipdfm]{graphicx}
+\usepackage[dvipdfmx]{graphicx}
 
 % ==== AmS-LaTeX
 \if@inshioption@fleqn
@@ -100,7 +101,7 @@
 % someone prepared this sty editted inside the package
 % just to rename the macro; quite nonsensical i thought,
 % so i restored the original and just \let them equal. --- Yuji T.
-\usepackage{../underlinedtext}
+\usepackage{underlinedtext}
 \let\underlinejpn\underlinedtext
 
 % 複数行にわたる下線付き文章を書くマクロ (吉田寛君 提供)

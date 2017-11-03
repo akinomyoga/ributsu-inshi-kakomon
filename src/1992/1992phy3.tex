@@ -3,101 +3,101 @@
 
 \begin{document}
 
-\begin{question}{$B@l96(B $BLdBj(B3}{}
-$BLL@Q(B$S=L_x\times L_y$$B$NJ?LL>e$O<+M3$KF0$1$k$,!$LL$K?bD>$JJ}8~$K$OF0$1$J$$EE;R(B
-$B$N7O!J#2<!85EE;R7O!K$r9M$($k!#(B$L_x,L_y$$B$O!$$=$l$>$lJ?LL$N(B$x$$BJ}8~!$(B$y$$BJ}8~$ND9(B
-$B$5$G$"$j!$5p;kE*$JBg$-$5$G$"$k$H$9$k!#$^$?!$EE;R4V$NAj8_:nMQ$OL5;k$G$-$k$b$N(B
-$B$H$9$k!#EE;R$N<ANL$r(B$m$$B!$EE;RL)EY$r(B$n$$B!$%\%k%D%^%sDj?t$r(B$k_B$$B!$%W%i%s%/Dj?t$r(B
-$2\pi\hbar$$B!$@dBP29EY$r(B$T$$B$H$9$k!#$3$N$H$-!$0J2<$N@_Ld$KEz$($h!#(B
+\begin{question}{専攻 問題3}{}
+面積$S=L_x\times L_y$の平面上は自由に動けるが，面に垂直な方向には動けない電子
+の系（２次元電子系）を考える。$L_x,L_y$は，それぞれ平面の$x$方向，$y$方向の長
+さであり，巨視的な大きさであるとする。また，電子間の相互作用は無視できるもの
+とする。電子の質量を$m$，電子密度を$n$，ボルツマン定数を$k_B$，プランク定数を
+$2\pi\hbar$，絶対温度を$T$とする。このとき，以下の設問に答えよ。
 
 \begin{subquestions}
 \SubQuestion
-$B<~4|E*6-3&>r7o$rMQ$$$F!$#18D$NEE;R$KBP$9$k8GM->uBV!$8GM-%(%M%k%.!<$r5a$a$h!#(B
+周期的境界条件を用いて，１個の電子に対する固有状態，固有エネルギーを求めよ。
 
 \SubQuestion
-$B>uBVL)EY(B$\rho(E)$$B$O(B$dN(E)/dE$$B$GDj5A$5$l$k!#(B$\rho(E)$$B$*$h$S2=3X%]%F%s%7(B
-$B%c%k(B$\mu$$B$rMQ$$$F!$M-8B29EY$G$NA4EE;R?t$rM?$($k<0$r$7$k$;!#$3$N<0$N$3$3$G$N>u(B
-$BBVL)EY$NI=<0$rBeF~$7$F!$(B$\mu$$B$r(B$n$$B$*$h$S(B$T$$B$N4X?t$H$7$F5a$a$h!#$^$?!$(B$E_F$$B$H(B
-$T$$B$N4X?t$H$7$F$bI=$7$F$_$h!#(B
+状態密度$\rho(E)$は$dN(E)/dE$で定義される。$\rho(E)$および化学ポテンシ
+ャル$\mu$を用いて，有限温度での全電子数を与える式をしるせ。この式のここでの状
+態密度の表式を代入して，$\mu$を$n$および$T$の関数として求めよ。また，$E_F$と
+$T$の関数としても表してみよ。
 
 \SubQuestion
-$k_BT\ll E_F$$B$N$H$-$NHfG.$N:G=EMW9`$r5a$a$h!#$3$N$H$-!$I,MW$J$i$P<!$N8x(B
-$B<0$rMQ$$$h!#(B
+$k_BT\ll E_F$のときの比熱の最重要項を求めよ。このとき，必要ならば次の公
+式を用いよ。
 \[\int_{-\infty}^{\infty}x^2\frac{df}{dx}dx=-\frac{\pi^2}{3},
-\hspace{1cm} $B$3$3$G!"(Bf(x)=\frac{1}{e^x+1}\] $B$G$"$k!#(B
+\hspace{1cm} ここで、f(x)=\frac{1}{e^x+1}\] である。
 
 \SubQuestion
-$BEE;R$N>uBVL)EY$,(B$E_F-\Delta E\leq E\leq E_F+\Delta E$$B$G(B
-$\rho(E)=|E-E_F|^{\alpha}$$B$G$"$k7O$r9M$($k!#$3$3$G!$(B$\alpha>-1$$B$G$"$k!#(B
-$B$3$N$H$-==J,Dc29!J(B$k_BT\ll\Delta E$$B!K$G$NHfG.$,29EY$N4X?t$H$7$F$I$N$h$&$J?6$k(B
-$BIq$$$r$9$k$+D4$Y$h!#(B
+電子の状態密度が$E_F-\Delta E\leq E\leq E_F+\Delta E$で
+$\rho(E)=|E-E_F|^{\alpha}$である系を考える。ここで，$\alpha>-1$である。
+このとき十分低温（$k_BT\ll\Delta E$）での比熱が温度の関数としてどのような振る
+舞いをするか調べよ。
 
 \end{subquestions}
 \end{question}
-\begin{answer}{$B@l96(B $BLdBj(B3}{}
+\begin{answer}{専攻 問題3}{}
 
 \begin{subanswers}
 \SubAnswer
-$B#2<!85$G$N<+M3N3;R$N(B Schr\"{o}dinger $BJ}Dx<0$O!"(B 
+２次元での自由粒子の Schr\"{o}dinger 方程式は、 
 \begin{equation}
  -\frac{\hbar^2}{2m}\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\right)\Psi 
 =E\Psi \eqname{A1} \end{equation}
-$B$G$"$k!#$3$N<0$r(B$\Psi=X(x)Y(y)$$B$HJQ?tJ,N%$7$F2r$/(B\eqhref{A1}$B$XBeF~$9$l$P!"(B
+である。この式を$\Psi=X(x)Y(y)$と変数分離して解く\eqhref{A1}へ代入すれば、
 \[ -\frac{\hbar^2}{2m}\left(\frac{X''}{X}+\frac{Y''}{Y}\right)=E \]
-$B$rF@$k!#$3$3$G!"(B$X''/X=-k_x^2,Y''/Y=-k_y^2$$B$H$*$1$P!"(B
+を得る。ここで、$X''/X=-k_x^2,Y''/Y=-k_y^2$とおけば、
 \[X=A_xe^{ik_xx},Y=A_ye^{ik_yy}\]
-$B$H2r$,5a$^$k!#<!$K<~4|E*6-3&>r7o$K$h$j(B
-$k_x,k_y$$B$r5a$a$k$H!"(B
-$X(x)=X(x+L_x)$$B$h$j(B$e^{ik_xL_x}=1$$B!"$D$^$j!"(B
+と解が求まる。次に周期的境界条件により
+$k_x,k_y$を求めると、
+$X(x)=X(x+L_x)$より$e^{ik_xL_x}=1$、つまり、
 $k_x=2\pi n_x/L_x\;(n_x=0,\pm1,\pm2,\cdots)$
-$B$,F@$i$l!"F1MM$K$7$F!"(B$k_y=2\pi n_y/L_y\;(n_y=0,\pm1,\pm2,\cdots)$
-$B$,F@$i$l$k!#(B
+が得られ、同様にして、$k_y=2\pi n_y/L_y\;(n_y=0,\pm1,\pm2,\cdots)$
+が得られる。
 
-$B=>$C$F!"(B\eqhref{A1}$B$N2r$O!"(B
+従って、\eqhref{A1}の解は、
 \[\Psi=X(x)Y(y)=Ae^{2i\pi\left(\frac{n_x}{L_x}x+\frac{n_y}{L_y}y\right)}
 \;\;\;\;\;(A=A_xA_y) \]
-$B$H=q$1!"$5$i$K!"5,3J2=>r7o$+$i!"(B
-$A=1/\sqrt{S}$$B$H$J$k!#7k6I8GM-%Y%/%H%k!"8GM-CM$O$=$l$>$l!"(B
+と書け、さらに、規格化条件から、
+$A=1/\sqrt{S}$となる。結局固有ベクトル、固有値はそれぞれ、
 \begin{eqnarray*}
 \Psi&=&\frac{1}{\sqrt{S}}e^{2i\pi\left(\frac{n_x}{L_x}x+
 \frac{n_y}{L_y}y\right)} \\
 E&=&\frac{\hbar^2}{2m}(k_x^2+k_y^2) =\frac{(2\pi\hbar)^2}{2m}\left\{\left(\frac{n_x}{L_x}\right)^2+\left(\frac{n_y}{L_y}\right)^2\right\}, \;\;\;\;( n_x,n_y=0,\pm1,\pm2,\cdots)
 \end{eqnarray*}
-$B$H$J$k!#(B
+となる。
 
 \SubAnswer
-$B$"$k%(%M%k%.!<(B$E$$B$^$G$N>uBV?t$O!"(B$n_x$-$n_y$$BLL$G$N(B$E=$$B0lDj(B
-$B$H$$$&@~Fb$N3J;RE@?t$KBP1~$9$k!#(B
+あるエネルギー$E$までの状態数は、$n_x$-$n_y$面での$E=$一定
+という線内の格子点数に対応する。
 
-$B$$$^!"(B$L_x,L_y$$B$O==J,$KBg$-$$$H$7$F$$$k$N$G!"%(%M%k%.!<=`0L$N4V3V$O>.$5$$(B
-$B$H$G$-$k!#$=$3$G!">uBV?t$r!"<4$ND9$5$,$=$l$>$l(B$\sqrt{2mE}L_x/\pi\hbar,
-\sqrt{2mE}L_y/\pi\hbar$$B$NBJ1_$NLL@Q$H9M$($k$3$H$,$G$-$k!#(B
+いま、$L_x,L_y$は十分に大きいとしているので、エネルギー準位の間隔は小さい
+とできる。そこで、状態数を、軸の長さがそれぞれ$\sqrt{2mE}L_x/\pi\hbar,
+\sqrt{2mE}L_y/\pi\hbar$の楕円の面積と考えることができる。
 
-$B=>$C$F!"(B
+従って、
 \begin{equation}
 N(E)= 2\cdot\pi\cdot\sqrt{2mE}\frac{L_x}{2\pi \hbar}\cdot\sqrt{2mE}\frac{
 L_y}{2\pi \hbar} = \frac{mS}{\pi \hbar^2}E \eqname{A2}
 \end{equation}
-$B$3$3$G!"0x?t#2$O%9%T%s$N<+M3EY$K$h$k$b$N$G$"$k!#(B
+ここで、因数２はスピンの自由度によるものである。
 
-$B$^$?!"(B$N(E_F)=nS$$B$h$j!"(B
+また、$N(E_F)=nS$より、
 \[\frac{mS}{\pi\hbar^2}E_F=nS
 \Longrightarrow E_F=\frac{\pi\hbar^2}{m}n
 \]
-$B$,F@$i$l$k!#(B
+が得られる。
 
-$BM-8B29EY(B$T$$B$G$NA4EE;R?t(B$N$$B$O!"(Bfermi $BJ,I[4X?t(B$f(E)$$B$rMQ$$$F!"(B
+有限温度$T$での全電子数$N$は、fermi 分布関数$f(E)$を用いて、
 \[
 N=\int_0^{\infty}\rho(E)f(E)dE 
 =\int_{0}^{\infty}\rho(E)\frac{1}{e^{\frac{E-\mu}
 {k_{\scriptscriptstyle{B}}T}}+1}dE
 \]
-$B$H=q$-I=$;$k!#(B
+と書き表せる。
 
-$B$5$F!"(B\eqhref{A2}$B<0$h$j!"(B
-$\rho(E)$$B$O!"(B
+さて、\eqhref{A2}式より、
+$\rho(E)$は、
 \[\rho(E)=\frac{dN(E)}{dE}=\frac{mS}{\pi\hbar^2}\]
-$B$rBeF~$7$F!"(B
+を代入して、
 \[
 N=\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{dE}{e^{
 \frac{E-\mu}{k_{\scriptscriptstyle{B}}T}}+1} 
@@ -105,29 +105,29 @@ N=\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{dE}{e^{
 k_{\scriptscriptstyle{B}}T\ln\left(
 e^{\frac{\mu}{k_{\scriptscriptstyle{B}}T}}+1\right)=nS
 \]
-$B$H$J$k!#$h$C$F!"(B$\mu$$B$O!"(B$T$$B$H(B$n$$B!"(B$T$$B$H(B$E_F$$B$r;H$C$F!"$=$l$>$l(B
+となる。よって、$\mu$は、$T$と$n$、$T$と$E_F$を使って、それぞれ
 \begin{equation}
 \mu=k_{\scriptscriptstyle{B}}
 T\ln\left(e^{\frac{\pi\hbar^2}{m}n
 \frac{1}{k_{\scriptscriptstyle{B}}T}}-1\right)= k_{\scriptscriptstyle{B}}T\ln\left(
 e^{\frac{E_F}{k_{\scriptscriptstyle{B}}T}}-1\right) \eqname{A3}
 \end{equation}
-$B$HI=$;$k!#(B
+と表せる。
 
 \SubAnswer
-$BFbIt%(%M%k%.!<(B$U(T)$$B$O!"(B
+内部エネルギー$U(T)$は、
 \[
 U(T)=\int_0^{\infty}E\rho(E)f(E)dE 
 =\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{EdE}
 {e^{\frac{E-\mu}{k_{\scriptscriptstyle{B}}T}}+1} 
 \]
-$B$G$"$k!#$3$3$G!"Dc296a;w(B
-$k_{\scriptscriptstyle{B}}T\ll E_F$$B$r;H$&$H!"(B\eqhref{A3}
-$B<0$h$j(B$\mu\simeq E_F$$B$H$7$FNI$$$+$i!"(B
-$\beta\equiv 1/k_{\scriptscriptstyle{B}}T$$B$H$7$F!"(B
+である。ここで、低温近似
+$k_{\scriptscriptstyle{B}}T\ll E_F$を使うと、\eqhref{A3}
+式より$\mu\simeq E_F$として良いから、
+$\beta\equiv 1/k_{\scriptscriptstyle{B}}T$として、
 \[U(T)\simeq\frac{mS}{\pi\hbar^2}\int_0^{\infty}\frac{EdE}{e^{\beta(E-E_F)}
 +1} \]
-$B$HI=$;$k!#$9$k$H!"HfG.(B$C(T)$$B$O!"(B
+と表せる。すると、比熱$C(T)$は、
 \[
 C(T)=\frac{\partial U(T)}{\partial T} 
 \simeq-\frac{1}{k_{\scriptscriptstyle{B}
@@ -136,7 +136,7 @@ C(T)=\frac{\partial U(T)}{\partial T}
 =\frac{mS}{\pi\hbar^2}\frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_0^{\infty}
 \frac{E(E-E_F)e^{\beta(E-E_F)}}{\left(e^{\beta(E-E_F)}+1\right)^2}dE
 \]
-$B$3$3$G!"(B$x\equiv \beta(E-E_F)$$B$H$9$k$H!"(B$dx=\beta dE$$B$J$I$h$j!"(B
+ここで、$x\equiv \beta(E-E_F)$とすると、$dx=\beta dE$などより、
 \[
 C(T)=\frac{mS}{\pi\hbar^2}\frac{1}
 {k_{\scriptscriptstyle{B}}T^2}\int_{-\beta E_F}^{\infty}
@@ -147,19 +147,19 @@ C(T)=\frac{mS}{\pi\hbar^2}\frac{1}
 \frac{1}{\beta^3}\frac{(x+\beta E_F)xe^x}{\left(e^x+1\right)^2}dx 
 \]
 
-$1/\beta \ll E_F$$B!"$D$^$j!"(B$\beta E_F\gg 1$$B$h$j!"(B
+$1/\beta \ll E_F$、つまり、$\beta E_F\gg 1$より、
 \begin{eqnarray*}
 &\simeq&\frac{mS}{\pi\hbar^2}\frac{1}{k_{\scriptscriptstyle{B}}T^2}
 \int^{\infty}_{-\infty}\frac{1}{\beta^3}\frac{(x+\beta E_F)x
 e^x}{\left(e^x+1\right)^2}dx
 \end{eqnarray*}
-$B$,F@$i$l$k!#(B
+が得られる。
 
-$B@QJ,$r7W;;$9$k:]$K!"(B$(x+\beta E_F)$$B$H$$$&ItJ,$KCmL\$9$k$H!"(B
-$B;D$C$?ItJ,$,4q4X?t$K$J$C$F$$$k$+$i!"BhFs9`$+$iMh$k@QJ,$O>C$($k!#$^$?!"(B
+積分を計算する際に、$(x+\beta E_F)$という部分に注目すると、
+残った部分が奇関数になっているから、第二項から来る積分は消える。また、
 \[\frac{d}{dx}f(x)=\frac{d}{dx}\left(\frac{1}{e^x+1}\right)=
 \frac{-e^x}{\left(e^x+1\right)^2}\]
-$B$G$"$k$+$i!"7k6I!"(B
+であるから、結局、
 \[
 C(T)\simeq-\frac{mS}{\pi\hbar^2}
 \frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_{-\infty}^{\infty}
@@ -169,16 +169,16 @@ C(T)\simeq-\frac{mS}{\pi\hbar^2}
 \left(-\frac{\pi^2}{3}\right) 
 =\frac{mS\pi k_{\scriptscriptstyle{B}}^2}{3\hbar^2}T
 \]
-$B$H$J$k!#(B
+となる。
 
 \SubAnswer
-$B>uBVL)EY$N2>Dj<0(B$\rho(E)=|E-E_F|^{\alpha},\alpha>-1(
+状態密度の仮定式$\rho(E)=|E-E_F|^{\alpha},\alpha>-1(
 {\rm for} \; E_F-\Delta E \leq E \leq
- E_F+\Delta E)$$B$rBeF~$9$k$H!"FbIt%(%M%k%.!<$H$7$F!"(B
+ E_F+\Delta E)$を代入すると、内部エネルギーとして、
 \[U(T)=\int_{E_F-\Delta E}^{E_F+\Delta E}E|E-E_F|^{\alpha}
 \frac{dE}{e^{\beta(E-\mu)}+1} \]
-$B$r9M$($l$P$h$/!"(B
-$k_{\scriptscriptstyle{B}}T\ll E_F,\Delta E$$B$GDc296a;w$r$9$l$P!"(B
+を考えればよく、
+$k_{\scriptscriptstyle{B}}T\ll E_F,\Delta E$で低温近似をすれば、
 \begin{eqnarray*}
 C(T)&\simeq& -\frac{1}{k_{\scriptscriptstyle{B}}T^2}
 \int_{E_F-\Delta E}^{E_F+\Delta E}
@@ -187,7 +187,7 @@ C(T)&\simeq& -\frac{1}{k_{\scriptscriptstyle{B}}T^2}
 E|E-E_F|^{\alpha}\frac{(E-E_F)e^{\beta(E-E_F)}}{\left(e^{\beta(E-E_F)}
 +1\right)^2}dE 
 \end{eqnarray*}
-$x\equiv\beta(E-E_F)$$B$H$9$k$H!"(B
+$x\equiv\beta(E-E_F)$とすると、
 \begin{eqnarray*}
 &=& \frac{1}{k_{\scriptscriptstyle{B}}T^2}\int_{-\beta\Delta E}^{\beta\Delta E}
 \left(\frac{x}{\beta}+E_F\right)\left|\frac{x}{\beta}\right|^{\alpha}
@@ -198,10 +198,10 @@ $x\equiv\beta(E-E_F)$$B$H$9$k$H!"(B
 &=& \frac{1}{k_{\scriptscriptstyle{B}}T^2}
 \beta^{-\alpha-3}\int_{-\infty}^{\infty}
 \frac{|x|^{\alpha}x^2e^x}{\left(e^x+1\right)^2}dx 
-\;\;\;$B!J6v4q@-$h$j!#(B{\bf{4}}$BHV$r;2>H!K(B\\
+\;\;\;（偶奇性より。{\bf{4}}番を参照）\\
 &\propto& T^{\alpha+1}
 \end{eqnarray*}
-$B$H$$$&7k2L$rF@$k!#(B
+という結果を得る。
 
 \end{subanswers}
 \end{answer}
