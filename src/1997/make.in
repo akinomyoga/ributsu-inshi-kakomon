@@ -1,0 +1,30 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1997pankyo 1997senmon)
+docs_ex=(1997pankyo2)
+
+_1997pankyo_title='1997年度実施 一般教育科目'
+_1997pankyo_cov=()
+_1997pankyo_prb=(1997engl.tex 1997math.tex 1997phys.tex)
+_1997pankyo_ans=(1997engl.tex 1997math.tex 1997phys.tex)
+_1997pankyo_dep=(1997phys-1.eps 1997phys-2.eps 1997phys2-2.eps)
+
+_1997pankyo2_title='1997年度実施 一般教育科目 (英語なし)'
+_1997pankyo2_cov=()
+_1997pankyo2_prb=(1997math.tex 1997phys.tex)
+_1997pankyo2_ans=(1997math.tex 1997phys.tex)
+_1997pankyo2_dep=(1997phys-1.eps 1997phys-2.eps 1997phys2-2.eps)
+
+_1997senmon_title='1997年度実施 物理専門科目'
+_1997senmon_cov=()
+_1997senmon_prb=(1997phy1.tex 1997phy2.tex 1997phy3.tex 1997phy4.tex 1997phy5.tex 1997phy6.tex 1997phy7.tex 1997phy8.tex 1997phy9.tex)
+_1997senmon_ans=(1997phy1.tex 1997phy2.tex 1997phy3.tex 1997phy4.tex 1997phy5.tex 1997phy6.tex 1997phy7.tex 1997phy8.tex 1997phy9.tex)
+_1997senmon_dep=(
+  1997phy1-1.eps 1997phy1-1-2.eps 1997phy2-1.eps 1997phy2-2.eps 1997phy2-3.eps 1997phy2-4.eps 1997phy2-5.eps 1997phy2-6.eps 1997phy2-7.eps
+  1997phy3-1.eps 1997phy3-2.eps 1997phy3-3.eps 1997phy4-1.eps 1997phy4-2.eps 1997phy4-3.eps 1997phy4-4.eps 1997phy4-5.eps
+  1997phy5-1.eps 1997phy5-2.eps 1997phy5-3.eps 1997phy5-4.eps 1997phy5-5.eps
+  1997phy6-1.eps 1997phy6-2.eps 1997phy6-3.eps 1997phy6-4.eps 1997phy6-5.eps 1997phy6-6-1.eps 1997phy6-6-2.eps 1997phy6-7.eps
+  1997phy7-1.eps 1997phy7-2.eps 1997phy8-1.eps 1997phy8-2.eps
+  1997phy9-1.eps 1997phy9-2.eps 1997phy9-3.eps 1997phy9-4.eps 1997phy9-5.eps 1997phy9-6.eps 1997phy9-7.eps 1997phy9-8.eps 1997phy9-9.eps
+  1997phy9-10.eps 1997phy9-11.eps 1997phy9-12.eps 1997phy9-13.eps 1997phy9-14.eps 1997phy9-15.eps 1997phy9-16.eps 1997phy9-17.eps)
