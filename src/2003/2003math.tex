@@ -195,7 +195,7 @@ $f(x)$が次のように与えられているとする。
 
 $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
 \begin{eqnarray}
- \prt{u}{t} = a^2 \prts{u}{x}{2}  \label{eq:1}
+ \prt{u}{t} = a^2 \prts{u}{x}{2}  \ilabel{eq:1}
 \end{eqnarray}
 に代入すると、
 \begin{eqnarray*}
@@ -205,7 +205,7 @@ $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
 これより
 \begin{eqnarray}
  \mathrm{i} \omega &= -a^2 k^2  \notag \\
- \therefore \omega &= \mathrm{i} a^2 k^2  \label{eq:2}
+ \therefore \omega &= \mathrm{i} a^2 k^2  \ilabel{eq:2}
 \end{eqnarray}
 と求められる。
 
@@ -213,16 +213,16 @@ $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
 
 与式
 \begin{eqnarray}
- u(x,t) = \int_{-\infty}^\infty A_k u_k(x,t) \mathrm{d} k  \label{eq:3}
+ u(x,t) = \int_{-\infty}^\infty A_k u_k(x,t) \mathrm{d} k  \ilabel{eq:3}
 \end{eqnarray}
 に$t=0$を代入すると
 \begin{eqnarray}
- u(x,0) = f(x) = \int_{-\infty}^\infty A_k \mathrm{e}^{\mathrm{i} kx} \mathrm{d} k.  \label{eq:4}
+ u(x,0) = f(x) = \int_{-\infty}^\infty A_k \mathrm{e}^{\mathrm{i} kx} \mathrm{d} k.  \ilabel{eq:4}
 \end{eqnarray}
 これはFourier逆変換に他ならないので、Fourier変換により
 \begin{eqnarray}
  A_k = \frac{1}{2\pi} \int_{-\infty}^\infty f(x) \mathrm{e}^{-\mathrm{i} kx} \mathrm{d} x
-  \label{eq:5}
+  \ilabel{eq:5}
 \end{eqnarray}
 と求められる。
 
@@ -231,7 +231,7 @@ $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
 題意の積分を
 \begin{eqnarray}
  g(y) \equiv \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k
-  \label{eq:6}
+  \ilabel{eq:6}
 \end{eqnarray}
 とおく。すると、
 \begin{eqnarray}
@@ -240,7 +240,7 @@ $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
  &=& -\frac{\mathrm{i}}{2a^2 t} \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky}
      \left( \diff{}{k} \mathrm{e}^{-a^2 k^2 t} \right) \mathrm{d} k  \notag \\
  &=& -\frac{\mathrm{i}}{2a^2 t} \left( \left[ \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \right]_{-\infty}^\infty - \mathrm{i} y \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \right) \notag \\
- &=& -\frac{y}{2a^2 t} g(y)  ~~~~(\because t>0) \label{eq:7}
+ &=& -\frac{y}{2a^2 t} g(y)  ~~~~(\because t>0) \ilabel{eq:7}
 \end{eqnarray}
 従って、
 \begin{eqnarray}
@@ -253,7 +253,7 @@ $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k
  = \frac{1}{a} \sqrt{\frac{\pi}{t}} \exp \left( -\frac{y^2}{4a^2 t} \right)
-  \label{eq:8}
+  \ilabel{eq:8}
 \end{eqnarray}
 である。
 
@@ -269,26 +269,26 @@ $\displaystyle{\int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{
  \int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{d} x
  &=& \int_{-\infty}^\infty \mathrm{e}^{-a \left( x-\frac{\mathrm{i} b}{2a} \right)^2 -\frac{b^2}{4a}} \mathrm{d} x  \notag \\
  &=& \mathrm{e}^{-\frac{b^2}{4a}} \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x
- ~~~~\left( \alpha \equiv \frac{b}{2a} \right) \label{eq:a1}
+ ~~~~\left( \alpha \equiv \frac{b}{2a} \right) \ilabel{eq:a1}
 \end{eqnarray}
 となる。
-そこで、図\ref{2003math2-1}のような積分経路$C$を考え、複素積分
+そこで、図\iref{2003math2-1}のような積分経路$C$を考え、複素積分
 $\displaystyle{\oint_C \mathrm{e}^{-a z^2} \mathrm{d} z}$
 を計算する。ここで$X$は十分大きい正の数である。
-また、図\ref{2003math2-1}では$\alpha>0$として経路を描いているが、
+また、図\iref{2003math2-1}では$\alpha>0$として経路を描いているが、
 $\alpha<0$の場合も本質的に同じである。
 \begin{figure}[bp]
  \begin{center}
   \includegraphics[width=0.4\hsize,clip]{2003math2-1.eps}
  \end{center}
  \caption{3.（別解）における積分経路}
- \label{2003math2-1}
+ \ilabel{2003math2-1}
 \end{figure}%
 
 まず、$\mathrm{e}^{-az^2}$は至るところ正則だから、
 Cauchyの積分定理より
 \begin{eqnarray}
- \oint_C \mathrm{e}^{-a z^2} \mathrm{d} z = 0.  \label{eq:a3}
+ \oint_C \mathrm{e}^{-a z^2} \mathrm{d} z = 0.  \ilabel{eq:a3}
 \end{eqnarray}
 一方、積分経路を$C=C_1+C_2+C_3+C_4$と分解し、
 その各々について$X \to \infty$における積分を評価すると
@@ -303,43 +303,43 @@ Cauchyの積分定理より
 従って、$X \to \infty$で
 \begin{eqnarray}
  \oint_C \mathrm{e}^{-az^2} \mathrm{d} z
- \to \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x - \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x  \label{eq:a4}
+ \to \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x - \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x  \ilabel{eq:a4}
 \end{eqnarray}
 が成り立つ。
 
-以上、(\ref{eq:a3})(\ref{eq:a4})とGauss積分の公式から
+以上、(\iref{eq:a3})(\iref{eq:a4})とGauss積分の公式から
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x
- = \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x = \sqrt{\frac{\pi}{a}}  \label{eq:a6}
+ = \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x = \sqrt{\frac{\pi}{a}}  \ilabel{eq:a6}
 \end{eqnarray}
-が成立する。これと(\ref{eq:a1})より
+が成立する。これと(\iref{eq:a1})より
 \begin{eqnarray}
- \int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{d} x = \mathrm{e}^{-\frac{b^2}{4a}} \sqrt{\frac{\pi}{a}}  \label{eq:a7}
+ \int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{d} x = \mathrm{e}^{-\frac{b^2}{4a}} \sqrt{\frac{\pi}{a}}  \ilabel{eq:a7}
 \end{eqnarray}
 であるから、求めるべき積分は
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k
  = \frac{1}{a} \sqrt{\frac{\pi}{t}} \exp \left( -\frac{y^2}{4a^2 t} \right)
-  \label{eq:a8}
+  \ilabel{eq:a8}
 \end{eqnarray}
 である。
 
 \item
 
-(\ref{eq:3})(\ref{eq:5})より
+(\iref{eq:3})(\iref{eq:5})より
 \begin{eqnarray}
  u(x,t)
  &=& \frac{1}{2\pi} \int_{-\infty}^\infty \mathrm{d} k \int_{-\infty}^\infty \mathrm{d} \pr{x}
     f(\pr{x}) \mathrm{e}^{-\mathrm{i} k\pr{x}} \mathrm{e}^{\mathrm{i} kx +\mathrm{i}\omega t}  \notag \\
  &=& \frac{1}{2\pi} \int_{-\infty}^\infty \mathrm{d} k \int_{-\infty}^\infty \mathrm{d} \pr{x}
-    f(\pr{x}) \mathrm{e}^{\mathrm{i} k (x-\pr{x})} \mathrm{e}^{-a^2 k^2 t}  ~~~~(\because(\ref{eq:2}))
+    f(\pr{x}) \mathrm{e}^{\mathrm{i} k (x-\pr{x})} \mathrm{e}^{-a^2 k^2 t}  ~~~~(\because(\iref{eq:2}))
     \notag \\
  &=& \frac{1}{2\pi} \int_{-\infty}^\infty \mathrm{d} \pr{x} f(\pr{x}) \cdot
     \frac{1}{a} \sqrt{\frac{\pi}{t}}
-    \exp \left[ -\frac{(x-\pr{x})^2}{4a^2 t} \right] ~~~~(\because(\ref{eq:8}))
+    \exp \left[ -\frac{(x-\pr{x})^2}{4a^2 t} \right] ~~~~(\because(\iref{eq:8}))
     \notag \\
  &=& \frac{1}{2a\sqrt{\pi t}} \int_{-\infty}^\infty \mathrm{d} \pr{x} f(\pr{x})
-    \exp \left[ -\frac{(x-\pr{x})^2}{4a^2 t} \right]  \label{eq:9}
+    \exp \left[ -\frac{(x-\pr{x})^2}{4a^2 t} \right]  \ilabel{eq:9}
 \end{eqnarray}
 と求まる。
 
@@ -354,7 +354,7 @@ Cauchyの積分定理より
     \int_\frac{-x-L}{2a\sqrt{t}}^\frac{-x+L}{2a\sqrt{t}} \mathrm{e}^{-y^2} \mathrm{d} y
     ~~~~\left( y \equiv \frac{\pr{x}-x}{2a\sqrt{t}} \right) \notag \\
  &=& \frac{U}{2} \left[ \erf \left( \frac{-x+L}{2a\sqrt{t}} \right) 
-    -\erf \left( \frac{-x-L}{2a\sqrt{t}} \right) \right]  \label{eq:10}
+    -\erf \left( \frac{-x-L}{2a\sqrt{t}} \right) \right]  \ilabel{eq:10}
 \end{eqnarray}
 と表される。
 \end{enumerate}

@@ -21,7 +21,7 @@
     \includegraphics[width=110mm]{2003phy6-1.eps}
   \end{center}
   %\caption{図1}%{}内にタイトルを記入してください
-  \label{fig:2003phy6-1.eps}
+  \ilabel{fig:2003phy6-1.eps}
 \end{figure}
 
 \begin{enumerate}
@@ -37,7 +37,7 @@
     \includegraphics[width=80mm]{2003phy6-2.eps}
   \end{center}
   %\caption{図2}%{}内にタイトルを記入してください
-  \label{fig:2003phy6-2.eps}
+  \ilabel{fig:2003phy6-2.eps}
 \end{figure}
 
 \item 図2は、この方法を使って、液体ヘリウムの密度$\rho$をある温度$T_0(2.2\mathrm{K})$の近傍で測定し、$T_0$での密度$\rho_0$に対する相対値を表わしたものである。この図をもとに、温度$T_0$付近での液体ヘリウムの密度の温度依存性の特徴とその原因について述べよ。
@@ -51,7 +51,7 @@
     \includegraphics[width=150mm]{2003phy6-3.eps}
   \end{center}
   %\caption{図3}%{}内にタイトルを記入してください
-  \label{fig:2003phy6-3.eps}
+  \ilabel{fig:2003phy6-3.eps}
 \end{figure}
 
 \end{question}
@@ -68,17 +68,17 @@
 \end{eqnarray*}
 したがって、求める共振振動数は
 \begin{eqnarray}
-\label{kyoumei}
+\ilabel{kyoumei}
 f_0=\frac{\omega_0}{2\pi}=\frac{1}{2\pi \sqrt{LC_0}}   
 \end{eqnarray}
 である。
 
 \item コンデンサーの容量$C_0$は、平板の面積を$S$、間隙の長さを$d$とすると、
 \begin{eqnarray}
- \label{youryou}
+ \ilabel{youryou}
 C_0=\epsilon_0\frac{S}{d}  
 \end{eqnarray}
-であるから、式(\ref{kyoumei})(\ref{youryou})より、
+であるから、式(\iref{kyoumei})(\iref{youryou})より、
 \[
 d=\epsilon_0LS(2\pi f_0)^2
 \]
@@ -87,14 +87,14 @@ d=\epsilon_0LS(2\pi f_0)^2
 d=3.5\times 10^{-5}[\mathrm{m}]=35[\mathrm{\mu m}]
 \]
 
-\item 温度が下がると、コンデンサーの平板が熱収縮して式(\ref{youryou})の$S$が減少する。これによって$C_0$が小さくなり、共振振動数$f_0$は上昇する。\par
-(注)なお、平板間を支えている支柱が収縮することで$d$も減少することが考えられるが、式(\ref{youryou})の分子の$S$は面積の次元を持つのに対して、分母の$d$は距離の次元であるから、分子がより強く効いて$C_0$は減少するだろう。
+\item 温度が下がると、コンデンサーの平板が熱収縮して式(\iref{youryou})の$S$が減少する。これによって$C_0$が小さくなり、共振振動数$f_0$は上昇する。\par
+(注)なお、平板間を支えている支柱が収縮することで$d$も減少することが考えられるが、式(\iref{youryou})の分子の$S$は面積の次元を持つのに対して、分母の$d$は距離の次元であるから、分子がより強く効いて$C_0$は減少するだろう。
 
 \item 
 コンデンサーの間隙を液体ヘリウムで満たしたときの容量は、比誘電率$\epsilon$を用いて、
 \begin{eqnarray}
 C=\epsilon \epsilon_0 \frac{S}{d}=\epsilon C_0
-\label{youryou2}
+\ilabel{youryou2}
 \end{eqnarray}
 と書ける。また問題で与えられた式
 \[
@@ -103,12 +103,12 @@ C=\epsilon \epsilon_0 \frac{S}{d}=\epsilon C_0
 を$\epsilon$について解くと、
 \begin{eqnarray}
 \epsilon=\frac{1+2\alpha \rho/k}{1-\alpha \rho/k}
-\label{epsilon}
+\ilabel{epsilon}
 \end{eqnarray}
-である。この2式(\ref{youryou2})(\ref{epsilon})を用いると、共振振動数は次のように書ける。
+である。この2式(\iref{youryou2})(\iref{epsilon})を用いると、共振振動数は次のように書ける。
 \begin{eqnarray}
 f=\frac{1}{2\pi \sqrt{LC}}=\frac{f_0}{\sqrt{\epsilon}}=\sqrt{\frac{1-\alpha \rho/k}{1+2\alpha \rho/k}}f_0
-\label{f}
+\ilabel{f}
 \end{eqnarray}
 いま、
 \[
@@ -117,7 +117,7 @@ f=\frac{1}{2\pi \sqrt{LC}}=\frac{f_0}{\sqrt{\epsilon}}=\sqrt{\frac{1-\alpha \rho
 であるから、$\alpha \rho/k$の2次以上の項を無視すれば、次のように近似できる。
 \begin{eqnarray}
 f &\simeq& \left(1-\frac{1}{2}\frac{\alpha \rho}{k}\right) \left(1-\frac{\alpha \rho}{k} \right)f_0 \nonumber\\
-& \simeq & (1-\frac{3}{2}\frac{\alpha \rho}{k})f_0 \label{kinnzi}\\
+& \simeq & (1-\frac{3}{2}\frac{\alpha \rho}{k})f_0 \ilabel{kinnzi}\\
 &=&9.979[\mathrm{MHz}] \nonumber %9.978としてもよいかも%
 \end{eqnarray}
 
@@ -125,7 +125,7 @@ f &\simeq& \left(1-\frac{1}{2}\frac{\alpha \rho}{k}\right) \left(1-\frac{\alpha 
 \item 
 測定精度$\triangle f=1[\mathrm{Hz}]$のとき、共振振動数$f$と$f+\triangle f$とを識別できるとする。
 これに対応して、液体ヘリウムの密度を$\rho$、$\rho - \triangle \rho$とすると、
-$\alpha \rho/k$が1に対して十分に小さい範囲では、式(\ref{kinnzi})が使えるから、
+$\alpha \rho/k$が1に対して十分に小さい範囲では、式(\iref{kinnzi})が使えるから、
 \begin{eqnarray*}
 \frac{f}{f_0}&\simeq& 1-\frac{3}{2}\frac{\alpha \rho}{k}\\
 \frac{f+\triangle f}{f_0}&\simeq& 1-\frac{3}{2}\frac{\alpha (\rho-\triangle \rho)}{k}

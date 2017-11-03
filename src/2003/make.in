@@ -1,0 +1,50 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2003pankyo 2003senmon)
+docs_ex=(2003pankyo2)
+
+_2003pankyo_title='2003年度実施 一般教育科目'
+_2003pankyo_cov=()
+_2003pankyo_prb=(2003engl.tex 2003math.tex)
+_2003pankyo_ans=(2003engl.tex 2003math.tex)
+_2003pankyo_dep=(2003math2-1.eps)
+#
+# 作成者
+#              問題入力・解答作成
+#   ---------- -------------------
+#   英語 問題1 茂木康平
+#   英語 問題2 茂木康平
+#   数学 問題1 藤野健
+#   数学 問題2 竹内一将
+#
+
+_2003pankyo2_title='2003年度実施 一般教育科目 (英語なし)'
+_2003pankyo2_cov=()
+_2003pankyo2_prb=(2003math.tex)
+_2003pankyo2_ans=(2003math.tex)
+_2003pankyo2_dep=(2003math2-1.eps)
+
+_2003senmon_title='2003年度実施 物理専門科目'
+_2003senmon_cov=()
+_2003senmon_prb=(2003phy1.tex 2003phy2.tex 2003phy3.tex 2003phy4.tex 2003phy5.tex 2003phy6.tex 2003phy7.tex 2003phy8.tex 2003phy9.tex)
+_2003senmon_ans=(2003phy1.tex 2003phy2.tex 2003phy3.tex 2003phy4.tex 2003phy5.tex 2003phy6.tex 2003phy7.tex 2003phy8.tex 2003phy9.tex)
+_2003senmon_dep=(
+  2003phy2-1.eps 2003phy2-2.eps 2003phy4-1.eps 2003phy4-2.eps
+  2003phy5-1.eps 2003phy5-2.eps 2003phy5-3.eps 2003phy5-4.eps 2003phy5-5.eps 2003phy5-6.eps 2003phy5-7.eps 2003phy5-8.eps 2003phy5-9.eps
+  2003phy6-1.eps 2003phy6-2.eps 2003phy6-3.eps 2003phy7-1.eps 2003phy7-2.eps 2003phy8-1.eps 2003phy8-2.eps 2003phy8-3.eps
+  2003phy9-1.eps 2003phy9-2.eps 2003phy9-3.eps 2003phy9-4.tpc 2003phy9-5.eps)
+#
+# 作成者
+#         問題入力・解答作成
+#   ----- -------------------
+#   問題1 小西　功記
+#   第2問 佐々井健蔵
+#   問題3 芝隼人、田中雄
+#   問題4 諏訪　雄大
+#   問題5 林寛仁・太田良介
+#   問題6 榎戸輝揚・竹内一将
+#   問題7 佐藤光浩
+#   問題8 菅原・永村
+#   問題9 田中雄、芝隼人
+#
