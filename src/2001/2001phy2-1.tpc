@@ -1,0 +1,314 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(74.00,36.05)(2.00,-38.05)
+% CIRCLE 2 0 3 0
+% 4 1042 1242 1083 1242 1083 1242 1083 1242
+% 
+\special{pn 8}%
+\special{ar 1042 842 41 41  0.0000000 6.2831853}%
+% CIRCLE 2 0 3 0
+% 4 242 1442 283 1442 283 1442 283 1442
+% 
+\special{pn 8}%
+\special{ar 242 1042 41 41  0.0000000 6.2831853}%
+% CIRCLE 2 0 3 0
+% 4 242 1042 284 1042 284 1042 284 1042
+% 
+\special{pn 8}%
+\special{ar 242 642 42 42  0.0000000 6.2831853}%
+% CIRCLE 2 0 3 0
+% 4 1842 1242 1883 1242 1883 1242 1883 1242
+% 
+\special{pn 8}%
+\special{ar 1842 842 41 41  0.0000000 6.2831853}%
+% CIRCLE 2 0 3 0
+% 4 1842 842 1883 842 1883 842 1883 842
+% 
+\special{pn 8}%
+\special{ar 1842 442 41 41  0.0000000 6.2831853}%
+% CIRCLE 2 0 3 0
+% 4 1042 642 1084 642 1084 642 1084 642
+% 
+\special{pn 8}%
+\special{ar 1042 242 42 42  0.0000000 6.2831853}%
+% VECTOR 2 0 3 0
+% 2 2000 4200 2800 4000
+% 
+\special{pn 8}%
+\special{pa 2000 3800}%
+\special{pa 2800 3600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2800 3600}%
+\special{pa 2730 3597}%
+\special{pa 2748 3613}%
+\special{pa 2740 3636}%
+\special{pa 2800 3600}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2800 4000 2000 3800
+% 
+\special{pn 8}%
+\special{pa 2800 3600}%
+\special{pa 2000 3400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 3400}%
+\special{pa 2060 3436}%
+\special{pa 2052 3413}%
+\special{pa 2070 3397}%
+\special{pa 2000 3400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2000 3800 2800 3600
+% 
+\special{pn 8}%
+\special{pa 2000 3400}%
+\special{pa 2800 3200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2800 3200}%
+\special{pa 2730 3197}%
+\special{pa 2748 3213}%
+\special{pa 2740 3236}%
+\special{pa 2800 3200}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2800 3600 3600 3600
+% 
+\special{pn 8}%
+\special{pa 2800 3200}%
+\special{pa 3600 3200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3600 3200}%
+\special{pa 3533 3180}%
+\special{pa 3547 3200}%
+\special{pa 3533 3220}%
+\special{pa 3600 3200}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 3600 3600 4400 3400
+% 
+\special{pn 8}%
+\special{pa 3600 3200}%
+\special{pa 4400 3000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4400 3000}%
+\special{pa 4330 2997}%
+\special{pa 4348 3013}%
+\special{pa 4340 3036}%
+\special{pa 4400 3000}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 4400 3400 3600 3200
+% 
+\special{pn 8}%
+\special{pa 4400 3000}%
+\special{pa 3600 2800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3600 2800}%
+\special{pa 3660 2836}%
+\special{pa 3652 2813}%
+\special{pa 3670 2797}%
+\special{pa 3600 2800}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 3600 3200 2800 3000
+% 
+\special{pn 8}%
+\special{pa 3600 2800}%
+\special{pa 2800 2600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2800 2600}%
+\special{pa 2860 2636}%
+\special{pa 2852 2613}%
+\special{pa 2870 2597}%
+\special{pa 2800 2600}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2800 3000 3600 2800
+% 
+\special{pn 8}%
+\special{pa 2800 2600}%
+\special{pa 3600 2400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3600 2400}%
+\special{pa 3530 2397}%
+\special{pa 3548 2413}%
+\special{pa 3540 2436}%
+\special{pa 3600 2400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 3600 2800 4400 2800
+% 
+\special{pn 8}%
+\special{pa 3600 2400}%
+\special{pa 4400 2400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4400 2400}%
+\special{pa 4333 2380}%
+\special{pa 4347 2400}%
+\special{pa 4333 2420}%
+\special{pa 4400 2400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 4400 2800 5200 2800
+% 
+\special{pn 8}%
+\special{pa 4400 2400}%
+\special{pa 5200 2400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 5200 2400}%
+\special{pa 5133 2380}%
+\special{pa 5147 2400}%
+\special{pa 5133 2420}%
+\special{pa 5200 2400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 5200 2800 6000 2800
+% 
+\special{pn 8}%
+\special{pa 5200 2400}%
+\special{pa 6000 2400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 6000 2400}%
+\special{pa 5933 2380}%
+\special{pa 5947 2400}%
+\special{pa 5933 2420}%
+\special{pa 6000 2400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 6000 2800 6800 2600
+% 
+\special{pn 8}%
+\special{pa 6000 2400}%
+\special{pa 6800 2200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 6800 2200}%
+\special{pa 6730 2197}%
+\special{pa 6748 2213}%
+\special{pa 6740 2236}%
+\special{pa 6800 2200}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 6800 2600 6000 2400
+% 
+\special{pn 8}%
+\special{pa 6800 2200}%
+\special{pa 6000 2000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 6000 2000}%
+\special{pa 6060 2036}%
+\special{pa 6052 2013}%
+\special{pa 6070 1997}%
+\special{pa 6000 2000}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 6000 2400 5200 2400
+% 
+\special{pn 8}%
+\special{pa 6000 2000}%
+\special{pa 5200 2000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 5200 2000}%
+\special{pa 5267 2020}%
+\special{pa 5253 2000}%
+\special{pa 5267 1980}%
+\special{pa 5200 2000}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 5200 2400 4400 2200
+% 
+\special{pn 8}%
+\special{pa 5200 2000}%
+\special{pa 4400 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4400 1800}%
+\special{pa 4460 1836}%
+\special{pa 4452 1813}%
+\special{pa 4470 1797}%
+\special{pa 4400 1800}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 4400 2200 5200 2000
+% 
+\special{pn 8}%
+\special{pa 4400 1800}%
+\special{pa 5200 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 5200 1600}%
+\special{pa 5130 1597}%
+\special{pa 5148 1613}%
+\special{pa 5140 1636}%
+\special{pa 5200 1600}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 5200 2000 6000 2000
+% 
+\special{pn 8}%
+\special{pa 5200 1600}%
+\special{pa 6000 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 6000 1600}%
+\special{pa 5933 1580}%
+\special{pa 5947 1600}%
+\special{pa 5933 1620}%
+\special{pa 6000 1600}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 6000 2000 6800 2000
+% 
+\special{pn 8}%
+\special{pa 6000 1600}%
+\special{pa 6800 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 6800 1600}%
+\special{pa 6733 1580}%
+\special{pa 6747 1600}%
+\special{pa 6733 1620}%
+\special{pa 6800 1600}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 6800 2000 7600 2000
+% 
+\special{pn 8}%
+\special{pa 6800 1600}%
+\special{pa 7600 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 7600 1600}%
+\special{pa 7533 1580}%
+\special{pa 7547 1600}%
+\special{pa 7533 1620}%
+\special{pa 7600 1600}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 1200 4200 2000 4200
+% 
+\special{pn 8}%
+\special{pa 1200 3800}%
+\special{pa 2000 3800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 3800}%
+\special{pa 1933 3780}%
+\special{pa 1947 3800}%
+\special{pa 1933 3820}%
+\special{pa 2000 3800}%
+\special{fp}%
+\end{picture}%

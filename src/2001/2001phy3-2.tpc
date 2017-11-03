@@ -1,0 +1,175 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(31.30,22.00)(10.70,-26.00)
+% VECTOR 2 0 3 0
+% 2 1600 2425 2770 1800
+% 
+\special{pn 8}%
+\special{pa 1600 2025}%
+\special{pa 2770 1400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2770 1400}%
+\special{pa 2702 1414}%
+\special{pa 2723 1425}%
+\special{pa 2721 1449}%
+\special{pa 2770 1400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2770 1800 1600 1175
+% 
+\special{pn 8}%
+\special{pa 2770 1400}%
+\special{pa 1600 775}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1600 775}%
+\special{pa 1649 824}%
+\special{pa 1647 800}%
+\special{pa 1668 789}%
+\special{pa 1600 775}%
+\special{fp}%
+% BOX 2 5 1 0
+% 2 2770 800 4200 2800
+% 
+\special{pn 8}%
+\special{sh 0.300}%
+\special{pa 2770 400}%
+\special{pa 4200 400}%
+\special{pa 4200 2400}%
+\special{pa 2770 2400}%
+\special{pa 2770 400}%
+\special{ip}%
+% LINE 3 0 3 0
+% 2 1600 1800 3940 1800
+% 
+\special{pn 4}%
+\special{pa 1600 1400}%
+\special{pa 3940 1400}%
+\special{fp}%
+% ELLIPSE 2 0 3 0
+% 4 2770 1800 3061 2079 1600 1175 1600 1800
+% 
+\special{pn 8}%
+\special{ar 2770 1400 291 279  3.1415927 3.6499965}%
+% STR 2 0 3 0
+% 3 2380 1648 2380 1710 5 0
+% $\theta_0$
+\put(23.8000,-13.1000){\makebox(0,0){$\theta_0$}}%
+% STR 2 0 3 0
+% 3 2350 1858 2350 1920 5 0
+% $\theta_0$
+\put(23.5000,-15.2000){\makebox(0,0){$\theta_0$}}%
+% VECTOR 2 0 3 0
+% 2 2770 1800 3940 1550
+% 
+\special{pn 8}%
+\special{pa 2770 1400}%
+\special{pa 3940 1150}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3940 1150}%
+\special{pa 3871 1144}%
+\special{pa 3888 1161}%
+\special{pa 3879 1183}%
+\special{pa 3940 1150}%
+\special{fp}%
+% ELLIPSE 2 0 3 0
+% 4 2770 1800 3160 2175 3290 1800 3940 1550
+% 
+\special{pn 8}%
+\special{ar 2770 1400 390 375  6.0645164 6.2831853}%
+% STR 2 0 3 0
+% 3 3060 1767 3060 1830 1 0
+% $\theta_1$
+\put(30.6000,-14.3000){\makebox(0,0)[lt]{$\theta_1$}}%
+% STR 2 0 3 0
+% 3 1760 2317 1760 2380 1 0
+% $\Vec{n}_0$
+\put(17.6000,-19.8000){\makebox(0,0)[lt]{$\Vec{n}_0$}}%
+% STR 2 0 3 0
+% 3 1760 1158 1760 1220 2 0
+% $\Vec{n}_2$
+\put(17.6000,-8.2000){\makebox(0,0)[lb]{$\Vec{n}_2$}}%
+% STR 2 0 3 0
+% 3 3840 1457 3840 1520 3 0
+% $\Vec{n}_1$
+\put(38.4000,-11.2000){\makebox(0,0)[rb]{$\Vec{n}_1$}}%
+% STR 2 0 3 0
+% 3 3290 988 3290 1050 5 0
+% óUìdëÃ
+\put(32.9000,-6.5000){\makebox(0,0){óUìdëÃ}}%
+% STR 2 0 3 0
+% 3 2380 988 2380 1050 5 0
+% ê^ãÛ
+\put(23.8000,-6.5000){\makebox(0,0){ê^ãÛ}}%
+% STR 2 0 3 0
+% 3 2770 2840 2770 2940 5 0
+% $x=0$
+\put(27.7000,-25.4000){\makebox(0,0){$x=0$}}%
+% LINE 2 0 3 0
+% 2 2770 800 2770 2800
+% 
+\special{pn 8}%
+\special{pa 2770 400}%
+\special{pa 2770 2400}%
+\special{fp}%
+% ELLIPSE 2 0 3 0
+% 4 2770 1800 3102 2119 1600 1800 1600 2425
+% 
+\special{pn 8}%
+\special{ar 2770 1400 332 319  2.6344941 3.1415927}%
+% CIRCLE 2 0 3 0
+% 4 1400 2935 1450 2935 1450 2935 1450 2935
+% 
+\special{pn 8}%
+\special{ar 1400 2535 50 50  0.0000000 6.2831853}%
+% DOT 0 0 3 0
+% 2 1400 2935 1400 2935
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1400 2535 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1400 2535 10 10 0  6.28318530717959E+0000}%
+% VECTOR 2 0 3 0
+% 2 1400 2935 1400 2525
+% 
+\special{pn 8}%
+\special{pa 1400 2535}%
+\special{pa 1400 2125}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1400 2125}%
+\special{pa 1380 2192}%
+\special{pa 1400 2178}%
+\special{pa 1420 2192}%
+\special{pa 1400 2125}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 1400 2935 1820 2935
+% 
+\special{pn 8}%
+\special{pa 1400 2535}%
+\special{pa 1820 2535}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1820 2535}%
+\special{pa 1753 2515}%
+\special{pa 1767 2535}%
+\special{pa 1753 2555}%
+\special{pa 1820 2535}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1400 2305 1400 2405 5 0
+% $y$
+\put(14.0000,-20.0500){\makebox(0,0){$y$}}%
+% STR 2 0 3 0
+% 3 1980 2840 1980 2940 5 0
+% $x$
+\put(19.8000,-25.4000){\makebox(0,0){$x$}}%
+% STR 2 0 3 0
+% 3 1340 2900 1340 3000 4 0
+% $z$
+\put(13.4000,-26.0000){\makebox(0,0)[rt]{$z$}}%
+\end{picture}%

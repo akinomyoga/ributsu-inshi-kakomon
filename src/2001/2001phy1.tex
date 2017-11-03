@@ -1,0 +1,281 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\def\bm{\boldsymbol}
+\def\ds{\displaystyle}
+
+\begin{document}
+
+%%%%%【問題1（問）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}{問題1}{岡村}
+\setcounter{equation}{0}
+
+　ハミルトニアン
+\begin{eqnarray}\label{(1)}
+H = \frac{1}{{2m}}\hat p^2  + \frac{{m\omega ^2 }}{2}\hat x^2 
+\end{eqnarray}
+で記述される1次元調和振動子を考えよう。
+%% 原文では「１次元調和振動子」と全角の１で書いてあるが，半角に直した。
+ここで$\hat p$は運動量演算子，$\hat x$は位置演算子。この系は演算子
+\begin{eqnarray}
+  a &=& \sqrt {\frac{{m\omega }}{{2\hbar }}} \hat x + \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\hat p , \label{(2)}\\ 
+%%原文にはないが，ここに","を入れた。また虚数単位にはsolidのiを使った。
+  & & \cr
+  a^{\dagger}  &=& \sqrt {\frac{{m\omega }}{{2\hbar }}} \hat x - \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\hat p \label{(3)}
+\end{eqnarray}
+を用いて調べることが出来る。以下の問に，解答に至る筋道を添えて答えよ。\\
+
+\begin{enumerate}
+%%%%%%【1.】%%%%%%
+  \item 　$(\ref{(1)})$式のハミルトニアンを$a,a^{\dagger}$を用いて表せ。また，$a,a^{\dagger}$の物理的意味を述べよ。\\
+  
+%%%%%%【2.】%%%%%%
+  \item 　基底状態$\left| 0 \right\rangle$は関係$a\left| 0 \right\rangle = 0$を満たす。これを用いて座標表示の基底状態波動関数$\psi _0 \left( x \right)=\left\langle {x}|{0} \right\rangle $を求めよ。また，第一励起状態の波動関数$\psi _1 \left( x \right)$を求めよ。ここでは規格化は考えなくてよい。\\
+  
+%%%%%%【3.】%%%%%%
+  \item 　基底状態$\left| 0 \right\rangle$に演算子$a^{\dagger}$の指数関数をほどこして得られる状態
+  \begin{equation}
+\left| \alpha  \right\rangle  = \exp \left( {\alpha a^{\dagger} } \right)\left| 0 \right\rangle ,\qquad \alpha は任意の複素数
+  \end{equation}
+  はコヒーレント状態と呼ばれる。\\
+  
+  \begin{enumerate}
+    %%%% a %%%%
+    \item 　コヒーレント状態が演算子$a$の固有状態になっていることを示せ。\\
+    
+    %%%% b %%%%
+    \item 　コヒーレント状態の間の内積$\left\langle {\beta ^ *}|{\alpha} \right\rangle $を計算せよ。
+%% 原文ではここで改行が入っているが，ここでは改行しないことにした。
+ ただし$\left\langle {\beta ^ *  } \right| = \left\langle 0 \right|\exp \left( {\beta ^ *  a} \right)$である。\\
+    
+    %%%% c %%%%
+    \item 　コヒーレント状態が$n$番目の励起状態を含む確率を求めよ。\\
+    
+    %%%% d %%%%
+    \item 　コヒーレント状態について不確定性関係を調べよう。座標の期待値$\left\langle {\hat x} \right\rangle  \equiv \left\langle {{\alpha ^ *}\left| {\hat x} \right|{\alpha}} \right\rangle / \left\langle {\alpha ^ *}|{\alpha} \right\rangle $と座標の二乗の期待値$\left\langle {\hat x} \right\rangle  \equiv \left\langle {{\alpha ^ *}\left| {\hat x^2} \right|{\alpha}} \right\rangle / \left\langle {\alpha ^ *}|{\alpha} \right\rangle $を計算し，座標の不確定さの二乗
+ \begin{equation}
+\left( {\Delta x} \right)^2  = \left\langle {\left( {\hat x - \left\langle {\hat x} \right\rangle } \right)^2 } \right\rangle 
+ \end{equation}
+ を求めよ。\\
+    
+    %%%% e %%%%
+    \item 　同様に運動量の不確定さの二乗$\left( {\Delta p} \right)^2  = \left\langle {\left( {\hat p - \left\langle {\hat p} \right\rangle } \right)^2 } \right\rangle $を計算し，不確定性関係を確かめよ。\\
+  \end{enumerate}
+  
+\end{enumerate}
+
+\end{question}
+
+%%%%%【問題1（答）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{answer}{問題1}{岡村}
+\setcounter{equation}{0}
+\begin{enumerate}
+
+%%%%%%【1.】%%%%%%
+  \item 　$\ds a = \sqrt {\frac{{m\omega }}{{2\hbar }}} \hat x + \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\hat p$，$\ds a^{\dagger} = \sqrt {\frac{{m\omega }}{{2\hbar }}} \hat x - \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\hat p$を$\hat x$，$\hat p$について解くと
+  \begin{eqnarray}
+  \hat x &=& \sqrt {\frac{\hbar }{{2m\omega }}} \left( {a^{\dagger}  + a} \right) ,  \\ 
+  & & \cr
+  \hat p &=& {\rm i}\sqrt {\frac{{m\hbar \omega }}{2}} \left( {a^{\dagger}  - a} \right)  
+  \end{eqnarray}
+  
+  であるから，これらを与えられたハミルトニアンに代入して，
+  \begin{eqnarray}
+  H &=& \frac{1}{{2m}}\hat p^2  + \frac{{m\omega ^2 }}{2}\hat x^2  \cr 
+  & & \cr
+   &=& \frac{1}{{2m}}\left[ {{\rm i}\sqrt {\frac{{m\hbar \omega }}{2}} \left( {a^{\dagger}  - a} \right)} \right]^2  + \frac{{m\omega ^2 }}{2}\left[ {\sqrt {\frac{\hbar }{{2m\omega }}} \left( {a^{\dagger}  + a} \right)} \right]^2  \cr 
+   & & \cr
+%%   &=& \frac{{\hbar \omega }}{4}\left[ { - \left( {a^{\dagger}  - a} \right)^2  + \left( {a^{\dagger}  + a} \right)^2 } \right] \cr 
+%%   & & \cr
+   &=& \frac{{\hbar \omega }}{2}\left( {aa^{\dagger}  + a^{\dagger} a} \right) . 
+  \end{eqnarray}
+  
+  交換関係$\left[ {\hat x,\hat p} \right] = {\rm i}\hbar $より従う$a$と$a^{\dagger}$の間の交換関係：
+  \begin{equation}
+\left[ {a,a^{\dagger} } \right] = 1 \iff aa^{\dagger}  = 1 + a^{\dagger} a 
+  \end{equation}
+  
+  を使えば，ハミルトニアンは
+  \begin{equation}
+H = \hbar \omega \left( {\frac{1}{2} + a^{\dagger} a} \right) 
+  \end{equation}
+  
+  の形に書かれる。\\
+  　$a,a^{\dagger}$の物理的意味については次の通り。調和振動子の$n~(=1,2,\dots)$番目のエネルギー固有値を$E_n$，これに属する固有状態を$\left| n \right\rangle$としたとき，$\left| n \right\rangle$に$a$を作用させた状態$a\left| n \right\rangle$は，固有値$E_n-\hbar\omega$を持った調和振動子のエネルギー固有状態となり，また$\left| n \right\rangle$に$a^{\dagger}$を作用させた状態$a^{\dagger}\left| n \right\rangle$は，固有値$E_n+\hbar\omega$を持った調和振動子のエネルギー固有状態となる。このように調和振動子のエネルギー固有状態に作用したとき，エネルギー$\hbar\omega$を持つ量子をそれぞれ消滅，生成する意味で，$a,a^{\dagger}$はそれぞれ消滅演算子，生成演算子と呼ばれる。また，ハミルトニアンの表式$(5)$に現れた$a^{\dagger}a \equiv \hat N$は個数演算子と呼ばれ，$\hat N \left(a^{\dagger}\right)^n \left| 0 \right\rangle= n\left(a^{\dagger}\right)^n \left| 0 \right\rangle$が成り立つことから，$\hat N$の固有値は調和振動子の基底状態の上に励起しているエネルギー量子$\hbar\omega$の数を表す。\\
+  
+%% $a,a^{\dagger}$にそれぞれ$\sqrt{\hbar}$を掛けて得られる$a\sqrt{\hbar},a^{\dagger}\sqrt{\hbar}$は，1次元調和振動子のエネルギー固有関数に作用させたとき，$a\sqrt{\hbar}$の場合は元のエネルギー固有値よりも$\hbar \omega$だけ低い値を，また$a^{\dagger}\sqrt{\hbar}$の場合は$\hbar \omega$だけ高い値を，それぞれエネルギー固有値として持つ固有関数へと変換する演算子であり，$a,a^{\dagger}$はそれぞれ消滅演算子，生成演算子と呼ばれる。
+  
+  
+%%%%%%【2.】%%%%%%
+  \item 　$a\left| 0 \right\rangle  = 0$より$\left\langle {x\left| a \right|0} \right\rangle  = 0$。これを計算して，
+  \begin{eqnarray}
+   & & \left\langle {x\left| {\sqrt {\frac{{m\omega }}{{2\hbar }}} \hat x + \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\hat p} \right|0} \right\rangle  = 0 \cr 
+   & & \cr
+   & & \iff \left[ {\sqrt {\frac{{m\omega }}{{2\hbar }}} x + \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\left( {\frac{\hbar }{{\rm i}}\frac{{\rm d}}{{{\rm d}x}}} \right)} \right]\psi _0 \left( x \right) = 0 \cr 
+   & & \cr
+   & & \iff \left( {\frac{{m\omega }}{\hbar }x + \frac{{\rm d}}{{{\rm d}x}}} \right)\psi _0 \left( x \right) = 0. 
+  \end{eqnarray}
+  
+  これより基底状態の波動関数は
+  \begin{equation}
+  \psi _0 \left( x \right) = {\rm Const.} \exp \left( { - \frac{{m\omega }}{{2\hbar }}x^2 } \right)  
+  \end{equation}
+  
+  と書ける\footnote{規格化するならば，$\left\langle 0|0\right\rangle = \int \left| \psi_0\left(x\right) \right|^2=1$より{\rm Const.}を求めればよい。結果は
+ \begin{equation}
+ \psi_0 \left(x\right) = \left( \pi^{1/4}\sqrt{\eta} \right)^{-1}\exp\left[ -x^2/\left( 2\eta^2 \right) \right] 
+ \end{equation}
+ と書ける。ここに調和振動子の長さのスケールを決めるパラメータ$\eta  \equiv \sqrt {\hbar /\left( {m\omega } \right)} $を導入した。\\
+ 
+ }。\\
+ また第一励起状態は$\left| 1 \right\rangle  \propto a^{\dagger} \left| 0 \right\rangle $として得られるから，規格化を考えなければ第一励起状態の波動関数は
+  \begin{eqnarray}
+  \psi _1 \left( x \right) &=& \left\langle {x}|{1} \right\rangle \propto \left\langle {x\left| {\sqrt {\frac{{m\omega }}{{2\hbar }}} \hat x - \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\hat p} \right|0} \right\rangle  \cr 
+  & & \cr
+   &=& \left[ {\sqrt {\frac{{m\omega }}{{2\hbar }}} x - \frac{{\rm i}}{{\sqrt {2m\hbar \omega } }}\left( {\frac{\hbar }{{\rm i}}\frac{{\rm d}}{{{\rm d}x}}} \right)} \right]\psi _0 \left( x \right) \cr 
+   & & \cr
+   &=& \sqrt {\frac{{2m\omega }}{\hbar }} x\exp \left( { - \frac{{m\omega }}{{2\hbar }}x^2 } \right) = {\rm Const.}x\exp \left( { - \frac{{m\omega }}{{2\hbar }}x^2 } \right) 
+  \end{eqnarray}
+  
+  と求められる\footnote{先程の$\eta$を用いれば規格化した形で
+  \begin{equation}
+  \psi _1 \left( x \right) = \left( \pi^{1/4}\sqrt{\eta}^{3/2}/\sqrt{2} \right)^{-1}x\exp\left[ -x^2/\left( 2\eta^2 \right) \right] 
+  \end{equation}
+  
+    と書ける。一般に第$n$励起状態の波動関数$\psi_n\left( x \right)$は，$\xi\equiv x/\eta$，$n$次のエルミート多項式$H_n\left( \xi \right)$を用いて，規格化した形で
+    \begin{equation}
+    \psi\left( \xi \right) = \left( 2^n n! \right)^{-1/2}\left[ m\omega/\left( \pi\hbar \right) \right]^{1/4}\exp\left( -\xi^2/2 \right)H_n\left( \xi \right) 
+    \end{equation}
+    
+    と書ける。$H_0\left( \xi \right)=1$，$H_1\left( \xi \right)=2\xi$，$H_2\left( \xi \right)=4\xi^2-2$，．．．。}。\\
+  
+%%%%%%【3.】%%%%%%
+  \item 　
+  \begin{enumerate}
+  %%%%%% 3.-(a) %%%%%%
+    \item 　$\left| \alpha  \right\rangle  = \exp \left( {\alpha a^{\dagger} } \right)\left| 0 \right\rangle$の両辺に左から$a$を作用させる：
+    \begin{eqnarray}
+  a\left| \alpha  \right\rangle  &=& a\exp \left( {\alpha a^{\dagger} } \right)\left| 0 \right\rangle  = a\sum\limits_{n = 0}^\infty  {\frac{{\left( {\alpha a^{\dagger} } \right)^n }}{{n!}}} \left| 0 \right\rangle  \cr 
+  & & \cr
+   &=& \sum\limits_{n = 0}^\infty  {\frac{{\alpha ^n }}{{n!}}\left[ {\left( {a^{\dagger} } \right)^n a + n\left( {a^{\dagger} } \right)^{n - 1} } \right]} \left| 0 \right\rangle  \cr 
+   & & \cr
+   &=& \alpha \sum\limits_{n = 1}^\infty  {\frac{{\left( {\alpha a^{\dagger} } \right)^{n - 1} }}{{\left( {n - 1} \right)!}}} \left| 0 \right\rangle  = \alpha \exp \left( {\alpha a^{\dagger} } \right)\left| 0 \right\rangle  \cr 
+   & & \cr
+   &=& \alpha \left| \alpha  \right\rangle .
+    \end{eqnarray}
+    
+    従ってコヒーレント状態は消滅演算子$a$の固有値$\alpha$に属する固有状態である。\\
+    
+  %%%%%% 3.-(b) %%%%%%
+    \item 　$a\left| \alpha  \right\rangle  = \alpha \left| \alpha  \right\rangle $の両辺に第$n$励起状態のケットを作用させて，
+    \begin{equation}
+\left\langle {n\left| a \right|\alpha } \right\rangle  = \left\langle {n\left| \alpha  \right|\alpha } \right\rangle  \iff \sqrt {n + 1} \left\langle {{n + 1}}|{\alpha } \right\rangle  = \alpha \left\langle {n}|{\alpha } \right\rangle . 
+    \end{equation}
+    
+ これより，
+ \begin{equation}
+\left\langle {n}|{\alpha } \right\rangle  = \frac{\alpha }{{\sqrt n }}\frac{\alpha }{{\sqrt {n - 1} }}\frac{\alpha }{{\sqrt {n - 2} }} \cdots \frac{\alpha }{{\sqrt 1 }}\left\langle {0}|{\alpha } \right\rangle  = \frac{{\alpha ^n }}{{\sqrt {n!} }}\left\langle {0}|{\alpha } \right\rangle  
+ \end{equation}
+ 
+ であるが，ここに
+ \begin{equation}
+ \left\langle {0}|{\alpha } \right\rangle  = \left\langle {0\left| {\exp \left( {\alpha a^{\dagger} } \right)} \right|0} \right\rangle  = \left\langle {0\left| {\sum\limits_{n = 0}^\infty  {\frac{{\left( {\alpha a^{\dagger} } \right)^n }}{{n!}}} } \right|0} \right\rangle  = \left\langle {0\left| 1 \right|0} \right\rangle  = 1 
+ \end{equation}
+ 
+ であるから，$\ds \left\langle {n}|{\alpha } \right\rangle  = \frac{{\alpha ^n }}{{\sqrt {n!} }}$となる。従ってフォック状態の基底$\{\left| n  \right\rangle\}_{n=0,1,2,\dots}$による$\left| \alpha  \right\rangle $の展開は，
+ 
+ \begin{equation}
+\left| \alpha  \right\rangle  = \sum\limits_n {\left| n \right\rangle \left\langle {n}|{\alpha } \right\rangle }  = \sum\limits_n {\frac{{\alpha ^n }}{{\sqrt {n!} }}} \left| n \right\rangle  
+ \end{equation}
+ 
+ となる。同様にして$\ds \left\langle {\beta ^ *  } \right| = \sum\limits_m {\frac{{\left( {\beta ^ *  } \right)^m }}{{\sqrt {m!} }}} \left\langle m \right|$であるから，これらの内積は，
+ 
+ \begin{equation}
+\left\langle {{\beta ^ *  }}|{\alpha } \right\rangle  = \sum\limits_{n,m} {\frac{{\left( {\beta ^ *  } \right)^m }}{{\sqrt {m!} }}\frac{{\alpha ^n }}{{\sqrt {n!} }}} \left\langle {m}|{n} \right\rangle  = \sum\limits_n {\frac{{\left( {\beta ^ *  \alpha } \right)^n }}{{n!}}}  = \exp \left( {\beta ^ *  \alpha } \right) 
+ \end{equation}
+ 
+ と計算される。\\
+ 
+  %%%%%% 3.-(c) %%%%%%
+    \item $|\alpha\rangle$の規格化を考えると、3-(b)の解答で$\beta=\alpha$として、$\langle\alpha|\alpha\rangle=\exp(|\alpha|^2)$であるから、規格化されたフォック状態は
+    \begin{eqnarray*}
+    |\alpha_{normal}\rangle=\frac{1}{\sqrt{\exp(|\alpha|^2)}}\sum_n {\frac{{\alpha ^n }}{{\sqrt {n!} }}} \left| n \right\rangle
+    \end{eqnarray*}
+    と表される。従って、コヒーレント状態が第$n$励起状態を含む確率$\left| P_n \right|$は，
+    \begin{equation}
+P_n  = \left| {\left\langle {n}|{\alpha_{normal} } \right\rangle } \right|^2  = \frac{1}{\exp(|\alpha|^2)} \frac{{\left| \alpha  \right|^{2n} }}{{n!}} 
+    \end{equation}
+    で与えられる。\\
+%% $\left\langle n \right\rangle  \equiv \left\langle {\alpha ^ *  \left| {\hat N} \right|\alpha } \right\rangle  = \left\langle {\alpha ^ *  \left| {a^{\dagger} a} \right|\alpha } \right\rangle  = \left| \alpha  \right|^2 $と書ける。
+
+  %%%%%% 3.-(d) %%%%%%
+    \item 　座標の期待値$\left\langle {\hat x} \right\rangle$，座標の二乗の期待値$\left\langle {\hat x^2} \right\rangle$はそれぞれ，
+    
+    \begin{eqnarray}
+\left\langle {\hat x} \right\rangle &=& \left\langle {\alpha ^ *  \left| {\hat x} \right|\alpha } \right\rangle / \left\langle {\alpha ^ *}|{\alpha} \right\rangle = \left\langle {\alpha ^ *  \left| {\sqrt {\frac{\hbar }{{2m\omega }}} \left( {a^{\dagger}  + a} \right)} \right|\alpha } \right\rangle  / \left\langle {\alpha ^ *}|{\alpha} \right\rangle \cr
+ & & \cr
+ &=& \sqrt {\frac{\hbar }{{2m\omega }}} \left( {\alpha ^ *   + \alpha } \right) ,\\
+  & & \cr
+  \left\langle {\hat x^2} \right\rangle &=& \left\langle {\alpha ^ *  \left| {\hat x^2 } \right|\alpha } \right\rangle  / \left\langle {\alpha ^ *}|{\alpha} \right\rangle  = \left\langle {\alpha ^ *  \left| {\frac{\hbar }{{2m\omega }}\left( {a^{\dagger}  + a} \right)^2 } \right|\alpha } \right\rangle  / \left\langle {\alpha ^ *}|{\alpha} \right\rangle  \cr 
+  & & \cr
+   &=& \frac{\hbar }{{2m\omega }}\left\langle {\alpha ^ *  \left| {\left\{ {\left( {a^{\dagger} } \right)^2  + a^{\dagger} a + \left( {1 + a^{\dagger} a} \right) + a^2 } \right\}} \right|\alpha } \right\rangle  / \left\langle {\alpha ^ *}|{\alpha} \right\rangle  \cr 
+   & & \cr
+   &=& \frac{\hbar }{{2m\omega }}\left[ {\left( {\alpha ^ *  } \right)^2  + 2\left| \alpha  \right|^2  + \alpha ^2  + 1} \right] \cr
+   & & \cr
+   &=& \frac{\hbar }{{2m\omega }}\left[ {\left( {\alpha ^ *   + \alpha } \right)^2  + 1} \right] \\\nonumber
+ \end{eqnarray}
+ 
+ と計算される。$(20)$の計算途中で交換関係$(4)$を使った。これらより座標の不確定さ${\Delta x}$の二乗は
+ 
+ \begin{eqnarray}
+ \left( {\Delta x} \right)^2  &=& \left\langle {\left( {\hat x - \left\langle {\hat x} \right\rangle } \right)^2 } \right\rangle = \left\langle {\hat x^2 } \right\rangle  - \left\langle {\hat x} \right\rangle ^2 \cr
+ & & \cr
+ &=& \frac{\hbar }{{2m\omega }}\left[ {\left( {\alpha ^ *   + \alpha } \right)^2  + 1} \right] - \left[ \sqrt {\frac{\hbar }{{2m\omega }}} \left( {\alpha ^ *   + \alpha } \right) \right]^2 \cr
+ & & \cr
+ &=&\frac{\hbar }{{2m\omega }} 
+ \end{eqnarray}
+ と求められる。\\
+ 
+  %%%%%% 3.-(e) %%%%%%
+    \item 　前問(d)と同様にして，運動量の期待値$\left\langle {\hat p} \right\rangle$，運動量の二乗の期待値$\left\langle {\hat p^2} \right\rangle$はそれぞれ，
+    
+    \begin{eqnarray}
+  \left\langle {\hat p} \right\rangle  &=& \left\langle {\alpha ^ *  \left| {\hat p} \right|\alpha } \right\rangle /\left\langle {{\alpha ^ *  }}|{\alpha } \right\rangle  = \left\langle {\alpha ^ *  \left| {{\rm i}\sqrt {\frac{{m\hbar \omega }}{2}} \left( {a^{\dagger}  - a} \right)} \right|\alpha } \right\rangle /\left\langle {{\alpha ^ *  }}|{\alpha } \right\rangle  \cr 
+  & & \cr
+   &=& {\rm i}\sqrt {\frac{{m\hbar \omega }}{2}} \left( {\alpha ^ *   - \alpha } \right), \\ 
+   & & \cr
+  \left\langle {\hat p^2 } \right\rangle  &=& \left\langle {\alpha ^ *  \left| {\hat p^2 } \right|\alpha } \right\rangle /\left\langle {{\alpha ^ *  }}|{\alpha } \right\rangle  = \left\langle {\alpha ^ *  \left| { - \frac{{m\hbar \omega }}{2}\left( {a^{\dagger}  - a} \right)^2 } \right|\alpha } \right\rangle /\left\langle {{\alpha ^ *  }}|{\alpha } \right\rangle  \cr 
+  & & \cr
+   &=&  - \frac{{m\hbar \omega }}{2}\left\langle {\alpha ^ *  \left| {\left\{ {\left( {a^{\dagger} } \right)^2  - a^{\dagger} a - \left( {1 + a^{\dagger} a} \right) + a^2 } \right\}} \right|\alpha } \right\rangle /\left\langle {{\alpha ^ *  }}|{\alpha } \right\rangle  \cr 
+   & & \cr
+   &=&  - \frac{{m\hbar \omega }}{2}\left[ {\left( {\alpha ^ *  } \right)^2  - 2\left| \alpha  \right|^2  + \alpha ^2  - 1} \right] \cr 
+   & & \cr
+   &=& \frac{{m\hbar \omega }}{2}\left[ {1 - \left( {\alpha ^ *   - \alpha } \right)^2 } \right] \\\nonumber
+    \end{eqnarray}
+    
+    と計算される。これらより，運動量の不確定さ${\Delta p}$の二乗は
+    
+    \begin{eqnarray}
+ \left( {\Delta p} \right)^2  &=& \left\langle {\left( {\hat p - \left\langle {\hat p} \right\rangle } \right)^2 } \right\rangle = \left\langle {\hat p^2 } \right\rangle  - \left\langle {\hat p} \right\rangle ^2 \cr
+ & & \cr
+ &=& \frac{{m\hbar \omega }}{2}\left[ {1 - \left( {\alpha ^ *   - \alpha } \right)^2 } \right] - \left[ {\rm i}\sqrt {\frac{{m\hbar \omega }}{2}} \left( {\alpha ^ *   - \alpha } \right) \right]^2 \cr
+ & & \cr
+ &=&\frac{{m\hbar \omega }}{2}\\\nonumber
+ \end{eqnarray}
+ 
+ と求められる。以上より，不確定性関係は
+ \begin{equation}
+\left( {\Delta x} \right)^2 \left( {\Delta p} \right)^2  = \frac{{\hbar ^2 }}{4} 
+\iff \Delta x\Delta p = \frac{\hbar }{2} 
+ \end{equation}
+ 
+ となり，コヒーレント状態は，座標とその正準共役な運動量とについて，両者の不確定性の積を最小にする状態であることが判る。（つまり古典的描像に最も近い。）\\
+ 
+  \end{enumerate}
+  
+\end{enumerate}
+
+\end{answer}
+
+\end{document}

@@ -1,0 +1,300 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\def\t{\times}
+\def\lam#1{\lambda_{#1}}
+\def\w#1{\vec{w}_{#1}}
+
+
+\begin{document}
+
+%%%%%【数学 [第1問] （問）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}{数学}{岡村圭祐}
+\setcounter{equation}{0}
+
+    %%%%% 第1問 %%%%%
+［第1問］\\
+　$2\t 2$の実行列$:A =
+     \left( {\begin{array}{*{20}c}
+   {1 - \gamma \cos 2\phi } & { - \gamma \sin 2\phi }  \\
+   { - \gamma \sin 2\phi } & {1 + \gamma \cos 2\phi }  \\
+     \end{array}} \right)$に関する以下の設問に答えよ。ただし，$0<\gamma<1$であるものとする。\\
+     
+    \begin{description}
+        \item[{\rm （i）}] 　行列$A$の固有値$\lam+,\lam-$を求めよ（$\lam+>\lam-$とする）。\\
+        
+        \item[{\rm （ii）}] 　$\lam+$と$\lam-$に対応する規格化された固有ベクトル$\w+,\w-$を求めよ。\\
+        
+        \item[{\rm （iii）}] 　$UAU^{-1}=
+        \left( {\begin{array}{*{20}c}
+   {\lam+} & {0}  \\
+   {0} & {\lam-}  \\
+     \end{array}} \right)$のように$A$を対角化する行列$U$を求めよ。また，この行列$U$が表す変換はどのような操作に対応しているか簡単に述べよ。\\
+     
+        \item[{\rm (iv）}] 　下図のように，単位円C上の点P$(\cos\phi,\sin\phi)$において上述の行列$A$が定義されているものとし，この点Pを原点とした任意のベクトル$\vec{w}$を，点Pを原点としたベクトル$A\vec{w}$へ変換する。この写像によって，図に点線で示された8つの円はどのように変形するか。答案用紙に簡単に図示して説明せよ。\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[hbtp]
+\begin{center}
+%\caption[]{\label{}}
+\vspace{1.0cm}
+\input{2001math1-1.tpc}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \end{description}
+
+%\end{question}
+
+\newpage
+
+%%%%%【数学 [第2問] （問）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{question}{数学}{岡村圭祐}
+\setcounter{equation}{0}
+
+    %%%%% 第2問 %%%%%
+
+［第2問］\\
+
+　三次元ラプラス方程式は，極座標を用いて
+    \begin{eqnarray}
+  &&\left( {\frac{1}{r}\frac{{\partial ^2 }}{{\partial r^2 }}r - \frac{{\hat L^2 }}{{r^2 }}} \right)U\left( {r,\theta ,\varphi } \right) = 0, \\ 
+  && \cr
+  &&\hat L^2  \equiv  - \left( {\frac{1}{{\sin \theta }}\frac{\partial }{{\partial \theta }}\sin \theta \frac{\partial }{{\partial \theta }} + \frac{1}{{\sin ^2 \theta }}\frac{{\partial ^2 }}{{\partial \varphi ^2 }}} \right) 
+    \end{eqnarray}
+    と表せる。また，球面調和関数$Y_{\ell m}\left( \theta,\varphi \right)$は，
+    \begin{equation}
+    \hat L^2Y_{\ell m}\left( \theta,\varphi \right)=\ell \left( \ell +1 \right)Y_{\ell m}\left( \theta,\varphi \right)
+    \end{equation}
+    を満たす$\left( \ell =0,1,2,\dots;~m=-\ell,-\ell+1,\dots,\ell \right)$。\\
+    
+    
+    \begin{description}
+    
+        \item[{\rm （i）}] 　ラプラス方程式の解$U\left( r,\theta,\varphi \right)$を$R_\ell\left( r \right)Y_{\ell m}\left( \theta,\varphi \right)$と変数分離したとき，$R_\ell\left( r \right)$の満たす微分方程式を求めよ。\\
+        
+        \item[{\rm （ii）}] 　設問（i）で得られた微分方程式から$R_\ell\left( r \right)$の独立な二つの基本解$A_\ell\left( r \right),B_\ell\left( r \right)$を求めよ。\\
+    \end{description}
+    
+    $U\left( r,\theta,\varphi \right)$に対する境界条件が球面上で与えられれば，設問（ii）で得られた$A_\ell\left( r \right)$と$B_\ell\left( r \right)$を用いて，
+    \begin{equation}
+U\left( {r,\theta ,\varphi } \right) = \sum\limits_{\ell = 0}^\infty  {\sum\limits_{m =  - \ell }^{\ell } {\left[ {\alpha _{\ell m} A_\ell \left( r \right) + \beta _{\ell m} B_\ell \left( r \right)} \right]Y_{\ell m} \left( {\theta ,\varphi } \right)} } 
+    \end{equation}
+    と展開し，境界条件に合うような係数$\alpha _{\ell m},\beta _{\ell m}$を持つ解を求めることができる。具体的に，$r=a$及び$b$（ただし$b>a>0$とする）での境界条件が
+    \begin{equation}
+    U\left( {a,\theta ,\varphi } \right)=0,\quad U\left( {b,\theta ,\varphi } \right)=\sin\theta\cos\varphi
+    \end{equation}
+    と与えられているとき，以下の問いに答えよ。\\
+    
+    \begin{description}
+    
+        \item[{\rm （iii）}] 　$\sin\theta\cos\varphi$を$Y_{\ell m}\left( \theta,\varphi \right)$を用いて表せ。%% 原文ではここで改行あり。
+        ただし，$\ds Y_{00}\left( \theta,\varphi \right)=\sqrt{\frac{1}{4\pi}}$，$\ds Y_{1 \pm 1}\left( \theta,\varphi \right)=\mp\sqrt{\frac{3}{8\pi}}\sin\theta e^{\pm i\varphi}$（複号同順），$\ds Y_{10}\left( \theta,\varphi \right)=\sqrt{\frac{3}{4\pi}}\cos\theta$を用いてよい。\\
+        
+        \item[{\rm （iv）}] 　境界条件(5)と$Y_{\ell m}\left( \theta,\varphi \right)$の直交条件
+        \begin{equation}
+\int {\d\Omega Y_{\ell'm'} ^ *  \left( {\theta ,\varphi } \right)Y_{\ell m} \left( {\theta ,\varphi } \right)}  = \delta _{\ell'\ell} \delta _{m'm} 
+        \end{equation}
+        から係数$\alpha _{\ell m},\beta _{\ell m}$を決定せよ。
+        
+    \end{description}
+    
+
+\end{question}
+
+
+%%%%%【数学 [第1問] （答）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{answer}{数学}{山本哲朗}
+\setcounter{equation}{0}
+
+［第1問］\\
+
+    %%%%% 第1問 %%%%%
+
+    \begin{description}
+        \item[{\rm （i）}] 　$A$の固有値方程式は
+\begin{equation}
+\lambda^2-\lambda+(1-\gamma^2)=0 
+~\iff~ (\lambda-1-\gamma)(\lambda-1+\gamma)=0 
+~\iff~ \lambda=1\pm \gamma\nonumber
+\end{equation}
+よって\qquad $\lambda_+=1+\gamma,~\lambda_-=1-\gamma .$
+
+        \item[{\rm （ii）}] 　今，$\cos\phi\neq 0$としておく。$A\left(
+\begin{array}{c}
+x \\
+y \\
+\end{array}
+\right)
+=\lambda_+\left(
+\begin{array}{c}
+x \\
+y \\
+\end{array}
+\right)$とおくと，
+
+\begin{equation}
+\left\{ {\begin{array}{*{20}c}
+   {(1-\gamma\cos 2\phi)x-\gamma\sin 2\phi\cdot y=(1+\gamma)x}  \\
+   {-\gamma\sin 2\phi\cdot x+(1+\gamma\cos 2\phi)y=(1+\gamma)y}  \\
+\end{array}} \right.~\Longrightarrow~x:y=(-\sin 2\phi):(1+\cos 2\phi)\nonumber
+\end{equation}
+
+よって
+\begin{equation*}
+\vec{w}_+ = \frac{1}{\sqrt{2(1+\cos 2\phi)}}
+\left(
+\begin{array}{c}
+-\sin 2\phi \\
+1+\cos 2\phi \\
+\end{array}
+\right) = \frac{1}{2\cos \phi}
+\left(
+\begin{array}{c}
+-2\sin\phi\cos\phi \\
+2\cos^2\phi \\
+\end{array}
+\right) = \left(
+\begin{array}{c}
+-\sin\phi \\
+\cos\phi \\
+\end{array}
+\right) .
+\end{equation*}
+（途中で根号には絶対値をつけるべきだが，後の議論に支障はない。）同様にして，
+%\begin{equation}
+$\ds \vec{w}_-=\left(
+\begin{array}{c}
+\cos\phi \\
+\sin\phi \\
+\end{array}
+\right) .$\\
+%\end{equation}
+一方で，${\cos\phi=0}$のときも上で求めたベクトルが固有ベクトルになっている。\\
+
+        
+        \item[{\rm （iii）}] 　（ii）で求めた$\vec{w}_+,\vec{w}_-$を用いて，
+%\begin{equation}
+$\ds U = ^t(\vec{w}_-,\vec{w}_+) 
+=
+\left(
+\begin{array}{cc}
+\cos\phi & \sin\phi \\
+-\sin\phi & \cos\phi \\
+\end{array}
+\right) .$\\
+%\end{equation}
+この行列が表す変換は，
+%% 
+位置ベクトルを原点周りに
+%% 
+$-\phi$だけ回転させる操作に対応している。\\
+
+        \item[{\rm （iv）}] 　次の図のように，各々の円はCの動径方向に$(1-\gamma)$倍，接線方向に$(1+\gamma)$倍される。\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[hbtp]
+\begin{center}
+%\caption[]{\label{}}
+%\vspace{1.0cm}
+\input{2001math1-2.tpc}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \end{description}
+%\end{answer}
+
+\newpage
+
+%%%%%【数学 [第2問] （答）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{answer}{数学}{山本哲朗}
+\setcounter{equation}{0}
+
+［第2問］\\
+
+    %%%%% 第2問 %%%%%
+
+    \begin{description}
+        \item[{\rm （i）}] 　$R_\ell\left( r \right)Y_{\ell m}\left( \theta,\varphi \right)$を$\ds \left( {\frac{1}{r}\frac{{\partial ^2 }}{{\partial r^2 }}r - \frac{{\hat L^2 }}{{r^2 }}} \right)U\left( {r,\theta ,\varphi } \right) = 0$に代入すると，
+\begin{equation}
+\left\{ {\begin{array}{*{20}l}
+   {\ds Y_{\ell m}\left( \theta,\varphi \right)\left\{ \frac{1}{r}\frac{\partial^2}{\partial r^2}rR_\ell\left( r \right)\right\} -R_\ell\left( r \right)\frac{\hat{L}^2}{r^2}Y_{\ell m}\left( \theta,\varphi \right)=0}  \\
+   \cr
+   {\ds \frac{1}{R_\ell\left( r \right)}\left\{\frac{1}{r}\frac{\partial^2}{\partial r^2}rR_\ell\left( r \right)\right\}-\frac{1}{Y_{\ell m}\left( \theta,\varphi \right)}\frac{\ell\left(\ell+1\right)}{r^2}Y_{\ell m}\left( \theta,\varphi \right)=0}  \\
+   \cr
+   {\ds \left\{ r^2\frac{\partial^2}{\partial r^2}+2r\frac{\partial}{\partial r}-\ell\left(\ell +1\right)\right\}R_\ell\left( r \right)=0}  \\
+\end{array}} \right.
+\end{equation}
+これが$R_\ell\left( r \right)$の満たす微分方程式である。\\
+        
+        \item[{\rm （ii）}] 　$\ds R_\ell\left( r \right)=r^\lambda\sum^\infty_{n=0}c_nr^n~(c_0\neq 0)$とおいて（i）の答の式に代入すると，$r^\lambda$の係数について
+\begin{eqnarray}
+\left[\lambda\left(\lambda-1\right)+2\lambda-\ell\left(\ell+1\right)\right]c_0=0 \nonumber \\
+\lambda^2+\lambda-\ell\left(\ell+1\right)=0 \nonumber \\
+\left(\lambda-\ell\right)\left(\lambda+\ell+1\right)=0 \nonumber \\
+\lambda=\ell,-\ell-1 \nonumber
+\end{eqnarray}
+また，$r^{\lambda+n}$の係数について
+\begin{eqnarray}
+\left(\lambda+n\right)\left(\lambda+n-1\right)c_n+2\left(\lambda+n\right)c_n-\ell\left(\ell+1\right)c_n=0 \nonumber \\
+\left(\lambda+n-l\right)\left(\lambda+n+l+1\right)c_n=0 \nonumber
+\end{eqnarray}
+よって
+\begin{description}
+    \item[{\rm ａ）}] ~$\lambda=\ell$のとき，$n\left(n+2\ell+1\right)c_n=0$ ，ゆえに$n\neq 0,-2\ell-1$ならば$c_n=0$ 
+    \item[{\rm ｂ）}] ~$\lambda=-\ell-1$のとき，$\left(n-2\ell-1\right)nc_n=0$ ，ゆえに$n\neq 0,2\ell+1$ならば$c_n=0$ 
+\end{description}
+このことから独立な2つの基本解として
+\begin{eqnarray}
+A_\ell\left(r\right)=r^\ell,~B_\ell\left(r\right)=r^{-\ell-1} \nonumber
+\end{eqnarray}
+が求められる。\\
+        
+        \item[{\rm （iii）}] 　次のように表される。
+\begin{eqnarray}
+\sin\theta\cos\phi &=& \frac{1}{2}\sin\theta\cdot e^{i\phi}+\frac{1}{2}\sin\cdot e^{-i\phi} \nonumber \\
+&=& -\sqrt{\frac{2\pi}{3}}Y_{1,1}\left( \theta,\varphi \right)+\sqrt{\frac{2\pi}{3}}Y_{1,-1}\left( \theta,\varphi \right) \nonumber \\
+&=& \sqrt{\frac{2\pi}{3}}\left\{-Y_{11}\left( \theta,\varphi \right)+Y_{1,-1}\left( \theta,\varphi \right)\right\} \nonumber
+\end{eqnarray}
+        
+        \item[{\rm （iv）}] 　直交条件より
+\begin{equation}
+\int {\d\Omega Y_{lm}\left( \theta,\varphi \right)U\left( b,\theta,\varphi \right)}=
+\left\{ {\begin{array}{*{20}r}
+   {\ds -\sqrt{\frac{2\pi}{3}}} & {\left( \ell=1,m=1 \right)}  \\
+   \cr
+   {\ds \sqrt{\frac{2\pi}{3}}} & {\left( \ell=1,m=-1 \right)}  \\
+   \cr
+   {\ds 0} & {\left( {\rm otherwise} \right)}  \\
+\end{array}} \right.\nonumber
+\end{equation}
+よって$U\left( {r,\theta ,\varphi } \right) = \sum\limits_{\ell = 0}^\infty  {\sum\limits_{m =  - \ell }^{\ell } {\left[ {\alpha _{\ell m} A_\ell \left( r \right) + \beta _{\ell m} B_\ell \left( r \right)} \right]Y_{\ell m} \left( {\theta ,\varphi } \right)} } $を代入して，
+\begin{eqnarray}
+\left\{
+\begin{array}{rrr}
+\ds \alpha_{11}\cdot a+\beta_{11}\cdot \frac{1}{a^2} &=& \ds 0 \\
+\cr
+\ds \alpha_{11}\cdot b+\beta_{11}\cdot \frac{1}{b^2} &=& \ds -\sqrt{\frac{2\pi}{3}} \\
+\end{array}
+\right.\nonumber\\
+\Longrightarrow~\alpha_{1,1}=-\frac{b^2}{b^3-a^3}\sqrt{\frac{2\pi}{3}},\quad 
+\beta_{1,1}=\frac{a^3b^2}{b^3-a^3}\sqrt{\frac{2\pi}{3}}. \nonumber
+\end{eqnarray}
+同様にして
+\begin{eqnarray}
+\alpha_{1,-1}=\frac{b^2}{b^3-a^3}\sqrt{\frac{2\pi}{3}},\quad 
+\beta_{1,-1}=-\frac{a^3b^2}{b^3-a^3}\sqrt{\frac{2\pi}{3}}. \nonumber
+\end{eqnarray}
+その他の$\alpha_{\ell m},\beta_{\ell m}$については$0$である。
+        
+    \end{description}
+    
+
+\end{answer}
+
+\end{document}
+

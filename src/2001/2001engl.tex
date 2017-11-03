@@ -1,0 +1,277 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\def\c{{\rm c}}
+\def\B{{\rm B}}
+\def\V{{\rm V}}
+\def\cm{{\rm cm}}
+
+
+%\newlength{\mminitcolumn}
+%\newcommand{\hrfigure}[3]{%
+%\setlength{\mminitcolumn}{0.5\textwidth}
+%\addtolength{\mminitcolumn}{-0.5\columnsep}%
+%\ \vspace*{0.1\baselineskip}\\
+%\begin{minipage}[h]{\mminitcolumn}
+%#1\end{minipage}%
+%\hspace{\columnsep}%
+%\begin{minipage}[h]{\mminitcolumn}
+%\begin{center}
+%\ \vspace*{2mm}\\
+%\vspace*{3mm}
+%\hspace{-1.5cm}\input{#2}\\
+%\refstepcounter{figure}
+%\vspace*{5mm}
+%FIG \thefigure:~#3
+%\vspace*{5mm}
+%\end{center}\end{minipage}\\%
+%\vspace*{-0.16\baselineskip}
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+\begin{document}
+
+%%%%%【英語（問）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}{英語}{第1問：八木，第2問：鈴木＋八木}
+%\begin{subquestions}
+
+%%%%%【第1問】%%%%%%
+
+%\SubQuestion
+
+［第1問］　次の文章は 1938 年に理論物理学者 Fritz London (1900-1954) が液体ヘリウムの超流動転移の物理的起源を解明した論文から抜粋したものである。これを読み，以下の設問 (i)，(ii)，(iii) に答えよ。\\
+\baselineskip=12pt
+
+\qquad In his well-known papers, Einstein has already discussed a peculiar condensation phenomenon of the `Bose-Einstein' gas; but in the course of time the degeneracy of the Bose-Einstein gas has rather got the reputation of having only a purely imaginary existence. Thus it is perhaps not generally known that this condensation phenomenon actually represents a discontinuity of the derivative of the specific heat (phase transition of third order). In the accompanying figure the specific heat $(C_\V)$ of an \textit{ideal} Bose-Einstein gas is represented as a function of $T/T_\c$ where
+\begin{eqnarray*}
+T_\c=\frac{h^2}{2\pi m^*k_B} {\left( \frac{n}{2.615} \right)}^{2/3} ,
+\end{eqnarray*}
+With $m^*$ = the mass of a He atom and with the molar volume $\ds \frac{N_l}{n}=27.6 \,\, \Unit{cm^3}$ one obtains $T_\c=3.09$ K. For $T\ll T_\c$ the specific heat is given by
+\begin{eqnarray*}
+C_\V=1.92R{\left(T/T_\c\right)}^{3/2}
+\end{eqnarray*}
+and for $T\gg T_\c$ by
+\begin{eqnarray*}
+C_\V=\frac{3}{2}R\left\{ 1 + 0.231{\left( \frac{T_\c}{T} \right) }^{3/2}
+        +0.046{\left(\frac{T_\c}{T}\right)}^3 + \cdots\right\}
+\end{eqnarray*}
+%}{2001engl.tpc}{}
+The entropy at the transition point $T_\c$ amounts to $1.28R$ independently of $T_\c$.\\
+
+\qquad  \underlinejpn[（ア）]{液体ヘリウムの \mbox{$\lambda$} (ラムダ) 点は実際にはむしろ 2 次の相転移に近いが，ボ－ス・アインシュタイン統計における凝縮現象との関係を連想しない方が難しいくらいである。 \mbox{$\lambda$} 点の温度 \mbox{$(2.17\Unit{K})$} とそこでのエントロピーの実験値 ( \mbox{$\sim 0.8 R$} ) はこの考えを支持している。ただし，液体ヘリウムを理想気体として扱うような現実に比べて単純化し過ぎたモデルの場合，高温で \mbox{$C_\V=(3/2)R$} となり，実験とは合わない。} And also for low temperatures the ideal Bose-Einstein gas must, of course, give too great a specific heat, since it does not account for the gradual `freezing in' of the Debye frequencies.
+
+\qquad According to our conception the quantum states of liquid helium would have to correspond, so to speak, to both the states of the electrons and to Debye vibrational states of the lattice in the theory of metals. It would, of course, be necessary to incorporate\underlineeng[（イ）]{this feature}into the theory before it can be expected to furnish quantitative insight into the properties of liquid helium.\\
+
+\begin{tabular}{ll}
+$\lambda$点：液体ヘリウムの超流動転移点 & $R$：気体定数\\
+Debye frequencies: デバイ周波数
+\end{tabular}
+\\\\
+
+（i）アインシュタインの理論はこの London の論文が発表されるまで，どのように受け取られていたか簡単に説明せよ。\\
+ 
+（ii）下線部（ア）を英訳せよ。\\
+ 
+（iii）下線部（イ）の this feature とは何を指すか，説明せよ。
+
+
+\newpage
+
+%%%%%【第2問】%%%%%%
+
+
+%\'ecrit par Ryo Suzuki 2002.3.9.
+%minipage environnement arrang\'e pour a4.
+%alignez les phrases soulign\'e quand vous compilez.
+
+%\SubQuestion
+
+［第2問］　次の文章は，米国のある大学の附属実験施設のユーザー向け安全教育資料からの抜粋である。この英文を読んで以下の設問（i），（ii）に答えよ。なお，*印のついた単語は文末の単語表を参考にしてよい。\\
+
+\baselineskip=12pt
+
+Welcome to SSSR*. We hope that your stay here will be enjoyable 
+as well as safe. These guidelines are intended to call your attention 
+to safety concerns which you may encounter at SSRL/SLAC* and to 
+encourage you to be alert for and avoid hazardous situations.\\
+
+{\bf Construction Safety}\\
+Construction sites often present unfamiliar hazards at SSRL. 
+\underlineeng[（ア）]{In general, you should detour around construction sites. If your 
+work requires you to enter a construction area, observe warning signs (HARD
+HAT* AREA, etc) and watch for hazards overhead and underfoot.} \\
+
+{\bf Cryogenic* Safety}\\
+The hazards form cryogenic substances are:
+\begin{quote}
+Extreme cold \-- Cryogenic liquid and their boil-off vapors can rapidly freeze 
+skin and eye tissue. Wear insulated gloves and safety glasses when 
+transferring liquid.\\
+Expansion ratio \-- Use properly designed dewars,* transfer lines with 
+properly designed safety devices in working order. Never trap cold liquid in a 
+closed volume without a relief valve. As the liquid warms the pressure can 
+increase 1000 fold.\\
+Asphyxiation* \-- In small spaces (such as experimental hutches) ensure 
+adequate ventilation. Boil-off vapors can displace air.
+\end{quote}
+
+{\bf Electrical equipment safety}\\
+Normal safe laboratory electrical practice is expected of all staff and users 
+at SSRL. The SSRL staff are available to assist with design and construction 
+of equipment, particularly with regard to interlocks and other safety aspects. 
+When working on equipment that could under unexpected energization or start up 
+release energy that may cause injury to personnel, then application of the 
+SLAC lock and tag program must take effect. \underlineeng[（イ）]{This program is 
+where the source of energy i.e. electrical pneumatic,* hydraulic* 
+is locked out in a safe position by the person working on the device. This 
+assures that control of the energy source remains in the hands of the person 
+person working on the equipment and that the hazard has been disabled.}\\
+
+Energy procedures:\underlineeng[（ウ）]{If you encounter someone hung up on a live 
+circuit, do not touch him! Either turn off the electrical source or use a 
+non-conducting pole to break the connection. If the person is unconscious perform CPR* 
+if necessary and call for help. After an electrical shock, keep 
+the victim warm and quiet. Get medical help.}\\
+
+
+%% 与えられた語彙
+
+\vspace{2mm}
+\begin{minipage}{8.0cm}
+SSRL: Stanford Synchrotron Radiation Laboratory\\
+SLAC: Stanford Linear Accelerator Center\\
+hard hat: ヘルメット\\
+cryogenic; 低温の\\
+dewar: デュワー（寒剤容器）\\
+\end{minipage}
+\begin{minipage}{7.2cm}
+asphyxiation: 窒息\\
+pneumatic: 空気圧の\\
+hydraulic: 水圧（油圧)の\\
+CPR: 心肺蘇生\\
+\end{minipage}
+
+%\begin{subsubquestions}
+%  \SubSubQuestion 下線部（ア)，（イ)，（ウ）を和訳せよ。\\
+%  \SubSubQuestion 寒剤の取り扱いに関する以下の質問に 20 words 以上の英文で答えよ。
+%\end{subsubquestions}
+%% 上はsubsubquestions環境を使った場合。
+
+（i）下線部（ア)，（イ)，（ウ）を和訳せよ。\\
+
+（ii）寒剤の取り扱いに関する以下の質問に 20 words 以上の英文で答えよ。
+\begin{quote}
+What kind of hazard is expected if cold liquid is trapped in a closed vessel 
+without a relief valve?
+\end{quote}
+
+%\end{subquestions}
+\end{question}
+
+
+%%%%%【英語（答）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{answer}{英語}{久松康子}
+
+%\begin{subanswers}
+
+%%%%%【第1問】%%%%%%
+%\SubAnswer 
+
+［第1問］
+
+\textbf{全訳}
+
+　アインシュタインは彼の有名な論文で，“ボーズ-アインシュタイン”気体の特殊な凝縮現象について既に議論しているが，やがて，ボーズ-アインシュタイン気体の縮退は，単なる仮想的な存在でしかないと幾分言われるようになった。このように，この凝縮現象が本当は，（3次の相転移である）比熱の微分係数の不連続性を表しているという事は，おそらく一般に知られていないのである。添付されている図で理想ボーズ－アインシュタイン気体の比熱が$T/T_\c$の関数として表されている。ここで，
+\begin{equation*}
+T_\c=\frac{h^2}{2\pi m^\ast k_\B}\left(\frac{n}{2.615}\right)^{2/3}.
+\end{equation*}
+$m^\ast $はヘリウム原子の質量で，1モル当たりの体積を$\ds \frac{N}{n} = 27.6 \Unit{cm^3}$として，$T_\c=3.09[\mathrm{K} ]$を得る。比熱は$T\ll T_\c$では，
+\begin{equation*}
+C_\V=1.92R\left(T/T_\c\right)^{3/2}
+\end{equation*}
+$T\gg T_\c$では，
+\begin{equation*}
+C_\V=\frac{3}{2}R\left\{ 1+0.231\left(\frac{T_\c}{T}\right)^{3/2}+0.046\left(\frac{T_\c}{T}\right)^{3}+ \cdots \right\} 
+\end{equation*}
+と与えられる。転移点$T_\c$でのエントロピーは，$T_\c$に関り無く$1.28R$に達する。\\
+　液体ヘリウムの$\lambda $（ラムダ）点は実際にはむしろ2次の相転移に近いが，ボーズ-アインシュタイン統計における凝縮現象との関係を連想しない方が難しいくらいである。$\lambda $点の温度（2.17~K）とそこでのエントロピーの実験値（$\sim 0.8R$）はこの考えを支持している。ただし，液体ヘリウムを理想気体として扱うような現実に比べて単純化し過ぎたモデルの場合，高温で$C_\V=(3/2)R$となり，実験とは合わない。そしてまた，理想ボーズ-アインシュタイン気体は，低温でもちろん大変高い比熱を与えなければならない。デバイ周波数から徐々に「凍結していく」事を説明しないからである。 \\
+　我々の考えからすると，液体ヘリウムの量子状態は，いわゆる，金属の理論においての結晶格子の電子状態とデバイ振動状態の両方に対応しなければならないであろう。もちろん，この特徴をその理論に組み入れる事が必要であり，そうして初めて金属の理論が液体ヘリウムの性質への定量的な洞察を与えると期待できるのである。
+
+\paragraph{解答例}
+
+\begin{enumerate}
+
+\item 　ボーズ－アインシュタイン気体は単なる仮想的な存在でしかない
+と受け取られていた。\\
+
+\item 　Actually the lambda point of liquid helium can be rather 
+represented as phase transition of second order, but it would be
+hard not to associate it with a condensation phenomenon in 
+Bose-Einstein statistics.  The temperature at the lambda point 
+and the experimental value of the entropy at the temperature support
+this idea.  Though the model dealing liquid helium as ideal gas 
+is much more simplified than actual case, one obtains 
+$C_\V=\frac{3}{2}R$ for high temperature, which doesn't correspond
+with the experimental value.\\
+ 
+\item 　液体ヘリウムの量子状態が金属の理論での電子状態と結晶格子
+のデバイ振動状態の両方に対応するという性質。\\
+
+\end{enumerate}
+
+\newpage
+
+%%%%%【第2問】%%%%%%
+%\SubAnswer
+
+［第2問］
+
+\textbf{全訳}
+
+　SSRLへようこそ。安全である事はもちろん楽しくこちらに滞在して頂ければと思います。これらのガイドラインにより，あなたがSSRL/SLACで直面するかもしれない安全に関する事柄へ注意を向け，そして危険な状況を注意して回避して欲しいと思います。\\
+
+{\bf 工事における安全}\\
+　工事現場ではしばしばSSRLで普段起こらない危険が引き起こされます。\underlinejpn[（ア）]{一般に，工事現場の周りを迂回して下さい。もしあなたの仕事が工事現場に入る必要のあるものであれば，警告の表示（ヘルメット着用領域など）をよく見て，頭上や足元でも危険に注意して下さい。}\\
+
+{\bf 低温についての安全}\\
+　低温物質による危険は次のようなものです。
+\begin{quote}
+極低温……低温の液体とその沸騰した蒸気で急速に皮膚や目の神経組織が凍り得ます。液体を移動させる時は，断熱性の手袋と安全メガネをつけて下さい。\\
+膨張率……適当に設計されたデュワーを用い，適当に設計された安全装置を稼動させて，導管を移動させて下さい。決して安全弁無しで密閉した容器に低温の液体を閉じ込めてはいけません。液体が温まるにつれて圧力は1000倍に上がり得ます。 \\
+窒息……（実験小屋といった）小さな空間では十分な換気を確実に行って下さい。蒸発した気体が空気を追い出す事がありえます。
+\end{quote}
+
+{\bf 電気機器の安全性}\\
+　SSRLの全てのスタッフと利用者は，実験室で正常に，安全に電気を使用するように求められています。SSRLのスタッフは機器の設計や組み立て，特に連動装置や他の安全面で手伝う事が出来ます。予期せぬエネルギー供給，つまり，人に怪我をさせる恐れのあるエネルギー解放を起こしうる機器で仕事をするときは，SLACロックや追跡用電子タグプログラムを利用すると必ず効果があるでしょう。\underlinejpn[（イ）]{このプログラムは，エネルギー源，即ち，電気，空気圧，水圧，をその機器で仕事をしている人によって安全な位置に締め出すものです。これによりエネルギー源の制御は，その機器で働く人の手に留まり災害が起こらなくなるのです。}\\
+
+　緊急時の手順：\underlinejpn[（ウ）]{もし誰かが電流の通じている回路上で動けなくなっているのに出くわしたら，その人に触れてはいけません！ 電源を切るか，絶縁体の棒を用いて接続を切って下さい。もしその人が意識不明であったら，必要であれば心配蘇生法を施し，助けを呼んで下さい。電気的なショックの後は，被害者を暖かく静かにさせて下さい。お医者さんを呼びましょう。}
+
+
+\paragraph{解答例}
+
+\begin{enumerate}
+
+\item 　全訳参照
+
+\item 　As the cold liquid warms the pressure in the vessel can 
+increase 1000 fold.  The high pressure may destroy the vessel, 
+which will cause injury to personnel.
+
+\end{enumerate}
+
+%\end{subanswers}
+\end{answer}
+
+\end{document}
+

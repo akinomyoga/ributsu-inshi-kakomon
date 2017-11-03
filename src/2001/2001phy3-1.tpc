@@ -1,0 +1,269 @@
+%WinTpicVersion3.08
+\unitlength 0.1in
+\begin{picture}( 40.0000, 14.0000)( 22.0000,-26.3000)
+% BOX 2 0 3 0
+% 2 2800 1800 3800 2200
+% 
+\special{pn 8}%
+\special{pa 2800 1800}%
+\special{pa 3800 1800}%
+\special{pa 3800 2200}%
+\special{pa 2800 2200}%
+\special{pa 2800 1800}%
+\special{fp}%
+% ELLIPSE 2 0 3 0
+% 4 5100 1800 4600 1700 4600 1800 4600 1800
+% 
+\special{pn 8}%
+\special{ar 5100 1800 500 100  0.0000000 6.2831853}%
+% LINE 2 0 3 0
+% 4 4600 1800 4600 2200 5600 1800 5600 2200
+% 
+\special{pn 8}%
+\special{pa 4600 1800}%
+\special{pa 4600 2200}%
+\special{fp}%
+\special{pa 5600 1800}%
+\special{pa 5600 2200}%
+\special{fp}%
+% ELLIPSE 2 0 3 0
+% 4 5100 2200 4600 2100 4600 2200 5600 2200
+% 
+\special{pn 8}%
+\special{ar 5100 2200 500 100  6.2831853 6.2831853}%
+\special{ar 5100 2200 500 100  0.0000000 3.1415927}%
+% STR 2 0 3 0
+% 3 3800 1300 3800 1400 2 0
+% óUìdëÃ $\epsilon_1$, $\mu_0$
+\put(38.0000,-14.0000){\makebox(0,0)[lb]{óUìdëÃ $\epsilon_1$, $\mu_0$}}%
+% STR 2 0 3 0
+% 3 3800 2700 3800 2800 2 0
+% ê^ãÛ $\epsilon_0$, $\mu_0$
+\put(38.0000,-28.0000){\makebox(0,0)[lb]{ê^ãÛ $\epsilon_0$, $\mu_0$}}%
+% LINE 3 0 3 0
+% 30 5190 1710 5010 1890 5130 1710 4960 1880 5070 1710 4900 1880 5010 1710 4840 1880 4940 1720 4790 1870 4880 1720 4740 1860 4810 1730 4690 1850 4740 1740 4650 1830 5240 1720 5070 1890 5300 1720 5130 1890 5360 1720 5190 1890 5410 1730 5260 1880 5460 1740 5320 1880 5510 1750 5390 1870 5550 1770 5460 1860
+% 
+\special{pn 4}%
+\special{pa 5190 1710}%
+\special{pa 5010 1890}%
+\special{fp}%
+\special{pa 5130 1710}%
+\special{pa 4960 1880}%
+\special{fp}%
+\special{pa 5070 1710}%
+\special{pa 4900 1880}%
+\special{fp}%
+\special{pa 5010 1710}%
+\special{pa 4840 1880}%
+\special{fp}%
+\special{pa 4940 1720}%
+\special{pa 4790 1870}%
+\special{fp}%
+\special{pa 4880 1720}%
+\special{pa 4740 1860}%
+\special{fp}%
+\special{pa 4810 1730}%
+\special{pa 4690 1850}%
+\special{fp}%
+\special{pa 4740 1740}%
+\special{pa 4650 1830}%
+\special{fp}%
+\special{pa 5240 1720}%
+\special{pa 5070 1890}%
+\special{fp}%
+\special{pa 5300 1720}%
+\special{pa 5130 1890}%
+\special{fp}%
+\special{pa 5360 1720}%
+\special{pa 5190 1890}%
+\special{fp}%
+\special{pa 5410 1730}%
+\special{pa 5260 1880}%
+\special{fp}%
+\special{pa 5460 1740}%
+\special{pa 5320 1880}%
+\special{fp}%
+\special{pa 5510 1750}%
+\special{pa 5390 1870}%
+\special{fp}%
+\special{pa 5550 1770}%
+\special{pa 5460 1860}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 10 2400 2000 2400 1600 2200 2400 2600 2400 3400 1800 3400 1800 3200 1800 3400 1800 3400 2200 3200 2200
+% 
+\special{pn 8}%
+\special{pa 2400 2000}%
+\special{pa 2400 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2400 1600}%
+\special{pa 2380 1668}%
+\special{pa 2400 1654}%
+\special{pa 2420 1668}%
+\special{pa 2400 1600}%
+\special{fp}%
+\special{pa 2200 2400}%
+\special{pa 2600 2400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2600 2400}%
+\special{pa 2534 2380}%
+\special{pa 2548 2400}%
+\special{pa 2534 2420}%
+\special{pa 2600 2400}%
+\special{fp}%
+\special{pa 3400 1800}%
+\special{pa 3400 1800}%
+\special{fp}%
+\special{pa 3200 1800}%
+\special{pa 3400 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3400 1800}%
+\special{pa 3334 1780}%
+\special{pa 3348 1800}%
+\special{pa 3334 1820}%
+\special{pa 3400 1800}%
+\special{fp}%
+\special{pa 3400 2200}%
+\special{pa 3200 2200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3200 2200}%
+\special{pa 3268 2220}%
+\special{pa 3254 2200}%
+\special{pa 3268 2180}%
+\special{pa 3200 2200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 2200 1500 2200 1600 2 0
+% $\hat {\boldsymbol x}$
+\put(22.0000,-16.0000){\makebox(0,0)[lb]{$\hat {\boldsymbol x}$}}%
+% STR 2 0 3 0
+% 3 2200 2500 2200 2600 2 0
+% $\hat {\boldsymbol t}$
+\put(22.0000,-26.0000){\makebox(0,0)[lb]{$\hat {\boldsymbol t}$}}%
+% STR 2 0 3 0
+% 3 5000 1500 5000 1600 2 0
+% $\Delta S$
+\put(50.0000,-16.0000){\makebox(0,0)[lb]{$\Delta S$}}%
+% VECTOR 2 0 3 0
+% 14 4000 2000 4000 1800 4000 2000 4000 2200 5800 2000 5800 1800 5800 2000 5800 2200 2800 1600 2800 1600 3200 1600 2800 1600 3200 1600 3800 1600
+% 
+\special{pn 8}%
+\special{pa 4000 2000}%
+\special{pa 4000 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4000 1800}%
+\special{pa 3980 1868}%
+\special{pa 4000 1854}%
+\special{pa 4020 1868}%
+\special{pa 4000 1800}%
+\special{fp}%
+\special{pa 4000 2000}%
+\special{pa 4000 2200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4000 2200}%
+\special{pa 4020 2134}%
+\special{pa 4000 2148}%
+\special{pa 3980 2134}%
+\special{pa 4000 2200}%
+\special{fp}%
+\special{pa 5800 2000}%
+\special{pa 5800 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 5800 1800}%
+\special{pa 5780 1868}%
+\special{pa 5800 1854}%
+\special{pa 5820 1868}%
+\special{pa 5800 1800}%
+\special{fp}%
+\special{pa 5800 2000}%
+\special{pa 5800 2200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 5800 2200}%
+\special{pa 5820 2134}%
+\special{pa 5800 2148}%
+\special{pa 5780 2134}%
+\special{pa 5800 2200}%
+\special{fp}%
+\special{pa 2800 1600}%
+\special{pa 2800 1600}%
+\special{fp}%
+\special{pa 3200 1600}%
+\special{pa 2800 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2800 1600}%
+\special{pa 2868 1620}%
+\special{pa 2854 1600}%
+\special{pa 2868 1580}%
+\special{pa 2800 1600}%
+\special{fp}%
+\special{pa 3200 1600}%
+\special{pa 3800 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3800 1600}%
+\special{pa 3734 1580}%
+\special{pa 3748 1600}%
+\special{pa 3734 1620}%
+\special{pa 3800 1600}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 4100 2100 4100 2200 2 0
+% $\delta$
+\put(41.0000,-22.0000){\makebox(0,0)[lb]{$\delta$}}%
+% STR 2 0 3 0
+% 3 5900 2100 5900 2200 2 0
+% $\delta$
+\put(59.0000,-22.0000){\makebox(0,0)[lb]{$\delta$}}%
+% STR 2 0 3 0
+% 3 3200 1400 3200 1500 2 0
+% $\Delta l$
+\put(32.0000,-15.0000){\makebox(0,0)[lb]{$\Delta l$}}%
+% ELLIPSE 2 0 3 0
+% 4 5100 2000 4600 1900 4600 2000 5600 2000
+% 
+\special{pn 8}%
+\special{ar 5100 2000 500 100  6.2831853 6.2831853}%
+\special{ar 5100 2000 500 100  0.0000000 3.1415927}%
+% LINE 2 0 3 0
+% 4 2200 2000 4600 2000 5600 2000 6200 2000
+% 
+\special{pn 8}%
+\special{pa 2200 2000}%
+\special{pa 4600 2000}%
+\special{fp}%
+\special{pa 5600 2000}%
+\special{pa 6200 2000}%
+\special{fp}%
+% LINE 2 2 3 0
+% 2 4600 2000 5600 2000
+% 
+\special{pn 8}%
+\special{pa 4600 2000}%
+\special{pa 5600 2000}%
+\special{dt 0.045}%
+% STR 2 0 3 0
+% 3 2700 1600 2700 1700 5 0
+% A
+\put(27.0000,-17.0000){\makebox(0,0){A}}%
+% STR 2 0 3 0
+% 3 3900 1600 3900 1700 5 0
+% B
+\put(39.0000,-17.0000){\makebox(0,0){B}}%
+% STR 2 0 3 0
+% 3 3900 2200 3900 2300 5 0
+% C
+\put(39.0000,-23.0000){\makebox(0,0){C}}%
+% STR 2 0 3 0
+% 3 2700 2200 2700 2300 5 0
+% D
+\put(27.0000,-23.0000){\makebox(0,0){D}}%
+\end{picture}%

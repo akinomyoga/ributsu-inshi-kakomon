@@ -1,0 +1,190 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(34.00,26.90)(0.00,-30.00)
+% BOX 2 0 3 0
+% 2 1200 795 3400 2795
+% 
+\special{pn 8}%
+\special{pa 1200 395}%
+\special{pa 3400 395}%
+\special{pa 3400 2395}%
+\special{pa 1200 2395}%
+\special{pa 1200 395}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1200 1795 3400 1795
+% 
+\special{pn 8}%
+\special{pa 1200 1395}%
+\special{pa 3400 1395}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2200 2795 2200 795
+% 
+\special{pn 8}%
+\special{pa 2200 2395}%
+\special{pa 2200 395}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 3200 2795 3200 795
+% 
+\special{pn 8}%
+\special{pa 3200 2395}%
+\special{pa 3200 395}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 2200 2895 2200 2995 5 0
+% $1$
+\put(22.0000,-25.9500){\makebox(0,0){$1$}}%
+% STR 2 0 3 0
+% 3 3200 2895 3200 2995 5 0
+% $2$
+\put(32.0000,-25.9500){\makebox(0,0){$2$}}%
+% STR 2 0 3 0
+% 3 1600 2900 1600 3000 5 0
+% $T/T_\c \to$
+\put(16.0000,-26.0000){\makebox(0,0){$T/T_\c \to$}}%
+% STR 2 0 3 0
+% 3 1000 1695 1000 1795 5 0
+% $1$
+\put(10.0000,-13.9500){\makebox(0,0){$1$}}%
+% STR 2 0 3 0
+% 3 1000 695 1000 795 5 0
+% $2$
+\put(10.0000,-3.9500){\makebox(0,0){$2$}}%
+% STR 2 0 3 0
+% 3 910 930 910 1030 5 0
+% $\uparrow $
+\put(9.1000,-6.3000){\makebox(0,0){$\uparrow $}}%
+% STR 2 0 3 0
+% 3 900 1220 900 1320 5 0
+% $\ds \frac{C_\V}{R}$
+\put(9.0000,-9.2000){\makebox(0,0){$\ds \frac{C_\V}{R}$}}%
+% SPLINE 2 0 3 0
+% 4 2200 940 2680 1250 3320 1380 3320 1380
+% 
+\special{pn 8}%
+\special{pa 2200 540}%
+\special{pa 2226 560}%
+\special{pa 2252 580}%
+\special{pa 2278 600}%
+\special{pa 2304 619}%
+\special{pa 2330 639}%
+\special{pa 2356 658}%
+\special{pa 2382 677}%
+\special{pa 2408 695}%
+\special{pa 2435 713}%
+\special{pa 2462 731}%
+\special{pa 2489 748}%
+\special{pa 2516 765}%
+\special{pa 2543 781}%
+\special{pa 2571 797}%
+\special{pa 2599 812}%
+\special{pa 2627 826}%
+\special{pa 2655 839}%
+\special{pa 2684 852}%
+\special{pa 2713 863}%
+\special{pa 2743 874}%
+\special{pa 2773 884}%
+\special{pa 2803 894}%
+\special{pa 2833 902}%
+\special{pa 2864 911}%
+\special{pa 2895 918}%
+\special{pa 2926 925}%
+\special{pa 2957 931}%
+\special{pa 2989 937}%
+\special{pa 3021 943}%
+\special{pa 3053 948}%
+\special{pa 3085 952}%
+\special{pa 3117 957}%
+\special{pa 3149 961}%
+\special{pa 3181 965}%
+\special{pa 3214 969}%
+\special{pa 3246 972}%
+\special{pa 3279 976}%
+\special{pa 3311 979}%
+\special{pa 3320 980}%
+\special{sp}%
+% SPLINE 2 0 3 0
+% 5 1200 2800 1280 2770 1420 2650 2200 940 2200 940
+% 
+\special{pn 8}%
+\special{pa 1200 2400}%
+\special{pa 1231 2390}%
+\special{pa 1261 2379}%
+\special{pa 1289 2365}%
+\special{pa 1316 2348}%
+\special{pa 1341 2329}%
+\special{pa 1365 2308}%
+\special{pa 1388 2285}%
+\special{pa 1411 2261}%
+\special{pa 1432 2236}%
+\special{pa 1453 2211}%
+\special{pa 1474 2186}%
+\special{pa 1495 2161}%
+\special{pa 1515 2136}%
+\special{pa 1534 2110}%
+\special{pa 1553 2084}%
+\special{pa 1572 2058}%
+\special{pa 1591 2032}%
+\special{pa 1609 2006}%
+\special{pa 1627 1979}%
+\special{pa 1644 1952}%
+\special{pa 1661 1925}%
+\special{pa 1678 1898}%
+\special{pa 1694 1870}%
+\special{pa 1710 1843}%
+\special{pa 1726 1815}%
+\special{pa 1741 1787}%
+\special{pa 1756 1759}%
+\special{pa 1771 1731}%
+\special{pa 1786 1702}%
+\special{pa 1800 1674}%
+\special{pa 1814 1645}%
+\special{pa 1828 1616}%
+\special{pa 1841 1587}%
+\special{pa 1854 1558}%
+\special{pa 1867 1529}%
+\special{pa 1880 1499}%
+\special{pa 1893 1470}%
+\special{pa 1905 1440}%
+\special{pa 1917 1410}%
+\special{pa 1929 1380}%
+\special{pa 1941 1350}%
+\special{pa 1952 1320}%
+\special{pa 1963 1290}%
+\special{pa 1974 1260}%
+\special{pa 1985 1229}%
+\special{pa 1996 1199}%
+\special{pa 2007 1168}%
+\special{pa 2017 1138}%
+\special{pa 2028 1107}%
+\special{pa 2038 1076}%
+\special{pa 2048 1045}%
+\special{pa 2058 1014}%
+\special{pa 2068 983}%
+\special{pa 2078 952}%
+\special{pa 2087 921}%
+\special{pa 2097 890}%
+\special{pa 2106 859}%
+\special{pa 2116 828}%
+\special{pa 2125 796}%
+\special{pa 2134 765}%
+\special{pa 2144 734}%
+\special{pa 2153 702}%
+\special{pa 2162 671}%
+\special{pa 2171 640}%
+\special{pa 2180 608}%
+\special{pa 2189 577}%
+\special{pa 2198 545}%
+\special{pa 2200 540}%
+\special{sp}%
+% STR 2 0 3 0
+% 3 1330 3100 1330 3200 1 0
+% \small{\textsc{Specific heat of an ideal Bose-}}
+\put(13.3000,-28.0000){\makebox(0,0)[lt]{\small{\textsc{Specific heat of an ideal Bose-}}}}%
+% STR 2 0 3 0
+% 3 1920 3300 1920 3400 1 0
+% \small{\textsc{Einstein gas.}}
+\put(19.2000,-30.0000){\makebox(0,0)[lt]{\small{\textsc{Einstein gas.}}}}%
+\end{picture}%

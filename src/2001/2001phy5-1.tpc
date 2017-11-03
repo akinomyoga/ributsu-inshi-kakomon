@@ -1,0 +1,133 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(24.65,14.05)(2.80,-28.95)
+% VECTOR 2 0 3 0
+% 2 510 2195 1320 2195
+% 
+\special{pn 8}%
+\special{pa 510 1795}%
+\special{pa 1320 1795}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1320 1795}%
+\special{pa 1253 1775}%
+\special{pa 1267 1795}%
+\special{pa 1253 1815}%
+\special{pa 1320 1795}%
+\special{fp}%
+% CIRCLE 2 0 2 0
+% 4 510 2195 560 2255 640 2345 640 2345
+% 
+\special{pn 8}%
+\special{sh 0}%
+\special{ar 510 1795 78 78  0.0000000 6.2831853}%
+% VECTOR 2 0 3 0
+% 2 2310 2195 1500 2197
+% 
+\special{pn 8}%
+\special{pa 2310 1795}%
+\special{pa 1500 1797}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1500 1797}%
+\special{pa 1567 1817}%
+\special{pa 1553 1797}%
+\special{pa 1567 1777}%
+\special{pa 1500 1797}%
+\special{fp}%
+% CIRCLE 2 0 2 0
+% 4 2310 2195 2260 2135 2180 2046 2180 2046
+% 
+\special{pn 8}%
+\special{sh 0}%
+\special{ar 2310 1795 78 78  0.0000000 6.2831853}%
+% STR 2 0 3 0
+% 3 910 1975 910 2075 5 0
+% ${E_p}^\prime$
+\put(9.1000,-16.7500){\makebox(0,0){${E_p}^\prime$}}%
+% STR 2 0 3 0
+% 3 1880 1975 1880 2075 5 0
+% ${E_p}^\prime$
+\put(18.8000,-16.7500){\makebox(0,0){${E_p}^\prime$}}%
+% CIRCLE 2 0 3 0
+% 4 1200 3000 1250 3060 1330 3150 1330 3150
+% 
+\special{pn 8}%
+\special{ar 1200 2600 78 78  0.0000000 6.2831853}%
+% CIRCLE 2 0 3 0
+% 4 1600 3000 1550 2940 1470 2851 1470 2851
+% 
+\special{pn 8}%
+\special{ar 1600 2600 78 78  0.0000000 6.2831853}%
+% STR 2 0 3 0
+% 3 510 1875 510 1975 5 0
+% p
+\put(5.1000,-15.7500){\makebox(0,0){p}}%
+% STR 2 0 3 0
+% 3 2310 1885 2310 1985 5 0
+% p
+\put(23.1000,-15.8500){\makebox(0,0){p}}%
+% STR 2 0 3 0
+% 3 1000 2900 1000 3000 5 0
+% p
+\put(10.0000,-26.0000){\makebox(0,0){p}}%
+% STR 2 0 3 0
+% 3 1800 2900 1800 3000 5 0
+% p
+\put(18.0000,-26.0000){\makebox(0,0){p}}%
+% CIRCLE 2 0 3 0
+% 4 1400 3200 1440 3240 1430 3230 1430 3230
+% 
+\special{pn 8}%
+\special{ar 1400 2800 57 57  0.0000000 6.2831853}%
+% STR 2 0 3 0
+% 3 1400 3280 1400 3380 5 0
+% $\pi^0$
+\put(14.0000,-29.8000){\makebox(0,0){$\pi^0$}}%
+% STR 2 0 3 0
+% 3 3000 2100 3000 2200 5 0
+% ”½‰ž‘O
+\put(30.0000,-18.0000){\makebox(0,0){”½‰ž‘O}}%
+% STR 2 0 3 0
+% 3 3000 3100 3000 3200 5 0
+% ”½‰žŒã
+\put(30.0000,-28.0000){\makebox(0,0){”½‰žŒã}}%
+% LINE 2 0 3 0
+% 2 1328 2430 1328 2570
+% 
+\special{pn 8}%
+\special{pa 1328 2030}%
+\special{pa 1328 2170}%
+\special{fp}%
+% LINE 2 0 3 0
+% 4 1395 2780 1260 2570 1260 2570 1328 2570
+% 
+\special{pn 8}%
+\special{pa 1395 2380}%
+\special{pa 1260 2170}%
+\special{fp}%
+\special{pa 1260 2170}%
+\special{pa 1328 2170}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1530 2570 1395 2780
+% 
+\special{pn 8}%
+\special{pa 1530 2170}%
+\special{pa 1395 2380}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1462 2570 1530 2570
+% 
+\special{pn 8}%
+\special{pa 1462 2170}%
+\special{pa 1530 2170}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1462 2430 1462 2570
+% 
+\special{pn 8}%
+\special{pa 1462 2030}%
+\special{pa 1462 2170}%
+\special{fp}%
+\end{picture}%

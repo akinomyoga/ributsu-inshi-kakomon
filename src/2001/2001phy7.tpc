@@ -1,0 +1,261 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(43.70,27.20)(12.30,-29.70)
+% DOT 0 0 3 0
+% 2 1400 2200 1400 2200
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1400 1800 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1400 1800 10 10 0  6.28318530717959E+0000}%
+% BOX 2 0 3 0
+% 2 2200 2200 5400 2280
+% 
+\special{pn 8}%
+\special{pa 2200 1800}%
+\special{pa 5400 1800}%
+\special{pa 5400 1880}%
+\special{pa 2200 1880}%
+\special{pa 2200 1800}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2200 1600 5400 1680
+% 
+\special{pn 8}%
+\special{pa 2200 1200}%
+\special{pa 5400 1200}%
+\special{pa 5400 1280}%
+\special{pa 2200 1280}%
+\special{pa 2200 1200}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2200 2800 5400 2880
+% 
+\special{pn 8}%
+\special{pa 2200 2400}%
+\special{pa 5400 2400}%
+\special{pa 5400 2480}%
+\special{pa 2200 2480}%
+\special{pa 2200 2400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 1400 2200 3720 1650
+% 
+\special{pn 8}%
+\special{pa 1400 1800}%
+\special{pa 3720 1250}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3720 1250}%
+\special{pa 3651 1246}%
+\special{pa 3668 1262}%
+\special{pa 3660 1285}%
+\special{pa 3720 1250}%
+\special{fp}%
+% LINE 3 0 3 0
+% 2 3800 2200 3800 800
+% 
+\special{pn 4}%
+\special{pa 3800 1800}%
+\special{pa 3800 400}%
+\special{fp}%
+% LINE 3 0 3 0
+% 2 3730 1600 3730 800
+% 
+\special{pn 4}%
+\special{pa 3730 1200}%
+\special{pa 3730 400}%
+\special{fp}%
+% CIRCLE 2 0 3 0
+% 4 1400 2200 3800 2200 3600 3400 3600 1000
+% 
+\special{pn 8}%
+\special{ar 1400 1800 2400 2400  5.7838386 6.2831853}%
+\special{ar 1400 1800 2400 2400  0.0000000 0.4993467}%
+% VECTOR 2 0 3 0
+% 2 3530 3310 3490 3370
+% 
+\special{pn 8}%
+\special{pa 3530 2910}%
+\special{pa 3490 2970}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3490 2970}%
+\special{pa 3544 2926}%
+\special{pa 3520 2926}%
+\special{pa 3510 2903}%
+\special{pa 3490 2970}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 3520 910 3720 910
+% 
+\special{pn 8}%
+\special{pa 3520 510}%
+\special{pa 3720 510}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3720 510}%
+\special{pa 3653 490}%
+\special{pa 3667 510}%
+\special{pa 3653 530}%
+\special{pa 3720 510}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 4000 910 3800 910
+% 
+\special{pn 8}%
+\special{pa 4000 510}%
+\special{pa 3800 510}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3800 510}%
+\special{pa 3867 530}%
+\special{pa 3853 510}%
+\special{pa 3867 490}%
+\special{pa 3800 510}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 3910 720 3910 820 2 0
+% サジッタ：$S$
+\put(39.1000,-4.2000){\makebox(0,0)[lb]{サジッタ：$S$}}%
+% CIRCLE 2 0 3 0
+% 4 5300 1100 5371 1029 5371 1029 5371 1029
+% 
+\special{pn 8}%
+\special{ar 5300 700 100 100  0.0000000 6.2831853}%
+% LINE 2 0 3 0
+% 2 5371 1029 5229 1171
+% 
+\special{pn 8}%
+\special{pa 5371 629}%
+\special{pa 5229 771}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 5229 1029 5371 1171
+% 
+\special{pn 8}%
+\special{pa 5229 629}%
+\special{pa 5371 771}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 5710 1000 5710 1100 5 0
+% 磁場$\Vec{B}$
+\put(57.1000,-7.0000){\makebox(0,0){磁場$\Vec{B}$}}%
+% STR 2 0 3 0
+% 3 5600 1500 5600 1600 1 0
+% 測定器１
+\put(56.0000,-12.0000){\makebox(0,0)[lt]{測定器１}}%
+% STR 2 0 3 0
+% 3 5600 2100 5600 2200 1 0
+% 測定器２
+\put(56.0000,-18.0000){\makebox(0,0)[lt]{測定器２}}%
+% STR 2 0 3 0
+% 3 5600 2700 5600 2800 1 0
+% 測定器３
+\put(56.0000,-24.0000){\makebox(0,0)[lt]{測定器３}}%
+% VECTOR 2 0 3 0
+% 4 4600 2200 4600 1680 4600 1680 4600 2200
+% 
+\special{pn 8}%
+\special{pa 4600 1800}%
+\special{pa 4600 1280}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4600 1280}%
+\special{pa 4580 1347}%
+\special{pa 4600 1333}%
+\special{pa 4620 1347}%
+\special{pa 4600 1280}%
+\special{fp}%
+\special{pa 4600 1280}%
+\special{pa 4600 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4600 1800}%
+\special{pa 4620 1733}%
+\special{pa 4600 1747}%
+\special{pa 4580 1733}%
+\special{pa 4600 1800}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 4 4600 2800 4600 2280 4600 2280 4600 2800
+% 
+\special{pn 8}%
+\special{pa 4600 2400}%
+\special{pa 4600 1880}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4600 1880}%
+\special{pa 4580 1947}%
+\special{pa 4600 1933}%
+\special{pa 4620 1947}%
+\special{pa 4600 1880}%
+\special{fp}%
+\special{pa 4600 1880}%
+\special{pa 4600 2400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 4600 2400}%
+\special{pa 4620 2333}%
+\special{pa 4600 2347}%
+\special{pa 4580 2333}%
+\special{pa 4600 2400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 4710 1840 4710 1940 5 0
+% $L$
+\put(47.1000,-15.4000){\makebox(0,0){$L$}}%
+% STR 2 0 3 0
+% 3 4710 2440 4710 2540 5 0
+% $L$
+\put(47.1000,-21.4000){\makebox(0,0){$L$}}%
+% VECTOR 2 0 3 0
+% 2 1600 800 2200 800
+% 
+\special{pn 8}%
+\special{pa 1600 400}%
+\special{pa 2200 400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2200 400}%
+\special{pa 2133 380}%
+\special{pa 2147 400}%
+\special{pa 2133 420}%
+\special{pa 2200 400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 1600 800 1600 1400
+% 
+\special{pn 8}%
+\special{pa 1600 400}%
+\special{pa 1600 1000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1600 1000}%
+\special{pa 1620 933}%
+\special{pa 1600 947}%
+\special{pa 1580 933}%
+\special{pa 1600 1000}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 2330 700 2330 800 5 0
+% $x$
+\put(23.3000,-4.0000){\makebox(0,0){$x$}}%
+% STR 2 0 3 0
+% 3 1600 1400 1600 1500 5 0
+% $y$
+\put(16.0000,-11.0000){\makebox(0,0){$y$}}%
+% STR 2 0 3 0
+% 3 1910 1930 1910 2030 3 0
+% $R$
+\put(19.1000,-16.3000){\makebox(0,0)[rb]{$R$}}%
+% STR 2 0 3 0
+% 3 1400 2250 1400 2350 5 0
+% 中心
+\put(14.0000,-19.5000){\makebox(0,0){中心}}%
+% STR 2 0 3 0
+% 3 3650 3080 3650 3180 1 0
+% 荷電粒子
+\put(36.5000,-27.8000){\makebox(0,0)[lt]{荷電粒子}}%
+\end{picture}%

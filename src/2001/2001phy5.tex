@@ -1,0 +1,443 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\def\bm{\boldsymbol}
+\def\ds{\displaystyle}
+
+
+\newcommand{\no}{\nonumber \\}
+\newcommand{\R}[1]{(\mathrm{#1})}
+\newcommand{\siki}[1]{(\ref{#1})式}
+\newcommand{\sisuu}[1]{\times 10^{#1}}
+%% Defined by YAGI 
+
+\begin{document}
+
+%%%%%【問題5（問）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}{問題5}{岡村}
+\setcounter{equation}{0}
+
+　パイ中間子に関連する以下の問に，解答に至る筋道を添えて答えよ。
+
+\begin{enumerate}
+
+%%%%%%【1.】%%%%%%
+  \item 　陽子ビームを水素ターゲットに当てて中性パイ中間子$\pi^0$を生成するための，陽子ビーム運動エネルギーのしきい値を求めよ。但し，陽子の質量は$940~{\rm MeV}/c^2$，$\pi^0$の質量$(m_\pi)$は$135~{\rm MeV}/c^2$とする。（${\rm MeV}$は$10^6$電子ボルト）。\\
+  
+%%%%%%【2.】%%%%%%
+    \item 　$\pi^0$は2つの%% 原文では「２つの」と全角で書かれていた。
+    光子($\gamma$)に崩壊し，$\gamma$の角分布は$\pi^0$の静止系で等方的であることが知られている。\\
+  
+  \begin{enumerate}
+  
+%%%% a %%%%
+    \item 　エネルギー$E_\pi$の$\pi^0$からの崩壊における$\gamma$のエネルギー$E_\gamma$を，$\pi^0$の静止系での$\gamma$の放出角$\theta^*$（図参照）で表し，$E_\gamma$の分布が一様であることを示せ。\\
+    
+%%%% b %%%%
+    \item 　エネルギー$30~{\rm GeV}$の$\pi^0$の崩壊において，2光子の間の角度の最小値を求めよ（${\rm GeV}$は$10^9$電子ボルト）。\\
+    
+%%%% c %%%%
+    \item 　一般に，高エネルギー$\pi^0~\left( E_\pi \gg m_\pi c^2 \right)$の崩壊で2光子の間の角度分布は，その最小値の近くに鋭いピークを持つ。この理由を説明せよ。\\
+
+\end{enumerate}
+
+%%%%%%【3.】%%%%%%
+  \item 　重水素に負電荷のパイ中間子$\pi^-$を吸収させることによりパイ中間子原子が作られ，これが2個の中性子となる反応$\left( \pi^- + {\rm d} \to {\rm n} + {\rm n}\right)$が実際に観測されている。\\
+  
+    \begin{enumerate}
+    
+%%%% a %%%%
+    \item 　$\pi^-$のパリティを$P_\pi$としたとき，%%原文では「時」と漢字になっていた。
+    この反応の始状態の全角運動量とパリティを求めよ。ただし，この反応は$\pi^-$がパイ中間子原子の基底軌道に落ちてから起こるとし，また，$\pi^-$のスピンは$0$，重陽子は陽子と中性子の${}^3$S${}_1$%% 原文では${}^3S_1$とSはMathで書かれていた。
+    の束縛状態であり，陽子と中性子のパリティは等しいことが知られているものとする。\\
+    
+%%%% b %%%%
+    \item 　中性子はスピン$1/2$のフェルミ粒子であることから，終状態の全スピンと軌道角運動量の間にどのような関係があるかを述べよ。\\
+    
+%%%% c %%%%
+    \item 　全角運動量が保存されることから導かれる，終状態がとりうる可能な全スピンと軌道角運動量の組み合わせを全て記せ。\\
+%%%% d %%%%
+    \item 　これらより，$\pi^-$のパリティを決定せよ。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[hbt]
+\begin{center}
+%\caption[]{\label{}}
+%\vspace{1.0cm}
+\input{2001phy5.tpc}
+\vfill
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{question}
+
+%%%%%【問題5（答）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{answer}{問題5}{八木太}
+\setcounter{equation}{0}
+
+\begin{enumerate}
+
+%%%%%%【1.】%%%%%%
+  \item 　まず，重心系で
+\begin{equation}
+p+p \to p+p+\pi^0
+\end{equation}
+という反応を考察する。
+図\ref{重心系}のように，
+反応前は，
+2つの陽子が同じエネルギー${E_p}^\prime$で反対向き
+（互いに近づく向き）に運動する。
+そして${E_p}^\prime$がしきい値をとるとき，反応後は
+%図\ref{反応後}のように
+3粒子が静止する。
+
+\begin{figure}[htbp]
+    \centering
+    \input{2001phy5-1.tpc}
+    \vspace{3mm}
+    \caption{重心系から見た，最低エネルギーでの$\pi^0$生成反応}
+    \label{重心系}
+\end{figure}
+
+この場合についてエネルギー保存則を用いると，
+\begin{eqnarray}
+&&2{E_p}^\prime = 2{m_p}^2 c^2 + {m_{\pi}}^2 c^2 \no
+& & \cr
+&\Rightarrow & {E_p}^\prime = \frac{2{m_p}^2 c^2 + {m_{\pi}}^2 c^2}{2}
+\label{energy}
+\end{eqnarray}
+より，
+重心系で見たときの
+陽子のエネルギー${E_p}^\prime$のしきい値が求まった。
+
+ところで，反応前の陽子の速さを$v$とし，
+$\beta=v/c$，$\gamma=1/\sqrt{1-\beta^2}$
+とするとき，
+\begin{equation}
+{E_p}^\prime = m_p \gamma c^2
+\end{equation}
+という関係式に(2)式を代入して$\gamma$を求めることができる。
+\begin{equation}
+\gamma = \frac{{E_p}^\prime}{m_p c^2}
+    = \frac{2{m_p}^2 + {m_{\pi}}^2}{2m_p}
+\label{gamma1}
+\end{equation}
+
+次に，反応を実験室系で考察する。
+反応後の3粒子の実験室系での速さを$v$とするとき，
+$\gamma=1/\sqrt{1-(v/c)^2}$は，
+(4)式で求めた$\gamma$に等しい。
+このことに注意し，実験室系においてエネルギー保存則を用いると，
+\begin{eqnarray}
+T_p + 2 m_p c^2 
+  &=& 2 m_p \gamma c^2 + m_{\pi} \gamma c^2 \no
+% &=& (2 m_p + m_{\pi}) \gamma c^2 \no
+  &=& \frac{(2 m_p + m_{\pi})^2}{2 m_p} c^2 ,\no
+T_p
+% &=& \frac{4 m_p m_{\pi} + m_{\pi}^2}{2m_p} c^2 \no
+  &=& \left( 2m_{\pi} + \frac{m_{\pi}^2}{2m_p} \right) c^2 \no
+  &=& \left( 2 \times 135\R{MeV/c^2} 
+        + \frac{(135\R{MeV/c^2})^2}{2 \times 940\R{MeV/c^2}} \right) c^2 \no
+  &=& 280~\R{MeV}
+\end{eqnarray}
+より求めるべきしきい値が求まった。\\
+  
+%%%%%%【2.】%%%%%%
+  \item 　
+  
+  \begin{enumerate}
+  
+%%%% a %%%%
+    \item 　まず，$\pi^0$静止系で考える。
+崩壊において，$\pi^0$の静止エネルギー
+$m_{\pi}c^2$が2つの$\gamma$線のエネルギー${E_{\gamma}}^\prime$になるので，
+\begin{equation}
+{E_{\gamma}}^\prime=\frac{m_{\pi}c^2}{2}
+\label{E}
+\end{equation}
+である。また，運動量の大きさは，
+\begin{equation}
+{p_{\gamma}}^\prime
+= \frac{{E_{\gamma}}^\prime}{c}
+= \frac{m_{\pi}c}{2}
+\label{p}
+\end{equation}
+である。
+
+これらをローレンツ変換して実験室系でのエネルギー$E_{\gamma}$を求める。
+そのために，実験室系の$\pi^0$静止系に対する速度$\beta$，$\gamma$を求めたい。
+$\gamma$は，実験室系で見たときの$\pi^0$のエネルギーとの関係から
+次のように求まる。
+\begin{equation}
+E_{\pi}=m_{\pi}\gamma c^2\quad \Rightarrow \quad \gamma=\frac{E_{\pi}}{m_{\pi}c^2}
+\label{gamma}
+\end{equation}
+また，$\beta$は$\gamma$との関係から次のように求まる。
+\begin{equation}
+\gamma = \frac{1}{\sqrt{1-\beta^2}}\quad \Rightarrow \quad \beta = -\sqrt{1-\frac{1}{\gamma^2}}
+=-\sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
+=-\sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
+\label{beta}
+\end{equation}
+%
+(実験室系は重心系に対して，
+入射$\pi^0$粒子の運動方向と逆方向に動いているので，
+$\beta$の符号はマイナスになっている。)
+従ってローレンツ変換により，実験室系でのエネルギーは
+\begin{eqnarray}
+\frac{E_{\gamma}}{c}
+&=& \gamma \left( \frac{{E_{\gamma}}^\prime}{c} 
+        - \beta {p_{\gamma}}^\prime\cos\theta^*\right) \no
+&=& \frac{E_{\pi}}{m_{\pi}c^2} \left( \frac{m_{\pi}c}{2} 
+        + \sqrt{1-\left(\frac{m_{\pi}c}{E_{\pi}}\right)^2}
+        \frac{m_{\pi}c^2}{2c}\cos\theta^*\right) \no
+&=& \frac{E_{\pi}}{2c} \left( 1 
+        + \sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
+        \cos\theta^*\right)\no
+\Rightarrow E_{\gamma}
+&=&\frac{E_{\pi}}{2} \left( 1 
+        + \sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
+        \cos\theta^*\right)
+\label{エネルギー}
+\end{eqnarray}
+となる。
+
+
+
+次に，$\gamma$線の
+微小エネルギー幅$dE_{\gamma}$
+に対応する断面積を$d\sigma$とおくと，
+求めるスペクトルの縦軸にあたる量は$\ds \frac{d\sigma}{dE_{\gamma}}$であり，
+次のようにして計算できる。
+\begin{equation}
+\frac{d\sigma}{dE_{\gamma}}
+=\frac{d\sigma}{d\Omega}\frac{d\Omega}{d\theta^*}\frac{d\theta^*}{dE_{\gamma}}
+\label{計算方針}
+\end{equation}
+ただし，$d\Omega$は$\pi^0$静止系で見たときの微小立体角である。
+%
+まず，$\pi^0$静止系においては$\gamma$線の角分布は等方的であることから，
+\begin{equation}
+\frac{d\sigma}{d\Omega}=\mathrm{Const}
+\label{その1}
+\end{equation}
+である。
+%
+また，$\pi^0$静止系において，$\pi^0$の位置を中心とする半径1の球面のうち，
+$\theta^*$～$\theta^*+d\theta^*$に対応する部分の面積は
+$2\pi\sin\theta^* d\theta^*$であるから，
+\begin{equation}
+\frac{d\Omega}{d\theta^*}\propto \sin\theta^*
+\label{その2}
+\end{equation}
+である。
+%
+そして，(10)式より，
+\begin{equation}
+\frac{d\theta^*}{dE_{\gamma}}
+=\frac{1}{\ds \frac{dE_{\gamma}}{d\theta^*}}
+\propto \frac{1}{\sin\theta^*}
+\label{その3}
+\end{equation}
+である。
+従って，(12)式，(13)式，(14)式より，
+\begin{equation}
+\frac{d\sigma}{dE_{\gamma}}=\mathrm{Const}^\prime
+\end{equation}
+となり，$E_{\gamma}$の分布が一様であることが示された。\\
+    
+%%%% b %%%%
+    \item 　図\ref{崩壊}のように$x,y$方向及び角度$\theta_1,\theta_2$を定義する。
+\begin{figure}[htbp]
+    \centering
+    \input{2001phy5-2.tpc}
+    \caption{実験室系での$\pi^0$崩壊反応}
+    \label{崩壊}
+\end{figure}
+(6)式，(7)式，(8)式，(9)式を用いて，
+ローレンツ変換により，
+実験室系での$\gamma$の運動量の$x$方向成分を求めると，
+
+\begin{eqnarray}
+p_x 
+&=& \gamma \left( p^\prime\cos\theta^* 
+        - \beta \frac{{E_{\gamma}}^\prime}{c} \right) \no
+&=& \frac{E_{\pi}}{m_{\pi}c^2} \left( \frac{m_{\pi}c}{2}\cos\theta^* 
+        + \sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2}
+         \frac{m_{\pi}c}{2} \right) \no
+&=& \frac{E_{\pi}}{2c} \left( \cos\theta^* 
+        + \sqrt{1-\left(\frac{m_{\pi}c^2}{E_{\pi}}\right)^2} \right) \no
+&\simeq& \frac{E_{\pi}}{2c} \left( 1+\cos\theta^* \right) \label{px}\\
+& & \nonumber
+\end{eqnarray}
+
+ただし，$\pi^0$のエネルギー$E_{\pi}=30~\R{GeV}$は，
+$\pi^0$の静止エネルギー$m_{\pi}c^2=135~\R{MeV}$と比較して十分大きいと近似した。
+一方，$y$方向の運動量については，ローレンツ変換の影響を受けないので，
+\begin{equation}
+p_y=\frac{m_{\pi}c}{2}\sin\theta^*
+\end{equation}
+である。このことから，実験室系での角度$\theta_1$を求めると，
+\begin{equation}
+\tan\theta_1
+=\frac{p_y}{p_x}
+=\frac{\ds \frac{m_{\pi}c}{2}\sin\theta^*}%
+    {\ds \frac{E_{\pi}}{2c}\left( 1+\cos\theta^* \right)}
+=\frac{m_{\pi}c^2}{E_{\gamma}} \frac{\sin\theta^*}{1+\cos\theta^*}
+\end{equation}
+である。
+ただし，前述のように$m_{\pi}c^2\ll E_{\pi}$であるから，
+少なくとも2光子の成す角を最小値にするような$\theta^*$に対しては，
+$\tan\theta_1$の値は非常に小さく，
+\begin{equation}
+\theta_1
+\simeq \tan\theta_1
+= \frac{m_{\pi}c^2}{E_{\gamma}} \frac{\sin\theta^*}{1+\cos\theta^*}
+\label{theta1}
+\end{equation}
+と近似できる。
+同様にしてもう一方の$\gamma$の角度$\theta_2$についても求めると，
+\begin{equation}
+\theta_2
+\simeq  \frac{m_{\pi}c^2}{E_{\gamma}} \frac{\sin\theta^*}{1-\cos\theta^*}
+\label{theta2}
+\end{equation}
+となる。
+2光子の成す角は，(19)式+(20)式，で計算できて，
+
+\begin{eqnarray}
+\theta_1+\theta_2
+&=& \frac{m_{\pi}c^2}{E_{\gamma}} 
+    \left( \frac{\sin\theta^*}{1+\cos\theta^*} 
+    + \frac{\sin\theta^*}{1-\cos\theta^*} \right) \no
+&=& \frac{m_{\pi}c^2}{E_{\gamma}} \frac{2}{\sin\theta^*}
+\label{答え} \\
+&\ge& \frac{2m_{\pi}c^2}{E_{\gamma}} 
+    \qquad \Big(等号成立は\theta^*=\frac{\pi}{2}の時\Big)\no
+&=& \frac{2 \times 135~\R{MeV}}{30~\R{GeV}} \no
+&=& 9.0\sisuu{-3}~\R{rad}
+\end{eqnarray}
+より，2光子間の角度の最小値が求まった。\\
+
+%%%% c %%%%
+    \item 　$m_{\pi}c^2\ll E_{\pi}$が成り立ち，
+かつ放出角が$\theta^*=0,\pi$付近以外の値をとる場合について考える。
+このとき2光子間の角度は(21)式，のようになり，
+最小値と同程度のオーダーの非常に小さい値になる。
+$\pi^0$静止系においては$\gamma$線の角分布は等方的であるから，
+これは，放出角が$\theta^*=0,\pi$付近の値をとる
+場合を除く大部分の崩壊に対して，
+2光子間の角度がほぼ最小値に等しくなることを意味している。
+従って，角度分布は最小値付近に鋭いピークをもつ。\\
+
+  \end{enumerate}
+  
+  
+%%%%%%【3.】%%%%%%
+  \item 　
+
+
+\begin{enumerate}
+
+%%%% a %%%%
+    \item 　$\pi^-$がパイ中間子原子の基底状態に落ちてから反応が起こることから，
+$\pi^-$と$d$の間の軌道角運動量の大きさは0である。
+また，問題文にあるとおり，$\pi^-$のスピンの大きさは0である。
+そして，重陽子が$^3S_1$の束縛状態にあることから，
+重陽子のスピンの大きさ(陽子と中性子からなる系の全角運動量)は1である。
+以上の角運動量を全て合成すると，始状態の
+全角運動量の大きさは1であることがわかる。
+
+次にパリティを求める。
+一般に，n粒子から成る系のパリティ$P$は，
+それらの粒子間の相対運動の軌道角運動量の大きさを
+$l_1,l_2,…,l_N$(粒子数$n$のとき，独立な軌道角運動量の数$N$は，$N=n-1$)
+とし，それぞれの粒子のパリティを$P_1,P_2,…,P_n$とすると，
+\begin{equation}
+P=(-1)^{l_1+l_2+…+l_N}P_1P_2…P_n
+\end{equation}
+で表せる。
+
+重陽子が$^3S_1$の束縛状態にあることから
+陽子と中性子の間の軌道角運動量の大きさは0である。
+そして，陽子と中性子のパリティは等しいことから，
+重陽子のパリティは
+\begin{equation}
+P_d=(-1)^0P_pP_n=1
+\end{equation}
+である。
+一方，前述のように，$\pi^-$と$d$の間の軌道角運動量の大きさは0であるから，
+系全体のパリティは，
+\begin{equation}
+P=(-1)^0P_{d}P_{\pi}=P_{\pi}
+\label{始}
+\end{equation}
+である。\\
+
+    
+    
+%%%% b %%%%
+    \item 　まず，終状態の全スピンが1のときを考える。
+全スピンが1のとき，波動関数のスピン部分は粒子の入れ替えに関して対称である。
+一方，中性子がフェルミオンであることから，
+(スピン部分も含めた)波動関数が
+粒子の入れ替えに関して反対称である。
+従って，波動関数の空間部分は粒子の入れ替えに関して反対称でなければならない。
+そして，波動関数の空間部分が粒子の入れ替えに関して反対称なら，
+軌道角運動量の大きさは奇数である。
+以上より，終状態の全スピンが1のとき軌道角運動量の大きさは奇数である。
+
+一方，終状態の全スピンが0のとき，
+波動関数のスピン部分が粒子の入れ替えに関して反対称であることから，
+同様の議論により，
+軌道角運動量の大きさは偶数であることがわかる。\\
+
+    
+    
+%%%% c %%%%
+    \item 　全角運動量が保存されることから，終状態の全角運動量は1である。
+ここで，もし全スピンが0だとすると，全角運動量の大きさは
+軌道角運動量の大きさに一致する。ところが，(b)の結果より，全スピンが0のとき
+軌道角運動量は偶数でなければならないので，全角運動量は1になりえない。
+従って，全スピンは1であり，軌道角運動量は奇数である。
+ところで，軌道角運動量の大きさを$L$とすると，
+全スピンが1であることから，全角運動量の大きさは
+$L-1,L,L+1$のいずれかになる。
+従って，全角運動量が1になるためには，
+軌道角運動量の大きさも1でなくてはならない。
+以上より，可能な組み合わせは
+$S=1,L=1$のみである。\\
+
+%%%% d %%%%
+    \item 　軌道角運動量の大きさが1であることから，終状態のパリティは
+\begin{equation}
+P=(-1)^1P_nP_n=-1
+\label{終}
+\end{equation}
+である。
+この問題で考察している反応は，強い相互作用による反応であるから，
+反応の前後でパリティは保存する。
+(弱い相互作用による反応ではパリティが保存しないことがある。)
+従って，(25)式，と(26)式を等しいとおいて，
+\begin{equation}
+P_{\pi}=-1
+\end{equation}
+より$\pi^-$のパリティが決定された。\\
+
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+\end{answer}
+
+\end{document}

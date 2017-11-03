@@ -1,0 +1,360 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(29.95,16.85)(6.30,-22.00)
+% ELLIPSE 2 0 3 0
+% 4 1823 1094 1919 1188 1919 1094 1919 1094
+% 
+\special{pn 8}%
+\special{ar 1823 694 96 94  0.0000000 6.2831853}%
+% STR 2 0 3 0
+% 3 1823 1047 1823 1094 5 0
+% A
+\put(18.2300,-6.9400){\makebox(0,0){A}}%
+% ELLIPSE 2 0 3 0
+% 4 2594 1659 2981 2035 2981 1565 2981 1753
+% 
+\special{pn 8}%
+\special{ar 2594 1259 387 376  0.2455866 6.0375987}%
+% LINE 2 0 3 0
+% 2 2966 1565 3256 1565
+% 
+\special{pn 8}%
+\special{pa 2966 1165}%
+\special{pa 3256 1165}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2966 1753 3256 1753
+% 
+\special{pn 8}%
+\special{pa 2966 1353}%
+\special{pa 3256 1353}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 2498 1376 2691 1376
+% 
+\special{pn 13}%
+\special{pa 2498 976}%
+\special{pa 2691 976}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 2498 1376 2401 1471
+% 
+\special{pn 13}%
+\special{pa 2498 976}%
+\special{pa 2401 1071}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 2691 1376 2788 1471
+% 
+\special{pn 13}%
+\special{pa 2691 976}%
+\special{pa 2788 1071}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 2594 1753 2498 1941
+% 
+\special{pn 20}%
+\special{pa 2594 1353}%
+\special{pa 2498 1541}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 2594 1753 2691 1941
+% 
+\special{pn 20}%
+\special{pa 2594 1353}%
+\special{pa 2691 1541}%
+\special{fp}%
+% LINE 0 2 3 0
+% 2 2401 1659 2788 1659
+% 
+\special{pn 20}%
+\special{pa 2401 1259}%
+\special{pa 2788 1259}%
+\special{dt 0.054}%
+\special{pa 2788 1259}%
+\special{pa 2787 1259}%
+\special{dt 0.054}%
+% LINE 0 0 3 0
+% 2 1668 1627 1668 1690
+% 
+\special{pn 20}%
+\special{pa 1668 1227}%
+\special{pa 1668 1290}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 1495 1565 1495 1753
+% 
+\special{pn 13}%
+\special{pa 1495 1165}%
+\special{pa 1495 1353}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 1436 1627 1436 1690
+% 
+\special{pn 20}%
+\special{pa 1436 1227}%
+\special{pa 1436 1290}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 1610 1565 1610 1753
+% 
+\special{pn 13}%
+\special{pa 1610 1165}%
+\special{pa 1610 1353}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 1552 1627 1552 1690
+% 
+\special{pn 20}%
+\special{pa 1552 1227}%
+\special{pa 1552 1290}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 1726 1565 1726 1753
+% 
+\special{pn 13}%
+\special{pa 1726 1165}%
+\special{pa 1726 1353}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1726 1659 2401 1659
+% 
+\special{pn 8}%
+\special{pa 1726 1259}%
+\special{pa 2401 1259}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1919 1094 2594 1094
+% 
+\special{pn 8}%
+\special{pa 1919 694}%
+\special{pa 2594 694}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2594 1094 2594 1376
+% 
+\special{pn 8}%
+\special{pa 2594 694}%
+\special{pa 2594 976}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 3270 1612 3489 1612
+% 
+\special{pn 8}%
+\special{pa 3270 1212}%
+\special{pa 3489 1212}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 3270 1706 3489 1706
+% 
+\special{pn 8}%
+\special{pa 3270 1306}%
+\special{pa 3489 1306}%
+\special{fp}%
+% LINE 2 0 3 0
+% 4 3424 1565 3569 1659 3569 1659 3424 1753
+% 
+\special{pn 8}%
+\special{pa 3424 1165}%
+\special{pa 3569 1259}%
+\special{fp}%
+\special{pa 3569 1259}%
+\special{pa 3424 1353}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 2624 2412 2624 2600
+% 
+\special{pn 13}%
+\special{pa 2624 2012}%
+\special{pa 2624 2200}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 2565 2474 2565 2537
+% 
+\special{pn 20}%
+\special{pa 2565 2074}%
+\special{pa 2565 2137}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2691 1941 2691 2506
+% 
+\special{pn 8}%
+\special{pa 2691 1541}%
+\special{pa 2691 2106}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2498 1941 2498 2506
+% 
+\special{pn 8}%
+\special{pa 2498 1541}%
+\special{pa 2498 2106}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2691 2506 2624 2506
+% 
+\special{pn 8}%
+\special{pa 2691 2106}%
+\special{pa 2624 2106}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2498 2506 2565 2506
+% 
+\special{pn 8}%
+\special{pa 2498 2106}%
+\special{pa 2565 2106}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2498 2506 1244 2506
+% 
+\special{pn 8}%
+\special{pa 2498 2106}%
+\special{pa 1244 2106}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 1180 2474 1180 2537
+% 
+\special{pn 20}%
+\special{pa 1180 2074}%
+\special{pa 1180 2137}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 1123 2412 1123 2600
+% 
+\special{pn 13}%
+\special{pa 1123 2012}%
+\special{pa 1123 2200}%
+\special{fp}%
+% LINE 0 0 3 0
+% 2 1065 2474 1065 2537
+% 
+\special{pn 20}%
+\special{pa 1065 2074}%
+\special{pa 1065 2137}%
+\special{fp}%
+% LINE 1 0 3 0
+% 2 1239 2412 1239 2600
+% 
+\special{pn 13}%
+\special{pa 1239 2012}%
+\special{pa 1239 2200}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1436 1659 1340 1659
+% 
+\special{pn 8}%
+\special{pa 1436 1259}%
+\special{pa 1340 1259}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1340 1659 1340 2506
+% 
+\special{pn 8}%
+\special{pa 1340 1259}%
+\special{pa 1340 2106}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1726 1094 954 1094
+% 
+\special{pn 8}%
+\special{pa 1726 694}%
+\special{pa 954 694}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 954 1094 954 2506
+% 
+\special{pn 8}%
+\special{pa 954 694}%
+\special{pa 954 2106}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 954 2506 1065 2506
+% 
+\special{pn 8}%
+\special{pa 954 2106}%
+\special{pa 1065 2106}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1581 1442 1581 1489 5 0
+% $150\Unit{V}$
+\put(15.8100,-10.8900){\makebox(0,0){$150\Unit{V}$}}%
+% STR 2 0 3 0
+% 3 1170 2283 1170 2330 5 0
+% $20\Unit{V}$
+\put(11.7000,-19.3000){\makebox(0,0){$20\Unit{V}$}}%
+% STR 2 0 3 0
+% 3 4050 1613 4050 1660 5 0
+% 真空容器へ
+\put(40.5000,-12.6000){\makebox(0,0){真空容器へ}}%
+% VECTOR 2 0 3 0
+% 2 3078 1376 2744 1645
+% 
+\special{pn 8}%
+\special{pa 3078 976}%
+\special{pa 2744 1245}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2744 1245}%
+\special{pa 2808 1219}%
+\special{pa 2786 1212}%
+\special{pa 2783 1188}%
+\special{pa 2744 1245}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2981 1188 2701 1372
+% 
+\special{pn 8}%
+\special{pa 2981 788}%
+\special{pa 2701 972}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2701 972}%
+\special{pa 2768 952}%
+\special{pa 2746 943}%
+\special{pa 2746 919}%
+\special{pa 2701 972}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 2788 1094 2691 1287
+% 
+\special{pn 8}%
+\special{pa 2788 694}%
+\special{pa 2691 887}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2691 887}%
+\special{pa 2739 836}%
+\special{pa 2715 839}%
+\special{pa 2703 818}%
+\special{pa 2691 887}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 3078 1941 2657 1842
+% 
+\special{pn 8}%
+\special{pa 3078 1541}%
+\special{pa 2657 1442}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2657 1442}%
+\special{pa 2717 1477}%
+\special{pa 2709 1454}%
+\special{pa 2726 1438}%
+\special{pa 2657 1442}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 3096 1880 3096 1927 1 0
+% フィラメント
+\put(30.9600,-15.2700){\makebox(0,0)[lt]{フィラメント}}%
+% STR 2 0 3 0
+% 3 3000 1193 3000 1240 473 529
+% コレクター
+\put(30.0000,-8.4000){\makebox(0,0)[lb]{コレクター}}%
+% STR 2 0 3 0
+% 3 3096 1348 3096 1395 473 529
+% グリッド
+\put(30.9600,-9.9500){\makebox(0,0)[lb]{グリッド}}%
+% STR 2 0 3 0
+% 3 2754 1038 2754 1085 473 529
+% ガラス壁
+\put(27.5400,-6.8500){\makebox(0,0)[lb]{ガラス壁}}%
+\end{picture}%

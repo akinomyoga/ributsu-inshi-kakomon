@@ -1,0 +1,166 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\def\bm{\boldsymbol}
+\def\ds{\displaystyle}
+\def\B{\mathrm B}
+
+\begin{document}
+
+%%%%%【問題2（問）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}{問題2}{藤岡}
+\setcounter{equation}{0}
+
+　図のように，矢印で表される要素$N$個が$x$方向に繋がった鎖状分子を考える。各要素はそれぞれ長さ$b$で，矢印の先端に電荷$Q~(>0)$をもつ。各要素は，矢印が$+x$方向に向くか，$-x$方向に向くかの二つの状態のみ取りうるものとする。これを，$i$番目要素の状態変数$\mu_i$を導入し，$\mu_i=+1$または$-1$で表す。1番目要素の矢印の始点が点O~$(x=0)$に固定されていて，大きさ$E$の電場$(E\geq 0)$が$+x$の向きにかけられているものとする。また，この鎖状分子は温度$T$の熱浴に接しているものとする。\\
+　電荷は外部電場$E$とだけ相互作用し，電荷間の相互作用は無視できるものとする。また，$x$と垂直方向への分子の広がりは無視できるものとし，ボルツマン定数を$k_\B$として，以下の問に，解答に至る道筋を添えて答えよ。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[hbt]
+\begin{center}
+%\caption[]{\label{}}
+\vspace{0.5cm}
+\input{2001phy2-2.tpc}
+\vfill
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+    \item 　まず，$E=0$の場合を考える。\\
+%% 原文にはないが，ここで一行空けてある。
+
+    \begin{enumerate}
+        \item 　分子の端点の位置$x_N$の関数としてこの分子のエントロピー$S$を求めよ。ただし，$L=bN$とし，$N,x_N/b\gg 1$であるとして，必要であればStirlingの公式，すなわち，$x\gg 1$のとき
+        $$
+        \log x!\sim x\log x-x+\dots
+        $$
+        を用いよ。\\
+        
+        \item 　端点位置を$x_N$に保つために，この端点に加えなければならない力$X$と$x_N$との関係を導け。\\
+        
+        \item 　$N\gg x_N/b~(\gg 1)$の場合，$X$と$x_N$との関係式は近似的にどのように与えられるか。$x_N$を外力$X$に対する分子の伸びとみたとき，この分子はどのような弾性体と言えるか。\\
+\end{enumerate}
+
+    \item 　次に，$E>0$の場合を考える。\\
+    
+    \begin{enumerate}
+        \item 　$E$が与えられたもとでのこの鎖状分子の分配関数$Z_N$を，変数$A\equiv bQE/k_\B T$を用いて表せ。\\
+        
+        \item 　$i$番目要素の$\mu_i$の平均値$\langle \mu_i\rangle$を求めよ。\\
+        
+        \item 　この鎖状分子の長さの平均値$\langle x_N\rangle$について，電場が十分小さい極限，$NA\ll 1$，での表式を求めよ。$\langle x_N\rangle$を外力の総和$NQE$に対する分子の伸びとみたとき，前問1~(c)との関連を論ぜよ。\\
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{question}
+
+%%%%%【問題2（答）】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{answer}{問題2}{湯淺吉晴}
+\setcounter{equation}{0}
+
+$+x$方向を向く要素の個数を$N_+$，$-x$方向を向く要素の個数を$N_-$とする。
+\begin{align}
+N &= N_+ + N_- , & x_N &= b(N_+ - N_-) 
+\end{align}
+\begin{align}
+より\quad N_+ = \frac{bN + x_N}{2b} &= \frac{N}{2}\left(1 + \frac{x_N}{L}\right), & N_+ = \frac{bN - x_N}{2b} &= \frac{N}{2}\left(1 - \frac{x_N}{L}\right)
+\end{align}
+\vspace{1mm}
+\begin{enumerate}
+    \item 　$E = 0$の場合
+
+    \begin{enumerate}
+        \item 　$N,\;|x_N| / b \gg 1$より$N_+,\;N_- \gg 1$としてStirlingの公式を用いると
+\begin{align}
+S &= k_B\log W, \qquad W = \frac{N!}{N_+!\,N_-!} &&  \\
+S &= k_B\left(\log N!\, - \log N_+!\, - \log N_-!\,\right) && \nonumber \\
+  &\simeq k_B\left(N\log N - N - N_+\log N_+ + N_+ - N_-\log N_- + N_-\right) && \nonumber \\
+  &= k_B\left(N\log N - N_+\log N_+ - N_-\log N_- \right) && \nonumber \\
+  &= k_B\left[N\log N - \frac{N}{2}\left(1 + \frac{x_N}{L}\right)\log \left\{\frac{N}{2}\left(1 + \frac{x_N}{L}\right)\right\} - \frac{N}{2}\left(1 - \frac{x_N}{L}\right)\log \left\{\frac{N}{2}\left(1 - \frac{x_N}{L}\right)\right\} \right] && \nonumber \\
+  \begin{split}
+  &= k_B\left[N\log N - \frac{N}{2}\left(1 + \frac{x_N}{L}\right)\log \frac{N}{2} - \frac{N}{2}\left(1 + \frac{x_N}{L}\right)\log \left(1 + \frac{x_N}{L}\right)\right.  \\
+  &\qquad\qquad\qquad\;\; \left. - \,\frac{N}{2}\left(1 - \frac{x_N}{L}\right)\log \frac{N}{2} - \frac{N}{2}\left(1 - \frac{x_N}{L}\right)\log \left(1 - \frac{x_N}{L}\right) \right]
+  \end{split}
+  \nonumber && \\
+  &= k_BN\left[\log 2 - \frac{1}{2}\left(1 + \frac{x_N}{L}\right)\log \left(1 + \frac{x_N}{L}\right) - \frac{1}{2}\left(1 - \frac{x_N}{L}\right)\log \left(1 - \frac{x_N}{L}\right)\right] && 
+\end{align}
+        \vspace{1mm}
+        \item 　$E = 0$なので，内部エネルギー$U$は分子の形状によらない。Helmholtzの自由エネルギー$F = U - TS$，$dF = -SdT + Xdx_N$より外力$X$を求めると次のようになる。
+\begin{align}
+X = \left.\frac{\partial F}{\partial x_N}\right|_T 
+ &= - T\left.\frac{\partial S}{\partial x_N}\right|_T  \\
+ &= k_BTN\left[\frac{1}{2L}\log \left(1 + \frac{x_N}{L}\right) + \frac{1}{2L} - \frac{1}{2L}\log \left(1 - \frac{x_N}{L}\right) - \frac{1}{2L}\right] \nonumber \\
+ &= \frac{k_BT}{2b}\log \dfrac{1 + x_N / L}{1 - x_N / L}
+\end{align}
+        
+        \item 　$x_N / L \ll 1$のとき
+\begin{align}
+X &= \frac{k_BT}{2b}\left[\log \left(1 + \frac{x_N}{L}\right) - \log \left(1 - \frac{x_N}{L}\right)\right] \simeq \frac{k_BT}{2b}\left(\frac{x_N}{L} + \frac{x_N}{L}\right) = \frac{k_BT}{Nb^2}x_N \label{1c}
+\end{align}
+関係式$(7)$はこの分子がHookeの法則（外力$X$が変位$x_N$に比例する）に従うゴム状の弾性体であることを表している。\\
+\end{enumerate}
+
+    \item 　$E > 0$の場合
+    
+    \begin{enumerate}
+        \item 　$x_i = bm_i$とする。
+\begin{equation}
+\sum_{i=1}^{N}m_i = \sum_{i=1}^{N}\sum_{j=1}^{i}\mu_j = \sum_{i=1}^{N}(N + 1 - i)\mu_i
+\end{equation}
+より，エネルギーを$H( = U)$として
+\begin{equation}
+-\beta H = \frac{bQE}{k_BT}\sum_{i=1}^{N}m_i = A\sum_{i=1}^{N}(N + 1 - i)\mu_i
+\end{equation}
+したがって，分配関数$Z_N$は
+\begin{align}
+Z_N &= \sum_{\mu_i = \pm 1}e^{- \beta H} \\
+ &= \bigl(e^{NA} + e^{- NA}\bigr)\bigl(e^{(N - 1)A} + e^{- (N - 1)A}\bigr)\cdots \bigl(e^{A} + e^{- A}\bigr) \nonumber \\
+ &= \prod_{l = 1}^{N}\left(e^{lA} + e^{- lA}\right) \label{z1}
+\end{align}
+        
+        \item 　$(11)$より$\mu_i$の平均値は
+\begin{equation}
+\left\langle \mu_i \right\rangle = \dfrac{e^{A(N + 1 - i)} - e^{- A(N + 1 - i)}}{e^{A(N + 1 - i)} + e^{- A(N + 1 - i)}} = \tanh A(N + 1 - i)
+\end{equation}
+となる。\\
+        
+        \item 　$|x| \ll 1$のとき，$\tanh x \simeq x - x^3/3$なので，電場が十分小さい極限$NA \ll 1$で
+\begin{align}
+\left\langle x_N \right\rangle &= b\biggl\langle \sum_{i = 1}^{N}\mu_i \biggr\rangle = b\sum_{i = 1}^{N}\left\langle \mu_i \right\rangle = b\sum_{i = 1}^{N}\tanh A(N + 1 - i) \nonumber \\
+ &\simeq b\sum_{i = 1}^{N}A(N + 1 - i) = \frac12N(N + 1)Ab = \frac{(N + 1)b^2}{2k_BT}(NQE) \\
+NQE &\simeq \frac{2k_BT}{Nb^2}\left\langle x_N \right\rangle \qquad \text{($N \gg 1$)}
+\label{2c}
+\end{align}
+$(14)$の外力$NQE$は微視的な力の合力である。一方，$(7)$の外力$X$は，$dF = -SdT + Xdx_N$で定まる巨視的な熱，統計力学的力である。$(7)$と$(14)$を比較すると，外力の総和$NQE$は端点に働く$X = NQE/2$の張力に相当することが分かる。$1/2$の因子がついたのは，始点に近い要素$i$の電荷に働く力が，実効的な張力$X$にほとんど寄与しないためである。 
+\end{enumerate}
+%%
+\paragraph{補足}前問1~(c)~$E = 0$で，一定の外力$X$が端点に働いている場合，$X$一定のカノニカル分布（このとき，エネルギー$H$（$U$）は一定なので考えなくて良い）により，鎖状分子の長さ$\left\langle x_N \right\rangle$を求めると次のようになる。
+\begin{align}
+Z_N &= \sum_{x_N}We^{\beta Xx_N} \qquad (\text{$W$は端点位置が$x_N$となる状態数})\nonumber \\
+ &= \sum_{\mu_i = \pm 1}\exp \biggl(\beta Xb\sum_i\mu_i\biggr) = {\left(e^{\beta Xb} + e^{-\beta Xb}\right)}^N = 2^N{\left(\cosh \beta Xb\right)}^N \\
+\left\langle x_N \right\rangle &= \frac{1}{\beta}\frac{\partial \log Z_N}{\partial X} = Nb\tanh (\beta Xb) \simeq \frac{Nb^2}{k_BT}X \label{a1}
+\end{align}
+$(16)$の最後で$\beta Xb \ll 1$とした。これは1(c)の$N \gg x_N/b$に対応する。よって
+\begin{equation}
+X = \frac{k_BT}{Nb^2}\left\langle x_N \right\rangle
+\label{a2}
+\end{equation}
+となり，$(7)$と同じ結果が得られる。\\
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+\end{answer}
+
+\end{document}
