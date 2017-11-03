@@ -1,0 +1,29 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(1992pankyo 1992senmon)
+docs_ex=(1992pankyo2)
+
+_1992pankyo_title='1992年度実施 一般教育科目'
+_1992pankyo_cov=()
+_1992pankyo_prb=(1992engl.tex 1992math.tex 1992phys.tex)
+_1992pankyo_ans=(1992engl.tex 1992math.tex 1992phys.tex)
+_1992pankyo_dep=(
+  1992math-1.eps  1992math-2.eps  1992math-3.eps  1992math-4.eps
+  1992phys.tex  1992phys-1.eps  1992phys-2.eps  1992phys-3.eps  1992phys-3-1.eps  1992phys-4.eps  1992phys-4-2.eps  1992phys-5.eps  1992phys-6.eps)
+
+_1992pankyo2_title='1992年度実施 一般教育科目 (英語なし)'
+_1992pankyo2_cov=()
+_1992pankyo2_prb=(1992math.tex 1992phys.tex)
+_1992pankyo2_ans=(1992math.tex 1992phys.tex)
+_1992pankyo2_dep=(
+  1992math-1.eps  1992math-2.eps  1992math-3.eps  1992math-4.eps
+  1992phys.tex  1992phys-1.eps  1992phys-2.eps  1992phys-3.eps  1992phys-3-1.eps  1992phys-4.eps  1992phys-4-2.eps  1992phys-5.eps  1992phys-6.eps)
+
+_1992senmon_title='1992年度実施 物理専門科目'
+_1992senmon_cov=()
+_1992senmon_prb=(1992phy1.tex 1992phy2.tex 1992phy3.tex 1992phy4.tex 1992phy5.tex 1992phy6.tex 1992phy7.tex)
+_1992senmon_ans=(1992phy1.tex 1992phy2.tex 1992phy3.tex 1992phy4.tex 1992phy5.tex 1992phy6.tex 1992phy7.tex)
+_1992senmon_dep=(
+  1992phy2-0.eps  1992phy2-1.eps  1992phy2-1-1.eps  1992phy2-1-2.eps  1992phy2-1-3.eps  1992phy2-2.eps  1992phy2-3.eps
+  1992phy4-1.eps  1992phy4-1-1.eps  1992phy4-2.eps)
