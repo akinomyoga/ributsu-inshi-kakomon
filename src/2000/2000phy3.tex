@@ -1,0 +1,83 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+\let\b\mathbf
+\begin{question}{問題3}{yt}
+時間、空間座標に依存する電荷分布$\rho(\b{r}',t')$と電流分布$\b j(\b r',t')$がある。これらによって誘起される電磁ポテンシャルは、ローレンツ条件のもとで、次のように表わせる(以下、 MKSA有理単位系を用いる):\begin{equation}
+\phi(\b r,t)=\frac1{4\pi\epsilon_0}\int\frac{\rho(\b r',t')}{|\b r-\b r'|}d^3 r',\qquad
+\b A(\b r,t)=\frac{\mu_0}{4\pi}\int\frac{\b j(\b r',t')}{|\b r-\b r'|}d^3 r'.
+\end{equation}$\epsilon_0$と$\mu_0$はそれぞれ真空の誘電率と透磁率で、
+光速は$c=1/\sqrt{\epsilon_0\mu_0}$と書ける。
+また、$t'$は$t$, $\b r$, $\b r'$, $c$ で定まる量であり、次の設問で考察する。
+\begin{enumerate}
+\item 電磁波が伝わる時の遅延効果を考慮して、式(1)の$t'$を決定せよ。
+\item 電荷$e$を持つ点粒子の運動を考え、その位置座標を$\b x(t')$とする。
+このとき、$\rho(\b r',t')$と$\b j(\b r',t')$をディラックのδ関数を用いて表わせ。\item この点粒子がつくる遠方($|\b r|=r\gg |\b  x|$)での電磁ポテンシャルは、点粒子の速度$\b v$が光速に比べて充分小さい場合には、(1)式の$1/|\b r-\b r'|$を$1/r$で近似して求めることが出来る。この電磁ポテンシャルが、$\b v/c$の1次までの近似で、以下のように表わせることを示せ:\begin{equation}
+\phi(\b r,t)=\frac{e}{4\pi\epsilon_0 r}\left(
+1+\frac{\hat{\b r}\cdot\b v(t_0)}c
+\right)\qquad,
+c\b A(\b r,t)=\frac{e}{4\pi\epsilon_0r}\frac{\b v(t_0)}{c}.
+\end{equation}但し、$\hat{\b r}=\b r/r$, $t_0=t-r/c$である。
+\item 前問の結果から、電場$\b E(\b r)=-\nabla\phi-\partial\b A/\partial t$と
+磁束密度$\b B(\b r,t)=\nabla\times\b A$の遠方での主要項($1/r$に比例する項)が、点粒子の加速度$\b a$を用いて以下のように表わせることを示せ:\begin{equation}
+\b E(\b r,t)=\frac{e}{4\pi\epsilon_0c^2r}\hat{\b r}\times(\hat{\b r}\times\b a(t_0)),\qquad
+c\b B(\b r,t)=-\frac{e}{4\pi\epsilon_0c^2r}\hat{\b r}\times\b a(t_0).
+\end{equation}ここで、ベクトル積の公式$\b X\times(\b Y\times\b Z)=\b Y(\b X\cdot\b Z)-\b Z(\b X\cdot\b Y)$を使って良い。
+\item (3)式を用いて以下の設問に答えよ。
+\begin{enumerate}
+\item 点粒子が、図1のように、一定の振幅$b$と一定の振動数で$x$軸上を単振動しているとする。このとき、原点から距離$r$だけ離れた球面上($r\gg b$とする)で、点粒子の運動の一周期あたりに、電磁波の強度が最大となる場所はどこか? 理由をつけて答えよ。
+\item  点粒子が、図2のように、一定の半径$b$と一定の角振動数で$xy$平面上を回転運動しているとする。このとき、原点から距離$r$だけ離れた球面上($r\gg b$とする)で、点粒子の運動の一周期あたりに、電磁波の強度が最大となる場所はどこか? 理由をつけて答えよ。
+\end{enumerate}
+\end{enumerate}
+\begin{center}
+\input{2000phy3-1.tpc}
+\end{center}
+\end{question}
+\begin{answer}{問題3}{}
+以下点電荷は座標の原点の近くにいるとする。
+\begin{enumerate}
+\item 光は速度$c$で伝わるから、$t'=t-|\b r-\b r'|/c$.
+\item 全空間に渡る積分が$e$なので、$\rho(\b r',t')=e\delta(\b r'-\b x(t'))$.
+よって$\b j(\b r',t')=e\delta(\b r'-\b x(t'))d\b x(t')/dt'$.
+\item $1/|\b r-\b r'|=1/r$と近似するとまず\[
+c\b A(\b r,t)=\frac{c\mu_0}{4\pi r}\int e\delta(\b r'-\b x(t'))\b v(t')d^3r'
+=\frac{1}{4\pi\epsilon_0 r}\int e\delta(\b r'-\b x(t'))\frac{\b v(t')}{c}d^3r'
+=\frac{e}{4\pi\epsilon_0 r}\frac{\b v(t')}{c},
+\]一方\[
+\phi(\b r,t)=\frac1{4\pi\epsilon_0r}\int e\delta(\b r'-\b x(t-r/c))d^3r'
+\]は$\partial |\b r|/\partial \b r=\hat{\b r}$から
+$\partial |\b r-\b r'|/\partial \b r'=-\hat{\b r-\b r'}$に注意すれば\[
+=\frac e{4\pi\epsilon_0 r}\left(1-\frac{\hat{\b r}}c\cdot \frac
+{d\b x(t')}{dt'}\right)^{-1}
+=\frac{e}{4\pi\epsilon_0 r}\left(1+\frac{\hat{\b r}\cdot\b v(t')}{c}.\right)
+\]
+\item まず\[
+c\b B(\b r,t)=\nabla\times \frac{e}{4\pi\epsilon_0 r}\frac{\b v(t')}{c}
+\]は$\nabla $が$1/r$に作用すると$\propto r^{-2}$になるので、
+$\nabla $が$t'$に作用するもののみが残り、$\nabla t'=-\hat{\b r}/c$なので、\[
+=\frac{e}{4\pi\epsilon_0 r}\frac{-\hat{\b r}}{c}\times\frac{\b a(t_0)}{c}
+=-\frac{e}{4\pi\epsilon_0c^2 r}\hat{\b r}\times\b a(t_0),
+\]一方波動帯では横波になっていて、進行方向は$\hat{\b r}$だから\[
+\b E(\b r,t)=-\hat{\b r}\times c\b B(\b r,t)
+=\frac{e}{4\pi\epsilon_0c^2 r}\hat{\b r}\times(\hat{\b r}\times\b a(t_0)).
+\]
+\item 電磁波の強度は電場も磁場も同じだから、磁場だけ考える。
+\begin{enumerate}
+\item $\hat{\b r}$と$x$軸のなす角を$\theta$とすると、
+$|\hat{\b r}\times\b a| \propto |\b a|\sin\theta$
+であるから、振幅は$\theta=\pi/2$, i.e. $yz$平面内が一番大きい。
+\item $z$軸となす角が$\theta$の各点での強度を考える。
+${\b a}$のベクトル$\hat{\b r}$に垂直な成分だけが効くが、
+双極子は$\hat{\b r}$に垂直な平面から$\theta$傾いた平面をまわっているので、
+$\b{\hat z}\times\hat{\b r}$方向の成分は振幅$|a|$で振動していて、
+$\b{\hat z}$と$\hat{\b r}$のなす平面内の成分は振幅$|a|\cos\theta$で振動している。よって強度は$1+\cos^2\theta$型の角度分布をするので、
+最大は$\theta=0$すなわち$z$軸上がもっとも強い。
+
+\end{enumerate}
+\end{enumerate}
+
+\end{answer}
+
+
+\end{document}

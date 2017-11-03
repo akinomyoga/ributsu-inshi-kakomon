@@ -1,0 +1,191 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(22.00,20.30)(0.00,-21.30)
+% LINE 2 0 3 0
+% 4 400 600 400 2200 400 2200 2200 2200
+% 
+\special{pn 8}%
+\special{pa 400 200}%
+\special{pa 400 1800}%
+\special{fp}%
+\special{pa 400 1800}%
+\special{pa 2200 1800}%
+\special{fp}%
+% LINE 2 0 3 0
+% 6 800 2200 800 2300 1200 2300 1200 2200 1600 2200 1600 2300
+% 
+\special{pn 8}%
+\special{pa 800 1800}%
+\special{pa 800 1900}%
+\special{fp}%
+\special{pa 1200 1900}%
+\special{pa 1200 1800}%
+\special{fp}%
+\special{pa 1600 1800}%
+\special{pa 1600 1900}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 400 2200 400 2300
+% 
+\special{pn 8}%
+\special{pa 400 1800}%
+\special{pa 400 1900}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 400 2400 400 2500 2 0
+% 0
+\put(4.0000,-21.0000){\makebox(0,0)[lb]{0}}%
+% STR 2 0 3 0
+% 3 1200 2400 1200 2500 2 0
+% 10
+\put(12.0000,-21.0000){\makebox(0,0)[lb]{10}}%
+% STR 2 0 3 0
+% 3 1600 2400 1600 2500 2 0
+% 15
+\put(16.0000,-21.0000){\makebox(0,0)[lb]{15}}%
+% STR 2 0 3 0
+% 3 800 2400 800 2500 2 0
+% 5
+\put(8.0000,-21.0000){\makebox(0,0)[lb]{5}}%
+% STR 2 0 3 0
+% 3 600 2600 600 2700 2 0
+% 鉛の厚さ(cm)
+\put(6.0000,-23.0000){\makebox(0,0)[lb]{鉛の厚さ(cm)}}%
+% STR 2 0 3 0
+% 3 0 800 0 900 2 0
+% {\footnotesize カウント数}
+\put(0.0000,-5.0000){\makebox(0,0)[lb]{{\footnotesize カウント数}}}%
+% STR 2 0 3 0
+% 3 2000 2500 2000 2600 2 0
+% 図4
+\put(20.0000,-22.0000){\makebox(0,0)[lb]{図4}}%
+% LINE 2 2 3 0
+% 4 400 520 1400 2120 960 1720 2160 2120
+% 
+\special{pn 8}%
+\special{pa 400 120}%
+\special{pa 1400 1720}%
+\special{dt 0.045}%
+\special{pa 1400 1720}%
+\special{pa 1400 1719}%
+\special{dt 0.045}%
+\special{pa 960 1320}%
+\special{pa 2160 1720}%
+\special{dt 0.045}%
+\special{pa 2160 1720}%
+\special{pa 2159 1720}%
+\special{dt 0.045}%
+% DOT 0 0 3 0
+% 2 520 700 520 700
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 520 300 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 520 300 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 520 500 520 900
+% 
+\special{pn 8}%
+\special{pa 520 100}%
+\special{pa 520 500}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 710 1160 710 1160
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 710 760 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 710 760 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 710 960 710 1360
+% 
+\special{pn 8}%
+\special{pa 710 560}%
+\special{pa 710 960}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 1000 1800 1000 1800
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1000 1400 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1000 1400 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 1000 1600 1000 2000
+% 
+\special{pn 8}%
+\special{pa 1000 1200}%
+\special{pa 1000 1600}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 1250 1690 1250 1690
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1250 1290 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1250 1290 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 1250 1490 1250 1890
+% 
+\special{pn 8}%
+\special{pa 1250 1090}%
+\special{pa 1250 1490}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 1400 2000 1400 2000
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1400 1600 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1400 1600 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 1400 1800 1400 2200
+% 
+\special{pn 8}%
+\special{pa 1400 1400}%
+\special{pa 1400 1800}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 1600 1820 1600 1820
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1600 1420 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1600 1420 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 1600 1620 1600 2020
+% 
+\special{pn 8}%
+\special{pa 1600 1220}%
+\special{pa 1600 1620}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 1800 2020 1800 2020
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 1800 1620 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 1800 1620 10 10 0  6.28318530717959E+0000}%
+% LINE 2 0 3 0
+% 2 1800 1820 1800 2220
+% 
+\special{pn 8}%
+\special{pa 1800 1420}%
+\special{pa 1800 1820}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1000 1120 1000 1220 2 0
+% x
+\put(10.0000,-8.2000){\makebox(0,0)[lb]{x}}%
+% STR 2 0 3 0
+% 3 1800 1520 1800 1620 2 0
+% y
+\put(18.0000,-12.2000){\makebox(0,0)[lb]{y}}%
+\end{picture}%

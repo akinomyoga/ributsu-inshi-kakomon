@@ -1,0 +1,112 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(14.00,38.00)(2.00,-38.00)
+% BOX 2 0 3 0
+% 2 400 800 1200 880
+% 
+\special{pn 8}%
+\special{pa 400 400}%
+\special{pa 1200 400}%
+\special{pa 1200 480}%
+\special{pa 400 480}%
+\special{pa 400 400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1400 780 1400 880 2 0
+% カウンターA
+\put(14.0000,-4.8000){\makebox(0,0)[lb]{カウンターA}}%
+% BOX 2 0 3 0
+% 2 400 1600 1200 1680
+% 
+\special{pn 8}%
+\special{pa 400 1200}%
+\special{pa 1200 1200}%
+\special{pa 1200 1280}%
+\special{pa 400 1280}%
+\special{pa 400 1200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1400 1580 1400 1680 2 0
+% カウンターB
+\put(14.0000,-12.8000){\makebox(0,0)[lb]{カウンターB}}%
+% BOX 2 0 3 0
+% 2 400 2800 1200 2880
+% 
+\special{pn 8}%
+\special{pa 400 2400}%
+\special{pa 1200 2400}%
+\special{pa 1200 2480}%
+\special{pa 400 2480}%
+\special{pa 400 2400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1400 2780 1400 2880 2 0
+% カウンターC
+\put(14.0000,-24.8000){\makebox(0,0)[lb]{カウンターC}}%
+% BOX 2 0 3 0
+% 2 400 3600 1200 3680
+% 
+\special{pn 8}%
+\special{pa 400 3200}%
+\special{pa 1200 3200}%
+\special{pa 1200 3280}%
+\special{pa 400 3280}%
+\special{pa 400 3200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1400 3580 1400 3680 2 0
+% カウンターD
+\put(14.0000,-32.8000){\makebox(0,0)[lb]{カウンターD}}%
+% VECTOR 2 0 3 0
+% 2 800 400 800 1200
+% 
+\special{pn 8}%
+\special{pa 800 0}%
+\special{pa 800 800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 800 800}%
+\special{pa 820 733}%
+\special{pa 800 747}%
+\special{pa 780 733}%
+\special{pa 800 800}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 800 1200 800 4200
+% 
+\special{pn 8}%
+\special{pa 800 800}%
+\special{pa 800 3800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 800 3800}%
+\special{pa 820 3733}%
+\special{pa 800 3747}%
+\special{pa 780 3733}%
+\special{pa 800 3800}%
+\special{fp}%
+% LINE 0 0 3 0
+% 8 200 1900 1400 1900 200 2100 1400 2100 1400 2300 200 2300 200 2500 1400 2500
+% 
+\special{pn 20}%
+\special{pa 200 1500}%
+\special{pa 1400 1500}%
+\special{fp}%
+\special{pa 200 1700}%
+\special{pa 1400 1700}%
+\special{fp}%
+\special{pa 1400 1900}%
+\special{pa 200 1900}%
+\special{fp}%
+\special{pa 200 2100}%
+\special{pa 1400 2100}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1600 2200 1600 2300 2 0
+% 鉛の板
+\put(16.0000,-19.0000){\makebox(0,0)[lb]{鉛の板}}%
+% STR 2 0 3 0
+% 3 1000 1200 1000 1300 2 0
+% 宇宙線
+\put(10.0000,-9.0000){\makebox(0,0)[lb]{宇宙線}}%
+\end{picture}%

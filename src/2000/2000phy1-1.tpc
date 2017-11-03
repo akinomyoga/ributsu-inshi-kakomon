@@ -1,0 +1,71 @@
+%WinTpicVersion2.16
+\unitlength 0.1in
+\begin{picture}(24.50,20.10)(2.00,-24.00)
+% VECTOR 2 0 3 0
+% 4 200 1600 2600 1600 1400 2800 1400 1000
+% 
+\special{pn 8}%
+\special{pa 200 1200}%
+\special{pa 2600 1200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2600 1200}%
+\special{pa 2533 1180}%
+\special{pa 2547 1200}%
+\special{pa 2533 1220}%
+\special{pa 2600 1200}%
+\special{fp}%
+\special{pa 1400 2400}%
+\special{pa 1400 600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1400 600}%
+\special{pa 1380 667}%
+\special{pa 1400 653}%
+\special{pa 1420 667}%
+\special{pa 1400 600}%
+\special{fp}%
+% LINE 0 0 3 0
+% 10 200 1600 800 1600 800 1600 800 2600 800 2600 2000 2600 2000 2600 2000 1600 2000 1600 2400 1600
+% 
+\special{pn 20}%
+\special{pa 200 1200}%
+\special{pa 800 1200}%
+\special{fp}%
+\special{pa 800 1200}%
+\special{pa 800 2200}%
+\special{fp}%
+\special{pa 800 2200}%
+\special{pa 2000 2200}%
+\special{fp}%
+\special{pa 2000 2200}%
+\special{pa 2000 1200}%
+\special{fp}%
+\special{pa 2000 1200}%
+\special{pa 2400 1200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 2650 1540 2650 1640 2 0
+% $x$
+\put(26.5000,-12.4000){\makebox(0,0)[lb]{$x$}}%
+% STR 2 0 3 0
+% 3 1340 860 1340 960 2 0
+% $U$
+\put(13.4000,-5.6000){\makebox(0,0)[lb]{$U$}}%
+% STR 2 0 3 0
+% 3 1430 1470 1430 1570 2 0
+% $0$
+\put(14.3000,-11.7000){\makebox(0,0)[lb]{$0$}}%
+% STR 2 0 3 0
+% 3 1950 1470 1950 1570 2 0
+% $a$
+\put(19.5000,-11.7000){\makebox(0,0)[lb]{$a$}}%
+% STR 2 0 3 0
+% 3 760 1450 760 1550 2 0
+% $-a$
+\put(7.6000,-11.5000){\makebox(0,0)[lb]{$-a$}}%
+% STR 2 0 3 0
+% 3 1440 2450 1440 2550 2 0
+% $-U_0$
+\put(14.4000,-21.5000){\makebox(0,0)[lb]{$-U_0$}}%
+\end{picture}%

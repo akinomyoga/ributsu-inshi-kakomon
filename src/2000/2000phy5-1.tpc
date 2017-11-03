@@ -1,0 +1,201 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(34.00,26.30)(4.00,-28.30)
+% LINE 2 0 3 0
+% 60 400 2200 400 3000 400 3000 2400 3000 2400 3000 2400 2200 2400 2200 1800 2200 1800 2200 1800 2400 1800 2400 800 2400 800 2400 800 2200 800 2200 400 2200 400 2200 1800 800 1800 800 2200 800 2200 800 1600 1400 1600 1400 1800 1400 1800 1400 1400 1800 1400 1800 1200 1800 1200 1800 800 2200 800 2400 1200 2000 1200 2000 1400 2000 1400 2000 1800 1600 1800 1600 1800 1400 1400 1800 1400 2000 1200 2000 1200 1800 2200 800 2200 1000 2200 1000 1800 1400 1800 2200 2400 1600 2400 1600 3000 1600 3000 1600 2400 2200 2400 3000 3800 1600 3000 1600 3000 1800 3000 1800 3400 1400 3600 1000 3600 1000
+% 
+\special{pn 8}%
+\special{pa 400 1800}%
+\special{pa 400 2600}%
+\special{fp}%
+\special{pa 400 2600}%
+\special{pa 2400 2600}%
+\special{fp}%
+\special{pa 2400 2600}%
+\special{pa 2400 1800}%
+\special{fp}%
+\special{pa 2400 1800}%
+\special{pa 1800 1800}%
+\special{fp}%
+\special{pa 1800 1800}%
+\special{pa 1800 2000}%
+\special{fp}%
+\special{pa 1800 2000}%
+\special{pa 800 2000}%
+\special{fp}%
+\special{pa 800 2000}%
+\special{pa 800 1800}%
+\special{fp}%
+\special{pa 800 1800}%
+\special{pa 400 1800}%
+\special{fp}%
+\special{pa 400 1800}%
+\special{pa 1800 400}%
+\special{fp}%
+\special{pa 1800 400}%
+\special{pa 2200 400}%
+\special{fp}%
+\special{pa 2200 400}%
+\special{pa 1600 1000}%
+\special{fp}%
+\special{pa 1600 1000}%
+\special{pa 1800 1000}%
+\special{fp}%
+\special{pa 1800 1000}%
+\special{pa 1400 1400}%
+\special{fp}%
+\special{pa 1400 1400}%
+\special{pa 1200 1400}%
+\special{fp}%
+\special{pa 1200 1400}%
+\special{pa 800 1800}%
+\special{fp}%
+\special{pa 800 2000}%
+\special{pa 1200 1600}%
+\special{fp}%
+\special{pa 1200 1600}%
+\special{pa 1400 1600}%
+\special{fp}%
+\special{pa 1400 1600}%
+\special{pa 1800 1200}%
+\special{fp}%
+\special{pa 1800 1200}%
+\special{pa 1800 1000}%
+\special{fp}%
+\special{pa 1400 1400}%
+\special{pa 1400 1600}%
+\special{fp}%
+\special{pa 1200 1600}%
+\special{pa 1200 1400}%
+\special{fp}%
+\special{pa 2200 400}%
+\special{pa 2200 600}%
+\special{fp}%
+\special{pa 2200 600}%
+\special{pa 1800 1000}%
+\special{fp}%
+\special{pa 1800 1800}%
+\special{pa 2400 1200}%
+\special{fp}%
+\special{pa 2400 1200}%
+\special{pa 3000 1200}%
+\special{fp}%
+\special{pa 3000 1200}%
+\special{pa 2400 1800}%
+\special{fp}%
+\special{pa 2400 2600}%
+\special{pa 3800 1200}%
+\special{fp}%
+\special{pa 3000 1200}%
+\special{pa 3000 1400}%
+\special{fp}%
+\special{pa 3000 1400}%
+\special{pa 3400 1000}%
+\special{fp}%
+\special{pa 3600 600}%
+\special{pa 3600 600}%
+\special{fp}%
+% LINE 2 0 3 0
+% 34 3400 1400 2800 1400 2800 1400 2800 1200 3400 1200 3400 1400 3400 1200 2800 1200 3400 1200 3600 1000 3600 1000 3400 1000 3400 1000 3200 1000 3200 1000 3200 800 3200 800 3600 800 3600 800 3600 1000 2800 1200 3000 1000 3000 1000 3200 800 3200 800 3400 600 3400 600 3800 600 3800 600 3600 800 3800 600 3800 1600 2200 1000 3000 1000
+% 
+\special{pn 8}%
+\special{pa 3400 1000}%
+\special{pa 2800 1000}%
+\special{fp}%
+\special{pa 2800 1000}%
+\special{pa 2800 800}%
+\special{fp}%
+\special{pa 3400 800}%
+\special{pa 3400 1000}%
+\special{fp}%
+\special{pa 3400 800}%
+\special{pa 2800 800}%
+\special{fp}%
+\special{pa 3400 800}%
+\special{pa 3600 600}%
+\special{fp}%
+\special{pa 3600 600}%
+\special{pa 3400 600}%
+\special{fp}%
+\special{pa 3400 600}%
+\special{pa 3200 600}%
+\special{fp}%
+\special{pa 3200 600}%
+\special{pa 3200 400}%
+\special{fp}%
+\special{pa 3200 400}%
+\special{pa 3600 400}%
+\special{fp}%
+\special{pa 3600 400}%
+\special{pa 3600 600}%
+\special{fp}%
+\special{pa 2800 800}%
+\special{pa 3000 600}%
+\special{fp}%
+\special{pa 3000 600}%
+\special{pa 3200 400}%
+\special{fp}%
+\special{pa 3200 400}%
+\special{pa 3400 200}%
+\special{fp}%
+\special{pa 3400 200}%
+\special{pa 3800 200}%
+\special{fp}%
+\special{pa 3800 200}%
+\special{pa 3600 400}%
+\special{fp}%
+\special{pa 3800 200}%
+\special{pa 3800 1200}%
+\special{fp}%
+\special{pa 2200 600}%
+\special{pa 3000 600}%
+\special{fp}%
+% LINE 2 2 3 0
+% 4 3600 2200 2400 2200 1800 2400 3600 2400
+% 
+\special{pn 8}%
+\special{pa 3600 1800}%
+\special{pa 2400 1800}%
+\special{dt 0.045}%
+\special{pa 2400 1800}%
+\special{pa 2401 1800}%
+\special{dt 0.045}%
+\special{pa 1800 2000}%
+\special{pa 3600 2000}%
+\special{dt 0.045}%
+\special{pa 3600 2000}%
+\special{pa 3599 2000}%
+\special{dt 0.045}%
+% VECTOR 2 0 3 0
+% 4 3530 2000 3530 2200 3530 2600 3530 2400
+% 
+\special{pn 8}%
+\special{pa 3530 1600}%
+\special{pa 3530 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3530 1800}%
+\special{pa 3550 1733}%
+\special{pa 3530 1747}%
+\special{pa 3510 1733}%
+\special{pa 3530 1800}%
+\special{fp}%
+\special{pa 3530 2200}%
+\special{pa 3530 2000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3530 2000}%
+\special{pa 3510 2067}%
+\special{pa 3530 2053}%
+\special{pa 3550 2067}%
+\special{pa 3530 2000}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 3400 2500 3400 2600 4 0
+% $\Delta d$
+\put(34.0000,-22.0000){\makebox(0,0)[rt]{$\Delta d$}}%
+% STR 2 0 3 0
+% 3 1200 3300 1200 3400 2 0
+% ステップ構造
+\put(12.0000,-30.0000){\makebox(0,0)[lb]{ステップ構造}}%
+\end{picture}%

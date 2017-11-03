@@ -1,0 +1,474 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 5 20 270 260
+%%Creator: murase@nt.phys.s.u-tokyo.ac.jp (Koichi MURASE)
+%%CreationDate: 2011/05/01
+%%Title: 2000physQ7_1
+/2000physQ7_1.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   矢印
+%-------------------------------------------------------------------------------
+
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+%: <x> <y> <dx> <dy> mwg-draw-rarrow
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+%: <x> <y> <X> <Y> mwg-draw-arrow
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+
+%-------------------------------------------------------------------------------
+%   矩形
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+
+% mwg-draw-rrect -> rectstroke
+% mwg-fill-rrect -> rectfill
+%-------------------------------------------------------------------------------
+%  ベクトル
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2scal {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+%: <vec> <scal> mwg-v2div <vec>
+/mwg-v2div {
+  1 exch div mwg-v2scal
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2norm {
+  dup mwg-v2abs mwg-v2div
+} def
+
+/mwg-v2abs {
+  aload pop
+  dup mul exch dup mul add sqrt
+} def
+
+/mwg-v2arg {
+  aload pop exch atan
+} def
+
+/mwg-v2rot {
+  dup 3 2 roll aload pop 3 1 roll
+  %: a y a x
+  4 copy
+  exch cos mul 3 1 roll exch sin mul sub
+  5 1 roll
+  exch sin mul 3 1 roll exch cos mul add
+  2 array astore
+  %: [xc-ys xs+yc]
+} def
+
+/mwg-v2iprod {
+  aload pop 3 2 roll aload pop
+  exch 3 1 roll
+  mul 3 1 roll mul add
+} def
+
+%-------------------------------------------------------------------------------
+%  曲線
+%-------------------------------------------------------------------------------
+%: <i0> <iM> mwg-path-curve-impl
+/mwg-path-curve-impl {
+  data 0 get aload pop moveto
+  1 exch {
+    /i exch def
+    /p0 i 1 sub getpt def
+    /p1 i       getpt def
+    /p2 i 1 add getpt def
+    /p3 i 2 add getpt def
+    
+    p2 p0 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2scal
+      p1 vadd aload pop
+      
+    p1 p3 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2scal
+      p2 vadd aload pop
+    
+    p2 aload pop
+    
+    curveto
+  } for
+} def
+
+/mwg-path-curve {
+  << >> begin
+    /data exch def
+    /len data length def
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      dup -1 eq {
+        pop
+        data 0 get data 1 get vsub
+          data 0 get vadd
+      }{
+        dup len eq {
+          pop
+          data len 1 sub get data len 2 sub get vsub
+            data len 1 sub get vadd
+        }{
+          data exch get
+        } ifelse
+      } ifelse
+    } def
+    0 len 2 sub mwg-path-curve-impl
+  end
+} def
+
+/mwg-path-ccurve {
+  << >> begin
+    /data exch def
+    /len data length def
+    
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      len add len mod
+      data exch get
+    } def
+    0 len 1 sub mwg-path-curve-impl
+  end
+} def
+
+/mwg-draw-curve  {mwg-path-curve stroke} def
+/mwg-draw-ccurve {mwg-path-ccurve stroke} def
+/mwg-fill-curve  {mwg-path-curve fill} def
+/mwg-fill-ccurve {mwg-path-ccurve fill} def
+%-------------------------------------------------------------------------------
+%   フォント設定 / 文字列表示
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-isym {
+  /Symbol-H findfont
+  [1 0 0.2 1 0 0] makefont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-sym {
+  /Symbol-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-helv {
+  /Helvetica-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-center-show {
+  dup stringwidth pop 2 div neg 0 rmoveto show
+} def
+
+%-------------------------------------------------------------------------------
+/draw-graph {
+gsave
+  [
+    [ 19.025313 -0.408398 ]
+    [ 22.261330 4.399187 ]
+    [ 29.212206 19.815832 ]
+    [ 51.068939 65.305927 ]
+    [ 63.992220 90.072067 ]
+    [ 79.667020 115.350214 ]
+    [ 90.382980 127.999605 ]
+    [ 106.589657 144.954735 ]
+    [ 127.556004 160.917521 ]
+    [ 157.021528 179.932937 ]
+    [ 174.751863 191.087066 ]
+    [ 184.993736 196.668427 ]
+    [ 189.987626 199.962167 ]
+  ] mwg-draw-curve [
+    [ 23.528019 0.370830 ]
+    [ 31.721916 18.063080 ]
+    [ 47.117015 51.168239 ]
+    [ 59.783355 77.699757 ]
+    [ 80.436876 110.311957 ]
+    [ 94.391708 127.008353 ]
+    [ 113.597363 145.235684 ]
+    [ 133.314060 160.688709 ]
+    [ 153.539904 173.872229 ]
+    [ 173.519235 186.043715 ]
+    [ 191.500832 196.945054 ]
+    [ 195.745687 199.732029 ]
+  ] mwg-draw-curve [
+    [ 26.283303 -0.119610 ]
+    [ 40.188848 29.703388 ]
+    [ 56.074163 65.581223 ]
+    [ 74.726152 97.934821 ]
+    [ 86.180729 113.865899 ]
+    [ 106.375308 135.376416 ]
+    [ 130.081803 154.879687 ]
+    [ 161.791593 176.172321 ]
+    [ 178.522583 186.818832 ]
+    [ 192.759945 194.934630 ]
+    [ 199.751582 199.495282 ]
+  ] mwg-draw-curve [
+    [ 33.542239 -0.082998 ]
+    [ 43.475044 21.146663 ]
+    [ 60.358752 57.785619 ]
+    [ 77.770556 87.108713 ]
+    [ 100.946111 114.685875 ]
+    [ 124.648808 135.200923 ]
+    [ 150.612824 153.451315 ]
+    [ 179.326479 172.714306 ]
+    [ 192.315129 180.070755 ]
+    [ 199.810219 183.878357 ]
+  ] mwg-draw-curve
+  
+  << >> begin
+    [
+      [
+        [ 144.947485 128.986518 ]
+        [ 133.388806 140.781415 ]
+        [ 146.472990 122.693613 ]
+        {
+          setfontR (H) show
+          0 -2 rmoveto
+          setfontR- (2) show
+          0 2 rmoveto
+          setfontR ( liquid) show
+        }
+      ] [
+        [ 121.261374 170.720727 ]
+        [ 132.826688 157.158805 ]
+        [ 114.255556 169.936874 ]
+        {setfontR (C) show}
+      ] [
+        [ 105.285118 159.063563 ]
+        [ 115.091647 147.258040 ]
+        [ 99.521384 160.804626 ]
+        {setfontR (Fe) show}
+      ] [
+        [ 88.806360 147.906117 ]
+        [ 98.855629 138.117470 ]
+        [ 79.292724 148.371182 ]
+        {setfontR (Pb) show}
+      ]
+    ] /labels exch def
+    
+    /mwg-option-arrow-head-scale 0.6 def
+    
+    0 1 labels length 1 sub {
+      labels exch get /data exch def
+      data 0 get aload pop
+      data 1 get aload pop mwg-draw-arrow
+      data 2 get aload pop moveto
+      data 3 get exec
+    } for
+  end
+  
+grestore
+} def
+%-------------------------------------------------------------------------------
+%5 20 270 260 mwg-draw-rect
+
+7 mwg-font-roman currentfont /fontR- exch def
+10 mwg-font-roman currentfont /fontR exch def
+/setfontR- {fontR- setfont} def
+/setfontR {fontR setfont} def
+/Times-Roman-H findfont [7 0 0 7 0 3] makefont /fontSup exch def
+/setfontSup {fontSup setfont} def
+10 mwg-font-math currentfont /fontM exch def
+/setfontM {fontM setfont} def
+
+/draw-graph-frame {
+gsave
+
+  setfontR
+  
+  gsave
+    /shift10 200 50000 log div def
+    0 1 4 {
+      /p exch def
+      /m p 4 eq {5}{9} ifelse def
+      1 1 m {
+        /i exch def
+        i log shift10 mul /y exch def
+        
+        i 1 eq i 5 eq or {
+          10 p exp i mul cvi 10 string cvs
+          dup stringwidth pop neg y moveto
+          -5 -3 rmoveto show
+        } if
+        
+        i 1 eq {6}{3} ifelse /l exch def
+        
+        gsave
+          0.5 setlinewidth
+          0.7 setgray
+          0 y moveto 200 0 rlineto stroke
+        grestore
+        0 y moveto l 0 rlineto stroke
+        200 y moveto l neg 0 rlineto stroke
+      } for
+      0 shift10 translate
+    } for
+  grestore
+  
+  gsave
+    /shift10 200 1000 log div def
+    0 1 3 {
+      /p exch def
+      /m p 3 eq {1}{9} ifelse def
+      1 1 m {
+        /i exch def
+        i log shift10 mul /x exch def
+        
+        i 1 eq {
+          10 p exp 10 div 10 string cvs
+          x -12 moveto mwg-center-show
+        } if
+        
+        i 2 eq i 5 eq or {
+        gsave
+          setfontR-
+          i 5 string cvs
+          x -8 moveto mwg-center-show
+        grestore
+        } if
+        
+        i 1 eq {6}{3} ifelse /l exch def
+        
+        gsave
+          0.5 setlinewidth
+          0.7 setgray
+          x 0 moveto 0 200 rlineto stroke
+        grestore
+        x 0 moveto 0 l rlineto stroke
+        x 200 moveto 0 l neg rlineto stroke
+      } for
+      shift10 0 translate
+    } for
+  grestore
+  
+  0 0 200 200 mwg-draw-rect
+  
+grestore
+} def
+%-------------------------------------------------------------------------------
+
+50 50 translate
+gsave
+  %0.6 setlinewidth
+  draw-graph-frame
+  draw-graph
+  
+  gsave
+    -30 45 moveto
+    90 rotate
+    setfontM   (R/Mc)       show
+    setfontSup (2)          show
+    setfontR   (   \(g cm)  show
+    setfontSup (-2)         show
+    setfontR   ( GeV)       show
+    setfontSup (-1)         show
+    setfontR   (\))         show
+  grestore
+  
+  10 mwg-font-sym
+  85 -25 moveto (bg) show
+grestore
+
+end
+showpage 2000physQ7_1.save restore

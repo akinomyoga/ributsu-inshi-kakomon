@@ -1,0 +1,132 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{問題2}{小山？}
+スピンが1次元格子上の各点にあり、格子点の数が$N$($N$は偶数)の模型を考察する。そのハミルトニアンは
+\[
+H=-J\sum _{i=1}^{N}\sigma_{i}\sigma_{i+1}
+\]
+とする。ここで周期的境界条件を課し、$\sigma_{N+1}$は$\sigma_{1}$を意味するものとし、かつ$\sigma_{i}(i=1,2,\ldots ,N)$は$\pm 1$の値をとるものとする。この模型の各状態は$(\uparrow \downarrow \downarrow \uparrow\cdots )$のようなスピンの配置によってあらわされる。
+\begin{enumerate}
+\item この模型の状態数は全部でいくつか。
+\item $J$が正の場合と負の場合について基底状態のスピン配置を書け。
+\item 前問の場合、基底状態のエネルギーとその縮重度を求めよ。\\
+\end{enumerate}
+
+%\vspace{5mm}
+
+以下では$J$が正の場合のみを考える。
+\begin{enumerate}[4]
+\item 第1励起状態のスピン配置を書け。そのエネルギーと縮重度を求めよ。
+\item 全てのエネルギー固有値とその縮重度を求めよ。ただし2項係数
+\[
+{}_{N}C_{M}\equiv \frac{N!}{M!(N-M)!}
+\]
+を用いよ。
+\item 前問の結果を用いて、この系の分配関数を求めよ。ただし温度は$T$とし、ボルツマン定数は$k_{\mathrm{B}}$とする。必要に応じて
+\[
+(1+x)^{N}=\sum _{M=0}^{N}{}_{N}C_{M}x^{M}
+\]
+を使ってよい。
+\item $N$が無限大の極限での1格子点あたりの自由エネルギーが
+\[
+-k_{\mathrm{B}}T\ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T})\right]
+\]
+であらわされることを示せ。
+\item 前問の結果を用いて、1格子点あたりのエネルギーとエントロピーを求めよ。高温でのエントロピーの漸近的ふるまいを求めよ。
+\end{enumerate}
+\end{question}
+\begin{answer}{問題2}{}
+\begin{enumerate}
+\item 全状態数$2^{N}$
+\item 基底状態
+\begin{eqnarray*}
+\left\{
+\begin{array}{cccc}
+J>0 & \uparrow   \uparrow   \uparrow   \cdots \uparrow   \uparrow   & \mathrm{or} &
+      \downarrow \downarrow \downarrow \cdots \downarrow \downarrow \\
+
+J<0 & \uparrow   \downarrow \uparrow   \cdots \uparrow   \downarrow & \mathrm{or} &
+      \downarrow \uparrow   \downarrow \cdots \downarrow \uparrow   \\
+\end{array}
+\right.
+\end{eqnarray*}
+\item 基底状態のときエネルギーと縮重度はそれぞれ
+\begin{eqnarray*}
+\left\{
+\begin{array}{ccc}
+J>0 & -NJ   & 2\\
+J<0 & -N|J| & 2\\
+\end{array}
+\right.
+\end{eqnarray*}
+\item 第一励起状態
+\begin{eqnarray*}
+\begin{array}{c}
+\uparrow \downarrow \downarrow \cdots   \downarrow \downarrow\\
+\uparrow \uparrow   \downarrow \cdots   \downarrow \downarrow\\
+\vdots\\
+\uparrow \uparrow   \uparrow   \cdots   \uparrow   \downarrow\\
+\end{array}
+\end{eqnarray*}
+エネルギーは$-(N-4)J$\\
+輪っかになっていて上のスピン配置がそれぞれ$N$通りずつあるので縮重度は$N(N-1)$
+\item エネルギー固有値とその縮重度\\
+$N$個鎖があるので、そのうち$2M$個でup,downが区切れている状態を整数$M(0\le M \le N/2)$で指定することにすると、\\
+エネルギー固有値は$-(N-4M)J$\\
+縮重度は$N$個の鎖から$2M$個選びそれぞれについて2状態ずつあるので$2_{N}C_{2M}$\\
+全部足すと
+\[
+2( {}_{N}C_{0} + {}_{N}C_{2} + {}_{N}C_{4} + \cdots + {}_{N}C_{N})=2^{N}
+\]
+が確かめられる。
+\item 偶数について足し合わせるとき
+\[
+_{N}C_{0} + {}_{N}C_{2}x^{2} + {}_{N}C_{4}x^{4} + \cdots + {}_{N}C_{N}x^{N}=\left((1+x)^{N}-(1-x)^{N}\right)/2
+\]
+を利用する。\\
+分配関数$Z$は$\beta=k_{\mathrm{B}}T$として
+\begin{eqnarray*}
+Z&=&\sum _{M=0}^{N/2} 2_{N}C_{2M}\exp(\beta (N-4M)J)\\
+ &=&2\exp(\beta NJ)\sum _{M=0}^{N/2} {}_{N}C_{2M}\exp(-\beta 4MJ)\\
+ &=&\exp(\beta NJ)\left\{ (1+\exp(-\beta 2J))^{N} - (1-\exp(-\beta 2J))^{N} \right\}\\
+ &=&(\exp(\beta J)+\exp(-\beta J))^{N} - (\exp(\beta J)-\exp(-\beta J))^{N}\\
+ &=&2^{N}\{ (\cosh \beta J)^{N}-(\sinh \beta J)^{N} \}
+\end{eqnarray*}
+と計算できる。($x=\exp(-\beta 2J)$として上の式を使う。)
+\item $N\to \infty $では
+\[
+Z\to 2^{N} (\cosh \beta J)^{N}
+\]
+となる。自由エネルギー$F$は$F=-\frac{1}{\beta}\ln Z$より
+
+\[
+F=-Nk_{\mathrm{B}}T \ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T}) \right]
+\]
+1個あたりの自由エネルギーは$N$で割ればよいので
+\[
+\frac{F}{N}=-k_{\mathrm{B}}T \ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T}) \right]
+\]
+\item エネルギーは$E=-\frac{\partial}{\partial \beta}\ln Z$、エントロピーは$S=(E-F)/T$より求まる。
+計算すると
+\begin{eqnarray*}
+\frac{E}{N}&=&-J\tanh \beta J\\
+\frac{S}{N}&=&-\frac{J}{T}\tanh \beta J + k_{\mathrm{B}}\ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T}) \right]
+\end{eqnarray*}
+となる。高温極限$T\to \infty (\beta \to 0)$では
+\begin{eqnarray*}
+\frac{E}{N}&\to& 0\\
+\frac{S}{N}&\to& k_{\mathrm{B}}\ln2
+\end{eqnarray*}
+$\exp(-\beta E_{M})\to 1$となるので全ての状態が同じ確率でおこる。エネルギーは平均値0になっている。
+エントロピーについては1個あたりup,downの2状態が同確率で起きることを意味している。
+\end{enumerate}
+
+%とりあえずこんな感じで。
+
+\end{answer}
+
+
+\end{document}

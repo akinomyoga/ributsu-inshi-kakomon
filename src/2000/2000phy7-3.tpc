@@ -1,0 +1,219 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(18.00,23.00)(0.00,-23.30)
+% STR 2 0 3 0
+% 3 200 500 200 600 3 0
+% 0
+\put(2.0000,-2.0000){\makebox(0,0)[rb]{0}}%
+% VECTOR 2 0 3 0
+% 2 200 600 1800 600
+% 
+\special{pn 8}%
+\special{pa 200 200}%
+\special{pa 1800 200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1800 200}%
+\special{pa 1733 180}%
+\special{pa 1747 200}%
+\special{pa 1733 220}%
+\special{pa 1800 200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1800 500 1800 600 3 0
+% 時間
+\put(18.0000,-2.0000){\makebox(0,0)[rb]{時間}}%
+% STR 2 0 3 0
+% 3 200 1700 200 1800 3 0
+% 0
+\put(2.0000,-14.0000){\makebox(0,0)[rb]{0}}%
+% VECTOR 2 0 3 0
+% 2 200 1800 1800 1800
+% 
+\special{pn 8}%
+\special{pa 200 1400}%
+\special{pa 1800 1400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1800 1400}%
+\special{pa 1733 1380}%
+\special{pa 1747 1400}%
+\special{pa 1733 1420}%
+\special{pa 1800 1400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1800 1700 1800 1800 3 0
+% 時間
+\put(18.0000,-14.0000){\makebox(0,0)[rb]{時間}}%
+% SPLINE 2 0 3 0
+% 5 290 600 360 950 470 720 650 600 650 600
+% 
+\special{pn 8}%
+\special{pa 290 200}%
+\special{pa 295 251}%
+\special{pa 300 301}%
+\special{pa 305 349}%
+\special{pa 311 394}%
+\special{pa 316 435}%
+\special{pa 322 472}%
+\special{pa 329 503}%
+\special{pa 335 527}%
+\special{pa 343 544}%
+\special{pa 350 552}%
+\special{pa 359 551}%
+\special{pa 368 540}%
+\special{pa 378 520}%
+\special{pa 389 493}%
+\special{pa 401 461}%
+\special{pa 415 426}%
+\special{pa 430 390}%
+\special{pa 448 356}%
+\special{pa 467 324}%
+\special{pa 489 296}%
+\special{pa 514 273}%
+\special{pa 540 254}%
+\special{pa 567 238}%
+\special{pa 595 223}%
+\special{pa 624 211}%
+\special{pa 650 200}%
+\special{sp}%
+% SPLINE 2 0 3 0
+% 5 690 600 830 1300 1050 840 1410 600 1410 600
+% 
+\special{pn 8}%
+\special{pa 690 200}%
+\special{pa 695 251}%
+\special{pa 700 302}%
+\special{pa 705 352}%
+\special{pa 710 401}%
+\special{pa 715 450}%
+\special{pa 721 497}%
+\special{pa 726 543}%
+\special{pa 731 587}%
+\special{pa 737 630}%
+\special{pa 743 670}%
+\special{pa 749 708}%
+\special{pa 755 743}%
+\special{pa 761 776}%
+\special{pa 767 805}%
+\special{pa 774 831}%
+\special{pa 781 854}%
+\special{pa 788 873}%
+\special{pa 795 888}%
+\special{pa 803 898}%
+\special{pa 811 904}%
+\special{pa 819 906}%
+\special{pa 827 902}%
+\special{pa 836 893}%
+\special{pa 845 880}%
+\special{pa 855 862}%
+\special{pa 865 840}%
+\special{pa 876 814}%
+\special{pa 887 786}%
+\special{pa 899 755}%
+\special{pa 912 722}%
+\special{pa 925 688}%
+\special{pa 939 653}%
+\special{pa 954 617}%
+\special{pa 970 581}%
+\special{pa 987 546}%
+\special{pa 1006 511}%
+\special{pa 1025 478}%
+\special{pa 1045 447}%
+\special{pa 1066 419}%
+\special{pa 1089 392}%
+\special{pa 1113 368}%
+\special{pa 1137 346}%
+\special{pa 1163 326}%
+\special{pa 1189 308}%
+\special{pa 1216 291}%
+\special{pa 1244 275}%
+\special{pa 1272 261}%
+\special{pa 1300 247}%
+\special{pa 1329 234}%
+\special{pa 1358 221}%
+\special{pa 1388 209}%
+\special{pa 1410 200}%
+\special{sp}%
+% LINE 2 2 3 0
+% 2 200 1000 1800 1000
+% 
+\special{pn 8}%
+\special{pa 200 600}%
+\special{pa 1800 600}%
+\special{dt 0.045}%
+\special{pa 1800 600}%
+\special{pa 1799 600}%
+\special{dt 0.045}%
+% STR 2 0 3 0
+% 3 0 1100 0 1200 2 0
+% しきい値
+\put(0.0000,-8.0000){\makebox(0,0)[lb]{しきい値}}%
+% STR 2 0 3 0
+% 3 1200 1300 1200 1400 2 0
+% 入力信号
+\put(12.0000,-10.0000){\makebox(0,0)[lb]{入力信号}}%
+% STR 2 0 3 0
+% 3 0 2300 0 2400 2 0
+% 出力信号
+\put(0.0000,-20.0000){\makebox(0,0)[lb]{出力信号}}%
+% LINE 2 2 3 0
+% 2 730 1000 730 1800
+% 
+\special{pn 8}%
+\special{pa 730 600}%
+\special{pa 730 1400}%
+\special{dt 0.045}%
+\special{pa 730 1400}%
+\special{pa 730 1399}%
+\special{dt 0.045}%
+% LINE 2 0 3 0
+% 6 730 1800 730 2400 730 2400 1330 2400 1330 2400 1330 1800
+% 
+\special{pn 8}%
+\special{pa 730 1400}%
+\special{pa 730 2000}%
+\special{fp}%
+\special{pa 730 2000}%
+\special{pa 1330 2000}%
+\special{fp}%
+\special{pa 1330 2000}%
+\special{pa 1330 1400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 1330 2500 730 2500
+% 
+\special{pn 8}%
+\special{pa 1330 2100}%
+\special{pa 730 2100}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 730 2100}%
+\special{pa 797 2120}%
+\special{pa 783 2100}%
+\special{pa 797 2080}%
+\special{pa 730 2100}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 730 2500 1330 2500
+% 
+\special{pn 8}%
+\special{pa 730 2100}%
+\special{pa 1330 2100}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1330 2100}%
+\special{pa 1263 2080}%
+\special{pa 1277 2100}%
+\special{pa 1263 2120}%
+\special{pa 1330 2100}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 930 2600 930 2700 2 0
+% $\tau$
+\put(9.3000,-23.0000){\makebox(0,0)[lb]{$\tau$}}%
+% STR 2 0 3 0
+% 3 1600 2300 1600 2400 2 0
+% 図3
+\put(16.0000,-20.0000){\makebox(0,0)[lb]{図3}}%
+\end{picture}%

@@ -1,0 +1,355 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+\begin{question}{問題5}{日下}
+雲母薄膜は図1に示すように、厚さが一定の段差$\Delta d$からなるステップ構造をしており、その厚さ$d_j$は場所により異なり、次式で与えられる。\[
+	d_j=d_0+j\Delta d\qquad\hbox{但し}j:\hbox{整数}
+\]
+
+
+この薄膜を光の反射率の高い基板上に貼りつけて上方から見ると、
+上記の異なった厚さ$d_j$のステップごとに、異なった波長$\lambda_j$の色が見える。
+\begin{enumerate}
+\item このように見える理由を述べ、$\lambda_j$と$d_j$、および雲母の屈折率$n$との関係を示せ。但し、$n$の波長依存性は無視する。
+\end{enumerate}
+
+さて、可視光を用いてこのステップの高さを測定するデバイスを考案した。
+その準備として、まず複屈折について復習する。
+
+水晶のような、光学的に異方な(複屈折性を持つ)透明光学媒質中を光が伝搬すると、
+互いに直交した偏光面と異なった屈折率$n_1$, $n_2$を持つ光(正常光と異常光)にわかれる。
+これらの偏光方向をそれぞれ $x$軸、 $y$軸とし、単色平面波光の伝搬方向を$z$軸とする。
+水晶に入射する直線偏光した波長$\lambda$の単色光電場$E$の偏光方向と
+$x$軸のなす角を$45^\circ$とする。
+水晶に入射後の$x$軸、$y$軸方向の電場成分は次式であらわされる。\begin{align*}
+E_x&=A\cos(k_1z-\omega t)/\sqrt2,&E_y&=A\cos(k_2z-\omega t)/\sqrt 2\\
+k_1&=2\pi n_1/\lambda,&k_2&=2\pi n_2/\lambda.
+\end{align*}
+ただし、入射位置を$z=0$とする。
+光の伝搬する方向の結晶の厚さが$x$に依存し、$D(x)$で与えられるとし、
+出射位置における$x$, $y$2つの偏光方向の電場を次のようにあらわす。\begin{align*}
+E_x&=A\cos(k_1 D-\omega t)/\sqrt 2=A\cos(\Phi(D,t))/\sqrt 2\\
+E_y&=A\cos(k_2 D-\omega t)/\sqrt 2=A\cos(\Phi(D,t)+\delta(D))/\sqrt 2
+\end{align*}
+\begin{enumerate}[2]
+\item この時、位相差$\delta(D)$を屈折の異方性$\Delta n=n_2-n_1$, $\lambda$, $D$ などを用いてあらわせ。
+\end{enumerate}
+
+デバイスの構造を、図2に示す。
+$x$軸に対して、$+45^\circ$方向(図2の$P_A$方向)の偏光成分のみを通過する
+偏光板 A が配置されている。
+その右側に、厚さが$D(x)$のくさび形の水晶板、そのさらに右に、
+もう一枚の検光板を、$-45^\circ$方向(図2の$P_B$方向)の偏光成分のみを通すように
+おのおの配置する。
+くさび形の頂角は充分小さいので、入射面に垂直に$z$軸方向に入射した単色光は、
+水晶への入射、出射に際して屈折しないものとする。
+\begin{enumerate}[3]
+\item このときの検光板Bを通過してきた光電場$E_B$を求めよ。
+それを用いて、光の強度$I$を位相差$\delta(D)$の関数として求めよ。
+\item 位相差$\delta(D)$がどのような値の場合に、通過光強度が最大になるか。
+\end{enumerate}
+
+頂角$\theta=0.1$mrad のくさび形の水晶と偏光板、検光板及び
+検光板に密着した細いスリットを用いて、図3に示すようなデバイスを作った。
+それに白色光を垂直に入射した。
+ここで、水晶の$\Delta n$の波長依存性を無視できるとする。
+
+\begin{enumerate}[5]
+\item スリットの位置を$x$軸方向に動かすと、通ってくる光の波長が変わる。
+その理由を説明せよ。
+\end{enumerate}
+
+人の目は可視光領域では数nmのスペクトル差を容易に検出できる。
+雲母薄片に白色光を垂直入射し、その反射光がデバイスに垂直入射した白色光の通過光と同じ色になるように、デバイスのスリット位置を動かす。この時の移動量は常に
+2.5mm の整数倍であった。
+\begin{enumerate}[6]
+\item 雲母の二種類の色に対応するようにして決めたスリットの二箇所の位置の水晶の厚さの差は、やはりある一定値$\Delta D$の整数倍である。$\Delta D$の値を求めよ。
+\item 単位ステップ高さ$\Delta d$と$\Delta D$との間の関係を求めよ。
+\item 雲母の屈折率$n=1.5$、水晶の屈折率の異方性$\Delta n=0.009$を用いて、
+雲母薄片のステップ構造の最小単位ステップの高さ$\delta d$を求めよ。
+\end{enumerate}
+
+\noindent\parbox[t]{.6\textwidth}{図1\input{2000phy5-1.tpc}}
+\parbox[t]{.4\textwidth}{図3\input{2000phy5-3.tpc}}
+
+\noindent 図2\parbox{\textwidth}{\vskip5\baselineskip\input{2000phy5-2.tpc}}
+\end{question}
+\begin{answer}{問題5}{}
+\begin{enumerate}
+\item \textbf{理由}\quad
+雲母薄膜どうしの接合面では反射がほとんど起こらないと考えられる.
+従って,雲母薄膜に入射した光は雲母と基盤の接合面および,
+雲母と真空(または空気)の接触面の2つの面においてのみ反射が起こるとして良
+い. 
+
+
+2つの異なる面で反射してきた光は異なる光路を進んできているから,
+その間に光路差が生ずる.
+この光路差と波長(またはその整数倍)が一致する光については,
+ 2つの異なる面で反射した光どうしが強め合うように干渉し,
+反射強度が大きくなる.
+一方,その条件を満たさない波長を持つ光に関しては,
+ 2つの光どうしが弱め合うように干渉し,
+反射強度が小さくなる.
+
+
+色がついて見えるのは強め合う条件を満たす光であり,
+光路差は2つの面の間の距離,すなわち雲母薄膜の厚さによるから,
+異なるステップごとに違った色が見える.
+
+
+\textbf{関係式}\quad
+2つの反射面の間の距離は$d_j$であるから,
+それぞれの面で反射する光の光路差は$2 n d_j$である.
+これが$\lambda_j$の整数倍なのだから,
+\begin{equation}
+ 2 n d_j = l \lambda_j \quad (l = 1, 2, 3, \cdots)
+\end{equation}
+である.
+
+\item
+$\delta (D)$の定義から,
+\begin{eqnarray}
+ \delta (D) & = & (k_2 D - \omega t) - (k_1 D - \omega t)
+  \nonumber
+  \\
+ & = & (k_2 - k_1) D
+  \nonumber
+  \\
+ & = &  \frac{2 \pi D}{\lambda} (n_2 - n_1)
+  \nonumber
+  \\
+ & = &  \frac{2 \pi D \Delta \! n}{\lambda}
+\end{eqnarray}
+である.
+
+\item
+光電場の$P_A, P_B$の方向の成分を$E_a, E_b$とおく.
+このとき, $E_x, E_y$との関係は,
+\[
+ \left(
+  \begin{array}{c}
+   E_a \\ E_b
+  \end{array}
+ \right)
+ =
+ R
+ \left(
+  \begin{array}{c}
+   E_x \\ E_y
+  \end{array}
+ \right)
+\]
+\[
+ \left( \quad
+ R \equiv
+ \left(
+  \begin{array}{cc}
+   \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+   \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+  \end{array}
+ \right) \quad
+ \right)
+\]
+である.以下, $x, y$方向を基底としたベクトルには$x, y$の添字を,
+ $P_A, P_B$方向を基底としたベクトルには$a, b$の添字をつけるものとする.
+
+
+水晶板を通過した光電場を$E_0=(E_{0x}, E_{0y})=(E_{0a}, E_{0b})$,
+ 偏光板Bを通過した光電場を$E_B=(E_{Bx}, E_{By})=(E_{Ba}, E_{Bb})$とおくと,
+これらは以下の関係式を満たす.
+\begin{eqnarray*}
+ \left(
+  \begin{array}{c}
+   E_{0a} \\ E_{0b}
+  \end{array}
+ \right)
+ & = &
+ R
+ \left(
+  \begin{array}{c}
+   E_{0x} \\ E_{0y}
+  \end{array}
+ \right)
+ \\
+ \left(
+  \begin{array}{c}
+   E_{Bx} \\ E_{By}
+  \end{array}
+ \right)
+ & = &
+ R^{-1}
+ \left(
+  \begin{array}{c}
+   E_{Ba} \\ E_{Bb}
+  \end{array}
+ \right)
+ \\
+ \left(
+  \begin{array}{c}
+   E_{Ba} \\ E_{Bb}
+  \end{array}
+ \right)
+ & = &
+ \left(
+  \begin{array}{c}
+   0 \\ E_{0b}
+  \end{array}
+ \right)
+ \quad
+ (偏光板の性質より.)
+\end{eqnarray*}
+$E_0$は与えられているから,これをもとに計算すると,
+\[
+ E_{0b} = \frac{A}{2} \alpha(D, t)
+\]
+\[
+ ( \quad
+ \alpha(D, t)
+  \equiv
+ \{\mathrm{cos}(\Phi(D, t)) - \mathrm{cos}(\Phi(D, t)+\delta(D)) \}
+ \quad )
+\]
+よって, $E_B$は,
+\[
+ \left(
+  \begin{array}{c}
+   E_{Ba} \\ E_{Bb}
+  \end{array}
+ \right)
+  = 
+  \frac{A}{2} \alpha(D, t)
+ \left(
+  \begin{array}{c}
+   0 \\ 1
+  \end{array}
+ \right)
+\quad
+あるいは,
+\quad
+ \left(
+  \begin{array}{c}
+   E_{Bx} \\ E_{By}
+  \end{array}
+ \right)
+  = 
+  \frac{A}{2} \alpha(D, t)
+ \left(
+  \begin{array}{c}
+   \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}
+  \end{array}
+ \right)
+\]
+である.
+
+
+ $\alpha(D, t)$を変形すると,
+\[
+ \frac{A}{2} \alpha(D, t) = 
+ A' \mathrm{cos}(\Phi(D, t) -\phi)
+\]
+\[
+ \left(\quad A' \equiv A\sqrt{ \frac{1-\mathrm{cos}(\delta(D))}{2} }
+ \quad \right)
+\]
+\[
+ \left( \quad
+ \mathrm{sin}\phi = \frac{\mathrm{sin}(\delta(D))}{A'}, \quad 
+ \mathrm{cos}\phi = \frac{1-\mathrm{cos}(\delta(D))}{A'}
+ \quad \right)
+\]
+となる.よって,強度$I=(\epsilon_0/2)A'{}^2$は,
+\[
+ I = \frac{\epsilon_0}{2}\frac{1-\mathrm{cos}(\delta(D))}{2} A^2
+\]
+となる.
+
+\item
+3.の結果より,
+\begin{equation}
+ \delta(D) = (2l+1) \pi \quad (l = 0, \pm 1, \pm 2, \cdots)
+\end{equation}
+のとき,強度が最大となる.
+
+\item
+スリットを通ってくる光は, 4.で求めた条件を満たす波長のものが
+主な成分となっている.
+2.より,通過する水晶の厚さ$D$が変化すれば,条件を満たす波長は変化する.
+スリットの位置を$x$軸方向に動かすということは,
+ $D$を変化させるということだから,それにより通ってくる光の波長が変化する.
+
+\item
+スリットを$x$軸方向に$\mathrm{d}x$だけ動かしたとき,
+光が通過する水晶の厚さが$\mathrm{d}D$だけ変化したとすると,
+その関係は,
+\begin{eqnarray*}
+ \mathrm{d}D & = & \mathrm{sin}(0.1 \times 10^{-3}) \mathrm{d}x
+  \\
+ & \simeq & 10^{-4} \mathrm{d}x
+\end{eqnarray*}
+である.スリットの$x$軸方向への2.5mmの移動に対応する
+$D$の変化が$\Delta \! D$だから,
+\[
+ \Delta \! D \simeq 2.5 \times 10^{-7} \quad [\mathrm{m}]
+\]
+である.
+
+\item
+いま,可視光の波長域が$\Delta \! d$に比べて大きく,
+ (1)式における自然数$l$を
+一定値$l_0$として扱って良いとする.
+ (この仮定が成り立たなければ,このようなデバイスで
+$\Delta \! d$を測定するのは難しい.) 
+\par
+雲母の, 2種類の色に対応する雲母の厚さ$d_j$を$d_1, d_2$とし,
+光の波長を$\lambda_1, \lambda_2$とおく.
+さらに,それらに対応する色が見えるときのスリットの位置の水晶の厚さを
+$D_1, D_2$とおく.
+\par
+上に書いた仮定が成り立つとき, $\lambda_1, \lambda_2$
+の差が可視光の波長域に比べて小さいから,
+スリットを適切にずらすことによって
+(3)式における$l$を一定にすることができる.
+この値を$l_1$とする.
+このとき, $\delta(D)$は一定になるから,
+\[
+ \frac{D_1}{\lambda_1} = \frac{D_2}{\lambda_2}
+\]
+である.
+ $\Delta \! D \equiv |D_1 - D_2|$, 
+$\Delta \! \lambda \equiv |\lambda_1 - \lambda_2|$の2次の項が無視できる
+ とすると, (2), (3)式より,
+\[
+ \Delta \! D = \frac{2 l_1 + 1}{2 \Delta \! n} \Delta \! \lambda
+\]
+であることが分かる.
+\par
+一方, $\Delta \! d \equiv |d_1 - d_2|$と$\Delta \! \lambda$の関係は,
+ (1)式より,
+\[
+ \Delta \! d = \frac{l_0}{2n} \Delta \! \lambda
+\]
+であるから,
+\begin{equation}
+ \Delta \! d = \frac{l_0}{2 l_1 + 1} \frac{\Delta \! n}{n} \Delta \! D
+\end{equation}
+である.
+
+\item $\Delta \! d$の大きさを求めるためには,
+ $l_0, l_1$を決めなくてはならない.
+これらの値は, (1), (2), (3)式において,
+波長$\lambda$が可視領域に含まれるように
+決まるものであり,
+ $d, D$の大きさによって変わる.
+これを決めるための情報は特にないので,
+ $l_0 = 1, l_1 = 0$として考えることとする.
+\par
+このとき, (4)式および6.より,
+\[
+ \Delta \! d = 1.5 \times 10^{-9} \quad [\mathrm{m}]
+\]
+である.
+\end{enumerate}
+\end{answer}
+\end{document}

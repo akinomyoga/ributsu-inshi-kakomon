@@ -1,0 +1,203 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(28.10,13.15)(1.30,-14.30)
+% BOX 2 0 3 0
+% 2 800 1000 2200 1400
+% 
+\special{pn 8}%
+\special{pa 800 600}%
+\special{pa 2200 600}%
+\special{pa 2200 1000}%
+\special{pa 800 1000}%
+\special{pa 800 600}%
+\special{fp}%
+% LINE 2 0 3 0
+% 8 2200 1400 2400 1200 2400 1200 2400 800 2400 800 1000 800 1000 800 800 1000
+% 
+\special{pn 8}%
+\special{pa 2200 1000}%
+\special{pa 2400 800}%
+\special{fp}%
+\special{pa 2400 800}%
+\special{pa 2400 400}%
+\special{fp}%
+\special{pa 2400 400}%
+\special{pa 1000 400}%
+\special{fp}%
+\special{pa 1000 400}%
+\special{pa 800 600}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2200 1000 2400 800
+% 
+\special{pn 8}%
+\special{pa 2200 600}%
+\special{pa 2400 400}%
+\special{fp}%
+% LINE 0 0 3 0
+% 8 2300 1100 2900 1100 800 1100 400 1100 1100 1200 500 1800 1900 1200 1300 1800
+% 
+\special{pn 20}%
+\special{pa 2300 700}%
+\special{pa 2900 700}%
+\special{fp}%
+\special{pa 800 700}%
+\special{pa 400 700}%
+\special{fp}%
+\special{pa 1100 800}%
+\special{pa 500 1400}%
+\special{fp}%
+\special{pa 1900 800}%
+\special{pa 1300 1400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 400 900 400 1000 4 0
+% (1)
+\put(4.0000,-6.0000){\makebox(0,0)[rt]{(1)}}%
+% STR 2 0 3 0
+% 3 2940 900 2940 1000 1 0
+% (2)
+\put(29.4000,-6.0000){\makebox(0,0)[lt]{(2)}}%
+% STR 2 0 3 0
+% 3 1200 1900 1200 2000 2 0
+% (4)
+\put(12.0000,-16.0000){\makebox(0,0)[lb]{(4)}}%
+% STR 2 0 3 0
+% 3 400 1900 400 2000 2 0
+% (3)
+\put(4.0000,-16.0000){\makebox(0,0)[lb]{(3)}}%
+% VECTOR 2 0 3 0
+% 4 680 1710 1300 1710 1300 1710 640 1710
+% 
+\special{pn 8}%
+\special{pa 680 1310}%
+\special{pa 1300 1310}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1300 1310}%
+\special{pa 1233 1290}%
+\special{pa 1247 1310}%
+\special{pa 1233 1330}%
+\special{pa 1300 1310}%
+\special{fp}%
+\special{pa 1300 1310}%
+\special{pa 640 1310}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 640 1310}%
+\special{pa 707 1330}%
+\special{pa 693 1310}%
+\special{pa 707 1290}%
+\special{pa 640 1310}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 950 1710 950 1810 5 0
+% $l$
+\put(9.5000,-14.1000){\makebox(0,0){$l$}}%
+% VECTOR 2 0 3 0
+% 4 1000 720 2400 720 2400 720 1000 720
+% 
+\special{pn 8}%
+\special{pa 1000 320}%
+\special{pa 2400 320}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2400 320}%
+\special{pa 2333 300}%
+\special{pa 2347 320}%
+\special{pa 2333 340}%
+\special{pa 2400 320}%
+\special{fp}%
+\special{pa 2400 320}%
+\special{pa 1000 320}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1000 320}%
+\special{pa 1067 340}%
+\special{pa 1053 320}%
+\special{pa 1067 300}%
+\special{pa 1000 320}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1650 500 1650 600 5 0
+% $L$
+\put(16.5000,-2.0000){\makebox(0,0){$L$}}%
+% VECTOR 2 0 3 0
+% 4 800 800 600 1000 600 1000 800 800
+% 
+\special{pn 8}%
+\special{pa 800 400}%
+\special{pa 600 600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 600 600}%
+\special{pa 661 567}%
+\special{pa 638 562}%
+\special{pa 633 539}%
+\special{pa 600 600}%
+\special{fp}%
+\special{pa 600 600}%
+\special{pa 800 400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 800 400}%
+\special{pa 739 433}%
+\special{pa 762 438}%
+\special{pa 767 461}%
+\special{pa 800 400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 650 780 650 880 3 0
+% $w$
+\put(6.5000,-4.8000){\makebox(0,0)[rb]{$w$}}%
+% VECTOR 2 0 3 0
+% 4 620 1000 620 1400 620 1400 620 1000
+% 
+\special{pn 8}%
+\special{pa 620 600}%
+\special{pa 620 1000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 620 1000}%
+\special{pa 640 933}%
+\special{pa 620 947}%
+\special{pa 600 933}%
+\special{pa 620 1000}%
+\special{fp}%
+\special{pa 620 1000}%
+\special{pa 620 600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 620 600}%
+\special{pa 600 667}%
+\special{pa 620 653}%
+\special{pa 640 667}%
+\special{pa 620 600}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 580 1100 580 1200 4 0
+% $d$
+\put(5.8000,-8.0000){\makebox(0,0)[rt]{$d$}}%
+% LINE 2 2 3 0
+% 6 800 1000 600 1000 1000 800 800 800 800 1400 600 1400
+% 
+\special{pn 8}%
+\special{pa 800 600}%
+\special{pa 600 600}%
+\special{dt 0.045}%
+\special{pa 600 600}%
+\special{pa 601 600}%
+\special{dt 0.045}%
+\special{pa 1000 400}%
+\special{pa 800 400}%
+\special{dt 0.045}%
+\special{pa 800 400}%
+\special{pa 801 400}%
+\special{dt 0.045}%
+\special{pa 800 1000}%
+\special{pa 600 1000}%
+\special{dt 0.045}%
+\special{pa 600 1000}%
+\special{pa 601 1000}%
+\special{dt 0.045}%
+\end{picture}%

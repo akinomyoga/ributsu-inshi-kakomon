@@ -1,0 +1,134 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(35.20,12.30)(-1.20,-14.30)
+% ELLIPSE 2 0 3 0
+% 4 800 800 400 600 400 600 400 600
+% 
+\special{pn 8}%
+\special{ar 800 400 400 200  0.0000000 6.2831853}%
+% ELLIPSE 2 0 3 0
+% 4 800 1600 400 1400 400 1400 1200 1400
+% 
+\special{pn 8}%
+\special{ar 800 1200 400 200  5.4977871 6.2831853}%
+\special{ar 800 1200 400 200  0.0000000 3.9269908}%
+% LINE 2 0 3 0
+% 4 1200 1600 1200 800 400 800 400 1600
+% 
+\special{pn 8}%
+\special{pa 1200 1200}%
+\special{pa 1200 400}%
+\special{fp}%
+\special{pa 400 400}%
+\special{pa 400 1200}%
+\special{fp}%
+% ELLIPSE 2 0 3 0
+% 4 2400 800 2000 600 2000 600 2000 600
+% 
+\special{pn 8}%
+\special{ar 2400 400 400 200  0.0000000 6.2831853}%
+% ELLIPSE 2 0 3 0
+% 4 2400 1600 2000 1400 2000 1400 2800 1400
+% 
+\special{pn 8}%
+\special{ar 2400 1200 400 200  5.4977871 6.2831853}%
+\special{ar 2400 1200 400 200  0.0000000 3.9269908}%
+% LINE 2 0 3 0
+% 4 2800 1600 2800 800 2000 800 2000 1600
+% 
+\special{pn 8}%
+\special{pa 2800 1200}%
+\special{pa 2800 400}%
+\special{fp}%
+\special{pa 2000 400}%
+\special{pa 2000 1200}%
+\special{fp}%
+% VECTOR 1 0 3 0
+% 4 600 1400 1000 1200 2200 1200 2600 1400
+% 
+\special{pn 13}%
+\special{pa 600 1000}%
+\special{pa 1000 800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 1000 800}%
+\special{pa 931 812}%
+\special{pa 952 824}%
+\special{pa 949 848}%
+\special{pa 1000 800}%
+\special{fp}%
+\special{pa 2200 800}%
+\special{pa 2600 1000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2600 1000}%
+\special{pa 2549 952}%
+\special{pa 2552 976}%
+\special{pa 2531 988}%
+\special{pa 2600 1000}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 600 1100 600 1200 3 0
+% $\b F_L$
+\put(6.0000,-8.0000){\makebox(0,0)[rb]{$\b F_L$}}%
+% STR 2 0 3 0
+% 3 2400 1100 2400 1200 2 0
+% $\b A_M$
+\put(24.0000,-8.0000){\makebox(0,0)[lb]{$\b A_M$}}%
+% VECTOR 2 0 3 0
+% 2 800 1350 2400 1350
+% 
+\special{pn 8}%
+\special{pa 800 950}%
+\special{pa 2400 950}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2400 950}%
+\special{pa 2333 930}%
+\special{pa 2347 950}%
+\special{pa 2333 970}%
+\special{pa 2400 950}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 1600 1200 1600 1300 2 0
+% $\b R$
+\put(16.0000,-9.0000){\makebox(0,0)[lb]{$\b R$}}%
+% LINE 2 0 3 0
+% 12 0 1000 400 1000 1200 1000 2000 1000 2800 1000 3400 1000 3400 1540 2800 1540 2000 1540 1200 1540 400 1540 0 1540
+% 
+\special{pn 8}%
+\special{pa 0 600}%
+\special{pa 400 600}%
+\special{fp}%
+\special{pa 1200 600}%
+\special{pa 2000 600}%
+\special{fp}%
+\special{pa 2800 600}%
+\special{pa 3400 600}%
+\special{fp}%
+\special{pa 3400 1140}%
+\special{pa 2800 1140}%
+\special{fp}%
+\special{pa 2000 1140}%
+\special{pa 1200 1140}%
+\special{fp}%
+\special{pa 400 1140}%
+\special{pa 0 1140}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 3000 1400 3000 1500 2 0
+% ç◊ñEñå
+\put(30.0000,-11.0000){\makebox(0,0)[lb]{ç◊ñEñå}}%
+% STR 2 0 3 0
+% 3 0 700 0 800 2 0
+% ê}1
+\put(0.0000,-4.0000){\makebox(0,0)[lb]{ê}1}}%
+% STR 2 0 3 0
+% 3 490 1900 490 2000 2 0
+% í`îíéø$L$
+\put(4.9000,-16.0000){\makebox(0,0)[lb]{í`îíéø$L$}}%
+% STR 2 0 3 0
+% 3 2090 1900 2090 2000 2 0
+% í`îíéø$M$
+\put(20.9000,-16.0000){\makebox(0,0)[lb]{í`îíéø$M$}}%
+\end{picture}%

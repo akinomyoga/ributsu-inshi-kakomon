@@ -1,0 +1,138 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(19.30,25.50)(2.00,-27.50)
+% LINE 2 0 3 0
+% 22 800 1400 800 2800 800 2800 800 3000 800 3000 1800 3000 1800 3000 1400 1400 1400 1400 800 1400 800 1800 600 1800 600 1800 600 2600 600 2600 800 2600 1710 2600 1910 2600 1910 2600 1710 1800 1710 1800 1510 1800
+% 
+\special{pn 8}%
+\special{pa 800 1000}%
+\special{pa 800 2400}%
+\special{fp}%
+\special{pa 800 2400}%
+\special{pa 800 2600}%
+\special{fp}%
+\special{pa 800 2600}%
+\special{pa 1800 2600}%
+\special{fp}%
+\special{pa 1800 2600}%
+\special{pa 1400 1000}%
+\special{fp}%
+\special{pa 1400 1000}%
+\special{pa 800 1000}%
+\special{fp}%
+\special{pa 800 1400}%
+\special{pa 600 1400}%
+\special{fp}%
+\special{pa 600 1400}%
+\special{pa 600 2200}%
+\special{fp}%
+\special{pa 600 2200}%
+\special{pa 800 2200}%
+\special{fp}%
+\special{pa 1710 2200}%
+\special{pa 1910 2200}%
+\special{fp}%
+\special{pa 1910 2200}%
+\special{pa 1710 1400}%
+\special{fp}%
+\special{pa 1710 1400}%
+\special{pa 1510 1400}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1560 1000 1840 2110
+% 
+\special{pn 8}%
+\special{pa 1560 600}%
+\special{pa 1840 1710}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 1880 2310 2130 3150
+% 
+\special{pn 8}%
+\special{pa 1880 1910}%
+\special{pa 2130 2750}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 6 200 2400 400 2400 200 2200 400 2200 200 2000 400 2000
+% 
+\special{pn 8}%
+\special{pa 200 2000}%
+\special{pa 400 2000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 400 2000}%
+\special{pa 333 1980}%
+\special{pa 347 2000}%
+\special{pa 333 2020}%
+\special{pa 400 2000}%
+\special{fp}%
+\special{pa 200 1800}%
+\special{pa 400 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 400 1800}%
+\special{pa 333 1780}%
+\special{pa 347 1800}%
+\special{pa 333 1820}%
+\special{pa 400 1800}%
+\special{fp}%
+\special{pa 200 1600}%
+\special{pa 400 1600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 400 1600}%
+\special{pa 333 1580}%
+\special{pa 347 1600}%
+\special{pa 333 1620}%
+\special{pa 400 1600}%
+\special{fp}%
+% LINE 2 2 3 0
+% 4 800 1400 800 600 1200 600 1400 1400
+% 
+\special{pn 8}%
+\special{pa 800 1000}%
+\special{pa 800 200}%
+\special{dt 0.045}%
+\special{pa 800 200}%
+\special{pa 800 201}%
+\special{dt 0.045}%
+\special{pa 1200 200}%
+\special{pa 1400 1000}%
+\special{dt 0.045}%
+\special{pa 1400 1000}%
+\special{pa 1400 999}%
+\special{dt 0.045}%
+% STR 2 0 3 0
+% 3 1000 700 1000 800 1 0
+% $\theta$
+\put(10.0000,-4.0000){\makebox(0,0)[lt]{$\theta$}}%
+% STR 2 0 3 0
+% 3 1600 1100 1600 1200 2 0
+% 密着可動
+\put(16.0000,-8.0000){\makebox(0,0)[lb]{密着可動}}%
+% STR 2 0 3 0
+% 3 600 2500 600 2600 2 0
+% $A$
+\put(6.0000,-22.0000){\makebox(0,0)[lb]{$A$}}%
+% CIRCLE 2 0 3 0
+% 4 1000 400 1000 800 800 750 1240 750
+% 
+\special{pn 8}%
+\special{ar 1000 0 400 400  0.9697226 2.0899424}%
+% STR 2 0 3 0
+% 3 1100 2500 1100 2600 2 0
+% $B$
+\put(11.0000,-22.0000){\makebox(0,0)[lb]{$B$}}%
+% STR 2 0 3 0
+% 3 1700 2500 1700 2600 2 0
+% $C$
+\put(17.0000,-22.0000){\makebox(0,0)[lb]{$C$}}%
+% STR 2 0 3 0
+% 3 1000 3100 1000 3200 2 0
+% くさび形水晶
+\put(10.0000,-28.0000){\makebox(0,0)[lb]{くさび形水晶}}%
+% STR 2 0 3 0
+% 3 1800 1100 1800 1200 1 0
+% スリット
+\put(18.0000,-8.0000){\makebox(0,0)[lt]{スリット}}%
+\end{picture}%

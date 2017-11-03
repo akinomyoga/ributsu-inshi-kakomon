@@ -1,0 +1,170 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\usepackage{txfonts}
+\begin{document}
+
+\begin{question}{問題1}{黒沼}
+\parbox[b]{100mm}{図のような1次元の井戸型ポテンシャル$U(x)$
+\[
+U(x)=
+\left\{
+  \begin{array}{cc}
+   -U_0    & |x|\le a   \\
+    0      & |x| >  a   \\
+  \end{array}
+\right.
+\]
+の中での質量$m$の粒子の束縛状態(エネルギー$E<0$)を考える。}
+\parbox[t]{60mm}{
+%\includegraphics[width=40mm]{2000phy1-1.eps}
+\input{2000phy1-1.tpc}
+}
+
+%原本はenumerateで書いてるみたいなんでとりあえず
+%原文にならって書いておきます。
+
+\begin{enumerate}
+  \item まず、量子力学の不確定性関係を使ってこの問題を考える。
+	\begin{enumerate}
+  	  \item \eqname{Q1_1a}粒子がポテンシャル$U$に束縛されていることから、直感的には
+  	  	粒子の位置の不確定性$\Delta x$は$a$程度だと考えられる。
+  	  	そこで、$\Delta x=a$として粒子の運動量の不確定性$\Delta p$を求めよ。
+  	  \item \eqname{Q1_1b}運動量の大きさ$p$は$\Delta p$より大きいと考えて、
+  	  	(i) の結果から粒子の束縛状態が存在するためにはポテンシャルの深さ
+  	  	$U_0$にどのような条件が必要と思われるか。
+  	  	%\eqhref{Q1a}はうまいこと表示されないと思うんで適当に直してね〜
+	\end{enumerate}
+  \item 実は上で求めた束縛状態が存在する条件は正しくなく、
+  	どんなに浅いポテンシャルに対しても束縛状態が存在する。	
+  	\begin{enumerate}
+  	  \item Schr\"odinger方程式を使って束縛状態($E<0$)の波動関数$\psi(x)$を求めよ。
+  	  	その際、エネルギー$E$と$U_0,a,m$の関係式を導け。
+  	  	(波動関数の規格化は考えなくてよい。)
+  	  \item 1(ii) の結果に反してどのような$U_0$の値に対しても束縛状態が存在することを示せ。
+  	  \item \eqname{Q1_2c}$U_0\ll \frac{\hbar^2}{ma^2}$のときに$E$を求めよ。
+  	  \item 2(iii)の場合に粒子がポテンシャル井戸の外側にいる確率$P(|x|>a)$と
+  	  	内側にいる確率$P(|x|<a)$の比$R=P(|x|>a)/P(|x|<a)$を求めよ。
+  	  	また、これから 1(ii) の考え方が正しくなかった理由を述べよ。
+	\end{enumerate}
+\end{enumerate}
+
+
+\end{question}
+\begin{answer}{問題1}{}
+\begin{enumerate}
+  \item 
+	\begin{enumerate}
+  	  \item 不確定性関係は$\Delta x\cdot \Delta p\ge \frac{\hbar}{2}$であるから、
+  	  	\[
+  	  		\Delta p \ge \frac{\hbar}{2\Delta x}=\frac{\hbar}{2a}.
+  	  	\]
+  	  \item 領域$|x|<a$でのエネルギーを考えると、
+  	  	\[
+  	  		E=\frac{p^2}{2m}-U_0
+  	  		 \ge \frac{(\Delta p)^2}{2m}-U_0
+  	  		 \ge \frac{\hbar^2}{8ma^2}-U_0,
+  	  	\]
+  	  	即ち、以下の条件が必要と思われる;
+  	  	\[
+  	  		U_0 \ge \frac{\hbar^2}{8ma^2}-E.
+  	  	\]
+	\end{enumerate}
+  \item 
+  	\begin{enumerate}
+  	  \item Schr\"odinger方程式は
+  	  	\[
+  			\frac{d^2}{dx^2}\psi(x)=-\frac{2m\left[E-U(x)\right]}{\hbar^2}\psi(x).
+  	  	\]
+  	  	束縛状態を考えるので$-U_0<E<0$であって、
+  	  	\[
+  	  		k=\frac{\sqrt{2m|E|}}{\hbar},
+  	  		\qquad
+  	  		\kappa = \frac{\sqrt{2m(E+U_0)}}{\hbar}
+  	  	\]
+  	  	とおくと、$|x|\to +\infty$で$\psi(x)\to 0$となり、かつ連続な$\psi(x)$は以下の形に限られる；
+  	  	\[
+  	  		\psi(x)=\left\{
+  					\begin{array}{cc}
+     						A \mathrm e^{k(x+a)} \sin \delta                & x<-a   \\
+						A \sin \left(\kappa (x+a)+\delta\right)         & -a<x<a \\
+						A \mathrm e^{-k(x-a)} \sin (2\kappa a+\delta)   & x>a    \\
+  					\end{array}
+				\right..
+  	  	\]
+  	  	$A$は規格化定数であるが、位相$\delta$については、波動関数の位相の不定性によって
+  	  	$-\frac{\pi}{2} \le \delta < \frac{\pi}{2}$を考えれば十分である。
+  	  	対数微分$\frac{d}{dx}\ln\psi(x)=\frac{\psi}{\psi'}$も連続でなければならないから、$x=\mp a$で
+  	  	その条件を考えると、
+  	  	\[
+  	  		k = \kappa \cot \delta,  
+  	  		\qquad
+  	  		-k = \kappa \cot (2\kappa a +\delta).
+  	  	\]
+  	  	これら2式はそれぞれ
+  	  	\[
+  	  		0 < \delta < \frac{\pi}{2},
+  	  		\qquad
+  	  		-\frac{\pi}{2} < 2\kappa a + \delta -n\pi <0 \quad (n=1,2,\cdots)
+  	  	\]
+  	  	であることを示唆している。また、簡単な書き換えによって
+  	  	\[
+  	  		\sin \delta = \frac{\hbar\kappa}{\sqrt{2mU_0}},
+  	  		\qquad
+  	  		\sin (2\kappa a + \delta - n\pi) = -\frac{\hbar\kappa}{\sqrt{2mU_0}}
+  	  	\]
+  	  	であるから、これら２式から$\delta$を消去して次の超越方程式を得る；
+		\begin{equation}
+			\frac{n\pi}{2}=\kappa a + \arcsin \frac{\hbar\kappa}{\sqrt{2mU_0}}.\eqname{Q1_Energy_level}
+		\end{equation}
+  	  	但し、$0<\arcsin<\frac{\pi}{2}$とする。上の超越方程式の右辺は
+  	  	$E$の単調増加関数であるから、$n$の値はエネルギー準位の低い順に一対一対応している。
+  	  	特に、正整数$n$の取り得る値は
+  	  	\[
+  	  		n=1,\cdots,1+\left[\frac{2a\sqrt{2mU_0}}{\pi\hbar}\right]
+  	  	\]
+  	  	である。($\left[\cdots\right]$はGauss記号である。)
+  	  	\item $U_0$の値に依らず、超越方程式(\eqhref{Q1_Energy_level})には$n=1$の解が必ず存在する。
+  	  	実際、$n=1$では方程式が
+  	  	\[
+  	  		\cos \kappa a=\frac{\hbar\kappa}{\sqrt{2mU_0}}\equiv \zeta \kappa a,
+  	  		\quad
+  	  		\zeta \equiv \frac{\hbar}{a\sqrt{2mU_0}}\gg 1 
+  	  	\]
+  	  	だから、直線$y=\zeta\kappa a$と曲線$y=\cos(\kappa a)$は$0<\kappa a<\frac{\pi}{2}$において
+  	  	必ず1つの交点を持つことを考えれば解の存在は明らかである。
+  	  	\item 条件より、$n=1$の準位のみが存在する。求める準位$E$は
+  	  	上の方程式の解である。
+  	  	条件から、$\kappa a\ll 1$と考えられるから、$\cos \kappa a$をTaylor展開して
+  	  	\[
+  	  		1-\frac{(\kappa a)^2}{2}\simeq \zeta \kappa a.
+  	  	\]
+  	  	更に$\displaystyle (\kappa a)^2 = \left(\frac{\cos\kappa a}{\zeta}\right)^2 \simeq 1/\zeta^2$
+  	  	と近似すると、
+  	  	\[
+  	  		1-\frac{1}{2\zeta^2} \simeq \zeta \kappa a.
+  	  	\]
+  	  	これを解いて、$\displaystyle \frac{ma^2}{\hbar^2}U_0$の1次まで残すと、
+  	  	\[
+  	  		E\simeq -\frac{2ma^2}{\hbar^2}U_0^2.
+  	  	\]
+  	  	\item ここまでで現れた式で$n=1$としたものを用いて、
+  	  	\begin{eqnarray*}
+  	  		R&=&\frac{\int_{-\infty}^a|\psi(x)|^2dx+\int_a^\infty |\psi(x)|^2dx}
+  	  			{\int_{-a}^a|\psi(x)|^2dx}\\
+  	  		&=&\frac{(\sin^2\delta+\sin^2(2\kappa a+\delta))\int_{a}^\infty e^{-2k(x-a)}dx}
+  	  			{\int_{-a}^a\sin^2(\kappa (x+a)+\delta)dx}\\
+  	  		&=&\frac{\hbar^2\kappa^2}{2mU_0ka}\\
+  	  		&=&\frac{\hbar^2}{2ma^2U_0}-1.
+  	  	\end{eqnarray*}
+  	  	条件から、$R\gg 1$であることは明らかだから、相対的に井戸の外の方が井戸の中より粒子の存在確率は大きく、
+  	  	粒子の位置の揺らぎ$\Delta x$は井戸のスケール$a$よりも大きいはずである。
+  	  	従って$\Delta x=a$とする見積もりが過小であった為に不確定性関係による議論は正しくなかったと考えられる。
+  	\end{enumerate}
+\end{enumerate}
+
+%とりあえずこんな感じで。
+
+\end{answer}
+
+
+\end{document}

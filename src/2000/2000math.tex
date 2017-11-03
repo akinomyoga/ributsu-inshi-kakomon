@@ -1,0 +1,386 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+\begin{question}{数学}{手塚}
+
+\begin{enumerate}
+\item 
+4次元ユークリッド空間の部分空間 $V_1,V_2$ を
+\[
+\begin{array}{r}
+V_1 \equiv \{条件 x_1-x_2+2x_3-x_4 = 0 と x_1+2x_2-x_3 = 0\\
+を共に満足するベクトル \vec{x} = (x_1,x_2,x_3,x_4) の集合\}\end{array}
+\]
+\[
+\begin{array}{r}
+V_2 \equiv \{条件 2x_1+x_2+2x_3-2x_4 = 0 と 3x_1+2x_3-x_4 = 0\\
+を共に満足するベクトル \vec{x} = (x_1,x_2,x_3,x_4) の集合\}\end{array}
+\]
+とする。
+\begin{enumerate}
+\item $V_1, V_2$ はそれぞれ何次元の空間か？
+\item $V_1$ と $V_2$ に共通に含まれるベクトルを求めよ。
+\item 空間 $V_1\cap V_2$ は何次元か？
+\end{enumerate}
+
+\item 
+原点を中心とし、周辺を固定した半径 $a$ の薄い円形膜の振動を考えよう。
+平行位置からの変位を $u$ とする。極座標を用い $u=u(r,\theta,t)$ とする時、
+円形膜の振動は波動方程式
+\begin{equation}
+\frac{\partial^2u}{\partial t^2} = \frac{\partial^2u}{\partial r^2}+\frac1r\frac{\partial u}{\partial r}+
+\frac1{r^2}\frac{\partial^2u}{\partial \theta^2}\eqname{q2:wave}
+\end{equation}
+に従う(簡単のため方程式に現れる係数を $1$ とおいた)。以下の設問に答えよ。
+\begin{enumerate}
+\item $n$ 次のベッセル関数 $J_n(x)$ は微分方程式
+\begin{equation}
+\frac{d^2J_n(x)}{dx^2}+\frac1x\frac{dJ_n(x)}{dx}+(1-\frac{n^2}{x^2})J_n(x)=0\eqname{q2:Bessel}
+\end{equation}
+を満たす。 $J_n(x)$ の $j$ 番目の零点を $\xi_{nj}$ とする時、次の直交関係
+\begin{equation}
+\int_0^1xJ_n(\xi_{nj}x)J_n(\xi_{nl}x)dx = 0, \hspace{1em}j\neq l\eqname{q2:njnl}
+\end{equation}
+が成り立つことを証明せよ。
+
+\item
+境界条件 $u(a,\theta,t) = 0$ と初期条件
+$u(r,\theta,0)=F(r,\theta), \left[\frac{\partial u(r,\theta,t)}{\partial t}\right]_{t=0}=0$ を
+満たす波動方程式の解を変数分離の方法で求めよ。(1)で議論した直交関係を用いてよい。
+\end{enumerate}
+
+\item 
+未知関数 $x(t)$ に関する常微分方程式
+\begin{equation}
+\frac{d^2x(t)}{dt^2}+2\alpha\frac{dx(t)}{dt}+\beta^2x(t) = f(t)
+\eqname{q3:diffeq}
+\end{equation}
+について以下の設問に答えよ。ここで、 $\alpha$ および $\beta$ は正の定数とする。
+\begin{enumerate}
+\item この方程式をフーリエ変換を用いて調べ、未知関数 $x$ を
+\begin{equation}
+x(\omega) = C(\omega)f(\omega)
+\end{equation}
+の形で表せ。ただし $x(\omega), f(\omega)$ は $x(t),f(t)$ のフーリエ変換とする。
+\item $f(t)=\delta(t)$ (デルタ関数)の場合を考える。(1)の結果を用い留数定理を適用して
+解 $x(t)$ を以下の場合について求めよ。
+\begin{enumerate}
+\item $\alpha<\beta$
+\item $\alpha=\beta$
+\item $\alpha>\beta$
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\end{question}
+\begin{answer}{数学}{}
+\begin{enumerate}
+\item 
+式の番号を以下のように定める。4次元ユークリッド空間の部分空間を考えているので各変数は実数である。
+\begin{equation}
+x_1-x_2+2x_3-x_4 = 0\eqname{q1:v1a}
+\end{equation}
+\begin{equation}
+x_1+2x_2-x_3 = 0\eqname{q1:v1b}
+\end{equation}
+\begin{equation}
+2x_1+x_2+2x_3-2x_4 = 0\eqname{q1:v2a}
+\end{equation}
+\begin{equation}
+3x_1+2x_3-x_4 = 0\eqname{q1:v2b}
+\end{equation}
+
+\begin{enumerate}
+\item
+\eqhref{q1:v1a}, \eqhref{q1:v1b} より、
+\begin{equation}
+V_1 = \left\{(x_1,x_2,x_3,x_4)|x_3=x_1+2x_2, x_4=3(x_1+x_2)\right\}\eqname{q1:v1}
+\end{equation}
+よって $V_1$ は\underline{2次元}の空間。
+
+\eqhref{q1:v2a}, \eqhref{q1:v2b} より、
+\begin{equation}
+V_2 = \left\{(x_1,x_2,x_3,x_4)|x_1=(-2x_3+x_4)/3, x_2=(-2x_3+4x_4)/3\right\}\eqname{q1:v2}
+\end{equation}
+よって $V_2$ は\underline{2次元}の空間。
+
+\item 
+$x_3=x_1+2x_2, x_4=3(x_1+x_2)$ を $x_1=(-2x_3+x_4)/3$ に代入し、整理して $x_2=-2x_1$ を得る。\\
+$x_3=x_1+2x_2, x_4=3(x_1+x_2)$ と $x_2=(-2x_3+4x_4)$ からも $x_2 = -2x_1$ を得るので、
+\begin{eqnarray}
+V_1\cap V_2 &=& \left\{(x_1,x_2,x_3,x_4)|x_2=-2x_1, x_3=x_1+2x_2, x_4=3(x_1+x_2)\right\}\\
+&=& \left\{c(1,-2,-3,-3)|c は任意の実数\right\}\eqname{q1:v1v2}
+\end{eqnarray}
+となる。よって \underline{$c(1,-2,-3,-3) (c は任意の実数)$} が $V_1,V_2$ に共通に含まれる。
+
+\item 上の結果\eqhref{q1:v1v2} より $V_1\cap V_2$ は \underline{1次元} である。
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item
+
+$J_n(x)$ が \eqhref{q2:Bessel} を満たすから、 $\alpha, \beta$ を任意の実数として
+\begin{equation}
+\frac{d}{dx}\left\{x\frac{dJ_n(\alpha x)}{dx}\right\}+\left(\alpha^2x-\frac{n^2}{x^2}\right)J_n(\alpha x) = 0
+\eqname{q2:alpha}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}\left\{x\frac{dJ_n(\beta x)}{dx}\right\}+\left(\beta^2x-\frac{n^2}{x^2}\right)J_n(\beta x) = 0
+\eqname{q2:beta}
+\end{equation}
+
+$\eqhref{q2:alpha}\times J_n(\beta x)-\eqhref{q2:beta}\times J_n(\alpha x)$ を $[0,1]$ で積分すると、
+\begin{eqnarray*}
+0&=&\int_0^1\left[
+J_n(\beta x)\frac{d}{dx}\left\{x\frac{dJ_n(\alpha x)}{dx}\right\}
+-J_n(\alpha x)\frac{d}{dx}\left\{x\frac{dJ_n(\beta x)}{dx}\right\}
+\right]+
+(\alpha^2-\beta^2)\int_0^1xJ_n(\alpha x)J_n(\beta x)dx
+\\
+&=&\left.x\left\{J_n(\beta x)\frac{dJ_n(\alpha x)}{dx} - J_n(\alpha x)\frac{dJ_n(\beta x)}{dx}\right\}\right|_0^1
++(\alpha^2-\beta^2)\int_0^1xJ_n(\alpha x)J_n(\beta x)dx
+\end{eqnarray*}
+となる。
+
+$\alpha, \beta$ が $J_n(x)$ の異なる零点である場合を考える。
+右辺の第1項は、\eqhref{q2:Bessel}より、
+\begin{itemize}
+\item $n=0$ のとき、 $dJ_n(x)/dx = -x\left(d^2J_n(x)/dx^2+J_n(x)\right)\rightarrow0~(x\downarrow 0)$
+\item $n>0$ のとき、 $(n^2-x^2)J_n(x) = x\left(xd^2J_n(x)/dx^2+dJ_n(x)/dx\right)\rightarrow0~(x\downarrow 0)$
+\end{itemize}
+となるので $0$ であるから、
+\[
+\int_0^1xJ_n(\alpha x)J_n(\beta x)dx = 0
+\]
+となる。
+\newpage
+\item
+まず、\eqhref{q2:wave}の解で $u(r,\theta,t) = R(r)\Theta(\theta)T(t)$ と変数分離でき、初期条件
+\begin{equation}
+\left[\frac{\partial u(r,\theta,t)}{\partial t}\right]_{t=0}=0
+\eqname{q2:initial-t}
+\end{equation}
+を満たすものを求める。
+
+$\psi(r,\theta) = R(r)\Theta(\theta)$ とおき、\eqhref{q2:wave}に代入して整理すると
+\begin{equation}
+\frac{\partial^2T}{\partial t^2}/T = 
+\left(\frac{\partial^2\psi}{\partial r^2}+\frac1r\frac{\partial\psi}{\partial r}+
+\frac1{r^2}\frac{\partial^2\psi}{\partial \theta^2}\right)/\psi
+\end{equation}
+を得るので、両辺の値は $r,\theta,t$ によらない定数である。これを $-\lambda^2$ とおく。
+\end{enumerate}
+
+$\partial^2T/\partial t^2 = -\lambda^2 T$ の解で、値が実数かつ\eqhref{q2:initial-t}を満たすものは
+$T(t)\propto \cos{\lambda t}$ なるものに限られる。
+
+$\psi(r,\theta)$ に関する方程式を $R, \Theta$ で書き直して整理し、 $R'=dR/dr$, $\Theta'=d\Theta/d\theta$ 
+のように略記すると
+\[
+r^2\left(\frac{R''+R'/r}{R}+\lambda^2\right)=-\frac{\Theta''}{\Theta}
+\]
+両辺は $r, \theta$ によらないので $\nu^2$ とおける。
+
+$\Theta''=-\nu^2\Theta$ なので、$\nu$ が整数の場合に限り一価の独立な実数解
+$\Theta(\theta) \propto \sin{\nu\theta}, \Theta(\theta) \propto \cos{\nu\theta}$ がある。
+
+$R(r)$ についての方程式は、 $x=\lambda r$ と変数変換すると
+\[
+\frac{\partial^2 R}{\partial x^2}+\frac1x\frac{\partial R}{\partial x}+\left(1-\frac{\nu^2}{x^2}\right)R = 0
+\]
+となるから、 $r\geq 0$ で有限な実数解は $R(r)=J\nu(\lambda r)$ に限られる。
+
+境界条件 $u(a,\theta,t) = R(a)\Theta(\theta)T(t) = 0$ より、 $R(a)=J_\nu(\lambda a)=0$ なので、
+$\xi_{\nu j}$ を $J_\nu$ の $j$ 番目の零点として $\lambda = \xi_{\nu j}/a$ と書ける。
+
+以上より、\eqhref{q2:initial-t}と境界条件を満たす\eqhref{q2:wave}の解は
+\[
+\varphi_{\nu j}^{(1)} = J_\nu\left(\frac{\xi_{\nu j}}a r\right)\sin{\nu\theta},
+\varphi_{\nu j}^{(1)} = J_\nu\left(\frac{\xi_{\nu j}}a r\right)\cos{\nu\theta}
+\]
+の形のものに限られる。
+これらが、2個の解の積を半径 $a$ の円 $S$ の内部で積分することで定義される内積に関して直交することを示す。
+(厳密には完全直交系をなすことを示すべきであろう)
+
+$\theta$ に関して先に積分すれば、 $\varphi_{\nu j}^{(1)}$ と $\varphi_{\nu' j'}^{(2)}$ が直交すること、
+および $\nu\neq\nu'$ のとき $\varphi_{\nu j}^{(i)}$ と $\varphi_{\nu' j'}^{(i)}$ が直交する($i=1,2$)ことがわかる。
+
+よって、 $\nu$ が等しく $j$ が異なる場合で、 $\theta$ に関する積分が消えない場合を考えればよいが、
+このとき(i)の結果より
+\[
+\int_S \varphi_{\nu j}^{(i)}\varphi_{\nu j'}^{(i)}dS
+= \left(\int_0^{2\pi}\sin^2\nu\theta d\theta\right)
+\int_0^a r J_\nu\left(\frac{\xi_{\nu j}}a r\right)J_\nu\left(\frac{\xi_{\nu j'}}a r\right)
+= 0
+\]
+となる( $x=r/a$ と置換して積分すればよい)。
+
+従って、(上の解が完全直交系をなすことを認めれば)初期条件 $u(r,\theta,0) = F(r,\theta)$ を満たす解は、
+\[
+a_{\nu j}^{(1)} = \int_SF(r,\theta)J_\nu\left(\frac{\xi_{\nu j}}a r\right)\sin{\nu\theta}dS/
+\int_SJ_\nu^2\left(\frac{\xi_{\nu j}}a r\right)\sin^2{\nu\theta}dS
+\]
+および
+\[
+a_{\nu j}^{(2)} = \int_SF(r,\theta)J_\nu\left(\frac{\xi_{\nu j}}a r\right)\cos{\nu\theta}dS/
+\int_SJ_\nu^2\left(\frac{\xi_{\nu j}}a r\right)\cos^2{\nu\theta}dS
+\]
+を用いて、
+\[
+u(r,\theta,t) = \sum_\nu\sum_j
+J_\nu\left(\frac{\xi_{\nu j}}a r\right)
+\left(a_{\nu j}^{(1)}\sin{\nu\theta}+a_{\nu j}^{(2)}\cos{\nu\theta}\right)
+\cos{\frac{\xi_{\nu j}}at}
+\]
+となる。
+
+\item
+\begin{enumerate}
+\item
+\begin{equation}
+x(t)=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}x(\omega)d\omega
+\eqname{q3:x_t}
+\end{equation}
+\begin{equation}
+f(t)=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}f(\omega)d\omega
+\eqname{q3:f_t}
+\end{equation}
+を\eqhref{q3:diffeq}に代入し、 $t$ に関する微分と $\omega$ での積分の順序を交換して
+\begin{equation}
+\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}
+\left[(-\omega^2+2i\alpha\omega+\beta^2)x(\omega)-f(\omega)\right]d\omega = 0
+\end{equation}
+を得る。これが任意の $t$ に対して成り立つので、
+\[
+(-\omega^2+2i\alpha\omega+\beta^2)x(\omega)=f(\omega)
+\]
+すなわち
+$\underline{C(\omega) =-\omega^2+2i\alpha\omega+\beta^2}$
+となる。
+\item
+$f(t) = \delta(t)$ のとき、フーリエ変換の定義により
+\[
+f(\omega)=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{-i\omega t}\delta(t)dt
+= \frac1{\sqrt{2\pi}}
+\]
+であるから、フーリエ変換可能な解 $x(t)$ があるとき、 $x(t)$ は
+\begin{equation}
+x(t)
+=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}x(\omega)d\omega
+=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}\frac{f(\omega)}{C(\omega)}d\omega
+=\frac1{2\pi}\int_{-\infty}^\infty \frac{-e^{i\omega t}}{(\omega-i\alpha)^2-\beta^2+\alpha^2}d\omega
+\eqname{q3:fourier}
+\end{equation}
+で与えられることがわかる。ここで、 $g(\omega)=-e^{i\omega t}/\{(\omega-i\alpha)^2-\beta^2+\alpha^2\}$ とおく。
+
+\begin{enumerate}
+\item $\alpha<\beta$
+
+$\gamma = \sqrt{\beta^2-\alpha^2}$ とおくと、 $g(\omega)$ の極は
+      $\omega=i\alpha\pm \gamma$ である。
+
+$\alpha>0$ より、極はどちらも上半平面にあるので、
+$t<0$ のとき (\ref{q3:fourier}) によって $x(t)=0$ となる。
+
+$t>0$ のとき、図\eqhref{q3:largerbeta}に示した上側の経路 $C$ に沿った積分は
+\[
+\int_{C'}g(\omega)d\omega
+= 2\pi i \left({\rm Res}(g,i\alpha+\gamma)+{\rm Res}(g,i\alpha-\gamma)\right)
+= 2\pi e^{-\alpha t}\frac{\sin \gamma t}{\gamma}
+\]
+となり、半円の半径を $R$ とすれば、 $R>>\alpha,\beta$ のとき $|g(\omega)|=O(R^{-2})$ なので、
+$R\rightarrow\infty$ のとき半円部分の積分は $0$ に収束する。よって
+\[
+x(t) = \frac1{2\pi}\int_{-\infty}^\infty g(\omega)d\omega = e^{-\alpha t}\frac{\sin \gamma t}{\gamma}
+\]
+となる。
+
+以上から、
+\[
+x(t) = \Theta(t) e^{-\alpha t}\frac{\sin \gamma t}{\gamma}
+= \Theta(t) e^{-\alpha t}\frac{\sin \sqrt{\beta^2-\alpha^2} t}{\sqrt{\beta^2-\alpha^2}}
+\]
+を得る。
+\begin{figure}[h]
+\begin{center}
+\input{2000math-1.tpc}
+\end{center}
+\caption{$\alpha<\beta$ の場合の積分経路}\eqname{q3:largerbeta}
+\end{figure}
+\newpage
+\item $\alpha=\beta$
+
+このとき、 $g(\omega)$ は $\omega=i\alpha$ に2位の極を持つ。
+
+$f(z)$ が $z=z_0$ に $n$ 位の極を持つとき、
+\[
+ \mbox{Res}~[f(z),z_0] = \frac{1}{(n-1)!}
+\lim_{z\rightarrow z_0,z\neq z_0}\frac{d^{n-1}}{dz^{n-1}}
+\left[(z-z_0)^n f(z)\right]
+\]
+であるから、
+\[
+\mbox{Res}~[g(\omega),i\alpha]
+= \lim_{\omega\rightarrow i\alpha}\frac{d}{d\omega}(-e^{i\omega t})
+= -ite^{-\alpha t}
+\]
+となる。
+
+$t>0$ のとき、図\eqhref{q3:largerbeta} の $C$ に沿って積分すると
+半円部分は(i)と同様に $R\rightarrow\infty$ で消えるので、
+\[
+ x(t) = 2\pi i\mbox{Res}~[g(\omega),i\alpha] = te^{-\alpha t}
+\]
+
+$t<0$ のとき、図\eqhref{q3:largerbeta} の $C'$ に沿って積分すると
+半円部分が消え、 $x(t)=0$ となる。
+
+よって、
+\[
+ x(t) = \Theta(t)te^{-\alpha t}
+\]
+が得られる。
+\newpage
+\item $\alpha>\beta$
+
+$\gamma = \sqrt{\alpha^2-\beta^2}$ と定める。
+
+$\alpha>\gamma>0$ より、極はどちらも上半平面にあるので、
+$t<0$ のとき (\ref{q3:fourier}) によって $x(t)=0$ となる。
+
+$t>0$ のとき、図\eqhref{q3:smallerbeta}に示した上側の経路 $C$ に沿った積分は
+\[
+\int_{C'}g(\omega)d\omega
+= 2\pi i \left({\rm Res}(g,i\alpha+i\gamma)+{\rm Res}(g,i\alpha-i\gamma)\right)
+= 2\pi e^{-\alpha t}\frac{\sinh \gamma t}{\gamma}
+\]
+となり、半円の半径を $R$ とすれば、 $R>>\alpha,\beta$ のとき $|g(\omega)|=O(R^{-2})$ なので、
+$R\rightarrow\infty$ のとき半円部分の積分は $0$ に収束する。よって
+\[
+x(t) = \frac1{2\pi}\int_{-\infty}^\infty g(\omega)d\omega = e^{-\alpha t}\frac{\sinh \gamma t}{\gamma}
+\]
+となる。
+
+以上から、
+\[
+x(t) = \Theta(t) e^{-\alpha t}\frac{\sinh \gamma t}{\gamma}
+= \Theta(t) e^{-\alpha t}\frac{\sinh \sqrt{\alpha^2-\beta^2} t}{\sqrt{\alpha^2-\beta^2}}
+\]
+を得る。
+\begin{figure}[h]
+\begin{center}
+\input{2000math-2.tpc}
+\end{center}
+\caption{$\alpha>\beta$ の場合の積分経路}\eqname{q3:smallerbeta}
+\end{figure}
+
+(注) 境界条件が指定されていないので、一般解は2個の積分定数を含むが、
+問題文の指示に従って解くと $t<0$ で $x(t)=0$ を満たす解のみが得られる。
+\end{enumerate}
+\end{enumerate}
+
+
+\end{enumerate}
+\end{answer}
+\end{document}

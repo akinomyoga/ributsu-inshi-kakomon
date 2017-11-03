@@ -1,0 +1,345 @@
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(50.00,21.50)(0.00,-21.50)
+% LINE 2 0 3 0
+% 10 600 620 800 620 800 420 800 820 800 820 1200 620 1200 620 800 420 1200 620 1400 620
+% 
+\special{pn 8}%
+\special{pa 600 220}%
+\special{pa 800 220}%
+\special{fp}%
+\special{pa 800 20}%
+\special{pa 800 420}%
+\special{fp}%
+\special{pa 800 420}%
+\special{pa 1200 220}%
+\special{fp}%
+\special{pa 1200 220}%
+\special{pa 800 20}%
+\special{fp}%
+\special{pa 1200 220}%
+\special{pa 1400 220}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 1400 420 2200 820
+% 
+\special{pn 8}%
+\special{pa 1400 20}%
+\special{pa 2200 20}%
+\special{pa 2200 420}%
+\special{pa 1400 420}%
+\special{pa 1400 20}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2200 620 2400 620
+% 
+\special{pn 8}%
+\special{pa 2200 220}%
+\special{pa 2400 220}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2400 520 3000 720
+% 
+\special{pn 8}%
+\special{pa 2400 120}%
+\special{pa 3000 120}%
+\special{pa 3000 320}%
+\special{pa 2400 320}%
+\special{pa 2400 120}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 3000 620 3400 620
+% 
+\special{pn 8}%
+\special{pa 3000 220}%
+\special{pa 3400 220}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 0 470 0 570 2 0
+% カウンタ
+\put(0.0000,-1.7000){\makebox(0,0)[lb]{カウンタ}}%
+% STR 2 0 3 0
+% 3 200 670 200 770 2 0
+% A
+\put(2.0000,-3.7000){\makebox(0,0)[lb]{A}}%
+% LINE 2 0 3 0
+% 10 600 1220 800 1220 800 1020 800 1420 800 1420 1200 1220 1200 1220 800 1020 1200 1220 1400 1220
+% 
+\special{pn 8}%
+\special{pa 600 820}%
+\special{pa 800 820}%
+\special{fp}%
+\special{pa 800 620}%
+\special{pa 800 1020}%
+\special{fp}%
+\special{pa 800 1020}%
+\special{pa 1200 820}%
+\special{fp}%
+\special{pa 1200 820}%
+\special{pa 800 620}%
+\special{fp}%
+\special{pa 1200 820}%
+\special{pa 1400 820}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 1400 1020 2200 1420
+% 
+\special{pn 8}%
+\special{pa 1400 620}%
+\special{pa 2200 620}%
+\special{pa 2200 1020}%
+\special{pa 1400 1020}%
+\special{pa 1400 620}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2200 1220 2400 1220
+% 
+\special{pn 8}%
+\special{pa 2200 820}%
+\special{pa 2400 820}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2400 1120 3000 1320
+% 
+\special{pn 8}%
+\special{pa 2400 720}%
+\special{pa 3000 720}%
+\special{pa 3000 920}%
+\special{pa 2400 920}%
+\special{pa 2400 720}%
+\special{fp}%
+% LINE 2 0 3 0
+% 8 3000 1220 3200 1220 3200 820 3400 820 3200 820 3200 1620 3200 1620 3450 1620
+% 
+\special{pn 8}%
+\special{pa 3000 820}%
+\special{pa 3200 820}%
+\special{fp}%
+\special{pa 3200 420}%
+\special{pa 3400 420}%
+\special{fp}%
+\special{pa 3200 420}%
+\special{pa 3200 1220}%
+\special{fp}%
+\special{pa 3200 1220}%
+\special{pa 3450 1220}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 0 1070 0 1170 2 0
+% カウンタ
+\put(0.0000,-7.7000){\makebox(0,0)[lb]{カウンタ}}%
+% STR 2 0 3 0
+% 3 200 1270 200 1370 2 0
+% B
+\put(2.0000,-9.7000){\makebox(0,0)[lb]{B}}%
+% LINE 2 0 3 0
+% 6 3400 500 3400 900 3400 900 3600 900 3400 500 3600 500
+% 
+\special{pn 8}%
+\special{pa 3400 100}%
+\special{pa 3400 500}%
+\special{fp}%
+\special{pa 3400 500}%
+\special{pa 3600 500}%
+\special{fp}%
+\special{pa 3400 100}%
+\special{pa 3600 100}%
+\special{fp}%
+% CIRCLE 2 0 3 0
+% 4 3600 700 3800 700 3600 1300 3600 300
+% 
+\special{pn 8}%
+\special{ar 3600 300 200 200  4.7123890 6.2831853}%
+\special{ar 3600 300 200 200  0.0000000 1.5707963}%
+% LINE 2 0 3 0
+% 2 3800 700 4800 700
+% 
+\special{pn 8}%
+\special{pa 3800 300}%
+\special{pa 4800 300}%
+\special{fp}%
+% LINE 2 0 3 0
+% 10 600 1820 800 1820 800 1620 800 2020 800 2020 1200 1820 1200 1820 800 1620 1200 1820 1400 1820
+% 
+\special{pn 8}%
+\special{pa 600 1420}%
+\special{pa 800 1420}%
+\special{fp}%
+\special{pa 800 1220}%
+\special{pa 800 1620}%
+\special{fp}%
+\special{pa 800 1620}%
+\special{pa 1200 1420}%
+\special{fp}%
+\special{pa 1200 1420}%
+\special{pa 800 1220}%
+\special{fp}%
+\special{pa 1200 1420}%
+\special{pa 1400 1420}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 1400 1620 2200 2020
+% 
+\special{pn 8}%
+\special{pa 1400 1220}%
+\special{pa 2200 1220}%
+\special{pa 2200 1620}%
+\special{pa 1400 1620}%
+\special{pa 1400 1220}%
+\special{fp}%
+% LINE 2 0 3 0
+% 2 2200 1820 2400 1820
+% 
+\special{pn 8}%
+\special{pa 2200 1420}%
+\special{pa 2400 1420}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2400 1720 3000 1920
+% 
+\special{pn 8}%
+\special{pa 2400 1320}%
+\special{pa 3000 1320}%
+\special{pa 3000 1520}%
+\special{pa 2400 1520}%
+\special{pa 2400 1320}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 0 1670 0 1770 2 0
+% カウンタ
+\put(0.0000,-13.7000){\makebox(0,0)[lb]{カウンタ}}%
+% STR 2 0 3 0
+% 3 200 1870 200 1970 2 0
+% C
+\put(2.0000,-15.7000){\makebox(0,0)[lb]{C}}%
+% CIRCLE 2 0 3 0
+% 4 4280 1720 4480 1720 4280 2320 4280 1320
+% 
+\special{pn 8}%
+\special{ar 4280 1320 200 200  4.7123890 6.2831853}%
+\special{ar 4280 1320 200 200  0.0000000 1.5707963}%
+% LINE 2 0 3 0
+% 2 4480 1720 4800 1720
+% 
+\special{pn 8}%
+\special{pa 4480 1320}%
+\special{pa 4800 1320}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 600 2420 600 2520 2 0
+% プリアンプ
+\put(6.0000,-21.2000){\makebox(0,0)[lb]{プリアンプ}}%
+% STR 2 0 3 0
+% 3 1200 2620 1200 2720 2 0
+% ディスクリミネータ
+\put(12.0000,-23.2000){\makebox(0,0)[lb]{ディスクリミネータ}}%
+% STR 2 0 3 0
+% 3 2200 2420 2200 2520 2 0
+% 可変遅延器
+\put(22.0000,-21.2000){\makebox(0,0)[lb]{可変遅延器}}%
+% STR 2 0 3 0
+% 3 3000 2120 3000 2220 2 0
+% コインシデンス回路
+\put(30.0000,-18.2000){\makebox(0,0)[lb]{コインシデンス回路}}%
+% STR 2 0 3 0
+% 3 3400 2500 3400 2600 2 0
+% 3(ii)の図
+\put(34.0000,-22.0000){\makebox(0,0)[lb]{3(ii)の図}}%
+% LINE 2 0 3 0
+% 4 4290 1520 4090 1520 4290 1920 4090 1920
+% 
+\special{pn 8}%
+\special{pa 4290 1120}%
+\special{pa 4090 1120}%
+\special{fp}%
+\special{pa 4290 1520}%
+\special{pa 4090 1520}%
+\special{fp}%
+% CIRCLE 2 0 3 0
+% 4 3690 1720 4140 1720 4100 1920 4100 1520
+% 
+\special{pn 8}%
+\special{ar 3690 1320 450 450  5.8293413 6.2831853}%
+\special{ar 3690 1320 450 450  0.0000000 0.4538440}%
+% STR 2 0 3 0
+% 3 3430 700 3430 800 2 0
+% AND
+\put(34.3000,-4.0000){\makebox(0,0)[lb]{AND}}%
+% STR 2 0 3 0
+% 3 4200 1720 4200 1820 2 0
+% OR
+\put(42.0000,-14.2000){\makebox(0,0)[lb]{OR}}%
+% LINE 2 0 3 0
+% 2 3000 1820 4120 1820
+% 
+\special{pn 8}%
+\special{pa 3000 1420}%
+\special{pa 4120 1420}%
+\special{fp}%
+% DOT 0 0 3 0
+% 2 3200 1220 3200 1220
+% 
+\special{pn 20}%
+\special{sh 1}%
+\special{ar 3200 820 10 10 0  6.28318530717959E+0000}%
+\special{sh 1}%
+\special{ar 3200 820 10 10 0  6.28318530717959E+0000}%
+% CIRCLE 2 0 3 0
+% 4 3540 970 3480 970 3480 970 3480 970
+% 
+\special{pn 8}%
+\special{ar 3540 570 60 60  0.0000000 6.2831853}%
+% BOX 2 0 3 0
+% 2 4800 1840 5000 600
+% 
+\special{pn 8}%
+\special{pa 4800 1440}%
+\special{pa 5000 1440}%
+\special{pa 5000 200}%
+\special{pa 4800 200}%
+\special{pa 4800 1440}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 4800 900 4800 1000 2 0
+% T
+\put(48.0000,-6.0000){\makebox(0,0)[lb]{T}}%
+% STR 2 0 3 0
+% 3 4800 1100 4800 1200 2 0
+% A
+\put(48.0000,-8.0000){\makebox(0,0)[lb]{A}}%
+% STR 2 0 3 0
+% 3 4800 1300 4800 1400 2 0
+% C
+\put(48.0000,-10.0000){\makebox(0,0)[lb]{C}}%
+% STR 2 0 3 0
+% 3 3920 520 3920 620 2 0
+% start
+\put(39.2000,-2.2000){\makebox(0,0)[lb]{start}}%
+% STR 2 0 3 0
+% 3 4440 1870 4440 1970 2 0
+% stop
+\put(44.4000,-15.7000){\makebox(0,0)[lb]{stop}}%
+% LINE 2 0 3 0
+% 2 3400 1620 4130 1620
+% 
+\special{pn 8}%
+\special{pa 3400 1220}%
+\special{pa 4130 1220}%
+\special{fp}%
+% CIRCLE 2 0 3 0
+% 4 3530 1620 3530 1690 3530 1690 3530 1490
+% 
+\special{pn 8}%
+\special{ar 3530 1220 70 70  4.7123890 6.2831853}%
+\special{ar 3530 1220 70 70  0.0000000 1.5707963}%
+% LINE 2 0 3 0
+% 4 3540 1550 3540 1030 3540 1830 3540 1690
+% 
+\special{pn 8}%
+\special{pa 3540 1150}%
+\special{pa 3540 630}%
+\special{fp}%
+\special{pa 3540 1430}%
+\special{pa 3540 1290}%
+\special{fp}%
+\end{picture}%
