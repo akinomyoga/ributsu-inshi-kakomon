@@ -1,0 +1,48 @@
+#!/bin/bash
+# -*- coding:utf-8 -*-
+
+docs=(2002pankyo 2002senmon)
+docs_ex=(2002pankyo2)
+
+_2002pankyo_title='2002年度実施 一般教育科目'
+_2002pankyo_cov=()
+_2002pankyo_prb=(2002engl.tex 2002math.tex)
+_2002pankyo_ans=(2002engl.tex 2002math.tex)
+_2002pankyo_dep=(2002engl2.eps)
+# 
+# 作成者
+#         問題入力  解答作成
+#         --------- ----------
+#   問題1 松井 鉄平 松井 鉄平
+#   問題2 松井 鉄平 松井 鉄平
+#   問題1 桂 法称   桂 法称  
+#   問題2 桂 法称   桂 法称  
+# 
+
+_2002pankyo2_title='2002年度実施 一般教育科目 (英語なし)'
+_2002pankyo2_cov=()
+_2002pankyo2_prb=(2002math.tex)
+_2002pankyo2_ans=(2002math.tex)
+_2002pankyo2_dep=(2002engl2.eps)
+
+_2002senmon_title='2002年度実施 物理専門科目'
+_2002senmon_cov=()
+_2002senmon_prb=(2002phy1.tex 2002phy2.tex 2002phy3.tex 2002phy4.tex 2002phy5.tex 2002phy6.tex 2002phy7.tex 2002phy8.tex 2002phy9.tex)
+_2002senmon_ans=(2002phy1.tex 2002phy2.tex 2002phy3.tex 2002phy4.tex 2002phy5.tex 2002phy6.tex 2002phy7.tex 2002phy8.tex 2002phy9.tex)
+_2002senmon_dep=(
+  2002phy3a.eps 2002phy4a1.eps 2002phy4a2.eps 2002phy6a.eps 2002phy6q.eps 2002phy8q2.eps
+  2002physA8_1.eps 2002physQ1_1.eps 2002physQ3_1.eps 2002physQ4_1.eps 2002physQ8_1.eps 2002physQ8_3.eps)
+#
+# 作成者
+#         問題入力  解答作成
+#         --------- ----------
+#   問題1 高島宏和  高島宏和
+#   問題2 高島宏和  高島宏和
+#   問題3 高瀬      高瀬    
+#   問題4 高山　務  高山　務
+#   問題5 市川 翼   市川 翼 
+#   問題6 三澤      三澤    
+#   問題7 高見 一   高見 一 
+#   問題8 山地洋平  山地洋平
+#   問題9 山地 洋平 高見 一 
+#

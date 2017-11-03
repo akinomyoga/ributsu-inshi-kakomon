@@ -1,6 +1,9 @@
 \documentclass[fleqn]{jbook}
 \usepackage{physpub}
 \usepackage{txfonts}
+\ifx\inshiNotDefined\varg
+  \def\varg{g}
+\fi
 \begin{document}
 \begin{question}{問題9}{山地 洋平}
 慣性も面と$I$を持った異核$2$原子分子の回転運動について、次の問に答えよ。ただし、ボルツマン定数を$k_B$とし、比熱は1分子あたりの比熱とする。
