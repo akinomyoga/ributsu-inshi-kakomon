@@ -1,0 +1,135 @@
+\documentclass[fleqn]{jbook} 
+\usepackage[dvips]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{bm}
+%%\usepackage{eclbkbox}
+%%\usepackage{float}
+%%\usepackage{fancybox}
+\usepackage{ascmac}
+%%\usepackage{bm}
+%\renewcommand{\refname}{引用文献}
+%\renewcommand{\figurename}{Fig.}
+%\renewcommand{\tablename}{Table}
+%\renewcommand{\eqnameitemii}{☆}
+
+
+\begin{document}
+
+\begin{question}{第３問}{}
+真空中で、高い強度の単色光（電磁波）と自由電子（質量$m$、電荷$-e$）との相互作用を考える。電子にはたらく力$\mathbf{F}=-e\mathbf{E}+\mathbf{v}\times \mathbf{B}$（$\bm{E},\bm{B}$はそれぞれ光の電場と磁束密度、$v$は電子の速度）のうち、光の磁場成分と電子の相互作用の寄与が十分小さいのはどのような場合かを具体的に考察しよう。空間内のある点で、$x$方向に直接偏光した角振動数$\omega$を持つ単色平面波の電場を$E_x=E_0 \sin \omega_t$と表すとき、以下の設問に答えよ。ただし、真空中での光の速さを$c$とする。
+\begin{enumerate}
+\item 光の電場の振幅$E_0$と磁束密度の振幅$B_0$の比$E_0/B_0$が$c$であることに注意し、電子には働く力のうち、光の磁場成分と電子との相互作用の寄与が十分小さくなるための$\bm{v}$の大きさに関する条件を求めよ。
+\end{enumerate}
+以下の設問2,3,5では、設問１で考察した光の磁場成分と電子との相互作用の寄与が十分小さく、無視して良い場合を考える。
+\setcounter{enumi}{2}
+\begin{enumerate}
+\item 時刻$t=t_0$で電子の速度が$0$であったとする。時刻$t>t_0$における光の電場$E_x$中での電子の運動エネルギーを求めよ。
+\item 設問２で求めた運動エネルギーについて、光の電場の１周期$T=2\pi/\omega$にわたる平均を求めよ。また、求めた平均が取り得る最小値を明示し、その物理的意味を簡潔に説明せよ。時間に依存するある物理量$u(t)$の１周期にわたる平均$\langle u(t)\rangle$は、
+$$
+\langle u(t)\rangle=\frac{1}{t}\int_t^{t+T} u(t^{\prime})dt^{\prime}
+$$
+で定義される。
+
+\item
+光の強度$I$ [W/m$^2$]がポインティングベクトル$\bm{S}=\bm{E}\times (\bm{B}/\mu_0)$（$\mu_0$は真空の透磁率）の大きさの１周期平均に相当することに注意し、電場の振幅$E_0$を光の強度$I$と$Z_0=\sqrt{\mu_0/\epsilon_0}$（$\epsilon_0$は真空の誘電率）を含む式で表せ。$Z_0$は真空の放射インピーダンスと呼ばれる。
+
+\item
+電子の運動エネルギーにつして、設問３で求めた平均が取り得る最小値を$U$と書く。設問４の結果を用い、$U$ [J]の標識を、光の強度$I$ [W/m$^2$]、その波長$\lambda$ [m]、電子の質量$m$ [kg]と電荷の大きさ$e$ [C]、光の速さ$c$ [m/s]、及び$Z_0$を用いて表せ。
+
+\item 
+設問５で得られた$U$の表式に光の強度$I$と波長$\lambda$以外の物理量を代入すると、数値係数は$1.5\times 10^{-24} s$となる。いま、$\lambda=0.8 \mu\text{m}=8\times 1-^{-7}$mのとき、$I<10^{18}$ [W/m$^2$]であれば、設問１で考察したように、電子に働く力のうち、光の磁場成分と電子との齟齬作用の寄与が十分小さいことを示せ。ただし、$m=9\times10^{-31}$kgとする。
+\end{enumerate}
+
+\end{question}
+
+\begin{answer}{第３問}{}
+
+この問題はとても簡単なので解答を読む前に自分でやってみてください。僕も一応解きましたが、でもなんだか三番の平均値が取りうる物理的な意味あたりで答えがしっくりとしません。
+
+\begin{enumerate}
+\item
+
+\vspace*{2zw}
+
+一般的に電磁場をあらわしてもいいのですが、この問題での一般性は失わないので$+z$方向に進行しているとして具体的に表現してしまいます。
+\begin{equation}
+\overrightarrow{E}=\begin{pmatrix}
+E_{o}\sin(wt-kz+\phi)\\
+0\\
+0
+\end{pmatrix}
+\end{equation}
+\begin{equation}
+\overrightarrow{B}=\begin{pmatrix}
+0 \\
+B_{o}\sin(wt-kz+\phi)\\
+0
+\end{pmatrix}
+\end{equation}
+このとき力は$x$成分しかなく、ちょこっと書き下してみると、\\
+\begin{equation}
+F_x=-eE_{o}\sin(wt-ky+\phi) \Bigl(1+v_y\times \frac{B_{o}}{E_{o}} \Bigr) 
+\end{equation}
+となり、Bが無視できるためには$v_y \leqslant c$であればよい。
+\item
+ちゃんと初期条件を考えて運動方程式をたてる。
+\begin{align}
+x(t_{0}) &= x_{0}, & v_{x}(t_0) &= 0 & \ddot{x} &= -eE_{x} \\
+y(t_{0}) &= y_{0}, & v_{y}(t_0) &= 0 & \ddot{y} &= 0 \\
+z(t_{0}) &= z_{0}, & v_{z}(t_0) &= 0 & \ddot{z} &= 0 
+\end{align}
+これを解くと、\\
+\begin{align}
+x(t) &= x_{0} + \frac{eE_{0}}{xw^{2}}\sin(wt-ky_0+\phi) \\
+v_{x}(t) &=\frac{eE_{0}}{xw}\cos(wt-ky_0+\phi) 
+\end{align}
+運動エネルギーを $u(t)$と置くと、
+\begin{equation}
+u(t)=\frac{1}{2}\frac{e^{2}E_{o}^{2}}{mw^{2}}\cos^{2}(wt-ky_{0}+\phi)
+\end{equation}
+\item
+
+2で求めた運動エネルギー $u(t)$ の平均値を求める。
+\begin{equation}
+	\begin{split}
+<u(t)>&=\frac{1}{T}\int_t^{t+T}\frac{1}{2}\frac{e^{2}E_{o}^{2}}{mw^{2}}\cos^{2}(w\acute{t}-ky_{0}+\phi)d\acute{t} \\
+&=\frac{1}{T}\frac{1}{2}\frac{e^{2}E_{o}^{2}}{mw^{2}}\int_{t}^{t+T}\cos^{2}(w\acute{t}-ky_{0}+\phi)d\acute{t} \\
+&=\frac{1}{2}\frac{e^{2}E_{o}^{2}}{mw^2}\frac{T}{2} \\
+&=\frac{e^2E_{o}^{2}}{4mw^2}
+\end{split}
+\end{equation}
+物理的意味は、仕事をされない、周波数が高いときに0になるとか。。
+
+\item
+光の強度Iがポインティングベクトルの一周期平均に相当することより、
+\begin{equation}
+	\begin{split}
+I&=\frac{1}{T}\int_t^{t+T}|S(\acute{t})|d\acute{t} \\
+&=\frac{1}{T}\int_{t}^{t+T}|E \times \frac{B}{\mu_{0}}|d\acute{t} \\
+&=\frac{1}{2}\frac{e^{2}E_{o}^{2}}{mw^2}\frac{T}{2} \\
+&=\frac{E_0^2}{2Z_0}
+\end{split}
+\end{equation}
+よって、$E_0=\sqrt{2Z_0I}$
+
+\item
+最小値というのが気になるが・・３の答えを使うと、\\
+\begin{equation}
+U  = \frac{e^2Z_0I \lambda^2}{8\pi^2mc^2} 
+\end{equation}
+
+\item
+問題の条件のとき運動エネルギーの平均値は
+\begin{equation}
+U < 9.6 \times 10^{-19} [J]
+\end{equation}
+このとき粒子の速さの上限は、
+\begin{equation}
+\frac{1}{2}mv^2 < 9.6 \times 10^{-19}
+\end{equation}
+上式に電子の質量$m=9\times10^{-31}[kg]$を代入すると、\\
+$v \simeq 1.5 \times 10 ^{6}$ [m/sec] となり、これは光速より二桁小さいので１で考察した条件を満たしていると考える。
+\end{enumerate}
+\end{answer}
+\end{document}

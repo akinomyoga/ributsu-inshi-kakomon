@@ -1,0 +1,460 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 20 20 460 220
+
+/2004phys5_3.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   フォント設定
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+%-------------------------------------------------------------------------------
+%   矩形
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+
+%-------------------------------------------------------------------------------
+%   矢印
+%-------------------------------------------------------------------------------
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale mwg-option-arrow-head-scale scale
+    mwg-arrow-headA
+  grestore
+} def
+
+/mwg-draw-arrow {
+  6 2 roll
+    2 index sub
+    exch 3 index sub exch
+  6 4 roll
+  mwg-draw-rarrow
+} def
+
+
+%-------------------------------------------------------------------------------
+%  ベクトル
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2mul {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+%: <vec> <scal> mwg-v2div <vec>
+/mwg-v2div {
+  1 exch div mwg-v2mul
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2norm {
+  dup mwg-v2abs mwg-v2div
+} def
+
+/mwg-v2abs {
+  aload pop
+  dup mul exch dup mul add sqrt
+} def
+
+/mwg-v2arg {
+  aload pop exch atan
+} def
+
+/mwg-v2rot {
+  dup 3 2 roll aload pop 3 1 roll
+  %: a y a x
+  4 copy
+  exch cos mul 3 1 roll exch sin mul sub
+  5 1 roll
+  exch sin mul 3 1 roll exch cos mul add
+  2 array astore
+  %: [xc-ys xs+yc]
+} def
+
+/mwg-v2iprod {
+  aload pop 3 2 roll aload pop
+  exch 3 1 roll
+  mul 3 1 roll mul add
+} def
+
+%-------------------------------------------------------------------------------
+%   行列
+%-------------------------------------------------------------------------------
+%: <mat> mwg-m2det <det>
+/mwg-m2det {
+  aload pop
+  %: [a c] [b d]
+  aload pop 3 2 roll aload pop
+  %: b d a c
+  3 1 roll mul
+  %: b c a*d
+  3 1 roll mul sub
+} def
+
+%: <mat> <scal> mwg-m2smul <mat>
+/mwg-m2smul {
+  exch aload pop
+  %: m [a c] [b d]
+  2 index mwg-v2mul
+  3 1 roll exch mwg-v2mul
+  exch 2 array astore
+} def
+%: <mat> <scal> mwg-m2sdiv <mat>
+/mwg-m2sdiv {
+  1 exch div mwg-m2smul
+} def
+
+%: <mat> mwg-m2inv <mat>
+/mwg-m2inv {
+  << >> begin
+    %: [[a b] [c d]]
+    aload pop
+    aload pop /d exch def /c exch def
+    aload pop /b exch def /a exch def
+    /det a d mul b c mul sub def
+    
+    d det div
+    b neg det div
+    2 array astore
+    
+    c neg det div
+    a det div
+    2 array astore
+    
+    2 array astore
+  end
+} def
+
+%: <mat> <vec> mwg-m2vmul <vec>
+/mwg-m2vmul {
+  << >> begin
+    %: [[a b] [c d]] [x y]
+    aload pop /y exch def /x exch def
+    aload pop
+    aload pop /d exch def /c exch def
+    aload pop /b exch def /a exch def
+    [
+      a x mul c y mul add
+      b x mul d y mul add
+    ]
+  end
+} def
+%-------------------------------------------------------------------------------
+%: <line1> <line2> mwg-line-line-sect <vec>
+/mwg-line-line-sect {
+  << >> begin
+    %: [x dx] [y dy]
+    aload pop /dy exch def /y exch def
+    aload pop /dx exch def /x exch def
+      /t
+        [
+          dx
+          dy -1 mwg-v2mul
+        ] mwg-m2inv
+        y x mwg-v2sub
+      mwg-m2vmul 0 get
+    def
+    x dx t mwg-v2mul mwg-v2add
+  end
+} def
+
+/mwg-circ-line-sect {
+  << >> begin
+    %: [p r] [x dx]
+    aload pop /dx exch def /x exch def
+    aload pop /r exch def /p exch def
+    
+    /xp x p mwg-v2sub def
+    /t xp dx mwg-v2iprod neg def
+    /d dx t mwg-v2mul xp mwg-v2add def
+    /s2 r r mul d d mwg-v2iprod sub def
+    
+    s2 0 gt {
+      /s s2 sqrt def
+      [
+        t s add dx exch mwg-v2mul x mwg-v2add
+        t s sub dx exch mwg-v2mul x mwg-v2add
+      ]
+    } {
+      [ ]
+    } ifelse
+  end
+} def
+%-------------------------------------------------------------------------------
+
+gsave
+  50 50 translate
+  200 0 200 160 mwg-draw-rrect
+  200 80 translate
+
+  %-------------------------------------
+  /pS  [ -200  45 ] def
+  /pL  [ -120  45 ] def
+  /LineL [ pL [ 0 1 ] ] def
+  
+  /pP  [  -20 -45 ] def
+  /LineP [ pP [ 0 1 ] ] def
+  
+  /pS1 [    0  45 ] def
+  /pS2 [    0 -45 ] def
+  
+  /pG  [   20   0 ] def
+  /KakuG 15 def
+  /LineG [ pG [ 0 1 ] KakuG mwg-v2rot ] def
+  
+  /pM1 [  190  45 ] def
+  /pM2 [  190 -45 ] def
+  /KakuSMG pM1 pG mwg-v2sub mwg-v2arg def
+  /M1Rad 50 def
+  /CircM1 [
+      pM1
+      [ M1Rad neg 0 ] KakuSMG 2 div mwg-v2rot
+    mwg-v2add
+    M1Rad
+  ] def
+  /CircM2 [
+    [
+      CircM1 0 get 0 get
+      CircM1 0 get 1 get neg
+    ]
+    M1Rad
+  ] def
+  
+  %-------------------------------------
+  % S
+  gsave
+    pS aload pop translate
+    -8 15 0 -20 mwg-draw-rect
+    -10 -20 12 -15 mwg-draw-rrect
+    -4 15 4 0 180 arc stroke
+    stroke
+  grestore
+  
+  % L
+  gsave
+    pL aload pop translate
+    0.1 1 scale
+    0 0 20 0 360 arc
+    10 1 scale
+    stroke
+  grestore
+  
+  % P
+  gsave
+    pS2 aload pop translate
+    
+    -80 15 -60 -15 mwg-draw-rect
+    -60  7 -20  -7 mwg-draw-rect
+    -60 15 moveto
+    -10 15 lineto
+    -10  8 lineto
+    -4   8 lineto stroke
+    -60 -15 moveto
+    -10 -15 lineto
+    -10  -8 lineto
+    -4   -8 lineto stroke
+  grestore
+  
+  % G
+  gsave 
+    pG aload pop translate
+    12 mwg-font-roman 0 20 moveto (G) show
+    
+    KakuG rotate
+    newpath 0 0 15 0 360 arc stroke
+    -4 -17 0 17 mwg-path-rect
+    gsave 0.4 setgray fill grestore stroke
+  grestore
+  
+  
+  % S1/M1
+  /M1 {
+    /asin {
+      dup mul 1 exch div 1 sub 1 exch div sqrt
+      1 atan
+    } def
+    
+    % M1
+    gsave
+      pM1 aload pop translate
+      
+      KakuSMG 2 div rotate
+      newpath
+        /a 15 M1Rad div asin def
+        M1Rad neg 0 M1Rad a neg a arc
+        3 15 lineto
+        3 -15 lineto
+      closepath
+      gsave 0.4 setgray fill grestore
+      stroke
+    grestore
+    
+    % S1
+    gsave
+      pS1 aload pop translate
+      
+      -4 -15 0 -3 mwg-path-rect
+      gsave 0.4 setgray fill grestore stroke
+      -4 15 0 3 mwg-path-rect
+      gsave 0.4 setgray fill grestore stroke
+    grestore
+    
+    gsave
+      25 70 translate
+      0.7 0.7 scale
+      0 0 -30 -30 mwg-draw-rarrow
+    grestore
+  } def
+  
+  M1 1 -1 scale
+  M1 1 -1 scale
+  
+  12 mwg-font-gothic
+  -220 72 moveto (\312\374\305\305\264\311) show
+  -145 72 moveto (\306\314\245\354\245\363\245\272) show
+  140 63 moveto (\261\372\314\314\266\300 1) show
+  140 -72 moveto (\261\372\314\314\266\300 2) show
+  -120 -100 moveto (\270\367\305\305\273\322\301\375\307\334\264\311) show
+  
+  /mwg-option-arrow-head-scale 0.7 def
+  -52 -85 14 32 mwg-draw-rarrow
+  
+  12 mwg-font-roman
+  2 -30 moveto (A) show
+  2 -70 moveto (B) show
+  gsave
+    30 67 moveto (S) show
+    9 mwg-font-roman
+    0 -2 rmoveto (1) show
+  grestore
+  gsave
+    30 -73 moveto (S) show
+    9 mwg-font-roman
+    0 -2 rmoveto (2) show
+  grestore
+  
+  
+  %-------------------------------------
+  % Ray A
+  /draw-rayline {
+    << >> begin
+      /Ray-A exch def
+      /Ray-L1 [ pS1 [ 1 0 ] Ray-A mwg-v2rot ] def
+      /Ray-P0 Ray-L1 LineL   mwg-line-line-sect       def
+      /Ray-P1 CircM1 Ray-L1  mwg-circ-line-sect 0 get def
+      /Ray-L2 [ Ray-P1 [ -1 0 ] KakuSMG mwg-v2rot ]   def
+      /Ray-P2 Ray-L2 LineG   mwg-line-line-sect       def
+      /Ray-L3 [ Ray-P2 [ 1 0 ] KakuSMG neg mwg-v2rot ] def
+      /Ray-P3 CircM2 Ray-L3  mwg-circ-line-sect 0 get def
+      /Ray-L4 [ Ray-P3 pS2 Ray-P3 mwg-v2sub mwg-v2norm ] def
+      /Ray-P4 Ray-L4 LineP   mwg-line-line-sect       def
+      
+      pS     aload pop moveto
+      Ray-P0 aload pop lineto
+      Ray-P1 aload pop lineto
+      Ray-P2 aload pop lineto
+      Ray-P3 aload pop lineto
+      Ray-P4 aload pop lineto
+      
+      1 setlinejoin
+      stroke
+    end
+  } def
+  gsave
+    0.5 setlinewidth
+    0.9 0 0 setrgbcolor
+    4 draw-rayline
+    %2 draw-rayline
+    0 draw-rayline
+    %-2 draw-rayline
+    -4 draw-rayline
+  grestore
+grestore
+
+end
+showpage
+2004phys5_3.save restore

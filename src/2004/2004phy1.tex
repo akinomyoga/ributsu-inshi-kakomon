@@ -1,0 +1,216 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{wrapfloat}
+\usepackage{subfigure}
+\setlength{\columnsep}{3zw}
+%\setlength{\columnseprule}{0.4pt}
+\if01 % by Murase
+  % \thesection は physpub で \hspace{-1zw} に上書きされている。
+  % 本来の \thesection を使いたければ、\Thesection に退避されている物を使用。
+  \renewcommand{\theequation}{\thesection.\arabic{equation}}
+  \renewcommand{\thefigure}{\thesection.\arabic{figure}}
+  \renewcommand{\thetable}{\thesection.\arabic{table}}
+  \numberwithin{equation}{section}
+  \numberwithin{figure}{section}
+  \numberwithin{table}{section}
+\fi
+%\renewcommand{\figurename}{Fig}
+\usepackage[usenames]{color}
+%\title{平成16年度院試解答例 物理学}
+
+\begin{document}
+
+%===============================================================================
+\begin{question}{第１問}{}
+%問題はM.Yが入力しました
+
+幅$a$、深さ$-V_0 (<0)$の一次元井戸型ポテンシャル$V(x)$を考える (図\ref{2004phy1-0})。質量$m$の粒子が、$x=-\infty$から波数$k$の平面波$e^{ikx}$で入射すると、その一部は反射し、一部は透過する。このとき、$x<-a/2$と$x>a/2$における波動関数を、それぞれ$\psi=e^{ikx}+Re^{-ikx}, \psi=Te^{ikx}$とし、また$-a/2\le x\le a/2$における波動関数を$\psi=\alpha e^{ikx}+\beta e^{-ikx}$として、以下の設問に答えよ。但し、$\hbar=h/(2\pi)$（$h$はプランク定数）とする。
+
+\begin{figure}[htbp]
+\begin{center}
+%\includegraphics[scale=0.4]{2004phy1-0.eps}
+\includegraphics[width=6cm]{2004phys1_0.eps}
+\caption{}
+\eqname{2004phy1-0}
+\end{center}
+\end{figure}
+
+\begin{enumerate}
+\item 入射波、反射波、透過波に対するフラックス（確率密度の流れ）を、$\hbar, m, k, R,T$を用いて表せ。また$T$と$R$の関係式を与えよ。
+\item $T=|T|e^{i\theta}$と書くとき、位相$\theta$が現れる物理的理由を簡潔に述べよ。
+\item $p$を$\hbar,m,k,V_0$を用いて表せ。
+\item $T$を以下の式のように表すとき、$A$と$B$を$k$と$p$を用いて表せ。
+$$
+T=\frac{e^{-ika}}{A\cos(pa)-iB\sin(pa)}
+$$
+
+\item 入射した波が反射を全く受けない（完全透過する）為の$k$が満たすべき条件を求めよ。また、完全透過がおこる物理的理由を簡潔に述べよ。
+
+\item $|T|^2$を$k$の関数として図示せよ。
+\end{enumerate}
+\end{question}
+
+
+
+%===============================================================================
+\begin{answer}{第１問}{}
+\begin{enumerate}
+\item
+\begin{figure}[htbp]
+ \begin{center}
+\resizebox{!}{5cm}{\input{2004phy1-1.tex}}
+ \end{center}
+\caption{井戸型ポテンシャル}
+\eqname{fig:potential}
+\end{figure}
+
+Fluxは次のように定義される．
+\begin{equation}\
+ \vec{J}=Re\left(\psi^* \frac{\hbar}{im}\nabla \psi\right)=\frac{\hbar}{2mi}\left[\psi^* \nabla \psi-\psi \nabla\psi^*\right] \eqname{eq:1}
+\end{equation}
+今の場合$x$成分を考えると，
+\paragraph{$x<-a/2$のとき}
+\begin{align}
+ J_{x,\text{I}}&= Re\left[(e^{-ikx}+R^* e^{ikx})\frac{\hbar}{im}ik(e^{ikx}-Re^{-ikx})\right]\nonumber  \\
+& \,\,\,\,(\text{I}=(-\infty ,-a/2))\nonumber\\
+&=\frac{\hbar k}{m}Re\left[\left\{ 1-|R|^2+(R^* e^{2ikx}-Re^{-2ikx})\right\}\right]\nonumber\\
+&=\frac{\hbar k}{m}(1-|R|^2) \eqname{eq:2}
+\end{align}
+\paragraph{$-a/2 <x <a/2$のとき}
+\begin{equation}
+ J_{x,\text{II}}=\frac{\hbar k}{m}(|\alpha|^2 -|\beta|^2)\,\,\,\,(\text{II}=(-a/2,a,2)) \eqname{eq:3}
+\end{equation}
+\paragraph{$x>a/2$のとき}
+\begin{equation}
+ J_{x,\text{III}}=\frac{\hbar k}{m}|T|^2\,\,\,\,\,(\text{III}=(a/2,\infty))\eqname{eq:4}
+\end{equation}
+よって入射波，反射波，透過波に対するフラックスはそれぞれ
+\begin{align}
+ J_{\text{in}}= \frac{\hbar k}{m},\,\,\,\, J_{\text{re}}=\frac{\hbar k}{m}|R|^2,\,\,\,\, J_{\text{tr}}=\frac{\hbar k}{m}|T|^2 \eqname{eq:5}
+\end{align}
+フラックスの保存により
+\begin{align*}
+ \frac{\hbar k}{m}(1-|R|^2)&=\frac{\hbar k}{m}(|\alpha|^2-|\beta|^2)=\frac{\hbar k}{m}|T|^2\\
+∴\,\, 1&=|R|^2+|T|^2
+\end{align*}
+が成り立つ．
+\item
+入射波は$x=\pm a/2$で一部が反射し,残りが透過する.$a=a/2$で反射
+した波は再び$x=- a/2$で反射波と透過波に分かれ,さらに$x=-a/2$で反射し
+た波は再び$x=a/2$で反射波と透過波に分かれる.このように
+$-a/2 < x <a/2$
+の両端では何度も波が反射と透過を繰り返す.従って,最終的に$a/2<x$の領域
+に出てくる波$T e^{ikx}$はそれらの波の重ね合わせになっていると考えら
+れる.この結果,透過波の位相が入射波の位相からずれる.また,同様
+の理由で$R e^{-ikx}$の位相も入射波の位相からずれているはずである.
+\item
+Schr\"{o}dinger eq.は
+\begin{equation}
+ \left[  -\frac{\hbar^2}{2m}\bigtriangleup +V(x)\right]\psi (x)=E \psi (x)\eqname{eq:6}
+\end{equation}
+である．\\
+井戸の外側($|x|>a/2$)では$V(x)=0$であって
+$\psi(x)=Te^{ikx}(\text{or},e^{ikx}+Re^{-ikx})$を式\eqhref{eq:6})に代入すると\\
+\begin{equation}
+ \frac{\hbar^2}{2m}k^2=E \eqname{eq:7}
+\end{equation}
+を得る．\\
+他方，井戸の内側($|x|< a/2$)のときは$V(x)=-V_0$であり$\psi (x)=\alpha e^{ikx}+\beta
+e^{-ikx}$を式(\eqhref{eq:6})に代入して
+\begin{equation}
+ \frac{\hbar^2 p^2}{2m}=V_0 +E \eqname{eq:8}
+\end{equation}
+を得る．式~(\eqhref{eq:7}),~(\eqhref{eq:8})から
+\begin{equation}
+ p=\sqrt{k^2+\frac{2mV_0}{\hbar^2}} \eqname{eq:9}
+\end{equation}
+となる．
+\item
+波動関数は$x=\pm a/2$で滑らかに接続される．\\
+\begin{align}
+&(x=a/2=:b)\nonumber\\ 
+& \left\{ 
+\begin{array}[tb]{rl}
+Te^{ikb} & =\alpha e^{ikb}+\beta e^{-ikb}\\
+ikTe^{ikb}& = ip(\alpha e^{ikb}-\beta e^{-ikb})
+\end{array}
+\right.\eqname{eq:11}
+\end{align}
+
+
+\begin{align}
+&(x=-b) \nonumber\\
+ & \left\{
+ \begin{array}{rl}
+ e^{-ikb}+Re^{ikb}&=\alpha e^{-ipb}+\beta e^{ipb} \\
+ ik(e^{-ikb}-Re^{ikb})&= ip(\alpha e^{-ipb}-\beta e^{ipb})
+ \end{array}
+ \right.\eqname{eq:10}
+\end{align}
+
+ 式~(\eqhref{eq:11})より
+\begin{equation}
+ \left(
+\begin{array}{c}
+  \alpha\\ \beta
+\end{array}
+ \right) =\frac{Te^{ikb}}{2p}
+\left[
+\begin{array}{c}
+ (p+k)e^{-ipb}\\(p-k)e^{ipb}
+\end{array}
+\right]\eqname{eq:12}
+\end{equation}
+これを~式(\eqhref{eq:10})に代入し，$R$を消去すると
+\begin{equation}
+ T= \frac{e^{-ika}}{\cos(pa)-i\frac{p^2+k^2}{2kp}\sin(pa)}\eqname{eq:13}
+\end{equation}
+が得られた．
+\item
+保存の式($|R|^2+|T|^2=1$)より，完全透過するのは$|T|^2=1$の時である．
+式~(\eqhref{eq:13})より
+\begin{align}
+|T|^2&=\frac{1}{\cos^2(pa)+\left(\frac{p^2+k^2}{2kp}\right)^2\sin^2(pa)}=1 \nonumber\\
+∴&(p^2-k^2)^2 \sin^2(pa)=0 \eqname{eq:14}
+\end{align}
+$V_0\neq 0$であるから$p\neq k$.よって
+\begin{equation}
+ pa=n\pi \Leftrightarrow (ka)^2=(n\pi)^2-\frac{2ma^2 V_0}{\hbar^2}\,\,\,\,(n\in \textbf{Z}_{>0})\eqname{eq:15}
+\end{equation}
+但し最後の変形には式~(\eqhref{eq:9})を用いた．\\
+\begin{figure}[h]
+\begin{center}
+ \input{2004phy1-2.tex}
+\end{center}
+\caption{干渉現象}
+\eqname{fig:teizaiha} 
+\end{figure}
+ここで求めた条件は一種の干渉現象と考えることができる．井戸型のポテンシャ
+ルの幅$a$が半波長の整数倍を含むとき，定在波が生じる(図~\ref{fig:teizaiha})．
+定在波が生じると,波動関数は常に$x=\pm a/2$で節になる.
+よって,入射波は反射することなく井戸を越えることが出来る.
+定在波が生じる条件は
+\begin{equation}
+ a=\frac{1}{2}\cdot\frac{2\pi}{p}\times n\,\,\,\,(n \in \textbf{Z}_{>0}) \eqname{eq:25}
+\end{equation}
+と現されるが,これは確かに式~(\eqhref{eq:15})に等しい．
+\item
+\[
+ |T(k)|^2=\left[ 1+ \frac{1}{4}\left(\frac{2mV_0}{\hbar^2}\right)^2 \frac{\sin^2(pa)}{p^2k^2}\right]^{-1}
+\]
+を図示すると図~\ref{fig:touka}のようになる．透過係数はだんだんと増してい
+く下縁の包絡線と$1$の間を振動する．
+\begin{figure}[htbp]
+ \begin{center}
+\resizebox{7cm}{!}{\includegraphics{2004phy1-3.eps}}
+ \end{center}
+\caption{$|T(k)|^2$の振る舞い}
+\eqname{fig:touka}
+\end{figure}
+\end{enumerate}
+\end{answer}
+\end{document}

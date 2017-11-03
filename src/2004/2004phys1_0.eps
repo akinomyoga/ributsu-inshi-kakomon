@@ -1,0 +1,106 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 0 0 230 200
+
+/2004phys1_0.save save def
+%-------------------------------------------------------------------------------
+%   ÉtÉHÉìÉgê›íË
+%-------------------------------------------------------------------------------
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+%-------------------------------------------------------------------------------
+%   ñÓàÛ
+%-------------------------------------------------------------------------------
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+/mwg-arrow-rel {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-arrow-headA
+  grestore
+} def
+
+%-------------------------------------------------------------------------------
+
+gsave
+  10 10 translate
+  100 120 translate
+  
+  -100 0 200 0 mwg-arrow-rel
+  0 -120 0 180 mwg-arrow-rel
+  
+  gsave
+    -100 0 moveto
+    50  0 rlineto
+    0 -70 rlineto
+    100  0 rlineto
+    0 70 rlineto
+    50  0 rlineto
+    3 setlinewidth
+    stroke
+  grestore
+  
+  105 -5 moveto
+  16 mwg-font-math (x) show
+  
+  5 55 moveto
+  16 mwg-font-math (V) show
+  16 mwg-font-roman (\() show
+  16 mwg-font-math (x) show
+  16 mwg-font-roman (\)) show
+  
+  4 5 moveto
+  16 mwg-font-roman (0) show
+  
+  40 5 moveto
+  16 mwg-font-math (a) show
+  16 mwg-font-roman (/2) show
+  
+  -70 5 moveto
+  12 mwg-font-gothic (\241\274) show
+  16 mwg-font-math (a) show
+  16 mwg-font-roman (/2) show
+  
+  3 -85 moveto
+  12 mwg-font-gothic (\241\274) show
+  16 mwg-font-math (V) show
+  0 -2 rmoveto
+  10 mwg-font-roman (0) show
+grestore
+showpage
+2004phys1_0.save restore

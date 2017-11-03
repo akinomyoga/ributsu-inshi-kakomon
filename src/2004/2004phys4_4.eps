@@ -1,0 +1,294 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 0 10 510 230
+
+/2004phys4_4.save save def
+%-------------------------------------------------------------------------------
+%   ñÓàÛ
+%-------------------------------------------------------------------------------
+
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  gsave
+    mwg-option-arrow-head-scale mwg-option-arrow-head-scale scale
+    0 0 moveto
+    -10 -5 rlineto
+    4 5 rlineto
+    -4 5 rlineto
+    closepath
+    fill
+  grestore
+} def
+
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-arrow-headA
+  grestore
+} def
+
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+
+%-------------------------------------------------------------------------------
+%   ÉtÉHÉìÉgê›íË
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+%-------------------------------------------------------------------------------
+%   îgê¸
+%-------------------------------------------------------------------------------
+/mwg-switch {
+  %: arr
+  << >> begin
+    /arr exch def
+    /break false def
+    1 1 arr length 2 div {
+      /i exch 1 sub def
+      break not arr i 2 mul get and {
+        arr i 2 mul 1 add get
+        /break true def
+      } if
+    } for
+  end exec
+} def
+
+/mwg-wave-parts [
+  {
+    10 5 20 10 30 10 curveto
+    30  0 translate
+  } {
+    10 10 20 5 30 0 curveto
+    30  0 translate
+  } {
+    10 -5 20 -10 30 -10 curveto
+    30  0 translate
+  } {
+    10 -10 20 -5 30 0 curveto
+    30  0 translate
+  }
+] def
+
+/mwg-wave-end [
+  {
+    16 8 25 0 30 0 curveto
+    30  0 translate
+  } {
+    10 10 20 0 30 0 curveto
+    30  0 translate
+  } {
+    16 -8 25 0 30 0 curveto
+    30  0 translate
+  } {
+    10 -10 20 0 30 0 curveto
+    30  0 translate
+  }
+] def
+/mwg-wave-begin [
+  {
+    10 0 20 10 30 10 curveto
+    30  0 translate
+  } {
+    5 0 14 8 30 0 curveto
+    30  0 translate
+  } {
+    10 0 20 -10 30 -10 curveto
+    30  0 translate
+  } {
+    5 0 14 -8 30 0 curveto
+    30  0 translate
+  }
+] def
+
+/mwg-option-wave-begin true def
+/mwg-option-wave-end true def
+/mwg-wave-repeat {
+  << >> begin
+    /n exch def
+    /w n 30 mul def
+    /h 20 def
+    
+    1 w div 1 h div scale
+    0 1 n 1 sub {
+      /i exch def
+      [
+        i 0 eq mwg-option-wave-begin and {
+          mwg-wave-begin
+        }
+        i n 1 sub eq mwg-option-wave-end and {
+          mwg-wave-end
+        }        
+        true {
+          mwg-wave-parts
+        }
+      ] mwg-switch
+      i 4 mod get exec
+    } for
+    w h scale
+  end
+} def
+
+/mwg-draw-rwave {
+  gsave << >> begin
+    /w exch def
+    /n exch def
+    /ry exch def
+    /rx exch def
+    translate
+    0 0 moveto
+    ry rx atan rotate
+    
+    /r rx rx mul ry ry mul add sqrt def
+    r w scale
+    n mwg-wave-repeat
+    1 r div 1 w div scale
+    stroke
+  end grestore
+} def
+
+/mwg-draw-wave {
+  6 2 roll
+    2 index sub
+    exch 3 index sub exch
+  6 4 roll
+  mwg-draw-rwave
+} def
+%-------------------------------------------------------------------------------
+
+/positron {
+  gsave
+    translate
+    newpath
+    0 0 1.5 0 360 arc stroke
+  grestore
+} def
+
+/electron {
+  gsave
+    translate
+    newpath
+    0 0 1.5 0 360 arc stroke
+    0.5 setgray
+    0 0 1.5 0 360 arc fill
+  grestore
+} def
+
+/place-electron {
+  % r a
+  dup cos 2 index mul
+  3 1 roll sin mul
+  electron
+} def
+
+/place-elenctron-circ {
+  << >> begin
+    /n exch def
+    /r exch def
+    0 1 n 1 sub {
+      360 mul n div 90 add
+      r exch
+      place-electron
+    } for
+  end
+} def
+
+/draw-shell {
+  gsave
+    0 0 4 0 360 arc stroke
+    0.7 setgray
+    0 0 4 0 360 arc fill
+  grestore
+  
+  0 0 20 0 360 arc stroke
+  0 0 40 0 360 arc stroke
+  0 0 60 0 360 arc stroke
+  0 0 80 0 360 arc stroke
+  
+  20 2  place-elenctron-circ
+  40 8  place-elenctron-circ
+  60 18 place-elenctron-circ
+  80 4  place-elenctron-circ
+} def
+
+gsave << >> begin
+  0.7 setlinewidth
+  10 0 translate
+  /mwg-option-arrow-head-scale 0.5 def
+  
+  100 100 translate
+  gsave
+    15 mwg-font-roman -105 110 moveto (\(a\)) show newpath
+    0 80 translate
+    
+    15 mwg-font-math 47 37 moveto (e) show
+    10 mwg-font-gothic 0 5 rmoveto (-) show
+    0 0 40 40 mwg-draw-rarrow
+    41 41 electron
+    
+    15 mwg-font-gothic
+    -110 5 moveto (\246\303) show
+    -6 0 -100 0 24 5 mwg-draw-rwave
+    -6 0 -1 0 mwg-draw-arrow
+    
+    108 -65 moveto (\246\303) show
+    -30 rotate
+    0 0 120 0 24 5 mwg-draw-rwave
+    120 0 5 0 mwg-draw-rarrow
+  grestore
+  draw-shell
+  
+  270 0 translate
+  gsave
+    15 mwg-font-roman -105 110 moveto (\(b\)) show newpath
+    0 15 translate
+    
+    15 mwg-font-math 107 32 moveto (e) show
+    10 mwg-font-gothic 0 5 rmoveto (-) show
+    0 0 100 35 mwg-draw-rarrow
+    101 35.35 electron
+    
+    15 mwg-font-math 107 -28 moveto (e) show
+    10 mwg-font-gothic 0 5 rmoveto (+) show
+    0 0 100 -25 mwg-draw-rarrow
+    101 -25.25 positron
+    
+    15 mwg-font-gothic -110 5 moveto (\246\303) show
+    -6 0 -100 0 24 5 mwg-draw-rwave
+    -6 0 0 0 mwg-draw-arrow
+  grestore
+  draw-shell
+end grestore
+showpage
+2004phys4_4.save restore

@@ -1,0 +1,277 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 10 10 240 180
+
+/2004phys5_4.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   ãÈå`
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+
+
+%-------------------------------------------------------------------------------
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+%-------------------------------------------------------------------------------
+%  ã»ê¸
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2mul {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2rot {
+  dup 3 2 roll aload pop 3 1 roll
+  %: a y a x
+  4 copy
+  exch cos mul 3 1 roll exch sin mul sub
+  5 1 roll
+  exch sin mul 3 1 roll exch cos mul add
+  2 array astore
+  %: [xc-ys xs+yc]
+} def
+%-------------------------------------------------------------------------------
+
+%: <mat> mwg-m2inv <mat>
+/mwg-m2inv {
+  << >> begin
+    %: [[a b] [c d]]
+    aload pop
+    aload pop /d exch def /c exch def
+    aload pop /b exch def /a exch def
+    /det a d mul b c mul sub def
+    
+    d det div
+    b neg det div
+    2 array astore
+    
+    c neg det div
+    a det div
+    2 array astore
+    
+    2 array astore
+  end
+} def
+
+%: <mat> <vec> mwg-m2vmul <vec>
+/mwg-m2vmul {
+  << >> begin
+    %: [[a b] [c d]] [x y]
+    aload pop /y exch def /x exch def
+    aload pop
+    aload pop /d exch def /c exch def
+    aload pop /b exch def /a exch def
+    [
+      a x mul c y mul add
+      b x mul d y mul add
+    ]
+  end
+} def
+
+%-------------------------------------------------------------------------------
+/mwg-line-line-sect {
+  << >> begin
+    %: [x dx] [y dy]
+    aload pop /dy exch def /y exch def
+    aload pop /dx exch def /x exch def
+      /t
+        [
+          dx
+          dy -1 mwg-v2mul
+        ] mwg-m2inv
+        y x mwg-v2sub
+      mwg-m2vmul 0 get
+    def
+    x dx t mwg-v2mul mwg-v2add
+  end
+} def
+%-------------------------------------------------------------------------------
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+/mwg-draw-arrow {
+  6 2 roll
+    2 index sub
+    exch 3 index sub exch
+  6 4 roll
+  mwg-draw-rarrow
+} def
+
+%-------------------------------------------------------------------------------
+gsave
+  50 120 translate
+  
+  /alph 30 def
+  /beta 20 def
+  
+  gsave
+    -10 6 moveto
+    0 1 8 {
+      0 6 4 180 270 arc
+      0 -6 4 90 180 arc
+      0 -12 translate
+    } for
+    -6 0 rlineto
+    closepath
+    gsave 0.5 setgray fill grestore
+    stroke
+  grestore
+  
+  gsave
+    -5 0 translate
+    
+    gsave
+      1 setgray
+      -12 -51 moveto 24 -35 rlineto 
+        0 10 rlineto -12 -41 lineto fill
+    grestore
+    -12 -51 moveto 24 -35 rlineto stroke
+    -12 -41 moveto 24 -35 rlineto stroke
+  grestore
+
+  
+  2 0 translate
+  0 0 moveto 100 0 lineto stroke
+  
+  /lineX1 [ [95 0] [0 1] ] def
+  /lineX2 lineX1 def
+  /lineY [ [50 0] [0 1] ] def
+  gsave
+    1 1 3 {
+      /lineA [ [0 0] [1 0] alph mwg-v2rot] def
+      /lineB [ [0 0] [1 0] beta neg mwg-v2rot] def
+      
+      lineA lineX1 mwg-line-line-sect aload pop moveto
+      0 0 lineto
+      lineB lineX2 mwg-line-line-sect aload pop lineto
+      2 setlinejoin
+      stroke
+      
+      /lineX1 lineY def
+      0 -12 translate
+    } for
+  grestore
+  
+  0 0 75 0 alph arc stroke
+  0 0 65 beta neg 0 arc stroke
+  
+  gsave
+    /mwg-option-arrow-head-scale 0.5 def
+    0 -12 translate
+    beta neg rotate
+    120 0 60 0 mwg-draw-rarrow
+  grestore
+  
+  10 mwg-font-gothic 80 15 moveto (\246\301) show
+  10 mwg-font-gothic 70 -20 moveto (\246\302) show
+  
+  10 mwg-font-roman 175 -80 moveto (P) show
+  
+  10 mwg-font-math
+  -31 -3 moveto (j) show
+  10 mwg-font-roman
+  2 0 rmoveto (=) show
+  1 0 rmoveto (1) show
+  
+  10 mwg-font-math
+  -31 -15 moveto (j) show
+  10 mwg-font-roman
+  2 0 rmoveto (=) show
+  1 0 rmoveto (2) show
+  
+  10 mwg-font-math
+  -33 -99 moveto (j) show
+  10 mwg-font-roman
+  2 0 rmoveto (=) show
+  10 mwg-font-math
+  1 0 rmoveto (N) show
+grestore
+
+%10 10 240 180 mwg-draw-rect
+end
+showpage
+2004phys5_4.save restore

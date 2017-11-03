@@ -1,0 +1,285 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\usepackage{bm}
+\usepackage[dvips]{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+% 数学の　点（従って　と　なぜならば）の記号
+\def\Somark{.\raisebox{1ex}{.}.}
+\def\Bemark{\raisebox{1ex}{.}.\raisebox{1ex}{.}} 
+
+
+\begin{document}
+
+\begin{question}{第１問}{山﨑雅人}
+%\begin{enumerate}
+%\renewcommand{\labelenumi}{(\arabic{enumi})}
+(1) $n$個の$n$次元列ベクトル$u_j(j=1,\ldots, n)$を用いて、行列$U$を$U=(u_1,u_2,\ldots, u_n)$で定義するとき、$U$がユニタリー行列ならば、$\{u_j\}$は正規直交系をなすことをを示せ。\\
+
+(2) $A$を実対称行列、$\bm{x}=(x_1,\ldots,x_n)^{T}$を$n$次元ベクトルとする。ただし、$T$は転置を表す。このとき実２次形式$\phi(\bm{x})=\bm{x}^T A \bm{x}$に対し適当な直交変換$\bm{x}=P\bm{y}$を行うと、対角行列$B$を用いて$\phi=\bm{y}^T B \bm{y}=\sum_{i=1}^n \lambda_i y_i^2$の標準形に変換できる。\\
+$\phi(\bm{x})=4 x_1^x+2 x_2^2+2 x_3^2-2 x_1 x_2+2 x_2 x_3-2 x_3 x_1$について、$A,P,\lambda_i (i=1,2,3)$を求め標準形で表せ。\\
+
+(3)
+$A$を$n$次実対称行列として、次の微分方程式を考える。
+$$
+\frac{d\bm{x}}{dt}=A\bm{x}
+$$
+このとき、スカラー関数$\Phi(\bm{x})$を用いて$\frac{d\bm{x}}{dt}=-\Delta_x \Phi(\bm{x})$と書けることを$\Phi(\bm{x})$の具体形とともに示せ。
+ただし、$\frac{d\bm{x}}{dt}=(\frac{dx_1}{dt},\ldots,\frac{dx_n}{dt})^T, \Delta_x \Phi=(\frac{\partial \Phi}{\partial x_1},\ldots,\frac{\partial \Phi}{\partial x_n})^T$
+である。\\
+
+(4) 設問(3)で軌道$\bm{x}(t)$に沿った$\Phi$の微分$d\Phi(\bm{x}(t))/dt$は、
+$\frac{d\Phi(\bm{x}(t))}{dt}\le 0$を満たすことを示せ。また、任意の$\bm{x} (\bm{x}\ne 0$に対し$\Phi >0$が成り立つならば、解軌道は最終的に$\bm{x}=0$に漸近することを示せ。\\
+%\end{enumerate}
+
+\end{question}
+
+
+\begin{answer}{第１問}{宮川裕}
+\subsection{(1)}
+\begin{eqnarray*}
+U=\begin{pmatrix} \vec{u_1} & \vec{u_2} & \cdots & \vec{u_n}\end{pmatrix}と書くと、
+U^{*}= \begin{pmatrix} \vec{u_1}^* \\ \vec{u_2}^* \\ \vdots \\ \vec{u_n}^* \end{pmatrix}である。\\
+\end{eqnarray*}
+Uがユニタリー行列であるから、
+\begin{eqnarray*}
+U^{*}U=\begin{pmatrix} \vec{u_1}^* \cdot \vec{u_1} &
+                        \vec{u_1}^* \cdot \vec{u_2} & \cdots \\
+                        \vec{u_2}^* \cdot \vec{u_1} &
+                        \vec{u_2}^* \cdot \vec{u_2} & \cdots \\
+                        \vdots \end{pmatrix}=E
+\end{eqnarray*}
+各成分を見れば、題意は証明された。
+
+\subsection{(2)}
+\begin{eqnarray*}
+\phi =\vec{x}^T A \vec{x} = \vec{y}^T P^T A P \vec{y}\\
+\end{eqnarray*}
+適当な直交行列Pを用いて、Aを対角化する。
+固有ベクトルが互いに直交することを利用する。
+まずAの固有値、固有ベクトルを求め、それを使って基底の変換をする。
+\begin{eqnarray*}
+A=\begin{pmatrix} 4 & -1 & -1 \\
+                  -1 & 2  & 1  \\
+                  -1 & 1  & 2  \end{pmatrix}から固有値を求めると、\\
+ 固有値\lambda =1に対して、固有ベクトル\begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix}\\
+ 固有値\lambda =2に対して、固有ベクトル\begin{pmatrix} 1 \\ 1 \\  1 \end{pmatrix}\\
+ 固有値\lambda =5に対して、固有ベクトル\begin{pmatrix} -2 \\ 1 \\  1 \end{pmatrix}\\
+\end{eqnarray*}
+である。Pを求めるには、Pが直交変換であることに注意して、Pの各列をノルム１の固有ベクトルにする。
+よって
+\begin{eqnarray*}
+P=\begin{pmatrix} 0 & \frac{1}{\sqrt3} & \frac{2}{\sqrt6} \\
+                  \frac{1}{\sqrt2} & \frac{1}{\sqrt3}  & -\frac{1}{\sqrt6}  \\
+                  -\frac{1}{\sqrt2} & \frac{1}{\sqrt3}  & -\frac{1}{\sqrt6} \end{pmatrix}
+\end{eqnarray*}
+
+\subsection{(3)}
+n=3くらいで実験するのが、わかりやすいかと思われる。\\
+Aの成分を$a_{ij}$のように書くことにする。\\
+成分で書くと、
+\begin{eqnarray*}
+x_1= a_{11} x_1 + a_{12} x_2 + a_{13} x_3 \\
+x_2= a_{21} x_1 + a_{22} x_2 + a_{23} x_3 \\
+x_3= a_{31} x_1 + a_{32} x_2 + a_{33} x_3 
+\end{eqnarray*}
+積分して、
+\begin{eqnarray*}
+x_1= a_{11} \frac{x_1^2}{2} + a_{12} x_1 x_2 + a_{13} x_1 x_3 + f(x_2,x_3) \\
+x_2= a_{21} x_1 x_2 + a_{22} \frac{x_2^2}{2} + a_{23} x_1 x_3 + f(x_1,x_3) \\
+x_3= a_{31} x_1 x_3 + a_{32} x_2 x_3 + a_{33} \frac{x_3^2}{2} + f(x_1,x_2) \\
+\end{eqnarray*}
+ただしfは任意の関数でよい。Aは対角行列であることに注意すると、次のようにすればよいことがわかる。
+\begin{eqnarray*}
+\Psi(x)= -( \sum_{i=1}^{n} a_{ii}\frac{x_i^2}{2} + \sum_{i\neq j}^{n}a_{ij}\frac{x_i x_j}{2}) \\
+= -\sum_{i,j}^{n} a_{ij}\frac{x_i x_j}{2}
+\end{eqnarray*}
+\subsection{(4)}
+\[
+\frac{dx}{dt}= A\vec{x}= -\nabla _x \Psi(\vec{x})
+\]
+から直接示そうとすると、成分計算がごちゃごちゃになって、ちょっと難しい。\\
+ここは(2)を使って、基底の変換をする。
+\[
+\vec{x}\to P\vec{y}
+\]
+とすると、
+\[
+P^{-1} \nabla_x \to \nabla_y
+\]
+であり、プサイがスカラーなので変換を受けないことに注意すると、
+\[
+\frac{dy}{dt}= P^{-1}A P y = -\nabla_y \Psi(\vec{y})
+\]
+となり、プサイを対角化した、
+\begin{equation}
+\Psi = -\sum_{i}^{n} \lambda _i \frac{y_i^2}{2} 
+\end{equation}
+だけで考えればいいことになる。こうしておけば、直接計算して、
+\begin{equation}
+\frac{d\Psi(y(t))}{dt}= -\sum_{i}^{n}  \lambda _i y_i \frac{dy_i}{dt}\\
+= + \sum_{i}^{n} \lambda _i y_i \frac{\partial \Psi(y)}{\partial y_i}\\
+=- \sum_{i}^{n} \lambda _i^2 y_i^2  \le 0
+\end{equation}
+で問題の前半は終わった。\\
+
+また、$任意の\vec{x}(x \neq 0)に対して\Psi>0$が成り立つとき、(1)式からλは負。すると(1)式の言っていることは
+、yが中心y=0から離れるほど、二次関数的に単調にポテンシャルが増加するということである。
+式(2)の意味は、「解曲線に沿ったポテンシャルの時間変化は、マイナス」つまり、
+「ポテンシャルの低いほうへyは移動」であるから、解軌道は最もポテンシャルの低いy=0へ漸近する。
+
+ 
+ 
+ 
+\end{answer} 
+
+
+\begin{question}{第２問}{山﨑雅人}
+$f(x,t)$についての
+偏微分方程式
+\begin{equation}
+\frac{\partial f}{\partial t} = \frac{\partial}{\partial x} (xf) + D \frac{\partial ^2 f}{\partial x^2}　\label{c}
+\end{equation}
+を考える.
+
+$f$および$\partial f/\partial x$は、$x \rightarrow \pm \infty$に対して十分速やかに$0$に収束する. また、$D$は正の定数とする。
+
+%\renewcommand{\labelenumi}{(\arabic{enumi})}
+
+(1)
+$x$についての$f$の定積分
+$$
+I=\int_{-\infty}^{\infty}f(x,t)dx
+$$
+が保存されること、すなわち$dI/dt=0$であることを示せ。\\
+
+(2)
+原点$x=0$を中心とするガウス分布関数
+$$
+g(x,\sigma)=\frac{1}{\sqrt{\mathstrut{2\pi}}\sigma}e^{-x^2/(2\sigma^2)} ~~ (\sigma\text{は正の定数})
+$$
+が、はじめの偏微分方程式の定常解（すなわち、$\partial f/\partial f=0$）であるとき、$\sigma$はどう表せるか。\\
+
+(3)
+中心$X(t)$、標準偏差$\sigma(t)$（$X$および$\sigma$は$t$の関数）のガウス分布関数
+$$
+f(x,t)=g\left(x-X(t),\sigma(t)\right)
+$$
+が、はじめの偏微分方程式の解になるために、$X(t)$および$\sigma(t)$の満たすべき常微分方程式を求めよ。\\
+
+(4) はじめの偏微分方程式を、初期条件$f(x,0)=\delta(x-1)$のもとで解き、$t\to\infty$において設問(2)で求めた定常解に近づくことを示せ。（デルタ関数$\delta(x-1)$は、$g(x-1,\sigma)$の$\sigma\to 0$の極限であることを考慮せよ。）
+%\end{enumerate}
+
+\end{question}
+
+
+\begin{answer}{第２問}{宮川裕}
+
+偏微分方程式
+\begin{equation}
+\frac{\partial f}{\partial t} = \frac{\partial}{\partial x} (xf) + D \frac{\partial ^2 f}{\partial x^2}　\label{c}
+\end{equation}
+を考える.
+
+ただし、条件として
+\begin{itemize}
+\item{$f,\partial f/\partial x$が, $x \rightarrow \pm \infty$に対して十分速やかに$0$に収束する. }
+\item{Dは正の定数}
+\end{itemize}
+が与えられている. 
+\subsection*{(1)}
+\begin{equation}
+I=\int^\infty_{-\infty}f(x,t)dx
+\end{equation}
+として, $dI/dt=0$を示す. 
+
+\begin{align}
+\frac{dI}{dt} &= \int^\infty_{-\infty} \frac{\partial f}{\partial t}dx \notag \\
+		&= \int^\infty_{-\infty} \left( \frac{\partial}{\partial x} (xf) + D \frac{\partial ^2 f}{\partial x^2} \right) dx \notag \\
+		&= \left[ xf + D \frac{\partial f}{\partial x} \right]^\infty_{-\infty} \label{a}
+\end{align}
+
+条件より, 
+\begin{gather}
+xf \rightarrow 0 ( x \rightarrow \pm \infty ) \\
+x \frac{\partial f}{\partial x} \rightarrow 0 ( x \rightarrow \pm \infty ) 
+\end{gather}
+であるから, \eqref{a}に代入して, $dI/dt=0$が云える. $_\Box$
+
+\subsection*{(2)}
+\begin{equation}
+g(x,\sigma)=\frac{1}{\sqrt{2\pi} \sigma} e^{-x^2/(2\sigma^2)} \label{b}
+\end{equation}
+に対して, 
+\begin{equation}
+\frac{\partial}{\partial x} (xg) + D \frac{\partial ^2 g}{\partial x^2} =0
+\end{equation}
+であるための$\sigma$の条件を求める. 
+
+計算すると, 
+\begin{gather}
+\frac{\partial g}{\partial x} = -\frac{x}{\sigma^2}g \\
+\frac{\partial^2 g}{\partial x^2} = -\frac{g}{\sigma^2}+\frac{x^2}{\sigma^4}g
+\end{gather}
+であることから, \eqref{b}にこれらを代入すると, 
+\begin{align}
+		　　 g-\frac{x^2}{\sigma^2}g+D\left[\frac{x^2}{\sigma^4}g-\frac{g}{\sigma^2}\right] &=0 \notag \\
+\Longleftrightarrow  \left(1-\frac{D}{\sigma^2} \right) \left(1-\frac{x^2}{\sigma^2} \right) g &= 0 
+\end{align}
+これが$x$に関わらず成立するので, $1-D/\sigma^2=0$が云える. 
+\begin{align}
+\Somark \ & \sigma = \sqrt{D} \ _\Box
+\end{align}
+
+\subsection*{(3)}
+ガウス分布関数
+\begin{equation}
+f(x,t)=g(x-X(t),\sigma(t)) \label{d}
+\end{equation}
+が\eqref{c}の解になるための条件を考える. 
+
+\eqref{d}の$f$の微分は
+\begin{gather}
+\frac{\partial f}{\partial t} = \left[\frac{1}{\sigma(t)^3}\left\{(X(t)-x)^2\frac{d \sigma}{dt}-\sigma(t)(X(t)-x)\frac{dX}{dt} \right\}
+-\frac{1}{\sigma(t)}\frac{d\sigma}{dt} \right]g(x-X(t),\sigma(t)) \\
+\frac{\partial f}{\partial x} = - \frac{x-X(t)}{\sigma(t)^2}g(x-X(t),\sigma(t)) \\
+\frac{\partial^2 f}{\partial x^2} = \left[\frac{(x-X(t))^2}{\sigma(t)^4}-\frac{1}{\sigma(t)^2}\right]g(x-X(t),\sigma(t))
+\end{gather} 
+となるので, これを\eqref{c}に代入して, 
+\begin{gather}
+\left(\frac{1}{\sigma(t)^3}\frac{d\sigma}{dt}\right)x^2+\left(\frac{1}{\sigma(t)^2}\frac{dX}{dt}-\frac{2X(t)}{\sigma(t)^3}\frac{d\sigma}{dt}\right)x
++\left\{\left(\frac{X(t)^2}{\sigma(t)^3}-\frac{1}{\sigma(t)}\right)\frac{d\sigma}{dt}-\frac{x(t)}{\sigma(t)^2}\frac{dX}{dt}\right\} \notag \\
+=\left(\frac{D}{\sigma(t)^4}-\frac{1}{\sigma(t)^2}\right)x^2+\left(\frac{X(t)}{\sigma(t)^2}-\frac{2DX(t)}{\sigma(t)^4}\right)x
++\left\{1+D\left(\frac{X(t)^2}{\sigma(t)^4}-\frac{1}{\sigma(t)^2}\right)\right\}
+\end{gather}
+を得るが, これが$x$によらずに成り立つための条件は各係数が等しいことであるので, 結果として, 
+\begin{gather}
+\frac{d\sigma}{dt} = \frac{D}{\sigma}-\sigma \label{e} \\
+\frac{dX}{dt}=-X \label{f}
+\end{gather}
+を得る. $_\Box$
+
+\subsection*{(4)}
+常微分方程式\eqref{e},\eqref{f}を初期条件$\sigma(t)=0,X(t)=1$の下で解けばよい. 
+
+常微分方程式\eqref{e}の一般解は, 
+\begin{equation}
+\sigma(t)=\sqrt{D \pm \exp \{-2(t-C)\}} \ \text{($C$は任意定数)}
+\end{equation}
+であるから, 初期条件より, 
+\begin{equation}
+\sigma(t)=\sqrt{D(1-\exp(-2t))}
+\end{equation}
+が解である. 
+
+同様にして, 
+\begin{equation}
+X(t)=\exp(-t)
+\end{equation}
+がわかる. 
+
+したがって, $x \rightarrow \infty$で, $\sigma \rightarrow \sqrt{D},X \rightarrow 0$であるから, 
+確かに解は, $g(x,\sqrt{D})$, すなわち(2)でもとめた定常解に近づくことになる. $_\Box$
+\end{answer}
+\end{document}

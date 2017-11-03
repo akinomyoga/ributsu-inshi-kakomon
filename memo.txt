@@ -1,0 +1,91 @@
+
+
+------------------------------------------------------------------------------
+  Done
+------------------------------------------------------------------------------
+
+2011-02-04
+
+* 2004senmon: 式番号・図番号の部分が潰れて見えなくなってしまう問題 [完 23:01 2011/02/04]
+
+  解決したので、茲に原因や状況などを纏める。
+
+  □原因１ 22:25 2011/02/04
+
+  * physpub.sty ではセクション番号を出力させない様な設定になっている。
+    * \thetable/\theequation/\thefigure 等は、上書きして、
+      \thesection を出力しない様になっている。
+    * セクションの開始に、番号を表示しない。更に、無駄な空白が空いてしまうので、
+      \def\thesection{\hspace{-1zw}}
+      等となっている。
+  * 別のスタイルファイルなどで \thetable/\theequation/\thefigure が、
+    \thesection を使う様な物に上書きする物がある。
+
+  何処で読み込まれているのかは、良く分からない。
+  何処で \thetable/... が上書きされているのか調べる為に、もう一度状況を見てみる。
+
+  □状況
+
+  * 初めは、2004phy1.tex を弄っても、全然改善しなかった。
+  * 2004senmon.tex の 2004phy1.tex の直前に \thetable/.. を定義し直したら、
+    2004phy1.tex は正常に表示される様になった。
+    ・所が、2004phy2.tex については、直前に \thetable/.. を定義し直しても、
+      依然として誰かに上書きされたコマンドが使用される。
+    ・2004phy1.tex の後ろにあると行けない可能性について
+    →これは、実際に 2004phy1.tex の直後に再度 2004phy1.tex を追加しても、
+      正常に二回出力されただけだったので、2004phy1.tex の後ろにあると失敗すると言うことでもないようだ。
+    →この事から、2004phy1.tex ではなくて、2004phy2.tex 自体に問題があると言う事が推測される。
+    ・2004phy1.tex がうまく行っているのは?...\documentclass/\usepackage 等が
+      inputanswers で正しく無視されていないからか?
+      ・\documentclass[]{} をコメントアウトしたからか?
+        →これは、関係ない。実際に、コメントアウトを戻してもちゃんと正常に表示されている。
+      ・\usepackage{physpub} の位置の問題か?
+        →これも、関係ない。実際に、physpub を一番下にしていても、一番上にしていても正常に表示される。
+      ・\usepackage{physpub} を記述しているからか?
+        →これも、関係ない。実際に、2004phys2.tex に \usepackage を追加してみたが、正常にはならない。
+
+  □原因２
+
+  * 漸く本当の原因が分かった。
+    どうやら、
+      \numberwithin{equation}{section}
+      \numberwithin{figure}{section}
+      \numberwithin{table}{section}
+    という部分が含まれていると、\thetable/\thefigure/\theequation が再定義されて、
+    \thesection を含む様になるらしい。
+    
+  □対処 23:01 2011/02/04
+    最終的には、
+      2004phy1.tex
+      2004phy2.tex
+    の二つのファイルの先頭に記述されている、
+      \renewcommand{\theequation}{\thesection.\arabic{equation}}
+      \renewcommand{\thefigure}{\thesection.\arabic{figure}}
+      \renewcommand{\thetable}{\thesection.\arabic{table}}
+      \numberwithin{equation}{section}
+      \numberwithin{figure}{section}
+      \numberwithin{table}{section}
+    という部分をコメントアウトする事によって正しくなった。
+
+  ■図番号の参照が依然として潰れている [完]
+
+  □状況
+
+  上のを解決した時に、図に関してもちゃんと参照番号が生成されていると思ったのだが、
+  よく見てみたら、解決したのは式番号の方だけと言う事が分かった。
+
+  というか、セクション番号が、その儘図番号になっている?
+  図番号が割り振られていない様だ???
+
+  試しに、\caption{} を追加してみた所、図番号が割り振られて、
+  ちゃんと正しい図番号が表示される様になった。
+
+  ■式番号の参照でやはり潰れている所が、少々ある [完 01:54 2011/02/05]
+
+  □状況
+  \begin{align} を使用すると、式番号が右側に表示されるが、
+  その中で、\label を使っても正しく参照が対応付けられない。
+  結局 section への参照になってしまう。
+
+  正しく、参照付けが行われる為には、代わりに
+  \begin{eqnarray} を使用しなければならない様だ。

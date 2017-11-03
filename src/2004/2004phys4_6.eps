@@ -1,0 +1,151 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 30 10 530 210
+/2004phys4_6.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   ñÓàÛ
+%-------------------------------------------------------------------------------
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+%: <x> <y> <dx> <dy> mwg-draw-rarrow
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+%: <x> <y> <X> <Y> mwg-draw-arrow
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+%-------------------------------------------------------------------------------
+%   ÉtÉHÉìÉgê›íË
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+%-------------------------------------------------------------------------------
+gsave
+  /atom {
+    0 0 14 0 360 arc
+    gsave 1 setgray fill grestore
+    stroke
+    15 mwg-font-math -6 -5 moveto (A) show
+    14 mwg-font-math -2 4 rmoveto (*) show
+  } def
+  
+  100 50 translate
+  20 mwg-font-roman -60 140 moveto (\(a\)) show
+  20 mwg-font-mincho 8 0 rmoveto (\300\305\273\337\267\317) show
+  newpath
+  gsave
+    /mwg-option-arrow-head-scale 0.7 def
+    2.5 setlinewidth
+    0 0 -8 -22 mwg-draw-rarrow
+    /mwg-option-arrow-head-scale 0.5 def
+    1.5 setlinewidth
+    0 0 30 90 mwg-draw-rarrow
+    
+    15 mwg-font-math -17 -32 moveto (A) show
+    15 mwg-font-gothic 25 96 moveto (\246\303) show
+    15 mwg-font-roman (;) show
+    15 mwg-font-math 2 0 rmoveto (E) show
+    10 mwg-font-math 0 -3 rmoveto (C) show
+    15 mwg-font-roman 0 3 rmoveto ( = 1.4 MeV) show
+  grestore
+  atom
+  
+  %-----------------------------------------------
+  320 0 translate
+  20 mwg-font-roman -120 140 moveto (\(b\)) show
+  20 mwg-font-mincho 8 0 rmoveto (\274\302\270\263\274\274\267\317) show
+  newpath
+  gsave
+    gsave
+      [3 3] 0 setdash
+      -100 0 moveto 100 0 lineto stroke
+    grestore
+    
+    % photon
+    gsave
+      /thL 60 def
+      /R 50 def
+      0 0 R 0 thL arc stroke
+      
+      thL rotate
+      /mwg-option-arrow-head-scale 0.4 def
+      R -1 0 1 mwg-draw-rarrow
+      
+      /mwg-option-arrow-head-scale 0.5 def
+      1.5 setlinewidth
+      0 0 110 0 mwg-draw-rarrow
+    grestore
+    15 mwg-font-mincho 38 32 moveto (\246\310) show
+    10 mwg-font-math -5 -3 rmoveto (L) show
+    15 mwg-font-gothic 37 100 moveto (\246\303) show
+    15 mwg-font-roman (;) show
+    15 mwg-font-math 2 0 rmoveto (E) show
+    10 mwg-font-math 0 -3 rmoveto (L) show
+
+    gsave
+      /mwg-option-arrow-head-scale 0.7 def
+      2.5 setlinewidth
+      0 0 80 -30 mwg-draw-rarrow
+      15 mwg-font-math 81 -35  moveto (A) show
+    grestore
+  grestore
+  atom
+  -100 -3 moveto 85 0 rlineto
+  -100 3 moveto 85 0 rlineto
+  -3 3 rmoveto 6 -6 rlineto -6 -6 rlineto
+  stroke
+  15 mwg-font-math -85 11 moveto (v) show
+  15 mwg-font-roman 0 0 rmoveto ( = 0.80) show
+  15 mwg-font-math 2 0 rmoveto (c) show
+grestore
+
+%30 10 530 210 mwg-draw-rect
+end
+showpage
+2004phys4_6.save restore

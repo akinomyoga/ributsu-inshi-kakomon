@@ -1,0 +1,326 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 20 0 410 450
+
+/2004phys4_5.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   フォント設定
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+
+%-------------------------------------------------------------------------------
+%  ベクトル
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2mul {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+%: <vec> <scal> mwg-v2div <vec>
+/mwg-v2div {
+  1 exch div mwg-v2mul
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2norm {
+  dup mwg-v2abs mwg-v2div
+} def
+
+/mwg-v2abs {
+  aload pop
+  dup mul exch dup mul add sqrt
+} def
+
+/mwg-v2arg {
+  aload pop exch atan
+} def
+
+/mwg-v2rot {
+  dup 3 2 roll aload pop 3 1 roll
+  %: a y a x
+  4 copy
+  exch cos mul 3 1 roll exch sin mul sub
+  5 1 roll
+  exch sin mul 3 1 roll exch cos mul add
+  2 array astore
+  %: [xc-ys xs+yc]
+} def
+
+/mwg-v2iprod {
+  aload pop 3 2 roll aload pop
+  exch 3 1 roll
+  mul 3 1 roll mul add
+} def
+%-------------------------------------------------------------------------------
+%   矩形
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+
+%-------------------------------------------------------------------------------
+%  曲線
+%-------------------------------------------------------------------------------
+%: <i0> <iM> mwg-path-curve-impl
+/mwg-path-curve-impl {
+  data 0 get aload pop moveto
+  1 exch {
+    /i exch def
+    /p0 i 1 sub getpt def
+    /p1 i       getpt def
+    /p2 i 1 add getpt def
+    /p3 i 2 add getpt def
+    
+    p2 p0 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2mul
+      p1 vadd aload pop
+      
+    p1 p3 vsub mwg-v2norm
+      p2 p1 vsub vabs 0.4 mul mwg-v2mul
+      p2 vadd aload pop
+    
+    p2 aload pop
+    
+    curveto
+  } for
+} def
+
+/mwg-path-curve {
+  << >> begin
+    /data exch def
+    /len data length def
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      dup -1 eq {
+        pop
+        data 0 get data 1 get vsub
+          data 0 get vadd
+      }{
+        dup len eq {
+          pop
+          data len 1 sub get data len 2 sub get vsub
+            data len 1 sub get vadd
+        }{
+          data exch get
+        } ifelse
+      } ifelse
+    } def
+    0 len 2 sub mwg-path-curve-impl
+    stroke
+  end
+} def
+
+/mwg-path-ccurve {
+  << >> begin
+    /data exch def
+    /len data length def
+    
+    /vsub {mwg-v2sub} def
+    /vadd {mwg-v2add} def
+    /vabs {mwg-v2abs} def
+    /getpt {
+      len add len mod
+      data exch get
+    } def
+    0 len 1 sub mwg-path-curve-impl
+    stroke
+  end
+} def
+
+/mwg-draw-curve  {mwg-path-curve stroke} def
+/mwg-draw-ccurve {mwg-path-ccurve stroke} def
+/mwg-fill-curve  {mwg-path-curve fill} def
+/mwg-fill-ccurve {mwg-path-ccurve fill} def
+%-------------------------------------------------------------------------------
+
+gsave
+  100 40 translate
+  -32 0 332 400 mwg-draw-rrect
+  
+  /memori-h {
+    -32 0 moveto  7 0 rlineto stroke
+    300 0 moveto -7 0 rlineto stroke
+    -32 100 2 log mul moveto  4 0 rlineto stroke
+    300 100 2 log mul moveto -4 0 rlineto stroke
+    -32 100 5 log mul moveto  4 0 rlineto stroke
+    300 100 5 log mul moveto -4 0 rlineto stroke
+  } def
+  gsave
+    memori-h
+    0 100 translate
+    memori-h
+    0 100 translate
+    memori-h
+    0 100 translate
+    memori-h
+  grestore
+
+  /memori-v {
+    0   0 moveto 0  7 rlineto stroke
+    0 400 moveto 0 -7 rlineto stroke
+    100 2 log mul   0 moveto 0  4 rlineto stroke
+    100 2 log mul 400 moveto 0 -4 rlineto stroke
+    100 5 log mul   0 moveto 0  4 rlineto stroke
+    100 5 log mul 400 moveto 0 -4 rlineto stroke
+  } def
+  gsave
+    memori-v
+    100 0 translate
+    memori-v
+    100 0 translate
+    memori-v
+  grestore
+  
+  -2 0 translate
+    12 mwg-font-roman
+    -6 -12 moveto (0.1) show
+    94 -12 moveto (1.0) show
+    195 -12 moveto (10) show
+    293 -12 moveto (100) show
+    -57 -2 moveto (0.001) show
+    -52 98 moveto (0.01) show
+    -47 198 moveto (0.1) show
+    -47 298 moveto (1.0) show
+    -44 398 moveto (10) show
+  2 0 translate
+  
+  22 mwg-font-gothic
+  250 360 moveto (Ge) show
+  30 -35 moveto (\246\303\300\376\244\316\245\250\245\315\245\353\245\256\241\274 \(MeV\)) show
+  gsave
+    -60 170 translate
+    90 rotate
+    0 0 moveto (\246\314\(cm) show
+    16 mwg-font-gothic
+      0 6 rmoveto (-1) show 0 -6 rmoveto
+    22 mwg-font-gothic
+      (\)) show
+  grestore
+  
+  22 mwg-font-roman
+  30 150 moveto (A) show
+  100 253 moveto (B) show
+  152 125 moveto (C) show
+ 
+  % lines
+  newpath
+  -32 0 translate
+  [
+    [ 0.000000 400.000000 ]
+    [ 6.863159 387.599462 ]
+    [ 19.460966 357.716479 ]
+    [ 33.784358 317.676094 ]
+    [ 44.666402 286.090999 ]
+    [ 63.552477 231.374221 ]
+    [ 84.716596 165.362802 ]
+    [ 104.697544 111.756373 ]
+    [ 120.659952 73.944843 ]
+    [ 132.049713 50.239770 ]
+    [ 147.408164 24.839262 ]
+    [ 157.072072 10.726486 ]
+    [ 166.162566 -0.564574 ]
+  ] mwg-draw-curve
+  [
+    [ 0.237402 316.502435 ]
+    [ 21.889221 300.168978 ]
+    [ 44.666402 286.090999 ]
+    [ 66.860704 275.959966 ]
+    [ 105.545556 260.201384 ]
+    [ 141.378517 244.434649 ]
+    [ 170.383231 228.656464 ]
+    [ 199.952074 209.486967 ]
+    [ 223.260279 193.131129 ]
+    [ 261.337166 163.227900 ]
+    [ 331.756429 109.039548 ]
+  ] mwg-draw-curve
+  [
+    [ 145.745987 0.000000 ]
+    [ 147.408164 24.839262 ]
+    [ 151.906908 50.244014 ]
+    [ 161.494297 89.765439 ]
+    [ 176.766235 128.728616 ]
+    [ 193.762112 159.228487 ]
+    [ 206.237217 176.177039 ]
+    [ 223.260279 193.131129 ]
+    [ 244.266846 207.832191 ]
+    [ 269.825084 220.845725 ]
+    [ 296.526180 231.603680 ]
+    [ 320.959381 238.972066 ]
+    [ 331.756429 240.677966 ]
+  ] mwg-draw-curve
+grestore
+
+%20 0 410 450 mwg-draw-rect
+
+end
+showpage
+2004phys4_5.save restore

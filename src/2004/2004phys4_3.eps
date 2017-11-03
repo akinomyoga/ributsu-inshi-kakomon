@@ -1,0 +1,579 @@
+%!
+%%Creator: Koichi Murase
+%%BoundingBox: 35 15 330 80
+/2004phys4_3.save save def
+<< >> begin
+%-------------------------------------------------------------------------------
+%   フォント設定
+%-------------------------------------------------------------------------------
+
+/mwg-font-gothic {
+  /GothicBBB-Medium-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-mincho {
+  /Ryumin-Light-EUC-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-math {
+  /Times-Italic-H findfont
+  exch scalefont
+  setfont
+} def
+
+/mwg-font-roman {
+  /Times-Roman-H findfont
+  exch scalefont
+  setfont
+} def
+%-------------------------------------------------------------------------------
+% 波線
+%-------------------------------------------------------------------------------
+/mwg-switch {
+  %: arr
+  << >> begin
+    /arr exch def
+    /break false def
+    1 1 arr length 2 div {
+      /i exch 1 sub def
+      break not arr i 2 mul get and {
+        arr i 2 mul 1 add get
+        /break true def
+      } if
+    } for
+  end exec
+} def
+%-------------------------------------------------------------------------------
+/mwg-wave-parts [
+  {
+    10 5 20 10 30 10 curveto
+    30  0 translate
+  } {
+    10 10 20 5 30 0 curveto
+    30  0 translate
+  } {
+    10 -5 20 -10 30 -10 curveto
+    30  0 translate
+  } {
+    10 -10 20 -5 30 0 curveto
+    30  0 translate
+  }
+] def
+
+/mwg-wave-end [
+  {
+    16 8 25 0 30 0 curveto
+    30  0 translate
+  } {
+    10 10 20 0 30 0 curveto
+    30  0 translate
+  } {
+    16 -8 25 0 30 0 curveto
+    30  0 translate
+  } {
+    10 -10 20 0 30 0 curveto
+    30  0 translate
+  }
+] def
+/mwg-wave-begin [
+  {
+    10 0 20 10 30 10 curveto
+    30  0 translate
+  } {
+    5 0 14 8 30 0 curveto
+    30  0 translate
+  } {
+    10 0 20 -10 30 -10 curveto
+    30  0 translate
+  } {
+    5 0 14 -8 30 0 curveto
+    30  0 translate
+  }
+] def
+
+/mwg-option-wave-idx-begin 0 def
+/mwg-option-wave-fwd true def
+/mwg-option-wave-fwd-begin {mwg-option-wave-fwd} def
+/mwg-option-wave-fwd-end   {mwg-option-wave-fwd} def
+/mwg-wave-repeat {
+  << >> begin
+    /n exch def
+    /w n 30 mul def
+    /h 20 def
+    
+    1 w div 1 h div scale
+    0 1 n 1 sub {
+      /i exch def
+      [
+        i 0 eq mwg-option-wave-fwd-begin and {
+          mwg-wave-begin
+        }
+        i n 1 sub eq mwg-option-wave-fwd-end and {
+          mwg-wave-end
+        }        
+        true {
+          mwg-wave-parts
+        }
+      ] mwg-switch
+      i mwg-option-wave-idx-begin add 4 mod get exec
+    } for
+    w h scale
+  end
+} def
+
+/mwg-draw-rwave {
+  gsave << >> begin
+    /w exch def
+    /n exch def
+    /ry exch def
+    /rx exch def
+    translate
+    0 0 moveto
+    ry rx atan rotate
+    
+    /r rx rx mul ry ry mul add sqrt def
+    r w scale
+    n mwg-wave-repeat
+    1 r div 1 w div scale
+    stroke
+  end grestore
+} def
+
+/mwg-draw-wave {
+  6 2 roll
+    2 index sub
+    exch 3 index sub exch
+  6 4 roll
+  mwg-draw-rwave
+} def
+%-------------------------------------------------------------------------------
+/mwg-path-rrect {
+  newpath
+  4 2 roll moveto
+  1 index 0 rlineto
+  0 exch rlineto
+  neg 0 rlineto
+  closepath
+} def
+
+/mwg-path-rect {
+  2 index sub
+  exch 3 index sub exch
+  mwg-path-rrect
+} def
+
+/mwg-draw-rect  {mwg-path-rect  stroke} def
+/mwg-draw-rrect {mwg-path-rrect stroke} def
+/mwg-fill-rect  {mwg-path-rect  fill} def
+/mwg-fill-rrect {mwg-path-rrect fill} def
+%-------------------------------------------------------------------------------
+%   矢印
+%-------------------------------------------------------------------------------
+
+/mwg-option-arrow-head-scale 1 def
+/mwg-arrow-headA {
+  0 0 moveto
+  -10 -5 rlineto
+  4 5 rlineto
+  -4 5 rlineto
+  closepath
+  fill
+} def
+
+%: <x> <y> <dx> <dy> mwg-draw-rarrow
+/mwg-draw-rarrow {
+  gsave
+    4 2 roll translate
+    0 0 moveto
+    2 copy rlineto
+    stroke
+    
+    2 copy translate
+    exch atan rotate
+    mwg-option-arrow-head-scale dup scale
+    mwg-arrow-headA
+  grestore
+} def
+
+%: <x> <y> <X> <Y> mwg-draw-arrow
+/mwg-draw-arrow {
+  2 index sub
+  exch 3 index sub exch
+  mwg-draw-rarrow
+} def
+
+%-------------------------------------------------------------------------------
+%  ベクトル
+%-------------------------------------------------------------------------------
+%: <vec> <scal> vmul <vec>
+/mwg-v2scal {
+  exch aload pop
+  %: m x y
+  2 index mul
+  exch  2 index mul exch
+  %: m m*x m*y
+  2 array astore
+  exch pop
+} def
+
+%: <vec> <scal> mwg-v2div <vec>
+/mwg-v2div {
+  1 exch div mwg-v2scal
+} def
+
+/mwg-v2add {
+  aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll add
+  %: x x y+y
+  3 1 roll add exch
+  %: x+x y+y
+  2 array astore
+} def
+
+/mwg-v2sub {
+  exch aload pop
+  3 2 roll aload pop
+  %: x y x y
+  exch 3 1 roll sub
+  %: x x y-y
+  3 1 roll sub exch
+  %: x-x y-y
+  2 array astore
+} def
+
+/mwg-v2norm {
+  dup mwg-v2abs mwg-v2div
+} def
+
+/mwg-v2abs {
+  aload pop
+  dup mul exch dup mul add sqrt
+} def
+
+/mwg-v2arg {
+  aload pop exch atan
+} def
+
+/mwg-v2rot {
+  dup 3 2 roll aload pop 3 1 roll
+  %: a y a x
+  4 copy
+  exch cos mul 3 1 roll exch sin mul sub
+  5 1 roll
+  exch sin mul 3 1 roll exch cos mul add
+  2 array astore
+  %: [xc-ys xs+yc]
+} def
+
+/mwg-v2iprod {
+  aload pop 3 2 roll aload pop
+  exch 3 1 roll
+  mul 3 1 roll mul add
+} def
+
+%-------------------------------------------------------------------------------
+%   行列
+%-------------------------------------------------------------------------------
+%: <mat> mwg-m2det <det>
+/mwg-m2det {
+  aload pop
+  %: [a c] [b d]
+  aload pop 3 2 roll aload pop
+  %: b d a c
+  3 1 roll mul
+  %: b c a*d
+  3 1 roll mul sub
+} def
+
+%: <mat> <scal> mwg-m2smul <mat>
+/mwg-m2smul {
+  exch aload pop
+  %: m [a c] [b d]
+  2 index mwg-v2scal
+  3 1 roll exch mwg-v2scal
+  exch 2 array astore
+} def
+%: <mat> <scal> mwg-m2sdiv <mat>
+/mwg-m2sdiv {
+  1 exch div mwg-m2smul
+} def
+
+%: <mat> mwg-m2inv <mat>
+/mwg-m2inv {
+  << >> begin
+    %: [[a b] [c d]]
+    aload pop
+    aload pop /d exch def /c exch def
+    aload pop /b exch def /a exch def
+    /det a d mul b c mul sub def
+    
+    d det div
+    b neg det div
+    2 array astore
+    
+    c neg det div
+    a det div
+    2 array astore
+    
+    2 array astore
+  end
+} def
+
+%: <mat> <vec> mwg-m2vmul <vec>
+/mwg-m2vmul {
+  << >> begin
+    %: [[a b] [c d]] [x y]
+    aload pop /y exch def /x exch def
+    aload pop
+    aload pop /d exch def /c exch def
+    aload pop /b exch def /a exch def
+    [
+      a x mul c y mul add
+      b x mul d y mul add
+    ]
+  end
+} def
+%-------------------------------------------------------------------------------
+%   交点
+%-------------------------------------------------------------------------------
+%   <line> : [ [ x y ] [ dx dy] ] ; dx*dx+dy*dy=1
+%   <circ> : [ [ x y ] r ]
+%-------------------------------------------------------------------------------
+%: <pt1> <pt2> mwg-line-create <line>
+/mwg-line-create {
+  1 index mwg-v2sub mwg-v2norm
+  2 array astore
+} def
+
+%: <line1> <line2> mwg-line-line-sect <vec>
+/mwg-line-line-sect {
+  << >> begin
+    %: [x dx] [y dy]
+    aload pop /dy exch def /y exch def
+    aload pop /dx exch def /x exch def
+      /t
+        [
+          dx
+          dy -1 mwg-v2scal
+        ] mwg-m2inv
+        y x mwg-v2sub
+      mwg-m2vmul 0 get
+    def
+    x dx t mwg-v2scal mwg-v2add
+  end
+} def
+
+/mwg-circ-line-sect {
+  << >> begin
+    %: [p r] [x dx]
+    aload pop /dx exch def /x exch def
+    aload pop /r exch def /p exch def
+    
+    /xp x p mwg-v2sub def
+    /t xp dx mwg-v2iprod neg def
+    /d dx t mwg-v2scal xp mwg-v2add def
+    /s2 r r mul d d mwg-v2iprod sub def
+    
+    s2 0 gt {
+      /s s2 sqrt def
+      [
+        t s add dx exch mwg-v2scal x mwg-v2add
+        t s sub dx exch mwg-v2scal x mwg-v2add
+      ]
+    } {
+      [ ]
+    } ifelse
+  end
+} def
+%-------------------------------------------------------------------------------
+
+%: [ <p1> <p2> <p3> <p4> <theta> <d> ]
+/mwg-hatch-quadr {
+  << >> begin gsave newpath
+    aload pop
+    /d exch def /th exch def
+    /p4 exch def /p3 exch def
+    /p2 exch def /p1 exch def
+    
+    %-----------------------------------
+    % 斜線
+    /t [ 1 0 ] th mwg-v2rot def        % 方向
+    /n t 90 mwg-v2rot d mwg-v2scal def % 法線
+    /p p1 def                          % 起点
+    
+    %: <pLa1> <pLa2> <pLb1> <pLb2> line-cross
+    /line-cross {
+      mwg-line-create /Lb exch def
+      mwg-line-create /La exch def
+      [p t] La mwg-line-line-sect aload pop moveto
+      [p t] Lb mwg-line-line-sect aload pop lineto
+    } def
+    
+    %: <pt> line-side <bool>
+    /line-side { p mwg-v2sub n mwg-v2iprod 0 lt } def
+    
+    %-----------------------------------
+    % 頂点配列
+    /vtc [ [p1 false] [p2 false] [p3 false] [p4 false] ] def
+    /P1 {vtc 0 get 0 get} def /S1 {vtc 0 get 1 get} def
+    /P2 {vtc 1 get 0 get} def /S2 {vtc 1 get 1 get} def
+    /P3 {vtc 2 get 0 get} def /S3 {vtc 2 get 1 get} def
+    /P4 {vtc 3 get 0 get} def /S4 {vtc 3 get 1 get} def
+    /vtc-update-sgn {
+      0 1 3 {
+          vtc exch get 1
+          1 index 0 get line-side
+        put
+      } for
+    } def
+    /vtc-roll {
+      vtc aload 5 1 roll 4 1 roll 5 4 roll astore pop
+    } def
+    
+    %-------------------------------------------------------
+    %  斜線端点の計算
+    %-------------------------------------------------------
+    /draw-hatch-line {
+      /flagL true def
+      %---------------------------------
+      % [ 1 | 2 3 4 ] に分かれている場合
+      1 1 4 {
+        pop
+        S1 S2 ne S1 S3 ne S1 S4 ne and and {
+          P1 P2 P1 P4 line-cross
+          /flagL false def
+          exit
+        } if
+        
+        vtc-roll
+      } for
+      %---------------------------------
+      % [ 1 2 | 3 4 ] に分かれている場合
+      flagL {
+        1 1 2 {
+          pop
+          S1 S2 eq S1 S3 ne S1 S4 ne and and {
+            P2 P3 P1 P4 line-cross
+            /flagL false def
+            exit
+          } if
+          
+          vtc-roll
+        } for
+      } if
+      %---------------------------------
+      % [ 1 3 | 2 4 ] に分かれている場合
+      flagL {
+        % pX = 内側の交点
+        /pX P1 P2 mwg-line-create P3 P4 mwg-line-create mwg-line-line-sect def
+        pX P1 mwg-v2sub pX P2 mwg-v2sub mwg-v2iprod 0 gt {
+          /pX P1 P3 mwg-line-create P2 P4 mwg-line-create mwg-line-line-sect def
+        } if
+        
+        pX line-side S1 eq {
+          P1 P2 P2 P3 line-cross
+          P1 P4 P4 P3 line-cross
+        }{
+          P2 P1 P1 P4 line-cross
+          P2 P3 P3 P4 line-cross
+        } ifelse
+      } if
+      %---------------------------------
+    } def
+    %-------------------------------------------------------
+    % 斜線の列挙
+    %-------------------------------------------------------
+    /p p1 def
+    vtc-update-sgn
+    draw-hatch-line
+    
+    {
+      /p p n mwg-v2add def
+      vtc-update-sgn
+      S1 S2 eq S2 S3 eq S3 S4 eq and and {exit} if
+      draw-hatch-line
+    } loop
+    
+    /p p1 def
+    {
+      /p p n mwg-v2sub def
+      vtc-update-sgn
+      S1 S2 eq S2 S3 eq S3 S4 eq and and {exit} if
+      draw-hatch-line
+    } loop
+    %-------------------------------------------------------
+    
+    stroke
+  grestore end
+} def
+
+%-------------------------------------------------------------------------------
+
+gsave
+  %-------------------------------------
+  % S
+  50 50 translate
+  gsave
+    45 rotate
+      0.25 1 scale
+        0 0 10 0 360 arc
+      4 1 scale
+    -45 rotate
+    stroke
+    -45 rotate
+      0.25 1 scale
+        0 0 10 0 360 arc
+      4 1 scale
+    45 rotate
+    
+    stroke
+  grestore
+  
+  /mwg-option-wave-fwd false def
+  /mwg-option-wave-idx-begin 2 def
+  0 0 95 0 24 4 mwg-draw-wave
+  10 mwg-font-roman -3 -18 moveto (S) show
+  %-------------------------------------
+  % O
+  100 0 translate
+  gsave
+    0.5 setlinewidth
+    [
+      [-5 20]
+      [5 20]
+      [5 -20]
+      [-5 -20]
+      45 2
+    ] mwg-hatch-quadr
+  grestore
+  -5 20 5 -20 mwg-draw-rect
+  
+  10 mwg-font-roman -3 -30 moveto (O) show
+  
+  /mwg-option-wave-fwd-end true def
+  5 0 95 0 24 4 mwg-draw-rwave
+  /mwg-option-arrow-head-scale 0.4 def
+  100 0 5 0 mwg-draw-rarrow
+  %-------------------------------------
+  % D
+  110 0 translate
+  -5 5 5 -5 mwg-draw-rect
+  5 0 moveto 15 0 rlineto stroke
+  10 mwg-font-roman -4 -18 moveto (D) show
+  
+  40 0 translate
+  -20 20 20 -20 mwg-draw-rect
+  10 mwg-font-roman -12 5 moveto (PHA) show
+  
+grestore
+
+%35 15 330 80 mwg-draw-rect
+end
+showpage
+2004phys4_3.save restore
