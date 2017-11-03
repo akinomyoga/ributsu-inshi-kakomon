@@ -1,0 +1,1854 @@
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+
+\begin{document}
+
+%%問題文
+\begin{question}{専攻 問題6}{}
+
+電子が2次元($xy$面)内のみを動くとした場合に、以下のような問題を考えてみよう。各問には解答に至る道筋を添えて答えよ。\\
+
+\begin{subquestions}
+\SubQuestion
+電子が面内では自由運動するとしてSchr\"{o}dinger方程式を解き、波動関数$\Psi (x,y)$を求めよ。
+	
+	以下では、電子の質量を$m$とし、電子のスピンや電子間の相互作用は無視せよ。
+	
+\SubQuestion
+一般に、状態密度$D(E)$という量を、エネルギーが$E$と$E+\delta E$の間にある状態数が$D(E)\delta E$となるような量として定義することができる。3次元自由空間に対して、系の$x,y,z$方向のサイズがそれぞれ$L$であり周期的境界条件をもつとして、$D(E)\propto \sqrt{E}$を示せ。
+
+\SubQuestion
+2次元運動の場合に、$x,y$方向のサイズがそれぞれ$L$であり周期的境界条件を持つとして、状態密度を求めよ。
+
+\SubQuestion
+$x,y$面内にさらに、例えば
+	\[ V(x,y)=V_0[\cos (2\pi x/a)+\cos (2\pi y/a)] \]
+	のような周期ポテンシャルが加わった場合を考えよう。一般に、このような周期ポテンシャルが加わった場合に、波動関数$\Psi$はどのような形をとるか。
+
+\SubQuestion
+上記ポテンシャルの場合のようにSchr\"{o}dinger方程式が変数分離できる場合は、
+	\[ V(x)=V_0 \cos (2\pi x/a) \]
+	というポテンシャル下での1次元Schr\"{o}dinger方程式を解けばよい。このポテンシャルの振幅$V_0$が小さいとして摂動で扱い、この1次元問題に対してエネルギー・スペクトルがどのようになるか求めよ。
+
+
+\SubQuestion
+2次元での周期ポテンシャル問題に戻り、(i)エネルギー・スペクトルはどのような運動量又はそれに準ずるパラメータの関数として考えればよいのか、(ii)このとき、エネルギー・スペクトルは定性的にはどのような特徴をもつか、(iii)絶対零度で電子を詰めた場合に、どのような場合に金属になり、どのような場合に絶縁体・半導体になるか、を答えよ。
+
+\end{subquestions}
+\end{question}
+\begin{answer}{専攻 問題6}
+
+\begin{subanswers}
+\SubAnswer
+Schr\"{o}dinger方程式
+	\[ -\frac{\hbar}{2m}\left( \frac{\partial ^2}{\partial x^2}+\frac{\partial ^2}{\partial y^2}\right)\Psi (x,y)=E\Psi(x,y) \]
+	波数ベクトル$\Vec{k}を$ $|\Vec{k}|\equiv \sqrt{2mE}/\hbar$とすると、
+	\[ (\nabla ^2 + k^2)\Psi =0 \]
+	とかける。解は平面波の和で
+	\[ \Psi (x,y)=\sum_{\Vec{k}} C(\Vec{k})e^{i(k_x x+k_y y)} \]
+	
+\SubAnswer
+状態密度とは、Fermionを絶対零度にして「詰めて」ゆく時、エネルギー$E$ではどのくらいの個数が詰まっているかを表したものである。この時運動量表示によりFermi球で考えるのが一番簡単だろう。Schr\"{o}dinger方程式の解
+	\[ \Psi_{\Vec{k}}(\Vec{x})=(const)\cdot e^{i\Vec{k}\cdot \Vec{x}} \]
+	を周期的境界条件
+	\[ \Psi_{\Vec{k}}(x,y,z)=\Psi_{\Vec{k}}(x+L,y,z)　\,　　（y,zについても同様）\]
+に代入すると波数について
+\[k_x=\frac{2\pi n_x}{L},k_y=\frac{2\pi n_y}{L},k_z=\frac{2\pi n_z}{L}\]
+を得る。(但し、$n_x,n_y,n_z=0,\pm 1,\pm 2, \ldots$)
+
+エネルギーは、
+\[E=\frac{\hbar^2}{2m}|\Vec{k}|^2=\frac{\hbar^2}{2m}\left( \frac{2\pi}{L}\right)^2(n_x^2+n_y^2+n_z^2)\]
+とかける。電子をエネルギーの低い順に詰めてゆく時、エネルギー$E$以下の電子の数$N(E)$は、
+\[E \ge \frac{\hbar^2}{2m}\left( \frac{2\pi}{L}\right)^2(n_x^2+n_y^2+n_z^2)\]
+という球内の格子点$(n_x,n_y,n_z)$の数である。これは球の体積に等しいから
+\[N(E)=\frac{4\pi}{3}(2mE)^{3/2}\left( \frac{L}{2\pi \hbar}\right)^3\]
+$E\sim E+\delta E$にある状態数は、これを微分すればよくて、
+\[D(E)\delta E=2\pi (2m)^{3/2}\left( \frac{L}{2\pi \hbar}\right)^3\sqrt{E}\delta E\]
+よって、$D(E)\propto \sqrt{E}$
+
+
+\SubAnswer
+3次元の場合同様にして
+\[E \ge \frac{\hbar^2}{2m}\left( \frac{2\pi}{L}\right)^2(n_x^2+n_y^2)\]
+という円内の格子点$(n_x,n_y)$の数を数えると
+\[N(E)=\pi 2m E\left( \frac{L}{2\pi \hbar}\right)^2\]
+よって、
+\[D(E)\delta E = \frac{mL^2}{2\pi \hbar^2}\delta E\]
+
+\SubAnswer
+Blochの定理：周期的ポテンシャルに対するSchr\"{o}dinger方程式の解は$\Psi_{\Vec{k}}(\Vec{r})=u_{\Vec{k}}(\Vec{r}) \exp (i\Vec{k}\cdot \Vec{r})$という形を持つ。但し$u_{\Vec{k}}(\Vec{r})$はポテンシャルと同じ周期性を持つ。
+
+\SubAnswer
+格子定数$a$、周期境界条件より結晶の長さ$L=Na(N\in \Vec{N})$。摂動を受ける前、自由電子に対するSchr\"{o}dinger方程式は
+\[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\phi(x)=E\phi(x)\]
+$k\equiv \sqrt{2mE}/\hbar$とすると周期境界条件から
+\[k=\frac{2\pi}{L}n \,　 (n=0,\pm 1, \pm 2, \cdots)\]
+となって波動関数は、
+\[\phi(x)=\sum_k C_k \phi _k (x)\]
+\[\phi_k(x)=\frac{1}{\sqrt{L}}e^{ikx}\]
+と書ける。また、ポテンシャルについて
+\begin{align*}
+V_{kl} &\equiv \int_0^L \phi _k^* V(x) \phi_l \,dx \\
+       &= \int _0^L \frac{V_0}{L}\cos \frac{2\pi}{a}x \,e^{-i(k-l)x}\, dx\\
+       &= \begin{cases}
+                      \frac{V_0}{2} & |k-l|=2\pi /a \\
+                      0             & \text{上記以外}
+          \end{cases}               
+\end{align*}
+エネルギー摂動1次は
+\[E_k^{(1)}=V_{kk}=0\]
+となり、2次の摂動は
+\begin{align*}
+E_k^{(2)}
+&= \sum_l \frac{|V_{kl}|^2}{E_k^{(0)}-E_l^{(0)}}=\sum_{g=\pm 2\pi/a}\frac{( V_0 /2 )^2}{\frac{\hbar ^2}{2m}(k^2-(k+g)^2)}\\
+&= \frac{mV_0^2}{2\hbar^2}\sum_g \frac{1}{-2kg-g^2}=\frac{mV_0^2}{2\hbar^2}\frac{2}{2\pi}\left( \frac{1}{2k-2\pi/a}- \frac{1}{2k+2\pi/a} \right)\\
+&= \frac{mV_0^2}{4\hbar^2 (k^2 - (\pi /a)^2)}
+\end{align*}
+よってエネルギーは
+\[E_k=\frac{\hbar^2 k^2}{2m}+\frac{mV_0^2}{4\hbar^2(k^2-(\pi/a)^2)}\]
+となる。ただし、これは$k=\pm \pi /a$のとき発散してしまう。波動関数は摂動1次まで考えて
+\[\Psi_k=\phi _k +\sum_{g=\pm 2\pi/a}\frac{mV_0}{\hbar^2(k^2-(k+g)^2)}\phi_{kg}\]
+となるから、$k=\pm \pi /a$付近では波動関数は$\phi_k$と$\phi_{k+g}$で表されることが予想できるので（$g=\mp 2\pi/a$）、
+\[\Psi_k=C_k \phi_k + C_{k+g} \phi_{k+g}\]
+とおき、Schr\"{o}dinger方程式に代入する。
+\[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\Psi _k +V\Psi_k =\varepsilon _k \Psi _k\]
+この式に左から$\phi_k^* $をかけて積分すると、
+\[\left( \frac{\hbar^2k^2}{2m} - \varepsilon _k\right) C_k+\frac{V_0}{2}C_{k+g}=0\]
+左から$\phi_{k+g}^* $をかけて積分すると、
+\[\left( \frac{\hbar^2(k+g)^2}{2m} - \varepsilon _k\right) C_{k+g}+\frac{V_0}{2}C_{k}=0\]
+この2式を連立して、$C_k,C_{k+g}$が0でない解を持つには
+\[
+\begin{vmatrix}
+\frac{\hbar^2k^2}{2m}-\varepsilon _k & \frac{V_0}{2}\\
+\frac{V_0}{2}                        & \frac{\hbar^2(k+g)^2}{2m}-\varepsilon _k
+\end{vmatrix}
+=0
+\]
+
+\begin{align*}
+&\varepsilon_k^2-\left[ \frac{\hbar^2}{2m}(k^2+(k+g)^2)\right] \varepsilon_k +\frac{\hbar^4}{4m^2}k^2(k+g)^2-\frac{V_0^2}{4}=0\\
+\therefore &\varepsilon_k=\frac{1}{2}\left[ \frac{\hbar^2}{2m}k^2 +\frac{\hbar^2}{2m}(k+g)^2 \pm \sqrt{\left[ \frac{\hbar^2}{2m}(k^2-(k+g)^2) \right]^2+V_0^2}\ \right]
+\end{align*}
+$k=\pi /a$, $g=-2\pi/a$では、
+\[\varepsilon_k=\frac{\hbar^2}{2m}k^2\pm \frac{V_0}{2}\]
+$V_0$のエネルギーギャップを生じる。\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%--------図版--------
+%WinTpicVersion2.15
+\unitlength 0.1in
+\begin{picture}(32.00,20.00)(2.80,-24.00)
+% STR 2 0 3 0
+% 3 1990 2393 1990 2410 4 5
+% O
+\put(19.9000,-20.1000){\makebox(0,0)[rt]{O}}%
+% STR 2 0 3 0
+% 3 1960 783 1960 800 4 0
+% $E$
+\put(19.6000,-4.0000){\makebox(0,0)[rt]{$E$}}%
+% STR 2 0 3 0
+% 3 3400 2423 3400 2440 4 0
+% $k$
+\put(34.0000,-20.4000){\makebox(0,0)[rt]{$k$}}%
+% VECTOR 2 0 3 0
+% 2 2000 2800 2000 800
+% 
+\special{pn 8}%
+\special{pa 2000 2400}%
+\special{pa 2000 400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 400}%
+\special{pa 1980 467}%
+\special{pa 2000 453}%
+\special{pa 2020 467}%
+\special{pa 2000 400}%
+\special{fp}%
+% VECTOR 2 0 3 0
+% 2 600 2400 3400 2400
+% 
+\special{pn 8}%
+\special{pa 600 2000}%
+\special{pa 3400 2000}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3400 2000}%
+\special{pa 3333 1980}%
+\special{pa 3347 2000}%
+\special{pa 3333 2020}%
+\special{pa 3400 2000}%
+\special{fp}%
+% FUNC 2 0 3 0
+% 9 600 800 3400 2800 2000 2400 2200 2400 2000 2200 600 800 1000 2800 0 5 0 0
+% (x+5)^2+4
+\special{pn 8}%
+\special{pa 600 400}%
+\special{pa 605 420}%
+\special{pa 610 440}%
+\special{pa 615 459}%
+\special{pa 620 478}%
+\special{pa 625 497}%
+\special{pa 630 516}%
+\special{pa 635 534}%
+\special{pa 640 552}%
+\special{pa 645 570}%
+\special{pa 650 588}%
+\special{pa 655 605}%
+\special{pa 660 622}%
+\special{pa 665 639}%
+\special{pa 670 655}%
+\special{pa 675 672}%
+\special{pa 680 688}%
+\special{pa 685 704}%
+\special{pa 690 720}%
+\special{pa 695 735}%
+\special{pa 700 750}%
+\special{pa 705 765}%
+\special{pa 710 779}%
+\special{pa 715 794}%
+\special{pa 720 808}%
+\special{pa 725 822}%
+\special{pa 730 836}%
+\special{pa 735 849}%
+\special{pa 740 862}%
+\special{pa 745 875}%
+\special{pa 750 888}%
+\special{pa 755 900}%
+\special{pa 760 912}%
+\special{pa 765 924}%
+\special{pa 770 935}%
+\special{pa 775 947}%
+\special{pa 780 958}%
+\special{pa 785 969}%
+\special{pa 790 980}%
+\special{pa 795 990}%
+\special{pa 800 1000}%
+\special{pa 805 1010}%
+\special{pa 810 1020}%
+\special{pa 815 1029}%
+\special{pa 820 1038}%
+\special{pa 825 1047}%
+\special{pa 830 1056}%
+\special{pa 835 1064}%
+\special{pa 840 1072}%
+\special{pa 845 1080}%
+\special{pa 850 1088}%
+\special{pa 855 1095}%
+\special{pa 860 1102}%
+\special{pa 865 1109}%
+\special{pa 870 1116}%
+\special{pa 875 1122}%
+\special{pa 880 1128}%
+\special{pa 885 1134}%
+\special{pa 890 1140}%
+\special{pa 895 1145}%
+\special{pa 900 1150}%
+\special{pa 905 1155}%
+\special{pa 910 1160}%
+\special{pa 915 1164}%
+\special{pa 920 1168}%
+\special{pa 925 1172}%
+\special{pa 930 1176}%
+\special{pa 935 1179}%
+\special{pa 940 1182}%
+\special{pa 945 1185}%
+\special{pa 950 1188}%
+\special{pa 955 1190}%
+\special{pa 960 1192}%
+\special{pa 965 1194}%
+\special{pa 970 1196}%
+\special{pa 975 1197}%
+\special{pa 980 1198}%
+\special{pa 985 1199}%
+\special{pa 990 1200}%
+\special{pa 995 1200}%
+\special{pa 1000 1200}%
+\special{sp}%
+\if0
+\special{pa 1000 1200}%
+\special{pa 1005 1200}%
+\special{pa 1010 1200}%
+\special{pa 1015 1199}%
+\special{pa 1020 1198}%
+\special{pa 1025 1197}%
+\special{pa 1030 1196}%
+\special{pa 1035 1194}%
+\special{pa 1040 1192}%
+\special{pa 1045 1190}%
+\special{pa 1050 1188}%
+\special{pa 1055 1185}%
+\special{pa 1060 1182}%
+\special{pa 1065 1179}%
+\special{pa 1070 1176}%
+\special{pa 1075 1172}%
+\special{pa 1080 1168}%
+\special{pa 1085 1164}%
+\special{pa 1090 1160}%
+\special{pa 1095 1155}%
+\special{pa 1100 1150}%
+\special{pa 1105 1145}%
+\special{pa 1110 1140}%
+\special{pa 1115 1134}%
+\special{pa 1120 1128}%
+\special{pa 1125 1122}%
+\special{pa 1130 1116}%
+\special{pa 1135 1109}%
+\special{pa 1140 1102}%
+\special{pa 1145 1095}%
+\special{pa 1150 1088}%
+\special{pa 1155 1080}%
+\special{pa 1160 1072}%
+\special{pa 1165 1064}%
+\special{pa 1170 1056}%
+\special{pa 1175 1047}%
+\special{pa 1180 1038}%
+\special{pa 1185 1029}%
+\special{pa 1190 1020}%
+\special{pa 1195 1010}%
+\special{pa 1200 1000}%
+\special{pa 1205 990}%
+\special{pa 1210 980}%
+\special{pa 1215 969}%
+\special{pa 1220 958}%
+\special{pa 1225 947}%
+\special{pa 1230 936}%
+\special{pa 1235 924}%
+\special{pa 1240 912}%
+\special{pa 1245 900}%
+\special{pa 1250 888}%
+\special{pa 1255 875}%
+\special{pa 1260 862}%
+\special{pa 1265 849}%
+\special{pa 1270 836}%
+\special{pa 1275 822}%
+\special{pa 1280 808}%
+\special{pa 1285 794}%
+\special{pa 1290 779}%
+\special{pa 1295 765}%
+\special{pa 1300 750}%
+\special{pa 1305 735}%
+\special{pa 1310 720}%
+\special{pa 1315 704}%
+\special{pa 1320 688}%
+\special{pa 1325 672}%
+\special{pa 1330 656}%
+\special{pa 1335 639}%
+\special{pa 1340 622}%
+\special{pa 1345 605}%
+\special{pa 1350 588}%
+\special{pa 1355 570}%
+\special{pa 1360 552}%
+\special{pa 1365 534}%
+\special{pa 1370 516}%
+\special{pa 1375 497}%
+\special{pa 1380 478}%
+\special{pa 1385 459}%
+\special{pa 1390 440}%
+\special{pa 1395 420}%
+\special{pa 1400 400}%
+\special{pa 1400 400}%
+\special{ip}%
+\fi
+% FUNC 2 0 3 0
+% 9 600 800 3400 2800 2000 2400 2200 2400 2000 2200 3000 800 3400 2800 0 5 0 0
+% (x-5)^2+4
+\special{pn 8}%
+\if0
+\special{pa 2600 400}%
+\special{pa 2600 400}%
+\special{pa 2605 420}%
+\special{pa 2610 440}%
+\special{pa 2615 459}%
+\special{pa 2620 478}%
+\special{pa 2625 497}%
+\special{pa 2630 516}%
+\special{pa 2635 534}%
+\special{pa 2640 552}%
+\special{pa 2645 570}%
+\special{pa 2650 588}%
+\special{pa 2655 605}%
+\special{pa 2660 622}%
+\special{pa 2665 639}%
+\special{pa 2670 656}%
+\special{pa 2675 672}%
+\special{pa 2680 688}%
+\special{pa 2685 704}%
+\special{pa 2690 720}%
+\special{pa 2695 735}%
+\special{pa 2700 750}%
+\special{pa 2705 765}%
+\special{pa 2710 779}%
+\special{pa 2715 794}%
+\special{pa 2720 808}%
+\special{pa 2725 822}%
+\special{pa 2730 836}%
+\special{pa 2735 849}%
+\special{pa 2740 862}%
+\special{pa 2745 875}%
+\special{pa 2750 888}%
+\special{pa 2755 900}%
+\special{pa 2760 912}%
+\special{pa 2765 924}%
+\special{pa 2770 936}%
+\special{pa 2775 947}%
+\special{pa 2780 958}%
+\special{pa 2785 969}%
+\special{pa 2790 980}%
+\special{pa 2795 990}%
+\special{pa 2800 1000}%
+\special{pa 2805 1010}%
+\special{pa 2810 1020}%
+\special{pa 2815 1029}%
+\special{pa 2820 1038}%
+\special{pa 2825 1047}%
+\special{pa 2830 1056}%
+\special{pa 2835 1064}%
+\special{pa 2840 1072}%
+\special{pa 2845 1080}%
+\special{pa 2850 1088}%
+\special{pa 2855 1095}%
+\special{pa 2860 1102}%
+\special{pa 2865 1109}%
+\special{pa 2870 1116}%
+\special{pa 2875 1122}%
+\special{pa 2880 1128}%
+\special{pa 2885 1134}%
+\special{pa 2890 1140}%
+\special{pa 2895 1145}%
+\special{pa 2900 1150}%
+\special{pa 2905 1155}%
+\special{pa 2910 1160}%
+\special{pa 2915 1164}%
+\special{pa 2920 1168}%
+\special{pa 2925 1172}%
+\special{pa 2930 1176}%
+\special{pa 2935 1179}%
+\special{pa 2940 1182}%
+\special{pa 2945 1185}%
+\special{pa 2950 1188}%
+\special{pa 2955 1190}%
+\special{pa 2960 1192}%
+\special{pa 2965 1194}%
+\special{pa 2970 1196}%
+\special{pa 2975 1197}%
+\special{pa 2980 1198}%
+\special{pa 2985 1199}%
+\special{pa 2990 1200}%
+\special{pa 2995 1200}%
+\special{ip}%
+\fi
+\special{pa 3000 1200}%
+\special{pa 3005 1200}%
+\special{pa 3010 1200}%
+\special{pa 3015 1199}%
+\special{pa 3020 1198}%
+\special{pa 3025 1197}%
+\special{pa 3030 1196}%
+\special{pa 3035 1194}%
+\special{pa 3040 1192}%
+\special{pa 3045 1190}%
+\special{pa 3050 1188}%
+\special{pa 3055 1185}%
+\special{pa 3060 1182}%
+\special{pa 3065 1179}%
+\special{pa 3070 1176}%
+\special{pa 3075 1172}%
+\special{pa 3080 1168}%
+\special{pa 3085 1164}%
+\special{pa 3090 1160}%
+\special{pa 3095 1155}%
+\special{pa 3100 1150}%
+\special{pa 3105 1145}%
+\special{pa 3110 1140}%
+\special{pa 3115 1134}%
+\special{pa 3120 1128}%
+\special{pa 3125 1122}%
+\special{pa 3130 1116}%
+\special{pa 3135 1109}%
+\special{pa 3140 1102}%
+\special{pa 3145 1095}%
+\special{pa 3150 1088}%
+\special{pa 3155 1080}%
+\special{pa 3160 1072}%
+\special{pa 3165 1064}%
+\special{pa 3170 1056}%
+\special{pa 3175 1047}%
+\special{pa 3180 1038}%
+\special{pa 3185 1029}%
+\special{pa 3190 1020}%
+\special{pa 3195 1010}%
+\special{pa 3200 1000}%
+\special{pa 3205 990}%
+\special{pa 3210 980}%
+\special{pa 3215 969}%
+\special{pa 3220 958}%
+\special{pa 3225 947}%
+\special{pa 3230 935}%
+\special{pa 3235 924}%
+\special{pa 3240 912}%
+\special{pa 3245 900}%
+\special{pa 3250 888}%
+\special{pa 3255 875}%
+\special{pa 3260 862}%
+\special{pa 3265 849}%
+\special{pa 3270 836}%
+\special{pa 3275 822}%
+\special{pa 3280 808}%
+\special{pa 3285 794}%
+\special{pa 3290 779}%
+\special{pa 3295 765}%
+\special{pa 3300 750}%
+\special{pa 3305 735}%
+\special{pa 3310 720}%
+\special{pa 3315 704}%
+\special{pa 3320 688}%
+\special{pa 3325 672}%
+\special{pa 3330 655}%
+\special{pa 3335 639}%
+\special{pa 3340 622}%
+\special{pa 3345 605}%
+\special{pa 3350 588}%
+\special{pa 3355 570}%
+\special{pa 3360 552}%
+\special{pa 3365 534}%
+\special{pa 3370 516}%
+\special{pa 3375 497}%
+\special{pa 3380 478}%
+\special{pa 3385 459}%
+\special{pa 3390 440}%
+\special{pa 3395 420}%
+\special{pa 3400 400}%
+\special{sp}%
+% FUNC 2 0 3 0
+% 9 600 800 3400 2800 2000 2400 2200 2400 2000 2200 1000 800 3000 2800 0 5 0 0
+% 3-3/(0.01x^4+1)+0.025x^2
+\special{pn 8}%
+\if0
+\special{pa 600 1179}%
+\special{pa 605 1181}%
+\special{pa 610 1183}%
+\special{pa 615 1185}%
+\special{pa 620 1187}%
+\special{pa 625 1189}%
+\special{pa 630 1191}%
+\special{pa 635 1194}%
+\special{pa 640 1196}%
+\special{pa 645 1198}%
+\special{pa 650 1200}%
+\special{pa 655 1202}%
+\special{pa 660 1204}%
+\special{pa 665 1206}%
+\special{pa 670 1208}%
+\special{pa 675 1210}%
+\special{pa 680 1212}%
+\special{pa 685 1214}%
+\special{pa 690 1216}%
+\special{pa 695 1218}%
+\special{pa 700 1221}%
+\special{pa 705 1223}%
+\special{pa 710 1225}%
+\special{pa 715 1227}%
+\special{pa 720 1229}%
+\special{pa 725 1231}%
+\special{pa 730 1233}%
+\special{pa 735 1235}%
+\special{pa 740 1237}%
+\special{pa 745 1239}%
+\special{pa 750 1242}%
+\special{pa 755 1244}%
+\special{pa 760 1246}%
+\special{pa 765 1248}%
+\special{pa 770 1250}%
+\special{pa 775 1252}%
+\special{pa 780 1254}%
+\special{pa 785 1257}%
+\special{pa 790 1259}%
+\special{pa 795 1261}%
+\special{pa 800 1263}%
+\special{pa 805 1265}%
+\special{pa 810 1267}%
+\special{pa 815 1270}%
+\special{pa 820 1272}%
+\special{pa 825 1274}%
+\special{pa 830 1276}%
+\special{pa 835 1278}%
+\special{pa 840 1281}%
+\special{pa 845 1283}%
+\special{pa 850 1285}%
+\special{pa 855 1287}%
+\special{pa 860 1289}%
+\special{pa 865 1292}%
+\special{pa 870 1294}%
+\special{pa 875 1296}%
+\special{pa 880 1299}%
+\special{pa 885 1301}%
+\special{pa 890 1303}%
+\special{pa 895 1306}%
+\special{pa 900 1308}%
+\special{pa 905 1310}%
+\special{pa 910 1313}%
+\special{pa 915 1315}%
+\special{pa 920 1317}%
+\special{pa 925 1320}%
+\special{pa 930 1322}%
+\special{pa 935 1325}%
+\special{pa 940 1327}%
+\special{pa 945 1330}%
+\special{pa 950 1332}%
+\special{pa 955 1334}%
+\special{pa 960 1337}%
+\special{pa 965 1340}%
+\special{pa 970 1342}%
+\special{pa 975 1345}%
+\special{pa 980 1347}%
+\special{pa 985 1350}%
+\special{pa 990 1352}%
+\special{pa 995 1355}%
+\special{ip}%
+\fi
+\special{pa 1000 1358}%
+\special{pa 1005 1360}%
+\special{pa 1010 1363}%
+\special{pa 1015 1366}%
+\special{pa 1020 1369}%
+\special{pa 1025 1371}%
+\special{pa 1030 1374}%
+\special{pa 1035 1377}%
+\special{pa 1040 1380}%
+\special{pa 1045 1383}%
+\special{pa 1050 1386}%
+\special{pa 1055 1389}%
+\special{pa 1060 1392}%
+\special{pa 1065 1395}%
+\special{pa 1070 1398}%
+\special{pa 1075 1401}%
+\special{pa 1080 1404}%
+\special{pa 1085 1407}%
+\special{pa 1090 1410}%
+\special{pa 1095 1413}%
+\special{pa 1100 1416}%
+\special{pa 1105 1420}%
+\special{pa 1110 1423}%
+\special{pa 1115 1426}%
+\special{pa 1120 1430}%
+\special{pa 1125 1433}%
+\special{pa 1130 1436}%
+\special{pa 1135 1440}%
+\special{pa 1140 1443}%
+\special{pa 1145 1447}%
+\special{pa 1150 1450}%
+\special{pa 1155 1454}%
+\special{pa 1160 1458}%
+\special{pa 1165 1461}%
+\special{pa 1170 1465}%
+\special{pa 1175 1469}%
+\special{pa 1180 1473}%
+\special{pa 1185 1477}%
+\special{pa 1190 1481}%
+\special{pa 1195 1485}%
+\special{pa 1200 1489}%
+\special{pa 1205 1493}%
+\special{pa 1210 1497}%
+\special{pa 1215 1501}%
+\special{pa 1220 1505}%
+\special{pa 1225 1509}%
+\special{pa 1230 1514}%
+\special{pa 1235 1518}%
+\special{pa 1240 1522}%
+\special{pa 1245 1527}%
+\special{pa 1250 1531}%
+\special{pa 1255 1536}%
+\special{pa 1260 1540}%
+\special{pa 1265 1545}%
+\special{pa 1270 1550}%
+\special{pa 1275 1554}%
+\special{pa 1280 1559}%
+\special{pa 1285 1564}%
+\special{pa 1290 1569}%
+\special{pa 1295 1574}%
+\special{pa 1300 1579}%
+\special{pa 1305 1584}%
+\special{pa 1310 1589}%
+\special{pa 1315 1594}%
+\special{pa 1320 1599}%
+\special{pa 1325 1604}%
+\special{pa 1330 1609}%
+\special{pa 1335 1615}%
+\special{pa 1340 1620}%
+\special{pa 1345 1625}%
+\special{pa 1350 1631}%
+\special{pa 1355 1636}%
+\special{pa 1360 1642}%
+\special{pa 1365 1647}%
+\special{pa 1370 1653}%
+\special{pa 1375 1658}%
+\special{pa 1380 1664}%
+\special{pa 1385 1669}%
+\special{pa 1390 1675}%
+\special{pa 1395 1681}%
+\special{pa 1400 1686}%
+\special{pa 1405 1692}%
+\special{pa 1410 1698}%
+\special{pa 1415 1704}%
+\special{pa 1420 1709}%
+\special{pa 1425 1715}%
+\special{pa 1430 1721}%
+\special{pa 1435 1727}%
+\special{pa 1440 1732}%
+\special{pa 1445 1738}%
+\special{pa 1450 1744}%
+\special{pa 1455 1750}%
+\special{pa 1460 1755}%
+\special{pa 1465 1761}%
+\special{pa 1470 1767}%
+\special{pa 1475 1772}%
+\special{pa 1480 1778}%
+\special{pa 1485 1784}%
+\special{pa 1490 1789}%
+\special{sp}%
+\special{pa 1490 1789}%
+\special{pa 1495 1795}%
+\special{pa 1500 1800}%
+\special{pa 1505 1806}%
+\special{pa 1510 1811}%
+\special{pa 1515 1816}%
+\special{pa 1520 1822}%
+\special{pa 1525 1827}%
+\special{pa 1530 1832}%
+\special{pa 1535 1837}%
+\special{pa 1540 1842}%
+\special{pa 1545 1847}%
+\special{pa 1550 1852}%
+\special{pa 1555 1857}%
+\special{pa 1560 1862}%
+\special{pa 1565 1867}%
+\special{pa 1570 1871}%
+\special{pa 1575 1876}%
+\special{pa 1580 1880}%
+\special{pa 1585 1885}%
+\special{pa 1590 1889}%
+\special{pa 1595 1893}%
+\special{pa 1600 1897}%
+\special{pa 1605 1901}%
+\special{pa 1610 1905}%
+\special{pa 1615 1909}%
+\special{pa 1620 1913}%
+\special{pa 1625 1916}%
+\special{pa 1630 1920}%
+\special{pa 1635 1923}%
+\special{pa 1640 1927}%
+\special{pa 1645 1930}%
+\special{pa 1650 1933}%
+\special{pa 1655 1936}%
+\special{pa 1660 1939}%
+\special{pa 1665 1942}%
+\special{pa 1670 1945}%
+\special{pa 1675 1948}%
+\special{pa 1680 1950}%
+\special{pa 1685 1953}%
+\special{pa 1690 1955}%
+\special{pa 1695 1958}%
+\special{pa 1700 1960}%
+\special{pa 1705 1962}%
+\special{pa 1710 1964}%
+\special{pa 1715 1966}%
+\special{pa 1720 1968}%
+\special{pa 1725 1970}%
+\special{pa 1730 1972}%
+\special{pa 1735 1973}%
+\special{pa 1740 1975}%
+\special{pa 1745 1976}%
+\special{pa 1750 1978}%
+\special{pa 1755 1979}%
+\special{pa 1760 1981}%
+\special{pa 1765 1982}%
+\special{pa 1770 1983}%
+\special{pa 1775 1984}%
+\special{pa 1780 1985}%
+\special{pa 1785 1986}%
+\special{pa 1790 1987}%
+\special{pa 1795 1988}%
+\special{pa 1800 1989}%
+\special{pa 1805 1990}%
+\special{pa 1810 1991}%
+\special{pa 1815 1991}%
+\special{pa 1820 1992}%
+\special{pa 1825 1993}%
+\special{pa 1830 1993}%
+\special{pa 1835 1994}%
+\special{pa 1840 1994}%
+\special{pa 1845 1995}%
+\special{pa 1850 1995}%
+\special{pa 1855 1996}%
+\special{pa 1860 1996}%
+\special{pa 1865 1996}%
+\special{pa 1870 1997}%
+\special{pa 1875 1997}%
+\special{pa 1880 1997}%
+\special{pa 1885 1998}%
+\special{pa 1890 1998}%
+\special{pa 1895 1998}%
+\special{pa 1900 1998}%
+\special{pa 1905 1999}%
+\special{pa 1910 1999}%
+\special{pa 1915 1999}%
+\special{pa 1920 1999}%
+\special{pa 1925 1999}%
+\special{pa 1930 1999}%
+\special{pa 1935 1999}%
+\special{pa 1940 2000}%
+\special{pa 1945 2000}%
+\special{pa 1950 2000}%
+\special{pa 1955 2000}%
+\special{pa 1960 2000}%
+\special{pa 1965 2000}%
+\special{pa 1970 2000}%
+\special{pa 1975 2000}%
+\special{pa 1980 2000}%
+\special{sp}%
+\special{pa 1980 2000}%
+\special{pa 1985 2000}%
+\special{pa 1990 2000}%
+\special{pa 1995 2000}%
+\special{pa 2000 2000}%
+\special{pa 2005 2000}%
+\special{pa 2010 2000}%
+\special{pa 2015 2000}%
+\special{pa 2020 2000}%
+\special{pa 2025 2000}%
+\special{pa 2030 2000}%
+\special{pa 2035 2000}%
+\special{pa 2040 2000}%
+\special{pa 2045 2000}%
+\special{pa 2050 2000}%
+\special{pa 2055 2000}%
+\special{pa 2060 2000}%
+\special{pa 2065 1999}%
+\special{pa 2070 1999}%
+\special{pa 2075 1999}%
+\special{pa 2080 1999}%
+\special{pa 2085 1999}%
+\special{pa 2090 1999}%
+\special{pa 2095 1999}%
+\special{pa 2100 1998}%
+\special{pa 2105 1998}%
+\special{pa 2110 1998}%
+\special{pa 2115 1998}%
+\special{pa 2120 1997}%
+\special{pa 2125 1997}%
+\special{pa 2130 1997}%
+\special{pa 2135 1996}%
+\special{pa 2140 1996}%
+\special{pa 2145 1996}%
+\special{pa 2150 1995}%
+\special{pa 2155 1995}%
+\special{pa 2160 1994}%
+\special{pa 2165 1994}%
+\special{pa 2170 1993}%
+\special{pa 2175 1993}%
+\special{pa 2180 1992}%
+\special{pa 2185 1991}%
+\special{pa 2190 1991}%
+\special{pa 2195 1990}%
+\special{pa 2200 1989}%
+\special{pa 2205 1988}%
+\special{pa 2210 1987}%
+\special{pa 2215 1986}%
+\special{pa 2220 1985}%
+\special{pa 2225 1984}%
+\special{pa 2230 1983}%
+\special{pa 2235 1982}%
+\special{pa 2240 1981}%
+\special{pa 2245 1979}%
+\special{pa 2250 1978}%
+\special{pa 2255 1976}%
+\special{pa 2260 1975}%
+\special{pa 2265 1973}%
+\special{pa 2270 1972}%
+\special{pa 2275 1970}%
+\special{pa 2280 1968}%
+\special{pa 2285 1966}%
+\special{pa 2290 1964}%
+\special{pa 2295 1962}%
+\special{pa 2300 1960}%
+\special{pa 2305 1958}%
+\special{pa 2310 1955}%
+\special{pa 2315 1953}%
+\special{pa 2320 1950}%
+\special{pa 2325 1948}%
+\special{pa 2330 1945}%
+\special{pa 2335 1942}%
+\special{pa 2340 1939}%
+\special{pa 2345 1936}%
+\special{pa 2350 1933}%
+\special{pa 2355 1930}%
+\special{pa 2360 1927}%
+\special{pa 2365 1923}%
+\special{pa 2370 1920}%
+\special{pa 2375 1916}%
+\special{pa 2380 1913}%
+\special{pa 2385 1909}%
+\special{pa 2390 1905}%
+\special{pa 2395 1901}%
+\special{pa 2400 1897}%
+\special{pa 2405 1893}%
+\special{pa 2410 1889}%
+\special{pa 2415 1885}%
+\special{pa 2420 1880}%
+\special{pa 2425 1876}%
+\special{pa 2430 1871}%
+\special{pa 2435 1867}%
+\special{pa 2440 1862}%
+\special{pa 2445 1857}%
+\special{pa 2450 1852}%
+\special{pa 2455 1847}%
+\special{pa 2460 1842}%
+\special{pa 2465 1837}%
+\special{pa 2470 1832}%
+\special{sp}%
+\special{pa 2470 1832}%
+\special{pa 2475 1827}%
+\special{pa 2480 1822}%
+\special{pa 2485 1816}%
+\special{pa 2490 1811}%
+\special{pa 2495 1806}%
+\special{pa 2500 1800}%
+\special{pa 2505 1795}%
+\special{pa 2510 1789}%
+\special{pa 2515 1784}%
+\special{pa 2520 1778}%
+\special{pa 2525 1772}%
+\special{pa 2530 1767}%
+\special{pa 2535 1761}%
+\special{pa 2540 1755}%
+\special{pa 2545 1750}%
+\special{pa 2550 1744}%
+\special{pa 2555 1738}%
+\special{pa 2560 1732}%
+\special{pa 2565 1727}%
+\special{pa 2570 1721}%
+\special{pa 2575 1715}%
+\special{pa 2580 1709}%
+\special{pa 2585 1704}%
+\special{pa 2590 1698}%
+\special{pa 2595 1692}%
+\special{pa 2600 1686}%
+\special{pa 2605 1681}%
+\special{pa 2610 1675}%
+\special{pa 2615 1669}%
+\special{pa 2620 1664}%
+\special{pa 2625 1658}%
+\special{pa 2630 1653}%
+\special{pa 2635 1647}%
+\special{pa 2640 1642}%
+\special{pa 2645 1636}%
+\special{pa 2650 1631}%
+\special{pa 2655 1625}%
+\special{pa 2660 1620}%
+\special{pa 2665 1615}%
+\special{pa 2670 1609}%
+\special{pa 2675 1604}%
+\special{pa 2680 1599}%
+\special{pa 2685 1594}%
+\special{pa 2690 1589}%
+\special{pa 2695 1584}%
+\special{pa 2700 1579}%
+\special{pa 2705 1574}%
+\special{pa 2710 1569}%
+\special{pa 2715 1564}%
+\special{pa 2720 1559}%
+\special{pa 2725 1554}%
+\special{pa 2730 1550}%
+\special{pa 2735 1545}%
+\special{pa 2740 1540}%
+\special{pa 2745 1536}%
+\special{pa 2750 1531}%
+\special{pa 2755 1527}%
+\special{pa 2760 1522}%
+\special{pa 2765 1518}%
+\special{pa 2770 1514}%
+\special{pa 2775 1509}%
+\special{pa 2780 1505}%
+\special{pa 2785 1501}%
+\special{pa 2790 1497}%
+\special{pa 2795 1493}%
+\special{pa 2800 1489}%
+\special{pa 2805 1485}%
+\special{pa 2810 1481}%
+\special{pa 2815 1477}%
+\special{pa 2820 1473}%
+\special{pa 2825 1469}%
+\special{pa 2830 1465}%
+\special{pa 2835 1461}%
+\special{pa 2840 1458}%
+\special{pa 2845 1454}%
+\special{pa 2850 1450}%
+\special{pa 2855 1447}%
+\special{pa 2860 1443}%
+\special{pa 2865 1440}%
+\special{pa 2870 1436}%
+\special{pa 2875 1433}%
+\special{pa 2880 1430}%
+\special{pa 2885 1426}%
+\special{pa 2890 1423}%
+\special{pa 2895 1420}%
+\special{pa 2900 1416}%
+\special{pa 2905 1413}%
+\special{pa 2910 1410}%
+\special{pa 2915 1407}%
+\special{pa 2920 1404}%
+\special{pa 2925 1401}%
+\special{pa 2930 1398}%
+\special{pa 2935 1395}%
+\special{pa 2940 1392}%
+\special{pa 2945 1389}%
+\special{pa 2950 1386}%
+\special{pa 2955 1383}%
+\special{pa 2960 1380}%
+\special{sp}%
+\special{pa 2960 1380}%
+\special{pa 2965 1377}%
+\special{pa 2970 1374}%
+\special{pa 2975 1371}%
+\special{pa 2980 1369}%
+\special{pa 2985 1366}%
+\special{pa 2990 1363}%
+\special{pa 2995 1360}%
+\special{pa 3000 1358}%
+\special{sp}%
+\if0
+\special{pa 3000 1358}%
+\special{pa 3005 1355}%
+\special{pa 3010 1352}%
+\special{pa 3015 1350}%
+\special{pa 3020 1347}%
+\special{pa 3025 1345}%
+\special{pa 3030 1342}%
+\special{pa 3035 1340}%
+\special{pa 3040 1337}%
+\special{pa 3045 1334}%
+\special{pa 3050 1332}%
+\special{pa 3055 1330}%
+\special{pa 3060 1327}%
+\special{pa 3065 1325}%
+\special{pa 3070 1322}%
+\special{pa 3075 1320}%
+\special{pa 3080 1317}%
+\special{pa 3085 1315}%
+\special{pa 3090 1313}%
+\special{pa 3095 1310}%
+\special{pa 3100 1308}%
+\special{pa 3105 1306}%
+\special{pa 3110 1303}%
+\special{pa 3115 1301}%
+\special{pa 3120 1299}%
+\special{pa 3125 1296}%
+\special{pa 3130 1294}%
+\special{pa 3135 1292}%
+\special{pa 3140 1289}%
+\special{pa 3145 1287}%
+\special{pa 3150 1285}%
+\special{pa 3155 1283}%
+\special{pa 3160 1281}%
+\special{pa 3165 1278}%
+\special{pa 3170 1276}%
+\special{pa 3175 1274}%
+\special{pa 3180 1272}%
+\special{pa 3185 1270}%
+\special{pa 3190 1267}%
+\special{pa 3195 1265}%
+\special{pa 3200 1263}%
+\special{pa 3205 1261}%
+\special{pa 3210 1259}%
+\special{pa 3215 1257}%
+\special{pa 3220 1254}%
+\special{pa 3225 1252}%
+\special{pa 3230 1250}%
+\special{pa 3235 1248}%
+\special{pa 3240 1246}%
+\special{pa 3245 1244}%
+\special{pa 3250 1242}%
+\special{pa 3255 1239}%
+\special{pa 3260 1237}%
+\special{pa 3265 1235}%
+\special{pa 3270 1233}%
+\special{pa 3275 1231}%
+\special{pa 3280 1229}%
+\special{pa 3285 1227}%
+\special{pa 3290 1225}%
+\special{pa 3295 1223}%
+\special{pa 3300 1221}%
+\special{pa 3305 1218}%
+\special{pa 3310 1216}%
+\special{pa 3315 1214}%
+\special{pa 3320 1212}%
+\special{pa 3325 1210}%
+\special{pa 3330 1208}%
+\special{pa 3335 1206}%
+\special{pa 3340 1204}%
+\special{pa 3345 1202}%
+\special{pa 3350 1200}%
+\special{pa 3355 1198}%
+\special{pa 3360 1196}%
+\special{pa 3365 1194}%
+\special{pa 3370 1191}%
+\special{pa 3375 1189}%
+\special{pa 3380 1187}%
+\special{pa 3385 1185}%
+\special{pa 3390 1183}%
+\special{pa 3395 1181}%
+\special{pa 3400 1179}%
+\special{ip}%
+\fi
+% LINE 2 2 3 0
+% 6 3000 1000 3000 2400 3210 1720 810 1720 1000 1000 1000 2400
+% 
+\special{pn 8}%
+\special{pa 3000 600}%
+\special{pa 3000 2000}%
+\special{dt 0.045}%
+\special{pa 3000 2000}%
+\special{pa 3000 1999}%
+\special{dt 0.045}%
+\special{pa 3210 1320}%
+\special{pa 810 1320}%
+\special{dt 0.045}%
+\special{pa 810 1320}%
+\special{pa 811 1320}%
+\special{dt 0.045}%
+\special{pa 1000 600}%
+\special{pa 1000 2000}%
+\special{dt 0.045}%
+\special{pa 1000 2000}%
+\special{pa 1000 1999}%
+\special{dt 0.045}%
+% STR 2 0 3 0
+% 3 1000 2330 1000 2430 4 0
+% $-\pi/a$
+\put(10.0000,-20.3000){\makebox(0,0)[rt]{$-\pi/a$}}%
+% STR 2 0 3 0
+% 3 3000 2330 3000 2430 4 0
+% $\pi/a$
+\put(30.0000,-20.3000){\makebox(0,0)[rt]{$\pi/a$}}%
+% VECTOR 2 0 3 0
+% 6 3400 1660 3400 1750 3400 1750 3400 1600 3400 1600 3400 1600
+% 
+\special{pn 8}%
+\special{pa 3400 1260}%
+\special{pa 3400 1350}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3400 1350}%
+\special{pa 3420 1283}%
+\special{pa 3400 1297}%
+\special{pa 3380 1283}%
+\special{pa 3400 1350}%
+\special{fp}%
+\special{pa 3400 1350}%
+\special{pa 3400 1200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 3400 1200}%
+\special{pa 3380 1267}%
+\special{pa 3400 1253}%
+\special{pa 3420 1267}%
+\special{pa 3400 1200}%
+\special{fp}%
+\special{pa 3400 1200}%
+\special{pa 3400 1200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 3480 1590 3480 1690 2 0
+% $V_0$
+\put(34.8000,-12.9000){\makebox(0,0)[lb]{$V_0$}}%
+\end{picture}%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\fi
+
+\clearpage
+\SubAnswer
+\begin{subsubanswers}
+\SubSubAnswer
+エネルギースペクトルの基本的な形は周期境界条件によって量子化された波数ベクトル($\simeq $運動量)の関数である。
+
+\SubSubAnswer
+ポテンシャルエネルギーの振幅がエネルギーに比べ十分小さいときは電子は自由電子の様に振舞い、エネルギースペクトルは波数ベクトルの2次関数(連続スペクトル)である。ポテンシャルの影響が大きくなってくるとブリルアン・ゾーンの境界でエネルギーギャップが生じ、帯状のエネルギースペクトルとなる。ポテンシャルがエネルギーに比べ十分大きいと、電子は調和振動を行い、スペクトルは離散的になる。
+
+\SubSubAnswer
+0[K]において価電子がいくつかのバンドを完全に満たし、他のバンドを空にしていると絶縁体又は半導体。部分的に満たされているバンドがあると金属となる。半導体は有限温度で電子が伝導バンドへ励起される。\\
+
+
+%%%%%%%%-----------バンドの図----------------
+
+\unitlength 0.1in
+\begin{picture}(48.00,30.00)(6.00,-32.30)
+% BOX 2 0 3 0
+% 2 1200 1000 1800 1400
+% 
+\special{pn 8}%
+\special{pa 1200 600}%
+\special{pa 1800 600}%
+\special{pa 1800 1000}%
+\special{pa 1200 1000}%
+\special{pa 1200 600}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 1200 1800 1800 2200
+% 
+\special{pn 8}%
+\special{pa 1200 1400}%
+\special{pa 1800 1400}%
+\special{pa 1800 1800}%
+\special{pa 1200 1800}%
+\special{pa 1200 1400}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 1200 2600 1800 3000
+% 
+\special{pn 8}%
+\special{pa 1200 2200}%
+\special{pa 1800 2200}%
+\special{pa 1800 2600}%
+\special{pa 1200 2600}%
+\special{pa 1200 2200}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 1200 2000 1800 2200
+% 
+\special{pn 8}%
+\special{pa 1200 1600}%
+\special{pa 1800 1600}%
+\special{pa 1800 1800}%
+\special{pa 1200 1800}%
+\special{pa 1200 1600}%
+\special{fp}%
+% LINE 2 0 3 0
+% 26 1540 2000 1340 2200 1480 2000 1280 2200 1420 2000 1220 2200 1360 2000 1200 2160 1300 2000 1200 2100 1240 2000 1200 2040 1600 2000 1400 2200 1660 2000 1460 2200 1720 2000 1520 2200 1780 2000 1580 2200 1800 2040 1640 2200 1800 2100 1700 2200 1800 2160 1760 2200
+% 
+\special{pn 8}%
+\special{pa 1540 1600}%
+\special{pa 1340 1800}%
+\special{fp}%
+\special{pa 1480 1600}%
+\special{pa 1280 1800}%
+\special{fp}%
+\special{pa 1420 1600}%
+\special{pa 1220 1800}%
+\special{fp}%
+\special{pa 1360 1600}%
+\special{pa 1200 1760}%
+\special{fp}%
+\special{pa 1300 1600}%
+\special{pa 1200 1700}%
+\special{fp}%
+\special{pa 1240 1600}%
+\special{pa 1200 1640}%
+\special{fp}%
+\special{pa 1600 1600}%
+\special{pa 1400 1800}%
+\special{fp}%
+\special{pa 1660 1600}%
+\special{pa 1460 1800}%
+\special{fp}%
+\special{pa 1720 1600}%
+\special{pa 1520 1800}%
+\special{fp}%
+\special{pa 1780 1600}%
+\special{pa 1580 1800}%
+\special{fp}%
+\special{pa 1800 1640}%
+\special{pa 1640 1800}%
+\special{fp}%
+\special{pa 1800 1700}%
+\special{pa 1700 1800}%
+\special{fp}%
+\special{pa 1800 1760}%
+\special{pa 1760 1800}%
+\special{fp}%
+% LINE 3 0 3 0
+% 32 1780 2600 1380 3000 1720 2600 1320 3000 1660 2600 1260 3000 1600 2600 1210 2990 1540 2600 1200 2940 1480 2600 1200 2880 1420 2600 1200 2820 1360 2600 1200 2760 1300 2600 1200 2700 1240 2600 1200 2640 1800 2640 1440 3000 1800 2700 1500 3000 1800 2760 1560 3000 1800 2820 1620 3000 1800 2880 1680 3000 1800 2940 1740 3000
+% 
+\special{pn 4}%
+\special{pa 1780 2200}%
+\special{pa 1380 2600}%
+\special{fp}%
+\special{pa 1720 2200}%
+\special{pa 1320 2600}%
+\special{fp}%
+\special{pa 1660 2200}%
+\special{pa 1260 2600}%
+\special{fp}%
+\special{pa 1600 2200}%
+\special{pa 1210 2590}%
+\special{fp}%
+\special{pa 1540 2200}%
+\special{pa 1200 2540}%
+\special{fp}%
+\special{pa 1480 2200}%
+\special{pa 1200 2480}%
+\special{fp}%
+\special{pa 1420 2200}%
+\special{pa 1200 2420}%
+\special{fp}%
+\special{pa 1360 2200}%
+\special{pa 1200 2360}%
+\special{fp}%
+\special{pa 1300 2200}%
+\special{pa 1200 2300}%
+\special{fp}%
+\special{pa 1240 2200}%
+\special{pa 1200 2240}%
+\special{fp}%
+\special{pa 1800 2240}%
+\special{pa 1440 2600}%
+\special{fp}%
+\special{pa 1800 2300}%
+\special{pa 1500 2600}%
+\special{fp}%
+\special{pa 1800 2360}%
+\special{pa 1560 2600}%
+\special{fp}%
+\special{pa 1800 2420}%
+\special{pa 1620 2600}%
+\special{fp}%
+\special{pa 1800 2480}%
+\special{pa 1680 2600}%
+\special{fp}%
+\special{pa 1800 2540}%
+\special{pa 1740 2600}%
+\special{fp}%
+% LINE 2 2 3 0
+% 6 1800 2200 2200 2200 2200 2600 1800 2600 1800 3000 2200 3000
+% 
+\special{pn 8}%
+\special{pa 1800 1800}%
+\special{pa 2200 1800}%
+\special{dt 0.045}%
+\special{pa 2200 1800}%
+\special{pa 2199 1800}%
+\special{dt 0.045}%
+\special{pa 2200 2200}%
+\special{pa 1800 2200}%
+\special{dt 0.045}%
+\special{pa 1800 2200}%
+\special{pa 1801 2200}%
+\special{dt 0.045}%
+\special{pa 1800 2600}%
+\special{pa 2200 2600}%
+\special{dt 0.045}%
+\special{pa 2200 2600}%
+\special{pa 2199 2600}%
+\special{dt 0.045}%
+% VECTOR 2 0 3 0
+% 8 2000 2400 2000 2200 2000 2200 2000 2600 2000 2600 2000 3000 2000 2800 2000 2600
+% 
+\special{pn 8}%
+\special{pa 2000 2000}%
+\special{pa 2000 1800}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 1800}%
+\special{pa 1980 1867}%
+\special{pa 2000 1853}%
+\special{pa 2020 1867}%
+\special{pa 2000 1800}%
+\special{fp}%
+\special{pa 2000 1800}%
+\special{pa 2000 2200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 2200}%
+\special{pa 2020 2133}%
+\special{pa 2000 2147}%
+\special{pa 1980 2133}%
+\special{pa 2000 2200}%
+\special{fp}%
+\special{pa 2000 2200}%
+\special{pa 2000 2600}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 2600}%
+\special{pa 2020 2533}%
+\special{pa 2000 2547}%
+\special{pa 1980 2533}%
+\special{pa 2000 2600}%
+\special{fp}%
+\special{pa 2000 2400}%
+\special{pa 2000 2200}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 2000 2200}%
+\special{pa 1980 2267}%
+\special{pa 2000 2253}%
+\special{pa 2020 2267}%
+\special{pa 2000 2200}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 2200 2360 2200 2460 2 0
+% 禁止帯
+\put(22.0000,-20.6000){\makebox(0,0)[lb]{禁止帯}}%
+% STR 2 0 3 0
+% 3 2200 2770 2200 2870 2 0
+% 許容帯
+\put(22.0000,-24.7000){\makebox(0,0)[lb]{許容帯}}%
+% STR 2 0 3 0
+% 3 1200 3300 1200 3400 2 0
+% 金属(0[K])
+\put(12.0000,-30.0000){\makebox(0,0)[lb]{金属(0[K])}}%
+% BOX 2 0 3 0
+% 2 2800 1000 3400 1400
+% 
+\special{pn 8}%
+\special{pa 2800 600}%
+\special{pa 3400 600}%
+\special{pa 3400 1000}%
+\special{pa 2800 1000}%
+\special{pa 2800 600}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2800 1800 3400 2200
+% 
+\special{pn 8}%
+\special{pa 2800 1400}%
+\special{pa 3400 1400}%
+\special{pa 3400 1800}%
+\special{pa 2800 1800}%
+\special{pa 2800 1400}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 2800 2600 3400 3000
+% 
+\special{pn 8}%
+\special{pa 2800 2200}%
+\special{pa 3400 2200}%
+\special{pa 3400 2600}%
+\special{pa 2800 2600}%
+\special{pa 2800 2200}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 3800 1000 4400 1400
+% 
+\special{pn 8}%
+\special{pa 3800 600}%
+\special{pa 4400 600}%
+\special{pa 4400 1000}%
+\special{pa 3800 1000}%
+\special{pa 3800 600}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 3800 1800 4400 2200
+% 
+\special{pn 8}%
+\special{pa 3800 1400}%
+\special{pa 4400 1400}%
+\special{pa 4400 1800}%
+\special{pa 3800 1800}%
+\special{pa 3800 1400}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 3800 2600 4400 3000
+% 
+\special{pn 8}%
+\special{pa 3800 2200}%
+\special{pa 4400 2200}%
+\special{pa 4400 2600}%
+\special{pa 3800 2600}%
+\special{pa 3800 2200}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 4800 1000 5400 1400
+% 
+\special{pn 8}%
+\special{pa 4800 600}%
+\special{pa 5400 600}%
+\special{pa 5400 1000}%
+\special{pa 4800 1000}%
+\special{pa 4800 600}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 4800 1800 5400 2200
+% 
+\special{pn 8}%
+\special{pa 4800 1400}%
+\special{pa 5400 1400}%
+\special{pa 5400 1800}%
+\special{pa 4800 1800}%
+\special{pa 4800 1400}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 4800 2600 5400 3000
+% 
+\special{pn 8}%
+\special{pa 4800 2200}%
+\special{pa 5400 2200}%
+\special{pa 5400 2600}%
+\special{pa 4800 2600}%
+\special{pa 4800 2200}%
+\special{fp}%
+% LINE 3 0 3 0
+% 30 3400 1820 3020 2200 3360 1800 2960 2200 3300 1800 2900 2200 3240 1800 2840 2200 3180 1800 2800 2180 3120 1800 2800 2120 3060 1800 2800 2060 3000 1800 2800 2000 2940 1800 2800 1940 2880 1800 2800 1880 3400 1880 3080 2200 3400 1940 3140 2200 3400 2000 3200 2200 3400 2060 3260 2200 3400 2120 3320 2200
+% 
+\special{pn 4}%
+\special{pa 3400 1420}%
+\special{pa 3020 1800}%
+\special{fp}%
+\special{pa 3360 1400}%
+\special{pa 2960 1800}%
+\special{fp}%
+\special{pa 3300 1400}%
+\special{pa 2900 1800}%
+\special{fp}%
+\special{pa 3240 1400}%
+\special{pa 2840 1800}%
+\special{fp}%
+\special{pa 3180 1400}%
+\special{pa 2800 1780}%
+\special{fp}%
+\special{pa 3120 1400}%
+\special{pa 2800 1720}%
+\special{fp}%
+\special{pa 3060 1400}%
+\special{pa 2800 1660}%
+\special{fp}%
+\special{pa 3000 1400}%
+\special{pa 2800 1600}%
+\special{fp}%
+\special{pa 2940 1400}%
+\special{pa 2800 1540}%
+\special{fp}%
+\special{pa 2880 1400}%
+\special{pa 2800 1480}%
+\special{fp}%
+\special{pa 3400 1480}%
+\special{pa 3080 1800}%
+\special{fp}%
+\special{pa 3400 1540}%
+\special{pa 3140 1800}%
+\special{fp}%
+\special{pa 3400 1600}%
+\special{pa 3200 1800}%
+\special{fp}%
+\special{pa 3400 1660}%
+\special{pa 3260 1800}%
+\special{fp}%
+\special{pa 3400 1720}%
+\special{pa 3320 1800}%
+\special{fp}%
+% LINE 3 0 3 0
+% 32 3160 2600 2800 2960 3220 2600 2820 3000 3280 2600 2880 3000 3340 2600 2940 3000 3390 2610 3000 3000 3400 2660 3060 3000 3400 2720 3120 3000 3400 2780 3180 3000 3400 2840 3240 3000 3400 2900 3300 3000 3400 2960 3360 3000 3100 2600 2800 2900 3040 2600 2800 2840 2980 2600 2800 2780 2920 2600 2800 2720 2860 2600 2800 2660
+% 
+\special{pn 4}%
+\special{pa 3160 2200}%
+\special{pa 2800 2560}%
+\special{fp}%
+\special{pa 3220 2200}%
+\special{pa 2820 2600}%
+\special{fp}%
+\special{pa 3280 2200}%
+\special{pa 2880 2600}%
+\special{fp}%
+\special{pa 3340 2200}%
+\special{pa 2940 2600}%
+\special{fp}%
+\special{pa 3390 2210}%
+\special{pa 3000 2600}%
+\special{fp}%
+\special{pa 3400 2260}%
+\special{pa 3060 2600}%
+\special{fp}%
+\special{pa 3400 2320}%
+\special{pa 3120 2600}%
+\special{fp}%
+\special{pa 3400 2380}%
+\special{pa 3180 2600}%
+\special{fp}%
+\special{pa 3400 2440}%
+\special{pa 3240 2600}%
+\special{fp}%
+\special{pa 3400 2500}%
+\special{pa 3300 2600}%
+\special{fp}%
+\special{pa 3400 2560}%
+\special{pa 3360 2600}%
+\special{fp}%
+\special{pa 3100 2200}%
+\special{pa 2800 2500}%
+\special{fp}%
+\special{pa 3040 2200}%
+\special{pa 2800 2440}%
+\special{fp}%
+\special{pa 2980 2200}%
+\special{pa 2800 2380}%
+\special{fp}%
+\special{pa 2920 2200}%
+\special{pa 2800 2320}%
+\special{fp}%
+\special{pa 2860 2200}%
+\special{pa 2800 2260}%
+\special{fp}%
+% LINE 3 0 3 0
+% 30 4060 2600 3800 2860 4120 2600 3800 2920 4180 2600 3800 2980 4240 2600 3840 3000 4300 2600 3900 3000 4360 2600 3960 3000 4400 2620 4020 3000 4400 2680 4080 3000 4400 2740 4140 3000 4400 2800 4200 3000 4400 2860 4260 3000 4400 2920 4320 3000 4000 2600 3800 2800 3940 2600 3800 2740 3880 2600 3800 2680
+% 
+\special{pn 4}%
+\special{pa 4060 2200}%
+\special{pa 3800 2460}%
+\special{fp}%
+\special{pa 4120 2200}%
+\special{pa 3800 2520}%
+\special{fp}%
+\special{pa 4180 2200}%
+\special{pa 3800 2580}%
+\special{fp}%
+\special{pa 4240 2200}%
+\special{pa 3840 2600}%
+\special{fp}%
+\special{pa 4300 2200}%
+\special{pa 3900 2600}%
+\special{fp}%
+\special{pa 4360 2200}%
+\special{pa 3960 2600}%
+\special{fp}%
+\special{pa 4400 2220}%
+\special{pa 4020 2600}%
+\special{fp}%
+\special{pa 4400 2280}%
+\special{pa 4080 2600}%
+\special{fp}%
+\special{pa 4400 2340}%
+\special{pa 4140 2600}%
+\special{fp}%
+\special{pa 4400 2400}%
+\special{pa 4200 2600}%
+\special{fp}%
+\special{pa 4400 2460}%
+\special{pa 4260 2600}%
+\special{fp}%
+\special{pa 4400 2520}%
+\special{pa 4320 2600}%
+\special{fp}%
+\special{pa 4000 2200}%
+\special{pa 3800 2400}%
+\special{fp}%
+\special{pa 3940 2200}%
+\special{pa 3800 2340}%
+\special{fp}%
+\special{pa 3880 2200}%
+\special{pa 3800 2280}%
+\special{fp}%
+% LINE 3 0 3 0
+% 32 5260 2600 4860 3000 5200 2600 4810 2990 5140 2600 4800 2940 5080 2600 4800 2880 5020 2600 4800 2820 4960 2600 4800 2760 4900 2600 4800 2700 4840 2600 4800 2640 5320 2600 4920 3000 5380 2600 4980 3000 5400 2640 5040 3000 5400 2700 5100 3000 5400 2760 5160 3000 5400 2820 5220 3000 5400 2880 5280 3000 5400 2940 5340 3000
+% 
+\special{pn 4}%
+\special{pa 5260 2200}%
+\special{pa 4860 2600}%
+\special{fp}%
+\special{pa 5200 2200}%
+\special{pa 4810 2590}%
+\special{fp}%
+\special{pa 5140 2200}%
+\special{pa 4800 2540}%
+\special{fp}%
+\special{pa 5080 2200}%
+\special{pa 4800 2480}%
+\special{fp}%
+\special{pa 5020 2200}%
+\special{pa 4800 2420}%
+\special{fp}%
+\special{pa 4960 2200}%
+\special{pa 4800 2360}%
+\special{fp}%
+\special{pa 4900 2200}%
+\special{pa 4800 2300}%
+\special{fp}%
+\special{pa 4840 2200}%
+\special{pa 4800 2240}%
+\special{fp}%
+\special{pa 5320 2200}%
+\special{pa 4920 2600}%
+\special{fp}%
+\special{pa 5380 2200}%
+\special{pa 4980 2600}%
+\special{fp}%
+\special{pa 5400 2240}%
+\special{pa 5040 2600}%
+\special{fp}%
+\special{pa 5400 2300}%
+\special{pa 5100 2600}%
+\special{fp}%
+\special{pa 5400 2360}%
+\special{pa 5160 2600}%
+\special{fp}%
+\special{pa 5400 2420}%
+\special{pa 5220 2600}%
+\special{fp}%
+\special{pa 5400 2480}%
+\special{pa 5280 2600}%
+\special{fp}%
+\special{pa 5400 2540}%
+\special{pa 5340 2600}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 3800 2140 4400 2200
+% 
+\special{pn 8}%
+\special{pa 3800 1740}%
+\special{pa 4400 1740}%
+\special{pa 4400 1800}%
+\special{pa 3800 1800}%
+\special{pa 3800 1740}%
+\special{fp}%
+% LINE 3 0 3 0
+% 20 4160 2140 4100 2200 4100 2140 4040 2200 4040 2140 3980 2200 3980 2140 3920 2200 3920 2140 3860 2200 3860 2140 3810 2190 4220 2140 4160 2200 4280 2140 4220 2200 4340 2140 4280 2200 4390 2150 4340 2200
+% 
+\special{pn 4}%
+\special{pa 4160 1740}%
+\special{pa 4100 1800}%
+\special{fp}%
+\special{pa 4100 1740}%
+\special{pa 4040 1800}%
+\special{fp}%
+\special{pa 4040 1740}%
+\special{pa 3980 1800}%
+\special{fp}%
+\special{pa 3980 1740}%
+\special{pa 3920 1800}%
+\special{fp}%
+\special{pa 3920 1740}%
+\special{pa 3860 1800}%
+\special{fp}%
+\special{pa 3860 1740}%
+\special{pa 3810 1790}%
+\special{fp}%
+\special{pa 4220 1740}%
+\special{pa 4160 1800}%
+\special{fp}%
+\special{pa 4280 1740}%
+\special{pa 4220 1800}%
+\special{fp}%
+\special{pa 4340 1740}%
+\special{pa 4280 1800}%
+\special{fp}%
+\special{pa 4390 1750}%
+\special{pa 4340 1800}%
+\special{fp}%
+% BOX 2 0 3 0
+% 2 4800 1800 5400 1870
+% 
+\special{pn 8}%
+\special{pa 4800 1400}%
+\special{pa 5400 1400}%
+\special{pa 5400 1470}%
+\special{pa 4800 1470}%
+\special{pa 4800 1400}%
+\special{fp}%
+% LINE 3 0 3 0
+% 30 5390 1870 5060 2200 5330 1870 5000 2200 5270 1870 4940 2200 5210 1870 4880 2200 5150 1870 4820 2200 5090 1870 4800 2160 5030 1870 4800 2100 4970 1870 4800 2040 4910 1870 4800 1980 4850 1870 4800 1920 5400 1920 5120 2200 5400 1980 5180 2200 5400 2040 5240 2200 5400 2100 5300 2200 5400 2160 5360 2200
+% 
+\special{pn 4}%
+\special{pa 5390 1470}%
+\special{pa 5060 1800}%
+\special{fp}%
+\special{pa 5330 1470}%
+\special{pa 5000 1800}%
+\special{fp}%
+\special{pa 5270 1470}%
+\special{pa 4940 1800}%
+\special{fp}%
+\special{pa 5210 1470}%
+\special{pa 4880 1800}%
+\special{fp}%
+\special{pa 5150 1470}%
+\special{pa 4820 1800}%
+\special{fp}%
+\special{pa 5090 1470}%
+\special{pa 4800 1760}%
+\special{fp}%
+\special{pa 5030 1470}%
+\special{pa 4800 1700}%
+\special{fp}%
+\special{pa 4970 1470}%
+\special{pa 4800 1640}%
+\special{fp}%
+\special{pa 4910 1470}%
+\special{pa 4800 1580}%
+\special{fp}%
+\special{pa 4850 1470}%
+\special{pa 4800 1520}%
+\special{fp}%
+\special{pa 5400 1520}%
+\special{pa 5120 1800}%
+\special{fp}%
+\special{pa 5400 1580}%
+\special{pa 5180 1800}%
+\special{fp}%
+\special{pa 5400 1640}%
+\special{pa 5240 1800}%
+\special{fp}%
+\special{pa 5400 1700}%
+\special{pa 5300 1800}%
+\special{fp}%
+\special{pa 5400 1760}%
+\special{pa 5360 1800}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 2800 3300 2800 3400 2 0
+% 絶縁体
+\put(29.0000,-30.0000){\makebox(0,0)[lb]{絶縁体}}%
+% STR 2 0 3 0
+% 3 2800 3500 2800 3600 2 0
+% 半導体
+\put(29.0000,-32.0000){\makebox(0,0)[lb]{半導体}}%
+% STR 2 0 3 0
+% 3 2800 3700 2800 3800 2 0
+% (0[K])
+\put(29.2500,-34.0000){\makebox(0,0)[lb]{(0[K])}}%
+% STR 2 0 3 0
+% 3 3800 3300 3800 3400 2 0
+% 半導体
+\put(39.0000,-30.0000){\makebox(0,0)[lb]{半導体}}%
+% STR 2 0 3 0
+% 3 3800 3500 3800 3600 2 0
+% (有限温度)
+\put(38.0000,-32.0000){\makebox(0,0)[lb]{(有限温度)}}%
+% STR 2 0 3 0
+% 3 4800 3300 4800 3400 2 0
+% 半導体
+\put(49.0000,-30.0000){\makebox(0,0)[lb]{半導体}}%
+% STR 2 0 3 0
+% 3 4800 3500 4800 3600 2 0
+% (有限温度)
+\put(48.0000,-32.0000){\makebox(0,0)[lb]{(有限温度)}}%
+% VECTOR 2 0 3 0
+% 2 800 3200 800 800
+% 
+\special{pn 8}%
+\special{pa 800 2800}%
+\special{pa 800 400}%
+\special{fp}%
+\special{sh 1}%
+\special{pa 800 400}%
+\special{pa 780 467}%
+\special{pa 800 453}%
+\special{pa 820 467}%
+\special{pa 800 400}%
+\special{fp}%
+% STR 2 0 3 0
+% 3 600 700 600 800 2 0
+% エネルギー
+\put(6.0000,-4.0000){\makebox(0,0)[lb]{エネルギー}}%
+\end{picture}\\
+
+
+
+\end{subsubanswers}
+
+\end{subanswers}
+
+
+\end{answer}
+
+
+
+
+\end{document}
