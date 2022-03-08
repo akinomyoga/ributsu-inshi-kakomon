@@ -1,6 +1,8 @@
 all:
 extra:
-.PHONY: all extra
+clean:
+	rm -rf build
+.PHONY: all extra clean
 all: build/1992pankyo.pdf
 build/1992pankyo.pdf: 1992/1992engl.tex 1992/1992math.tex 1992/1992phys.tex 1992/1992engl.tex 1992/1992math.tex 1992/1992phys.tex 1992/1992math-1.eps 1992/1992math-2.eps 1992/1992math-3.eps 1992/1992math-4.eps 1992/1992phys.tex 1992/1992phys-1.eps 1992/1992phys-2.eps 1992/1992phys-3.eps 1992/1992phys-3-1.eps 1992/1992phys-4.eps 1992/1992phys-4-2.eps 1992/1992phys-5.eps 1992/1992phys-6.eps
 	./make.sh build 1992pankyo

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 function make_tex {
-  local doc="$1"
-  local tex="$2"
+  local doc=$1
+  local tex=$2
   source make.in
-  eval "local cov=(\"\${_${doc}_cov[@]}\")"
-  eval "local prb=(\"\${_${doc}_prb[@]}\")"
-  eval "local ans=(\"\${_${doc}_ans[@]}\")"
+  eval "local -a cov=(\"\${_${doc}_cov[@]}\")"
+  eval "local -a prb=(\"\${_${doc}_prb[@]}\")"
+  eval "local -a ans=(\"\${_${doc}_ans[@]}\")"
   eval "local title=\"\${_${doc}_title}\""
 
   {
@@ -62,8 +62,7 @@ function sub:build {
     link ../../underlinedtext.sty
     [[ -f ../../$year/$name.tex ]] ||
       make_tex "$name" "$name.tex"
-    platex -kanji=utf8 "$name.tex"
-    dvipdfmx "$name.dvi"
+    latexmk -pdfdvi -latex='platex -kanji=utf8' -e '$dvipdf = "dvipdfmx %O %S";' "$name.tex"
     mv "$name.pdf" ..
   )
 }
@@ -78,7 +77,10 @@ function sub:autogen {
   {
     echo 'all:'
     echo 'extra:'
-    echo '.PHONY: all extra'
+    printf '%s\n' \
+           'clean:' \
+           $'\trm -rf build'
+    echo '.PHONY: all extra clean'
     for y in {19,20}[0-9][0-9]; do
       source "$y/make.in"
       for doc in "${docs[@]}"; do
