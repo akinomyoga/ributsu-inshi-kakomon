@@ -73,6 +73,9 @@ build/1999senmon.pdf: 1999/1999phy1.tex 1999/1999phy2.tex 1999/1999phy3.tex 1999
 extra: build/1999pankyo2.pdf
 build/1999pankyo2.pdf: 1999/1999math.tex 1999/1999phys.tex 1999/1999math.tex 1999/1999phys.tex 1999/1999math-1.eps 1999/1999phys2-1.eps 1999/1999phys2-2.eps 1999/1999phys2-3.eps 1999/1999phys3-1.eps 1999/1999phys3-2.eps 1999/1999phys3-3.eps
 	./make.sh build 1999pankyo2
+extra: build/1999doc.pdf
+build/1999doc.pdf: 1999/1999doc.tex
+	./make.sh build 1999doc
 all: build/2000pankyo.pdf
 build/2000pankyo.pdf: 2000/2000engl.tex 2000/2000math.tex 2000/2000engl.tex 2000/2000math.tex 2000/2000math-1.tpc 2000/2000math-2.tpc
 	./make.sh build 2000pankyo

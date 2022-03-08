@@ -60,7 +60,8 @@ function sub:build {
     done
     link ../../inshi.sty
     link ../../underlinedtext.sty
-    make_tex "$name" "$name.tex"
+    [[ -f ../../$year/$name.tex ]] ||
+      make_tex "$name" "$name.tex"
     platex -kanji=utf8 "$name.tex"
     dvipdfmx "$name.dvi"
     mv "$name.pdf" ..

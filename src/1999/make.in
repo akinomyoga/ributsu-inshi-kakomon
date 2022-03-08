@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 docs=(1999pankyo 1999senmon)
-docs_ex=(1999pankyo2)
+docs_ex=(1999pankyo2 1999doc)
 
 _1999pankyo_title='1999年度実施 一般教育科目'
 _1999pankyo_cov=()
@@ -32,3 +32,5 @@ _1999senmon_dep=(
 # 問題入力・解答作成 第5問: 吉川真
 # 問題入力・解答作成 第7,8問: 石井
 #
+
+_1999doc_dep=(1999doc.tex)
