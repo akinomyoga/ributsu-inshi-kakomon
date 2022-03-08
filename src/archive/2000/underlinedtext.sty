@@ -1,0 +1,497 @@
+%%% 複数行にわたる下線付きテキストを出力するコマンド \underlinedtext
+%%% ドキュメントは 139 行目までです. (\version{1999/12/14})
+% 下線付きのテキストを出力するには, 普通は \underline コマンドを用いれば
+% よいのですが, \underline コマンドは下線を引いている途中で改行できません. 
+% そこで, 下線を引く範囲が複数の行にまたがっても構わないようなコマンドを
+% 考えてみたのが, この \underlinedtext コマンドです. 
+% 
+% (1) 使用法
+% \underlinedtext{text}     : text に下線をつける
+% \underlinedtext*{text}    : text に点線の下線をつける
+% \underlinedtext!{text}    : text に破線の下線をつける
+% 
+% ここで, text の部分は, 複数行にわたっても構いませんが, 複数の段落にわたる
+% ことはできません. つまり, text の部分には空白行または \par コマンドが
+% 現れてはいけません. また, 書体の変更を行うときには 
+% 
+% \underlinedtext{下線付きテキストです. 
+% 下線にする範囲の中で\textbf{太字}にすることもできます. }
+% 
+% のように \text..{...} の形の LaTeX2e の書体変更コマンドを用いてください. 
+% 文字の大きさを変更する場合は, 
+% 
+% \underlinedtext{\small{小さい}文字や\large{大きい}文字も使えます}
+% 
+% のようにします. 
+% ({\bfseries ...} (あるいは {\bf ...}) の形式の書体変更も可能ですが, 
+% このようにすると, {, } で挟んだ範囲では改行を行いません. [--> 注意(4)])
+% 
+% 一方, \underlinedtext[t] のようにオプションをつけて用いることで, 下線 (?) の
+% 位置を変更することができます. なお, オプションと線の位置との関係は次のように
+% なります. (縦書きはもちろん pTeX の場合に限りますが…)
+%   オプション   : 付け加えられる線の (下端または左端の) 位置
+%        b       : 横書き時 : baseline の下 2pt
+%                  縦書き時 : baseline の左 0.6zh
+%        c       : 横書き時 : baseline の上 1ex
+%                  縦書き時 : baseline の位置
+%        t       : 横書き時 : baseline の上 0.9zh
+%                  縦書き時 : baseline の右 0.5zh
+% 単位付きの長さ : 横書き時 : baseline の下にその長さだけ下がった位置
+%                  縦書き時 : baseline の左にその長さだけ移動した位置
+% 
+% (縦書きの場合は, baseline といっても, ほとんど「行の中心線」ですが…)
+% なお, これらのオプションのデフォルトは, 横書き時は 'b' で, 
+% 縦書き時は 't' です. 
+% 
+% また, 下線の本数は, \underlinedtext(2) のように (, ) で囲んだオプションで
+% 与えます. 上記の, [t] のような位置指定のオプションも用いる場合には, 
+% \underlinedtext(2)[t] のように本数の指定を先に書きます. さらに * または
+% ! による点線または破線の指定は, 本数の指定, 位置指定のどちらよりも前に
+% 指定します. これらのオプションは, \wavyunderlinedtext に対しても
+% (* または ! の指定を除き) \underlinedtext と同様に用いることができます. 
+% 
+% (2) オプションについて
+% \underlinedtext による下線の太さ, 間隔, 本数のデフォルト値はそれぞれ, 
+% 0.4pt, 1pt, 1 ですが, これらの値は \SetUnderlinedtextOptions コマンドを
+% 用いて変更できます. \SetUnderlinedtextOptions は, 
+% \SetUnderlinedtextOptions{オプション指定}
+% という形式で用います. ここで, オプション指定は, 下記の記述 (のいくつか) を
+% コンマで区切って並べたものです. (ただし, ### は単位付きの長さで, 
+% @@@ は整数, *** は文字列です. )
+% linewidth = ###, linesep = ###, lines = @@@, dashlength = ###, dashgap = ###
+% linecolor = ***
+% 
+% これらの指定は, 次のような意味を持ちます. 
+% 
+% linewidth = ### :
+%    \underinedtext によって加えられる罫線の太さを ### にします. 
+%    ただし, ### が正の値でない場合には, 罫線の太さを 0.4pt にします. 
+% 
+% linesep = ### :
+%    \underlinedtext によって 2 重 (以上) の罫線を出力するときの
+%    罫線どうしの間隔を ### にします. ただし, ### が負の値である
+%    場合には, 罫線の間隔を 1pt にします. 
+% 
+% lines = @@@ :
+%    \underlinedtext が加える罫線の本数のデフォルト値を @@@ にします. 
+%    ただし, @@@ が正整数でない場合には, 罫線のデフォルトの本数を 1 に
+%    します. 
+% 
+% dashlength = ### :
+%    \underlinedtext! が出力する破線の実線部分の長さを ### にします. 
+% 
+% dashgap = ### :
+%    \underlinedtext! が出力する破線の空白部分の長さを ### にします. 
+% 
+% linecolor = *** :
+%    *** が空文字列ではない場合, \underlindtext が出力する下線の色を
+%    *** にします. ただし, color パッケージが読み込まれていない場合には
+%    このオプションは無視されます. また, *** を空文字列にする (すなわち, 
+%    単に "linecolor =" と記述する) と, 下線の色の指定を取りやめ, 
+%    下線部分にもテキスト部分と同じ色を用います. なお, linecolor の指定は, 
+%    linecolor = blue のように色名を用いても, linecolor = [rgb]{.3,.3,.6} の
+%    ように rgb 値等のパラメータを指定しても構いません. 
+% 
+% また, \SetUnderlinedtextOptions*{...} のように * をつけて用いると, 
+% すべてのオプションを, このファイルで与えたデフォルトの値に戻した後, 
+% さらに ... の部分に記述した指定を適用します. 
+% 
+% なお, オプションのデフォルトの値は, 
+% 
+% linewidth = 0.4pt, linesep = 1pt, lines = 1,
+% dashlength = 5pt,  dashgep = 5pt, linecolor = 
+% 
+% のようになっています. 
+% 
+% [注意]
+% (1) \underlinedtext のパラメータは, (たとえ 1 文字であっても) 必ず {, } で
+%     囲んでください. 
+% (2) \underlinedtext のパラメータに現れる空白文字は, '\ ' (\ + 空白文字) 
+%     として扱われます. したがって, 普通の文章とは異なり, 空白文字を
+%     複数並べると, 並べた個数分の大きさの (下線付き) 空白が出力されます. 
+% (3) \underlinedtext のパラメータに欧文を含めても構いませんが, その場合, 
+%     欧文の部分であっても, 和文と同様に 1 文字づつ切り離して処理されます. 
+%     したがって, 単語が行末で分割されたときのハイフンの処理, カーニング 
+%     (文字間隔の調整) の処理などは正しく行われません. また, ff, fi のような
+%     文字の組に対する合字も出力しません. 
+% (4) \underlinedtext コマンドのパラメータの中で「1 文字扱い」にしたい部分は
+%     {, } で挟んでください, 例えば, 英単語を {, } で囲めば, 正しい
+%     スペーシングと適切な合字を用いて出力します. ただし, {, } で囲んだ
+%     範囲では改行が行われないことに注意してください. 
+%     なお, 句読点などの禁則処理はある程度サポートしています. 
+% (5) color パッケージに関しては, \textcolor と \colorbox を \underlinedtext
+%     コマンドのパラメータの中で用いることができるようにしています. 
+%     (現時点では, \fcolorbox には対応していません. )
+% (6) \underlinedtext コマンドのパラメータの中でパラメータをもつマクロや
+%     数式を用いる場合は, マクロとパラメータの全体または数式の全体を {, } で
+%     挟んでください. 具体的には
+%     \underlinedtext{アクセント記号をつけるには {\'a} のようにします}
+%     \underlinedtext{{$PV=nRT$} 下線付き数式です}
+%     のようにします. (\underlinedtext コマンドのパラメータの中では環境は
+%     用いない方が無難です.)
+%     ただし, パラメータをとらないマクロは {, } で囲んでも囲まなくても
+%     同じです. また, \text.. の形の書体変更コマンドは \underlinedtext 
+%     コマンドのパラメータの中でも普通に使えるように (\underlinedtext の方を) 
+%     定義しているので, 書体変更コマンドについては {, } で囲む必要は
+%     ありません. したがって, 次のように入力できます. 
+%     \underlinedtext{\texttt{{\symbol{'134}}underlinedtext} コマンドです}
+%     (\symbol{'134} は {, } で囲んでいますが, \texttt{...} は囲んでいません. )
+%
+\makeatletter
+\@ifundefined{underlinedtext}{}{\makeatother\endinput}
+%%% 禁則処理等に用いるスイッチの定義
+\newif\if@ul@fontsw
+\newif\if@ul@nobreak
+\newif\if@ul@allownextbreak
+{\catcode` =\active\gdef\ul@catcode{\catcode` =\active\let =\ }}
+%
+%%% 禁則文字の表
+% 行末禁則文字
+\def\ul@postkinsokucharacters{~,`,``,(,\{,[,$<$,%
+   （,｛,［,「,〔,〈,《,『,【,＜,≪}
+% 行頭禁則文字
+\def\ul@prekinsokucharacters{~,{,},.,?,!,','',",),\},],$>$,%
+   、,。,．,，,ー,！,？,）,｝,］,」,〕,〉,》,』,】,＞,≫}
+%
+%%% \underlinedtext の中で用いることのできる書体変更コマンド等の表
+\def\ul@fontcommandlist{\textbf,\textit,\textmd,%
+   \textrm,\textsc,\textsf,\textsl,\texttt,\textup,%
+   \tiny,\scriptsize,\small,\normalsize,\large,\Large,%
+   \LARGE,\huge,\Huge,\textcolor,\colorbox,\color}%
+%
+%%% 禁則処理・他
+\def\ul@check@parameter#1{\@ul@fontswfalse%
+   \@for\ul@tempb:=\ul@fontcommandlist\do{%
+      \ifx#1\ul@tempb\@ul@fontswtrue\fi}%
+   \@for\ul@tempb:=\ul@prekinsokucharacters\do{%
+      \ifx\ul@tempa\ul@tempb\@ul@nobreaktrue\fi}%
+   \@for\ul@tempb:=\ul@postkinsokucharacters\do{%
+      \ifx\ul@tempa\ul@tempb\@ul@allownextbreakfalse\fi}}
+\def\ul@changefont#1#2{\bgroup#1\@@underlinedtext#2\ul@end\@@underlinedtext}
+\def\ul@redefine@fontcommand{%
+   \let\textbf\bfseries\let\textit\itshape\let\textmd\mdseries
+   \let\textrm\rmfamily\let\textsc\scshape\let\textsl\slshape
+   \let\texttt\ttfamily\let\textup\upshape\let\testsf\sffamily
+   \let\textcolor\ul@textcolor\let\colorbox\ul@colorbox}
+\def\ul@newline{\futurelet\let@token\ul@@newline}
+\def\ul@@newline{%
+   \ifx\let@token\ \let\ul@tempb\ul@nl@checktoken%
+   \else\ifx *\let@token\let\ul@tempb\ul@nl@checktoken%
+   \else\ifx[\let@token\let\ul@tempb\ul@new@line%
+   \else\def\ul@tempb{\\\@@underlinedtext}\fi\fi\fi%
+   \ul@tempb}
+\def\ul@nl@checktoken#1{\def\ul@tempb{#1}\def\ul@tempc{\ }%
+   \ifx\ul@tempb\ul@tempc\def\ul@tempb{\\\@@underlinedtext\ }%
+   \else\let\ul@tempb\ul@newline\fi\ul@tempb}
+\def\ul@new@line[#1]{\leavevmode\vadjust{\vskip#1}%
+   \hfil\break\@@underlinedtext}
+%
+%%% about color
+\def\ul@textcolor#1{%%% #1 = \@@underlinedtext
+   \@ifnextchar[\ul@textcolor@with@option\ul@textcolor@without@option}
+\def\ul@textcolor@with@option[#1\ul@end\@@underlinedtext#2]#3#4{%
+   \color[#1#2]{#3}\@@underlinedtext#4\ul@end\@@underlinedtext}
+\def\ul@textcolor@without@option#1\ul@end\@@underlinedtext#2{%
+   \color{#1}\@@underlinedtext#2\ul@end\@@underlinedtext}
+\def\ul@colorbox#1{%%% #1 = \@@underlinedtext
+   \@ifnextchar[\ul@colorbox@with@option\ul@colorbox@without@option}
+\def\ul@colorbox@with@option[#1\ul@end\@@underlinedtext#2]#3#4{%
+   \ul@colorbox@set@option{#4}%
+   \toks@\expandafter{\ul@color@stack}%
+   \@temptokena{\@elt{[#1#2]{#3}}}%
+   \edef\ul@color@stack{\the\@temptokena\the\toks@}%
+   \ul@exec@colorbox{#4}}
+\def\ul@colorbox@without@option#1\ul@end\@@underlinedtext#2{%
+   \ul@colorbox@set@option{#2}%
+   \toks@\expandafter{\ul@color@stack}%
+   \@temptokena{\@elt{{#1}}}%
+   \edef\ul@color@stack{\the\@temptokena\the\toks@}%
+   \ul@exec@colorbox{#2}}
+\def\ul@exec@colorbox#1{%
+   \let\@@@underlinedtext\ul@colorbox@make@charbox
+   \@@underlinedtext{\kern\fboxsep}#1{\kern\fboxsep}\ul@end\@@underlinedtext}
+\def\ul@colorbox@set@option#1{%
+   \begingroup
+   \let\textcolor\ul@ignore@textcolor@args
+   \let\colorbox\ul@ignore@colorbox@args
+   \setbox\z@\hbox{#1}%
+   \edef\ul@temp@arg{%
+      \vrule\@width\z@\@height\the\ht\z@\space\@depth\the\dp\z@}%
+   \expandafter\endgroup\expandafter\def
+      \expandafter\@@@underlinedtext@option\expandafter{\ul@temp@arg}}
+\def\ul@ignore@textcolor@args#1#{\@gobble}
+\def\ul@ignore@colorbox@args#1#{\ul@ignore@colorbox@args@}
+\def\ul@ignore@colorbox@args@#1#2{\begingroup\fboxrule\z@\fbox{#2}\endgroup}
+\let\ul@color@stack\@empty
+\def\ul@colorbox@make@charbox#1{%
+   \@@@underlinedtext@{%
+      \begingroup
+      \let\@elt\ul@colorbox@makebox@elt
+      \setbox\z@\hbox{#1}%
+      \ul@color@stack
+      \unhbox\z@
+      \endgroup}}
+\def\ul@colorbox@makebox@elt#1{%
+   \setbox\z@\hbox{\color@b@x\relax{\color#1}%
+      {\kern-\fboxsep\@@@underlinedtext@option\unhbox\z@\kern-\fboxsep}}}
+%
+%%% \underlinedtext 本体の定義
+\newcount\ul@number@of@lines
+\newdimen\ul@linewidth
+\newdimen\ul@linesep
+\newdimen\ul@vshift@amount
+\newdimen\ul@ruledepth
+\newdimen\ul@ruleheight
+\newdimen\ul@curr@residue
+\newdimen\ul@dashlength
+\newdimen\ul@dashgap
+\newbox\ul@wavebox
+\newif\if@ul@produce@wavyline
+\newcommand{\underlinejpn}[1][{}]{%
+   $_{\mbox{\scriptsize #1}}\!\!$
+   \@ul@produce@wavylinefalse
+   \@latex@ifstar
+      {\let\ul@make@rules\ul@make@dottedrules\underlinedtext@}%
+      {\@ifnextchar!%
+         {\@firstoftwo{\ul@curr@residue\z@
+          \let\ul@make@rules\ul@make@dashrules \underlinedtext@}}%
+         {\let\ul@make@rules\ul@make@solidrules\underlinedtext@}}}
+\def\underlinedtext@{%
+   \@ifnextchar(%
+      \@underlinedtext
+     {\@underlinedtext(\ul@default@number@of@lines)}}
+\def\@underlinedtext(#1){\bgroup
+   \def\ul@tempa{\zap@space#1 \@empty}%
+   \afterassignment\remove@to@nnil
+   \ul@number@of@lines 0\ul@tempa\relax\@nnil
+   \ifnum\ul@number@of@lines<\@ne \ul@number@of@lines\@ne \fi
+   \@ifnextchar[\@underlinedtext@init{\@underlinedtext@init[]}}
+\def\@underlinedtext@init[#1]{%
+   \edef\ul@tempb{\zap@space#1 \@empty}\ul@setdepth{#1}%
+   \ul@ruledepth\ul@tempa\relax
+   \if@ul@produce@wavyline
+      \advance\ul@ruledepth\ul@depth@correction\relax
+      \ul@vshift@amount\ul@curr@vshift\relax
+   \else
+      \ul@vshift@amount\ul@linewidth
+      \advance\ul@vshift@amount\ul@linesep
+   \fi
+   \count@\ul@number@of@lines \advance\count@\m@ne
+   \dimen@-\count@\ul@vshift@amount
+   \advance\ul@ruledepth\ul@vshift\dimen@
+   \ul@ruleheight-\ul@ruledepth \advance\ul@ruleheight\ul@linewidth
+   \leavevmode\ul@redefine@fontcommand
+   \@ul@allownextbreaktrue
+   \let\@@@underlinedtext\@@@underlinedtext@
+   \ul@catcode\ul@begin}
+\def\ul@selectdepth#1#2#3#4#5#6{%
+   \def\ul@vshift{0}%
+   \ifx \ul@tempb\@empty\def\ul@tempa{#2}\def\ul@vshift{#6}%
+   \else\if b\ul@tempb\def\ul@tempa{#3}%
+   \else\if c\ul@tempb\def\ul@tempa{#4}\def\ul@vshift{.5}%
+   \else\if t\ul@tempb\def\ul@tempa{#5}\def\ul@vshift{1}%
+   \else\def\ul@tempa{#1}\fi\fi\fi\fi}
+\expandafter\ifx\csname pfmtname\endcsname\relax
+\def\ul@setdepth#1{\ul@selectdepth{#1}{2\p@}{2\p@}{-1ex}{-.9zh}{0}}
+\let\ul@adjust@direction\relax
+\def\ul@set@vshift@correction{%
+   \edef\ul@depth@correction{\ht\ul@wavebox}%
+   \edef\ul@curr@vshift{\ht\ul@wavebox}}
+\else%%% the case of pTeX
+\edef\ul@setdepth#1{%
+   \expandafter\noexpand\csname iftdir\endcsname
+      \noexpand\ul@selectdepth{#1}{-.5zh}{.6zh}{\z@}{-.5zh}{1}%
+   \expandafter\noexpand\csname else\endcsname
+      \noexpand\ul@selectdepth{#1}{2\p@}{2\p@}{-1ex}{-.9zh}{0}%
+   \expandafter\noexpand\csname fi\endcsname}
+\edef\ul@adjust@direction{%
+   \expandafter\noexpand\csname iftdir\endcsname \tate
+   \expandafter\noexpand\csname else\endcsname   \yoko 
+   \expandafter\noexpand\csname fi\endcsname}
+\edef\ul@set@vshift@correction{%
+   \expandafter\noexpand\csname iftdir\endcsname
+      \edef\noexpand\ul@depth@correction{-\noexpand\the\wd\ul@wavebox}%
+      \edef\noexpand\ul@curr@vshift{\noexpand\the\wd\ul@wavebox}
+   \expandafter\noexpand\csname else\endcsname
+      \edef\noexpand\ul@depth@correction{\noexpand\the\ht\ul@wavebox}%
+      \edef\noexpand\ul@curr@vshift{\noexpand\the\ht\ul@wavebox}
+   \expandafter\noexpand\csname fi\endcsname}
+\fi
+\def\ul@begin#1#{\ul@@begin}
+\def\ul@@begin#1{\@@underlinedtext#1\ul@end}
+\def\@@underlinedtext#1{\def\ul@tempa{#1}%
+   \if@ul@allownextbreak\@ul@nobreakfalse\else\@ul@nobreaktrue\fi%
+   \@ul@allownextbreaktrue%
+   \ul@check@parameter\ul@tempa%
+   \if@ul@fontsw\let\ul@tempa\ul@changefont%
+   \else\ifx\ul@tempa\ul@@end\let\ul@tempa\relax%
+   \else\ifx\ul@tempa\ul@@cr\def\ul@tempa##1{\ul@newline}%
+   \else\let\ul@tempa\@@@underlinedtext%
+   \fi\fi\fi\ul@tempa{#1}}
+\def\@@@underlinedtext@#1{%
+   \if@ul@nobreak\penalty\@M
+   \else\penalty-\@lowpenalty\hskip\z@ plus.45\p@ minus.05\p@\fi
+   {\setbox\z@\hbox{{#1\null}}%
+   \@tempdima\ul@ruleheight \@tempdimb\ul@ruledepth
+   \hbox{%
+      \kern-.5\p@
+      \ifx\ul@linecolor\@empty\else
+         \begingroup
+         \expandafter\color\ul@linecolor\relax
+      \fi
+      \count@\z@ \dimen@\wd\z@
+      \ul@make@rules
+      \ifx\ul@linecolor\@empty\else \endgroup \fi
+      \kern.5\p@
+      \box\z@}}%
+   \@@underlinedtext}
+\def\ul@make@solidrules{%
+   \advance\dimen@.5\p@
+   \@whilenum\count@<\ul@number@of@lines\do{%
+      \vrule\@height\@tempdima \@depth\@tempdimb \@width\dimen@
+      \kern-\dimen@
+      \advance\count@\@ne
+      \advance\@tempdima-\ul@vshift@amount
+      \advance\@tempdimb \ul@vshift@amount}}
+\def\ul@make@dottedrules{%
+   \advance\dimen@.5\p@
+   \@whilenum\count@<\ul@number@of@lines\do{%
+      \hbox to\dimen@{%
+         \cleaders
+            \hbox{%
+               \vrule\@height\@tempdima \@depth\@tempdimb \@width.25\p@
+               \kern1.5\p@
+               \vrule\@height\@tempdima \@depth\@tempdimb \@width.25\p@}%
+            \hfil}%
+      \kern-\dimen@
+      \advance\count@\@ne
+      \advance\@tempdima-\ul@vshift@amount
+      \advance\@tempdimb \ul@vshift@amount}}
+\def\ul@make@dashrules{%
+   \setbox\tw@\hbox to\z@{%
+      \ifdim\ul@curr@residue>\ul@dashlength
+         \kern.5\p@
+      \else
+         \ul@make@shortrule{.5\p@}%
+      \fi
+      \dimen\tw@\ul@dashlength \advance\dimen\tw@\ul@dashgap
+      \dimen4 \ul@curr@residue \advance\dimen4 \dimen@
+      \ifdim\dimen4<\dimen\tw@
+         \ifdim\dimen4>\ul@dashlength
+            \dimen6 \ul@dashlength \advance\dimen6-\ul@curr@residue
+            \ifdim\dimen6>\z@ \ul@make@shortrule{\dimen6}\fi
+         \else
+            \ul@make@shortrule\dimen@
+         \fi
+         \global\ul@curr@residue\dimen4\relax
+      \else
+         \ifdim\ul@curr@residue<\ul@dashlength
+            \dimen6 \ul@dashlength \advance\dimen6-\ul@curr@residue
+            \ul@make@shortrule{\dimen6}%
+            \kern\ul@dashgap
+         \else
+            \dimen6 \dimen\tw@ \advance\dimen6-\ul@curr@residue
+            \kern\dimen6\relax
+         \fi
+         \advance\dimen4-\dimen\tw@
+         \@whiledim\dimen4>\dimen\tw@\do{%
+            \ul@make@shortrule\ul@dashlength
+            \kern\ul@dashgap
+            \advance\dimen4-\dimen\tw@}%
+         \ifdim\dimen4<\dimen\tw@
+            \ifdim\dimen4<\ul@dashlength
+               \ul@make@shortrule{\dimen4}%
+            \else
+               \ul@make@shortrule\ul@dashlength
+               \dimen6 \dimen4 \advance\dimen6-\ul@dashlength
+               \kern\dimen6
+            \fi
+         \else
+            \ul@make@shortrule\ul@dashlength
+            \kern\ul@dashgap
+            \dimen4 \z@
+         \fi
+         \global\ul@curr@residue\dimen4\relax
+      \fi
+      \hss}%
+   \@whilenum\count@<\ul@number@of@lines\do{%
+      \advance\count@\@ne
+      \raise\@tempdima\copy\tw@
+      \advance\@tempdima-\ul@vshift@amount}}
+\def\ul@make@shortrule#1{\vrule\@height\ul@linewidth\@width#1 \@depth\z@}
+\def\ul@make@wavyline{%
+   \setbox\tw@\hbox to\z@{%
+      \setbox\@tempboxa\copy\ul@wavebox
+      \ht\@tempboxa\z@ \dp\@tempboxa\z@
+      \@tempdimb-\dimen@ \advance\@tempdimb\ul@curr@residue
+      \kern\ul@curr@residue
+      \ifdim\ul@curr@residue>.5\wd\@tempboxa \llap{\copy\@tempboxa}\fi
+      \@whiledim\@tempdimb<\z@\do{%
+         \copy\@tempboxa
+         \advance\@tempdimb\wd\@tempboxa}%
+      \global\ul@curr@residue\@tempdimb
+      \hss}%
+   \@whilenum\count@<\ul@number@of@lines\do{%
+      \advance\count@\@ne
+      \raise\@tempdima\copy\tw@
+      \advance\@tempdima-\ul@vshift@amount}}
+\def\ul@end{\egroup}
+\def\ul@@end{\ul@end}
+\def\ul@@cr{\\}
+%
+%%% about options
+\def\SetUnderlinedtextOptions{%
+   \@latex@ifstar{\@SetUnderlinedtextOptions\ul@default@options}%
+                 {\@SetUnderlinedtextOptions\@gobble}}
+\def\@SetUnderlinedtextOptions#1#2{%
+   \edef\ul@tempz{\expandafter\zap@space#1,#2 \@empty}%
+   \@for\ul@tempa:=\ul@tempz\do\ul@exec@option}
+\def\ul@exec@option{%
+   \expandafter\ul@read@args\ul@tempa==\@nil
+   \csname ul@option@@\ul@option@name\endcsname}
+\def\ul@read@args#1=#2=#3\@nil{%
+   \def\ul@option@name{#1}\def\ul@option@value{#2}}
+\def\ul@option@@linewidth{%
+   \ul@linewidth\ul@option@value\relax
+   \ifdim\ul@linewidth>\z@\else \ul@linewidth.4\p@ \fi}
+\def\ul@option@@linesep{%
+   \ul@linesep\ul@option@value\relax
+   \ifdim\ul@linesep<\z@ \ul@linesep\p@ \fi}
+\def\ul@option@@lines{%
+   \count@\ul@option@value\relax
+   \ifnum\count@<\@ne \count@\@ne \fi
+   \edef\ul@default@number@of@lines{\the\count@}}
+\def\ul@option@@dashlength{%
+   \ul@dashlength\ul@option@value\relax
+   \ifdim\ul@dashlength>\z@\else \ul@dashlength5\p@ \fi}
+\def\ul@option@@dashgap{%
+   \ul@dashgap\ul@option@value\relax
+   \ifdim\ul@dashgap>\z@\else \ul@dashgap5\p@ \fi}
+\def\ul@option@@linecolor{%
+   \expandafter\ifx\csname color\endcsname\relax
+      \ifx\ul@option@value\@empty\else
+         \typeout{Warning [underlinedtext]:
+                  Option ``linecolor'' requires the color package.}%
+      \fi
+      \let\ul@linecolor\@empty
+   \else
+      \expandafter\ul@option@@linecolor@\ul@option@value\@nil
+   \fi}
+\def\ul@option@@linecolor@{%
+   \@ifnextchar[%
+      \ul@option@@linecolor@with@option
+      \ul@option@@linecolor@without@option}
+\def\ul@option@@linecolor@with@option#1\@nil{\def\ul@linecolor{#1}}
+\def\ul@option@@linecolor@without@option#1\@nil{%
+   \ifx\ul@option@value\@empty \let\ul@linecolor\@empty
+   \else                       \def\ul@linecolor{{#1}}\fi}
+%
+%%% Since amsmath package redefines \@ifstar, we keep its original version...
+\def\@latex@ifstar#1{\@ifnextchar*{\@firstoftwo{#1}}}
+%
+%%% list of default options
+\def\ul@default@options{%
+   linewidth = .4pt, linesep = 1pt, lines = 1,
+   dashlength = 5pt, dashgap = 5pt, linecolor = }
+\SetUnderlinedtextOptions*{}
+\makeatother

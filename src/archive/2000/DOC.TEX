@@ -1,0 +1,436 @@
+\documentclass[a4j]{jarticle}
+\usepackage{ascmac,amsmath,amssymb, underlinedtext}
+\title{2000年度物理出版 院試過去問集 TeX組版について}
+\author{矢田 智揮}
+\date{}
+
+\def\jLaTeX{\lower0.5ex\hbox{J}\kern-0.125em \LaTeX}
+\input{math.h}
+
+\begin{document}
+\maketitle
+
+\section{はじめに}
+物理出版の院試過去問集を\TeX で組版を始めたのは早野研の谷田氏であり、95年度出版にさかのぼります。この当時の現物は見たことがないのでどういうレイアウトなどであったかは分かりません。また、97年度に\TeX 編集長をしていた渡辺 尚貴さんが作成されたスタイルファイルをここ数年流用しているという状況でした。しかし、当時使用していた\TeX は現在においては古いものとなり、普通に\TeX をインストールしたのではうまくコンパイルができない状況になってきました。そこで、2000年度出版から現在主流の日本語版\LaTeXe であるp\LaTeXe を使用することにしました。それにともない、スタイルファイルを変更し、またレイアウトも変更することにしました。
+
+\section{\TeX の種類}
+\TeX といってもいろいろなバージョンがあり、日本語に対応したものではアスキーによるp\LaTeX やNTTによる\jLaTeX があり、またそれぞれの旧バージョンも存在します。しかし、さきほども書いたように現時点ではp\LaTeXe が主流になっているため、これを利用することにします。
+
+\section{最新の\TeX のインストール}
+UNIX系OSではそれぞれの公式サイトなどでパッケージ等で配布されていると思います。Windowsをお使いの方はhttp://www.fsci.fuk.kindai.ac.jp/\~{}kakuto/win32-ptex/で配布されています。
+
+
+\section{大前提}
+過去問の\TeX 組版にともなって大前提となるのは
+
+\begin{itemize}
+\item この文に書いてあることを全て理解できるだけの\TeX の知識を持ち合わせていること。
+\item この文に書いてある約束事を守ること。
+\item 自作のパッケージを利用しないこと。
+\item コンパイルがエラーなく通る状態でソースを提出すること。
+\item ソースにタイプミスなどがないかを十分チェックすること。
+\item 全角記号、全角数字は使わない。
+\item 脚注は使わない。
+\item 図はEPS形式にすること。
+\end{itemize}
+
+です。これを理解した上で作業をしてください。
+
+\section{院試問題の大問、中問、小問の定義}
+まず、大問というのは物理学専攻の院試問題のみに適用される用語です。物理学専攻科目には大問は例年8つほどあり、それぞれの中に4つ程度の問題(これを中問と呼ぶ)があり、さらにその中にいくつかの設問(これを小問と呼ぶ)があります。
+
+一般教養科目では大問は存在しません。各科目で中問がいくつかあって、それぞれに小問がついてくるという形式になっています。
+
+\underline{小問以下の細かい問題は問題文を適宜変更して無くすようにしてください。}
+
+\section{ファイル管理}
+院試の問題文および解答、図などのファイル名は各人が勝手に決めると後の作業の効率が悪くなるため、次の形式に従った命名をしてもらいます。
+
+{\bf [実施年度の西暦][科目][大問番号].tex}
+
+\noindent
+とし、[科目]が取る値は
+
+\begin{tabular}{cc}
+教養英語 & engl\\
+教養数学 & math\\
+教養物理 & phys\\
+専攻物理 & phy\\
+\end{tabular}
+
+とします。
+
+大問番号は専攻物理のみにつけます。たとえば1999年度の教養数学なら{\bf 1999math.tex}になりますし、1998年度の専攻物理の大問2ならば{\bf 1998phy2.tex}などとなります。今年から西暦部分を4桁取るようにしているのでY2K-compliantになります。
+
+次に文章付属の図のファイル名の書式は
+
+{\bf [実施年度の西暦][科目][大問番号]-[図番号].eps}
+
+\noindent
+とし、図番号は問題文と解答文の通しで1から順に増やしていきます。たとえば、1997年度の教養英語の2つ目の図なら、{\bf 1997engl-2.eps}などとなります。
+
+
+\section{スタイルファイル}
+クラスファイルはjbookを用いてもらうのですが、章見出し等を変更する必要があるのでそのために専用のスタイルファイル{\bf physpub.sty}を使用します。このスタイルファイルの中身についての具体的な説明は省略し、その使い方を説明します。スタイルファイルの中身にはできるだけコメントを書いておいたので分かる人には分かると思います。
+
+\section{パッケージ}
+デフォルトで使用するパッケージは
+\begin{itemize}
+\item graphicx
+\item \AmS-\LaTeX
+\end{itemize}
+の2つです。この中に定義されている命令はどんどん使っていただいて構いません。基本的にはこれら以外のパッケージは使用しないようにしたいと思います。しかし、このパッケージを使うと便利で使用したいという場合は事前にお知らせください。
+また、これらのパッケージはphyspub.styの中で呼び出されるようになっているため、各ファイルで呼び出してはいけません。(正確には、呼び出しても無視されます。)
+
+数学記号や数式環境は\AmS-\LaTeX により非常に拡張されているため是非とも使いこなせるようになっておきましょう。行列、ベクトルは\AmS-\LaTeX の命令を利用して作ってください。詳しい説明はしないので各自、\AmS-\LaTeX について書かれている本を読んで勉強してください。
+
+
+\section{図の書き方・使い方}
+図は例年xfigというソフトを使っているので、今年もそのまま引き継ぎます。人によって使うソフトを変えてしまうと、後で図を訂正しないといけなくなった時に面倒なことになるので、使用するソフトは統一しておきたいと思います。自宅にUNIX環境が整っている方はxfigをインストールして使ってください。Windowsしかないぞ、という方は物理学科用の端末(3年の夏学期に物理実験で使ったはず)にxfigが入っているのでこれを使ってください。
+
+ただ、これはあくまで原則ですので、xfigでは機能不足でうまく書けない図など、やむおえない場合は他のソフトを使ってもらっても構いません。xfigではなく、tgifを使ってもらってもよいでしょう。
+
+曲線のあるグラフを書くときにはスプライン曲線をうまく使ってなるべくオリジナルに似た感じに仕上げてください。これは腕の見せ所(?)でもありますけど。
+
+書いた図はfig形式で保存しておいてください。実際に\TeX で使うときにはEPS形式に変換して\verb|\includegraphics|命令を使って図を取り込んでください。この命令を使うために必要なパッケージは自動的に読み込まれますので、各自で読み込む必要はありません。
+
+原稿を提出する際には、図はfig形式のものだけをメールで送ってください。
+
+
+\section{\TeX ファイルの書き方}
+この節が最も重要な部分です。各自しっかり覚えてから作業にとりかかるようにしてください。
+
+各ファイルの冒頭は
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\begin{document}
+\end{verbatim}
+\end{quote}
+
+で始まります。\underline{この部分は変更してはいけません。この通りにしてください。}
+
+大問環境の書式は
+
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\begin{question}{[問題のタイトル]}{[担当者氏名]}
+ ...
+\end{question}
+\end{verbatim}
+\end{quote}
+
+担当者氏名は実際の出力には何らの影響も与えません。省略する場合は空白にしておいてください。
+
+中問環境は
+
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\begin{subquestions}
+ ...
+\end{subquestions}
+\end{verbatim}
+\end{quote}
+
+であり、各中問の問題文は
+
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\SubQuestion
+\end{verbatim}
+\end{quote}
+
+と打った後に書き始めます。
+
+小問環境は
+
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\begin{subsubquestions}
+ ...
+\end{subsubquestions}
+\end{verbatim}
+\end{quote}
+
+であり、各小問の問題文は
+
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\SubSubQuestion
+\end{verbatim}
+\end{quote}
+
+と打った後に書き始めます。
+
+
+次に、解答文の作成についても同様で、今までの問題文の作成の時のquesionをanswerに、QuestionをAnswerに置き換えるだけです。
+これではわかりづらいかもしれないので、次のページに今までの流れを書いておきます。
+
+\clearpage
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+\documentclass[fleqn]{jbook}
+\usepackage{physpub}
+\begin{document}
+
+%%問題文
+\begin{question}{教養 数学}{矢田}    %大問環境の開始
+.....                               %大問の問題文
+
+    \begin{subquestions}            %中問環境の開始
+    \SubQuestion                    %中問の問題文
+        .....
+        \begin{subsubquestions}     %小問環境の開始
+        \SubSubQuestion             %小問の問題文
+            .....
+        \SubSubQuestion
+            .....
+        \end{subsubquestions}       %小問環境の終了
+
+    \SubQuestion                    %中問の問題文
+        .....
+        \begin{subsubquestions}     %小問環境の開始
+        \SubSubQuestion             %小問の問題文
+            .....
+        \end{subsubquestions}       %小問環境の終了
+    
+    \end{subquestions}              %中問環境の終了
+\end{question}                      %大問環境の終了
+
+%%解答文
+\begin{answer}{教養 数学}{矢田}
+.....
+
+    \begin{subanswers}
+    \SubAnswer
+        .....
+        \begin{subsubanswers}
+        \SubSubAnswer
+            .....
+        \SubSubAnswer
+            .....
+        \end{subsubanswers}
+
+    \SubAnswer
+        .....
+        \begin{subsubanswers}
+        \SubSubAnswer
+            .....
+        \end{subsubanswers}
+    
+    \end{subanswers}
+\end{answer}
+
+\end{document}
+\end{verbatim}
+\end{quote}
+
+\clearpage
+
+\section{例外}
+各問題は普通は冒頭に問題文があって、後は設問のみが続くのですが、例外があります。例えば次のような感じの場合です。
+
+\begin{quote}
+問題文.....
+\begin{enumerate}
+\item 設問
+\item 設問
+\end{enumerate}
+問題文.....
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item 設問
+\item 設問
+\end{enumerate}
+\end{quote}
+
+つまり、設問と設問の間にさらに問題文が挟まっている場合です。この例の場合は中問環境を問2の後で終わって、それに続く問題文を書き、その後に再び中問環境を開始して問3以降を書けばよいのですが、少し注意が必要です。中問環境を問2の後で終わると設問番号のカウンタがリセットされてしまうため、問3で中問環境を再開する時にカウンタの値を強制的に変更してやる必要があります。この例の場合は次のように書けば目的が達成されます。
+
+\begin{quote}
+\baselineskip=12pt
+\begin{verbatim}
+問題文.....
+\begin{subquestions}
+    \SubQuestion
+        設問....
+    \SubQuestion
+        設問....
+\end{subquestions}
+
+問題文.....
+\begin{subquestions}[3]
+    \SubQuestion
+        設問....
+    \SubQuestion
+        設問....
+\end{subquestions}
+\end{verbatim}
+\end{quote}
+
+上の\verb|\begin{subquestions}[3]|の部分が今までとは少し違っています。\verb|[3]|というのが余分に付いています。これは\verb|[]|の中に書いた数字を問題文の番号にするためのものです。この例では問3から始めたいので3と書いておきます。当然の事ながら、この数字は半角で書かなければいけません。
+
+\clearpage
+
+\section{物理や数学で使用する記号、環境について}
+基本的な環境については説明し終わったので、次に物理や数学で用いられる特殊な記号や数式の参照の仕方を説明することにします。\\
+
+\begin{shadebox}
+数式は、普通は\verb|\label{}|でラベル付けをして、\verb|\ref{}|によって参照しますが、この方法だと偶然同じ名前を付けてしまったときにラベルが衝突してしまうので、それを避けるために、\verb|\eqname{}|でラベル付けをして\verb|\eqhref{}|で参照するようにしてください。
+\end{shadebox}
+\vskip1zw
+\begin{shadebox}
+次に、数式の形式ですが、数式番号の必要のない1行数式には\verb|\[ \]|を使い、数式番号が必要な場合は\verb|equation|環境を使ってください。1行数式に\$\$は\textbf{絶対に}使ってはいけません。複数行の数式の場合は\verb|eqnarray*|や\verb|eqnarray|環境を使ってください。今年から\AmS-\LaTeX を利用できるようにしてあるので、\verb|gather|環境などの便利な環境を利用するようにしましょう。
+\end{shadebox}
+\vskip1zw
+この二つの枠内に書いてあることはしっかりと守るようにしてください。
+
+\section{英語で使用する複数行に渡る下線について}
+英語の問題では、英文に複数行に渡る下線が引かれていて、和訳させたりなどの問題が出題されます。ところが、\TeX の下線を引く\verb|\underline{}|は複数行に渡る下線を引くことができません。そこで、このような下線を引くためのマクロがインターネットで公開されていたので、これを利用することにします。ただし注意しなければいけないのは、\underlinejpn{英文に引く下線と日本語文に引く下線では命令が異なっている}ということです。日本語と英語が混ざった複数行に渡る文に下線を引く場合はどちらの割合が多いかによって適宜使い分けてください。また、短い下線については\verb|\underline{}|で引いても構いません。
+
+さて、よく英語の問題では次のような下線の引かれ方をしています。
+
+
+\underlineeng[(ア)]{The revolutionary change in our understanding of microscopic phenomena that took place during the first 27 years of the twentieth century is unprecedented in the history of natural sciences.}
+
+
+\underlinejpn[(ア)]{20世紀の最初の27年間に起きたミクロな現象についての我々の理解への革新的な変化は自然科学の歴史の中で前例のないことである。}
+
+まず、英文に下線を引く命令は\\
+\verb|\underlineeng[ラベル]{[文章]}|\\
+で、日本語に下線を引く命令は\\
+\verb|\underlinejpn[ラベル]{[文章]}|\\
+です。
+
+上の例では\\
+\verb|\underlineeng[(ア)]{The revolutionary...}|\\
+などとなります。
+
+ラベルなしのただの下線だけの場合は\\
+\verb|\underlineeng{[文章]}|\\
+\verb|\underlinejpn{[文章]}|\\
+を使用してください。
+
+
+\section{physpub.styで定義されたマクロ集}
+こちらで提供するphyspubパッケージにはあらかじめ、物理や数学でよく使用される記号などが定義されており、これを利用すると便利です。実装はmath.hファイルに書かれています。次頁にその一覧表をあげておきます。
+
+
+\section{自作マクロを使用する場合}
+自作マクロを利用する場合の注意として、マクロの定義は必ずローカルなスコープ中で行わなければいけないということです。グローバルに影響が及ばないようにしておいてください。各ファイルの\verb|\begin{question}|の後などにマクロ定義を書いておけば問題ないでしょう。
+
+\clearpage
+
+\begin{table}
+\begin{minipage}[b]{7cm}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+{\bf 例} & {\bf 出力結果}\\
+\hline
+\verb|\vec{a}| & $\vec{a}$\\
+\hline
+\verb|\Vec{a}| & $\Vec{a}$\\
+\hline
+\verb|\vect{a}{b}{c}| & $\vect{a}{b}{c}$\\
+\hline
+\verb|\Norm{a}| & $\Norm{a}$\\
+\hline
+\verb|\Mat{A}| & $\Mat{A}$\\
+\hline
+\verb|\Trans{A}| & $\Trans{A}$\\
+\hline
+\verb|\Operator{A}| & $\Operator{A}$\\
+\hline
+\verb|\Mean{A}| & $\Mean{A}$\\
+\hline
+\verb|\Create{a}| & $\Create{a}$\\
+\hline
+\verb|\Annihilate{a}| & $\Annihilate{a}$\\
+\hline
+\verb|\RaiseState{J}| & $\RaiseState{J}$\\
+\hline
+\verb|\LowerState{J}| & $\LowerState{J}$\\
+\hline
+\verb|\Psi_\Orbit{1s}| & $\Psi_\Orbit{1s}$\\
+\hline
+\verb|\Bra{a}| & $\Bra{a}$\\
+\hline
+\verb|\Ket{a}| & $\Ket{a}$\\
+\hline
+\verb|\Product{a}{b}| & $\Product{a}{b}$\\
+\hline
+\verb|\Projection{a}{a}| & $\Projection{a}{a}$\\
+\hline
+\verb|\Bracket{a}{O}{a}| & $\Bracket{a}{O}{a}$\\
+\hline
+\verb|\muB| & $\muB$\\
+\hline
+\verb|\kB| & $\kB$\\
+\hline
+\verb|\Atom{C}{6}{12}| & \Atom{C}{6}{12}\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{7cm}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+{\bf 例} & {\bf 出力結果}\\
+\hline
+\verb|\therefore| & $\therefore$\\
+\hline
+\verb|\because| & $\because$\\
+\hline
+\verb|\d{f}| & $\d{f}$\\
+\hline
+\verb|\del| & $\del$\\
+\hline
+\verb|\Deriver{x}{t}| & $\ds \Deriver{x}{t}$\\
+\hline
+\verb|\Partial{x}{t}| & $\ds \Partial{x}{t}$\\
+\hline
+\verb|\tDeriver{x}{t}| & $\tDeriver{x}{t}$\\
+\hline
+\verb|\tPartial{x}{t}| & $\tPartial{x}{t}$\\
+\hline
+\verb|\int_{\nsub{\infty}}| & $\ds \int_{\nsub{\infty}}$\\
+\hline
+\verb|\Uint{\d{x}} f(x)| & $\ds \Uint{\d{x}} f(x)$\\
+\hline
+\verb|\Dint{-1}{+1}{\d{x}} f(x)| & $\ds \Dint{-1}{+1}{\d{x}} f(x)$\\
+\hline
+\verb|\Iint{\d{x}} f(x)| & $\ds \Iint{\d{x}} f(x)$\\
+\hline
+\verb|\Laplacian| & $\Laplacian$\\
+\hline
+\verb|\Grad| & $\Grad$\\
+\hline
+\verb|\Div| & $\Div$\\
+\hline
+\verb|\Rot| & $\Rot$\\
+\hline
+\verb|3\Keta{8}\Unit{m}| & $3\Keta{8}\Unit{m}$\\
+\hline
+\verb|90\deg| & $90\deg$\\
+\hline
+\verb|\degC| & $\degC$\\
+\hline
+\verb|\Ang| & $\Ang$\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{table}
+
+
+\end{document}
