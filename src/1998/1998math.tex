@@ -2,72 +2,72 @@
 \usepackage{physpub}
 
 \begin{document}
-\begin{question}{$B650i(B $B?t3X(B}{}
+\begin{question}{教育 数学}{}
 
 \begin{subquestions}
 \SubQuestion
-$B0J2<$N@_Ld$KEz$($h!#(B
+以下の設問に答えよ。
 \begin{subsubquestions}
 \SubSubQuestion
-$\alpha$$B$r<B?t$H$7$?$H$-$K<!$N@QJ,$rJ#AG@QJ,$NJ}K!$rMQ$$$F5a$a$h!#(B
+$\alpha$を実数としたときに次の積分を複素積分の方法を用いて求めよ。
 \[ \int_{0}^{\infty} \d x \frac{\sin \alpha x}{x} \]
 
 \SubSubQuestion
-$B6h4V(B$[-\pi, \pi]$$B$GDj5A$5$l$?4X?t(B$f(x)=|x|$$B$N%U!<%j%(5i?tE83+$r<!$N$h$&$K(B
-$BI=$7$?$H$9$k(B:
+区間$[-\pi, \pi]$で定義された関数$f(x)=|x|$のフーリエ級数展開を次のように
+表したとする:
 \[ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n \cos nx + b_n \sin n x) 
 \hspace{2cm} x \in [-\pi, \pi]\]
-$B$3$N$H$-(B$a_n (n=0,1,2,\cdots), b_n(n=1,2,\cdots)$$B$r5a$a!"(B
-$B$3$N7k2L$rMQ$$$F!"<!<0$r>ZL@$;$h!#(B
+このとき$a_n (n=0,1,2,\cdots), b_n(n=1,2,\cdots)$を求め、
+この結果を用いて、次式を証明せよ。
 \[ 1 + \frac{1}{3^2} + \frac{1}{5^2} + \cdots = \sum_{n=0}^{\infty}
 \frac{1}{(2n+1)^2} = \frac{\pi^2}{8}\]
 \end{subsubquestions}
 
 \SubQuestion
-3$B9T(B3$BNs$N<B9TNs(B$A=\{ a_{ij} \}$$B$,M?$($i$l$F$$$k$H$-!"9TNs<0(B$\mbox{det} [ A-
-\lambda I ]$$B$O%Q%i%a!<%?(B$\lambda$$B$K$D$$$F(B3$B<!$NB?9`<0$H$J$k!#$?$@$7!"(B$I$$B$O(B
-$BC10L9TNs$G$"$k!#>e$N9TNs<0$r<!$N$h$&$K=q$/$3$H$K$9$k(B:
+3行3列の実行列$A=\{ a_{ij} \}$が与えられているとき、行列式$\mbox{det} [ A-
+\lambda I ]$はパラメータ$\lambda$について3次の多項式となる。ただし、$I$は
+単位行列である。上の行列式を次のように書くことにする:
 \[ F(\lambda) \equiv \mbox{det} [ A-\lambda I ] = -\lambda^3 + P \lambda ^2 
 + Q \lambda + R\]
-$B$3$N$H$-0J2<$N@_Ld$KEz$($h!#(B
+このとき以下の設問に答えよ。
 
 \begin{subsubquestions}
 \SubSubQuestion
-$B>e$N(B3$B<!<0$N78?t(B$P,Q,R$$B$O<!$N$h$&$KI=$;$k$3$H$r<($;!#(B
+上の3次式の係数$P,Q,R$は次のように表せることを示せ。
 
 \begin{eqnarray*}
 P &=& \mbox{Tr} A \hspace{1cm}
 Q = \frac{1}{2} \left( \mbox{Tr} A^2 - ( \mbox{Tr} A)^2 \right) \hspace{1cm}
 R =\mbox{det} A
 \end{eqnarray*}
-$B$3$3$G!"(B$\mbox{Tr}$$B$O9TNs$NBP3QOB$r0UL#$9$k!#(B
+ここで、$\mbox{Tr}$は行列の対角和を意味する。
 
 \SubSubQuestion
-$BFC$K(B$P=0$$B$N$H$-!"9TNs(B$A=\{ a_{ij} \}$$B$,J#AG6&Lr$N8GM-CM$r;}$D$?$a$N>r7o$r(B
-$Q,R$$B$r;H$C$FI=$;!#(B
+特に$P=0$のとき、行列$A=\{ a_{ij} \}$が複素共役の固有値を持つための条件を
+$Q,R$を使って表せ。
 
 \end{subsubquestions}
 \SubQuestion
-$H_n(x)(n=0,1,2,\cdots)$$B$r(B$x$$B$N(B$n$$B<!$NB?9`<0$G<!$N@-<A$rK~$?$9$b$N$H$9$k!#(B
+$H_n(x)(n=0,1,2,\cdots)$を$x$の$n$次の多項式で次の性質を満たすものとする。
 
-\[H_n(x)=x^n+(n$B$h$jDc<!$NB?9`<0(B) \]
+\[H_n(x)=x^n+(nより低次の多項式) \]
 \[\int_{-\infty}^{\infty} \d x e^{-x^2} H_n (x) H_m (x) = 0 \hspace{1cm}
 (n \neq m)\]
 \begin{subsubquestions}
 
 \SubSubQuestion
-$n=1,2,3$$B$K$D$$$F(B$H_n(x)$$B$r6qBNE*$K9=@.$;$h!#$?$@$7<!$N@QJ,8x<0$r(B
-$BMQ$$$FNI$$!#(B
+$n=1,2,3$について$H_n(x)$を具体的に構成せよ。ただし次の積分公式を
+用いて良い。
 \[ \int_{-\infty}^{\infty} \d x x^{2m} e^{-x^2} = \sqrt{\pi} \frac{(2m)!}{4^m
 m!} \hspace{2cm} (m=0,1,2,\cdots)\]
 
-$B0lHL$K(B$n$$B<!$NB?9`<0(B$P(x)$$B$O(B$H_l(x)$$B$rMQ$$$F(B$P(x)=\displaystyle{\sum_{l=0}^{n} c_l H_l (x)}$$B$HE83+$G$-$k$3$H$rCm0U$7!"<!$N@_Ld$KEz$($h!#(B
+一般に$n$次の多項式$P(x)$は$H_l(x)$を用いて$P(x)=\displaystyle{\sum_{l=0}^{n} c_l H_l (x)}$と展開できることを注意し、次の設問に答えよ。
 
 \SubSubQuestion
-$H_n(-x)-(-1)^n H_n(x) = 0$$B$H$J$k$3$H$r5"G<K!$rMQ$$$F>ZL@$;$h!#(B
+$H_n(-x)-(-1)^n H_n(x) = 0$となることを帰納法を用いて証明せよ。
 
 \SubSubQuestion
-$a_n$$B$rE,Ev$J78?t$H$7$F(B$H_n(x)$$B$,<!$N7A$NA22=<0$rK~$?$9$3$H$r>ZL@$;$h!#(B
+$a_n$を適当な係数として$H_n(x)$が次の形の漸化式を満たすことを証明せよ。
 \begin{eqnarray*}
 x H_n(x) &=& H_{n+1} (x) + a_n H_{n-1} (x) \\
 \frac{\d}{\d x} H_n (x) &=& n H_{n-1} (x)
@@ -75,24 +75,24 @@ x H_n(x) &=& H_{n+1} (x) + a_n H_{n-1} (x) \\
 \end{subsubquestions}
 \end{subquestions}
 \end{question}
-\begin{answer}{$B650i(B $B?t3X(B}{}
+\begin{answer}{教育 数学}{}
 \begin{subanswers}
 \SubAnswer
 \begin{subsubanswers}
 \SubSubAnswer
-$B$^$:!"(B$\alpha  = 0$$B$N$H$-$OHo@QJ,4X?t$O(B$0$$B$J$N$GL@$i$+$K(B
+まず、$\alpha  = 0$のときは被積分関数は$0$なので明らかに
 \[ \int_{0}^{\infty} \d x \frac{\sin \alpha x}{x} = 0.\]
 
-$B<!$KHo@QJ,4X?t$O6v4X?t$G$"$k$+$i!"(B
+次に被積分関数は偶関数であるから、
 \[ \int_{0}^{\infty} \d x \frac{\sin \alpha x}{x} = \frac{1}{2} \int_{-\infty}
 ^{\infty} \d x \frac{\sin \alpha x}{x}.\]
-\parbox[t]{110mm}{$B$5$i$K!"$3$N@QJ,$O(B
+\parbox[t]{110mm}{さらに、この積分は
 \[ \mbox{Im} \left[ \frac{1}{2} \int_{-\infty}^{\infty} \d x
 \frac{e^{i \alpha x}}{x} \right]\]
-$B$H$+$1$k!#(B
+とかける。
 
-$B$=$3$G!"$3$N@QJ,$r?^$N$h$&$J@QJ,O)$G7W;;$9$k!#(B
-$B@QJ,O)$K0O$^$l$?NN0hFb$K$O6K$OB8:_$7$J$$$N$G!"(B
+そこで、この積分を図のような積分路で計算する。
+積分路に囲まれた領域内には極は存在しないので、
 \[ \int_{\text{C}} \frac{e^{i \alpha z}}{z} = 0.\] }
 %%%%%%%%%%%%%%%%%%%%%%
 \parbox[t]{60mm}{\vspace*{3mm}
@@ -100,10 +100,10 @@ x H_n(x) &=& H_{n+1} (x) + a_n H_{n-1} (x) \\
 \includegraphics[clip,width=50mm]{1998math1.eps}
 \end{center}
 }
-$ \alpha > 0$$B$N$H$-$O>eH>LL$G7W;;$9$k!#(B
+$ \alpha > 0$のときは上半面で計算する。
 
-$BBg$-$J1_8L>u$G$O(B$ z= R e^{i \theta}$$B$H$+$1$k!#$3$N;~!"(B
-$B$3$N1_8L>e$N@QJ,$N4sM?$O(B
+大きな円弧状では$ z= R e^{i \theta}$とかける。この時、
+この円弧上の積分の寄与は
 \begin{eqnarray*}
 \left| \int_{\text{C}_1} \frac{e^{i \alpha z}}{z} \d z \right|&=&
 \left| \int_{0}^{\pi} i R e^{i \theta} \d \theta \frac{e^{i \alpha R 
@@ -112,7 +112,7 @@ $ \alpha > 0$$B$N$H$-$O>eH>LL$G7W;;$9$k!#(B
 e^{i \alpha R \cos \theta} \right| \\
 &\leq&  \int_{0}^{\pi} \d \theta e^{-\alpha R \sin \theta} 
 \end{eqnarray*}
-$\sin \theta$$B$O!"(B$\theta = \frac{\pi}{2}$$B$G@^$jJV$7BP>N$J$N$G!"(B
+$\sin \theta$は、$\theta = \frac{\pi}{2}$で折り返し対称なので、
 \begin{eqnarray*}
 =2 \int_{0}^{\frac{\pi}{2}} \d \theta e^{-\alpha R \sin \theta} 
 \leq 2 \int_{0}^{\frac{\pi}{2}} \d \theta e^{\frac{-2\alpha R \theta}{\pi}} 
@@ -120,13 +120,13 @@ $\sin \theta$$B$O!"(B$\theta = \frac{\pi}{2}$$B$G@^$jJV$7BP>N$J$N$G!"(B
  \quad (R \rightarrow \infty)
 \end{eqnarray*}
 
-$B$=$l$f$(!"(B
+それゆえ、
 \[ \int_{-R}^{-\varepsilon} \d x \frac{e^{i \alpha x}}{x}
 + \int_{\varepsilon}^{R} \d x \frac{e^{i \alpha x}}{x} 
 + \int_{\text{C}_2} \d z \frac{e^{i \alpha z}}{z} = 0.\]
 
-$B$3$N:G8e$N9`$r7W;;$9$k!#(B$\mbox{C}_2$$B>e$G$O(B$z=\varepsilon e^{i \theta}$
-$B$G$"$k$+$i!"$3$N>e$G$O(B$\varepsilon$$B$,Hy>.$@$H$9$k$H(B
+この最後の項を計算する。$\mbox{C}_2$上では$z=\varepsilon e^{i \theta}$
+であるから、この上では$\varepsilon$が微小だとすると
 \begin{eqnarray*}
 \int_{\text{C}_2} \frac{e^{i \alpha z}}{z} \d z &=& \int_{\pi}^{0}
 \frac{e^{i \alpha \varepsilon e^{i \theta}}}{\varepsilon e^{i \theta}}
@@ -137,30 +137,30 @@ $\sin \theta$$B$O!"(B$\theta = \frac{\pi}{2}$$B$G@^$jJV$7BP>N$J$N$G!"(B
 &=& - i\pi.
 \end{eqnarray*}
 
-$B$=$l$f$(!"(B
+それゆえ、
 \[ \int_{-R}^{-\varepsilon} + \int_{\varepsilon}^{R} \frac{e^{i\alpha x}}{x}
 \d x = i \pi.\]
-$R \rightarrow \infty, \varepsilon \rightarrow 0$$B$H$7$F5uIt$r$H$k$H!"(B
+$R \rightarrow \infty, \varepsilon \rightarrow 0$として虚部をとると、
 \[ \int_{0}^{\infty} \d x \frac{\sin \alpha x}{x} = \frac{\pi}{2}\]
-$B$rF@$k!#(B
+を得る。
 
-$\alpha <0$$B$N>l9g!"(B
+$\alpha <0$の場合、
 \[ \int_{0}^{\infty} \d x \frac{\sin \alpha x}{x} = 
 \int_{0}^{\infty} \d x \frac{-\sin \left| \alpha \right|x}{x} =
 -\int_{0}^{\infty} \d x \frac{\sin \left| \alpha \right|x}{x} =
 -\frac{\pi}{2}\]
-$B$rF@$k!#(B
+を得る。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \SubSubAnswer
 
-$B$^$:!"(B
+まず、
 \begin{eqnarray*}
 \int_{-\pi}^{\pi} \cos n x \cos m x \d x &=& \int_{-\pi}^{\pi} \sin nx
 \sin mx \d x = \pi \delta_{m,n} \\
 \int_{-\pi}^{\pi} \cos n x \sin m x \d x &=& 0
 \end{eqnarray*}
-$B$G$"$k$+$i!"(B
+であるから、
 \begin{eqnarray*}
 a_0 &=& \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \d x \\
 &=& \frac{1}{\pi} \int_{-\pi}^{\pi} | x | \d x = \frac{2}{\pi} \int_{0}^{\pi}
@@ -178,26 +178,26 @@ b_n &=& \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \d x \\
 &=& 0 \quad \mbox{since  } |x| \sin nx \mbox{  is odd}
 \end{eqnarray*}
 
-$B0J>e$+$i!"(B
+以上から、
 \[ |x| = \frac{\pi}{2} - \frac{4}{\pi} \sum_{n=0}^{\infty} \frac{1}{(2n+1)^2}
 \cos (2n+1) x.\]
 
 
 
-$B$3$N7k2L$K(B$x=0$$B$rBeF~$9$k$H!"(B$\cos(2n+1)\cdot 0 = 1$$B$G$"$k$+$i!"(B
+この結果に$x=0$を代入すると、$\cos(2n+1)\cdot 0 = 1$であるから、
 \[ \sum_{n=0}^{\infty} \frac{1}{(2n+1)^2} = \frac{\pi ^2}{8}\]
-$B$rF@$k!#(B
+を得る。
 
 \end{subsubanswers}
 
 \SubAnswer
 \begin{subsubanswers}
 \SubSubAnswer
-$\lambda=0$$B$H$*$/$H!"(B
+$\lambda=0$とおくと、
 \[F(0) = \mbox{det} A = R\]
-$B$G$"$k$+$i!"(B$R=\mbox{det} A$$B$OL@$i$+!#;D$j$N9`$O$9$Y$F(B$\lambda$$B$r(B
-$B4^$`$+$i!"(B
-$\mbox{det} \left[ A - \lambda I \right]$$B$N(B$\lambda$$B$r4^$`9`$r7W;;$9$k!#(B
+であるから、$R=\mbox{det} A$は明らか。残りの項はすべて$\lambda$を
+含むから、
+$\mbox{det} \left[ A - \lambda I \right]$の$\lambda$を含む項を計算する。
 
 \begin{eqnarray*}
 && \left| \begin{tabular}{cccc}
@@ -223,14 +223,14 @@ $a_{31}$ & $a_{32}$ \\
 \right| \\
 &&= (a_{11}-\lambda) \left\{ a_{22}-\lambda) (a_{33}-\lambda) - a_{32} a_{23}
 \right\} - a_{12} a_{21}(a_{33}-\lambda) - a_{12}a_{31}(a_{22}-\lambda)
-+ (\lambda $B$r4^$^$J$$9`(B) \\
++ (\lambda を含まない項) \\
 &&= -\lambda^3 + (a_{11}+a_{22}+a_{33}) \lambda^2\\
 &&\qquad {} +(-a_{11} a_{22} - 
 a_{22} a_{33} - a_{11} a_{33} + a_{32} a_{23} + a_{12} a_{21} + a_{13} a_{31})
-\lambda + (\lambda $B$r4^$^$J$$9`(B)
+\lambda + (\lambda を含まない項)
 \end{eqnarray*}
 
-$B$3$3$G!"(B
+ここで、
 \begin{eqnarray*}
 \mbox{Tr} A^2 &=& \mbox{Tr} \left( \begin{tabular}{ccc}
 $a_{11}$ & $a_{12}$ & $a_{13}$ \\
@@ -249,84 +249,84 @@ $a_{31}$ & $a_{32}$ & $a_{33}$ \\
 &=& {a_{11}}^2 + {a_{22}}^2 + {a_{33}}^2 + 2 ( a_{12} a_{21} + a_{13} a_{31}
 + a_{32} a_{23} )
 \end{eqnarray*}
-$B$G$"$k$+$i!"(B
+であるから、
 
 \begin{eqnarray*}
 P &=& \mbox{Tr} A \\
 Q &=& \frac{1}{2} \left\{ \mbox{Tr} A^2 - \left( \mbox{Tr} A \right)^2 \right\}
 \end{eqnarray*}
-$B$rF@$k!#(B
+を得る。
 
 \SubSubAnswer
-$P=0$$B$N$H$-!"(B
+$P=0$のとき、
 \[F(\lambda) = -\lambda^3 + Q \lambda + R\]
-$B$G$"$k$+$i!"(B
+であるから、
 \[F(\lambda)=0\]
-$B$,<B?t2r$r(B1$B$D$@$1;}$D>r7o$r9M$($l$P$h$$!#(B
+が実数解を1つだけ持つ条件を考えればよい。
 
-$B$^$:!"(B
+まず、
 \[ F^\prime (\lambda) = - 3 \lambda^2 + Q\]
-$B$G$"$k$+$i!"(B
+であるから、
 
-$Q \leq 0$$B$N$H$-!"G$0U$N(B$R$$B$KBP$7$F(B$F(\lambda)$$B$O6KCM$r;}$?$:!"C1D4$G$"$k!#(B
-$B$=$l$f$(<B?t2r$r0l$D$@$1;}$D!#(B
+$Q \leq 0$のとき、任意の$R$に対して$F(\lambda)$は極値を持たず、単調である。
+それゆえ実数解を一つだけ持つ。
 
-$Q>0$$B$N$H$-!"(B$F(\lambda)$$B$O(B$\lambda= \pm \displaystyle{\sqrt{\frac{Q}{3}}}$
-$B$G6KCM$r;}$D!#(B$\lambda^3$$B$N78?t$OIi$J$N$G(B
-$\lambda = -\displaystyle{\sqrt{\frac{Q}{3}}}$$B$G6K>.!"(B$\lambda = 
-\displaystyle{\sqrt{\frac{Q}{3}}}$$B$G6KBgCM$r$H$k!#(B
-$B<B?t2r$r;}$D$?$a$K$O6KCM$,F1Id9f$J$i$h$$$+$i!"(B
+$Q>0$のとき、$F(\lambda)$は$\lambda= \pm \displaystyle{\sqrt{\frac{Q}{3}}}$
+で極値を持つ。$\lambda^3$の係数は負なので
+$\lambda = -\displaystyle{\sqrt{\frac{Q}{3}}}$で極小、$\lambda = 
+\displaystyle{\sqrt{\frac{Q}{3}}}$で極大値をとる。
+実数解を持つためには極値が同符号ならよいから、
 \[F(\lambda) = -\lambda^3 + Q \lambda + R = \frac{1}{3} (-3 \lambda^2 + Q)
 \lambda + \frac{2}{3} Q \lambda + R\]
-$B$KCm0U$7$F!"(B
+に注意して、
 \[ F \left( -\sqrt{\frac{Q}{3}} \right) F \left( \sqrt{\frac{Q}{3}} \right)
 = R^2 - \frac{4}{27} Q^3 > 0\]
-$B$J$i$h$$!#$3$l$H>e$N(B$Q \leq 0$$B$r9g$o$;$F!"(B
-$B5a$a$k>r7o$O(B
+ならよい。これと上の$Q \leq 0$を合わせて、
+求める条件は
 \[ R^2 - \frac{4}{27} Q^3 > 0\]
-$B$G$"$k!#(B
+である。
 \end{subsubanswers}
 
 
 \SubAnswer
 \begin{subsubanswers}
 \SubSubAnswer
-$BL@$i$+$K(B$H_0 (x) = 1$$B$G$"$k$+$i!"(B
+明らかに$H_0 (x) = 1$であるから、
 \begin{eqnarray*}
 H_1 (x) &=& x + C_1 \\
 H_2 (x) &=& x^2 + C_2 x + {C_2}^\prime \\
 H_3 (x) &=& x^3 + C_3 x^2 + {C_3}^\prime x + {C_3}^{\prime \prime}
 \end{eqnarray*}
-$B$H$*$$$F!"D>8r@-$+$iL$Dj78?t$rDj$a$k!#(B
-$B$3$3$G!"(B$\displaystyle{\int_{-\infty}^{\infty} \d x e^{- x^2} x^{2n+1} = 0}$
-\quad ($B$?$@$7!"(B$n=0,1,2 \cdots$)
-$B$G$"$k$3$H$KCm0U$9$k!#(B
+とおいて、直交性から未定係数を定める。
+ここで、$\displaystyle{\int_{-\infty}^{\infty} \d x e^{- x^2} x^{2n+1} = 0}$
+\quad (ただし、$n=0,1,2 \cdots$)
+であることに注意する。
 
-$H_1(x)$$B$K$D$$$F!#(B
+$H_1(x)$について。
 \begin{eqnarray*}
 0 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} H_0(x) H_1(x) \\
 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} ( x + C_1) \\
 &=& \sqrt{\pi} C_1
 \end{eqnarray*}
-$B$3$l$h$j!"(B$C_1 = 0.$$B$D$^$j!"(B$H_1(x) = x.$
+これより、$C_1 = 0.$つまり、$H_1(x) = x.$
 
-$B<!$K(B$H_2(x)$$B$K$D$$$F!#(B
-$H_0(x)$$B$H$NFb@Q$+$i!"(B
+次に$H_2(x)$について。
+$H_0(x)$との内積から、
 \begin{eqnarray*}
 0 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} (x^2 + C_2 x + {C_2}^\prime) \\
 &=& \frac{\sqrt{\pi}}{2} + \sqrt{\pi}{C_2}^\prime
 \end{eqnarray*}
-$B$3$l$h$j!"(B${C_2}^\prime = -\displaystyle{\frac{1}{2}}.$
-$H_1(x)$$B$H$NFb@Q$+$i!"(B
+これより、${C_2}^\prime = -\displaystyle{\frac{1}{2}}.$
+$H_1(x)$との内積から、
 \begin{eqnarray*}
 0 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} x (x^2 + C_2 x + {C_2}^\prime) \\
 &=& \frac{\sqrt{\pi}}{2} C_2
 \end{eqnarray*}
-$B$=$l$f$(!"(B$C_2 = 0.$
-$B$h$C$F!"(B$H_2(x) = x^2 - \displaystyle{\frac{1}{2}}$
+それゆえ、$C_2 = 0.$
+よって、$H_2(x) = x^2 - \displaystyle{\frac{1}{2}}$
 
-$B<!$K(B$H_3(x)$$B$K$D$$$F!#(B
-$H_0(x)$$B$H$NFb@Q$r$H$k$H!"(B
+次に$H_3(x)$について。
+$H_0(x)$との内積をとると、
 \begin{eqnarray*}
 0 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} (x^3 + C_3 x^2 + {C_3}^\prime
 x + {C_3}^{\prime \prime} ) \\
@@ -334,9 +334,9 @@ x + {C_3}^{\prime \prime} ) \\
 \int_{-\infty}^{\infty} \d x e^{- x^2} \\
 &=& \sqrt{\pi} \left( \frac{1}{2} C_3 + {C_3}^{\prime \prime} \right)
 \end{eqnarray*}
-$B$=$l$f$(!"(B$C_3 = -2{C_3}^{\prime \prime}.$
+それゆえ、$C_3 = -2{C_3}^{\prime \prime}.$
 
-$H_1(x)$$B$H$NFb@Q$+$i!"(B
+$H_1(x)$との内積から、
 \begin{eqnarray*}
 0 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} x (
 x^3 + C_3 x^2 + {C_3}^\prime x + {C_3}^{\prime \prime}) \\
@@ -344,9 +344,9 @@ x^3 + C_3 x^2 + {C_3}^\prime x + {C_3}^{\prime \prime}) \\
 \int_{-\infty}^{\infty} \d x x^2 e^{- x^2} \\
 &=& \sqrt{\pi} \left( \frac{3}{4} + \frac{{C_3}^\prime}{2} \right)
 \end{eqnarray*}
-$B$=$l$f$(!"(B${C_3}^\prime = -\displaystyle{\frac{3}{2}}.$
+それゆえ、${C_3}^\prime = -\displaystyle{\frac{3}{2}}.$
 
-$H_2(x)$$B$H$NFb@Q$+$i!"(B
+$H_2(x)$との内積から、
 \begin{eqnarray*}
 0 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} \left( x^2 - \frac{1}{2} \right)
 \left( x^3 + C_3 x^2 + {C_3}^\prime x + {C_3}^{\prime \prime} \right) \\
@@ -357,9 +357,9 @@ $H_2(x)$$B$H$NFb@Q$+$i!"(B
 &=& \sqrt{\pi} \left( \frac{3}{4} C_3 + \frac{{C_3}^{\prime \prime}}{2} 
 - \frac{C_3}{4} - \frac{{C_3}^{\prime \prime}}{2} \right)
 \end{eqnarray*}
-$B$3$l$h$j!"(B$C_3 = 0, {C_3}^{\prime \prime}=0.$
+これより、$C_3 = 0, {C_3}^{\prime \prime}=0.$
 
-$B0J>e$r$^$H$a$F!"(B
+以上をまとめて、
 \begin{eqnarray*}
 H_1 (x) &=& x \\
 H_2 (x) &=& x^2 -\frac{1}{2} \\
@@ -367,71 +367,71 @@ H_3 (x) &=& x^3 - \frac{3}{2} x
 \end{eqnarray*}
 
 \SubSubAnswer
-$B5"G<K!$rMQ$$$k!#(B
+帰納法を用いる。
 \begin{equation}
 H_n (-x) - (-1)^n H_n (x) =0 \eqname{Q1}
 \end{equation}
 
-$n=0$$B$N$H$-!"(B
-$H_0 (-x) - (-1)^0 H_0 (x) = 1-1 =0$$B$G$"$k$+$i!"(B
-\eqhref{Q1}$B$O@.$jN)$C$F$$$k!#(B
+$n=0$のとき、
+$H_0 (-x) - (-1)^0 H_0 (x) = 1-1 =0$であるから、
+\eqhref{Q1}は成り立っている。
 
-$B<!$K(B$n=k-1$$B$^$G@.$jN)$C$F$$$k$H$7$F!"(B$n=k$$B$N$H$-$r9M$($k!#(B
-$B$H$3$m$G!"(B
+次に$n=k-1$まで成り立っているとして、$n=k$のときを考える。
+ところで、
 \[ H_n (x) = x^n + C_n x^{n-1} + \cdots\]
-$B$G$"$k$+$i!"L$Dj78?t$O(B$n$$B8D$"$k!#0lJ}!"(B
-$m=n-1, \cdots, 0$$B$KBP$7$F$ND>8r>r7o$+$iFHN)$J>r7o$O(B$n$$B8D$"$k!#(B
-$B$D$^$j!"(B$H_n (x)$$B$O0l0UE*$K7h$^$k!#(B
+であるから、未定係数は$n$個ある。一方、
+$m=n-1, \cdots, 0$に対しての直交条件から独立な条件は$n$個ある。
+つまり、$H_n (x)$は一意的に決まる。
 
-$B$5$F!"(B$0 \leq m < n$$B$N$H$-!"(B
+さて、$0 \leq m < n$のとき、
 \[\int_{-\infty}^{\infty} \d x e^{- x^2} H_n(x) H_m (x) \]
-$B$K$*$$$F(B$x \rightarrow -x $$B$H$*$-$+$($k$H!"(B$m<n$$B$KBP$7$F$O(B
-\eqhref{Q1}$B$O@.$jN)$D$N$G(B
+において$x \rightarrow -x $とおきかえると、$m<n$に対しては
+\eqhref{Q1}は成り立つので
 \begin{eqnarray*}
 0&=&
 \int_{\infty}^{-\infty} \d (-x) e^{- x^2} H_n(-x) H_m(-x) =
 \int_{-\infty}^{\infty} \d x e^{- x^2} (-1)^m H_n(-x) H_m (x) \\
 \end{eqnarray*}
-$B$H$J$j!"(B$H_n(-x)$$B$O(B$H_n(x)$$B$HF1$8D>8r>r7o$rK~$?$9!#$9$J$o$A!"(B
-$H_n(-x)$$B$O(B$H_n(x)$$B$KDj?tG\$r=|$$$F0lCW$9$k!#(B
-$B$3$3$G!"$=$b$=$b(B
-\[ H_n(x) = x^n + (n-1$B<!0J2<$NB?9`<0(B) \]
-$B$G$"$C$?$+$i!"(B
-\[ H_n (-x) = (-1)^n x^n + (n-1$B<!0J2<$NB?9`<0(B) \]
-$B$G$"$k!#(B
-$B$=$l$f$(!"(B
+となり、$H_n(-x)$は$H_n(x)$と同じ直交条件を満たす。すなわち、
+$H_n(-x)$は$H_n(x)$に定数倍を除いて一致する。
+ここで、そもそも
+\[ H_n(x) = x^n + (n-1次以下の多項式) \]
+であったから、
+\[ H_n (-x) = (-1)^n x^n + (n-1次以下の多項式) \]
+である。
+それゆえ、
 \[ H_n(-x) = (-1)^n H_n (x)\]
-$B$,@.$jN)$D!#$D$^$j!"(B$n=k$$B$KBP$7$F$b(B
-\eqhref{Q1}$B$,@.$jN)$D!#(B
+が成り立つ。つまり、$n=k$に対しても
+\eqhref{Q1}が成り立つ。
 
-$B0J>e$+$i!"?t3XE*5"G<K!$K$h$j!"$9$Y$F$N(B$n=0,1,\cdots$$B$KBP$7$F(B
+以上から、数学的帰納法により、すべての$n=0,1,\cdots$に対して
 \[ H_n (-x) - (-1)^n H_n (x) = 0\]
-$B$,@.$jN)$D!#(B
+が成り立つ。
 
 \SubSubAnswer
 
-$B:F$S?t3XE*5"G<K!$rMQ$$$k!#(B
+再び数学的帰納法を用いる。
 
-$n=1$$B$N$H$-!"(B
+$n=1$のとき、
 \[ x H_1 (x) = x^2 = H_2 (x) + a_n H_0 (x) = \left( x^2 - \frac{1}{2} \right)
 + \frac{1}{2}\]
-$B$H$J$j!"(B$a_n = \displaystyle{\frac{1}{2}}$$B$H$*$1$P(B
+となり、$a_n = \displaystyle{\frac{1}{2}}$とおけば
 \begin{equation}
 x H_n (x) = H_{n+1}(x) + a_n H_{n-1}(x) \eqname{Q2}
 \end{equation}
-$B$,@.$jN)$D!#(B
+が成り立つ。
 
-$B<!$K(B$n=k-1$$B$^$G@.$jN)$C$F$$$k$H2>Dj$9$k$H!"(B
+次に$n=k-1$まで成り立っていると仮定すると、
 \[ x H_{k-1} (x) = H_k (x) + a_{k-1} H_{k-2} (x).\]
-$n=k$$B$N$H$-!"(B
+$n=k$のとき、
 \[ x H_k(x)-H_{k+1}(x)= \sum_{l=0}^{k} c_l H_l (x)\]
-$B$H$+$1$k!#(B
-$B$3$3$G$b$7$b(B$c_k \neq 0$$B$H$9$k$H1&JU$N:G9b<!$N9`$O(B$x^{k}$$B$G$"$k!#(B
-$B$3$N$H$-!":8JU$O(B$x \rightarrow -x$$B$KBP$7$F(B
-$(-1)^{k+1}$$B$,$+$+$k$,!"1&JU$N:G9b<!$N9`$K$O(B$(-1)^k$$B$,$+$+$k!#(B
-$B$3$l$OL7=b$9$k!#$=$N$?$a!"(B$c_k=0$$B$G$J$/$F$O$J$i$J$$!#(B
+とかける。
+ここでもしも$c_k \neq 0$とすると右辺の最高次の項は$x^{k}$である。
+このとき、左辺は$x \rightarrow -x$に対して
+$(-1)^{k+1}$がかかるが、右辺の最高次の項には$(-1)^k$がかかる。
+これは矛盾する。そのため、$c_k=0$でなくてはならない。
 
-$m(<k)$$B$KBP$7$F!"(B
+$m(<k)$に対して、
 \begin{eqnarray*}
 \int_{-\infty}^{\infty} \d x e^{- x^2} (xH_k (x)- H_{k+1} (x)) H_m (x) &=&
 \int_{-\infty}^{\infty} \d x e^{- x^2} H_k (x) x H_m (x) \\
@@ -439,45 +439,45 @@ $m(<k)$$B$KBP$7$F!"(B
 (H_{m+1} (x) + a_m H_{m-1}(x)) \\
 &=& \int_{-\infty}^{\infty} \d x e^{- x^2} H_k (x) H_{m+1} (x)
 \end{eqnarray*}
-$B$H$J$k!#$3$l$O(B$m+1 = k$$B$N$H$-$N$_(B$0$$B$G$J$$!#$D$^$j!"(B
+となる。これは$m+1 = k$のときのみ$0$でない。つまり、
 \[xH_k(x)-H_{k+1}(x) = c_{k-1} H_{k-1}(x)\]
-$B$H$+$1$k!#(B
+とかける。
 
-$B$=$3$G!"(B
+そこで、
 \[ a_{k} = c_{k-1}\]
-$B$H$*$1$P(B\eqhref{Q2}$B$,@.$jN)$D!#(B
+とおけば\eqhref{Q2}が成り立つ。
 
-$B0J>e$+$i!"?t3XE*5"G<K!$+$i!"$9$Y$F$N(B$n=0,1,\cdots$$B$KBP$7$F(B
-\eqhref{Q1}$B$,@.$jN)$D!#(B
+以上から、数学的帰納法から、すべての$n=0,1,\cdots$に対して
+\eqhref{Q1}が成り立つ。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-$B<!$K(B
+次に
 \[ \frac{\d}{\d x} H_n (x) = n H_{n-1} (x)\]
-$B$K$D$$$F9M$($k!#(B
+について考える。
 
-$B:F$S?t3XE*5"G<K!$rMQ$$$k!#(B
-$n=1$$B$KBP$7$F$O(B
+再び数学的帰納法を用いる。
+$n=1$に対しては
 \[ \frac{\d}{\d x} H_1 (x) = 1 = 1 \cdot H_0(x)\]
-$B$H$J$jL@$i$+$K@.$jN)$D!#(B
+となり明らかに成り立つ。
 
-$B<!$K(B$n=k-1$$B$K$?$$$7$F(B
+次に$n=k-1$にたいして
 \begin{equation}
 \frac{\d}{\d x} H_n (x) = n H_{n-1} (x) \eqname{Q3}
 \end{equation}
-$B$,@.$jN)$C$F$$$k$H$9$k!#(B
+が成り立っているとする。
 
-$B$9$k$H!"(B$n=k$$B$KBP$7$F(B
-\[ H_n (x) = x^n + (n-1$B<!0J2<$NB?9`<0(B) \]
-$B$G$"$k$+$i!"(B
+すると、$n=k$に対して
+\[ H_n (x) = x^n + (n-1次以下の多項式) \]
+であるから、
 \begin{equation}
-\frac{\d}{\d x} H_n (x) = n x^{n-1} + (n-2$B<!0J2<$NB?9`<0(B) \eqname{Q4}
+\frac{\d}{\d x} H_n (x) = n x^{n-1} + (n-2次以下の多項式) \eqname{Q4}
 \end{equation}
-$B$H$J$k!#(B
-$B$3$N$?$a!"(B
+となる。
+このため、
 \[ \frac{\d}{\d x} H_n (x) = n H_{n-1} (x) + \sum_{l=0}^{n-2} c_l H_l (x)\]
-$B$H$+$1$k!#(B
+とかける。
 
-$B>e$HF1MM$K(B$m<n$$B$KBP$7$F(B$H_m(x)$$B$H$NFb@Q$r9M$($k!#(B
+上と同様に$m<n$に対して$H_m(x)$との内積を考える。
 \begin{eqnarray*}
 &&\int_{-\infty}^{\infty} \d x e^{- x^2} \left( \frac{\d}{\d x} H_n (x) \right)
 H_m (x)  \\
@@ -492,16 +492,16 @@ H_m (x) + H_n (x) e^{-x^2} \frac{\d}{\d x}H_m (x)\right\} \\
 a_n H_{m-1}(x) ) \\
 &&= 2 \int_{-\infty}^{\infty} \d x e^{- x^2} H_n (x) H_{m+1} (x)
 \end{eqnarray*}
-$B$3$l$O(B$m+1 = n$$B$N$H$-$N$_(B$0$$B$G$J$$!#(B
-$B$9$J$o$A!">e$G!"(B$l=0,1,\cdots, n-2$$B$KBP$7$F(B$c_l = 0.$
+これは$m+1 = n$のときのみ$0$でない。
+すなわち、上で、$l=0,1,\cdots, n-2$に対して$c_l = 0.$
 
-$B$^$?!"(B\eqhref{Q4}$B$h$j!"(B$c_{n-1} = n$$B$G$"$k!#(B
-$B$f$($K(B
+また、\eqhref{Q4}より、$c_{n-1} = n$である。
+ゆえに
 \[ \frac{\d}{\d x} H_n (x) = n H_{n-1} (x) \]
-$B$rF@$k!#(B
-$B$3$l$K$h$j!"(B$n=k$$B$N$H$-$b(B\eqhref{Q3}$B$,@.$jN)$D!#(B
-$B0J>e$+$i?t3XE*5"G<K!$K$h$j!"(B
-\eqhref{Q3}$B$,@.$jN)$D!#(B
+を得る。
+これにより、$n=k$のときも\eqhref{Q3}が成り立つ。
+以上から数学的帰納法により、
+\eqhref{Q3}が成り立つ。
 \end{subsubanswers}
 
 \end{subanswers}

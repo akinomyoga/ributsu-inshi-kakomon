@@ -3,76 +3,76 @@
 
 \begin{document}
 \let\b\mathbf
-\begin{question}{$BLdBj(B3}{yt}
-$B;~4V!"6u4V:BI8$K0MB8$9$kEE2YJ,I[(B$\rho(\b{r}',t')$$B$HEEN.J,I[(B$\b j(\b r',t')$$B$,$"$k!#$3$l$i$K$h$C$FM65/$5$l$kEE<'%]%F%s%7%c%k$O!"%m!<%l%s%D>r7o$N$b$H$G!"<!$N$h$&$KI=$o$;$k(B($B0J2<!"(B MKSA$BM-M}C10L7O$rMQ$$$k(B):\begin{equation}
+\begin{question}{問題3}{yt}
+時間、空間座標に依存する電荷分布$\rho(\b{r}',t')$と電流分布$\b j(\b r',t')$がある。これらによって誘起される電磁ポテンシャルは、ローレンツ条件のもとで、次のように表わせる(以下、 MKSA有理単位系を用いる):\begin{equation}
 \phi(\b r,t)=\frac1{4\pi\epsilon_0}\int\frac{\rho(\b r',t')}{|\b r-\b r'|}d^3 r',\qquad
 \b A(\b r,t)=\frac{\mu_0}{4\pi}\int\frac{\b j(\b r',t')}{|\b r-\b r'|}d^3 r'.
-\end{equation}$\epsilon_0$$B$H(B$\mu_0$$B$O$=$l$>$l??6u$NM6EEN($HF)<'N($G!"(B
-$B8wB.$O(B$c=1/\sqrt{\epsilon_0\mu_0}$$B$H=q$1$k!#(B
-$B$^$?!"(B$t'$$B$O(B$t$, $\b r$, $\b r'$, $c$ $B$GDj$^$kNL$G$"$j!"<!$N@_Ld$G9M;!$9$k!#(B
+\end{equation}$\epsilon_0$と$\mu_0$はそれぞれ真空の誘電率と透磁率で、
+光速は$c=1/\sqrt{\epsilon_0\mu_0}$と書ける。
+また、$t'$は$t$, $\b r$, $\b r'$, $c$ で定まる量であり、次の設問で考察する。
 \begin{enumerate}
-\item $BEE<'GH$,EA$o$k;~$NCY1d8z2L$r9MN8$7$F!"<0(B(1)$B$N(B$t'$$B$r7hDj$;$h!#(B
-\item $BEE2Y(B$e$$B$r;}$DE@N3;R$N1?F0$r9M$(!"$=$N0LCV:BI8$r(B$\b x(t')$$B$H$9$k!#(B
-$B$3$N$H$-!"(B$\rho(\b r',t')$$B$H(B$\b j(\b r',t')$$B$r%G%#%i%C%/$N&D4X?t$rMQ$$$FI=$o$;!#(B\item $B$3$NE@N3;R$,$D$/$k1sJ}(B($|\b r|=r\gg |\b  x|$)$B$G$NEE<'%]%F%s%7%c%k$O!"E@N3;R$NB.EY(B$\b v$$B$,8wB.$KHf$Y$F=<J,>.$5$$>l9g$K$O!"(B(1)$B<0$N(B$1/|\b r-\b r'|$$B$r(B$1/r$$B$G6a;w$7$F5a$a$k$3$H$,=PMh$k!#$3$NEE<'%]%F%s%7%c%k$,!"(B$\b v/c$$B$N(B1$B<!$^$G$N6a;w$G!"0J2<$N$h$&$KI=$o$;$k$3$H$r<($;(B:\begin{equation}
+\item 電磁波が伝わる時の遅延効果を考慮して、式(1)の$t'$を決定せよ。
+\item 電荷$e$を持つ点粒子の運動を考え、その位置座標を$\b x(t')$とする。
+このとき、$\rho(\b r',t')$と$\b j(\b r',t')$をディラックのδ関数を用いて表わせ。\item この点粒子がつくる遠方($|\b r|=r\gg |\b  x|$)での電磁ポテンシャルは、点粒子の速度$\b v$が光速に比べて充分小さい場合には、(1)式の$1/|\b r-\b r'|$を$1/r$で近似して求めることが出来る。この電磁ポテンシャルが、$\b v/c$の1次までの近似で、以下のように表わせることを示せ:\begin{equation}
 \phi(\b r,t)=\frac{e}{4\pi\epsilon_0 r}\left(
 1+\frac{\hat{\b r}\cdot\b v(t_0)}c
 \right)\qquad,
 c\b A(\b r,t)=\frac{e}{4\pi\epsilon_0r}\frac{\b v(t_0)}{c}.
-\end{equation}$BC"$7!"(B$\hat{\b r}=\b r/r$, $t_0=t-r/c$$B$G$"$k!#(B
-\item $BA0Ld$N7k2L$+$i!"EE>l(B$\b E(\b r)=-\nabla\phi-\partial\b A/\partial t$$B$H(B
-$B<'B+L)EY(B$\b B(\b r,t)=\nabla\times\b A$$B$N1sJ}$G$N<gMW9`(B($1/r$$B$KHfNc$9$k9`(B)$B$,!"E@N3;R$N2CB.EY(B$\b a$$B$rMQ$$$F0J2<$N$h$&$KI=$o$;$k$3$H$r<($;(B:\begin{equation}
+\end{equation}但し、$\hat{\b r}=\b r/r$, $t_0=t-r/c$である。
+\item 前問の結果から、電場$\b E(\b r)=-\nabla\phi-\partial\b A/\partial t$と
+磁束密度$\b B(\b r,t)=\nabla\times\b A$の遠方での主要項($1/r$に比例する項)が、点粒子の加速度$\b a$を用いて以下のように表わせることを示せ:\begin{equation}
 \b E(\b r,t)=\frac{e}{4\pi\epsilon_0c^2r}\hat{\b r}\times(\hat{\b r}\times\b a(t_0)),\qquad
 c\b B(\b r,t)=-\frac{e}{4\pi\epsilon_0c^2r}\hat{\b r}\times\b a(t_0).
-\end{equation}$B$3$3$G!"%Y%/%H%k@Q$N8x<0(B$\b X\times(\b Y\times\b Z)=\b Y(\b X\cdot\b Z)-\b Z(\b X\cdot\b Y)$$B$r;H$C$FNI$$!#(B
-\item (3)$B<0$rMQ$$$F0J2<$N@_Ld$KEz$($h!#(B
+\end{equation}ここで、ベクトル積の公式$\b X\times(\b Y\times\b Z)=\b Y(\b X\cdot\b Z)-\b Z(\b X\cdot\b Y)$を使って良い。
+\item (3)式を用いて以下の設問に答えよ。
 \begin{enumerate}
-\item $BE@N3;R$,!"?^(B1$B$N$h$&$K!"0lDj$N?6I}(B$b$$B$H0lDj$N?6F0?t$G(B$x$$B<4>e$rC1?6F0$7$F$$$k$H$9$k!#$3$N$H$-!"86E@$+$i5wN%(B$r$$B$@$1N%$l$?5eLL>e(B($r\gg b$$B$H$9$k(B)$B$G!"E@N3;R$N1?F0$N0l<~4|$"$?$j$K!"EE<'GH$N6/EY$,:GBg$H$J$k>l=j$O$I$3$+(B? $BM}M3$r$D$1$FEz$($h!#(B
-\item  $BE@N3;R$,!"?^(B2$B$N$h$&$K!"0lDj$NH>7B(B$b$$B$H0lDj$N3Q?6F0?t$G(B$xy$$BJ?LL>e$r2sE>1?F0$7$F$$$k$H$9$k!#$3$N$H$-!"86E@$+$i5wN%(B$r$$B$@$1N%$l$?5eLL>e(B($r\gg b$$B$H$9$k(B)$B$G!"E@N3;R$N1?F0$N0l<~4|$"$?$j$K!"EE<'GH$N6/EY$,:GBg$H$J$k>l=j$O$I$3$+(B? $BM}M3$r$D$1$FEz$($h!#(B
+\item 点粒子が、図1のように、一定の振幅$b$と一定の振動数で$x$軸上を単振動しているとする。このとき、原点から距離$r$だけ離れた球面上($r\gg b$とする)で、点粒子の運動の一周期あたりに、電磁波の強度が最大となる場所はどこか? 理由をつけて答えよ。
+\item  点粒子が、図2のように、一定の半径$b$と一定の角振動数で$xy$平面上を回転運動しているとする。このとき、原点から距離$r$だけ離れた球面上($r\gg b$とする)で、点粒子の運動の一周期あたりに、電磁波の強度が最大となる場所はどこか? 理由をつけて答えよ。
 \end{enumerate}
 \end{enumerate}
 \begin{center}
 \input{2000phy3-1.tpc}
 \end{center}
 \end{question}
-\begin{answer}{$BLdBj(B3}{}
-$B0J2<E@EE2Y$O:BI8$N86E@$N6a$/$K$$$k$H$9$k!#(B
+\begin{answer}{問題3}{}
+以下点電荷は座標の原点の近くにいるとする。
 \begin{enumerate}
-\item $B8w$OB.EY(B$c$$B$GEA$o$k$+$i!"(B$t'=t-|\b r-\b r'|/c$.
-\item $BA46u4V$KEO$k@QJ,$,(B$e$$B$J$N$G!"(B$\rho(\b r',t')=e\delta(\b r'-\b x(t'))$.
-$B$h$C$F(B$\b j(\b r',t')=e\delta(\b r'-\b x(t'))d\b x(t')/dt'$.
-\item $1/|\b r-\b r'|=1/r$$B$H6a;w$9$k$H$^$:(B\[
+\item 光は速度$c$で伝わるから、$t'=t-|\b r-\b r'|/c$.
+\item 全空間に渡る積分が$e$なので、$\rho(\b r',t')=e\delta(\b r'-\b x(t'))$.
+よって$\b j(\b r',t')=e\delta(\b r'-\b x(t'))d\b x(t')/dt'$.
+\item $1/|\b r-\b r'|=1/r$と近似するとまず\[
 c\b A(\b r,t)=\frac{c\mu_0}{4\pi r}\int e\delta(\b r'-\b x(t'))\b v(t')d^3r'
 =\frac{1}{4\pi\epsilon_0 r}\int e\delta(\b r'-\b x(t'))\frac{\b v(t')}{c}d^3r'
 =\frac{e}{4\pi\epsilon_0 r}\frac{\b v(t')}{c},
-\]$B0lJ}(B\[
+\]一方\[
 \phi(\b r,t)=\frac1{4\pi\epsilon_0r}\int e\delta(\b r'-\b x(t-r/c))d^3r'
-\]$B$O(B$\partial |\b r|/\partial \b r=\hat{\b r}$$B$+$i(B
-$\partial |\b r-\b r'|/\partial \b r'=-\hat{\b r-\b r'}$$B$KCm0U$9$l$P(B\[
+\]は$\partial |\b r|/\partial \b r=\hat{\b r}$から
+$\partial |\b r-\b r'|/\partial \b r'=-\hat{\b r-\b r'}$に注意すれば\[
 =\frac e{4\pi\epsilon_0 r}\left(1-\frac{\hat{\b r}}c\cdot \frac
 {d\b x(t')}{dt'}\right)^{-1}
 =\frac{e}{4\pi\epsilon_0 r}\left(1+\frac{\hat{\b r}\cdot\b v(t')}{c}.\right)
 \]
-\item $B$^$:(B\[
+\item まず\[
 c\b B(\b r,t)=\nabla\times \frac{e}{4\pi\epsilon_0 r}\frac{\b v(t')}{c}
-\]$B$O(B$\nabla $$B$,(B$1/r$$B$K:nMQ$9$k$H(B$\propto r^{-2}$$B$K$J$k$N$G!"(B
-$\nabla $$B$,(B$t'$$B$K:nMQ$9$k$b$N$N$_$,;D$j!"(B$\nabla t'=-\hat{\b r}/c$$B$J$N$G!"(B\[
+\]は$\nabla $が$1/r$に作用すると$\propto r^{-2}$になるので、
+$\nabla $が$t'$に作用するもののみが残り、$\nabla t'=-\hat{\b r}/c$なので、\[
 =\frac{e}{4\pi\epsilon_0 r}\frac{-\hat{\b r}}{c}\times\frac{\b a(t_0)}{c}
 =-\frac{e}{4\pi\epsilon_0c^2 r}\hat{\b r}\times\b a(t_0),
-\]$B0lJ}GHF0BS$G$O2#GH$K$J$C$F$$$F!"?J9TJ}8~$O(B$\hat{\b r}$$B$@$+$i(B\[
+\]一方波動帯では横波になっていて、進行方向は$\hat{\b r}$だから\[
 \b E(\b r,t)=-\hat{\b r}\times c\b B(\b r,t)
 =\frac{e}{4\pi\epsilon_0c^2 r}\hat{\b r}\times(\hat{\b r}\times\b a(t_0)).
 \]
-\item $BEE<'GH$N6/EY$OEE>l$b<'>l$bF1$8$@$+$i!"<'>l$@$19M$($k!#(B
+\item 電磁波の強度は電場も磁場も同じだから、磁場だけ考える。
 \begin{enumerate}
-\item $\hat{\b r}$$B$H(B$x$$B<4$N$J$93Q$r(B$\theta$$B$H$9$k$H!"(B
+\item $\hat{\b r}$と$x$軸のなす角を$\theta$とすると、
 $|\hat{\b r}\times\b a| \propto |\b a|\sin\theta$
-$B$G$"$k$+$i!"?6I}$O(B$\theta=\pi/2$, i.e. $yz$$BJ?LLFb$,0lHVBg$-$$!#(B
-\item $z$$B<4$H$J$93Q$,(B$\theta$$B$N3FE@$G$N6/EY$r9M$($k!#(B
-${\b a}$$B$N%Y%/%H%k(B$\hat{\b r}$$B$K?bD>$J@.J,$@$1$,8z$/$,!"(B
-$BAP6K;R$O(B$\hat{\b r}$$B$K?bD>$JJ?LL$+$i(B$\theta$$B79$$$?J?LL$r$^$o$C$F$$$k$N$G!"(B
-$\b{\hat z}\times\hat{\b r}$$BJ}8~$N@.J,$O?6I}(B$|a|$$B$G?6F0$7$F$$$F!"(B
-$\b{\hat z}$$B$H(B$\hat{\b r}$$B$N$J$9J?LLFb$N@.J,$O?6I}(B$|a|\cos\theta$$B$G?6F0$7$F$$$k!#$h$C$F6/EY$O(B$1+\cos^2\theta$$B7?$N3QEYJ,I[$r$9$k$N$G!"(B
-$B:GBg$O(B$\theta=0$$B$9$J$o$A(B$z$$B<4>e$,$b$C$H$b6/$$!#(B
+であるから、振幅は$\theta=\pi/2$, i.e. $yz$平面内が一番大きい。
+\item $z$軸となす角が$\theta$の各点での強度を考える。
+${\b a}$のベクトル$\hat{\b r}$に垂直な成分だけが効くが、
+双極子は$\hat{\b r}$に垂直な平面から$\theta$傾いた平面をまわっているので、
+$\b{\hat z}\times\hat{\b r}$方向の成分は振幅$|a|$で振動していて、
+$\b{\hat z}$と$\hat{\b r}$のなす平面内の成分は振幅$|a|\cos\theta$で振動している。よって強度は$1+\cos^2\theta$型の角度分布をするので、
+最大は$\theta=0$すなわち$z$軸上がもっとも強い。
 
 \end{enumerate}
 \end{enumerate}

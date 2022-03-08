@@ -3,57 +3,57 @@
 
 \begin{document}
 
-\begin{question}{���� ���w}{}
+\begin{question}{教育 数学}{}
 
 \begin{subquestions}
 \SubQuestion
-  ���ϐ�$x,y,z$�Ɋւ���񎟌`��
+  実変数$x,y,z$に関する二次形式
 %
   \begin{equation}
     f(x,y,z)=2x^2+3y^2+4z^2-\sqrt{6}xy+\sqrt{6}yz \eqname{Q1-1}
   \end{equation}
 %
-  �ɂ��āA�ȉ��̐ݖ�ɓ�����B
+  について、以下の設問に答えよ。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    �x�N�g��$\vec{r}$��
+    ベクトル$\vec{r}$を
     \[ \vec{r}=\left(\begin{array}{c}x\\y\\z\end{array} \right) \] 
-    �Ƃ��A$f(x,y,z)=\Trans{\vec{r}} A \vec{r}$�ƕ\�����Ƃ��A
-    �Ώ̍s��$A$�̌ŗL�l�ƒP�ʌŗL�x�N�g��(��2�����͔�)�����߂�B
-    �����ł�$\Trans{\vec{r}}\,$��$\vec{r}\,$�̓]�u��\���B
+    とし、$f(x,y,z)=\Trans{\vec{r}} A \vec{r}$と表したとき、
+    対称行列$A$の固有値と単位固有ベクトル(第2成分は非負)を求めよ。
+    ここでは$\Trans{\vec{r}}\,$は$\vec{r}\,$の転置を表す。
 
   \SubSubQuestion
-    ��ŋ��߂�$A$�̌ŗL�l$\lambda_1,\lambda_2,\lambda_3$�ɑΉ�����
-    �P�ʌŗL�x�N�g��$\vec{p_1},\vec{p_2},\vec{p_3}$����ׂ�
-    3�s3��̍s��$P=(\vec{p_1},\vec{p_2},\vec{p_3})$�����B
-    $P$�ɂ����W�ϊ�
+    上で求めた$A$の固有値$\lambda_1,\lambda_2,\lambda_3$に対応する
+    単位固有ベクトル$\vec{p_1},\vec{p_2},\vec{p_3}$を並べて
+    3行3列の行列$P=(\vec{p_1},\vec{p_2},\vec{p_3})$を作る。
+    $P$による座標変換
 %
     \begin{equation}
       \vec{r}=P\vec{r}^\prime, \hspace{15mm} %
       \vec{r}^\prime=\left(\begin{array}{c}x^\prime\\y^\prime\\z^\prime\end{array}\right) \eqname{Q1-2}
     \end{equation}
 %
-    ���s�����ꍇ�A$f(x,y,z)$���ǂ̂悤�Ȍ`�ɕϊ�����邩�����߂�B
-    �܂��A$P$�ɂ���ĕϊ������x�N�g���͂��̑傫����ς��Ȃ�����
-    �������B
+    を行った場合、$f(x,y,z)$がどのような形に変換されるかを求めよ。
+    また、$P$によって変換されるベクトルはその大きさを変えないこと
+    を示せ。
 
   \SubSubQuestion
-    $P$�ɂ��ϊ������鎲�̂܂��̉�]�Ƃ݂Ȃ������A
-    ���̉�]���̕����x�N�g�������߂�B
+    $P$による変換をある軸のまわりの回転とみなした時、
+    この回転軸の方向ベクトルを求めよ。
 
   \SubSubQuestion
-    $P^n=E$�ƂȂ�ŏ��̎��R��$n$�����߂�B
-    ������$E$��3���̒P�ʍs��ł���B
+    $P^n=E$となる最小の自然数$n$を求めよ。
+    ただし$E$は3次の単位行列である。
 
   \end{subsubquestions}
 
 
 \SubQuestion
-  2����$(x,y)$���ʂ̏㔼��$(-\infty < x < \infty,y>0)$�ɂ�����A
-  �Ȃ߂炩�ȋȐ����l����B
-  �Ȑ��́A�����p�����[�^$s$�ɂ����$(x(s),y(s))$�ƕ\����A
-  ���̔����������𖞂������̂Ƃ���B
+  2次元$(x,y)$平面の上半面$(-\infty < x < \infty,y>0)$における、
+  なめらかな曲線を考える。
+  曲線は、実数パラメータ$s$によって$(x(s),y(s))$と表され、
+  次の微分方程式を満たすものとする。
 %
   \begin{equation}
     y x^{\prime\prime}-2x^\prime y^\prime   = 0 \hspace{15mm}%
@@ -61,33 +61,33 @@
     \eqname{Q2-1}
   \end{equation}
 %
-  �������A�֐�$x(s)$��2�K�����\�ŁA
+  ただし、関数$x(s)$は2階微分可能で、
   $x^\prime=\tDeriver{x}{s},\,x^{\prime\prime}=\tDeriver{^2x}{s^2}$
-  �����
+  および
   ${x^\prime}^2=(\tDeriver{x}{s})^2$
-  �ł���B�֐�$y(s)$�ɂ��Ă����l�ł���B�ȉ��̐ݖ�ɓ�����B
+  である。関数$y(s)$についても同様である。以下の設問に答えよ。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    �V�����ϐ�
+    新しい変数
 %
     \begin{equation}
       X={\frac{x^\prime}{y}},\hspace{15mm} Y={\frac{y^\prime}{y}} \eqname{Q2-2}
     \end{equation}
 %
-    �𓱓����ĕϐ�$X(s)$��$Y(s)$�̖������ׂ������������߂�B\\
-    ����Ɏ��̊֌W
+    を導入して変数$X(s)$と$Y(s)$の満たすべき方程式を求めよ。\\
+    さらに次の関係
 %
     \begin{equation}
       X^2+Y^2=C \eqname{Q2-3}
     \end{equation}
 %
-    �����藧���Ƃ������B�������A$C$�͒萔�ł���B
+    が成り立つことを示せ。ただし、$C$は定数である。
 
   \SubSubQuestion
-    ������\eqhref{Q2-1}�𖞂���$(x(s),y(s))$�͂ǂ̂悤�ȋȐ��Q��
-    �\�����B$X=0$��$X\neq 0$�̏ꍇ�ɕ����āA���ꂼ��ɂ��ċ��߂�B
-    ������$C=1$�Ƃ��Ă悢�B
+    方程式\eqhref{Q2-1}を満たす$(x(s),y(s))$はどのような曲線群を
+    表すか。$X=0$と$X\neq 0$の場合に分けて、それぞれについて求めよ。
+    ただし$C=1$としてよい。
 
   \end{subsubquestions}
 
@@ -98,45 +98,45 @@
     x^2+y^2=z^2 \eqname{Q3-1}
   \end{equation}
 %
-  �𖞂������̐���$x,y,z$�̑g�ݍ��킹��S�ċ��߂���@���l����B
-  ������$x,y,z$�̂ǂ�2���A�������ɑf(�ő���񐔂�$1$)�Ƃ���B
+  を満たす正の整数$x,y,z$の組み合わせを全て求める方法を考える。
+  ここで$x,y,z$のどの2つも、たがいに素(最大公約数が$1$)とする。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $x$��$y$�́A����������A�����������ł��邱�Ƃ��ؖ�����B
+    $x$と$y$は、一方が偶数、もう一方が奇数であることを証明せよ。
 
   \SubSubQuestion
-    �ȉ��ł́A�����̕���$x$�Ƃ���B
-    �c���$y$��$z$��2������A$A=(z+y)/2,B=(z-y)/2$�ƒ�`����Ƃ��A
-    $A$��$B$�͐����ł���A���A�������ɑf�ł��邱�Ƃ��ؖ�����B
+    以下では、偶数の方を$x$とする。
+    残りの$y$と$z$の2数から、$A=(z+y)/2,B=(z-y)/2$と定義するとき、
+    $A$と$B$は整数であり、かつ、たがいに素であることを証明せよ。
 
   \SubSubQuestion
-    ��ʂɁA�������ɑf�Ȑ��̐���$A$��$B$�̐ς����̐�����$2$��A���Ȃ킿
+    一般に、たがいに素な正の整数$A$と$B$の積が正の整数の$2$乗、すなわち
 %
     \begin{equation}
       A\cdot B=C^2 \eqname{Q3-2}
     \end{equation}
 %
-    �ŕ\����ꍇ�A$A=\alpha^2,B=\beta^2$�ƂȂ鐮��$\alpha,\beta$��
-    ���݂��邱�Ƃ��ؖ�����B
+    で表せる場合、$A=\alpha^2,B=\beta^2$となる整数$\alpha,\beta$が
+    存在することを証明せよ。
 
   \SubSubQuestion
-    ��\eqhref{Q3-1}�𖞂���3�̐���$x,y,z$��2�̐���$\alpha,\beta$
-    (������$\alpha >\beta > 0$)���瓱�����������B
+    式\eqhref{Q3-1}を満たす3つの整数$x,y,z$を2つの整数$\alpha,\beta$
+    (ここで$\alpha >\beta > 0$)から導く式を示せ。
 
   \SubSubQuestion
-    �O��̌��ʂ�p���āA$ \alpha \leq 6 $�͈̔͂ŁA�������ɑf��
-    ���ׂĂ�$x,y,z$�̑g�ݍ��킹�������B
+    前問の結果を用いて、$ \alpha \leq 6 $の範囲で、たがいに素な
+    すべての$x,y,z$の組み合わせを示せ。
 
   \end{subsubquestions}
 \end{subquestions}
 \end{question}
-\begin{answer}{���� ���w}{}
+\begin{answer}{教育 数学}{}
 
 % Definition of local macros
 \def\vr{\vec{r}\,}
 
-% ---- 3�������x�N�g���̐����\��
+% ---- 3次元横ベクトルの成分表示
 \def\vectT#1#2#3{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
 
 \begin{subanswers}
@@ -144,7 +144,7 @@
 
   \begin{subsubanswers}
   \SubSubAnswer
-    ��\eqhref{Q1-1}�͎��̂悤�ɕ\�����B
+    式\eqhref{Q1-1}は次のように表される。
 %
     \[ f(x,y,z)=%
        \vectT{x}{y}{z}
@@ -154,8 +154,8 @@
          0          & \sqrt{6}/2  & 4          \end{pmatrix}
        \vect{x}{y}{z} \]
 %
-    ���̍s��$A$�ł���B$A$�̌ŗL�l
-    $\lambda$ �� $\det(A-\lambda E)=0 $ ���A
+    この行列が$A$である。$A$の固有値
+    $\lambda$ は $\det(A-\lambda E)=0 $ より、
 %
     \begin{eqnarray*}
       \lefteqn{\det \begin{pmatrix}%
@@ -171,15 +171,15 @@
        &\Yueni& \lambda=1,\,3,\,5
     \end{eqnarray*}
 %
-    �e�ŗL�l���A���̖₢�̌`���ɏ]����
-    $\lambda_1=1,\,\lambda_2=3,\,\lambda_3=5$�ƒu���B
-    ���ꂼ��̒P�ʌŗL�x�N�g��\\
-    $\vec{p}_1,\,\vec{p}_2,\,\vec{p}_3$��
+    各固有値を、次の問いの形式に従って
+    $\lambda_1=1,\,\lambda_2=3,\,\lambda_3=5$と置く。
+    それぞれの単位固有ベクトル\\
+    $\vec{p}_1,\,\vec{p}_2,\,\vec{p}_3$は
 %
     \[ A\vec{p}_i=\lambda \vec{p}_i  \quad (i=1,2,3) \hspace{15mm}%
        |\vec{p}_i|=1  \quad (i=1,2,3) \]
 %
-    ����v�Z����ƈȉ��̒ʂ�ƂȂ�B
+    から計算すると以下の通りとなる。
 %
     \[ \vec{p}_1 = \vect{\hfill 3/4}{\sqrt{6}/4}{-1/4}%
        \hskip 0.4 in%
@@ -189,7 +189,7 @@
 %
 
   \SubSubAnswer
-    �s��$P$�̐����͎��̒ʂ�ł���B
+    行列$P$の成分は次の通りである。
 %
     \[ P = \vectT{\vec{p}_1}{\vec{p}_2}{\vec{p}_3}
          = \begin{pmatrix}
@@ -197,9 +197,9 @@
             \sqrt{6}/4 &  1/2        & \sqrt{6}/4 \\
             -1/4       & -\sqrt{6}/4 & \hfill 3/4 \end{pmatrix} \]
 %
-    $\vec{p}_1 ,\vec{p}_2 ,\vec{p}_3 $�͒P�ʃx�N�g���ňقȂ�ŗL�l
-    �ɑ����邽�ߒ������A$\vec{p}_i \cdot \vec{p}_j=\delta_{i,j}$
-    �ł���B$\Trans{P}P$���v�Z�����
+    $\vec{p}_1 ,\vec{p}_2 ,\vec{p}_3 $は単位ベクトルで異なる固有値
+    に属するため直交し、$\vec{p}_i \cdot \vec{p}_j=\delta_{i,j}$
+    である。$\Trans{P}P$を計算すると
 %
     \[ \Trans{P}P%
        = \vect{\Trans{\vec{p}_1}}{\Trans{\vec{p}_2}}{\Trans{\vec{p}_3}}
@@ -219,7 +219,7 @@
            0 & 1 & 0 \\
            0 & 0 & 1 \end{pmatrix} \]
 %
-    ����� $P^{-1}=\Trans{P}$�ł���B�܂�$AP$���v�Z�����
+    よって $P^{-1}=\Trans{P}$である。また$AP$を計算すると
 %
     \[ A\vectT{\vec{p}_1}{\vec{p}_2}{\vec{p}_3}
        = \vectT{\lambda_1\vec{p}_1}%
@@ -242,7 +242,7 @@
             0 & 3 & 0 \\
             0 & 0 & 5 \end{pmatrix} \]
 %
-    $\vr=P\vr^{\prime}$�̕ϊ��ɂ���āA$f$��
+    $\vr=P\vr^{\prime}$の変換によって、$f$は
 %
     \[ f(x,y,z)%
          =   \Trans{\vr} A\vr%
@@ -250,7 +250,7 @@
          =   \Trans{\vr^{\prime}}\Trans{P} A P \vr^{\prime}%
          =   \Trans{\vr^{\prime}} (P^{-1} A P) \vr^{\prime} \]
 %
-    �Ə��������B����āA
+    と書きかわる。よって、
 %
     \[ f(x,y,z)%
        = \vectT{x^{\prime}}{y^{\prime}}{z^{\prime}}
@@ -261,7 +261,7 @@
          \vect{x^{\prime}}{y^{\prime}}{z^{\prime}}
        ={x^{\prime}}^2 + 3{y^{\prime}}^2 + 5{z^{\prime}}^2 \]
 %
-    �ƂȂ�B�܂��A
+    となる。また、
 %
     \[ \vr\cdot\vr%
        = \Trans{\vr}\vr
@@ -270,22 +270,22 @@
        = \Trans{\vr^{\prime}} \Trans{P} P \vr
        = \Trans{\vr^{\prime}} \vr \]
 %
-    �ł��邩��$P$�ɂ����W�ϊ��ɂ���āA�x�N�g���̑傫���͕s�ςł���B
+    であるから$P$による座標変換によって、ベクトルの大きさは不変である。
 
   \SubSubAnswer
-    ���̉�]���̕����x�N�g����$\vec{a}$�ƒu����$\vec{a}$��$P$�ɂ��
-    ��]�ɂ���Č������ς��Ȃ��B�܂��A$P$�ɂ���]�ł̓x�N�g����
-    �����͕ς��Ȃ��̂ŁA$P\vec{a}=\vec{a}$�ƂȂ�͂��ł���B
-    �����������
+    この回転軸の方向ベクトルを$\vec{a}$と置くと$\vec{a}$は$P$による
+    回転によって向きが変わらない。また、$P$による回転ではベクトルの
+    長さは変わらないので、$P\vec{a}=\vec{a}$となるはずである。
+    これを解いて
 %
     \[ \vec{a} = \vect{1}{0}{-1} \times {\rm  const} \]
 %
 
   \SubSubAnswer
-    $P$�̓x�N�g��$\vec{a}$�̂܂��̉�]������A���̉�]�p�x��
-    $\theta$�Ƃ���B$\vec{a}$�ɐ����ȃx�N�g��$\vec{u}$��K���ɂƂ�B
-    $\vec{u}$����]���Ĉڂ����x�N�g��$P\vec{u}$ ��$\vec{u}$�̂Ȃ�
-    �p�x��$\theta$�ł���B���Ȃ킿�A
+    $P$はベクトル$\vec{a}$のまわりの回転だから、その回転角度を
+    $\theta$とする。$\vec{a}$に垂直なベクトル$\vec{u}$を適当にとる。
+    $\vec{u}$を回転して移したベクトル$P\vec{u}$ と$\vec{u}$のなす
+    角度は$\theta$である。すなわち、
 %
     \[ \vec{u} \equiv \vect{0}{1}{0} \hspace{10mm}%
        P\vec{u}= \vect{-\sqrt{6}/4}{1/2}{-\sqrt{6}/4} \hspace{10mm}%
@@ -294,22 +294,22 @@
        = \frac{1}{2} \hspace{10mm}%
        \Yueni \theta=60\deg \]
 %
-    $P$�̓x�N�g��$\vec{a}=(1,0,-1)$�̂܂���$60\deg$�̉�]������A
-    $P^6$��$360\deg$�̉�]�ɂȂ�B$P^6=E$�B�����$n=6$�ł���B
+    $P$はベクトル$\vec{a}=(1,0,-1)$のまわりの$60\deg$の回転だから、
+    $P^6$が$360\deg$の回転になる。$P^6=E$。よって$n=6$である。
 
   \end{subsubanswers}
 
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    ��\eqhref{Q2-2}���A
+    式\eqhref{Q2-2}より、
 %
     \[ x^{\prime}=yX \hspace{15mm}%
        x^{\prime\prime}=y^{\prime}X+yX^{\prime}=yXY +yX^{\prime} \]
     \[ y^{\prime}=yY \hspace{15mm}%
        y^{\prime\prime}=y^{\prime}Y+yY^{\prime}=yY^2+yY^{\prime} \]
 %
-    �����̎������������\eqhref{Q2-1}�ɑ������B
+    これらの式を微分方程式\eqhref{Q2-1}に代入する。
 %
     \begin{eqnarray}
       && yx^{\prime\prime}-2x^{\prime}y^{\prime}=0 \hspace{26mm}
@@ -318,7 +318,7 @@
       \Yueni  Y^{\prime}+X^2=0 \eqname{A2-3}
     \end{eqnarray}
 %
-    $\eqhref{A2-2}\times X+\eqhref{A2-3}\times Y $���v�Z����ƁA
+    $\eqhref{A2-2}\times X+\eqhref{A2-3}\times Y $を計算すると、
 %
     \begin{equation}
       XX^{\prime}+YY^{\prime}=0 \hspace{10mm}
@@ -329,7 +329,7 @@
 
 
   \SubSubAnswer
-    $X\equiv 0$�̏ꍇ
+    $X\equiv 0$の場合
 %
     \[ Y = \pm c
        \quad\Leftrightarrow\quad
@@ -343,9 +343,9 @@
        \quad\Leftrightarrow\quad%
        x={\rm const} \equiv B \]
 %
-    ����āA$ X\equiv 0$�̏ꍇ�A$x=$���A$y>0$�̔������ł���B
-    $ X \neq 0 $�̏ꍇ�́A$Y^2-c^2 \neq 0$�B��\eqhref{A2-3}���A
-    $X^2=-Y^{\prime}$����\eqhref{A2-4}�ɑ������ƁA$Y$�����̔����������ɂȂ�B 
+    よって、$ X\equiv 0$の場合、$x=$一定、$y>0$の半直線である。
+    $ X \neq 0 $の場合は、$Y^2-c^2 \neq 0$。式\eqhref{A2-3}より、
+    $X^2=-Y^{\prime}$を式\eqhref{A2-4}に代入すると、$Y$だけの微分方程式になる。 
 %
     \[ Y^{\prime}-Y^2+c^2=0%
        \quad\Leftrightarrow\quad%
@@ -354,12 +354,12 @@
        = \int {\frac{\d{Y}}{Y^2-c^2}}%
        = \frac{1}{2c} \int \left( {\frac{1}{Y-c}}-{\frac{1}{Y+c}}\right) \d{Y}  \]
 %
-    ������A
+    これより、
 %
     \[ \log\left|{\frac{Y-c}{Y+c}}\right|%
        = 2cs+\alpha \hskip 0.3 in (\alpha= {\rm const}) \]
 %
-    �ƂȂ�B��\eqhref{A2-4}���$Y$�͈̔͂�$-c<Y<c$�ł���B���̂Ƃ��A
+    となる。式\eqhref{A2-4}より$Y$の範囲は$-c<Y<c$である。このとき、
 %
     \begin{equation}
       Y = {\frac{y^{\prime}}{y}}%
@@ -372,7 +372,7 @@
       \Yueni y={\frac{a}{\cosh(cs+\alpha)}}\hskip 0.3 in (a>0) \eqname{A2-6}
     \end{equation}
 %
-    ��\eqhref{A2-4},\eqhref{A2-5}���A
+    式\eqhref{A2-4},\eqhref{A2-5}より、
 %
     \begin{equation}
       X^2 = c^2-c^2{\frac{\sinh^2(cs+\alpha)}{\cosh^2(cs+\alpha)}}%
@@ -381,23 +381,23 @@
         X = {\frac{\pm c}{\cosh(cs+\alpha)}} \eqname{A2-7}
     \end{equation}
 %
-    ��\eqhref{A2-6},\eqhref{A2-7}���A
+    式\eqhref{A2-6},\eqhref{A2-7}より、
 %
     \[ x^{\prime}=yX={\frac{\pm ac}{\cosh^2(cs+\alpha)}} \hspace{15mm}%
       \Yueni
       x=\pm a \tanh(cs+\alpha)+b \hskip 0.3 in%
       (b:{\rm const}) \]
 %
-    $s$���p�����[�^�Ƃ���$2$�̕ϐ�$(x,y)$���`���Ȑ��́A
-    $1-\tanh^2(cs+\alpha)=1/\cosh^2(cs+\alpha)$�̊֌W��p���āA
+    $s$をパラメータとした$2$つの変数$(x,y)$が描く曲線は、
+    $1-\tanh^2(cs+\alpha)=1/\cosh^2(cs+\alpha)$の関係を用いて、
 %
     \[ 1-\Bigl( \frac{x-b}{a} \Bigr)^2 = \Bigl( \frac{y}{a} \Bigr)^2 \hspace{15mm}%
        \Yueni (x-b)^2+y^2=a^2 \hskip 0.3 in (y>0) \]
-    �ƂȂ�B�������A$y>0$�ł���B����͔��a$a$�A���S$(b,0)$�̉~��$y>0$�̕����ł���B\\
-    �ȏ���A$ X \equiv 0 $��$ X \neq 0 $�̏ꍇ���܂Ƃ߂āA\\
+    となる。ただし、$y>0$である。これは半径$a$、中心$(b,0)$の円の$y>0$の部分である。\\
+    以上より、$ X \equiv 0 $と$ X \neq 0 $の場合をまとめて、\\
 %
-    \qquad {\bf $x$���A$y>0$�̔������B�܂���$x$����ɒ��S�����~��$y>0$�̕���}\\
-    �ł���B
+    \qquad {\bf $x$一定、$y>0$の半直線。または$x$軸上に中心を持つ円の$y>0$の部分}\\
+    である。
 
 
   \end{subsubanswers}
@@ -406,80 +406,80 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    �܂��A$x,y,z$�̂ǂ�$2$���݂��ɑf�ł��邩��A\\
-    (a)\quad $z$��������$x,y$�͊\\
-    (b)\quad $z$�����$x,y$�̂ǂ��炩������\\
-    (c)\quad $x,y,z$�͂��ׂĊ\\
-    ��$3$�̏ꍇ�̂ǂꂩ�ł��邱�Ƃ�������B
+    まず、$x,y,z$のどの$2$つも互いに素であるから、\\
+    (a)\quad $z$が偶数で$x,y$は奇数\\
+    (b)\quad $z$が奇数で$x,y$のどちらかが偶数\\
+    (c)\quad $x,y,z$はすべて奇数\\
+    の$3$つの場合のどれかであることが分かる。
 
 \vspace*{1mm}
-    {\bf (a)}�̏ꍇ\\
-    ���̐���$l,m,n$��p����$z=2l,x=2m-1,y=2n-1$�Ə�����B���̂Ƃ�
+    {\bf (a)}の場合\\
+    正の整数$l,m,n$を用いて$z=2l,x=2m-1,y=2n-1$と書ける。このとき
 %
-    \[ x^2+y^2=(2m-1)^2+(2n-1)^2=4(m^2+n^2-m-n)+2\neq \mbox{$4$�̔{��} \]
+    \[ x^2+y^2=(2m-1)^2+(2n-1)^2=4(m^2+n^2-m-n)+2\neq \mbox{$4$の倍数} \]
 %
-    �ł���B���
+    である。一方
 %
-    \[ z^2=4l^2 =\mbox{$4$�̔{��} \]
+    \[ z^2=4l^2 =\mbox{$4$の倍数} \]
 %
-    ������A$x^2+y^2=z^2$�𖞂����Ȃ��B
+    だから、$x^2+y^2=z^2$を満たさない。
 
 \vspace*{1mm}
-    {\bf (b)}�̏ꍇ\\
-    $z=2l-1,\,x=2m,\,y=2n-1$�Ƃ��Ă悢�B���̂Ƃ��A
+    {\bf (b)}の場合\\
+    $z=2l-1,\,x=2m,\,y=2n-1$としてよい。このとき、
 %
     \[ x^2+y^2=(2m)^2+(2n-1)^2=4(m^2+n^2-n)+1 \]
 %
-    �ł���A
+    であり、
 %
     \[ z=(2l-1)^2=4(l^2-l)+1 \]
 %
-    �Ȃ̂ŁA$x^2+y^2,\,z^2$�̂ǂ����$4$�̔{��$+1$�Ŗ����͂��Ȃ��B
+    なので、$x^2+y^2,\,z^2$のどちらも$4$の倍数$+1$で矛盾はしない。
 
 \vspace*{1mm}
-    {\bf (c)}�̏ꍇ\\
-    $z=2l-1,\,x=2m-1,\,y=2n-1$�Ƃ���ƁA
-    $x^2+y^2=4(n^2+m^2-m-n)+2=\mbox{����}$�A\\
-    $z^2=4(l^2-l)+1=\mbox{�}$�ƂȂ���$x^2+y^2=z^2$�ɔ�����B
+    {\bf (c)}の場合\\
+    $z=2l-1,\,x=2m-1,\,y=2n-1$とすると、
+    $x^2+y^2=4(n^2+m^2-m-n)+2=\mbox{偶数}$、\\
+    $z^2=4(l^2-l)+1=\mbox{奇数}$となって$x^2+y^2=z^2$に反する。
 
 \vspace*{2mm}
-    ����āA$z$�͊�A$x,y$�̕Е��͊�A�Е��͋����ł��邱�Ƃ��������B
+    よって、$z$は奇数、$x,y$の片方は奇数、片方は偶数であることが言えた。
 
   \SubSubAnswer
-    $x$�������A$y$����ƌ��߂�ƁA���̐���$l,m,n$��p����
-    $x=2m,y=2n-1,z=2l-1$�Ə�����B
-    $A=(z+y)/2,\,B=(z-y)/2$�ƒu���B�t�ɁA$z,y$��$A,B$��p����
+    $x$を偶数、$y$を奇数と決めると、正の整数$l,m,n$を用いて
+    $x=2m,y=2n-1,z=2l-1$と書ける。
+    $A=(z+y)/2,\,B=(z-y)/2$と置く。逆に、$z,y$は$A,B$を用いて
 %
     \[ z=A+B \hskip 0.3 in y=A-B \]
 %
-    �Ə������B
+    と書かれる。
 %
     \[ A = {\frac{(2l-1)+(2n-1)}{2}}=l+n-1, \hskip 0.3 in%
        B = {\frac{(2l-1)-(2n-1)}{2}}=l-n \]
 %
-    �ł���B����āA$A,B$�͐����ł���B
+    である。よって、$A,B$は整数である。
 
-    �����A$A$��$B$�����ʂ̈��q$k$(����)�������A
-    $A=ka,\,B=kb\;$($a,b$:����)�Ə�����Ɖ��肷��ƁA 
+    もし、$A$と$B$が共通の因子$k$(整数)を持ち、
+    $A=ka,\,B=kb\;$($a,b$:整数)と書けると仮定すると、 
 %
     \[ z=A+B=k(a+b) \hskip 0.3 in  y=A-B=k(a-b) \]
 %
-    �ƂȂ�A$z,y$���݂��ɑf�ł���Ƃ��������ɖ�������B
-    ���������āA$A$ �� $B$ �݂͌��ɑf�ł���B
+    となり、$z,y$が互いに素であるという条件に矛盾する。
+    したがって、$A$ と $B$ は互いに素である。
 
   \SubSubAnswer
-    $C$��f������������B
+    $C$を素因数分解する。
 %
     \[ C=(c_1)^{n_1}\cdot (c_2)^{n_2} \cdots (c_p)^{n_p} \]
 %
-    �Ə������Ƃ����
+    と書けたとすると
 %
     \[ A\cdot B=C^2=(c_1)^{2n_1}\cdot (c_2)^{2n_2} \cdots (c_p)^{2n_p} \]
 %
-    �ł���B��蕶�̉�����A$A,B$�݂͌��ɑf�Ȑ����ł��邩��A$C^2$��
-    ������$c_1,\cdot c_2,\cdots c_p$��$A,B$�ǂ��炩�݂̂̈����ł���B
-    $c_1,\cdot c_2,\cdots c_p$��K���ɕ��ёւ��āA$c_1,\cdots c_q$��$A$
-    �̈����A$c_{q+1},\cdots c_p$��$B$�̈����Ƃ��邱�Ƃ��ł���B���Ȃ킿�A
+    である。問題文の仮定より、$A,B$は互いに素な整数であるから、$C^2$の
+    因数の$c_1,\cdot c_2,\cdots c_p$は$A,B$どちらかのみの因数である。
+    $c_1,\cdot c_2,\cdots c_p$を適当に並び替えて、$c_1,\cdots c_q$は$A$
+    の因数、$c_{q+1},\cdots c_p$は$B$の因数とすることができる。すなわち、
 %
     \[ A\cdot B=C^2%
         =\overbrace{(c_1)^{2n_1}\cdot (c_2)^{2n_2} \cdots (c_q)^{2n_q}}^A
@@ -487,26 +487,26 @@
     \[ \alpha \equiv (c_1)^{n_1}\cdots (c_q)^{n_q} \hspace{15mm}
        \beta  \equiv (c_{q+1})^{n_{q+1}}\cdots (c_p)^{n_p} \]
 %
-    �Ƃ�����$A=\alpha^2,\,B=\beta^2$�ł���B
+    とおけば$A=\alpha^2,\,B=\beta^2$である。
 
   \SubSubAnswer
-    $x=2C$�ƒu���ƁA$x^2=z^2-y^2$���A$(2C)^2=(A+B)^2-(A-B)^2=4A\cdot B$�A
-    �܂�A$C^2=A\cdot B$�ƂȂ�B(ii)�ŁA$A=(z+y)/2,B=(z-y)/2$���݂��ɑf�Ȑ�
-    �̐����ł��邱�Ƃ��������̂ŁA(iii)�̌��ʂ��g�����Ƃ��ł��āA$2$��
-    ����$\alpha,\beta$��p����$A=\alpha^2,\,B=\beta^2$�Ə�����B���̂Ƃ��A
-    $C=\alpha\beta$�ł���B����āA
+    $x=2C$と置くと、$x^2=z^2-y^2$より、$(2C)^2=(A+B)^2-(A-B)^2=4A\cdot B$、
+    つまり、$C^2=A\cdot B$となる。(ii)で、$A=(z+y)/2,B=(z-y)/2$が互いに素な正
+    の整数であることを示したので、(iii)の結果を使うことができて、$2$つの
+    整数$\alpha,\beta$を用いて$A=\alpha^2,\,B=\beta^2$と書ける。このとき、
+    $C=\alpha\beta$である。よって、
 %
     \[ x=2C=2\alpha\beta,\hskip 0.3 in
        y=A-B=\alpha^2-\beta^2,\hskip 0.3 in
        z=A+B=\alpha^2+\beta^2 \]
 %
-    �Ƃ���΂悢�B�������A$y,z$�͊�Ȃ̂ŁA$\alpha,\beta$�̕Е��͊�A
-    �Е��͋����łȂ���΂Ȃ�Ȃ��B$\alpha,\beta$�݂͌��ɑf�łȂ����
-    �Ȃ�Ȃ��B�����łȂ����$y$ ��$z$�����ʂ̈����������ƂɂȂ���
-    �݂��ɑf�ł���Ƃ��������𖞂����Ȃ��B
+    とすればよい。ただし、$y,z$は奇数なので、$\alpha,\beta$の片方は奇数、
+    片方は偶数でなければならない。$\alpha,\beta$は互いに素でなければ
+    ならない。そうでなければ$y$ と$z$が共通の因数を持つことになって
+    互いに素であるという条件を満たさない。
 
   \SubSubAnswer
-    (iv)�̌��ʂ���
+    (iv)の結果から
     \begin{center}
       \begin{tabular}{cccccc}\hline
 $\alpha$ & $\beta$ &              & x  & y  & z \\\hline
@@ -520,7 +520,7 @@ $\alpha$ & $\beta$ &              & x  & y  & z \\\hline
 6        & 5       &\hskip 0.5 in & 60 & 11 & 61\\\hline
       \end{tabular}
     \end{center}
-    �ƂȂ�B
+    となる。
 
   \end{subsubanswers}
 \end{subanswers}

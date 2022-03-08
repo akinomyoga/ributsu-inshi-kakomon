@@ -3,14 +3,14 @@
 
 \begin{document}
 
-\begin{question}{$B@l96(B $BLdBj(B8}{}
+\begin{question}{専攻 問題8}{}
 
-$B3K;@$d%?%s%Q%/<AJ,;R$O!"%L%/%l%*%A%I$d%"%_%N;@$r9|3JMWAG$H$9$k(B
-$BD>:?>u9bJ,;R$G$"$k!#?^$O(B$(n+1)$$B8D$N9|3JMWAG$+$i$J$kD>:?>u9bJ,;R$N(B
-$B%3%s%U%#%.%e%l!<%7%g%s$rIA$$$?$b$N$G$"$k!#9|3JMWAG$O1_$G<($5$l$F$$$k!#(B
-$i$$BHVL\$N9|3JMWAG$N0LCV%Y%/%H%k$r(B$\vec{r}_i$$B!"(B$i-1$$BHVL\$H(B$i$$BHVL\(B
-$B$N9|3JMWAG$r$D$J$07k9g%Y%/%H%k$r(B$\vec{b}_i$$B$H$9$k!#(B
-$B7k9g%Y%/%H%k$NBg$-$5$O$9$Y$F(B$b$$B$G$"$k!#0J2<$N@_Ld$KEz$($h!#(B
+核酸やタンパク質分子は、ヌクレオチドやアミノ酸を骨格要素とする
+直鎖状高分子である。図は$(n+1)$個の骨格要素からなる直鎖状高分子の
+コンフィギュレーションを描いたものである。骨格要素は円で示されている。
+$i$番目の骨格要素の位置ベクトルを$\vec{r}_i$、$i-1$番目と$i$番目
+の骨格要素をつなぐ結合ベクトルを$\vec{b}_i$とする。
+結合ベクトルの大きさはすべて$b$である。以下の設問に答えよ。
 
 \begin{center}
   \mbox{\includegraphics[clip]{1994phy8-1.eps}}
@@ -18,50 +18,50 @@ $i$$BHVL\$N9|3JMWAG$N0LCV%Y%/%H%k$r(B$\vec{r}_i$$B!"(B$i-1$$BHVL\$H(B$i$$
 
 \begin{subquestions}
 \SubQuestion
-  $B7k9g%Y%/%H%k$N8~$-$,8_$$$K40A4$K%i%s%@%`$G$"$k:?$r<+M3O"7k:?$H$$$&!#(B
-$B<+M3O"7k:?$K$D$$$F!"(B$\vec{b}_i\cdot\vec{b}_j$$B$N4|BTCM$G$"$k(B
-$<\vec{b}_i\cdot\vec{b}_j>$$B$r5a$a$h!#(B
+  結合ベクトルの向きが互いに完全にランダムである鎖を自由連結鎖という。
+自由連結鎖について、$\vec{b}_i\cdot\vec{b}_j$の期待値である
+$<\vec{b}_i\cdot\vec{b}_j>$を求めよ。
 
 \SubQuestion
-  $B:?$NN>KvC<$r7k$V%Y%/%H%k$r(B$\vec{r}_{0n}=\vec{r}_n-\vec{r}_0$
-$B$H$9$k!#<+M3O"7k:?$NN>KvC<5wN%$N#2>h$NJ?6Q(B$<{\vec{r}_{0n}}^2>$$B$r5a$a$h!#(B
+  鎖の両末端を結ぶベクトルを$\vec{r}_{0n}=\vec{r}_n-\vec{r}_0$
+とする。自由連結鎖の両末端距離の２乗の平均$<{\vec{r}_{0n}}^2>$を求めよ。
 
 \SubQuestion
-  $B:?$N9-$,$j$rI=$92sE>H>7B(B$R_G$$B$O!"3F9|3JMWAG$H:?$N=E?4$H$N(B
-$B5wN%$N#2>h$NJ?6Q$NJ?J}:,$GDj5A$5$l$k!#(B$R_G$$B$,!"(B
+  鎖の広がりを表す回転半径$R_G$は、各骨格要素と鎖の重心との
+距離の２乗の平均の平方根で定義される。$R_G$が、
 \[R_G=\frac{1}{n+1}\left(\sum_{0\leq i<j\leq n}
 \left\langle\left(\vec{r}_i-\vec{r_j}\right)^2\right\rangle\right)^{1/2}\]
-$B$GM?$($i$l$k$3$H$rMQ$$$F!"(B$n\rightarrow \infty$$B$G$N(B$R_G$$B$H(B
-$<{\vec{r}_{0n}}^2>$$B$H$N4X78$r<($;!#(B
+で与えられることを用いて、$n\rightarrow \infty$での$R_G$と
+$<{\vec{r}_{0n}}^2>$との関係を示せ。
 
 \SubQuestion
-  $BBgD26]%2%N%`$NBg$-$5$O!"(B$5\times10^6$$B1v4pBP$G$"$k!#%2%N%`(BDNA
-$BJ,;R$r1v4pBP$r9|3JMWAG$H$9$k<+M3O"7k:?$H$_$J$7!"(B
-$R_G$$B$*$h$S(B$<\vec{r}_{0n}^2>^{1/2}$$B$rM-8z?t;z#17e$G5a$a$h!#(B
-$B$J$*!"(BDNA$B#2=E$i$;$s$N1v4pBP4V5wN%$O(B0.3nm$B$G$"$k!#(B
+  大腸菌ゲノムの大きさは、$5\times10^6$塩基対である。ゲノムDNA
+分子を塩基対を骨格要素とする自由連結鎖とみなし、
+$R_G$および$<\vec{r}_{0n}^2>^{1/2}$を有効数字１桁で求めよ。
+なお、DNA２重らせんの塩基対間距離は0.3nmである。
 
 \SubQuestion
-   $B<B:_$9$k(BDNA$BJ,;R$O!"NY$j9g$&1v4pBPF1;N$NO"Mm$,<+M3$G$J$$$N$G!"(B
-$B1v4pBP$r9|3JMWAG$H$9$k<+M3O"7k:?$H$_$J$9$3$H$O$G$-$J$$!#$7$+$7!"(B
-$B<B:_$9$k(BDNA$BJ,;R$N==J,$KN%$l$?1v4pBP$I$&$7$O$"$?$+$b<+M3$KO"7k(B
-$B$5$l$F$$$k$+$N$h$&$K$U$k$^$&!#$7$?$,$C$F!"D9$5$,(B$n$$B1v4pBP$N<B:_(BDNA$BJ,;R$O!"(B
-$n$$B$,==J,$KBg$-$$$H$-!"(B$n/a$$B8D$N2>A[E*$J9|3JMWAG$rD9$5(B$ab$
-$B$N2>A[E*$J7k9g$GO"7k$7$?<+M3O"7k:?$H$_$J$9$3$H$,$G$-$k!#(B
-$B<B83$K$h$k$H!"@8M}E*>r7o$G$O(B$a=500$$B$G$"$k!#BgD26]$N%2%N%`(BDNA$BJ,;R$r(B
-$B2>A[E*$J9|3JMWAG$+$i$J$k<+M3O"7k:?$H9M$(!"(B$R_G$$B$*$h$S(B
-$<\vec{r}_{0n}^2>^{1/2}$$B$rM-8z?t;z#17e$G5a$a$h!#(B
+   実在するDNA分子は、隣り合う塩基対同士の連絡が自由でないので、
+塩基対を骨格要素とする自由連結鎖とみなすことはできない。しかし、
+実在するDNA分子の十分に離れた塩基対どうしはあたかも自由に連結
+されているかのようにふるまう。したがって、長さが$n$塩基対の実在DNA分子は、
+$n$が十分に大きいとき、$n/a$個の仮想的な骨格要素を長さ$ab$
+の仮想的な結合で連結した自由連結鎖とみなすことができる。
+実験によると、生理的条件では$a=500$である。大腸菌のゲノムDNA分子を
+仮想的な骨格要素からなる自由連結鎖と考え、$R_G$および
+$<\vec{r}_{0n}^2>^{1/2}$を有効数字１桁で求めよ。
 
 \SubQuestion
-  $BBgD26]$NBg$-$5$OLs(B$\rm 1\mu m$$B$G$"$k!#$3$NBg$-$5$H@_Ld(B{\bf 5}$B$GF@$i$l$?(B
-$B$=$N%2%N%`(BDNA$BJ,;R$NBg$-$5$H$rHf3S$7!"N><T$N0c$$$N@8J*3XE*0UL#$K$D$$$F=R$Y$h!#(B
+  大腸菌の大きさは約$\rm 1\mu m$である。この大きさと設問{\bf 5}で得られた
+そのゲノムDNA分子の大きさとを比較し、両者の違いの生物学的意味について述べよ。
 
 \SubQuestion
-  $BD>:?9bJ,;R$NMO1UCf$G$NBg$-$5$rB,Dj$9$k<B83J}K!$rFs$D$"$2!"(B
-$B$=$N86M}$HJ}K!$r6qBNE*$K=R$Y$h!#(B
+  直鎖高分子の溶液中での大きさを測定する実験方法を二つあげ、
+その原理と方法を具体的に述べよ。
 
 \end{subquestions}
 \end{question}
-\begin{answer}{$B@l96(B $BLdBj(B8}{}
+\begin{answer}{専攻 問題8}{}
 
 \begin{subanswers}
 \SubAnswer
@@ -74,12 +74,12 @@ $<\vec{r}_{0n}^2>^{1/2}$$B$rM-8z?t;z#17e$G5a$a$h!#(B
         \delta_{i\neq j}\Mean{\vec{b_i}}\Mean{\vec{b_j}} 
       =b^2\delta_{ij} \]
 
-   $B!J(B\Naze $i\neq j$$B$N$H$-!"%i%s%@%`$K8~$-$,F0$/$N$G!"(B$\vec{b_i}$$B$H(B
-        $\vec{b_j}$$B$NAj4X$,$J$/!"(Bfree$B$G$"$k!#!K(B 
+   （\Naze $i\neq j$のとき、ランダムに向きが動くので、$\vec{b_i}$と
+        $\vec{b_j}$の相関がなく、freeである。） 
 
 \SubAnswer
 
-  $\vec{r_{0n}}=\sum_{i=0}^{n}\vec{b_i}$$B$h$j!"(B
+  $\vec{r_{0n}}=\sum_{i=0}^{n}\vec{b_i}$より、
    \[ \Mean{\vec{r_{0n}}^2}
       =\sum_{i,j}\Mean{\vec{b_i}\cdot \vec{b_j}}
       =\sum_{i,j} \delta_{i j}b^2 
@@ -90,42 +90,42 @@ $<\vec{r}_{0n}^2>^{1/2}$$B$rM-8z?t;z#17e$G5a$a$h!#(B
 %     = \sum_{i,j} \Mean{\vec{b}_i \cdot \vec{b}_j}%
 %     = \sum_{i} \Mean{\vec{b}_i \cdot \vec{b}_i} = nb^2 \]
 %
-%  $B$?$@$7!"@_Ld(B{\bf 1}$B$N7k2L$K$h$C$F(B$i\neq j$$B$N9`$,>C$($k$3$H$r(B
-%  $BMxMQ$7$?!#(B
+%  ただし、設問{\bf 1}の結果によって$i\neq j$の項が消えることを
+%  利用した。
 
 \SubAnswer
 
-   $\vec{r_j}-\vec{r_i}=\ds{\sum_{k=i+1}^j}\vec{b_k}$$B!JC"$7(B$j>i$$B!K$J$N$G!"(B
+   $\vec{r_j}-\vec{r_i}=\ds{\sum_{k=i+1}^j}\vec{b_k}$（但し$j>i$）なので、
      \[ \Mean{(\vec{r_i}-\vec{r_j})^2}=
          \Mean{\sum_{k=i+1}^{j}\vec{b_k}\cdot \sum_{l=i+1}^{j}\vec{b_l}}
          =\sum_{k,l=i+1}^{j}\delta_{k l} b^2 =|j-i|b^2 \]
      \[ \Yueni \sum_{0\leq i< j \leq n}\Mean{(\vec{r_i}-\vec{r_j})^2}
         =\sum_{0\leq i<j \leq n} |j-i|b^2 =\frac{1}{6}n(n+1)(n+2)b^2 \]
-    $B$H$J$k$+$i!"(B$n\rightarrow \infty$$B$G!"(B
+    となるから、$n\rightarrow \infty$で、
     \[ R_G=\sqrt{\frac{1}{6}nb^2 \frac{(n+1)(n+2)}{(n+1)^2}}
        \simeq \sqrt{\frac{1}{6}nb^2}=\sqrt{\frac{1}{6}\Mean{\vec{r_{0n}}^2}}\] 
 
-%  $\vec{r}_i - \vec{r}_j$ $B$OJ,;6$,(B $|i-j| b^2$ $B$N(B Gauss $BJ,I[$r(B
-%  $B$7$F$$$k$N$G!"(B
+%  $\vec{r}_i - \vec{r}_j$ は分散が $|i-j| b^2$ の Gauss 分布を
+%  しているので、
 %
 %  \[ \Mean{( \vec{r}_i - \vec{r}_j )^2} = |i-j| b^2 \]
 %
-%  $B$G$"$k$+$i!"(B
+%  であるから、
 %
 %  \[ R_G^2=\frac{1}{2(n+1)^2}\sum^{n}_{i=0}\sum^{n}_{j=0}|i-j|b^{2}\]
 %
-%  $B$H$J$k!#$3$3$G!"(B$n \rightarrow \infty $ $B$G$OOB$r@QJ,$KCV$-49$($F$b(B
-%  $B$h$/!"(B
+%  となる。ここで、$n \rightarrow \infty $ では和を積分に置き換えても
+%  よく、
 %
 %  \[ R_G^2 \approx \frac{b^2}{2n^2} \Dint{0}{n}{\d{i}}%
 %                \Dint{0}{n}{\d{j}} |i-j| = \frac{1}{6}nb^2 \]
 %
-%  $B$H$J$k$N$G!"(B$ R_G^2 = \frac{1}{6} \Mean{\vec{r{}}_{0n}^2}$ $B$H$J$k!#(B
+%  となるので、$ R_G^2 = \frac{1}{6} \Mean{\vec{r{}}_{0n}^2}$ となる。
 
 
 \SubAnswer
-  $n=5\Keta{6}$$B!"(B$b=3\Keta{-10}\Unit{m}$
-  $B$h$C$F(B$nb^2=45\Keta{-14}\Unit{m^2}$$B$h$j!"(B
+  $n=5\Keta{6}$、$b=3\Keta{-10}\Unit{m}$
+  よって$nb^2=45\Keta{-14}\Unit{m^2}$より、
 %
   \[ \Mean{\vec{r{}}_{0n}^2}^{1/2}%
      = 7\Keta{-7}[\Unit{m}] = 0.7 [\Unit{\mu m}] \]
@@ -135,40 +135,40 @@ $<\vec{r}_{0n}^2>^{1/2}$$B$rM-8z?t;z#17e$G5a$a$h!#(B
 
 \SubAnswer
 
-  $B@_Ld(B{\bf 4}$B$K$*$$$F!"(B$n'=n/a=1\Keta{4}$$B!"(B$b'=ab=1.5\Keta{-7}\Unit{m}$
-  $B$H$*$-D>$7$F7W;;!#(B
+  設問{\bf 4}において、$n'=n/a=1\Keta{4}$、$b'=ab=1.5\Keta{-7}\Unit{m}$
+  とおき直して計算。
 %
   \[ n'b^{\prime 2} = 2.25\Keta{-10}\Unit{m^2} \]
 %
-  $B$h$C$F!"(B
+  よって、
 %
   \[ \Mean{\vec{r{}}_{0n}^2}^{1/2}%
      = 1.5\Keta{-5}[\Unit{m}] = 15[\Unit{\mu m}] \]
   \[ \Yueni R_G =6 [\Unit{\mu m}] \] 
 %
 \SubAnswer
-%  $BBgD26](BDNA$B$r<+M3O"7k:?$H$_$J$9$H!"BgD26]$KF~$j@Z$i$J$$!#(B
-%  $B$9$J$o$A!"BgD26](BDNA$B$OBgD26]Fb$G$O<+M3:?$G$O$J$/!"(B
-%  $B2?$i$+$NNO$,F/$/$3$H$K$h$C$F%3%s%Q%/%H$K@^$j>v$^$l$F(B
-%  $B$$$k$3$H$,9M$($i$l$k!#(B
-   $BBgD26]$NCf$G!"%2%N%`(BDNA$B$O%i%s%@%`%3%$%k>uBV$K$"$k$N$G$O$J$/!"2?$i$+(B
-   $B$N5!9=$K$h$j!"%3%s%Q%/%H$K@^$j>v$^$l$F$$$k$H9M$($i$l$k!#%3%s%Q(B
-   $B%/%H$J7A$KDj$^$C$F$$$k$3$H$K$h$j!"I=LL@Q$r>.$5$/$7!";g30@~$J$I(B
-   $B303&$N4m81$r$J$k$Y$/Hr$1$k$3$H$K@.8y$7$F$$$k$H9M$($i$l$k!#(B
+%  大腸菌DNAを自由連結鎖とみなすと、大腸菌に入り切らない。
+%  すなわち、大腸菌DNAは大腸菌内では自由鎖ではなく、
+%  何らかの力が働くことによってコンパクトに折り畳まれて
+%  いることが考えられる。
+   大腸菌の中で、ゲノムDNAはランダムコイル状態にあるのではなく、何らか
+   の機構により、コンパクトに折り畳まれていると考えられる。コンパ
+   クトな形に定まっていることにより、表面積を小さくし、紫外線など
+   外界の危険をなるべく避けることに成功していると考えられる。
 
 
 \SubAnswer
-  {\bf [$B%2%k$m2aK!(B]}\\
-  $B1zFL$N$D$$$?%S!<%:$r%+%i%`$K5M$a!"$=$NCf$KMO1U$r(B
-  $BN.$9!#Bg$-$5$NBg$-$$$b$N$[$IAa$/Mn$A$F$/$k$N$G!"(B
-  $B$=$l$K$h$C$FJ,;R$NBg$-$5$rCN$k$3$H$,$G$-$k!#(B\\
-  {\bf [$B3H;678?t$rB,Dj$9$k(B]}\\
-  $B3H;678?t$,J,;R$NBg$-$5$N4X?t$K$J$C$F$$$k(B
-  $B$N$G!"3H;6$NEY9g$r8w;6Mp$GB,Dj$9$l$P$=$l$h$jJ,;R$N(B
-  $B$*$*$h$=$NBg$-$5$,7W;;$G$-$k!#(B
+  {\bf [ゲルろ過法]}\\
+  凹凸のついたビーズをカラムに詰め、その中に溶液を
+  流す。大きさの大きいものほど早く落ちてくるので、
+  それによって分子の大きさを知ることができる。\\
+  {\bf [拡散係数を測定する]}\\
+  拡散係数が分子の大きさの関数になっている
+  ので、拡散の度合を光散乱で測定すればそれより分子の
+  おおよその大きさが計算できる。
   
-  $B$=$N$[$+!"G4@-$NB,Dj!&N.F0J#6~@^!J6~@^N($NJ}8~0MB8@-$NB,Dj!K!&8w;6Mp(B
-  $B$NMxMQ$,9M$($i$l$k!#(B
+  そのほか、粘性の測定・流動複屈折（屈折率の方向依存性の測定）・光散乱
+  の利用が考えられる。
 \end{subanswers}
 \end{answer}
 

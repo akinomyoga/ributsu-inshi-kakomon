@@ -3,69 +3,69 @@
 
 \begin{document}
 
-\begin{question}{$B?t3X(B}{$B<jDM(B}
+\begin{question}{数学}{手塚}
 
 \begin{enumerate}
 \item 
-4$B<!85%f!<%/%j%C%I6u4V$NItJ,6u4V(B $V_1,V_2$ $B$r(B
+4次元ユークリッド空間の部分空間 $V_1,V_2$ を
 \[
 \begin{array}{r}
-V_1 \equiv \{$B>r7o(B x_1-x_2+2x_3-x_4 = 0 $B$H(B x_1+2x_2-x_3 = 0\\
-$B$r6&$KK~B-$9$k%Y%/%H%k(B \vec{x} = (x_1,x_2,x_3,x_4) $B$N=89g(B\}\end{array}
+V_1 \equiv \{条件 x_1-x_2+2x_3-x_4 = 0 と x_1+2x_2-x_3 = 0\\
+を共に満足するベクトル \vec{x} = (x_1,x_2,x_3,x_4) の集合\}\end{array}
 \]
 \[
 \begin{array}{r}
-V_2 \equiv \{$B>r7o(B 2x_1+x_2+2x_3-2x_4 = 0 $B$H(B 3x_1+2x_3-x_4 = 0\\
-$B$r6&$KK~B-$9$k%Y%/%H%k(B \vec{x} = (x_1,x_2,x_3,x_4) $B$N=89g(B\}\end{array}
+V_2 \equiv \{条件 2x_1+x_2+2x_3-2x_4 = 0 と 3x_1+2x_3-x_4 = 0\\
+を共に満足するベクトル \vec{x} = (x_1,x_2,x_3,x_4) の集合\}\end{array}
 \]
-$B$H$9$k!#(B
+とする。
 \begin{enumerate}
-\item $V_1, V_2$ $B$O$=$l$>$l2?<!85$N6u4V$+!)(B
-\item $V_1$ $B$H(B $V_2$ $B$K6&DL$K4^$^$l$k%Y%/%H%k$r5a$a$h!#(B
-\item $B6u4V(B $V_1\cap V_2$ $B$O2?<!85$+!)(B
+\item $V_1, V_2$ はそれぞれ何次元の空間か？
+\item $V_1$ と $V_2$ に共通に含まれるベクトルを求めよ。
+\item 空間 $V_1\cap V_2$ は何次元か？
 \end{enumerate}
 
 \item 
-$B86E@$rCf?4$H$7!"<~JU$r8GDj$7$?H>7B(B $a$ $B$NGv$$1_7AKl$N?6F0$r9M$($h$&!#(B
-$BJ?9T0LCV$+$i$NJQ0L$r(B $u$ $B$H$9$k!#6K:BI8$rMQ$$(B $u=u(r,\theta,t)$ $B$H$9$k;~!"(B
-$B1_7AKl$N?6F0$OGHF0J}Dx<0(B
+原点を中心とし、周辺を固定した半径 $a$ の薄い円形膜の振動を考えよう。
+平行位置からの変位を $u$ とする。極座標を用い $u=u(r,\theta,t)$ とする時、
+円形膜の振動は波動方程式
 \begin{equation}
 \frac{\partial^2u}{\partial t^2} = \frac{\partial^2u}{\partial r^2}+\frac1r\frac{\partial u}{\partial r}+
 \frac1{r^2}\frac{\partial^2u}{\partial \theta^2}\eqname{q2:wave}
 \end{equation}
-$B$K=>$&(B($B4JC1$N$?$aJ}Dx<0$K8=$l$k78?t$r(B $1$ $B$H$*$$$?(B)$B!#0J2<$N@_Ld$KEz$($h!#(B
+に従う(簡単のため方程式に現れる係数を $1$ とおいた)。以下の設問に答えよ。
 \begin{enumerate}
-\item $n$ $B<!$N%Y%C%;%k4X?t(B $J_n(x)$ $B$OHyJ,J}Dx<0(B
+\item $n$ 次のベッセル関数 $J_n(x)$ は微分方程式
 \begin{equation}
 \frac{d^2J_n(x)}{dx^2}+\frac1x\frac{dJ_n(x)}{dx}+(1-\frac{n^2}{x^2})J_n(x)=0\eqname{q2:Bessel}
 \end{equation}
-$B$rK~$?$9!#(B $J_n(x)$ $B$N(B $j$ $BHVL\$NNmE@$r(B $\xi_{nj}$ $B$H$9$k;~!"<!$ND>8r4X78(B
+を満たす。 $J_n(x)$ の $j$ 番目の零点を $\xi_{nj}$ とする時、次の直交関係
 \begin{equation}
 \int_0^1xJ_n(\xi_{nj}x)J_n(\xi_{nl}x)dx = 0, \hspace{1em}j\neq l\eqname{q2:njnl}
 \end{equation}
-$B$,@.$jN)$D$3$H$r>ZL@$;$h!#(B
+が成り立つことを証明せよ。
 
 \item
-$B6-3&>r7o(B $u(a,\theta,t) = 0$ $B$H=i4|>r7o(B
-$u(r,\theta,0)=F(r,\theta), \left[\frac{\partial u(r,\theta,t)}{\partial t}\right]_{t=0}=0$ $B$r(B
-$BK~$?$9GHF0J}Dx<0$N2r$rJQ?tJ,N%$NJ}K!$G5a$a$h!#(B(1)$B$G5DO@$7$?D>8r4X78$rMQ$$$F$h$$!#(B
+境界条件 $u(a,\theta,t) = 0$ と初期条件
+$u(r,\theta,0)=F(r,\theta), \left[\frac{\partial u(r,\theta,t)}{\partial t}\right]_{t=0}=0$ を
+満たす波動方程式の解を変数分離の方法で求めよ。(1)で議論した直交関係を用いてよい。
 \end{enumerate}
 
 \item 
-$BL$CN4X?t(B $x(t)$ $B$K4X$9$k>oHyJ,J}Dx<0(B
+未知関数 $x(t)$ に関する常微分方程式
 \begin{equation}
 \frac{d^2x(t)}{dt^2}+2\alpha\frac{dx(t)}{dt}+\beta^2x(t) = f(t)
 \eqname{q3:diffeq}
 \end{equation}
-$B$K$D$$$F0J2<$N@_Ld$KEz$($h!#$3$3$G!"(B $\alpha$ $B$*$h$S(B $\beta$ $B$O@5$NDj?t$H$9$k!#(B
+について以下の設問に答えよ。ここで、 $\alpha$ および $\beta$ は正の定数とする。
 \begin{enumerate}
-\item $B$3$NJ}Dx<0$r%U!<%j%(JQ49$rMQ$$$FD4$Y!"L$CN4X?t(B $x$ $B$r(B
+\item この方程式をフーリエ変換を用いて調べ、未知関数 $x$ を
 \begin{equation}
 x(\omega) = C(\omega)f(\omega)
 \end{equation}
-$B$N7A$GI=$;!#$?$@$7(B $x(\omega), f(\omega)$ $B$O(B $x(t),f(t)$ $B$N%U!<%j%(JQ49$H$9$k!#(B
-\item $f(t)=\delta(t)$ ($B%G%k%?4X?t(B)$B$N>l9g$r9M$($k!#(B(1)$B$N7k2L$rMQ$$N1?tDjM}$rE,MQ$7$F(B
-$B2r(B $x(t)$ $B$r0J2<$N>l9g$K$D$$$F5a$a$h!#(B
+の形で表せ。ただし $x(\omega), f(\omega)$ は $x(t),f(t)$ のフーリエ変換とする。
+\item $f(t)=\delta(t)$ (デルタ関数)の場合を考える。(1)の結果を用い留数定理を適用して
+解 $x(t)$ を以下の場合について求めよ。
 \begin{enumerate}
 \item $\alpha<\beta$
 \item $\alpha=\beta$
@@ -74,10 +74,10 @@ x(\omega) = C(\omega)f(\omega)
 \end{enumerate}
 \end{enumerate}
 \end{question}
-\begin{answer}{$B?t3X(B}{}
+\begin{answer}{数学}{}
 \begin{enumerate}
 \item 
-$B<0$NHV9f$r0J2<$N$h$&$KDj$a$k!#(B4$B<!85%f!<%/%j%C%I6u4V$NItJ,6u4V$r9M$($F$$$k$N$G3FJQ?t$O<B?t$G$"$k!#(B
+式の番号を以下のように定める。4次元ユークリッド空間の部分空間を考えているので各変数は実数である。
 \begin{equation}
 x_1-x_2+2x_3-x_4 = 0\eqname{q1:v1a}
 \end{equation}
@@ -93,34 +93,34 @@ x_1+2x_2-x_3 = 0\eqname{q1:v1b}
 
 \begin{enumerate}
 \item
-\eqhref{q1:v1a}, \eqhref{q1:v1b} $B$h$j!"(B
+\eqhref{q1:v1a}, \eqhref{q1:v1b} より、
 \begin{equation}
 V_1 = \left\{(x_1,x_2,x_3,x_4)|x_3=x_1+2x_2, x_4=3(x_1+x_2)\right\}\eqname{q1:v1}
 \end{equation}
-$B$h$C$F(B $V_1$ $B$O(B\underline{2$B<!85(B}$B$N6u4V!#(B
+よって $V_1$ は\underline{2次元}の空間。
 
-\eqhref{q1:v2a}, \eqhref{q1:v2b} $B$h$j!"(B
+\eqhref{q1:v2a}, \eqhref{q1:v2b} より、
 \begin{equation}
 V_2 = \left\{(x_1,x_2,x_3,x_4)|x_1=(-2x_3+x_4)/3, x_2=(-2x_3+4x_4)/3\right\}\eqname{q1:v2}
 \end{equation}
-$B$h$C$F(B $V_2$ $B$O(B\underline{2$B<!85(B}$B$N6u4V!#(B
+よって $V_2$ は\underline{2次元}の空間。
 
 \item 
-$x_3=x_1+2x_2, x_4=3(x_1+x_2)$ $B$r(B $x_1=(-2x_3+x_4)/3$ $B$KBeF~$7!"@0M}$7$F(B $x_2=-2x_1$ $B$rF@$k!#(B\\
-$x_3=x_1+2x_2, x_4=3(x_1+x_2)$ $B$H(B $x_2=(-2x_3+4x_4)$ $B$+$i$b(B $x_2 = -2x_1$ $B$rF@$k$N$G!"(B
+$x_3=x_1+2x_2, x_4=3(x_1+x_2)$ を $x_1=(-2x_3+x_4)/3$ に代入し、整理して $x_2=-2x_1$ を得る。\\
+$x_3=x_1+2x_2, x_4=3(x_1+x_2)$ と $x_2=(-2x_3+4x_4)$ からも $x_2 = -2x_1$ を得るので、
 \begin{eqnarray}
 V_1\cap V_2 &=& \left\{(x_1,x_2,x_3,x_4)|x_2=-2x_1, x_3=x_1+2x_2, x_4=3(x_1+x_2)\right\}\\
-&=& \left\{c(1,-2,-3,-3)|c $B$OG$0U$N<B?t(B\right\}\eqname{q1:v1v2}
+&=& \left\{c(1,-2,-3,-3)|c は任意の実数\right\}\eqname{q1:v1v2}
 \end{eqnarray}
-$B$H$J$k!#$h$C$F(B \underline{$c(1,-2,-3,-3) (c $B$OG$0U$N<B?t(B)$} $B$,(B $V_1,V_2$ $B$K6&DL$K4^$^$l$k!#(B
+となる。よって \underline{$c(1,-2,-3,-3) (c は任意の実数)$} が $V_1,V_2$ に共通に含まれる。
 
-\item $B>e$N7k2L(B\eqhref{q1:v1v2} $B$h$j(B $V_1\cap V_2$ $B$O(B \underline{1$B<!85(B} $B$G$"$k!#(B
+\item 上の結果\eqhref{q1:v1v2} より $V_1\cap V_2$ は \underline{1次元} である。
 \end{enumerate}
 \item 
 \begin{enumerate}
 \item
 
-$J_n(x)$ $B$,(B \eqhref{q2:Bessel} $B$rK~$?$9$+$i!"(B $\alpha, \beta$ $B$rG$0U$N<B?t$H$7$F(B
+$J_n(x)$ が \eqhref{q2:Bessel} を満たすから、 $\alpha, \beta$ を任意の実数として
 \begin{equation}
 \frac{d}{dx}\left\{x\frac{dJ_n(\alpha x)}{dx}\right\}+\left(\alpha^2x-\frac{n^2}{x^2}\right)J_n(\alpha x) = 0
 \eqname{q2:alpha}
@@ -130,7 +130,7 @@ $J_n(x)$ $B$,(B \eqhref{q2:Bessel} $B$rK~$?$9$+$i!"(B $\alpha, \beta$ $B$rG
 \eqname{q2:beta}
 \end{equation}
 
-$\eqhref{q2:alpha}\times J_n(\beta x)-\eqhref{q2:beta}\times J_n(\alpha x)$ $B$r(B $[0,1]$ $B$G@QJ,$9$k$H!"(B
+$\eqhref{q2:alpha}\times J_n(\beta x)-\eqhref{q2:beta}\times J_n(\alpha x)$ を $[0,1]$ で積分すると、
 \begin{eqnarray*}
 0&=&\int_0^1\left[
 J_n(\beta x)\frac{d}{dx}\left\{x\frac{dJ_n(\alpha x)}{dx}\right\}
@@ -141,99 +141,99 @@ J_n(\beta x)\frac{d}{dx}\left\{x\frac{dJ_n(\alpha x)}{dx}\right\}
 &=&\left.x\left\{J_n(\beta x)\frac{dJ_n(\alpha x)}{dx} - J_n(\alpha x)\frac{dJ_n(\beta x)}{dx}\right\}\right|_0^1
 +(\alpha^2-\beta^2)\int_0^1xJ_n(\alpha x)J_n(\beta x)dx
 \end{eqnarray*}
-$B$H$J$k!#(B
+となる。
 
-$\alpha, \beta$ $B$,(B $J_n(x)$ $B$N0[$J$kNmE@$G$"$k>l9g$r9M$($k!#(B
-$B1&JU$NBh(B1$B9`$O!"(B\eqhref{q2:Bessel}$B$h$j!"(B
+$\alpha, \beta$ が $J_n(x)$ の異なる零点である場合を考える。
+右辺の第1項は、\eqhref{q2:Bessel}より、
 \begin{itemize}
-\item $n=0$ $B$N$H$-!"(B $dJ_n(x)/dx = -x\left(d^2J_n(x)/dx^2+J_n(x)\right)\rightarrow0~(x\downarrow 0)$
-\item $n>0$ $B$N$H$-!"(B $(n^2-x^2)J_n(x) = x\left(xd^2J_n(x)/dx^2+dJ_n(x)/dx\right)\rightarrow0~(x\downarrow 0)$
+\item $n=0$ のとき、 $dJ_n(x)/dx = -x\left(d^2J_n(x)/dx^2+J_n(x)\right)\rightarrow0~(x\downarrow 0)$
+\item $n>0$ のとき、 $(n^2-x^2)J_n(x) = x\left(xd^2J_n(x)/dx^2+dJ_n(x)/dx\right)\rightarrow0~(x\downarrow 0)$
 \end{itemize}
-$B$H$J$k$N$G(B $0$ $B$G$"$k$+$i!"(B
+となるので $0$ であるから、
 \[
 \int_0^1xJ_n(\alpha x)J_n(\beta x)dx = 0
 \]
-$B$H$J$k!#(B
+となる。
 \newpage
 \item
-$B$^$:!"(B\eqhref{q2:wave}$B$N2r$G(B $u(r,\theta,t) = R(r)\Theta(\theta)T(t)$ $B$HJQ?tJ,N%$G$-!"=i4|>r7o(B
+まず、\eqhref{q2:wave}の解で $u(r,\theta,t) = R(r)\Theta(\theta)T(t)$ と変数分離でき、初期条件
 \begin{equation}
 \left[\frac{\partial u(r,\theta,t)}{\partial t}\right]_{t=0}=0
 \eqname{q2:initial-t}
 \end{equation}
-$B$rK~$?$9$b$N$r5a$a$k!#(B
+を満たすものを求める。
 
-$\psi(r,\theta) = R(r)\Theta(\theta)$ $B$H$*$-!"(B\eqhref{q2:wave}$B$KBeF~$7$F@0M}$9$k$H(B
+$\psi(r,\theta) = R(r)\Theta(\theta)$ とおき、\eqhref{q2:wave}に代入して整理すると
 \begin{equation}
 \frac{\partial^2T}{\partial t^2}/T = 
 \left(\frac{\partial^2\psi}{\partial r^2}+\frac1r\frac{\partial\psi}{\partial r}+
 \frac1{r^2}\frac{\partial^2\psi}{\partial \theta^2}\right)/\psi
 \end{equation}
-$B$rF@$k$N$G!"N>JU$NCM$O(B $r,\theta,t$ $B$K$h$i$J$$Dj?t$G$"$k!#$3$l$r(B $-\lambda^2$ $B$H$*$/!#(B
+を得るので、両辺の値は $r,\theta,t$ によらない定数である。これを $-\lambda^2$ とおく。
 \end{enumerate}
 
-$\partial^2T/\partial t^2 = -\lambda^2 T$ $B$N2r$G!"CM$,<B?t$+$D(B\eqhref{q2:initial-t}$B$rK~$?$9$b$N$O(B
-$T(t)\propto \cos{\lambda t}$ $B$J$k$b$N$K8B$i$l$k!#(B
+$\partial^2T/\partial t^2 = -\lambda^2 T$ の解で、値が実数かつ\eqhref{q2:initial-t}を満たすものは
+$T(t)\propto \cos{\lambda t}$ なるものに限られる。
 
-$\psi(r,\theta)$ $B$K4X$9$kJ}Dx<0$r(B $R, \Theta$ $B$G=q$-D>$7$F@0M}$7!"(B $R'=dR/dr$, $\Theta'=d\Theta/d\theta$ 
-$B$N$h$&$KN,5-$9$k$H(B
+$\psi(r,\theta)$ に関する方程式を $R, \Theta$ で書き直して整理し、 $R'=dR/dr$, $\Theta'=d\Theta/d\theta$ 
+のように略記すると
 \[
 r^2\left(\frac{R''+R'/r}{R}+\lambda^2\right)=-\frac{\Theta''}{\Theta}
 \]
-$BN>JU$O(B $r, \theta$ $B$K$h$i$J$$$N$G(B $\nu^2$ $B$H$*$1$k!#(B
+両辺は $r, \theta$ によらないので $\nu^2$ とおける。
 
-$\Theta''=-\nu^2\Theta$ $B$J$N$G!"(B$\nu$ $B$,@0?t$N>l9g$K8B$j0l2A$NFHN)$J<B?t2r(B
-$\Theta(\theta) \propto \sin{\nu\theta}, \Theta(\theta) \propto \cos{\nu\theta}$ $B$,$"$k!#(B
+$\Theta''=-\nu^2\Theta$ なので、$\nu$ が整数の場合に限り一価の独立な実数解
+$\Theta(\theta) \propto \sin{\nu\theta}, \Theta(\theta) \propto \cos{\nu\theta}$ がある。
 
-$R(r)$ $B$K$D$$$F$NJ}Dx<0$O!"(B $x=\lambda r$ $B$HJQ?tJQ49$9$k$H(B
+$R(r)$ についての方程式は、 $x=\lambda r$ と変数変換すると
 \[
 \frac{\partial^2 R}{\partial x^2}+\frac1x\frac{\partial R}{\partial x}+\left(1-\frac{\nu^2}{x^2}\right)R = 0
 \]
-$B$H$J$k$+$i!"(B $r\geq 0$ $B$GM-8B$J<B?t2r$O(B $R(r)=J\nu(\lambda r)$ $B$K8B$i$l$k!#(B
+となるから、 $r\geq 0$ で有限な実数解は $R(r)=J\nu(\lambda r)$ に限られる。
 
-$B6-3&>r7o(B $u(a,\theta,t) = R(a)\Theta(\theta)T(t) = 0$ $B$h$j!"(B $R(a)=J_\nu(\lambda a)=0$ $B$J$N$G!"(B
-$\xi_{\nu j}$ $B$r(B $J_\nu$ $B$N(B $j$ $BHVL\$NNmE@$H$7$F(B $\lambda = \xi_{\nu j}/a$ $B$H=q$1$k!#(B
+境界条件 $u(a,\theta,t) = R(a)\Theta(\theta)T(t) = 0$ より、 $R(a)=J_\nu(\lambda a)=0$ なので、
+$\xi_{\nu j}$ を $J_\nu$ の $j$ 番目の零点として $\lambda = \xi_{\nu j}/a$ と書ける。
 
-$B0J>e$h$j!"(B\eqhref{q2:initial-t}$B$H6-3&>r7o$rK~$?$9(B\eqhref{q2:wave}$B$N2r$O(B
+以上より、\eqhref{q2:initial-t}と境界条件を満たす\eqhref{q2:wave}の解は
 \[
 \varphi_{\nu j}^{(1)} = J_\nu\left(\frac{\xi_{\nu j}}a r\right)\sin{\nu\theta},
 \varphi_{\nu j}^{(1)} = J_\nu\left(\frac{\xi_{\nu j}}a r\right)\cos{\nu\theta}
 \]
-$B$N7A$N$b$N$K8B$i$l$k!#(B
-$B$3$l$i$,!"(B2$B8D$N2r$N@Q$rH>7B(B $a$ $B$N1_(B $S$ $B$NFbIt$G@QJ,$9$k$3$H$GDj5A$5$l$kFb@Q$K4X$7$FD>8r$9$k$3$H$r<($9!#(B
-($B87L)$K$O40A4D>8r7O$r$J$9$3$H$r<($9$Y$-$G$"$m$&(B)
+の形のものに限られる。
+これらが、2個の解の積を半径 $a$ の円 $S$ の内部で積分することで定義される内積に関して直交することを示す。
+(厳密には完全直交系をなすことを示すべきであろう)
 
-$\theta$ $B$K4X$7$F@h$K@QJ,$9$l$P!"(B $\varphi_{\nu j}^{(1)}$ $B$H(B $\varphi_{\nu' j'}^{(2)}$ $B$,D>8r$9$k$3$H!"(B
-$B$*$h$S(B $\nu\neq\nu'$ $B$N$H$-(B $\varphi_{\nu j}^{(i)}$ $B$H(B $\varphi_{\nu' j'}^{(i)}$ $B$,D>8r$9$k(B($i=1,2$)$B$3$H$,$o$+$k!#(B
+$\theta$ に関して先に積分すれば、 $\varphi_{\nu j}^{(1)}$ と $\varphi_{\nu' j'}^{(2)}$ が直交すること、
+および $\nu\neq\nu'$ のとき $\varphi_{\nu j}^{(i)}$ と $\varphi_{\nu' j'}^{(i)}$ が直交する($i=1,2$)ことがわかる。
 
-$B$h$C$F!"(B $\nu$ $B$,Ey$7$/(B $j$ $B$,0[$J$k>l9g$G!"(B $\theta$ $B$K4X$9$k@QJ,$,>C$($J$$>l9g$r9M$($l$P$h$$$,!"(B
-$B$3$N$H$-(B(i)$B$N7k2L$h$j(B
+よって、 $\nu$ が等しく $j$ が異なる場合で、 $\theta$ に関する積分が消えない場合を考えればよいが、
+このとき(i)の結果より
 \[
 \int_S \varphi_{\nu j}^{(i)}\varphi_{\nu j'}^{(i)}dS
 = \left(\int_0^{2\pi}\sin^2\nu\theta d\theta\right)
 \int_0^a r J_\nu\left(\frac{\xi_{\nu j}}a r\right)J_\nu\left(\frac{\xi_{\nu j'}}a r\right)
 = 0
 \]
-$B$H$J$k(B( $x=r/a$ $B$HCV49$7$F@QJ,$9$l$P$h$$(B)$B!#(B
+となる( $x=r/a$ と置換して積分すればよい)。
 
-$B=>$C$F!"(B($B>e$N2r$,40A4D>8r7O$r$J$9$3$H$rG'$a$l$P(B)$B=i4|>r7o(B $u(r,\theta,0) = F(r,\theta)$ $B$rK~$?$92r$O!"(B
+従って、(上の解が完全直交系をなすことを認めれば)初期条件 $u(r,\theta,0) = F(r,\theta)$ を満たす解は、
 \[
 a_{\nu j}^{(1)} = \int_SF(r,\theta)J_\nu\left(\frac{\xi_{\nu j}}a r\right)\sin{\nu\theta}dS/
 \int_SJ_\nu^2\left(\frac{\xi_{\nu j}}a r\right)\sin^2{\nu\theta}dS
 \]
-$B$*$h$S(B
+および
 \[
 a_{\nu j}^{(2)} = \int_SF(r,\theta)J_\nu\left(\frac{\xi_{\nu j}}a r\right)\cos{\nu\theta}dS/
 \int_SJ_\nu^2\left(\frac{\xi_{\nu j}}a r\right)\cos^2{\nu\theta}dS
 \]
-$B$rMQ$$$F!"(B
+を用いて、
 \[
 u(r,\theta,t) = \sum_\nu\sum_j
 J_\nu\left(\frac{\xi_{\nu j}}a r\right)
 \left(a_{\nu j}^{(1)}\sin{\nu\theta}+a_{\nu j}^{(2)}\cos{\nu\theta}\right)
 \cos{\frac{\xi_{\nu j}}at}
 \]
-$B$H$J$k!#(B
+となる。
 
 \item
 \begin{enumerate}
@@ -246,25 +246,25 @@ x(t)=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}x(\omega)d\omega
 f(t)=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}f(\omega)d\omega
 \eqname{q3:f_t}
 \end{equation}
-$B$r(B\eqhref{q3:diffeq}$B$KBeF~$7!"(B $t$ $B$K4X$9$kHyJ,$H(B $\omega$ $B$G$N@QJ,$N=g=x$r8r49$7$F(B
+を\eqhref{q3:diffeq}に代入し、 $t$ に関する微分と $\omega$ での積分の順序を交換して
 \begin{equation}
 \frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}
 \left[(-\omega^2+2i\alpha\omega+\beta^2)x(\omega)-f(\omega)\right]d\omega = 0
 \end{equation}
-$B$rF@$k!#$3$l$,G$0U$N(B $t$ $B$KBP$7$F@.$jN)$D$N$G!"(B
+を得る。これが任意の $t$ に対して成り立つので、
 \[
 (-\omega^2+2i\alpha\omega+\beta^2)x(\omega)=f(\omega)
 \]
-$B$9$J$o$A(B
+すなわち
 $\underline{C(\omega) =-\omega^2+2i\alpha\omega+\beta^2}$
-$B$H$J$k!#(B
+となる。
 \item
-$f(t) = \delta(t)$ $B$N$H$-!"%U!<%j%(JQ49$NDj5A$K$h$j(B
+$f(t) = \delta(t)$ のとき、フーリエ変換の定義により
 \[
 f(\omega)=\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{-i\omega t}\delta(t)dt
 = \frac1{\sqrt{2\pi}}
 \]
-$B$G$"$k$+$i!"%U!<%j%(JQ492DG=$J2r(B $x(t)$ $B$,$"$k$H$-!"(B $x(t)$ $B$O(B
+であるから、フーリエ変換可能な解 $x(t)$ があるとき、 $x(t)$ は
 \begin{equation}
 x(t)
 =\frac1{\sqrt{2\pi}}\int_{-\infty}^\infty e^{i\omega t}x(\omega)d\omega
@@ -272,111 +272,111 @@ x(t)
 =\frac1{2\pi}\int_{-\infty}^\infty \frac{-e^{i\omega t}}{(\omega-i\alpha)^2-\beta^2+\alpha^2}d\omega
 \eqname{q3:fourier}
 \end{equation}
-$B$GM?$($i$l$k$3$H$,$o$+$k!#$3$3$G!"(B $g(\omega)=-e^{i\omega t}/\{(\omega-i\alpha)^2-\beta^2+\alpha^2\}$ $B$H$*$/!#(B
+で与えられることがわかる。ここで、 $g(\omega)=-e^{i\omega t}/\{(\omega-i\alpha)^2-\beta^2+\alpha^2\}$ とおく。
 
 \begin{enumerate}
 \item $\alpha<\beta$
 
-$\gamma = \sqrt{\beta^2-\alpha^2}$ $B$H$*$/$H!"(B $g(\omega)$ $B$N6K$O(B
-      $\omega=i\alpha\pm \gamma$ $B$G$"$k!#(B
+$\gamma = \sqrt{\beta^2-\alpha^2}$ とおくと、 $g(\omega)$ の極は
+      $\omega=i\alpha\pm \gamma$ である。
 
-$\alpha>0$ $B$h$j!"6K$O$I$A$i$b>eH>J?LL$K$"$k$N$G!"(B
-$t<0$ $B$N$H$-(B (\iref{q3:fourier}) $B$K$h$C$F(B $x(t)=0$ $B$H$J$k!#(B
+$\alpha>0$ より、極はどちらも上半平面にあるので、
+$t<0$ のとき (\iref{q3:fourier}) によって $x(t)=0$ となる。
 
-$t>0$ $B$N$H$-!"?^(B\eqhref{q3:largerbeta}$B$K<($7$?>eB&$N7PO)(B $C$ $B$K1h$C$?@QJ,$O(B
+$t>0$ のとき、図\eqhref{q3:largerbeta}に示した上側の経路 $C$ に沿った積分は
 \[
 \int_{C'}g(\omega)d\omega
 = 2\pi i \left({\rm Res}(g,i\alpha+\gamma)+{\rm Res}(g,i\alpha-\gamma)\right)
 = 2\pi e^{-\alpha t}\frac{\sin \gamma t}{\gamma}
 \]
-$B$H$J$j!"H>1_$NH>7B$r(B $R$ $B$H$9$l$P!"(B $R>>\alpha,\beta$ $B$N$H$-(B $|g(\omega)|=O(R^{-2})$ $B$J$N$G!"(B
-$R\rightarrow\infty$ $B$N$H$-H>1_ItJ,$N@QJ,$O(B $0$ $B$K<}B+$9$k!#$h$C$F(B
+となり、半円の半径を $R$ とすれば、 $R>>\alpha,\beta$ のとき $|g(\omega)|=O(R^{-2})$ なので、
+$R\rightarrow\infty$ のとき半円部分の積分は $0$ に収束する。よって
 \[
 x(t) = \frac1{2\pi}\int_{-\infty}^\infty g(\omega)d\omega = e^{-\alpha t}\frac{\sin \gamma t}{\gamma}
 \]
-$B$H$J$k!#(B
+となる。
 
-$B0J>e$+$i!"(B
+以上から、
 \[
 x(t) = \Theta(t) e^{-\alpha t}\frac{\sin \gamma t}{\gamma}
 = \Theta(t) e^{-\alpha t}\frac{\sin \sqrt{\beta^2-\alpha^2} t}{\sqrt{\beta^2-\alpha^2}}
 \]
-$B$rF@$k!#(B
+を得る。
 \begin{figure}[h]
 \begin{center}
 \input{2000math-1.tpc}
 \end{center}
-\caption{$\alpha<\beta$ $B$N>l9g$N@QJ,7PO)(B}\eqname{q3:largerbeta}
+\caption{$\alpha<\beta$ の場合の積分経路}\eqname{q3:largerbeta}
 \end{figure}
 \newpage
 \item $\alpha=\beta$
 
-$B$3$N$H$-!"(B $g(\omega)$ $B$O(B $\omega=i\alpha$ $B$K(B2$B0L$N6K$r;}$D!#(B
+このとき、 $g(\omega)$ は $\omega=i\alpha$ に2位の極を持つ。
 
-$f(z)$ $B$,(B $z=z_0$ $B$K(B $n$ $B0L$N6K$r;}$D$H$-!"(B
+$f(z)$ が $z=z_0$ に $n$ 位の極を持つとき、
 \[
  \mbox{Res}~[f(z),z_0] = \frac{1}{(n-1)!}
 \lim_{z\rightarrow z_0,z\neq z_0}\frac{d^{n-1}}{dz^{n-1}}
 \left[(z-z_0)^n f(z)\right]
 \]
-$B$G$"$k$+$i!"(B
+であるから、
 \[
 \mbox{Res}~[g(\omega),i\alpha]
 = \lim_{\omega\rightarrow i\alpha}\frac{d}{d\omega}(-e^{i\omega t})
 = -ite^{-\alpha t}
 \]
-$B$H$J$k!#(B
+となる。
 
-$t>0$ $B$N$H$-!"?^(B\eqhref{q3:largerbeta} $B$N(B $C$ $B$K1h$C$F@QJ,$9$k$H(B
-$BH>1_ItJ,$O(B(i)$B$HF1MM$K(B $R\rightarrow\infty$ $B$G>C$($k$N$G!"(B
+$t>0$ のとき、図\eqhref{q3:largerbeta} の $C$ に沿って積分すると
+半円部分は(i)と同様に $R\rightarrow\infty$ で消えるので、
 \[
  x(t) = 2\pi i\mbox{Res}~[g(\omega),i\alpha] = te^{-\alpha t}
 \]
 
-$t<0$ $B$N$H$-!"?^(B\eqhref{q3:largerbeta} $B$N(B $C'$ $B$K1h$C$F@QJ,$9$k$H(B
-$BH>1_ItJ,$,>C$(!"(B $x(t)=0$ $B$H$J$k!#(B
+$t<0$ のとき、図\eqhref{q3:largerbeta} の $C'$ に沿って積分すると
+半円部分が消え、 $x(t)=0$ となる。
 
-$B$h$C$F!"(B
+よって、
 \[
  x(t) = \Theta(t)te^{-\alpha t}
 \]
-$B$,F@$i$l$k!#(B
+が得られる。
 \newpage
 \item $\alpha>\beta$
 
-$\gamma = \sqrt{\alpha^2-\beta^2}$ $B$HDj$a$k!#(B
+$\gamma = \sqrt{\alpha^2-\beta^2}$ と定める。
 
-$\alpha>\gamma>0$ $B$h$j!"6K$O$I$A$i$b>eH>J?LL$K$"$k$N$G!"(B
-$t<0$ $B$N$H$-(B (\iref{q3:fourier}) $B$K$h$C$F(B $x(t)=0$ $B$H$J$k!#(B
+$\alpha>\gamma>0$ より、極はどちらも上半平面にあるので、
+$t<0$ のとき (\iref{q3:fourier}) によって $x(t)=0$ となる。
 
-$t>0$ $B$N$H$-!"?^(B\eqhref{q3:smallerbeta}$B$K<($7$?>eB&$N7PO)(B $C$ $B$K1h$C$?@QJ,$O(B
+$t>0$ のとき、図\eqhref{q3:smallerbeta}に示した上側の経路 $C$ に沿った積分は
 \[
 \int_{C'}g(\omega)d\omega
 = 2\pi i \left({\rm Res}(g,i\alpha+i\gamma)+{\rm Res}(g,i\alpha-i\gamma)\right)
 = 2\pi e^{-\alpha t}\frac{\sinh \gamma t}{\gamma}
 \]
-$B$H$J$j!"H>1_$NH>7B$r(B $R$ $B$H$9$l$P!"(B $R>>\alpha,\beta$ $B$N$H$-(B $|g(\omega)|=O(R^{-2})$ $B$J$N$G!"(B
-$R\rightarrow\infty$ $B$N$H$-H>1_ItJ,$N@QJ,$O(B $0$ $B$K<}B+$9$k!#$h$C$F(B
+となり、半円の半径を $R$ とすれば、 $R>>\alpha,\beta$ のとき $|g(\omega)|=O(R^{-2})$ なので、
+$R\rightarrow\infty$ のとき半円部分の積分は $0$ に収束する。よって
 \[
 x(t) = \frac1{2\pi}\int_{-\infty}^\infty g(\omega)d\omega = e^{-\alpha t}\frac{\sinh \gamma t}{\gamma}
 \]
-$B$H$J$k!#(B
+となる。
 
-$B0J>e$+$i!"(B
+以上から、
 \[
 x(t) = \Theta(t) e^{-\alpha t}\frac{\sinh \gamma t}{\gamma}
 = \Theta(t) e^{-\alpha t}\frac{\sinh \sqrt{\alpha^2-\beta^2} t}{\sqrt{\alpha^2-\beta^2}}
 \]
-$B$rF@$k!#(B
+を得る。
 \begin{figure}[h]
 \begin{center}
 \input{2000math-2.tpc}
 \end{center}
-\caption{$\alpha>\beta$ $B$N>l9g$N@QJ,7PO)(B}\eqname{q3:smallerbeta}
+\caption{$\alpha>\beta$ の場合の積分経路}\eqname{q3:smallerbeta}
 \end{figure}
 
-($BCm(B) $B6-3&>r7o$,;XDj$5$l$F$$$J$$$N$G!"0lHL2r$O(B2$B8D$N@QJ,Dj?t$r4^$`$,!"(B
-$BLdBjJ8$N;X<($K=>$C$F2r$/$H(B $t<0$ $B$G(B $x(t)=0$ $B$rK~$?$92r$N$_$,F@$i$l$k!#(B
+(注) 境界条件が指定されていないので、一般解は2個の積分定数を含むが、
+問題文の指示に従って解くと $t<0$ で $x(t)=0$ を満たす解のみが得られる。
 \end{enumerate}
 \end{enumerate}
 

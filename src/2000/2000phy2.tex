@@ -3,46 +3,46 @@
 
 \begin{document}
 
-\begin{question}{$BLdBj(B2}{$B>.;3!)(B}
-$B%9%T%s$,(B1$B<!853J;R>e$N3FE@$K$"$j!"3J;RE@$N?t$,(B$N$($N$$B$O6v?t(B)$B$NLO7?$r9M;!$9$k!#$=$N%O%_%k%H%K%"%s$O(B
+\begin{question}{問題2}{小山？}
+スピンが1次元格子上の各点にあり、格子点の数が$N$($N$は偶数)の模型を考察する。そのハミルトニアンは
 \[
 H=-J\sum _{i=1}^{N}\sigma_{i}\sigma_{i+1}
 \]
-$B$H$9$k!#$3$3$G<~4|E*6-3&>r7o$r2]$7!"(B$\sigma_{N+1}$$B$O(B$\sigma_{1}$$B$r0UL#$9$k$b$N$H$7!"$+$D(B$\sigma_{i}(i=1,2,\ldots ,N)$$B$O(B$\pm 1$$B$NCM$r$H$k$b$N$H$9$k!#$3$NLO7?$N3F>uBV$O(B$(\uparrow \downarrow \downarrow \uparrow\cdots )$$B$N$h$&$J%9%T%s$NG[CV$K$h$C$F$"$i$o$5$l$k!#(B
+とする。ここで周期的境界条件を課し、$\sigma_{N+1}$は$\sigma_{1}$を意味するものとし、かつ$\sigma_{i}(i=1,2,\ldots ,N)$は$\pm 1$の値をとるものとする。この模型の各状態は$(\uparrow \downarrow \downarrow \uparrow\cdots )$のようなスピンの配置によってあらわされる。
 \begin{enumerate}
-\item $B$3$NLO7?$N>uBV?t$OA4It$G$$$/$D$+!#(B
-\item $J$$B$,@5$N>l9g$HIi$N>l9g$K$D$$$F4pDl>uBV$N%9%T%sG[CV$r=q$1!#(B
-\item $BA0Ld$N>l9g!"4pDl>uBV$N%(%M%k%.!<$H$=$N=L=EEY$r5a$a$h!#(B\\
+\item この模型の状態数は全部でいくつか。
+\item $J$が正の場合と負の場合について基底状態のスピン配置を書け。
+\item 前問の場合、基底状態のエネルギーとその縮重度を求めよ。\\
 \end{enumerate}
 
 %\vspace{5mm}
 
-$B0J2<$G$O(B$J$$B$,@5$N>l9g$N$_$r9M$($k!#(B
+以下では$J$が正の場合のみを考える。
 \begin{enumerate}
 \setcounter{enumi}{3}
-\item $BBh(B1$BNe5/>uBV$N%9%T%sG[CV$r=q$1!#$=$N%(%M%k%.!<$H=L=EEY$r5a$a$h!#(B
-\item $BA4$F$N%(%M%k%.!<8GM-CM$H$=$N=L=EEY$r5a$a$h!#$?$@$7(B2$B9`78?t(B
+\item 第1励起状態のスピン配置を書け。そのエネルギーと縮重度を求めよ。
+\item 全てのエネルギー固有値とその縮重度を求めよ。ただし2項係数
 \[
 {}_{N}C_{M}\equiv \frac{N!}{M!(N-M)!}
 \]
-$B$rMQ$$$h!#(B
-\item $BA0Ld$N7k2L$rMQ$$$F!"$3$N7O$NJ,G[4X?t$r5a$a$h!#$?$@$729EY$O(B$T$$B$H$7!"%\%k%D%^%sDj?t$O(B$k_{\mathrm{B}}$$B$H$9$k!#I,MW$K1~$8$F(B
+を用いよ。
+\item 前問の結果を用いて、この系の分配関数を求めよ。ただし温度は$T$とし、ボルツマン定数は$k_{\mathrm{B}}$とする。必要に応じて
 \[
 (1+x)^{N}=\sum _{M=0}^{N}{}_{N}C_{M}x^{M}
 \]
-$B$r;H$C$F$h$$!#(B
-\item $N$$B$,L58BBg$N6K8B$G$N(B1$B3J;RE@$"$?$j$N<+M3%(%M%k%.!<$,(B
+を使ってよい。
+\item $N$が無限大の極限での1格子点あたりの自由エネルギーが
 \[
 -k_{\mathrm{B}}T\ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T})\right]
 \]
-$B$G$"$i$o$5$l$k$3$H$r<($;!#(B
-\item $BA0Ld$N7k2L$rMQ$$$F!"(B1$B3J;RE@$"$?$j$N%(%M%k%.!<$H%(%s%H%m%T!<$r5a$a$h!#9b29$G$N%(%s%H%m%T!<$NA26aE*$U$k$^$$$r5a$a$h!#(B
+であらわされることを示せ。
+\item 前問の結果を用いて、1格子点あたりのエネルギーとエントロピーを求めよ。高温でのエントロピーの漸近的ふるまいを求めよ。
 \end{enumerate}
 \end{question}
-\begin{answer}{$BLdBj(B2}{}
+\begin{answer}{問題2}{}
 \begin{enumerate}
-\item $BA4>uBV?t(B$2^{N}$
-\item $B4pDl>uBV(B
+\item 全状態数$2^{N}$
+\item 基底状態
 \begin{eqnarray*}
 \left\{
 \begin{array}{cccc}
@@ -54,7 +54,7 @@ J<0 & \uparrow   \downarrow \uparrow   \cdots \uparrow   \downarrow & \mathrm{or
 \end{array}
 \right.
 \end{eqnarray*}
-\item $B4pDl>uBV$N$H$-%(%M%k%.!<$H=L=EEY$O$=$l$>$l(B
+\item 基底状態のときエネルギーと縮重度はそれぞれ
 \begin{eqnarray*}
 \left\{
 \begin{array}{ccc}
@@ -63,7 +63,7 @@ J<0 & -N|J| & 2\\
 \end{array}
 \right.
 \end{eqnarray*}
-\item $BBh0lNe5/>uBV(B
+\item 第一励起状態
 \begin{eqnarray*}
 \begin{array}{c}
 \uparrow \downarrow \downarrow \cdots   \downarrow \downarrow\\
@@ -72,23 +72,23 @@ J<0 & -N|J| & 2\\
 \uparrow \uparrow   \uparrow   \cdots   \uparrow   \downarrow\\
 \end{array}
 \end{eqnarray*}
-$B%(%M%k%.!<$O(B$-(N-4)J$\\
-$BNX$C$+$K$J$C$F$$$F>e$N%9%T%sG[CV$,$=$l$>$l(B$N$$BDL$j$:$D$"$k$N$G=L=EEY$O(B$N(N-1)$
-\item $B%(%M%k%.!<8GM-CM$H$=$N=L=EEY(B\\
-$N$$B8D:?$,$"$k$N$G!"$=$N$&$A(B$2M$$B8D$G(Bup,down$B$,6h@Z$l$F$$$k>uBV$r@0?t(B$M(0\le M \le N/2)$$B$G;XDj$9$k$3$H$K$9$k$H!"(B\\
-$B%(%M%k%.!<8GM-CM$O(B$-(N-4M)J$\\
-$B=L=EEY$O(B$N$$B8D$N:?$+$i(B$2M$$B8DA*$S$=$l$>$l$K$D$$$F(B2$B>uBV$:$D$"$k$N$G(B$2_{N}C_{2M}$\\
-$BA4ItB-$9$H(B
+エネルギーは$-(N-4)J$\\
+輪っかになっていて上のスピン配置がそれぞれ$N$通りずつあるので縮重度は$N(N-1)$
+\item エネルギー固有値とその縮重度\\
+$N$個鎖があるので、そのうち$2M$個でup,downが区切れている状態を整数$M(0\le M \le N/2)$で指定することにすると、\\
+エネルギー固有値は$-(N-4M)J$\\
+縮重度は$N$個の鎖から$2M$個選びそれぞれについて2状態ずつあるので$2_{N}C_{2M}$\\
+全部足すと
 \[
 2( {}_{N}C_{0} + {}_{N}C_{2} + {}_{N}C_{4} + \cdots + {}_{N}C_{N})=2^{N}
 \]
-$B$,3N$+$a$i$l$k!#(B
-\item $B6v?t$K$D$$$FB-$79g$o$;$k$H$-(B
+が確かめられる。
+\item 偶数について足し合わせるとき
 \[
 _{N}C_{0} + {}_{N}C_{2}x^{2} + {}_{N}C_{4}x^{4} + \cdots + {}_{N}C_{N}x^{N}=\left((1+x)^{N}-(1-x)^{N}\right)/2
 \]
-$B$rMxMQ$9$k!#(B\\
-$BJ,G[4X?t(B$Z$$B$O(B$\beta=k_{\mathrm{B}}T$$B$H$7$F(B
+を利用する。\\
+分配関数$Z$は$\beta=k_{\mathrm{B}}T$として
 \begin{eqnarray*}
 Z&=&\sum _{M=0}^{N/2} 2_{N}C_{2M}\exp(\beta (N-4M)J)\\
  &=&2\exp(\beta NJ)\sum _{M=0}^{N/2} {}_{N}C_{2M}\exp(-\beta 4MJ)\\
@@ -96,36 +96,36 @@ Z&=&\sum _{M=0}^{N/2} 2_{N}C_{2M}\exp(\beta (N-4M)J)\\
  &=&(\exp(\beta J)+\exp(-\beta J))^{N} - (\exp(\beta J)-\exp(-\beta J))^{N}\\
  &=&2^{N}\{ (\cosh \beta J)^{N}-(\sinh \beta J)^{N} \}
 \end{eqnarray*}
-$B$H7W;;$G$-$k!#(B($x=\exp(-\beta 2J)$$B$H$7$F>e$N<0$r;H$&!#(B)
-\item $N\to \infty $$B$G$O(B
+と計算できる。($x=\exp(-\beta 2J)$として上の式を使う。)
+\item $N\to \infty $では
 \[
 Z\to 2^{N} (\cosh \beta J)^{N}
 \]
-$B$H$J$k!#<+M3%(%M%k%.!<(B$F$$B$O(B$F=-\frac{1}{\beta}\ln Z$$B$h$j(B
+となる。自由エネルギー$F$は$F=-\frac{1}{\beta}\ln Z$より
 
 \[
 F=-Nk_{\mathrm{B}}T \ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T}) \right]
 \]
-1$B8D$"$?$j$N<+M3%(%M%k%.!<$O(B$N$$B$G3d$l$P$h$$$N$G(B
+1個あたりの自由エネルギーは$N$で割ればよいので
 \[
 \frac{F}{N}=-k_{\mathrm{B}}T \ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T}) \right]
 \]
-\item $B%(%M%k%.!<$O(B$E=-\frac{\partial}{\partial \beta}\ln Z$$B!"%(%s%H%m%T!<$O(B$S=(E-F)/T$$B$h$j5a$^$k!#(B
-$B7W;;$9$k$H(B
+\item エネルギーは$E=-\frac{\partial}{\partial \beta}\ln Z$、エントロピーは$S=(E-F)/T$より求まる。
+計算すると
 \begin{eqnarray*}
 \frac{E}{N}&=&-J\tanh \beta J\\
 \frac{S}{N}&=&-\frac{J}{T}\tanh \beta J + k_{\mathrm{B}}\ln\left[2\cosh(\frac{J}{k_{\mathrm{B}}T}) \right]
 \end{eqnarray*}
-$B$H$J$k!#9b296K8B(B$T\to \infty (\beta \to 0)$$B$G$O(B
+となる。高温極限$T\to \infty (\beta \to 0)$では
 \begin{eqnarray*}
 \frac{E}{N}&\to& 0\\
 \frac{S}{N}&\to& k_{\mathrm{B}}\ln2
 \end{eqnarray*}
-$\exp(-\beta E_{M})\to 1$$B$H$J$k$N$GA4$F$N>uBV$,F1$83NN($G$*$3$k!#%(%M%k%.!<$OJ?6QCM(B0$B$K$J$C$F$$$k!#(B
-$B%(%s%H%m%T!<$K$D$$$F$O(B1$B8D$"$?$j(Bup,down$B$N(B2$B>uBV$,F13NN($G5/$-$k$3$H$r0UL#$7$F$$$k!#(B
+$\exp(-\beta E_{M})\to 1$となるので全ての状態が同じ確率でおこる。エネルギーは平均値0になっている。
+エントロピーについては1個あたりup,downの2状態が同確率で起きることを意味している。
 \end{enumerate}
 
-%$B$H$j$"$($:$3$s$J46$8$G!#(B
+%とりあえずこんな感じで。
 
 \end{answer}
 

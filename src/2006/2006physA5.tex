@@ -1,77 +1,77 @@
 %% -*- coding:sjis -*-
 \newcommand{\pdif}[2]{\frac{\partial {#1}}{\partial {#2}}}
-\begin{answer}{��T��}{����h�m}
+\begin{answer}{第５問}{見上敬洋}
 \begin{enumerate}
 \item
-  �������肵���������o���Ȃ��̂ŁC�v�������������Ă����܂��D
+  すっきりした答えが出来ないので，思いつくだけ書いておきます．
   \begin{itemize}
-  \item ���x�v�̈ʒu�͎����ɋ߂����Ɏ��D�i���x�v���x���������x�C�Ƃ��邽�߁j
-  \item �����̕s�ψ��}���邽�߂ɁC�Ȃ�ׂ������Ȏ������g���D
-  \item �����t�߂́C�O�E������t�˂�C���܂̑Η���}���邽�߂ɁC�V�[���h������D
+  \item 温度計の位置は試料に近い所に取る．（温度計温度＝試料温度，とするため）
+  \item 試料の不均一を抑えるために，なるべく小さな試料を使う．
+  \item 試料付近は，外界からの輻射や，寒剤の対流を抑えるために，シールドをつける．
   \end{itemize}
 
-  \paragraph{�R�����g1} 
-  {\small �ȉ��̖��́C���`���̂̔M�͊w�I�Ȏ�舵������ނɂȂ��Ă��܂��D�M�͊w�Ɋւ��ẮC���z�C�́Cvan der Waars�C�́C�����̂ȂǂɓK�p���Ă������Ƃ����邩�Ǝv���܂����C���`���̂ɑ΂��Ă��C����$\bm{M}$�������͎������x$ \bm{B} = \bm{M} + \mu_0\bm{H}$�Ɋւ����ԕ������C�����ē����G�l���M�[���������΁C���Ƃ��Ύ��R�G�l���M�[$G$�ƁC���̎��R�ȕϐ�$T,H$�ɂ���ē��l�ɔM�͊w���g�߂܂��D
+  \paragraph{コメント1} 
+  {\small 以下の問題は，超伝導体の熱力学的な取り扱いが題材になっています．熱力学に関しては，理想気体，van der Waars気体，磁性体などに適用してきたことがあるかと思いますが，超伝導体に対しても，磁化$\bm{M}$もしくは磁束密度$ \bm{B} = \bm{M} + \mu_0\bm{H}$に関する状態方程式，そして内部エネルギーを取り入れれば，たとえば自由エネルギー$G$と，その自然な変数$T,H$によって同様に熱力学が組めます．
 
-  ���`���̂̏�ԕ������́CMeissner���ʂ���o�Ă��܂��D����̓~�N���Ɍ���΁u���`����Ԃ͒�R�[���œd���������̂ŁC�����c�������S�ɓ�����($\bm{M} = -\mu_0 \bm{H}$)����̐i���������Ȃ�($\bm{B} = 0$)�v�Ƃ������Ƃł��D
-  ���������`���̂ɂ͗ՊE����$H_c(T)$�Ȃ���̂������āC������傫�Ȏ��ꂪ������Ə�`���ɓ]�ڂ��܂��D
+  超伝導体の状態方程式は，Meissner効果から出てきます．これはミクロに見れば「超伝導状態は抵抗ゼロで電流が流れるので，レンツ則が完全に働いて($\bm{M} = -\mu_0 \bm{H}$)磁場の進入を許さない($\bm{B} = 0$)」ということです．
+  ただし超伝導体には臨界磁場$H_c(T)$なるものがあって，これより大きな磁場がかかると常伝導に転移します．
 
-  �ȏ�̃~�N���Ȏ����$(H,T)$�̑S���$\bm{B}$�̏�ԕ������������C��͔�M$C(T)$�𒲒B����Γ����G�l���M�[�����܂��ĔM�͊w�̘b�ɂȂ�킯�ł��D
+  以上のミクロな事情から$(H,T)$の全域で$\bm{B}$の状態方程式が得られ，後は比熱$C(T)$を調達すれば内部エネルギーが決まって熱力学の話になるわけです．
   }
 
-  \paragraph{�R�����g2}
+  \paragraph{コメント2}
   {\small 
-  $H,T$�Ōn�̏�Ԃ��w�肳���킯�Ȃ̂ŁC$G_n, G_s$�Ƃ���2�̎��R�G�l���M�[������̂͂��������C�ƌl�I�Ɏv���̂ŁC�������q�ׂĂ��܂��܂��D�R�����g���҂����Ă��܂��D
+  $H,T$で系の状態が指定されるわけなので，$G_n, G_s$という2つの自由エネルギーがあるのはおかしい，と個人的に思うので，私見を述べてしまいます．コメントお待ちしています．
 
-  $H < H_c(T)$�ł́u��`�����̃G�l���M�[�v$G_n(H,T)$�́u���ɑ��]�ڂ��N����Ȃ��n�i�܂�C���肳�ꂽ��M�]�ڂ𖳎����ĊO�}\footnote{�O�}�ɂ͂������C�Ӑ��������āC����䂦$S_{n}(T_c) = \int_0^{T_c}C(T')/T' \, dT'$�̒l�͌��܂�܂���D����2�����]�ڂŌq���鎖����l�����āC��蕶�̐}3�Ŗʐς𓙂������܂��i���5-4�j�D�i�E�E�E�Ɩl���l���Ă��܂����c�_���ł��Dthanks ���{�N�j }���C$(H,T)$�S���$B = \mu_0 H$�ł���Ƃ����n�j�������ꍇ�̎��R�G�l���M�[�v�ł���ƍl���܂��D���R�C���]�ڂ��N����n�Ɣ�r����ƁC��`�����̎��R�G�l���M�[�͈�v���C���`���̈�ł�$G_s < G_n$�𖞂������̂ɂȂ�͂��ł��D�D
+  $H < H_c(T)$での「常伝導相のエネルギー」$G_n(H,T)$は「仮に相転移が起こらない系（つまり，測定された比熱転移を無視して外挿\footnote{外挿にはもちろん任意性があって，それゆえ$S_{n}(T_c) = \int_0^{T_c}C(T')/T' \, dT'$の値は決まりません．ただ2次相転移で繋がる事情を考慮して，問題文の図3で面積を等しく取ります（問題5-4）．（・・・と僕が考えていますが議論中です．thanks 立本君） }し，$(H,T)$全域で$B = \mu_0 H$であるとした系）だった場合の自由エネルギー」であると考えます．当然，相転移が起きる系と比較すると，常伝導相の自由エネルギーは一致し，超伝導領域では$G_s < G_n$を満たすものになるはずです．．
   }
 
 \item
-  �M�͊w�֌W��$dU = T\,dS = C(T)\,dT$��ϕ�����΂悢�ł��D
+  熱力学関係式$dU = T\,dS = C(T)\,dT$を積分すればよいです．
   \begin{equation}
   S(T) = \int_0^T \frac{C(T)}{T} dT , \quad 
   U(T) = U(0) + \int_0^T C(T) \,dT  \notag
   \end{equation}
 
 \item
-  $C/T$�����Əc���Ƃ̌�_��$\alpha = 1.35 \mathrm{mJ/mol\cdot K^2}$�Ɠǂ�ŁC$\dfrac CT = \alpha + \gamma T$���Ȃ킿$C = \alpha T + \gamma T^3$�ƂȂ�܂��D$\alpha T$�͓d�q��M�ɂ����`���ł��D
+  $C/T$直線と縦軸との交点を$\alpha = 1.35 \mathrm{mJ/mol\cdot K^2}$と読んで，$\dfrac CT = \alpha + \gamma T$すなわち$C = \alpha T + \gamma T^3$となります．$\alpha T$は電子比熱による線形項です．
 
 \item
-  2�����]�ڂȂ̂ŁC�G���g���s�[$S = -\dfrac{dG}{dT}$�͘A���D����������
+  2次相転移なので，エントロピー$S = -\dfrac{dG}{dT}$は連続．したがって
   \begin{equation}
   0 = S_s(T_c) - S_n(T_c) = \int_0^T \frac{C_s -C_n}{T} dT \notag
   \end{equation}
-  �����$C_s/T$��$C_n/T$�Ȑ��ŋ��܂��ʐς���������������Ă��邱�Ƃ������Ă��܂��D
+  これは$C_s/T$と$C_n/T$曲線で挟まれる面積が等しく分割されていることを示しています．
 
   \begin{figure}[h]
     \begin{center}
       %% \begin{wrapfigure}[10]{r}{5cm}
       \input{2006physA5_Fig1.tex}
     \end{center}
-    \caption{���`���̂̑��} } \ilabel{5phase}
+    \caption{超伝導体の相図 } \ilabel{5phase}
   \end{figure}
 
 \item
-  �E�̐}�́C$HT$�Ɋւ��鑊�}�ł��D
+  右の図は，$HT$に関する相図です．
 
-  �����Ԃɂ��ẮC$B = \mu_0 H$�ł��̂ŁCpath 1�ł̐ϕ������s����
+  正常状態については，$B = \mu_0 H$ですので，path 1での積分を実行して
   \begin{equation}
   G_n(T,H) = G_n(T,0) - V \frac 12 \mu_0 H^2 \quad ( T> T_c). \notag
   \end{equation}
-  $T>T_c$�Ƃ��܂������C�R�����g�����Ƃ���C�������`����Ԃł�$(H,T)$�S��ł̎��R�G�l���M�[�ƍl���܂��D
+  $T>T_c$としましたが，コメントしたとおり，これを常伝導状態での$(H,T)$全域での自由エネルギーと考えます．
 
-  ����C���`�����$H<H_c(T)$�ł�$B=0$�C$H>H_c(T)$�̂Ƃ�$B = \mu_0 H$�ɂȂ邱�Ƃɒ��ӂ��āCpath 2�Őϕ�������ƁC
+  一方，超伝導状態$H<H_c(T)$では$B=0$，$H>H_c(T)$のとき$B = \mu_0 H$になることに注意して，path 2で積分をすると，
   \begin{align}
   G_s(T,H) &= G_s(T,0) & (T<T_c, H< H_c(T) ) \notag \\
   G_n(T,H) &= G_s(T,0) -V\dfrac 12 \mu_0 \big( H^2 -H_c(T)^2 \big) & (T<T_c,  H> H_c(T) ) \notag
   \end{align}
-  �ƂȂ�܂��D$G_n(T,H)$�Ɋւ��ē�̕\��������ꂽ�̂ŁC����𓙂����ƒu���ƁC 
+  となります．$G_n(T,H)$に関して二つの表式が得られたので，これを等しいと置くと， 
   \begin{equation}
   G_n(T,0) = G_s(T,0) + V \frac 12 \mu_0 H_c(T)^2 \ilabel{5fe}
   \end{equation}
-  �������܂��D
+  が得られます．
 
-  ���āCpath 2�ɉ�����$H$�����X�ɑ傫�����Ă����Ƃ��C$\displaystyle \pdif GH$�̕ω��͂ǂ��Ȃ邩���l����ƁC
+  さて，path 2に沿って$H$を徐々に大きくしていくとき，$\displaystyle \pdif GH$の変化はどうなるかを考えると，
   \begin{equation}
   \pdif GH =
   \begin{cases}
@@ -79,24 +79,24 @@
   -V\mu_0 H & H> H_c(T) \\
   \end{cases} \notag
   \end{equation}
-  �ƂȂ��āC�ՊE����t�߂ŕs�A���D��������1�����]�ڂł��邱�Ƃ��킩��܂��D
+  となって，臨界磁場付近で不連続．こうして1次相転移であることがわかります．
 
 \item
-  $(T,H) = (0,H_c(0))$�ŁC$G_s$��$G_n$�̒l�͓������Ȃ���΂Ȃ�Ȃ��̂�
+  $(T,H) = (0,H_c(0))$で，$G_s$と$G_n$の値は等しくなければならないので
   \begin{equation}
   0= G_n(0,H_c(0))-G_s(0,H_c(0))= G_n(0,0) -G_s(0,0) - V\frac 12 H_c(0)^2 \notag
   \end{equation}
-  �ł����āC$G_n(0,0)-G_s(0,0) = 0.42\times 0.1 \cdot V[\mathrm{cm}^3] \cdot \mathrm{mJ}$��������$\mu_0H_c(0) = 1.0\times 10^{-5} \mathrm{T}$�D
+  であって，$G_n(0,0)-G_s(0,0) = 0.42\times 0.1 \cdot V[\mathrm{cm}^3] \cdot \mathrm{mJ}$を代入して$\mu_0H_c(0) = 1.0\times 10^{-5} \mathrm{T}$．
 
 \item
-  $T \sim 0$�ł̔�M�̗l�q���������ʂ��猩��ƁC$C_n \sim \gamma T$, $C_s \sim 0$�ƕ�����܂��D
+  $T \sim 0$での比熱の様子を実験結果から見ると，$C_n \sim \gamma T$, $C_s \sim 0$と分かります．
 
-  ������$C = -T\dfrac{\partial^2 G}{\partial T^2}$,$S = -\dfrac{\partial G}{\partial T}$�ɂ��C
+  ここで$C = -T\dfrac{\partial^2 G}{\partial T^2}$,$S = -\dfrac{\partial G}{\partial T}$により，
   \begin{align}
   G_n(T,0) &= G_n(0,0) - TS_n(0,0) - \frac 12 \gamma T^2, \notag \\
   G_s(T,0) &= G_s(0,0) - TS_s(0,0)  \notag
   \end{align}
-  ��$T$�œW�J���邱�Ƃ��o���܂��D�����ď����܂�������3�@�����$S(0,0) =0$�ł��D���̎��ƁC��\ieqref{5fe}���g����
+  と$T$で展開することが出来ます．あえて書きましたが第3法則より$S(0,0) =0$です．この式と，式\ieqref{5fe}を使えば
   \begin{equation}
   H_c(T) = \sqrt{\left(\delta - \dfrac 12 \gamma T^2\right)\left(\dfrac{2}{\mu_0V}\right)} \simeq H_c(0)\left(1 - \dfrac{\gamma}{4\delta} T^2 \right) \notag
   \end{equation}

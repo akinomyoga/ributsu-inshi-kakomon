@@ -1,7 +1,7 @@
-%% -*- mode:latex;coding:sjis -*-
+%% -*- mode: latex; coding: utf-8 -*-
 %%-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-
 %%
-%%  •¨—o”Å@‰@‰ß‹–âW—p@ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹
+%%  ç‰©ç†å‡ºç‰ˆã€€é™¢è©¦éå»å•é›†ç”¨ã€€ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«
 %%
 %%-----------------------------------------------------------------------------
 %%
@@ -31,11 +31,11 @@
 %%
 %% Authors:
 %%
-%%   * revised by    ‘º£ Œ÷ˆê (KM), 2013-07-16
-%%   * revised by    “¡–ì Œ’
-%%   * revised by    —§ì —T“ñ
-%%   * revised by    –î“c ’qŠö
-%%   * programmed by “n•Ó ®‹M
+%%   * revised by    æ‘ç€¬ åŠŸä¸€ (KM), 2013-07-16
+%%   * revised by    è—¤é‡ å¥
+%%   * revised by    ç«‹å· è£•äºŒ
+%%   * revised by    çŸ¢ç”° æ™ºæ®
+%%   * programmed by æ¸¡è¾º å°šè²´
 %%
 %%-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-
 %%
@@ -43,15 +43,15 @@
 %%
 %% 2013-07-16, KM,
 %%   * \eqname:
-%%     \eqname ‚Í package eqname ‚Å•Ê‚ÌˆÓ–¡‚Å’è‹`‚³‚ê‚éB
-%%     •ÏX‚µ‚½•û‚ª—Ç‚¢‚Ì‚Å‚Í‚È‚¢‚©?
+%%     \eqname ã¯ package eqname ã§åˆ¥ã®æ„å‘³ã§å®šç¾©ã•ã‚Œã‚‹ã€‚
+%%     å¤‰æ›´ã—ãŸæ–¹ãŒè‰¯ã„ã®ã§ã¯ãªã„ã‹?
 %%
 %%-----------------------------------------------------------------------------
-%% pLaTeX2e €‹’
+%% pLaTeX2e æº–æ‹ 
 
 \ProvidesPackage{inshi}
 
-% ==== ƒpƒbƒP[ƒWƒIƒvƒVƒ‡ƒ“
+% ==== ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚ªãƒ—ã‚·ãƒ§ãƒ³
 
 %% option "book": \usepackage[book]{inshi}
 \newif\if@inshioption@book
@@ -75,7 +75,7 @@
 
 \ProcessOptions\relax
 
-% ==== }‚ğ’£‚è•t‚¯‚éƒpƒbƒP[ƒW
+% ==== å›³ã‚’å¼µã‚Šä»˜ã‘ã‚‹ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸
 %%\usepackage[dvips]{graphicx}
 %%\usepackage[dvipdfm]{graphicx}
 \usepackage[dvipdfmx]{graphicx}
@@ -87,7 +87,7 @@
   \usepackage{amsmath,amssymb}
 \fi
 
-% ==== ÍŒ©o‚µ‚Ìü‚è•t‚¯‚Ì‚½‚ß‚ÌƒpƒbƒP[ƒW
+% ==== ç« è¦‹å‡ºã—ã®é£¾ã‚Šä»˜ã‘ã®ãŸã‚ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸
 \usepackage{ascmac}
 
 % added by Yuji T.
@@ -97,16 +97,16 @@
 
 %% \usepackage{wrapfig}
 
-% ==== •¡”s‚É“n‚é‰ºü‚ğˆø‚­ƒpƒbƒP[ƒW
+% ==== è¤‡æ•°è¡Œã«æ¸¡ã‚‹ä¸‹ç·šã‚’å¼•ããƒ‘ãƒƒã‚±ãƒ¼ã‚¸
 % someone prepared this sty editted inside the package
 % just to rename the macro; quite nonsensical i thought,
 % so i restored the original and just \let them equal. --- Yuji T.
 \usepackage{underlinedtext}
 \let\underlinejpn\underlinedtext
 
-% •¡”s‚É‚í‚½‚é‰ºü•t‚«•¶Í‚ğ‘‚­ƒ}ƒNƒ (‹g“cŠ°ŒN ’ñ‹Ÿ)
+% è¤‡æ•°è¡Œã«ã‚ãŸã‚‹ä¸‹ç·šä»˜ãæ–‡ç« ã‚’æ›¸ããƒã‚¯ãƒ­ (å‰ç”°å¯›å› æä¾›)
 % Changed .66ex to .6ex by Yuji Tachikawa, 12/21/2000
-% ‚‚³‚â‹ó”’‚È‚Ç‚ª‹C‚ÉH‚í‚È‚¢‚Ì‚Å‘‚«’¼‚µ by KM (2013-07-16)
+% é«˜ã•ã‚„ç©ºç™½ãªã©ãŒæ°—ã«é£Ÿã‚ãªã„ã®ã§æ›¸ãç›´ã— by KM (2013-07-16)
 \newcommand{\underlineeng}[2][{}]{{%
   \def\stuff{#2 }\leavevmode\lower.6ex\hbox{$ {}_{#1} \;\: $}%
   \def\iulmk{*}\let\iuls\relax%
@@ -117,192 +117,192 @@
   \else\iuls\let\iuls\iulspace\iulbox{\tok}\let\next\iulword%
   \fi\next}
 
-% ==== ”Šw‹L†ƒ}ƒNƒW‚ğæ‚è‚Ş
-%Ams-LaTeX‚ÌƒpƒbƒP[ƒW‚ğ“Ç‚İ‚ñ‚¾Œã‚ÉƒCƒ“ƒNƒ‹[ƒh
-%‚·‚é•K—v‚ª‚ ‚éB
+% ==== æ•°å­¦è¨˜å·ãƒã‚¯ãƒ­é›†ã‚’å–ã‚Šè¾¼ã‚€
+%Ams-LaTeXã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’èª­ã¿è¾¼ã‚“ã å¾Œã«ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
+%ã™ã‚‹å¿…è¦ãŒã‚ã‚‹ã€‚
 %% embedded math.h directly to reduce the # of files --- Yuji T. 
 %%---- \input{math.h} ---------------------------------------------------------
 
 %%-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=%%
-%%     ”ŠwE•¨—‹L†ƒ}ƒNƒ                       %%
+%%     æ•°å­¦ãƒ»ç‰©ç†è¨˜å·ãƒã‚¯ãƒ­                       %%
 %%-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=-=*=-=%%
 
 %======================================
-% ŠÖ”
+% é–¢æ•°
 %======================================
 \def\cosec{\mathop{\mathrm{cosec}}\nolimits}
 \def\cosech{\mathop{\mathrm{cosech}}\nolimits}
 \def\sech{\mathop{\mathrm{sech}}\nolimits}
 
 %======================================
-% ƒxƒNƒgƒ‹As—ñA‰‰Zqƒ}ƒNƒ
+% ãƒ™ã‚¯ãƒˆãƒ«ã€è¡Œåˆ—ã€æ¼”ç®—å­ãƒã‚¯ãƒ­
 %======================================
 
-% ---- ƒxƒNƒgƒ‹(‘¾•¶š) ––îˆóŒ^‚Í \vec{} ‚ğg‚¤
+% ---- ãƒ™ã‚¯ãƒˆãƒ«(å¤ªæ–‡å­—) ï¼ŠçŸ¢å°å‹ã¯ \vec{} ã‚’ä½¿ã†
 %\def\Vec#1{\mbox{\boldmath$#1$}}
 \def\Vec#1{\bm{#1}}
 
-% ---- 3ŸŒ³ƒxƒNƒgƒ‹‚Ì¬•ª•\¦
+% ---- 3æ¬¡å…ƒãƒ™ã‚¯ãƒˆãƒ«ã®æˆåˆ†è¡¨ç¤º
 \def\vect#1#2#3{\begin{pmatrix}#1\cr#2\cr#3\end{pmatrix}} 
 
-% ---- ƒmƒ‹ƒ€
+% ---- ãƒãƒ«ãƒ 
 \def\Norm#1{|{#1}|}
 
-% ---- s—ñ
+% ---- è¡Œåˆ—
 \def\Mat#1{{\rm\bf #1}}
 
-% ---- “]’uƒ}[ƒN
+% ---- è»¢ç½®ãƒãƒ¼ã‚¯
 \def\Trans#1{#1\raisebox{1.0ex}{\tiny$\rm T$}\!}
 
-% ---- ‰‰Zq
+% ---- æ¼”ç®—å­
 \def\Operator#1{\hat{#1}}
 
-% ---- Šú‘Ò’l
+% ---- æœŸå¾…å€¤
 \def\Mean#1{\langle{#1}\rangle}
 
-% ---- ¶¬‰‰Zq
+% ---- ç”Ÿæˆæ¼”ç®—å­
 \def\Create#1{\hat{#1}^{\dagger}}
 
-% ---- Á–Å‰‰Zq
+% ---- æ¶ˆæ»…æ¼”ç®—å­
 \def\Annihilate#1{\hat{#1}}
 
-% ---- ¸‰‰Zq
+% ---- æ˜‡æ¼”ç®—å­
 \def\RaiseState#1{{#1}_{+}}
 
-% ---- ~‰‰Zq
+% ---- é™æ¼”ç®—å­
 \def\LowerState#1{{#1}_{-}}
 
-% ---- “dq‹O“¹ \Psi_{\Orbit{1s}}
+% ---- é›»å­è»Œé“ \Psi_{\Orbit{1s}}
 \def\Orbit#1{{\rm #1}}
 
 %======================================
-% ”÷•ªŠÖ˜A‹L†ƒ}ƒNƒ
+% å¾®åˆ†é–¢é€£è¨˜å·ãƒã‚¯ãƒ­
 %======================================
 
-% ---- ‘S”÷•ª \diff{x}
+% ---- å…¨å¾®åˆ† \diff{x}
 \def\d#1{{\rm d}#1}
 
-% ---- —LŒÀ”÷¬—Êƒfƒ‹ƒ^(ƒ¢‚ª’¼—§)
+% ---- æœ‰é™å¾®å°é‡ãƒ‡ãƒ«ã‚¿(Î”ãŒç›´ç«‹)
 \def\IDelta{{\mit\Delta}}
 
-% ---- í”÷•ª \Deriver{x}{t}
+% ---- å¸¸å¾®åˆ† \Deriver{x}{t}
 \def\Deriver#1#2{{\frac{{\rm d} #1}{{\rm d} #2}}}
 
-% ---- •Î”÷•ª \Partial{q}{t}
+% ---- åå¾®åˆ† \Partial{q}{t}
 \def\Partial#1#2{{\frac{\partial #1}{\partial #2}}}
 
-% ---- ƒeƒLƒXƒg–„‚ß‚İ—p í”÷•ª \tDeriver{x}{t}
+% ---- ãƒ†ã‚­ã‚¹ãƒˆåŸ‹ã‚è¾¼ã¿ç”¨ å¸¸å¾®åˆ† \tDeriver{x}{t}
 \def\tDeriver#1#2{{\rm d} #1 / {\rm d} #2}
 
-% ---- ƒeƒLƒXƒg–„‚ß‚İ—p •Î”÷•ª \tPartial{q}{t}
+% ---- ãƒ†ã‚­ã‚¹ãƒˆåŸ‹ã‚è¾¼ã¿ç”¨ åå¾®åˆ† \tPartial{q}{t}
 \def\tPartial#1#2{ \partial #1 / \partial #2}
 
-% ---- •Î”÷•ª‚Ì‹L†
+% ---- åå¾®åˆ†ã®è¨˜å·
 \def\del{\partial}
 
-% ---- \i ‹•”’PˆÊ
+% ---- \i è™šæ•°å˜ä½
 \let\inshioriginali\i
 \DeclareRobustCommand\i{\ifmmode\mathrm{i}\else\inshioriginali\fi}
 
-% ---- \e ©‘R‘Î”‚Ì’ê (Napier ”)
+% ---- \e è‡ªç„¶å¯¾æ•°ã®åº• (Napier æ•°)
 \def\e{\mathrm{e}}
 
 %======================================
-% ‹l‚ß‚İŒ^ Ï•ªŠÖ˜A‹L†ƒ}ƒNƒ
+% è©°ã‚è¾¼ã¿å‹ ç©åˆ†é–¢é€£è¨˜å·ãƒã‚¯ãƒ­
 %======================================
 
-% ---- –³’·‰ˆš \int_{\nsub{\infty}}
+% ---- ç„¡é•·æ²¿å­— \int_{\nsub{\infty}}
 \def\nsub#1{\mbox{\hbox to 0pt{\scriptsize$#1$\hss}}}
 
-% ---- •s’èÏ•ª \Uint{\d{x}} f(x)
+% ---- ä¸å®šç©åˆ† \Uint{\d{x}} f(x)
 \def\Uint#1{\int \!\!{#1}\,\,}
 
-% ---- ’èÏ•ª \Dint{-1}{+1}{\d{x}} f(x)
+% ---- å®šç©åˆ† \Dint{-1}{+1}{\d{x}} f(x)
 \def\Dint#1#2#3{\int_{\nsub{#1}}^{\nsub{#2}}\!\!{#3}\,\,}
 
-% ---- L‹`Ï•ª \Iint{\d{x}} f(x)
+% ---- åºƒç¾©ç©åˆ† \Iint{\d{x}} f(x)
 \def\Iint#1{\int_{\nsub{-\infty}}^{\nsub{+\infty}}{#1}\,\,}
 
 %======================================
-% ”÷•ª‰‰Zqƒ}ƒNƒ
+% å¾®åˆ†æ¼”ç®—å­ãƒã‚¯ãƒ­
 %======================================
 
-% ---- ƒ‰ƒvƒ‰ƒVƒAƒ“
+% ---- ãƒ©ãƒ—ãƒ©ã‚·ã‚¢ãƒ³
 \def\Laplacian{\triangle}
 
-% ---- ƒOƒ‰ƒWƒGƒ“ƒg
+% ---- ã‚°ãƒ©ã‚¸ã‚¨ãƒ³ãƒˆ
 \def\Grad#1{{\rm grad\,}#1}
 
-% ---- ƒ_ƒCƒo[ƒWƒFƒ“ƒX
+% ---- ãƒ€ã‚¤ãƒãƒ¼ã‚¸ã‚§ãƒ³ã‚¹
 \def\Div#1{{\rm div\,}#1}
 
-% ---- ƒ[ƒe[ƒVƒ‡ƒ“
+% ---- ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
 \def\Rot#1{{\rm rot\,}#1}
 
 %======================================
-% ƒfƒBƒ‰ƒbƒN—¬—Êq‹L†ƒ}ƒNƒ
+% ãƒ‡ã‚£ãƒ©ãƒƒã‚¯æµé‡å­è¨˜å·ãƒã‚¯ãƒ­
 %======================================
 
-% ---- ƒuƒ‰
+% ---- ãƒ–ãƒ©
 \def\Bra#1{\langle{#1}|}
 
-% ---- ƒPƒbƒg
+% ---- ã‚±ãƒƒãƒˆ
 \def\Ket#1{|{#1}\rangle}
 
-% ---- “àÏ
+% ---- å†…ç©
 \def\Product#1#2{\langle{#1}|{#2}\rangle}
 
-% ---- ŠOÏ
+% ---- å¤–ç©
 \def\Projection#1#2{|{#1}\rangle\langle{#2}|}
 
-% ---- ‚R€ƒuƒ‰ƒPƒbƒg
+% ---- ï¼“é …ãƒ–ãƒ©ã‚±ãƒƒãƒˆ
 \def\Bracket#1#2#3{\langle{#1}|{#2}|{#3}\rangle}
 
 %======================================
-% ”’l•\Œ»—pƒ}ƒNƒ
+% æ•°å€¤è¡¨ç¾ç”¨ãƒã‚¯ãƒ­
 %======================================
 
-% ---- w”•\¦ 3.0 \Keta{8} \Unit{m}
+% ---- æŒ‡æ•°è¡¨ç¤º 3.0 \Keta{8} \Unit{m}
 \def\Keta#1{\times 10^{#1}}
 
-% ---- ’PˆÊ‹L†•\¦ 3.0 \Keta{8} \Unit{m}
+% ---- å˜ä½è¨˜å·è¡¨ç¤º 3.0 \Keta{8} \Unit{m}
 \def\Unit#1{\,{\rm #1}}
 
-% ---- degŠp“x 90\deg
+% ---- degè§’åº¦ 90\deg
 \def\deg{^{\circ}}
 
-% ---- ‰·“x
+% ---- æ¸©åº¦
 \def\degC{^{\circ}\!\rm C}
 
-% ---- ƒ~ƒŠƒ‚ƒ‹^ƒŠƒbƒgƒ‹ 0.1 \mmol
+% ---- ãƒŸãƒªãƒ¢ãƒ«ï¼ãƒªãƒƒãƒˆãƒ« 0.1 \mmol
 \def\mmol{{\rm m\,mol/\ell}}
 
-% ---- ƒIƒ“ƒOƒXƒgƒ[ƒ€ 1.414 \Ang
+% ---- ã‚ªãƒ³ã‚°ã‚¹ãƒˆãƒ­ãƒ¼ãƒ  1.414 \Ang
 \def\Ang{\mbox{\AA}}
 
-% ---- Œ´q‹L†‚ğ—zq”‚Æ¿—Ê”‚Â‚«‚Åo—Í
-\def\Atom#1#2#3{% #1 Œ´q‹L† #2 —zq” #3 ¿—Ê”
+% ---- åŸå­è¨˜å·ã‚’é™½å­æ•°ã¨è³ªé‡æ•°ã¤ãã§å‡ºåŠ›
+\def\Atom#1#2#3{% #1 åŸå­è¨˜å· #2 é™½å­æ•° #3 è³ªé‡æ•°
 \kern-2ex\raisebox{0.8ex}{\hbox to 5ex{\hfill\scriptsize$#3$}}%
 \kern-5ex%
 \raisebox{-0.4ex}{\hbox to 5ex{\hfill\scriptsize$#2$}}{$\rm #1$}\,}
 
 %======================================
-% ‚»‚Ì‘¼‚Ì•\Œ»‚Ìƒ}ƒNƒ
+% ãã®ä»–ã®è¡¨ç¾ã®ãƒã‚¯ãƒ­
 %======================================
 
-% ---- ˆ ‚ä‚¦‚É
+% ---- âˆ´ ã‚†ãˆã«
 %% \def\Yueni{{.\raisebox{1.0ex}{.}.}\quad}
 \def\Yueni{\mbox{$\therefore$}} % KM, this requires \usepackage{amssymb}
 
-% ---- æ ‚È‚º‚È‚ç‚Î
+% ---- âˆµ ãªãœãªã‚‰ã°
 %% \def\Naze{{\raisebox{1.0ex}{.}.\raisebox{1.0ex}{.}}\quad}
 \def\Naze{\mbox{$\because$}}    % KM, this requires \usepackage{amssymb}
 
-% ---- Œã‘Ş
+% ---- å¾Œé€€
 \def\bquad{\!\!\!\!}
 \def\bqquad{\!\!\!\!\!\!\!\!}
 
-% ---- ’è‹K‚Ì•\¦
+% ---- å®šè¦ã®è¡¨ç¤º
 \def\printruler{%
   {\unitlength=1cm%
   \begin{picture}(10,0.7)%
@@ -313,36 +313,36 @@
   \end{picture}}%
 }
 
-% ---- \displaystyle‚ÌŠÈˆÕ•\Œ»
+% ---- \displaystyleã®ç°¡æ˜“è¡¨ç¾
 \def\ds{\displaystyle}
 
-% ---- ¬‚³‚¢“Yš
+% ---- å°ã•ã„æ·»å­—
 %% \def\ssub#1{\raisebox{-0.3ex}{\tiny$\rm #1$}}
-%% KM, ª‚Ì’è‹`‚¾‚Æ \kB^4 ‚È‚Ç‚Ì“Yš‚ÌˆÊ’u‚ª‚¸‚ê‚éB
-%%     ‚Ü‚½A¬‚³‚È•¶š‚Ì“Yš‚È‚Ç‚Ìê‡‚É•¶š‚Ì‘å‚«‚³‚âˆÊ’u‚ª•Ï‚É‚È‚éB
-%%     ‚í‚´‚í‚´‚±‚Ì—l‚É•’Ê‚Å‚È‚¢’è‹`‚ğ‚·‚é——R‚Í‰½‚©?
+%% KM, â†‘ã®å®šç¾©ã ã¨ \kB^4 ãªã©ã®æ·»å­—ã®ä½ç½®ãŒãšã‚Œã‚‹ã€‚
+%%     ã¾ãŸã€å°ã•ãªæ–‡å­—ã®æ·»å­—ãªã©ã®å ´åˆã«æ–‡å­—ã®å¤§ãã•ã‚„ä½ç½®ãŒå¤‰ã«ãªã‚‹ã€‚
+%%     ã‚ã–ã‚ã–ã“ã®æ§˜ã«æ™®é€šã§ãªã„å®šç¾©ã‚’ã™ã‚‹ç†ç”±ã¯ä½•ã‹?
 \def\ssub#1{_\mathrm{#1}} %% KM, 2013-07-21
 
-% ---- •ÏŒ`ƒMƒŠƒVƒƒ•¶š
+% ---- å¤‰å½¢ã‚®ãƒªã‚·ãƒ£æ–‡å­—
 \def\eps{\varepsilon}
-%% \def\uchi{\raisebox{0.5ex}{$\chi$}}    %% KM 2013-07-21, íœ
-%% \def\uphi{\raisebox{0.5ex}{$\varphi$}} %% KM 2013-07-21, íœ
+%% \def\uchi{\raisebox{0.5ex}{$\chi$}}    %% KM 2013-07-21, å‰Šé™¤
+%% \def\uphi{\raisebox{0.5ex}{$\varphi$}} %% KM 2013-07-21, å‰Šé™¤
 
-% ---- ƒ{[ƒA¥q
+% ---- ãƒœãƒ¼ã‚¢ç£å­
 \def\muB{\mu\ssub{B}}
 
-% ---- ƒ{ƒ‹ƒcƒ}ƒ“’è”
+% ---- ãƒœãƒ«ãƒ„ãƒãƒ³å®šæ•°
 \def\kB{k\ssub{B}}
 
 %%---- end of math.h ----------------------------------------------------------
 
-% ==== ƒy[ƒWƒŒƒCƒAƒEƒg‚Ì•ÏX
-% A4ƒTƒCƒY‚Åì¬B•`‰æ—Ìˆæ‚ğŠî–{‚æ‚èL‚­‚Æ‚éB
-% A4ƒTƒCƒY‚Å¶‰E‹ó‚«‚ª20mm‚Æ‚È‚é‚æ‚¤‚Éİ’è‚·‚éB
-%   Ql
+% ==== ãƒšãƒ¼ã‚¸ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã®å¤‰æ›´
+% A4ã‚µã‚¤ã‚ºã§ä½œæˆã€‚æç”»é ˜åŸŸã‚’åŸºæœ¬ã‚ˆã‚Šåºƒãã¨ã‚‹ã€‚
+% A4ã‚µã‚¤ã‚ºã§å·¦å³ç©ºããŒ20mmã¨ãªã‚‹ã‚ˆã†ã«è¨­å®šã™ã‚‹ã€‚
+%   å‚è€ƒ
 %     A4 size 210mm \times 297mm
 
-% ------ c‚Ìİ’è
+% ------ ç¸¦ã®è¨­å®š
 \topmargin              =   -10mm
 \headheight             =   5mm
 \headsep                =   8mm
@@ -350,7 +350,7 @@
 \textheight             = 250mm
 \footskip               =   0mm
 
-% ------ ‰¡‚Ìİ’è
+% ------ æ¨ªã®è¨­å®š
 \def\@pagewidth{210mm}
 \def\@centermargin{20mm}
 \def\@edgemargin{20mm}
@@ -363,22 +363,22 @@
 \addtolength{\textwidth}{-\@centermargin}
 \addtolength{\textwidth}{-\@edgemargin}
 
-% ==== ”®‚Ì¶ƒCƒ“ƒfƒ“ƒg•‚Ì•ÏX
+% ==== æ•°å¼ã®å·¦ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆå¹…ã®å¤‰æ›´
 \if@inshioption@fleqn
   \mathindent=20mm
 \fi
 
-% ==== Œ±‚Ìí•Ê‚ğ•\‚·•¶š—ñ
-\def\TypeA{ˆê”Ê‹³ˆç‰È–Ú}
-\def\TypeB{•¨—ê–å‰È–Ú}
+% ==== è©¦é¨“ã®ç¨®åˆ¥ã‚’è¡¨ã™æ–‡å­—åˆ—
+\def\TypeA{ä¸€èˆ¬æ•™è‚²ç§‘ç›®}
+\def\TypeB{ç‰©ç†å°‚é–€ç§‘ç›®}
 
-% ==== Œ±‚Ìí•Ê‚ğ•\‚·•¶š—ñ‚ğŒã‚Å’è‹`‚·‚éB
+% ==== è©¦é¨“ã®ç¨®åˆ¥ã‚’è¡¨ã™æ–‡å­—åˆ—ã‚’å¾Œã§å®šç¾©ã™ã‚‹ã€‚
 \def\exam{}
-% main?.tex‚ÅŸ‚Ì‚æ‚¤‚ÉÄ’è‹`‚·‚é
-%  \def\exam{ˆê”Ê‹³ˆç‰È–Ú}
-%  \def\exam{•¨—ê–å‰È–Ú}
+% main?.texã§æ¬¡ã®ã‚ˆã†ã«å†å®šç¾©ã™ã‚‹
+%  \def\exam{ä¸€èˆ¬æ•™è‚²ç§‘ç›®}
+%  \def\exam{ç‰©ç†å°‚é–€ç§‘ç›®}
 
-% ==== Šeƒtƒ@ƒCƒ‹‚Ì \documentclass ‚¨‚æ‚Ñ \usepackage ‚ğ–³Œø‰»‚·‚é¬×H
+% ==== å„ãƒ•ã‚¡ã‚¤ãƒ«ã® \documentclass ãŠã‚ˆã³ \usepackage ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹å°ç´°å·¥
 \newcommand{\ExcludeCommand}[1]{%
   \renewenvironment{#1}{}{}%
   \excludecomment{#1}}
@@ -399,27 +399,27 @@
 	\localinput{#1}%
 }}
 
-% ==== ’Œ‚Ìİ’è
+% ==== æŸ±ã®è¨­å®š
 \def\ps@physpubheadings%
 {
-  % ==== ƒwƒbƒ_‚Ìƒy[ƒW”Ô†‚ÌƒtƒHƒ“ƒg
-  %malvern font‚ğCTAN‚©‚çƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚¨‚­•K—v‚ ‚è
+  % ==== ãƒ˜ãƒƒãƒ€ã®ãƒšãƒ¼ã‚¸ç•ªå·ã®ãƒ•ã‚©ãƒ³ãƒˆ
+  %malvern fontã‚’CTANã‹ã‚‰ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãŠãå¿…è¦ã‚ã‚Š
   \font\headnumfont=cmr10%ma76az10	changed by Y.Tachikawa
 
-  \let\@mkboth\@gobbletwo%  –{•¶ˆÈŠO‚Ì•”•ª‚Ìƒy[ƒW“à—e‚ğƒ}[ƒN‚µ‚È‚¢
-  \def\@oddfoot{}%  ƒtƒbƒ^‚Ío—Í‚µ‚È‚¢
+  \let\@mkboth\@gobbletwo%  æœ¬æ–‡ä»¥å¤–ã®éƒ¨åˆ†ã®ãƒšãƒ¼ã‚¸å†…å®¹ã‚’ãƒãƒ¼ã‚¯ã—ãªã„
+  \def\@oddfoot{}%  ãƒ•ãƒƒã‚¿ã¯å‡ºåŠ›ã—ãªã„
   \def\@evenfoot{}%
-  \def\@oddhead{%  ƒwƒbƒ_‚Í‹ô”‚ÆŠï”ƒy[ƒW‚Åg‚¢•ª‚¯‚é
+  \def\@oddhead{%  ãƒ˜ãƒƒãƒ€ã¯å¶æ•°ã¨å¥‡æ•°ãƒšãƒ¼ã‚¸ã§ä½¿ã„åˆ†ã‘ã‚‹
     \underline{\hbox to \textwidth%
-      {•¨—Šw‰È Šw¶o”Å‰ï\hfil\leftmark\ \rightmark\hspace{15pt}{\headnumfont\thepage}}}%
+      {ç‰©ç†å­¦ç§‘ å­¦ç”Ÿå‡ºç‰ˆä¼š\hfil\leftmark\ \rightmark\hspace{15pt}{\headnumfont\thepage}}}%
   }%
   \def\@evenhead{%
     \underline{\hbox to \textwidth%
-      {{\headnumfont\thepage}\hspace{15pt}\leftmark\ \rightmark\hfil “üŠwŒ± \exam \ –â‘è‰ğ“šW}}%
+      {{\headnumfont\thepage}\hspace{15pt}\leftmark\ \rightmark\hfil å…¥å­¦è©¦é¨“ \exam \ å•é¡Œè§£ç­”é›†}}%
   }%
 %
   \def\chaptermark##1{%
-    \markboth{\thechapter ”N“x}{}%
+    \markboth{\thechapter å¹´åº¦}{}%
   }%
   \def\sectionmark##1{%
     \markright{##1}%
@@ -430,22 +430,22 @@
 }
 \pagestyle{physpubheadings}
 
-% ==== Íß”Ô†‚ğ–ÚŸ‚âƒ^ƒCƒgƒ‹‚Éo—Í‚µ‚È‚¢¬×H
-\let\Thesection\thesection% •’Ê‚Ì’è‹`‚ğ\Thesection‚É•Û‘¶
+% ==== ç« ç¯€ç•ªå·ã‚’ç›®æ¬¡ã‚„ã‚¿ã‚¤ãƒˆãƒ«ã«å‡ºåŠ›ã—ãªã„å°ç´°å·¥
+\let\Thesection\thesection% æ™®é€šã®å®šç¾©ã‚’\Thesectionã«ä¿å­˜
 \def\thesection{\hspace{-1zw}}
 
-% ==== Í”Ô†‚Ì•\¦‚Ìd•û‚Ìw’è
+% ==== ç« ç•ªå·ã®è¡¨ç¤ºã®ä»•æ–¹ã®æŒ‡å®š
 %% \renewcommand{\prechaptername}{}
-%% \renewcommand{\postchaptername}{”N“x}
+%% \renewcommand{\postchaptername}{å¹´åº¦}
 \def\prechaptername{}
-\def\postchaptername{”N“x}
+\def\postchaptername{å¹´åº¦}
 
-% ==== ‘å–â”Ô†(Chapter.Section)‚ğŠÄ‹‚·‚é‚æ‚¤w’è
+% ==== å¤§å•ç•ªå·(Chapter.Section)ã‚’ç›£è¦–ã™ã‚‹ã‚ˆã†æŒ‡å®š
 \setcounter{secnumdepth}{1}
 
-% ==== ”®”Ô†‚Ì‘®‚Ì’è‹`
+% ==== æ•°å¼ç•ªå·ã®æ›¸å¼ã®å®šç¾©
 
-% ------ 2Œ…‚Ì”š‚ğ›‚ÅˆÍ‚Ş“à•”ƒ}ƒNƒŒQ (‹g“cŠ°ŒNì¬)
+% ------ 2æ¡ã®æ•°å­—ã‚’â—‹ã§å›²ã‚€å†…éƒ¨ãƒã‚¯ãƒ­ç¾¤ (å‰ç”°å¯›å›ä½œæˆ)
 \if@inshioption@maru
   \def\@marunonaka#1#2{
     {\ooalign{\hfil\lower#2\hbox{#1}\hfil\crcr\hbox{$\bigcirc$}}}
@@ -463,21 +463,21 @@
   }
 \fi
 
-% ------ ”®”Ô†‚Ì•\Œ»
+% ------ æ•°å¼ç•ªå·ã®è¡¨ç¾
 \def\theequation{\arabic{equation}}
 \def\@eqnnum{(\theequation)}    %
 \def\tagform@#1{(\theequation)} % KM
 \if@inshioption@physpub
   \def\@eqnnum{$\cdots$ (\theequation)}   %
-  \def\tagform@#1{$\cdots$ (\theequation)}% —§ì‚Ìï–¡
+  \def\tagform@#1{$\cdots$ (\theequation)}% ç«‹å·ã®è¶£å‘³
 \fi
 \if@inshioption@maru
   \def\@eqnnum{$\cdots$ \marubangou{\theequation}}
-  \def\tagform@#1{$\cdots$ \marubangou{\theequation}} %AmS-LaTeX—p
+  \def\tagform@#1{$\cdots$ \marubangou{\theequation}} %AmS-LaTeXç”¨
 \fi
 
-% ------ ”®QÆ—p‚Ìƒ}ƒNƒ
-%   ƒ[ƒJƒ‰ƒCƒY‚³‚ê‚½ƒ‰ƒxƒ‹
+% ------ æ•°å¼å‚ç…§ç”¨ã®ãƒã‚¯ãƒ­
+%   ãƒ­ãƒ¼ã‚«ãƒ©ã‚¤ã‚ºã•ã‚ŒãŸãƒ©ãƒ™ãƒ«
 %   \ilabel
 %   \iref   (\eqname)
 %   \ieqref (\eqhref)
@@ -494,16 +494,16 @@
 \let\eqhref\ieqref  %% physpub extension%
 
 
-% ------ }E•\”Ô†‚ÉÍ”Ô†‚ª“ü‚ç‚È‚¢‚æ‚¤‚É‚·‚éB
+% ------ å›³ãƒ»è¡¨ç•ªå·ã«ç« ç•ªå·ãŒå…¥ã‚‰ãªã„ã‚ˆã†ã«ã™ã‚‹ã€‚
 \def\thefigure{\@arabic\c@figure}
 \def\thetable{\@arabic\c@table}
 
-% ==== –ÚŸ‚Ì•\¦‚Ìw’è
+% ==== ç›®æ¬¡ã®è¡¨ç¤ºã®æŒ‡å®š
 \renewcommand{\tableofcontents}%
 {
   \vskip20\p@{
     \reset@font\huge\bfseries
-    \centerline{\Large ---\!---\!---\!---\!---\!---\!--- –ÚŸ ---\!---\!---\!---\!---\!---\!---}
+    \centerline{\Large ---\!---\!---\!---\!---\!---\!--- ç›®æ¬¡ ---\!---\!---\!---\!---\!---\!---}
   }
   \vskip20\p@
   \vspace*{-10mm}
@@ -514,36 +514,36 @@
 \if@inshioption@physpub
 %%=============================================================================
 %%
-%% ‘å–â‘èE’†–â‘èE¬–â‘è‚ÌŠÂ‹« (physpub style)
+%% å¤§å•é¡Œãƒ»ä¸­å•é¡Œãƒ»å°å•é¡Œã®ç’°å¢ƒ (physpub style)
 %%
 %%-----------------------------------------------------------------------------
-  % ==== Í‚Ì•\¦‚Ìw’è
+  % ==== ç« ã®è¡¨ç¤ºã®æŒ‡å®š
   \renewcommand{\chapter}[1]{%
-    \clearpage%  —­‚Ü‚Á‚Ä‚éƒtƒ[ƒg‚ğ‘S‚Äo—Í‚µ‚Ä‚©‚ç‰üƒy[ƒW‚·‚é
-    \@topsectiontrue   % Í‚Ìn‚Ü‚è‚ğ’Ê’m
-    \global\@topnum\z@  %ÍŒ©o‚µ‚Ìã‚Éƒtƒ[ƒg‚ª”z’u‚³‚ê‚È‚¢‚æ‚¤‚É‚·‚é
+    \clearpage%  æºœã¾ã£ã¦ã‚‹ãƒ•ãƒ­ãƒ¼ãƒˆã‚’å…¨ã¦å‡ºåŠ›ã—ã¦ã‹ã‚‰æ”¹ãƒšãƒ¼ã‚¸ã™ã‚‹
+    \@topsectiontrue   % ç« ã®å§‹ã¾ã‚Šã‚’é€šçŸ¥
+    \global\@topnum\z@  %ç« è¦‹å‡ºã—ã®ä¸Šã«ãƒ•ãƒ­ãƒ¼ãƒˆãŒé…ç½®ã•ã‚Œãªã„ã‚ˆã†ã«ã™ã‚‹
     \setcounter{chapter}{#1}
-    \addcontentsline{toc}{chapter}% –ÚŸ‚Ìî•ñ‚Ìİ’è
+    \addcontentsline{toc}{chapter}% ç›®æ¬¡ã®æƒ…å ±ã®è¨­å®š
       {\protect\numberline{\@chapapp\thechapter\@chappos}}
-    %\chaptermark{#1}% Í‚ğƒ}[ƒN‚·‚é
-    \@afterindentfalse %Í‚Ì’i—‚Ìæ“ª‚ğš‰º‚°‚µ‚È‚¢
-    \parindent\z@ %ƒCƒ“ƒfƒ“ƒg•‚ğ‚O‚É‚·‚é
-    \@makechapterhead% Œ©o‚µ‚Ìo—Í
-    \@afterheading% Œ©o‚µ‚Ì’¼Œã‚É‰üƒy[ƒW‚µ‚È‚¢
+    %\chaptermark{#1}% ç« ã‚’ãƒãƒ¼ã‚¯ã™ã‚‹
+    \@afterindentfalse %ç« ã®æ®µè½ã®å…ˆé ­ã‚’å­—ä¸‹ã’ã—ãªã„
+    \parindent\z@ %ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆå¹…ã‚’ï¼ã«ã™ã‚‹
+    \@makechapterhead% è¦‹å‡ºã—ã®å‡ºåŠ›
+    \@afterheading% è¦‹å‡ºã—ã®ç›´å¾Œã«æ”¹ãƒšãƒ¼ã‚¸ã—ãªã„
   }
 
-  % === Œ©o‚µ‚Ì’è‹`
+  % === è¦‹å‡ºã—ã®å®šç¾©
   \def\@makechapterhead#1{%
     \vspace*{10\p@}%
-    {% Œ©o‚µ‚Ìİ’è
+    {% è¦‹å‡ºã—ã®è¨­å®š
       \reset@font\Huge\bfseries%
-      %\mbox{\hbox to 0pt{\rule[-3mm]{125mm}{1mm}\hss}}% ‰ºü‚ğˆø‚­
+      %\mbox{\hbox to 0pt{\rule[-3mm]{125mm}{1mm}\hss}}% ä¸‹ç·šã‚’å¼•ã
       %\mbox{\hbox to 0pt{\rule[-4mm]{125mm}{0.5mm}\hss}}%
-      %\raisebox{-0.3ex}{\thechapter} ”N“x\hskip1zw%
-      %“üŠwŒ± \exam%
+      %\raisebox{-0.3ex}{\thechapter} å¹´åº¦\hskip1zw%
+      %å…¥å­¦è©¦é¨“ \exam%
       \begin{shadebox}
       \begin{center}
-      \thechapter ”N“x\hskip1zw “üŠwŒ± \exam
+      \thechapter å¹´åº¦\hskip1zw å…¥å­¦è©¦é¨“ \exam
       \end{center}
       \end{shadebox}
     }
@@ -551,36 +551,36 @@
   }
 
 
-  % ==== ß‚Ì•\¦‚Ìw’è
+  % ==== ç¯€ã®è¡¨ç¤ºã®æŒ‡å®š
   \renewcommand{\section}{
     \@startsection{section}{1}{\z@}%
       {3.5ex \@plus 1ex \@minus .2ex}%
       {0.3ex \@plus .2ex}%
-      {\reset@font\LARGE\bfseries ¡ }%
+      {\reset@font\LARGE\bfseries â–  }%
   }
 
 
-  % ==== ‘å–â—pŠÂ‹«
+  % ==== å¤§å•ç”¨ç’°å¢ƒ
   \newenvironment{question}[2]{%
-    % chapter‚ÌÅ‰‚Ì–â‘è‚Í‰üƒy[ƒW‚µ‚È‚¢B
+    % chapterã®æœ€åˆã®å•é¡Œã¯æ”¹ãƒšãƒ¼ã‚¸ã—ãªã„ã€‚
     \if@topsection
       \global\@topsectionfalse
     \else
       \clearpage
     \fi
-    \typeout{*========== \thechapter ”N“x #1 (–â) ==========*}%
+    \typeout{*========== \thechapter å¹´åº¦ #1 (å•) ==========*}%
     \setcounter{equation}{0}
     \edef\toibangou{#1}
-    \section{#1}    %sectionŠJn‚Årightmark‚ªİ’è‚³‚ê‚éB
-    \chaptermark{}   %chaptermark‚Åleftmark‚ğ”N“x‚É‚µArightmark‚ğclear
-    \sectionmark{#1} %sectionmark‚Å‚³‚ç‚Érightmark‚ğİ’èB
-    \vspace{3mm}    %chaptermark‚æ‚èæ‚Érightmark‚ğİ’è‚µ‚È‚¯‚ê‚Î‚¢‚¯‚È‚¢‚Ì‚Å
-    %‚±‚Ì‚æ‚¤‚È¬×H‚ğdŠ|‚¯‚éB
+    \section{#1}    %sectioné–‹å§‹ã§rightmarkãŒè¨­å®šã•ã‚Œã‚‹ã€‚
+    \chaptermark{}   %chaptermarkã§leftmarkã‚’å¹´åº¦ã«ã—ã€rightmarkã‚’clear
+    \sectionmark{#1} %sectionmarkã§ã•ã‚‰ã«rightmarkã‚’è¨­å®šã€‚
+    \vspace{3mm}    %chaptermarkã‚ˆã‚Šå…ˆã«rightmarkã‚’è¨­å®šã—ãªã‘ã‚Œã°ã„ã‘ãªã„ã®ã§
+    %ã“ã®ã‚ˆã†ãªå°ç´°å·¥ã‚’ä»•æ›ã‘ã‚‹ã€‚
   }{                 
     \vspace{1mm}%
   }
 
-  % ==== ’†–â–â‘è•¶—pƒŠƒXƒgŠÂ‹«
+  % ==== ä¸­å•å•é¡Œæ–‡ç”¨ãƒªã‚¹ãƒˆç’°å¢ƒ
   \newcounter{subqno}%
   \newenvironment{subquestions}[1][1]%
   {
@@ -594,14 +594,14 @@
                    \labelsep=0mm
   	         \leftmargin=1.9zw}%
   %  \renewcommand{\makelabel}{\raisebox{-0.38ex}{\Large\bf\arabic{subqno}.}\hfil}%
-    \renewcommand{\makelabel}{\raisebox{-0.38ex}\textbf{\arabic{subqno}.}\hfil}%—§ì‚Ìï–¡
+    \renewcommand{\makelabel}{\raisebox{-0.38ex}\textbf{\arabic{subqno}.}\hfil}%ç«‹å·ã®è¶£å‘³
     \addtolength{\mathindent}{-\leftmargin}%
   }{
     \end{list}%
     \addtolength{\mathindent}{\leftmargin}%
   }
 
-  % ==== ¬–â–â‘è•¶—pƒŠƒXƒgŠÂ‹«
+  % ==== å°å•å•é¡Œæ–‡ç”¨ãƒªã‚¹ãƒˆç’°å¢ƒ
   \newcounter{subsubqno}%
   \newenvironment{subsubquestions}{
     \begin{list}{}{\usecounter{subsubqno}
@@ -617,25 +617,25 @@
   }
 
 
-  % ==== ‘å–â‰ğ“š•¶—pŠÂ‹«
+  % ==== å¤§å•è§£ç­”æ–‡ç”¨ç’°å¢ƒ
   \newenvironment{answer}[2]{
-    \typeout{*========== \thechapter ”N“x #1 (“š) ==========*}%
+    \typeout{*========== \thechapter å¹´åº¦ #1 (ç­”) ==========*}%
     \clearpage
     \setcounter{equation}{0}
     \edef\toibangou{#1}
-  %  \leftline{\underline{{\Large\bfseries Ÿ #1} ‰ğ“š}}
-    \section{#1 ‰ğ“š}
+  %  \leftline{\underline{{\Large\bfseries â—† #1} è§£ç­”}}
+    \section{#1 è§£ç­”}
   % added by Yuji T.
-    \chaptermark{}   %chaptermark‚Åleftmark‚ğ”N“x‚É‚µArightmark‚ğclear
-    \sectionmark{#1 ‰ğ“š} %sectionmark‚Å‚³‚ç‚Érightmark‚ğİ’èB
+    \chaptermark{}   %chaptermarkã§leftmarkã‚’å¹´åº¦ã«ã—ã€rightmarkã‚’clear
+    \sectionmark{#1 è§£ç­”} %sectionmarkã§ã•ã‚‰ã«rightmarkã‚’è¨­å®šã€‚
   % end of addition
     \vspace{3mm}%
   }{}
 
-  % ==== ’†–â‰ğ“š•¶—pŠÂ‹«
+  % ==== ä¸­å•è§£ç­”æ–‡ç”¨ç’°å¢ƒ
   \newenvironment{subanswers}{\begin{subquestions}}{\end{subquestions}}
 
-  % ==== ¬–â‰ğ“š•¶—pŠÂ‹«
+  % ==== å°å•è§£ç­”æ–‡ç”¨ç’°å¢ƒ
   \newenvironment{subsubanswers}{\begin{subsubquestions}}{\end{subsubquestions}}
 
   \def\SubQuestion{\item}
@@ -653,7 +653,7 @@
   \def\endenumerate{\endsubquestions\let\enumerate\subquestions
   \let\endeumerate\endsubquestions}
 
-  %eqnarray‚ğAmS-LaTeX‚Ìalign‚Æ“¯‚¶Š´‚¶‚É‚·‚éB
+  %eqnarrayã‚’AmS-LaTeXã®alignã¨åŒã˜æ„Ÿã˜ã«ã™ã‚‹ã€‚
   \renewenvironment{eqnarray}{
     \stepcounter{equation}%
     \def\@currentlabel{\p@equation\theequation}%
@@ -688,45 +688,45 @@
 \else %% end of \if@inshioption@physpub
 %%=============================================================================
 %%
-%% ‘å–â‘èE’†–â‘èE¬–â‘è‚ÌŠÂ‹« (inshi style)
+%% å¤§å•é¡Œãƒ»ä¸­å•é¡Œãƒ»å°å•é¡Œã®ç’°å¢ƒ (inshi style)
 %%
 %%-----------------------------------------------------------------------------
 %% 2013-07-15, KM
 %%
 %% Sample
 %%
-%% | \inshikamoku{2010math}{2010”N“xÀ{ ”Šw}
-%% | \begin{question}{‘æ‚P–â}{ì¬Ò}
+%% | \inshikamoku{2010math}{2010å¹´åº¦å®Ÿæ–½ æ•°å­¦}
+%% | \begin{question}{ç¬¬ï¼‘å•}{ä½œæˆè€…}
 %% | 
 %% | \begin{inshicover}%
-%% |   {•½¬‚Q‚R”N“x“Œ‹‘åŠw‘åŠw‰@—ŠwŒnŒ¤‹†‰È\\•¨—ŠwêUCm‰Û’ö“üŠwŒ±–â‘è\\}%
-%% |   {”@@@Šw}%
-%% |   {•½¬‚Q‚Q”N‚WŒ‚Q‚V“úiŒj@@‚X‚R‚O•ª`‚P‚P‚O‚O•ª}
-%% | \item Œ±ŠJn‚Ì‡}‚ª‚ ‚é‚Ü‚ÅA‚±‚Ì–â‘èûq‚ğŠJ‚¢‚Ä‚Í‚È‚ç‚È‚¢B
+%% |   {å¹³æˆï¼’ï¼“å¹´åº¦æ±äº¬å¤§å­¦å¤§å­¦é™¢ç†å­¦ç³»ç ”ç©¶ç§‘\\ç‰©ç†å­¦å°‚æ”»ä¿®å£«èª²ç¨‹å…¥å­¦è©¦é¨“å•é¡Œ\\}%
+%% |   {æ•°ã€€ã€€ã€€å­¦}%
+%% |   {å¹³æˆï¼’ï¼’å¹´ï¼˜æœˆï¼’ï¼—æ—¥ï¼ˆæœˆï¼‰ã€€ã€€ï¼™æ™‚ï¼“ï¼åˆ†ã€œï¼‘ï¼‘æ™‚ï¼ï¼åˆ†}
+%% | \item è©¦é¨“é–‹å§‹ã®åˆå›³ãŒã‚ã‚‹ã¾ã§ã€ã“ã®å•é¡Œå†Šå­ã‚’é–‹ã„ã¦ã¯ãªã‚‰ãªã„ã€‚
 %% | \end{inshicover}
 %% | 
 %% | \begin{enumerate}
-%% | \item ‚ ‚ê‚ğ‚¹‚æB
-%% | \item –^‚Æ’è‹`‚·‚éB
+%% | \item ã‚ã‚Œã‚’ã›ã‚ˆã€‚
+%% | \item æŸã¨å®šç¾©ã™ã‚‹ã€‚
 %% |   \begin{enumerate}
-%% |   \item ‚±‚Ì‚±‚ê‚ğ¦‚¹B
-%% |   \item Ÿ‚É‚»‚ê‚ğ‹‚ß‚æB
+%% |   \item ã“ã®æ™‚ã“ã‚Œã‚’ç¤ºã›ã€‚
+%% |   \item æ¬¡ã«ãã‚Œã‚’æ±‚ã‚ã‚ˆã€‚
 %% |   \end{enumerate}
-%% | \item ‚±‚ê‚ğ‚ ‚ê‚Å•\‚¹B
+%% | \item ã“ã‚Œã‚’ã‚ã‚Œã§è¡¨ã›ã€‚
 %% | \end{enumerate}
 %% | 
 %% | \end{question}
 %% | 
-%% | \begin{answer}{‘æ‚P–â}{ì¬Ò}
+%% | \begin{answer}{ç¬¬ï¼‘å•}{ä½œæˆè€…}
 %% | 
 %% | \begin{enumerate}
-%% | \item ‚ ‚ê‚Í‚±‚¤‚µ‚Ä‚±‚¤‚±‚¤‚Å‚ ‚éB
+%% | \item ã‚ã‚Œã¯ã“ã†ã—ã¦ã“ã†ã“ã†ã§ã‚ã‚‹ã€‚
 %% | \item
 %% |   \begin{enumerate}
-%% |   \item ‚ ‚ê‚æ‚è‚±‚ê‚ÅA]‚Á‚Ä‚±‚ê‚Å‚ ‚éB
-%% |   \item ‚»‚ê‚ğ‚ ‚ê‚µ‚Ä‚±‚¤‚·‚éB]‚Á‚Ä‚»‚ê‚Í‚ ‚ê‚Å‚ ‚éB
+%% |   \item ã‚ã‚Œã‚ˆã‚Šã“ã‚Œã§ã€å¾“ã£ã¦ã“ã‚Œã§ã‚ã‚‹ã€‚
+%% |   \item ãã‚Œã‚’ã‚ã‚Œã—ã¦ã“ã†ã™ã‚‹ã€‚å¾“ã£ã¦ãã‚Œã¯ã‚ã‚Œã§ã‚ã‚‹ã€‚
 %% |   \end{enumerate}
-%% | \item ‚±‚ê‚ÍˆÈ‰º‚Ì‚æ‚¤‚É‘‚¯‚éB
+%% | \item ã“ã‚Œã¯ä»¥ä¸‹ã®ã‚ˆã†ã«æ›¸ã‘ã‚‹ã€‚
 %% | \end{enumerate}
 %% | 
 %% | \end{answer}
@@ -735,24 +735,24 @@
 %% Section
 \newcounter{inshiq}
 \newcounter{inshia}
-%% \inshikamoku{2010math}{2010 ”N“xÀ{ ”Šw}
+%% \inshikamoku{2010math}{2010 å¹´åº¦å®Ÿæ–½ æ•°å­¦}
 \newcommand{\inshikamoku}[2]{%
   \edef\kamokuname{#1}%
-  \section*{#2}\markboth{#2}{•\†}%
+  \section*{#2}\markboth{#2}{è¡¨ç´™}%
   \setcounter{inshiq}{0}%
   \setcounter{inshia}{0}}
 
-%% \begin{question}{‘æ‚P–â}{ì¬Ò/“ü—ÍÒ}
+%% \begin{question}{ç¬¬ï¼‘å•}{ä½œæˆè€…/å…¥åŠ›è€…}
 \newenvironment{question}[2]{%
-  \subsection*{#1}\markright{#1 –â‘è}%
+  \subsection*{#1}\markright{#1 å•é¡Œ}%
   \stepcounter{inshiq}%
   \edef\toibangou{Q\arabic{inshiq}}%
 }{\clearpage}
 
-%% \begin{answer}{‘æ‚P–â}{ì¬Ò/“ü—ÍÒ}
+%% \begin{answer}{ç¬¬ï¼‘å•}{ä½œæˆè€…/å…¥åŠ›è€…}
 \newenvironment{answer}[2]{%
-  \subsection*{#1@‰ğ“š}%
-  \markright{#1 ‰ğ“š}%
+  \subsection*{#1ã€€è§£ç­”}%
+  \markright{#1 è§£ç­”}%
   \stepcounter{inshia}%
   \edef\toibangou{Q\arabic{inshia}}%
 }{}
@@ -768,7 +768,7 @@
   \vspace{2em}%
   \begin{center}#3\end{center}%
   \vspace{2em}%
-  y’ˆÓ–€z%
+  ã€æ³¨æ„äº‹é …ã€‘%
   \begin{enumerate}
 }{\end{enumerate}\vfill{}\clearpage}
 

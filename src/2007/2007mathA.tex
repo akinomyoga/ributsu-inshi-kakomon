@@ -1,20 +1,20 @@
 %% -*- coding:sjis -*-
 %%
-%% 2013-07-17, Koichi Murase, inshi20phys-ochi.tex ���]�ځA�ҏW�B
+%% 2013-07-17, Koichi Murase, inshi20phys-ochi.tex より転載、編集。
 %%
-\begin{answer}{��P��}{ochi}
-���g�����̒���\\
-�r���͋C�ɂȂ����l�̂��߂̂��̂Ȃ̂ŁA��{�I�ɂ͖{�������ǂ߂Ύ�����܂��B
+\begin{answer}{第１問}{ochi}
+※使い方の注意\\
+脚注は気になった人のためのものなので、基本的には本文だけ読めば事足ります。
 \begin{enumerate}
 \item
-  ����T,F,T,F,T(T=True, F=False)\\
+  順にT,F,T,F,T(T=True, F=False)\\
 
-  ����͗����܂��B���l���Ă���SO(3)�̒�`���u��������det=1�v�Ȃ��Ƃ�
-  ���ӂ���Α��v�ł��B(b)�͉�]���ς���΂�����������ɂȂ邵�A
-  (d)�̔���Ƃ��Ă͋��f�ȂǁB\\
+  解説は略します。今考えているSO(3)の定義が「直交かつdet=1」なことに
+  注意すれば大丈夫です。(b)は回転軸変えればだいたい非可換になるし、
+  (d)の反例としては鏡映など。\\
 
 \item
-  z���𒆐S�Ƃ�����]�Ȃ̂ŁA���ʂ�2�����̉�]�s����l���܂��B�����$\Omega_0$�Ƃ����Ƃ��܂��B
+  z軸を中心とした回転なので、普通に2次元の回転行列を考えます。これを$\Omega_0$とおいときます。
   \begin{equation}
   \Omega_0(\theta)=
   \begin{pmatrix}
@@ -23,51 +23,51 @@
   0 & 0 & 1\\
   \end{pmatrix}
   \end{equation}
-  �ŗL�l�̏o�����͂����ł��傤�Bexp($\pm$i$\theta$),$1$�B����$(0,0,1)=\mathbf{n_0}$�Ƃ��Ƃ��܂��B\\
+  固有値の出し方はいいでしょう。exp($\pm$i$\theta$),$1$。あと$(0,0,1)=\mathbf{n_0}$としときます。\\
 
 \item
-  �ŗL�l�͏�Ɠ����ł��B(�C�ӂ�$\mathbf{n}$�ɑ΂��āA���̕�����z���̕����Ƃ���
-  ����ϊ������(1)�̘b�ɋA������̂ŁB
-  ���̕ϊ�(���Ƃ����W�̌����̌��ߕ�)�ɑ΂��ČŗL�l��
-  �s�ςł��B\footnote{���������ƌ`���I�ɋc�_����������΁A�Ⴆ��$(0,0,1)=\mathbf{n_0}$
-  ��$\mathbf{n}$��
-  ��]�����Ă����Ă����s���$R$�Ƃ��܂��B�����(1)�̍s���$\Omega_0$,(2)�̍s���$\Omega$��
-  �����Ƃ��A$\Omega=R\Omega_0 R^{-1}$�ƂȂ邱�Ƃ��킩��܂��B�i�E�ӂ͉E���珇�ɁA
-  �u��]����$\mathbf{n}$����$(0,0,1)$�ɓ��������v�u�܂킵���v�u�߂����v�i���ǁA��̉�]��
-  �̂܂��̐��E��$R$��$R^{-1}$�ōs�����藈����ł���Ǝv���΁A�킩��͂��ł��B�j�j���Ƃ�
-  �����킩��ł��傤�B�Ⴆ��$\Omega_0 v=\lambda v$�Ȃ�$R\Omega_0 R^{-1} (R v)=\lambda (R v)$��
-  �Ȃ�̂ŁA$\Omega$���ŗL�l$\lambda$�������A�t�����l�Ȃ̂œ�̍s��̌ŗL�l�̏W���͈�v�B
+  固有値は上と同じです。(任意の$\mathbf{n}$に対して、その方向をz軸の方向として
+  基底を変換すれば(1)の話に帰着するので。
+  基底の変換(もとい座標の向きの決め方)に対して固有値は
+  不変です。\footnote{もしもっと形式的に議論をしたければ、例えば$(0,0,1)=\mathbf{n_0}$
+  を$\mathbf{n}$に
+  回転させてもっていく行列を$R$とします。すると(1)の行列を$\Omega_0$,(2)の行列を$\Omega$と
+  したとき、$\Omega=R\Omega_0 R^{-1}$となることがわかります。（右辺は右から順に、
+  「回転軸を$\mathbf{n}$から$(0,0,1)$に動かした」「まわした」「戻した」（結局、二つの回転軸
+  のまわりの世界を$R$や$R^{-1}$で行ったり来たりできると思えば、わかるはずです。））あとは
+  すぐわかるでしょう。例えば$\Omega_0 v=\lambda v$なら$R\Omega_0 R^{-1} (R v)=\lambda (R v)$と
+  なるので、$\Omega$も固有値$\lambda$を持ち、逆も同様なので二つの行列の固有値の集合は一致。
   $det[ \Omega-\lambda I]=det[R]det[\Omega-\lambda I]det[R^{-1}]=
-  det[ \Omega_0 - \lambda I]$�ł������ł��傤�B})
+  det[ \Omega_0 - \lambda I]$でもいいでしょう。})
 
 \item
-  �P���v�Z�ł��G��`���Ă��o���܂����A�ʓ|�Ȃ̂Ŋy�ɁB
-  �܂��A���߂������̗��ӂ�$\Omega(\mathbf{n},-\theta)$���|����
+  単純計算でも絵を描いても出来ますが、面倒なので楽に。
+  まず、求めたい式の両辺に$\Omega(\mathbf{n},-\theta)$を掛けて
   \begin{equation}
     (\Omega(\mathbf{n}, \Delta \theta) -I)\mathbf{v_0}=
     \mathbf{n}\times \mathbf{v_0} \Delta \theta
   \end{equation}
-  �Ƃ��܂��B\footnote{�E�ӂł́A�x�N�g���̊O�ς���]�s��$\Omega$�ɑ΂���$\Omega
+  とします。\footnote{右辺では、ベクトルの外積が回転行列$\Omega$に対して$\Omega
   (\mathbf{a}\times\mathbf{b})
-  =(\Omega\mathbf{a})\times(\Omega\mathbf{b})$�̂悤�ɁA�v�̓x�N�g���I�ɕϊ����邱�Ƃ��g���܂����B
-  �i$\mathbf{n}$
-  ��$\mathbf{n}$�܂��ł������]�����Ă�$\mathbf{n}$�̂܂܂Ȃ̂ɒ��ӁB�j
-  �x�N�g���̊O�ς̈Ӗ�
-  ���l���Ă�������O�ł����A�����I�ɂ�����ؖ�����ɂ́A
-  �e���\���̋L�@��$\Omega_{ij}a_kb_l\epsilon_{klj}=\epsilon_{imn}\Omega_{mp}a_p\Omega_{nq}b_q$��
-  �����΂ł��܂��B�i�e���\�����Ȃ�ŁA�S�������̓Y�����ŏ������Ⴂ�܂����B�j����������ɂ́A
-  �E�ӂ�$\epsilon_{imn}\Omega_{mp}\Omega_{nq}=\Omega_{ir}\epsilon_{pqr}$
-  �i�����s��̊e��x�N�g���͐��K��������
-  �����̂ŁA��p��Ƒ�q��̃x�N�g���̊O�ς̑�i���������ӂ������Ǝv���΁B�Ⴆ��$p=1,q=2$�Ȃ�
-  ����͑�3��̃x�N�g���̑�i�����ł���ˁB�j�������܂��B}
-  ����ɋr��1�ŏ�����$R^{-1}$��������|���āi���̋r���ɂ���悤��$\Omega=R\Omega_0 R^{-1}$�ɒ��ӁB�j
+  =(\Omega\mathbf{a})\times(\Omega\mathbf{b})$のように、要はベクトル的に変換することを使いました。
+  （$\mathbf{n}$
+  は$\mathbf{n}$まわりでいくら回転させても$\mathbf{n}$のままなのに注意。）
+  ベクトルの外積の意味
+  を考えても当たり前ですが、数式的にこれを証明するには、
+  テンソルの記法で$\Omega_{ij}a_kb_l\epsilon_{klj}=\epsilon_{imn}\Omega_{mp}a_p\Omega_{nq}b_q$を
+  示せばできます。（テンソル苦手なんで、全部下つきの添え字で書いちゃいました。）これを示すには、
+  右辺に$\epsilon_{imn}\Omega_{mp}\Omega_{nq}=\Omega_{ir}\epsilon_{pqr}$
+  （直交行列の各列ベクトルは正規直交基底を
+  成すので、第p列と第q列のベクトルの外積の第i成分を左辺が示すと思えば。例えば$p=1,q=2$なら
+  それは第3列のベクトルの第i成分ですよね。）を代入します。}
+  さらに脚注1で書いた$R^{-1}$を左から掛けて（その脚注にあるように$\Omega=R\Omega_0 R^{-1}$に注意。）
   \begin{equation}
     (\Omega_0(\Delta \theta)-I)(R^{-1}\mathbf{v_0})
     =\mathbf{n_0} \times (R^{-1}\mathbf{v_0}) \Delta \theta
   \end{equation}
-  �������΂������ƂɂȂ�܂��B�i�����ł��r��2�̐������g���܂����B�j
-  $R^{-1}\mathbf{v_0}=(x,y,z)$�Ƃ����āA��(1)�����ɁA���̎�(4)�̐�����$O(\Delta \theta)$
-  �܂ł����ɏ�����
+  を示せばいいことになります。（ここでも脚注2の性質を使いました。）
+  $R^{-1}\mathbf{v_0}=(x,y,z)$とおいて、式(1)を元に、この式(4)の成分を$O(\Delta \theta)$
+  まであらわに書くと
   \begin{equation}
     \begin{pmatrix}
       0 & -\Delta \theta & 0\\
@@ -91,63 +91,63 @@
     \end{pmatrix}
     \Delta \theta
   \end{equation}
-  �ƂȂ�܂����A����͖��炩�ł��傤�B\\
+  となりますが、これは明らかでしょう。\\
 
-  �i���ό`��������₱����������������܂��񂪁A���̉𓚂͖{���I�ɂ́u��ʂ̉�]���̂܂���
-  $\theta \to \theta+\Delta \theta$�v���Ƃ߂�ǂ�����A$z$���܂���$\theta=0$�ɂ����Ⴆ�A����
-  ���Ă邾���ł��B�j\\
+  （式変形が少しややこしかったかもしれませんが、この解答は本質的には「一般の回転軸のまわりで
+  $\theta \to \theta+\Delta \theta$」だとめんどいから、$z$軸まわりで$\theta=0$にしちゃえ、って
+  してるだけです。）\\
 
 \item
-  �ݖ�(3)�ŗ^����ꂽ���̗��ӂ�$\Delta \theta$�Ŋ��邱�Ƃɂ���ē����������������
+  設問(3)で与えられた式の両辺を$\Delta \theta$で割ることによって得られる微分方程式は
   \begin{equation}
     \frac{d \Omega}{d \theta}(\mathbf{n}, \theta) \mathbf{v_0}
     =\mathbf{n}\times \mathbf{v_0}
   \end{equation}
-  �ł��B�����Őݖ�ɗ^����ꂽ$A$���g����\footnote{���̂悤��$A$�̑��ݏؖ����ꉞ���Ƃ��܂��B
-  $\mathbf{u}\mapsto \mathbf{a}\times\mathbf{u}$��$\mathbf{u}$�ɂ��Đ��`�Ȃ̂ŁA���`�ϊ�
-  ���s��\���������̂�$A(\mathbf{a})$�Ƃ����$A(\mathbf{a})\mathbf{u}=\mathbf{a}\times \mathbf{u}$��
-  ������B���ꂪ���̍s��ł��邱�Ƃ́A�C�ӂ̃x�N�g��$\mathbf{u}$�ɑ΂��ĉE�ӂ���������B}
-  �E�ӂ�$A(\mathbf{n})\mathbf{v_0}$�Ə�����̂�
+  です。ここで設問に与えられた$A$を使うと\footnote{このような$A$の存在証明を一応しときます。
+  $\mathbf{u}\mapsto \mathbf{a}\times\mathbf{u}$は$\mathbf{u}$について線形なので、線形変換
+  を行列表示したものを$A(\mathbf{a})$とすれば$A(\mathbf{a})\mathbf{u}=\mathbf{a}\times \mathbf{u}$と
+  書ける。これが実の行列であることは、任意のベクトル$\mathbf{u}$に対して右辺が実だから。}
+  右辺は$A(\mathbf{n})\mathbf{v_0}$と書けるので
   \begin{equation}
     \frac{d \Omega}{d \theta}(\mathbf{n}, \theta)=A(\mathbf{n})
   \end{equation}
-  �ƂȂ�܂��B���Ƃ͂����ł��傤�B�i$\theta=0$���l�����Đϕ��萔�����߂�̂��Y�ꂸ�ɁB�j
+  となります。あとはいいでしょう。（$\theta=0$を考慮して積分定数を決めるのも忘れずに。）
 
 \item
-  $X\mathbf{u}=\mathbf{a_0}\times\mathbf{u}$�B$\mathbf{a_0}=(x,y,z)$�Ƃ����܂��B
-  $\mathbf{u}=(0,0,1),(0,1,0)$��������
+  $X\mathbf{u}=\mathbf{a_0}\times\mathbf{u}$。$\mathbf{a_0}=(x,y,z)$とおきます。
+  $\mathbf{u}=(0,0,1),(0,1,0)$を代入して
   \begin{equation}
     \begin{pmatrix} x_{13} \\ x_{23} \\ 0 \end{pmatrix}
       = \begin{pmatrix} y \\ -x \\ 0 \end{pmatrix},\quad
     \begin{pmatrix} x_{12} \\ 0 \\ x_{32} \end{pmatrix}
       = \begin{pmatrix} -z \\ 0 \\ x \end{pmatrix}
   \end{equation}
-  �𓾂܂��B�����$\mathbf{a_0}=(x_{32},x_{13},x_{21})$�B
+  を得ます。よって$\mathbf{a_0}=(x_{32},x_{13},x_{21})$。
 
 \item
-  $X$�������$\Leftrightarrow {}^tX=-X$�B���܁A$Y$���u�����A����det=1�v
-  �Ȃ炢���̂ŁA���Ɍ��Ă���
+  $X$が実交代$\Leftrightarrow {}^tX=-X$。いま、$Y$が「直交、かつdet=1」
+  ならいいので、順に見てくと
   \begin{equation}
-  {}^tYY={}^t(e^X)e^X=e^{{}^tX}e^X=e^{-X}e^X=I,�@���l��Y{}^tY=I
+  {}^tYY={}^t(e^X)e^X=e^{{}^tX}e^X=e^{-X}e^X=I,　同様にY{}^tY=I
   \end{equation}
   \begin{equation}
   det[Y]=det [e^X]=e^{\lambda_1+\lambda_2+\lambda_3}=e^{tr X}=e^0=1
   \end{equation}
-  ��莦���܂����B������$\lambda$��$X$�̌ŗL�l�B\\
+  より示せました。ただし$\lambda$は$X$の固有値。\\
 
-  ���ɂ��Ă͏����⑫����ƁA
-  �udet�͌ŗL�l�S�Ă̐ρAtr�͌ŗL�l�S�Ă̘a�v�Ƃ����������g���܂����B�i�����
-  �Ίp������Ζ��炩�ł��B�Ίp���s�\�ȍs��ɂ��Ă��A�ŗL�l�o�����߂�
-  �������ɉ��ƌW���̊֌W�g���΂킩��܂��B�j$tr X=0$
-  �́A���s��Ȃ��`����Ίp������$0$�ɂȂ邩��ł��B�i�Ⴆ��(5)�̐ݖ�̎��B�j
-  exponential�̈����ŋC�ɂȂ�����A�e�C���[�W�J����Α����킩��܂��B
+  下については少し補足すると、
+  「detは固有値全ての積、trは固有値全ての和」という性質を使いました。（これは
+  対角化すれば明らかです。対角化不可能な行列についても、固有値出すための
+  方程式に解と係数の関係使えばわかります。）$tr X=0$
+  は、交代行列なら定義から対角成分が$0$になるからです。（例えば(5)の設問の式。）
+  exponentialの扱いで気になったら、テイラー展開すれば多分わかります。
 \end{enumerate}
 \end{answer}
 
-\begin{answer}{��Q��}{ochi}
+\begin{answer}{第２問}{ochi}
 \begin{enumerate}
 \item
-  $n$���B����͋A�[�@�ŁB$n=0$�Ȃ疾�炩�B���Ƃ͈ȉ��̊֌W���ɒ��ӁB
+  $n$次。これは帰納法で。$n=0$なら明らか。あとは以下の関係式に注意。
   \begin{equation}
     f_n(x)
       =e^{x^2}\frac{d^n}{dx^n}(e^{-x^2})=e^{x^2}\frac{d}{dx}(e^{-x^2}f_{n-1}(x))
@@ -155,25 +155,25 @@
   \end{equation}
 
 \item
-  $n\geq 2$���g���ƁA�����ϕ��Ȃǂ���ȉ����킩��܂��B
+  $n\geq 2$を使うと、部分積分などから以下がわかります。
   \begin{equation}
     \int_{-\infty}^{\infty}xf_n(x)e^{-x^2}dx=\int_{-\infty}^{\infty}x\frac{d^n}{dx^n}(e^{-x^2})dx=
       -\int_{\infty}^{\infty}\frac{d^{n-1}}{dx^{n-1}}(e^{-x^2})dx=0.
   \end{equation}
 
 \item
-  ��Ɠ��l�ɕ����ϕ����J��Ԃ��Ƃ킩��܂��B
+  上と同様に部分積分を繰り返すとわかります。
   \begin{equation}
     \int_{-\infty}^{\infty}x^nf_n(x)e^{-x^2}dx=\int_{-\infty}^{\infty}x^n\frac{d^n}{dx^n}(e^{-x^2})dx
       =\dots=(-1)^n n! \int_{-\infty}^{\infty}e^{-x^2}dx=(-1)^nn!\sqrt{\pi}.
   \end{equation}
 
 \item
-  �^����ꂽ����$f_n(x)$�̒�`����������ƁA����
+  与えられた式に$f_n(x)$の定義式を代入すると、結局
   \begin{equation}
     \sum_{n=0}^{\infty}\frac{t^n}{n!}\frac{d^n}{dz^n}(e^{-z^2})=e^{-(t+z)^2}
   \end{equation}
-  ��������΂������Ƃ��킩��܂��B�����ŗ^����ꂽ�ϕ��̎������ӂɓ����
+  を示せればいいことがわかります。ここで与えられた積分の式を左辺に入れて
   \begin{align}
     (l.h.s)=\sum_{n=0}^{\infty}\frac{t^n}{n!}\frac{d^n}{dz^n}\frac{1}{2\pi i}\oint_C
       \frac{e^{-\omega ^2}}{\omega -z}d\omega
@@ -184,16 +184,16 @@
       &=\frac{1}{2\pi i}\oint_C \frac{e^{-\omega ^2}}{\omega -z-t}d\omega \\
       &=e^{-(t+z)^2}
   \end{align}
-  �ƂȂ�̂Ŏ����܂����B�������Ōォ���Ԗڂ̓�����$\sum z^n=1/(1-z)$�Ƃ������ʂ̊􉽋���
-  ���A�Ō�̓�����$|t|<1$���ipole��C�̓����ɂ���̂Łj
-  ���ʂ̗����v�Z�i���邢�́A�{���ŗ^����ꂽ�����j�ł��B
+  となるので示せました。ただし最後から二番目の等号は$\sum z^n=1/(1-z)$という普通の幾何級数
+  を、最後の等号は$|t|<1$より（poleがCの内側にあるので）
+  普通の留数計算（あるいは、本文で与えられた公式）です。
 
 \item
-  ���̐ݖ�ŗ^����ꂽ�����������ɁA(iv)�Ŏ������������̂܂ܑ������
+  この設問で与えられた微分方程式に、(iv)で示した式をそのまま代入して
   \begin{equation}
     \sum_{n=0}^{\infty}\frac{t^n}{n!}(f_n''(z)-2zf_n'(z)+2nf_n(z))=0
   \end{equation}
-  �𓾂܂��B���ꂪ�P�����Ȃ̂ŁA�e$n$�ɂ��āAsum����Ă��钆�g��0�ɂȂ�Ȃ��Ă�
-  �����܂���B(t�̑��������Ƃł��v���āB�B�j�����$\lambda=2n$�B
+  を得ます。これが恒等式なので、各$n$について、sumされている中身は0にならなくては
+  いけません。(tの多項式だとでも思って。。）よって$\lambda=2n$。
 \end{enumerate}
 \end{answer}

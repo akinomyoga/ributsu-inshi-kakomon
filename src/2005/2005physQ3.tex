@@ -1,12 +1,12 @@
 %-------------------------------------------------------------------------------
-% 2005�N�x���{ 2006�N�x���w �����w ��� 3
+% 2005年度実施 2006年度入学 物理学 問題 3
 %-------------------------------------------------------------------------------
-\begin{question}{��R��}{����}
-�ȉ��Ɏ����^�󒆂ł� Maxwell �̕��������o���_�Ƃ��ĕ��ʓd���g��
-�����𓱂��o�������B�����ŁA$\vec E$ �� $\vec B$ �͂��ꂼ��d��Ǝ������x�A$\epsilon_0$ ��
-$\mu_0$ �͂��ꂼ��^��̗U�d���Ɠ������ł���B�܂��A $t$ �͎��Ԃł���A$\nabla$ ��
-��ԍ��W $\vec r=(x,y,z)$ �ɂ��Ẵx�N�g���������Z�q�ł���B�d�ׂ�d��
-�̑��݂��Ȃ��ꍇ���l����B
+\begin{question}{第３問}{村瀬}
+以下に示す真空中での Maxwell の方程式を出発点として平面電磁波の
+性質を導き出したい。ここで、$\vec E$ と $\vec B$ はそれぞれ電場と磁束密度、$\epsilon_0$ と
+$\mu_0$ はそれぞれ真空の誘電率と透磁率である。また、 $t$ は時間であり、$\nabla$ は
+空間座標 $\vec r=(x,y,z)$ についてのベクトル微分演算子である。電荷や電流
+の存在しない場合を考える。
 
 \begin{eqnarray}
 \nabla\cdot\vec E &=& 0 \ilabel{eq:2005phys3-maxwell-1}\\
@@ -15,35 +15,35 @@ $\mu_0$ �͂��ꂼ��^��̗U�d���Ɠ������ł���B�܂��A $t$ �͎��Ԃł���A$\nabla$ 
 \nabla\times\vec E &=& -\frac{\partial \vec B}{\partial t} \ilabel{eq:2005phys3-maxwell-4}
 \end{eqnarray}
 
-�ȉ��̐ݖ�ɓ�����B
+以下の設問に答えよ。
 \begin{enumerate}
 \item
-  �C�ӂ̎O�����x�N�g�� $\vec V$ �ɑ΂��Ď��̌��������藧���Ƃ������B
+  任意の三次元ベクトル $\vec V$ に対して次の公式が成り立つことを示せ。
   \[\nabla\times(\nabla\times\vec V)=\nabla(\nabla\cdot\vec V)-\nabla^2\vec V\]
 \item
-  �O��̌����� Maxwe11 �̕������ɓK�p���āA$\vec E$ �ɑ΂���g��������
-  ����� $\vec B$ �ɑ΂���g�������������ꂼ�ꓱ���B
+  前問の公式を Maxwe11 の方程式に適用して、$\vec E$ に対する波動方程式
+  および $\vec B$ に対する波動方程式をそれぞれ導け。
 \item
-  ���̎��ŕ\����� $\vec E$ ����� $\vec B$�A���Ȃ킿���ʔg���O��ŋ��߂��g
-  ���������̉��ł��邽�߂̏��������߂�B�������A$\vec E_0$�A$\vec B_0$�A$\vec k$�A$\vec k'$�A
-  �͒萔�x�N�g���A$\omega$�A$\omega'$�A$\alpha$�A$\alpha$ �͂��ꂼ��萔�ŁA$0\leq<\alpha<\pi$�A
-  $0\leq\alpha'<\pi$ �ł���B
+  次の式で表される $\vec E$ および $\vec B$、すなわち平面波が前問で求めた波
+  動方程式の解であるための条件を求めよ。ただし、$\vec E_0$、$\vec B_0$、$\vec k$、$\vec k'$、
+  は定数ベクトル、$\omega$、$\omega'$、$\alpha$、$\alpha$ はそれぞれ定数で、$0\leq<\alpha<\pi$、
+  $0\leq\alpha'<\pi$ である。
   \begin{eqnarray}
   \vec E &=& \vec E_0\sin(\vec k\cdot\vec r -\omega t + \alpha) \ilabel{eq:2005phys3_1}\\
   \vec B &=& \vec B_0\sin(\vec k'\cdot\vec r -\omega' t + \alpha') \ilabel{eq:2005phys3_2}
   \end{eqnarray}
 \item
-  ��\ieqref{eq:2005phys3_1}�Ǝ�\ieqref{eq:2005phys3_2}�ŕ\����� $\vec E$ ����� $\vec B$ �����ꂼ��̔g���x�N�g����
-  �����ł��邱�ƁA���Ȃ킿���g�ł��邱�Ƃ������B
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}で表される $\vec E$ および $\vec B$ がそれぞれの波数ベクトルに
+  垂直であること、すなわち横波であることを示せ。
 \item
-  ��\ieqref{eq:2005phys3_1}�Ǝ�\ieqref{eq:2005phys3_2}�ɂ����āA$\vec k=\vec k'$�A$\omega=\omega'$ ����� $\alpha=\alpha'$ �ł��邱��
-  �������B
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}において、$\vec k=\vec k'$、$\omega=\omega'$ および $\alpha=\alpha'$ であること
+  を示せ。
 \item
-  ��\ieqref{eq:2005phys3_1}�Ǝ�\ieqref{eq:2005phys3_2}�ŕ\����� $\vec E$ �� $\vec B$ �݂͌��ɒ������Ă��邱�Ƃ������B
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}で表される $\vec E$ と $\vec B$ は互いに直交していることを示せ。
 \item
-  ���ʓd���g�̈ʑ����x�����߂�B
+  平面電磁波の位相速度を求めよ。
 \item
-  ��\ieqref{eq:2005phys3_1}�Ǝ�\ieqref{eq:2005phys3_2}�œd�� $\vec E$ �Ǝ��� $\vec H (=\vec B/\mu_0)$ �̑傫���̔� $|\vec E|/|\vec H|$ ��
-  ��Ɉ��ł��邱�ƁA����т��̔�͒�R�̎����������Ƃ������B
+  式\ieqref{eq:2005phys3_1}と式\ieqref{eq:2005phys3_2}で電場 $\vec E$ と磁場 $\vec H (=\vec B/\mu_0)$ の大きさの比 $|\vec E|/|\vec H|$ が
+  常に一定であること、およびこの比は抵抗の次元をもつことを示せ。
 \end{enumerate}
 \end{question}

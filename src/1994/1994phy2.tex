@@ -3,14 +3,14 @@
 
 \begin{document}
 
-\begin{question}{$B@l96(B $BLdBj(B2}{}
+\begin{question}{専攻 問題2}{}
 
 \parbox[t]{110mm}{
-$B;0<!856u4V$N$"$k8B$i$l$?NN0h(B($B9-$,$jI}$r(B$a$$B$H$9$k(B)$B$KEE2Y$,J,I[$7!"(B
-$B?6F0?t(B$\nu$$B$G?6F0$7$F$$$k>l9g$NEE<'GH$NJ|<M$r9M$($k!#(B
-$B1&?^$N$h$&$K:BI8$r$H$C$F!"EE2YL)EY$r(B$\rho(\vec{r},t)$$B!"EEN.L)EY$r(B
-$\vec{j}(\vec{r},t)$$B$H$*$/$H!";~9o(B$t$$B!"4QB,E@(B$\vec{R}$$B$K$*$1$k(B
-$B%9%+%i!<%]%F%s%7%c%k(B$\phi$$B$H%Y%/%H%k%]%F%s%7%c%k(B$\vec{A}$$B$NCY1d2r$O!"(B
+三次元空間のある限られた領域(広がり幅を$a$とする)に電荷が分布し、
+振動数$\nu$で振動している場合の電磁波の放射を考える。
+右図のように座標をとって、電荷密度を$\rho(\vec{r},t)$、電流密度を
+$\vec{j}(\vec{r},t)$とおくと、時刻$t$、観測点$\vec{R}$における
+スカラーポテンシャル$\phi$とベクトルポテンシャル$\vec{A}$の遅延解は、
 }\parbox[t]{55mm}{\vspace*{-10mm}
 \begin{center}
   \mbox{\includegraphics[clip]{1994phy2-1.eps}}
@@ -28,17 +28,17 @@ $\vec{j}(\vec{r},t)$$B$H$*$/$H!";~9o(B$t$$B!"4QB,E@(B$\vec{R}$$B$K$*$1$k(B
     {|\vec{R}-\vec{r}|}\d{^3r} \eqname{2}
 \end{eqnarray}
 %
-$B$H=q$1$k!#$?$@$7!"(B$c$$B$O??6uCf$N8w$NB.$5!"(B$\varepsilon_0$$B$H(B$\mu_0$
-$B$O$=$l$>$l??6u$NM6EEN($HF)<'N($G$"$k!#<0(B(1),(2)$B$N@QJ,$G!";~9o$K4X$9$k(B
-$B0z?t$,(B``$t-|\vec{R}-\vec{r}|/c$"$B$H$J$C$F$$$k$N$O0LCV(B$\vec{R}$$B!";~9o(B
-$t$$B$K$*$1$kEE<'GH$N6/$5$,!"EE<'GH$NEAHB$KI,MW$J;~4V!"(B
-$|\vec{R}-\vec{r}|/c$$B!"$@$1A0$N;~9o$NEE2Y5Z$SEEN.$NJ,I[$K0MB8$9$k$3$H(B
-$B$r<($7$F$$$k!#(B
+と書ける。ただし、$c$は真空中の光の速さ、$\varepsilon_0$と$\mu_0$
+はそれぞれ真空の誘電率と透磁率である。式(1),(2)の積分で、時刻に関する
+引数が``$t-|\vec{R}-\vec{r}|/c$"となっているのは位置$\vec{R}$、時刻
+$t$における電磁波の強さが、電磁波の伝搬に必要な時間、
+$|\vec{R}-\vec{r}|/c$、だけ前の時刻の電荷及び電流の分布に依存すること
+を示している。
 
-$B$$$^!"EE2Y$NJ,I[$7$F$$$kNN0h$+$i4QB,E@$^$G$N5wN%$,EE2Y$N9-$,$j$h$j(B
-$B==J,Bg$-$/(B($R \gg a$)$B!"$^$?!"J|<M$5$l$kEE<'GH$NGHD9$,EE2Y$N9-$,$j$h$j(B
-$B==J,Bg$-$$(B($c/\nu \gg a$)$B>l9g$r9M$($k!#$3$N$H$-!"<0(B\eqhref{1}$B$N@QJ,$K(B
-$B$*$1$kEE2YL)EYJ,I[$O!"(B
+いま、電荷の分布している領域から観測点までの距離が電荷の広がりより
+十分大きく($R \gg a$)、また、放射される電磁波の波長が電荷の広がりより
+十分大きい($c/\nu \gg a$)場合を考える。このとき、式\eqhref{1}の積分に
+おける電荷密度分布は、
 %
 \begin{equation}
   \rho(\vec{r},t-|\vec{R}-\vec{r}|/c)%
@@ -46,8 +46,8 @@ $|\vec{R}-\vec{r}|/c$$B!"$@$1A0$N;~9o$NEE2Y5Z$SEEN.$NJ,I[$K0MB8$9$k$3$H(B
   +\Partial{\rho}{t'}\frac{\vec{r}\cdot\vec{R}}{cR}  \eqname{3}
 \end{equation}
 %
-$B$H6a;w$G$-$k!#$?$@$7!"(B$R\equiv|\vec{R}|,t'\equiv t-R/c$$B$G$"$k!#(B
-$B$5$i$K!"(B$R \gg c/\nu$$B$,K~$?$5$l$k$H!"(B$\phi$$B$H(B$\vec{A}$$B$O$=$l$>$l!"(B
+と近似できる。ただし、$R\equiv|\vec{R}|,t'\equiv t-R/c$である。
+さらに、$R \gg c/\nu$が満たされると、$\phi$と$\vec{A}$はそれぞれ、
 %
 \begin{eqnarray}
   \phi(\vec{R},t)%
@@ -62,10 +62,10 @@ $|\vec{R}-\vec{r}|/c$$B!"$@$1A0$N;~9o$NEE2Y5Z$SEEN.$NJ,I[$K0MB8$9$k$3$H(B
     =        \frac{\mu_0\dot{\vec{d}}(t')}{4\pi R} \eqname{5}
 \end{eqnarray}
 %
-$B$H6a;w$G$-$k!#$?$@$7!"(B$\dot{\vec{d}}$\,$B$OAP6K;R%b!<%a%s%H(B
-$\vec{d}(\equiv\int\vec{r}\rho \d{^3r})$$B$r(B$t'(\equiv t-R/c)$$B$K(B
-$B$D$$$FHyJ,$7$?$b$N$G$"$k!#$3$N$H$-!"EE>l$N6/$5(B$\vec{E}$$B!"<'B+L)EY(B
-$\vec{B}$$B$O!"$=$l$>$l!"(B
+と近似できる。ただし、$\dot{\vec{d}}$\,は双極子モーメント
+$\vec{d}(\equiv\int\vec{r}\rho \d{^3r})$を$t'(\equiv t-R/c)$に
+ついて微分したものである。このとき、電場の強さ$\vec{E}$、磁束密度
+$\vec{B}$は、それぞれ、
 %
 \begin{eqnarray}
  \vec{E} &=&%
@@ -75,49 +75,49 @@ $\vec{B}$$B$O!"$=$l$>$l!"(B
    \frac{\mu_0\ddot{\vec{d}}\times \vec{R}}{4\pi cR^2} \eqname{7}
 \end{eqnarray}
 %
-$B$H6a;w$G$-$k!#$?$@$7!"(B$\ddot{\vec{d}}$\,$B$O(B$\dot{\vec{d}}$\,$B$r(B
-$t'$$B$K$D$$$FHyJ,$7$?$b$N$G$"$k!#0J2<$NLd$KEz$($h!#(B
+と近似できる。ただし、$\ddot{\vec{d}}$\,は$\dot{\vec{d}}$\,を
+$t'$について微分したものである。以下の問に答えよ。
 
 \begin{subquestions}
 \SubQuestion
-  $B<0(B\eqhref{3}$B$rF3$1!#(B
+  式\eqhref{3}を導け。
 
 \SubQuestion
-  $B<0(B\eqhref{7}$B$rF3$1!#(B
+  式\eqhref{7}を導け。
 
 \SubQuestion
 \parbox[t]{100mm}{
-  $B1&?^$N$h$&$K!"(B$\ddot{\vec{d}}$\,$B$r(B$z$$B<4J}8~!"(B$\vec{R}$$B$r(B$xz$$BJ?LLFb(B
-  $B$K$H$k!#F1MM$N?^$rIA$-!"0LCV(B$\vec{R}$$B$K$*$1$kEE>l(B$\vec{E}$$B$H(B
-  $B<'B+L)EY(B$\vec{B}$$B$NJ}8~$r?^<($;$h!#$5$i$K!"%]%$%s%F%#%s%0%Y%/%H%k(B
-  $\vec{P}$$B$NJ}8~$bF1$8?^$K=q$-9~$_!"$=$NBg$-$5$r(B$\theta$$B$N4X?t$H$7$F(B
-  $B5a$a$h!#$?$@$7!"(B$\ddot{\vec{d}}$\,$B$H(B$\vec{R}$$B$N$J$93Q$r(B$\theta$$B$H(B
-  $B$9$k!#(B
+  右図のように、$\ddot{\vec{d}}$\,を$z$軸方向、$\vec{R}$を$xz$平面内
+  にとる。同様の図を描き、位置$\vec{R}$における電場$\vec{E}$と
+  磁束密度$\vec{B}$の方向を図示せよ。さらに、ポインティングベクトル
+  $\vec{P}$の方向も同じ図に書き込み、その大きさを$\theta$の関数として
+  求めよ。ただし、$\ddot{\vec{d}}$\,と$\vec{R}$のなす角を$\theta$と
+  する。
 }\parbox[t]{60mm}{\vspace*{-20mm}
   \begin{center}
     \mbox{\includegraphics[clip]{1994phy2-2.eps}}
   \end{center}}
 
 \SubQuestion
-  $BC10L;~4V$"$?$j$NA4J|<M6/EY$r5a$a$h!#(B
+  単位時間あたりの全放射強度を求めよ。
 
 \end{subquestions}
 \end{question}
-\begin{answer}{$B@l96(B $BLdBj(B2}{}
+\begin{answer}{専攻 問題2}{}
 
 \begin{subanswers}
 \SubAnswer
-  $R\gg a$$B!"$9$J$o$A(B  $|\vec{R}|\gg|\vec{r}|$$B$N>r7o$G$O(B
+  $R\gg a$、すなわち  $|\vec{R}|\gg|\vec{r}|$の条件では
 %
   \[ \frac{|\vec{R}-\vec{r}|}{c} \simeq%
      \frac{R}{c} - \frac{\vec{R}\cdot\vec{r}}{cR} \]
 %
-  $B$H6a;w$G$-$k!#$H$3$m$G!"(B
-  $\rho$$B$N;~4VJQ2=(B($B$9$J$o$A(B$t$$B$K$h$kJQ2=(B)$B$N<~4|$O(B
-  $BJ|<M$5$l$kEE<'GH$N<~4|(B$1/\nu$ $B$HF1$8DxEY$H9M$($i$l$k$,!"(B
-  $a/c \ll 1/\nu$ $B$J$N$G!"(B$r/c$$BDxEY$N;~4V$G$N(B$\rho$$B$N(B
-  $BJQ2=J,$O(B$\rho$$B$N;~4V$K$h$k(BTaylor$BE83+$N(B$1$$B<!$N9`$G6a;w$G$-$k!#(B
-  $B$h$C$F!"(B
+  と近似できる。ところで、
+  $\rho$の時間変化(すなわち$t$による変化)の周期は
+  放射される電磁波の周期$1/\nu$ と同じ程度と考えられるが、
+  $a/c \ll 1/\nu$ なので、$r/c$程度の時間での$\rho$の
+  変化分は$\rho$の時間によるTaylor展開の$1$次の項で近似できる。
+  よって、
 %
   \[ \rho(r,t-|\vec{R}-\vec{r}|/c )%
      \simeq \rho(r,t-\frac{R}{c}+\frac{\vec{R}\cdot{\vec{r}}}{cR})%
@@ -127,8 +127,8 @@ $t'$$B$K$D$$$FHyJ,$7$?$b$N$G$"$k!#0J2<$NLd$KEz$($h!#(B
 
 
 \SubAnswer
-  $B<0(B\eqhref{5}$B$GI=$5$l$k%Y%/%H%k%]%F%s%7%c%k(B $\vec{A}$$B$KBP$7$F(B
-  $B<'>l(B $\vec{B}$ $B$O(B $\vec{B}=\Rot{\vec{A}}$$B$G$"$k!#(B
+  式\eqhref{5}で表されるベクトルポテンシャル $\vec{A}$に対して
+  磁場 $\vec{B}$ は $\vec{B}=\Rot{\vec{A}}$である。
 %
   \begin{eqnarray*}
     \partial_iA_j%
@@ -149,14 +149,14 @@ $t'$$B$K$D$$$FHyJ,$7$?$b$N$G$"$k!#0J2<$NLd$KEz$($h!#(B
          \times\vec{R}
   \end{eqnarray*}
 %
-  $B$H$J$k!#$3$N(B$( )$$B$NCf$N(B$2$$B$D$N9`$NBg$-$5$rHf3S$9$k!#(B
-  $|\dot{\vec{d}}| \sim |\ddot{\vec{d}}|/\nu$ $B$G$"$k$+$i(B
-  $B8e$m$N9`$O(B
+  となる。この$( )$の中の$2$つの項の大きさを比較する。
+  $|\dot{\vec{d}}| \sim |\ddot{\vec{d}}|/\nu$ であるから
+  後ろの項は
 %
   \[ |\frac{c}{R}\dot{\vec{d}}(t')|%
      \sim \frac{c}{R\nu} |\ddot{\vec{d}}| \ll |\ddot{\vec{d}}| \]
 %
-  $B$H$J$k$N$GA0$N9`$KBP$7$FL5;k$G$-$k!#$h$C$F!"(B
+  となるので前の項に対して無視できる。よって、
 %
   \[ \vec{B} \simeq \frac{\mu_0}{4\pi}\frac{\ddot{\vec{d}}
                     \times\vec{R}}{cR^2} \]
@@ -165,28 +165,28 @@ $t'$$B$K$D$$$FHyJ,$7$?$b$N$G$"$k!#0J2<$NLd$KEz$($h!#(B
 
 \SubAnswer
 \parbox[t]{95mm}{
-  $\vec{B}\propto\vec{d}\times\vec{R}$$B$G!"(B$ \vec{d},\vec{R}$$B$H$b(Bxz$BJ?LL$K(B
-  $BJ?9T$J$?$a!"(B$\vec{B}$$B$O(Bxz$BJ?LL$K?bD>!#J}8~$O;fLL>e$+$i2<!#(B\\
-  $\vec{E}\propto \vec{B}\times\vec{R}$$B$H$J$j!"(B$\vec{B},\vec{R}$$B$K(B
-  $B?bD>!#(B
+  $\vec{B}\propto\vec{d}\times\vec{R}$で、$ \vec{d},\vec{R}$ともxz平面に
+  平行なため、$\vec{B}$はxz平面に垂直。方向は紙面上から下。\\
+  $\vec{E}\propto \vec{B}\times\vec{R}$となり、$\vec{B},\vec{R}$に
+  垂直。
 %
   \[ \vec{P}=\vec{E}\times\vec{H}%
      = \frac{\mu_0(\vec{R}\times(\vec{R}\times\ddot{\vec{d}}))\times
        (\ddot{\vec{d}}\times\vec{R})}{16\pi^2cR^5} \]
 %
-  $BJ}8~$O!"(B$\vec{E}$$B$H(B$\vec{H}$$B$,8_$$$K?bD>$N$?$a!"D>$A$K?^$NJ}8~$H(B
-  $B$o$+$k!#Bg$-$5$O!"(B$\vec{R}$$B$H(B$(\vec{R}\times\ddot{\vec{d}})$$B$,(B
-  $B?bD>$J$N$G!"(B
+  方向は、$\vec{E}$と$\vec{H}$が互いに垂直のため、直ちに図の方向と
+  わかる。大きさは、$\vec{R}$と$(\vec{R}\times\ddot{\vec{d}})$が
+  垂直なので、
 %
   \[ |\vec{R}\times(\vec{R}\times\ddot{\vec{d}})|%
      = |\vec{R}|^2|\ddot{\vec{d}}|\sin\theta \]
 %
-  $B$H$J$j!"7k6I!"(B
+  となり、結局、
 %
   \[ |P| = \frac{\mu_0R^3|\ddot{\vec{d}}|^2\sin^2\theta}{16\pi^2cR^5}
          = \frac{\mu_0|\ddot{\vec{d}}|^2}{16\pi^2cR^2}\sin^2\theta \]
 %
-  $B$3$NMM;R$r1&?^$K5-$9!#(B
+  この様子を右図に記す。
 %
 }\parbox[t]{65mm}{
   \begin{center}
@@ -195,9 +195,9 @@ $t'$$B$K$D$$$FHyJ,$7$?$b$N$G$"$k!#0J2<$NLd$KEz$($h!#(B
 
 
 \SubAnswer
-  {\bf 3}$B$N(B$\vec{P}$$B$O!"86E@$rCf?4$H$9$kH>7BG$0U$N5eLL$K?bD>$G$"$k!#(B
-  $B$h$C$F(Bflux$B$NAmNL$O!"(B$|\vec{P}|$$B$r$3$N5eLL$G@QJ,$9$l$PNI$$!#(B
-  $BA4(Bflux$B$r(BF$B$H$7$F!"(B
+  {\bf 3}の$\vec{P}$は、原点を中心とする半径任意の球面に垂直である。
+  よってfluxの総量は、$|\vec{P}|$をこの球面で積分すれば良い。
+  全fluxをFとして、
 %
   \[ F = R^2 2\pi \int_{0}^{\pi}|\vec{P}|\sin\theta \d{\theta}%
        = R^2 2\pi \frac{\mu_0|\ddot{\vec{d}}|^2}{16\pi^2cR^2}%

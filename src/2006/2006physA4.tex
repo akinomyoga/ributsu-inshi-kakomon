@@ -1,19 +1,19 @@
 %% -*- coding:sjis -*-
 \newcommand{\odif}[2]{\frac{d{#1}}{d{#2}}}
 
-\begin{answer}{��S��}{����h�m}
+\begin{answer}{第４問}{見上敬洋}
 \begin{enumerate}
 \item
-  �����q��$180^\circ$�̊p�x�ŎU�����ꂽ�Ƃ��������G�l���M�[�ő�ł��D
-  ���̂Ƃ��C�U���O�̒����q�̉^���G�l���M�[$T$�C�U����̒����q�C���q�j�̉^���G�l���M�[$T', E_\mathrm{max}$�Ƃ���ƁC
-  �G�l���M�[�ۑ����Ɖ^���ʕۑ�������
+  中性子が$180^\circ$の角度で散乱されたときが反跳エネルギー最大です．
+  このとき，散乱前の中性子の運動エネルギー$T$，散乱後の中性子，原子核の運動エネルギー$T', E_\mathrm{max}$とすると，
+  エネルギー保存則と運動量保存則から
   \begin{gather}
     T = T' + E_\mathrm{max} , \notag\\
     \sqrt{2mT} = -\sqrt{2mT'} + \sqrt{2mAE_\mathrm{max}} \notag
   \end{gather}
-  �����藧���܂��D�j�q�̎���$m$�Ƃ��܂����D
-  �����������$\displaystyle E_\mathrm{max} = \frac{4A}{(A+1)^2} T$�ƂȂ��āC
-  $A=1$�ōő�ɂȂ邱�Ƃ�������܂��D
+  が成り立ちます．核子の質量$m$としました．
+  これを解けば$\displaystyle E_\mathrm{max} = \frac{4A}{(A+1)^2} T$となって，
+  $A=1$で最大になることも分かります．
 
   \begin{figure}[h]
     \begin{center}
@@ -25,13 +25,13 @@
 \item
   \begin{enumerate}
   \item
-    �d�S�n�ł̗z�q�̉^���G�l���M�[�i=�����q�̉^���G�l���M�[�j��$E^*$�Ə������Ƃɂ��܂��D
-    �������n�Œ����q��$\sqrt{2T/m}$�̑��x�Ői��ł����̂ŁC�d�S�n�ł͂���$1/2$�̑��x�������܂��D�䂦��
+    重心系での陽子の運動エネルギー（=中性子の運動エネルギー）を$E^*$と書くことにします．
+    実験室系で中性子は$\sqrt{2T/m}$の速度で進んでいたので，重心系ではその$1/2$の速度を持ちます．ゆえに
     \begin{equation}
       \sqrt{\dfrac{2E^*}{m}} = \frac 12 \sqrt{\dfrac{2T}{m}} , \quad \therefore E^* = \frac 14 T. \notag
     \end{equation}
 
-    �d�S�n�ł̍��W���E�̂悤�ɂƂ邱�Ƃɂ���ƁC�d�S�n�ł̗z�q�̉^���ʂ�
+    重心系での座標を右のようにとることにすると，重心系での陽子の運動量は
     \begin{equation}
       -\sqrt{2mE^*}
       \begin{pmatrix}
@@ -42,7 +42,7 @@
         \cos\theta^* \\ \sin\theta^* 
       \end{pmatrix} \notag
     \end{equation}
-    �Ƃ����܂��D������������n�ɖ߂��ɂ�$x$�����ɉ^����$\dfrac 12 \sqrt{2mT}$�����i�߂΂悢����C
+    とかけます．これを実験室系に戻すには$x$方向に運動量$\dfrac 12 \sqrt{2mT}$だけ進めばよいから，
     \begin{equation}
       \bm{p}_L = 
       \frac 12 \sqrt{2mT} 
@@ -50,18 +50,18 @@
         1-\cos\theta^* \\ -\sin\theta^*
       \end{pmatrix} \notag
     \end{equation}
-    ���C�������n�ł̉^���ʂƂȂ�܂��D����ĉ^���G�l���M�[��
+    が，実験室系での運動量となります．よって運動エネルギーは
     \begin{equation}
       E = \frac{\bm{p}_L^2}{2m} = \frac T2 \left( 1 - \cos\theta^*\right). \ilabel{4energy}
     \end{equation}
 
   \item
-    ��\ieqref{4energy}���C$dE = \dfrac T2 \sin\theta^* \,d\theta^*$�ƂȂ�܂��D���������āC�G�l���M�[��$E\sim E+dE$�ɓ���悤�ȁC�e$\theta^*$�̕���
+    式\ieqref{4energy}より，$dE = \dfrac T2 \sin\theta^* \,d\theta^*$となります．したがって，エネルギーが$E\sim E+dE$に入るような，各$\theta^*$の幅は
     \begin{equation}
       2\times d\theta^* = 2\times \frac{2 dE}{T\sin\theta^*} \notag
     \end{equation}
-    �ł��D2�{�����̂́C�e$E$�ɑ΂���$\pm\theta^*$�̓���Ή�����̂ŁC���ꂼ��̕�������������ł��D
-    �d�S�n�ŎU���͓����I�Ƃ���������C$\theta^*$���ɂ͊m�����x$1/2\pi$������܂��D�������āC$E\sim E+dE$�ɓ���m����
+    です．2倍したのは，各$E$に対して$\pm\theta^*$の二つが対応するので，それぞれの幅を加えたからです．
+    重心系で散乱は等方的という仮定より，$\theta^*$軸には確率密度$1/2\pi$が入ります．こうして，$E\sim E+dE$に入る確率は
     \begin{equation}
       \frac{dW}{dE} dE = \frac {4dE}{T\sin\theta^*} \Big/ {2\pi} , \quad \therefore \odif{W}{E} = \frac{1}{\pi\sqrt{E(T-E)}}\notag .
     \end{equation}
@@ -69,34 +69,34 @@
   \end{enumerate}
 
 \item
-  ���˂��������q�́C�V���`���[�^���̗z�q(���f���q�j)�ɏՓ˂��܂��D
-  �z�q��Coulomb���ݍ�p�ɂ���ăV���`���[�^���̉��d�q�������N���邱�ƂŁC
-  �Փ˂ɂ���Ă����G�l���M�[���V���`���[�^�ɗ^���܂��D��N���ꂽ���d�q�͒E��N���C�G�l���M�[�����q�Ƃ��ĕ��o���܂��D
+  入射した中性子は，シンチレータ中の陽子(水素原子核)に衝突します．
+  陽子はCoulomb相互作用によってシンチレータ内の価電子たちを励起することで，
+  衝突によってえたエネルギーをシンチレータに与えます．励起された価電子は脱励起し，エネルギーを光子として放出します．
 
-  �����������q�̈ꕔ�͌��d�q���{�ǂɌ������C���d�A�ɂɏՓ˂��ēd�q��@���o���D���̓d�q���C�d��ɂ������C�ɔƂ̏Փ˂��J��Ԃ��đ�������C�M���Ƃ��Ď��o����܂��D
-
-\item
-  ���ώ��R�s��$\lambda$�́C���q���U�������܂łɐi�߂鋗���̖ڈ���^������̂ł��D
-  �Փ˒f�ʐ�$\sigma$�Ƃ���Ƃ��C�̐�$\sigma\lambda$�ӂ�ɎU���̂�1���x����ׂ��Ȃ̂�$n\sigma \lambda = 1$�C���Ȃ킿$\lambda = 1/n\sigma$�D
+  発生した光子の一部は光電子増倍管に向かい，光電陰極に衝突して電子を叩き出す．この電子が，電場による加速，極板との衝突を繰り返して増幅され，信号として取り出されます．
 
 \item
-  �����q��$x$�����i�ނ܂łɗz�q�ɎU�������m����$P(x)$�Ƃ��C��������߂܂��傤�D
+  平均自由行程$\lambda$は，粒子が散乱されるまでに進める距離の目安を与えるものです．
+  衝突断面積$\sigma$とするとき，体積$\sigma\lambda$辺りに散乱体が1つ程度あるべきなので$n\sigma \lambda = 1$，すなわち$\lambda = 1/n\sigma$．
 
-  �����q��$dx$�����i�񂾂Ƃ��C�U�������m����$dx/\lambda$�ł��邱�Ƃɒ��ӂ����
+\item
+  中性子が$x$だけ進むまでに陽子に散乱される確率を$P(x)$とし，これを求めましょう．
+
+  中性子が$dx$だけ進んだとき，散乱される確率は$dx/\lambda$であることに注意すれば
   \begin{align}
     P(x+dx)
-    &= \text{(x�܂łɎU�������m��)} + \text{($x$�܂łɎU������Ȃ��m��)}\times \text{(��$dx$�ŎU�������m��)} \notag\\
+    &= \text{(xまでに散乱される確率)} + \text{($x$までに散乱されない確率)}\times \text{(幅$dx$で散乱される確率)} \notag\\
     &= P(x) + [1-P(x)] \frac{dx}{\lambda} \notag
   \end{align}
-  ���̔�����������������$P(x) = 1-e^{-x/\lambda}$�ƂȂ�܂��D
+  この微分方程式を解けば$P(x) = 1-e^{-x/\lambda}$となります．
 
 \item
-  �v���X�`�b�N�V���`���[�^�̖��x$10 \mathrm{g/cm^3}$����$n = \dfrac 1{13}\times 6\times 10^{23} \mathrm{/cm^3}$�D
+  プラスチックシンチレータの密度$10 \mathrm{g/cm^3}$から$n = \dfrac 1{13}\times 6\times 10^{23} \mathrm{/cm^3}$．
 
-  �܂��C�^���G�l���M�[$20\mathrm{MeV}$�́C�^����$\sqrt{2mc^2T}/c =\sqrt{2\times 1000\times 20} \mathrm{MeV}/c = 200 \mathrm{MeV}/c $�Ȃ̂ŁC
-  �}���$\sigma = 0.5 \times 10^{-24} \mathrm{cm}^2$�D
+  また，運動エネルギー$20\mathrm{MeV}$は，運動量$\sqrt{2mc^2T}/c =\sqrt{2\times 1000\times 20} \mathrm{MeV}/c = 200 \mathrm{MeV}/c $なので，
+  図より$\sigma = 0.5 \times 10^{-24} \mathrm{cm}^2$．
 
-  ����������$\lambda = 1/n\sigma = \dfrac {130}{3} \mathrm{cm}$�D�䂦�Ɍ��o������
+  したがって$\lambda = 1/n\sigma = \dfrac {130}{3} \mathrm{cm}$．ゆえに検出効率は
   \begin{equation}
     P(x = 10\mathrm{cm}) = 1-e^{-3/13} =\frac{3}{13} - \frac 12 \left(\frac{3}{13}\right)^2 + \cdots = 20 \% \notag
   \end{equation} 

@@ -2,88 +2,88 @@
 \usepackage{physpub}
 \begin{document}
 
-\begin{question}{���5}{�s�� ��}
- ���������ɂ����āA����l�Ƃ��̌덷�̎�舵���͔��ɏd�v�ł���B�����Ɋւ���ȉ��̐ݖ�ɓ�����B
+\begin{question}{問題5}{市川 翼}
+ 物理実験において、測定値とその誤差の取り扱いは非常に重要である。これらに関する以下の設問に答えよ。
 
 \begin{enumerate}
-	\item �����덷�͑傫���n���덷�Ɠ��v�덷�̂Q�ɕ�������B���v�덷�͑���l���΂��������̂ŁA�����̏ꍇ�ɂ͈��̊m�����z�ɏ]���B����A�n���덷�Ƃ͂ǂ��������e�̂��̂��B��������ĊȌ��Ɂi�P�O�O�����x�Łj��������B
+	\item 実験誤差は大きく系統誤差と統計誤差の２つに分けられる。統計誤差は測定値をばらつかせるもので、多くの場合には一定の確率分布に従う。一方、系統誤差とはどういう内容のものか。例を挙げて簡潔に（１００字程度で）説明せよ。
 \end{enumerate}
 
- �ȉ��̐ݖ�ł́A���v�덷�������l���A���̊m�����z�̓K�E�X���z�ɏ]���Ɖ��肷��B
+ 以下の設問では、統計誤差だけを考え、その確率分布はガウス分布に従うと仮定する。
 \begin{enumerate}
 \setcounter{enumi}{1}
-	\item ���镨���ʂ̑���𓯈������$N$��s�Ȃ����Ƃ���B�����̑���͓Ɨ��ŁA$i$��ڂ̑���l��$x_i$�ł������Ƃ���B�����Ƃ��m���炵�������ʂ̒l�i�Ŗޒl�j$X$�͍ŏ����@�̍l�����ɂ��A
+	\item ある物理量の測定を同一条件で$N$回行なったとする。これらの測定は独立で、$i$回目の測定値が$x_i$であったとする。もっとも確からしい物理量の値（最尤値）$X$は最小二乗法の考え方により、
 	\begin{equation}
 	    S = \sum _{i=1} ^N (x_i - X)^2
 	\end{equation}
-���ŏ��ɂ���$X$�Ƃ��ċ��߂���B$X$�����߂�B
-	\item �ݖ�Q�̏ꍇ�A����̕W���΍��͂ǂ̂悤�ɋ��߂��邩�B
-	\item �ݖ�Q�̏ꍇ�A�Ŗޒl$X$�̌덷�i�^�̒l����̍��̐�Βl�j$\delta X$ �͂ǂ̂悤�ɐ��肳��邩�B$N$��傫�������Ƃ��ɁA���̌덷�͂ǂ̂悤�ɂȂ邩�B
-	\item �ݖ�Q����тS�̌��ʁA�Ŗޒl�Ƃ��̌덷�����ꂼ��$X$�A$\delta X$�ł������B����A�Ɨ��ȕ����ʂ̑���𓯗l�ɍs�Ȃ��A�Ŗޒl�Ƃ��̌덷�����ꂼ��$\delta Y$�A$Y$�ł������B���̂Ƃ��A�����ʂ̘a�A$X + Y$�A�ɑ΂���덷�𓱂��B���ʂ����łȂ��A�ǂ����Ă����Ȃ邩���������B�������A$\delta X <<|X|$�A$\delta Y <<|Y|$�Ƃ���B
-	\item �ݖ�T�Ɠ��l�ɁA�����ʂ̐�$XY$�A����я�$X/Y$�ɑ΂���덷�𓱂��B
-	\item ���镨����$X$�ɑ΂���$M$�̐ݒ�l$X_k(k=1,\dots ,M)$�ɂ��āA����Ƒ��ւ̂��镨����$Y$�𑪒肵���B�P�̐ݒ�l$X_k$�ɑ΂���$N$��̑�����J��Ԃ��A�ݖ�Q����тS�̕��@�ŁA�Ŗޒl$Y_k$�Ƃ��̌덷$\delta Y_k$�����߂��B$X_k$��$Y_k$�̊Ԃɂ͒����֌W���\�z���ꂽ�̂ŁA$Y_k = pX_k + q$�̊֌W���ŋߎ��������B�ŏ����@�̍l������p���āA�����Ƃ��m���炵��$p$��$q$�̒l�����߂�B�������A$X_k$�̌덷�͂Ȃ����̂Ƃ���B
+を最小にする$X$として求められる。$X$を求めよ。
+	\item 設問２の場合、測定の標準偏差はどのように求められるか。
+	\item 設問２の場合、最尤値$X$の誤差（真の値からの差の絶対値）$\delta X$ はどのように推定されるか。$N$を大きくしたときに、その誤差はどのようになるか。
+	\item 設問２および４の結果、最尤値とその誤差がそれぞれ$X$、$\delta X$であった。一方、独立な物理量の測定を同様に行ない、最尤値とその誤差がそれぞれ$\delta Y$、$Y$であった。このとき、物理量の和、$X + Y$、に対する誤差を導け。結果だけでなく、どうしてそうなるかを説明せよ。ただし、$\delta X <<|X|$、$\delta Y <<|Y|$とする。
+	\item 設問５と同様に、物理量の積$XY$、および商$X/Y$に対する誤差を導け。
+	\item ある物理量$X$に対する$M$個の設定値$X_k(k=1,\dots ,M)$について、それと相関のある物理量$Y$を測定した。１つの設定値$X_k$に対して$N$回の測定を繰り返し、設問２および４の方法で、最尤値$Y_k$とその誤差$\delta Y_k$を求めた。$X_k$と$Y_k$の間には直線関係が予想されたので、$Y_k = pX_k + q$の関係式で近似したい。最小二乗法の考え方を用いて、もっとも確からしい$p$と$q$の値を求めよ。ただし、$X_k$の誤差はないものとする。
 \end{enumerate}
 \end{question}
 
-\begin{answer}{���5}{�s�� ��}
+\begin{answer}{問題5}{市川 翼}
 \begin{enumerate}
-	\item ����l��^�̒l�����l�ɂ��炷�悤�Ȍ덷�B�Ⴆ�΁A���鉷�x$T$�Œ�K�Ŗ_�̒����𑪂�ꍇ�A��K�̕ό`�ɂ��ڐ��Ԋu�̈�l�Ȃ����A���x���䂪�s�[���Ȃ��߂ɖ_�̔M�c���ɂ�邸�ꂪ�����ƂȂ肤��B�����I�ɂ͊��S�����\�B
-	\item $S$���ɏ��l���Ƃ�΂悢�̂ŁA$S$��$X$�ɂ��ĕΔ������āA
+	\item 測定値を真の値から一様にずらすような誤差。例えば、ある温度$T$で定規で棒の長さを測る場合、定規の変形による目盛間隔の一様なずれや、温度制御が不充分なために棒の熱膨張によるずれが原因となりうる。原理的には完全除去可能。
+	\item $S$が極小値をとればよいので、$S$を$X$について偏微分して、
 		\begin{equation}
 		 \sum _{i=1} ^N (x_i - X) = 0
 		\end{equation}
-���A
+より、
 		\begin{equation}
 		 X = \frac{1}{N} \sum _{i=1} ^N x_i
 		\end{equation}
-��������B����͑���l$x_i$�̎Z�p���ςɂȂ��Ă���B
-	\item �Ŗޖ@��p���ĂƂ��B�ޓx�֐� $L$���ȉ��̂悤�ɒ�`����B
+が得られる。これは測定値$x_i$の算術平均になっている。
+	\item 最尤法を用いてとく。尤度関数 $L$を以下のように定義する。
 		\begin{equation}
 		 L \equiv \frac{1}{(\sqrt{2\pi}\sigma)^N} \exp{-\frac{S}{2\sigma^2}}
 		\end{equation}
-$L$���ɑ�l���Ƃ�悤��$\sigma$������̕W���΍��Ȃ̂ŁA
+$L$が極大値をとるような$\sigma$が測定の標準偏差なので、
 		\begin{equation}
 		 \frac{\partial L}{\partial \sigma} = 0
 		\end{equation}
-���v�Z���āA
+を計算して、
 		\begin{equation}
 		 \sigma = \sqrt{\frac{S}{N}}
 		\end{equation}
-��������B$X$�̒l�͑O��ŋ��߂����̂ł���B\\
-�W���΍��̎��Ƃ��Ă�$N$�ł͂Ȃ�$N -1$�ƂȂ��Ă�����̂�����܂����A������𓱂��̂͏����ʓ|�ł��B����ꂽ���ԓ��ł̉𓚂ƌ����Ӗ��ł͏�L�̂��̂ł��悢�悤�Ɏv���܂��B�e�C���[�Ƃ����l��''�v���ɂ�����덷��͓���''�Ƃ����{��������Ɠ����Ă����̂ŁA�C�ɂȂ���͎Q�Ƃ��ĉ������B�������w���l����|�󂪏o�Ă܂��B
-	\item �܂��A�Q�ϐ��֐��ɂ��Č덷�̓`�d���𓱂��B���̓��o�͂����ƕϐ��������ꍇ�ɂ����Ă͂܂�B�Ɨ��ϐ�$x$�A$y$�̊֐�$f(x,y)$���l����B$x_i$�A$y_i$�͑���l�ŁA�덷�͏������Ɖ��肷��B�Ŗޒl$X$�A$Y$�̂܂��Ńe�C���[�W�J���ĂP���̍��܂Ŏc���ƁA
+が得られる。$X$の値は前問で求めたものである。\\
+標準偏差の式としては$N$ではなく$N -1$となっているものもありますが、そちらを導くのは少し面倒です。限られた時間内での解答と言う意味では上記のものでもよいように思います。テイラーという人の''計測における誤差解析入門''という本がきちんと導いていたので、気になる方は参照して下さい。東京化学同人から翻訳が出てます。
+	\item まず、２変数関数について誤差の伝播則を導く。この導出はもっと変数が多い場合にもあてはまる。独立変数$x$、$y$の関数$f(x,y)$を考える。$x_i$、$y_i$は測定値で、誤差は小さいと仮定する。最尤値$X$、$Y$のまわりでテイラー展開して１次の項まで残すと、
 		\begin{equation}
 		 f(x_i,y_i) - f(X,Y) = \frac{\partial f}{\partial X}(x_i - X)
  + \frac{\partial f}{\partial Y}(y_i - Y)
 		\end{equation}
-�ƂȂ�B$f(x,y)$�̕W���΍�$\sigma_{f}^{2}$��
+となる。$f(x,y)$の標準偏差$\sigma_{f}^{2}$は
 		\begin{equation}
 		 \sigma_{f}^{2} = \frac{1}{N} \sum _{i=1} ^N [f(x_i,y_i)
  - f(X,Y)]^2
 		\end{equation}
-�Ȃ̂ŁA�͂��߂̓����𗼕ӂ��Q�悵�Ęa���Ƃ�ƁA
+なので、はじめの等式を両辺を２乗して和をとると、
 		\begin{equation}
 		 \sigma_{f}^{2} = \left(\frac{\partial f}{\partial X}\right)^2
 \sigma_{x}^{2} + \left(\frac{\partial f}{\partial Y}\right)^2\sigma_{y}^{2}
 + 2\frac{\partial f}{\partial X}\frac{\partial f}{\partial Y}\frac{1}{N}\sum _{i=1} ^N (x_i - X)(y_i - Y)
 		\end{equation}
-��������B���̎��̉E�ӑ�R����$x$��$y$���Ɨ��ϐ��Ȃ̂ŁA������̑���ł͏�����B����āA�덷�̓`�d�͈ȉ��̎��ɏ]���B
+が得られる。この式の右辺第３項は$x$と$y$が独立変数なので、多数回の測定では消える。よって、誤差の伝播は以下の式に従う。
 		\begin{equation}
 		 \sigma_{f}^{2} = \left(\frac{\partial f}{\partial X}\right)^2
 \sigma_{x}^{2} + \left(\frac{\partial f}{\partial Y}\right)^2\sigma_{y}^{2}
 		\end{equation}  
-�����Ɨ���$n$�ϐ��Ɋg�����āA���2�ł��Ƃ߂�$X$��$x_1,x_2,....x_n$�̊֐��Ƃ݂Ȃ��ēK�p����B$x_i$�͓���̕����ʂ̑���l�Ȃ̂ŁA�W���΍��͂��ׂē������O��ŋ��߂�$\sigma$�ł���B�܂��A$\partial X/\partial x_i = 1 / N$�����ׂĂ�$i$�ɂ��Đ��藧����A�Ŗޒl$X$�̕W���΍��A�܂�덷$\delta X$�́A
+これを独立な$n$変数に拡張して、問題2でもとめた$X$を$x_1,x_2,....x_n$の関数とみなして適用する。$x_i$は同一の物理量の測定値なので、標準偏差はすべて等しく前問で求めた$\sigma$である。また、$\partial X/\partial x_i = 1 / N$がすべての$i$について成り立つから、最尤値$X$の標準偏差、つまり誤差$\delta X$は、
 		\begin{equation}
 		 \delta X = \sqrt{N\frac{1}{N^2}\sigma^2}
 		          = \frac{\sigma}{\sqrt{N}} 
 		\end{equation}
-�ƂȂ�B$N$��傫�������ꍇ�A$\sigma$�͂قƂ�Ǖω����Ȃ��i�������Ɠ��������̂��Ƃő�������Ă���̂ŁA�덷�������悤�ȏo���̎d��������͂��ł��B�j�̂ŁA$\delta X$�͂��₩�Ɍ������Ă������ƂɂȂ�B
-	\item �덷�͑O��œ������@���ɏ]���ē`�d����̂ŁA$X + Y$�ɂ��ē`�d����K�p����ƁA
+となる。$N$を大きくした場合、$\sigma$はほとんど変化しない（ずうっと同じ条件のもとで測定をしているので、誤差も同じような出現の仕方をするはずです。）ので、$\delta X$はゆるやかに減少していくことになる。
+	\item 誤差は前問で導いた法則に従って伝播するので、$X + Y$について伝播則を適用すると、
 		\begin{equation}
 		 \delta (X + Y) = \sqrt{\delta X^2 + \delta Y^2}
 		\end{equation}
-�ł���B
-	\item �O��Ɠ��l�ɁA
+である。
+	\item 前問と同様に、
 		\begin{equation}
 		 \delta (XY) = \sqrt{Y^2\delta X^2 + X^2\delta Y^2}
 		\end{equation}
@@ -91,34 +91,34 @@ $L$���ɑ�l���Ƃ�悤��$\sigma$������̕W���΍��Ȃ̂ŁA
 		 \delta (X/Y) = \frac{X}{Y}\sqrt{\frac{\delta X^2}{X^2} + 
 				\frac{\delta Y^2}{Y^2}}
 		\end{equation}
-�ƌv�Z�ł���B
-	\item �\�L���ȒP�ɂ��邽�߁A�ȉ��̗ʂ��`���Ă����܂��B�܂��A�d��$w_k$���A
+と計算できる。
+	\item 表記を簡単にするため、以下の量を定義しておきます。まず、重み$w_k$を、
 		\begin{equation}
 		 w_k \equiv \frac{1}{\sigma_{Y_k}^{2}}
 		\end{equation}
-���ɁA$\Delta$�Ƃ��āA
+次に、$\Delta$として、
 		\begin{equation}
 		 \Delta \equiv \sum {k=1} ^M w_k X_{k}^{2} \sum {k=1} ^M w_k
 			     - \left(\sum {k=1} ^M w_k X_k \right)^2
 		\end{equation}
-�Ȃ��A$\sigma_{Y_k}$�ƁA$\delta Y_k$�́A�ȉ��̊֌W������܂��B���4���Q�Ƃ��ĉ������B
+なお、$\sigma_{Y_k}$と、$\delta Y_k$は、以下の関係があります。問題4を参照して下さい。
 		\begin{equation}
 		 \frac{\sigma_{Y_k}}{\sqrt N} = \delta Y_k
 		\end{equation}
-����ŏ��������ł��B���̂�ς��ĉ𓚂ɓ���܂��B\\�ޓx�֐�$L$���ȉ��̂悤�ɒ�`����B
+これで準備完了です。文体を変えて解答に入ります。\\尤度関数$L$を以下のように定義する。
 		\begin{equation}
 		 L \equiv \frac{1}{\prod _{k=1}^M \sqrt{2\pi}\sigma_{Y_k}}
 		          \exp\left[-\sum _{k=1}^M\frac{w_k (Y_k - pX_k - q)^2}
 			  {2} \right]
 		\end{equation}
-������ő�ɂ���悤��$p,q$�����Ƃ��m���炵���l�Ȃ̂ŁA
+これを最大にするような$p,q$もっとも確からしい値なので、
 		\begin{equation}
 		 \frac{\partial L}{\partial p} = 0
 		\end{equation}
 		\begin{equation}
 		 \frac{\partial L}{\partial q} = 0
 		\end{equation}
-���v�Z���āA�ȉ��̎���������B
+を計算して、以下の式が得られる。
 		\begin{equation}
 		 p\sum _{k=1}^M w_k X_k + q\sum _{k=1}^M w_k
                      = \sum _{k=1}^M w_k Y_k
@@ -127,8 +127,8 @@ $L$���ɑ�l���Ƃ�悤��$\sigma$������̕W���΍��Ȃ̂ŁA
 		 p\sum _{k=1}^M w_k X_{k}^{2} + q\sum _{k=1}^M w_k X_k
 		     = \sum _{k=1}^M w_k X_k Y_k
 		\end{equation}
-�i���Ȃ݂ɁA���̘A�����������s��ŏ��������̌W���s��̍s�񎮂�$\Delta$�ł��B�j
-�����������āA
+（ちなみに、この連立方程式を行列で書いた時の係数行列の行列式が$\Delta$です。）
+これらを解いて、
 		\begin{equation}
 		 p = \frac{\sum _{k=1}^M w_k X_k Y_k \sum _{k=1}^M w_k - 
 		     \sum _{k=1}^M w_k X_k \sum _{k=1}^M w_k Y_k}{\Delta}
@@ -137,7 +137,7 @@ $L$���ɑ�l���Ƃ�悤��$\sigma$������̕W���΍��Ȃ̂ŁA
 		 q = \frac{\sum _{k=1}^M w_k X_{k}^{2} \sum _{k=1}^M w_k Y_k
                      - \sum _{k=1}^M w_k X_k \sum _{k=1}^M w_k X_k Y_k}{\Delta}
 		\end{equation}
-���̎���$\sigma_{Y_k}$��$\delta Y_k$�̊֌W����p����Γ���������B\\���̂悤�Ȗ���{\bf �d�݂��ŏ�2��@}�Ƃ��������ł��B
+この式に$\sigma_{Y_k}$と$\delta Y_k$の関係式を用いれば答が得られる。\\このような問題を{\bf 重みつき最小2乗法}というそうです。
 \end{enumerate}
 \end{answer}
 

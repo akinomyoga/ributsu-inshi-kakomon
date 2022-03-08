@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\begin{question}{$B@l96(B $BLdBj(B1}{}
+\begin{question}{専攻 問題1}{}
 
 % Definition of local macros
 \def\WF#1{\psi\raisebox{-0.5ex}{\scriptsize$#1$}}
@@ -11,9 +11,9 @@
 \def\vr{\vec{r}\,}
 
 
-$B?eAG86;R$NCf$NM[;R$HEE;R$NAjBP1?F0$N%7%e%l%G%#%s%,!<J}Dx<0$O!"(B
-$BAjBP:BI8$r(B$\vr$$B!"49;;<ANL$r(B$m$$B$H$9$k$H!"(Bcgs$B%,%&%97O$rC10L7O$K(B
-$BMQ$$$?>l9g!"DL>o<!$N7A$K=q$+$l$k!#(B
+水素原子の中の陽子と電子の相対運動のシュレディンガー方程式は、
+相対座標を$\vr$、換算質量を$m$とすると、cgsガウス系を単位系に
+用いた場合、通常次の形に書かれる。
 %
 \begin{equation} 
   \Bigl[ -\frac{\hbar^2}{2m} \nabla^2 +V(\vr) \Bigr]\psi(\vr)%
@@ -23,8 +23,8 @@
   V = -e^2/r \eqname{Q2}
 \end{equation}
 %
-$B$3$N8GM-%(%M%k%.!<(B$E_n$$B$H8GM-4X?t(B$\psi_{\rm n\ell m}(\vr)$$B$O(B
-$B<!$N$h$&$K5a$^$k(B:
+この固有エネルギー$E_n$と固有関数$\psi_{\rm n\ell m}(\vr)$は
+次のように求まる:
 %
 \begin{equation}
   E_n =-\frac{R_{\rm y}}{n^2} \qquad (n=1,2,...) \eqname{Q3}
@@ -36,13 +36,13 @@
   (\ell=0,1,...,n\!-\!\!1; \quad m=0,\pm 1,...,\pm \ell)  \eqname{Q4}
 \end{equation}
 %
-$B$?$@$7(B $R_{\rm y}\equiv me^4/2\hbar^2$$B$O(B Rydberg$BDj?t$G$"$k!#(B
-$B$3$3$G!"(B$(r,\theta,\phi)$$B$O6K:BI8!"(B$Y_{\rm \ell m}(\theta,\phi)$$B$O(B
-$B5,3J2=$5$l$?5eLLD4OB4X?t$G$"$j!"$?$H$($P!"(B$Y_{00}=1/\sqrt{4\pi}$$B$G(B
-$B$"$k!#GHF04X?t$NF07BItJ,(B $R_{\rm n\ell}(r)$ $B$O!"(B
-\Orbit{1s}$B>uBV(B($n\!=\!1,\,\ell\!=\!0$)$B!"(B
-\Orbit{2s}$B>uBV(B($n\!=\!2,\,\ell\!=\!0$)$B$*$h$S!"(B
-\Orbit{2p}$B>uBV(B ($n\!=\!2,\,\ell\!=\!1$)$B$K$D$$$F$O$=$l$>$l!"(B
+ただし $R_{\rm y}\equiv me^4/2\hbar^2$は Rydberg定数である。
+ここで、$(r,\theta,\phi)$は極座標、$Y_{\rm \ell m}(\theta,\phi)$は
+規格化された球面調和関数であり、たとえば、$Y_{00}=1/\sqrt{4\pi}$で
+ある。波動関数の動径部分 $R_{\rm n\ell}(r)$ は、
+\Orbit{1s}状態($n\!=\!1,\,\ell\!=\!0$)、
+\Orbit{2s}状態($n\!=\!2,\,\ell\!=\!0$)および、
+\Orbit{2p}状態 ($n\!=\!2,\,\ell\!=\!1$)についてはそれぞれ、
 %
 \begin{eqnarray}
   R_{10}(r) &=& \frac{2}{\sqrt{a^3}}%
@@ -54,76 +54,76 @@
                 r \exp{\Bigl(-\frac{r}{2a}\Bigr)} \eqname{Q7}
 \end{eqnarray}
 %
-$B$GM?$($i$l$k!#$?$@$7!"(B$a \equiv \hbar^2/me^2$ $B$O(B Bohr $BH>7B$G$"$k!#(B\\
-$B0J>e$NCN<1$r<j$,$+$j$K$7$F!"0J2<$NLd$$$KEz$($h!#(B
+で与えられる。ただし、$a \equiv \hbar^2/me^2$ は Bohr 半径である。\\
+以上の知識を手がかりにして、以下の問いに答えよ。
 
 
 
 \begin{subquestions}
 \SubQuestion
-  $B@d1oBN$K<e$$8w$rEv$F$k$H!"EE;R$H@59&$N%Z%"$,$G$-$k!#@d1oBN$NCf$G$O!"(B
-  $BEE;R$OEE2Y(B$-e$$B$G<ANL$,(B$m_e$$B$NN3;R$N$h$&$K!"@59&$OEE2Y(B$+e$$B$G<ANL$,(B
-  $m_h$$B$NN3;R$N$h$&$K$U$k$^$$!"N><T$N4V$K$O$?$i$/%]%F%s%7%c%k$O!"(B
-  $B@d1oBN$N(B($BHf(B)$BM6EEN($r(B$\varepsilon$($BDj?t$H$9$k(B)$B$H$7$F!"(B
+  絶縁体に弱い光を当てると、電子と正孔のペアができる。絶縁体の中では、
+  電子は電荷$-e$で質量が$m_e$の粒子のように、正孔は電荷$+e$で質量が
+  $m_h$の粒子のようにふるまい、両者の間にはたらくポテンシャルは、
+  絶縁体の(比)誘電率を$\varepsilon$(定数とする)として、
 %
   \begin{equation}
     V = - \frac{e^2}{\varepsilon r} \eqname{Q8}
   \end{equation}
 %
-  $B$GM?$($i$l$k$H2>Dj$9$k!#EE;R$H@59&$NB+G{>uBV$K$D$$$F!"0J2<$NLd$$$K(B
-  $BEz$($h!#(B
+  で与えられると仮定する。電子と正孔の束縛状態について、以下の問いに
+  答えよ。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $B:G$bDc$$%(%M%k%.!<$r;}$DB+G{>uBV$NB+G{%(%M%k%.!<$r5a$a$h!#(B
+    最も低いエネルギーを持つ束縛状態の束縛エネルギーを求めよ。
 
   \SubSubQuestion
-    $B$3$NB+G{>uBV$N6u4VE*9-$,$j$NL\0B$H$7$F!"(B$r$$B$N4|BTCM(B$\Mean{r}$$B$r(B
-    $B5a$a$h!#(B
+    この束縛状態の空間的広がりの目安として、$r$の期待値$\Mean{r}$を
+    求めよ。
 
   \end{subsubquestions}
 
 \SubQuestion
-  $BEE;R$,<B:]$K46$8$k%]%F%s%7%c%k$O!"<0(B\eqhref{Q2}$B$d<0(B\eqhref{Q8}
-  $B$+$i>/$7$:$l$F$$$k$3$H$,J,$+$C$F$$$k!#$?$H$($P?eAG86;R$N>l9g!"(B
-  $BM[;R$N$4$/6a$/$G$O!"EE;R!&M[;RBP$,2>A[E*$K@8@.!&>CLG$7$F$$$k(B
-  $B!V1@!W$NFbB&$K$O$$$k$?$a$K%]%F%s%7%c%k$,=$@5$5$l$k!#$=$l$,2?$r(B
-  $B$b$?$i$9$+$rBg$6$C$Q$K$_$k$?$a$K!"<0(B\eqhref{Q2}$B$N%]%F%s%7%c%k$r(B
-  $B<!$N$h$&$K=$@5$7$F$_$h$&!#(B
+  電子が実際に感じるポテンシャルは、式\eqhref{Q2}や式\eqhref{Q8}
+  から少しずれていることが分かっている。たとえば水素原子の場合、
+  陽子のごく近くでは、電子・陽子対が仮想的に生成・消滅している
+  「雲」の内側にはいるためにポテンシャルが修正される。それが何を
+  もたらすかを大ざっぱにみるために、式\eqhref{Q2}のポテンシャルを
+  次のように修正してみよう。
 %
   \begin{equation}
     V(\vr) = -\frac{e^2}{r} - \lambda \delta^3(\vr) \eqname{Q9}
   \end{equation}
 %
-  $B$?$@$7!"(B$\lambda$$B$O$"$k@5$NDj?t$G$"$j!"(B$\delta^3(\vr)$ $B$O(B3$B<!85$N(B
-  $B%G%k%?4X?t$G$"$k!#(B
+  ただし、$\lambda$はある正の定数であり、$\delta^3(\vr)$ は3次元の
+  デルタ関数である。
 
 \newpage
   \begin{subsubquestions}
   \SubSubQuestion
-    $V$$B$N1&JUBh(B2$B9`$r@]F0$H$_$J$7!"@]F0$r<u$1$?(B\Orbit{1s}$B>uBV!"(B
-    \Orbit{2s}$B>uBV!"(B\Orbit{2p}$B>uBV$N%(%M%k%.!<$r!"$=$l$>$l(B
-    $\lambda$$B$N0l>h$N@:EY$G5a$a$h!#(B
+    $V$の右辺第2項を摂動とみなし、摂動を受けた\Orbit{1s}状態、
+    \Orbit{2s}状態、\Orbit{2p}状態のエネルギーを、それぞれ
+    $\lambda$の一乗の精度で求めよ。
 
   \SubSubQuestion
-    $B@]F0$r<u$1$?(B\Orbit{1s}$B>uBV$NEE;R$K$D$$$F!"EE;R$r8+$$$@$93NN(L)EY(B
-    $B$N(B$r=0$$B$K$*$1$kCM$,!"(B$\lambda=0$$B$N>l9g$N2?G\$K$J$C$F$$$k$+$r(B
-    $B5a$a$h!#$?$@$7!"@]F07W;;$KMQ$$$kHs@]F0>uBV$H$7$F$O!"(B
-    \Orbit{1s},\Orbit{2s},\Orbit{2p}$B>uBV$@$1$r9MN8$9$l$P$h$/!"$^$?!"(B
-    $\lambda$$B$N0l>h$N@:EY$^$G$G$h$$!#(B
+    摂動を受けた\Orbit{1s}状態の電子について、電子を見いだす確率密度
+    の$r=0$における値が、$\lambda=0$の場合の何倍になっているかを
+    求めよ。ただし、摂動計算に用いる非摂動状態としては、
+    \Orbit{1s},\Orbit{2s},\Orbit{2p}状態だけを考慮すればよく、また、
+    $\lambda$の一乗の精度まででよい。
 
   \SubSubQuestion
-    $B$3$N3NN(L)EY$,(B$\lambda=0$$B$N>l9g$KHf$Y$FA}2C$7$F$$$k$+8:>/$7$F(B
-    $B$$$k$+$r=R$Y!"<0(B\eqhref{Q9}$B$N7A$N%]%F%s%7%c%k$,$=$N$h$&$J3NN((B
-    $BL)EY$NA}2C(B($B$"$k$$$O8:>/(B)$B$r$b$?$i$7$?M}M3$rD>46E*$K@bL@$;$h!#(B
+    この確率密度が$\lambda=0$の場合に比べて増加しているか減少して
+    いるかを述べ、式\eqhref{Q9}の形のポテンシャルがそのような確率
+    密度の増加(あるいは減少)をもたらした理由を直感的に説明せよ。
 
   \end{subsubquestions}
 
 \SubQuestion
-  $BDL>o$N%/!<%m%s%]%F%s%7%c%k$G5-=R$5$l$k7O!"<0(B\eqhref{Q1}-\eqhref{Q7}
-  $B$KLa$C$F!"NL;RNO3X$K$*$1$k3NN($N0UL#$r9M$($h$&!#(B\\
-  $B;~9o(B$t=t_0$$B$K!"EE;R$r!"(B\Orbit{1s}$B>uBV$H(B \Orbit{2s}$B>uBV$N<!$N$h$&$J(B
-  $B=E$M9g$o$;>uBV$KCV$/(B:
+  通常のクーロンポテンシャルで記述される系、式\eqhref{Q1}-\eqhref{Q7}
+  に戻って、量子力学における確率の意味を考えよう。\\
+  時刻$t=t_0$に、電子を、\Orbit{1s}状態と \Orbit{2s}状態の次のような
+  重ね合わせ状態に置く:
 %
   \begin{equation}
     \psi(\vr,t\!=\!t_0)%
@@ -136,44 +136,44 @@
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $B$3$N>uBV$G$O!"3NN(L)EY(B$\Norm{\psi(\vr,t)}^2$$B$,(B$t$$B$N<~4|4X?t(B
-    $B$K$J$k$3$H$r<($7!"$=$N<~4|$r5a$a$h!#(B
+    この状態では、確率密度$\Norm{\psi(\vr,t)}^2$が$t$の周期関数
+    になることを示し、その周期を求めよ。
 
   \SubSubQuestion
-    $BEE;R$N%(%M%k%.!<$N4|BTCM(B$\Mean{E}$$B$O$$$/$i$+(B? $B$^$?!"<B:]$KEE;R$N(B
-    $B%(%M%k%.!<(B$E$$B$r0lEY$@$1B,Dj$7$?>l9g$KB,DjCM$H$7$FF@$i$l$k2DG=@-(B
-    $B$,$"$k(B$E$$B$NCM$r$9$Y$F5s$2!"$=$NCM$,F@$i$l$k3NN($r=q$1!#(B
+    電子のエネルギーの期待値$\Mean{E}$はいくらか? また、実際に電子の
+    エネルギー$E$を一度だけ測定した場合に測定値として得られる可能性
+    がある$E$の値をすべて挙げ、その値が得られる確率を書け。
 
   \SubSubQuestion
-    $B0lEYL\$NB,Dj$r=*N;$7$F$+$i!"$b$&$$$A$I<0(B\eqhref{Q10}$B$N>uBV$NEE;R(B
-    $B$rMQ0U$7!"$=$N(B$E$$B$rB,Dj$9$k!#$5$i$K$b$&0lEY<0(B\eqhref{Q10}$B$N>uBV(B
-    $B$NEE;R$rMQ0U$7!"$=$N(B$E$$B$rB,Dj$9$k!"(B...$B!"$H$$$&$3$H$r7+$jJV$7!"(B
-    $BA4It$G(B$N$$B2s$NB,Dj$r9T$&$H$9$k!#(B$i$$BHVL\(B$(i=1,2,...,N)$$B$NB,Dj$GF@$?(B
-    $E$$B$NB,DjCM$r(B$\eps_i$$B$H5-$9$H!"DL>o!"$=$NJ?6QCM(B
+    一度目の測定を終了してから、もういちど式\eqhref{Q10}の状態の電子
+    を用意し、その$E$を測定する。さらにもう一度式\eqhref{Q10}の状態
+    の電子を用意し、その$E$を測定する、...、ということを繰り返し、
+    全部で$N$回の測定を行うとする。$i$番目$(i=1,2,...,N)$の測定で得た
+    $E$の測定値を$\eps_i$と記すと、通常、その平均値
 %
     \begin{equation}
       \bar{\eps}_N = \frac{1}{N} \sum_{i=1}^N \eps_i \eqname{Q11}
     \end{equation}
 %
-    $B$r!V(B$E$$B$N<B83CM!W$H$7$F!"M}O@CM$HHf3S$9$k$3$H$K$J$k!#$7$+$7$J$,$i!"(B
-    $BB,Dj$N2s?t(B$N$$B$,M-8B$G$"$k0J>e!"(B$\bar{\eps}_N$$B$O0lHL$K$O(B
-    $B>e$G7W;;$7$?(B$\Mean{E}$$B$H$O0[$J$k!#$3$N!"<B83CM(B
-    $\bar{\eps}_N$$B$HM}O@CM(B$\Mean{E}$ $B$N$:$l$r(B$\delta$$B$H5-$9$3$H(B
-    $B$K$9$k!#$=$N<+>h4|BTCM(B
+    を「$E$の実験値」として、理論値と比較することになる。しかしながら、
+    測定の回数$N$が有限である以上、$\bar{\eps}_N$は一般には
+    上で計算した$\Mean{E}$とは異なる。この、実験値
+    $\bar{\eps}_N$と理論値$\Mean{E}$ のずれを$\delta$と記すこと
+    にする。その自乗期待値
 %
     \begin{equation}
       \Mean{\delta^2}  \equiv \Mean{(\bar{\eps}_N - \Mean{E} )^2 }
       \eqname{Q12}
     \end{equation}
 %
-    $B$r5a$a$h!#$=$7$F!"L58B2s$NB,Dj$r7+$jJV$;$P(B$\bar{\eps}_N$$B$,(B
-    $\Mean{E}$$B$K0lCW$9$k$H4|BT$G$-$k$3$H!"B($A!"(B$N \to \infty$ $B$G(B 
-    $\Mean{\delta^2} \to 0$$B$H$J$k$3$H$r3N$+$a$h!#(B
+    を求めよ。そして、無限回の測定を繰り返せば$\bar{\eps}_N$が
+    $\Mean{E}$に一致すると期待できること、即ち、$N \to \infty$ で 
+    $\Mean{\delta^2} \to 0$となることを確かめよ。
 
   \end{subsubquestions}
 \end{subquestions}
 \end{question}
-\begin{answer}{$B@l96(B $BLdBj(B1}{}
+\begin{answer}{専攻 問題1}{}
 % Definition of local macros
 \def\WF#1{\psi\raisebox{-0.5ex}{\scriptsize$#1$}}
 \def\WFHC#1{\psi\raisebox{1.0ex}{\hbox to 0pt{\scriptsize$\ast$\hss}}\raisebox{-0.5ex}{\scriptsize$#1$}}
@@ -188,25 +188,25 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer 
-    $B$3$N7O$G$O49;;<ANL$,(B $m=\ds\frac{m_em_h}{m_e+m_h}$
-    $B!"EE2Y$,(B $e^2\rightarrow \ds\frac{e^2}{\varepsilon}$$B$H(B
-    $BCV$-49$($i$l$k$N$G!"(BRydberg$BDj?t$O!"(B\vspace*{-2mm}
+    この系では換算質量が $m=\ds\frac{m_em_h}{m_e+m_h}$
+    、電荷が $e^2\rightarrow \ds\frac{e^2}{\varepsilon}$と
+    置き換えられるので、Rydberg定数は、\vspace*{-2mm}
 %
     \[ R_{\rm y} = \frac{m_em_he^4}{2\hbar^2(m_e\!+\!m_h)} \frac{1}{\varepsilon^2} \]
 %
-    $B$HJQ99$5$l$k!#$h$C$F:GDc%(%M%k%.!<$O!"(B
+    と変更される。よって最低エネルギーは、
 %
     \[ E_1 = -R_{\rm y}%
            = -\frac{m_em_he^4}{(m_e\!+\!m_h)2\varepsilon^2\hbar^2} \]
 %
-    $B$G$"$k!#$D$$$G$K(BBohr$BH>7B(B $a$ $B$O(B
+    である。ついでにBohr半径 $a$ は
 %
     \[ a = \frac{\hbar^2\varepsilon(m_e\!+\!m_h)}{m_em_he^2} \]
 %
-    $B$HJQ99$5$l$k!#0J8e$3$NI=<0$G$N(B$R_{\rm y}$$B$H(B$a$$B$rMQ$$$k!#(B
+    と変更される。以後この表式での$R_{\rm y}$と$a$を用いる。
 
   \SubSubAnswer
-    \Orbit{1s}$B>uBV$G$N(B$r$$B$N4|BTCM(B$\Mean{r}$$B$O(B
+    \Orbit{1s}状態での$r$の期待値$\Mean{r}$は
 %
     \[ \Mean{r}%
        = \Bracket{\Orbit{1s}}{\hat{r}}{\Orbit{1s}}%
@@ -217,12 +217,12 @@
           \Dint{0}{2\pi}{\d{\varphi}} r^2\sin\theta\cdot%
           r\bigl| R_{10}(r)Y_{00}(\theta,\varphi) \bigr|^2 \]
 
-    $B5eLLD4OB4X?t(B$Y_{00}$$B$O5eLL@QJ,$KBP$7$F5,3J2=$5$l$F$$$k$N$G(B
+    球面調和関数$Y_{00}$は球面積分に対して規格化されているので
 %
     \[ \Dint{0}{\pi}{\d{\theta}}\bquad\Dint{0}{2\pi}{\d{\varphi}}%
        \sin\theta\bigl|Y_{00}(\theta,\varphi)\bigr|^2 = 1 \]
 %
-    $B$G$"$k!#@h$N@QJ,$rB3$1$k$H!"(B
+    である。先の積分を続けると、
 %
     \[ \Mean{r}%
        = \Dint{0}{\infty}{\d{r}} r^3 \Bigl[\frac{2}{\sqrt{a^3}}%
@@ -231,7 +231,7 @@
          \left(\frac{2r}{a}\right)^3 \exp\left(-\frac{2r}{a}\right)%
        = \frac{a}{4}3! = \frac{3a}{2} \]
 %
-    $B$H$J$k!#(B
+    となる。
 
 
   \end{subsubanswers}
@@ -240,11 +240,11 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    $B%O%_%k%H%K%"%s$N@]F09`$r(B$\HI\equiv -\lambda\delta^3(\vr)$
-    $B$GI=$9$3$H$K$9$k!#(B$4\pi r^2\delta^3(\vr)=\delta(r)$$B$G$"$k$3$H$K(B
-    $BCm0U$9$k!#(B\\
+    ハミルトニアンの摂動項を$\HI\equiv -\lambda\delta^3(\vr)$
+    で表すことにする。$4\pi r^2\delta^3(\vr)=\delta(r)$であることに
+    注意する。\\
 %
-    \Orbit{1s}$B>uBV$N%(%M%k%.!<$N(B1$B<!@]F0(B $E_{\Orbit{1s}}\fpar$ $B$O(B
+    \Orbit{1s}状態のエネルギーの1次摂動 $E_{\Orbit{1s}}\fpar$ は
 %
     \begin{eqnarray*}
       E_{\Orbit{1s}}\fpar%
@@ -262,29 +262,29 @@
          =  -\frac{\lambda}{a^3\pi}
     \end{eqnarray*}
 %
-    $BF1MM$K(B\Orbit{2s}$B>uBV$N%(%M%k%.!<$N(B1$B<!@]F0(B
-    $E_{\Orbit{2s}}\fpar$ $B$O(B
+    同様に\Orbit{2s}状態のエネルギーの1次摂動
+    $E_{\Orbit{2s}}\fpar$ は
 %
     \[ E_{\Orbit{2s}}\fpar%
        =  \Bracket{\Orbit{2s}}\HI{\Orbit{2s}}%
        =  -\frac{\lambda}{4\pi} |R_{20}(0)|^2%
        =  -\frac{\lambda}{8a^3\pi} \]
 %
-    $B$H$J$k!#(B\Orbit{2p}$B$N3F>uBV$N(B1$B<!@]F0$O(B $R_{21}(0)=0$$B$J$N$G(B
+    となる。\Orbit{2p}の各状態の1次摂動は $R_{21}(0)=0$なので
 %
     \[ E_{\Orbit{2p}}\fpar = 0 \]
 %
 
   \SubSubAnswer
-    \Orbit{1s}$B>uBV$,(B\Orbit{2s}$B$^$?$O(B\Orbit{2p}$B>uBV$KA+0\$9$k(B
-    $B>u67$r9M$($k$N$G!"(B1$B<!@]F0$^$G9MN8$7$?(B$\WF{\Orbit{1s}}$ $B$O(B
+    \Orbit{1s}状態が\Orbit{2s}または\Orbit{2p}状態に遷移する
+    状況を考えるので、1次摂動まで考慮した$\WF{\Orbit{1s}}$ は
 %
     \[ \WF{\Orbit{1s}}%
        = \WF{\Orbit{1s}}\zpar + \sum_i c_i\WF{i}\zpar%
        \hspace{20mm}%
        i=\{\Orbit{2s},\Orbit{2p_x},\Orbit{2p_y},\Orbit{2p_z}\} \]
 %
-    $B$HI=$5$l$k!#$3$N78?t(B $c_i$ $B$O<!$NDL$j!#(B
+    と表される。この係数 $c_i$ は次の通り。
 %
     \[ c_i = \frac{\Bracket{{\;}i{\;}}{\HI}{\Orbit{1s}}}%
                   {E_1\zpar - E_i\zpar}%
@@ -295,9 +295,9 @@
            =  -\frac{4}{3R_{\rm y}}%
                \Bracket{{\;}i{\;}}{\HI}{\Orbit{1s}} \]
 %
-    \Orbit{2p}$B$N3F>uBV$N(B$c_i$$B$O!"(B$\HI=-\lambda\delta^3(\vr)$
-    $B!"(B$R_{21}(0)=0$$B$r9MN8$9$k$H(B $0$$B$G$"$k$3$H$,$o$+$k!#(B
-    \Orbit{2s}$B$N>uBV$N(B$c_i$$B$N$_(B$0$$B$G$J$$CM$r$b$D!#(B
+    \Orbit{2p}の各状態の$c_i$は、$\HI=-\lambda\delta^3(\vr)$
+    、$R_{21}(0)=0$を考慮すると $0$であることがわかる。
+    \Orbit{2s}の状態の$c_i$のみ$0$でない値をもつ。
 %
     \begin{eqnarray*}
       c_{\Orbit{2s}}%
@@ -315,14 +315,14 @@
          =   \frac{\sqrt{2}\lambda}{3\pi a^3 R_{\rm y}}
     \end{eqnarray*}
 %
-    $B$h$C$F(B
+    よって
 %
     \[ \WF{\Orbit{1s}}(\vr)%
        = \WF{\Orbit{1s}}\zpar(\vr)
          +\frac{\sqrt{2}\lambda}{3\pi a^3 R_{\rm y}}
          \WF{\Orbit{2s}}\zpar(\vr) \]
 %
-    $B$G$"$k!#Cf?4(B$(\vr=0)$$B$K$*$1$kEE;RL)EY$O(B
+    である。中心$(\vr=0)$における電子密度は
 %
     \[ |\WF{\Orbit{1s}}(0)|^2%
        \simeq |\WF{\Orbit{1s}}\zpar(0)|^2%
@@ -331,11 +331,11 @@
        =      \frac{2}{a^3}%
               \Bigl( 1+\frac{2\lambda}{3a^3\pi R_{\rm y}} \Bigr) \]
 %
-    $B$H$J$j!"(B$\lambda=0$$B$K$/$i$Y$F(B$(\ )$$B$G0O$s$@78?t$@$1L)EY$,9b$/(B
-    $B$J$C$F$$$k!#(B
+    となり、$\lambda=0$にくらべて$(\ )$で囲んだ係数だけ密度が高く
+    なっている。
 
   \SubSubAnswer
-    $B%]%F%s%7%c%k$,?<$/$J$C$FEE;R$,$h$j=8$^$C$?$+$i!#(B
+    ポテンシャルが深くなって電子がより集まったから。
 
   \end{subsubanswers}
 
@@ -343,9 +343,9 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    $B%(%M%k%.!<(B$E$$B$NDj>o>uBV$NGHF04X?t$N;~4V0MB8@-$O(B$e^{-iEt/\hbar}$
-    $B$G$"$k$N$G!"<0(B\eqhref{Q10}$B$O<!$N$h$&$K;~4VH/E8$9$k!#$?$@$7(B$t_0=0$
-    $B$H$7$F$$$k!#(B
+    エネルギー$E$の定常状態の波動関数の時間依存性は$e^{-iEt/\hbar}$
+    であるので、式\eqhref{Q10}は次のように時間発展する。ただし$t_0=0$
+    としている。
 %
     \[ \psi(\vr,t)%
        = \frac{1}{\sqrt{2}}\Bigl(%
@@ -353,7 +353,7 @@
           +\WF{200}(\vr)\cdot e^{-iE_2t/\hbar}%
          \Bigr) \]
 %
-    $\WF{100},\WF{200}$$B$O<B?t$J$N$G(B$\psi(\vr,t)$$B$NJ#AG6&Lr$O(B
+    $\WF{100},\WF{200}$は実数なので$\psi(\vr,t)$の複素共役は
 %
     \[ \psi^\ast(\vr,t)%
        = \frac{1}{\sqrt{2}}\Bigl(%
@@ -361,7 +361,7 @@
           +\WF{200}(\vr)\cdot e^{+iE_2t/\hbar}%
          \Bigr) \]
 %
-    $B$H$J$k$N$G3NN(L)EY$O(B
+    となるので確率密度は
 %
     \begin{eqnarray*}
       |\psi(\vr,t)|^2%
@@ -376,13 +376,13 @@
           \Bigr) \\
     \end{eqnarray*}
 %
-    $B$h$C$F;~4V$N<~4|4X?t$G$"$k!#$=$N<~4|(B$T$$B$O!"(B
+    よって時間の周期関数である。その周期$T$は、
 %
     \[ T = \frac{2\pi\hbar}{E_2-E_1} = \frac{8\pi\hbar}{3R_y} \]
 
   \SubSubAnswer
-    $B<0(B\eqhref{Q10}$B$GI=$5$l$k>uBV$rB,Dj$7$F(B$\WF{100}$$B$r8+=P$9(B
-    $B3NN((B$P_1$$B$O(B
+    式\eqhref{Q10}で表される状態を測定して$\WF{100}$を見出す
+    確率$P_1$は
 %
     \[ P_1 = \left| \Uint{\d{\vr}}\WFHC{100}%
              \frac{1}{\sqrt{2}}\bigl[%
@@ -390,17 +390,17 @@
              \bigr]%
              \right|^2 = \frac{1}{2} \]
 %
-    $B$3$N;~!"EE;R$N%(%M%k%.!<$O(B$E_1$$B$G$"$k!#(B$\WF{200}$$B$r8+=P$9(B
-    $B3NN((B$P_2$$B$bF1$8$G$"$k!#(B\\
+    この時、電子のエネルギーは$E_1$である。$\WF{200}$を見出す
+    確率$P_2$も同じである。\\
 %
-    $B$h$C$FEE;R$N%(%M%k%.!<$NJ?6QCM(B$\Mean{E}$$B$O(B
+    よって電子のエネルギーの平均値$\Mean{E}$は
 %
     \[ \Mean{E} = \frac{1}{2}(E_1+E_2) \]
 
 
   \SubSubAnswer
-    $N$$B2s$NB,Dj$G%(%M%k%.!<(B$E_1$$B$r(B$n$$B2sB,Dj$7!"(B
-    $E_2$$B$r(B$N-n$$B2sB,Dj$9$k3NN((B$P(n)$$B$O!"(B
+    $N$回の測定でエネルギー$E_1$を$n$回測定し、
+    $E_2$を$N-n$回測定する確率$P(n)$は、
 %
     \[ P(n)%
        = \Bigl(\frac{1}{2}\Bigr)^{n}%
@@ -408,16 +408,16 @@
          \Comb{N}{n}%
        = \frac{\Comb{N}{n}}{2^N} \]
 %
-    $B$G$"$k!#<!$K(B $\IDelta E \equiv (E_2-E_1)/2 = 3R_{\rm y}/8$
-    $B$HDj5A$7$F(B $E_1 = \Mean{E}-\IDelta E$$B!"(B
-    $E_2 = \Mean{E}+\IDelta E$$B$HI=$9$3$H$K$9$k!#(B
-    $N$$B2s$NB,Dj$G$N%(%M%k%.!<$NJ?6QCM(B $\bar{\eps}\mbox{\tiny$N$}$ $B$O(B
+    である。次に $\IDelta E \equiv (E_2-E_1)/2 = 3R_{\rm y}/8$
+    と定義して $E_1 = \Mean{E}-\IDelta E$、
+    $E_2 = \Mean{E}+\IDelta E$と表すことにする。
+    $N$回の測定でのエネルギーの平均値 $\bar{\eps}\mbox{\tiny$N$}$ は
 %
     \[ \bar{\eps}\mbox{\tiny$N$}%
        = \frac{E_1n+E_2(N-n)}{N}%
        = \Mean{E} + \frac{\IDelta E}{N}(2n-N) \]
 %
-    $B$H$J$k!#$h$C$F(B$\Mean{\delta^2}$$B$O(B
+    となる。よって$\Mean{\delta^2}$は
 %
     \begin{eqnarray*}
      \Mean{\delta^2}%
@@ -432,7 +432,7 @@
             +N^2\sum_{n=0}^{N}     \Comb{N}{n} \Bigr]
     \end{eqnarray*}
 %
-    $B$3$3$G(B $\Comb{N}{n}$ $B$N<o!9$N8x<0(B
+    ここで $\Comb{N}{n}$ の種々の公式
 %
     \[ n   \Comb{N}{n} = N \Comb{N\!-\!1}{n\!-\!1}%
        \hspace{10mm}%
@@ -441,7 +441,7 @@
        \hspace{10mm}%
        \sum_{n=0}^{N} \Comb{N}{n} = 2^N \]
 %
-    $B$r;W$$=P$7$F7W;;$r?J$a$k$H!"(B
+    を思い出して計算を進めると、
 %
     \begin{eqnarray*}
      \Mean{\delta^2}%
@@ -462,7 +462,7 @@
       =  \frac{1}{N}\Bigl(\frac{3R_{\rm y}}{8}\Bigr)^2
     \end{eqnarray*}
 %
-    $B$H$J$k!#3N$+$K(B$N\to\infty$$B$G(B$\Mean{\delta^2}\to 0$$B$H$J$k!#(B
+    となる。確かに$N\to\infty$で$\Mean{\delta^2}\to 0$となる。
        
   \end{subsubanswers}
 \end{subanswers}

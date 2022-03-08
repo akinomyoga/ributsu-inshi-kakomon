@@ -2,32 +2,32 @@
 \newcommand{\pdif}[2]{\frac{\partial {#1}}{\partial {#2}}}
 \newcommand{\ket}[1]{\left| {#1} \right\rangle}
 \newcommand{\kett}[1]{\left. \left| {#1} \right\rangle \!\! \right\rangle}
-\begin{answer}{‘æ‚Q–â}{Œ©ãŒh—m}
+\begin{answer}{ç¬¬ï¼’å•}{è¦‹ä¸Šæ•¬æ´‹}
 \begin{enumerate}
 \item
-  ‘ŠŒİì—p‚ª–³‚¢$N$—±qŒn‚È‚Ì‚ÅC•ª”zŠÖ” $Z$‚ÍŸ‚Ì‚æ‚¤‚ÉŒvZ‚³‚ê‚Ü‚·D
+  ç›¸äº’ä½œç”¨ãŒç„¡ã„$N$ç²’å­ç³»ãªã®ã§ï¼Œåˆ†é…é–¢æ•° $Z$ã¯æ¬¡ã®ã‚ˆã†ã«è¨ˆç®—ã•ã‚Œã¾ã™ï¼
   \begin{equation}
   Z = \sum_{i:\text{all state}} e^{-\beta E_i} = \left( \sum_{i:\text{1 particle state}} e^{-\beta \epsilon_i} \right)^N = (2 \cosh \beta \mu H)^N . \notag
   \end{equation}
 
-  ‚µ‚½‚ª‚Á‚Ä©—RƒGƒlƒ‹ƒM[‚Í$\displaystyle F = -\frac 1\beta \ln Z = -\frac N\beta \ln(2\cosh \beta \mu H) .$
+  ã—ãŸãŒã£ã¦è‡ªç”±ã‚¨ãƒãƒ«ã‚®ãƒ¼ã¯$\displaystyle F = -\frac 1\beta \ln Z = -\frac N\beta \ln(2\cosh \beta \mu H) .$
 
 \item
-  ŒvZ‚¾‚¯‚È‚Ì‚ÅŒ‹‰Ê‚¾‚¯‹L‚·‚Æ
+  è¨ˆç®—ã ã‘ãªã®ã§çµæœã ã‘è¨˜ã™ã¨
   \begin{align}
   M &= -\pdif{F}{H} = \mu N \tanh \beta \mu H, \notag \\
   \chi &= \pdif{M}{H} = \beta \mu^2 N \frac{1}{\cosh ^2 \beta \mu H} \stackrel{H\to 0}{\longrightarrow} \beta \mu^2 H .\notag
   \end{align}
 
 \item
-  $\bm{S} = \bm{s}_1+\bm{s}_2$‚Æ’u‚­‚ÆCƒnƒ~ƒ‹ƒgƒjƒAƒ“‚Í
+  $\bm{S} = \bm{s}_1+\bm{s}_2$ã¨ç½®ãã¨ï¼ŒãƒãƒŸãƒ«ãƒˆãƒ‹ã‚¢ãƒ³ã¯
   \begin{equation}
   \mathcal{H} = V \frac{\bm{S}^2-\bm{s}_1^2 -\bm{s}_2^2}{2} -2\mu S^z H \notag 
   \end{equation}
-  ‚Æ‚©‚¯‚Ü‚·D2—±q‚Ì$s_1^z, s_2^z$‚ÉŠÖ‚·‚éŒÅ—Ló‘Ô$\ket{s_1^z}\ket{s_2^z}$‚ğC‡¬Šp‰^“®—Ê$\bm{S}^2, S^z$‚ÌŒÅ—Ló‘Ô$\kett{S,S^z}$‚Éæ‚è’¼‚¹‚ÎC$\mathcal{H}$‚ÌŒÅ—Ló‘Ô‚É‚È‚é‚±‚Æ‚ª•ª‚©‚è‚Ü‚·DŒ‹‰Ê‚ÍŸ‚Ì’Ê‚è‚Å‚·D
+  ã¨ã‹ã‘ã¾ã™ï¼2ç²’å­ã®$s_1^z, s_2^z$ã«é–¢ã™ã‚‹å›ºæœ‰çŠ¶æ…‹$\ket{s_1^z}\ket{s_2^z}$ã‚’ï¼Œåˆæˆè§’é‹å‹•é‡$\bm{S}^2, S^z$ã®å›ºæœ‰çŠ¶æ…‹$\kett{S,S^z}$ã«å–ã‚Šç›´ã›ã°ï¼Œ$\mathcal{H}$ã®å›ºæœ‰çŠ¶æ…‹ã«ãªã‚‹ã“ã¨ãŒåˆ†ã‹ã‚Šã¾ã™ï¼çµæœã¯æ¬¡ã®é€šã‚Šã§ã™ï¼
   \begin{table}[ht!]
   \begin{center}
-    \caption{ƒnƒ~ƒ‹ƒgƒjƒAƒ“$\mathcal{H}$‚ÌŒÅ—Ló‘Ô‚ÆŒÅ—L’l}\ilabel{2table}
+    \caption{ãƒãƒŸãƒ«ãƒˆãƒ‹ã‚¢ãƒ³$\mathcal{H}$ã®å›ºæœ‰çŠ¶æ…‹ã¨å›ºæœ‰å€¤}\ilabel{2table}
       \begin{tabular}{|c|cccl|} \hline
       & $S(S+1)$ & $S^z$ & $s_i(s_i+1)$ & $\mathcal{H}$ \\\hline
       $\kett{1,1}$ & 2 & 1 & 3/4 & $\frac V4 -2\mu H $ \\
@@ -39,12 +39,12 @@
   \end{table}
 
 \item[4,5.]
-  ƒyƒAŒÅ—LƒGƒlƒ‹ƒM[‚ª‹‚Ü‚Á‚½‚Ì‚ÅC•ª”zŠÖ”‚Í
+  ãƒšã‚¢å›ºæœ‰ã‚¨ãƒãƒ«ã‚®ãƒ¼ãŒæ±‚ã¾ã£ãŸã®ã§ï¼Œåˆ†é…é–¢æ•°ã¯
   \begin{equation}
   Z = \left( \sum_{i:\text{pair state}} e^{-\beta \epsilon_i} \right)^{N/2}
   =\cdots =  \left( 2e^{-\beta V/4} \cosh 2\beta\mu H + 2e^{\beta V/4} \cosh \frac{\beta V}{2} \right)^{N/2}\notag
   \end{equation}
-  ‚Æ‹‚Ü‚èC©—RƒGƒlƒ‹ƒM[$F$C¥‰»$M$C¥‰»—¦$\chi$‚ÍŸ‚Ì‚æ‚¤‚ÉŒvZ‚³‚ê‚Ü‚·D
+  ã¨æ±‚ã¾ã‚Šï¼Œè‡ªç”±ã‚¨ãƒãƒ«ã‚®ãƒ¼$F$ï¼Œç£åŒ–$M$ï¼Œç£åŒ–ç‡$\chi$ã¯æ¬¡ã®ã‚ˆã†ã«è¨ˆç®—ã•ã‚Œã¾ã™ï¼
   \begin{align}
   F &= -\frac 1\beta \ln Z = -\frac {N}{2\beta}\ln\left( 2e^{-\beta V/4} \cosh 2\beta\mu H + 2e^{\beta V/4} \cosh \frac{\beta V}{2}\right), \notag\\
   M &= -\pdif{F}{H} = \mu N \frac{\sinh 2\beta \mu H}{ \cosh 2\beta \mu H + \dfrac 12 (1+e^{\beta V}) }, \notag \\
@@ -53,7 +53,7 @@
 
 \setcounter{enumi}{5}
 \item
-  $V$‚Ì³•‰‚Å$\chi$‚Ì’á‰·‹ÉŒÀ‚ğŒ©‚Ä‚İ‚é‚Æ
+  $V$ã®æ­£è² ã§$\chi$ã®ä½æ¸©æ¥µé™ã‚’è¦‹ã¦ã¿ã‚‹ã¨
   \begin{equation}
     \chi \stackrel{\beta \to \infty}{\longrightarrow}
     \begin{cases}
@@ -62,31 +62,31 @@
       \dfrac 43 \beta \mu^2 N & (V<0) \\
     \end{cases} \notag
   \end{equation}
-  ‚Æ‚È‚è‚Ü‚·D$V=0$‚ÍƒyƒAŠÔ‚ÌŒ‹‡‚ª‚È‚¢C–â‘è{\bf 2. }‚ÌÄŒ»‚Å‚·D
+  ã¨ãªã‚Šã¾ã™ï¼$V=0$ã¯ãƒšã‚¢é–“ã®çµåˆãŒãªã„ï¼Œå•é¡Œ{\bf 2. }ã®å†ç¾ã§ã™ï¼
 
-  $T=0$‚É‚¨‚¯‚éŠî’êó‘Ô‚ğ‚İ‚é‚½‚ß‚ÉC$H=0$‚Å‚ÌƒyƒAó‘Ô‚ÌƒGƒlƒ‹ƒM[ŒÅ—L’l‚Ì•\\iref{2table}‚ğŒ©‚Ä‚İ‚Ü‚·D
+  $T=0$ã«ãŠã‘ã‚‹åŸºåº•çŠ¶æ…‹ã‚’ã¿ã‚‹ãŸã‚ã«ï¼Œ$H=0$ã§ã®ãƒšã‚¢çŠ¶æ…‹ã®ã‚¨ãƒãƒ«ã‚®ãƒ¼å›ºæœ‰å€¤ã®è¡¨\iref{2table}ã‚’è¦‹ã¦ã¿ã¾ã™ï¼
 
-  $V>0$‚Ì‚ÍC1d€$\kett{0,0}$‚ªÅ‚àƒGƒlƒ‹ƒM[‚ª’á‚¢‚Ì‚ÅC$T=0$‚Å‚Í‚±‚Ìó‘Ô‚ª‘I‚Î‚ê‚Ü‚·D‚±‚¤‚µ‚ÄƒXƒsƒ“0‚Ì2—±q•ªq‚ª•À‚Ô‚Ì‚ÅC¥ê‚É‘Î‚·‚é‰“š‚Í¶‚¶‚¸$\chi = 0$‚Å‚·D
+  $V>0$ã®æ™‚ã¯ï¼Œ1é‡é …$\kett{0,0}$ãŒæœ€ã‚‚ã‚¨ãƒãƒ«ã‚®ãƒ¼ãŒä½ã„ã®ã§ï¼Œ$T=0$ã§ã¯ã“ã®çŠ¶æ…‹ãŒé¸ã°ã‚Œã¾ã™ï¼ã“ã†ã—ã¦ã‚¹ãƒ”ãƒ³0ã®2ç²’å­åˆ†å­ãŒä¸¦ã¶ã®ã§ï¼Œç£å ´ã«å¯¾ã™ã‚‹å¿œç­”ã¯ç”Ÿã˜ãš$\chi = 0$ã§ã™ï¼
 
-  $V<0$‚Ì‚Æ‚«‚ÍC3d€$\kett{1,S^z}$‚ªŠî’êó‘Ô‚É‘I‚Î‚ê‚Ü‚·D¡“x‚ÍƒXƒsƒ“1‚Ì2—±q•ªq‚ª•À‚Ô‚±‚Æ‚É‚È‚è‚Ü‚·D‚±‚Ì3‚Â‚Ì€ˆÊ‚ÍŠO•”¥ê‚É‚æ‚Á‚ÄƒGƒlƒ‹ƒM[•ªŠò‚ğ‹N‚µ‚Äí¥«‚ğ¶‚¶‚Ü‚·D
+  $V<0$ã®ã¨ãã¯ï¼Œ3é‡é …$\kett{1,S^z}$ãŒåŸºåº•çŠ¶æ…‹ã«é¸ã°ã‚Œã¾ã™ï¼ä»Šåº¦ã¯ã‚¹ãƒ”ãƒ³1ã®2ç²’å­åˆ†å­ãŒä¸¦ã¶ã“ã¨ã«ãªã‚Šã¾ã™ï¼ã“ã®3ã¤ã®æº–ä½ã¯å¤–éƒ¨ç£å ´ã«ã‚ˆã£ã¦ã‚¨ãƒãƒ«ã‚®ãƒ¼åˆ†å²ã‚’èµ·ã—ã¦å¸¸ç£æ€§ã‚’ç”Ÿã˜ã¾ã™ï¼
 
   \medskip
 
-  \paragraph{‚½‚µ‚©‚ß} 
-  {\small ã‚Å“±‚¢‚½$\chi$‚ÌŒW”\footnote{Å‰‚Éup‚µ‚½‚à‚Ì‚ªŒvZƒ~ƒX‚Ìw“E‚ğ‚¤‚¯‚½‚Ì‚ÅC•Ê‚Ì•û–@‚ÅŠm‚©‚ß‚Ü‚µ‚½Dì£ŒN thanks.}‚ÍCÀÛ‚ÉƒXƒsƒ“$S=1$‚Ì—±q‚ğ$N' = N/2$ŒÂ•À‚×‚Ä‚İ‚ê‚Î•ª‚©‚è‚Ü‚·D
+  \paragraph{ãŸã—ã‹ã‚} 
+  {\small ä¸Šã§å°ã„ãŸ$\chi$ã®ä¿‚æ•°\footnote{æœ€åˆã«upã—ãŸã‚‚ã®ãŒè¨ˆç®—ãƒŸã‚¹ã®æŒ‡æ‘˜ã‚’ã†ã‘ãŸã®ã§ï¼Œåˆ¥ã®æ–¹æ³•ã§ç¢ºã‹ã‚ã¾ã—ãŸï¼å·ç€¬å› thanks.}ã¯ï¼Œå®Ÿéš›ã«ã‚¹ãƒ”ãƒ³$S=1$ã®ç²’å­ã‚’$N' = N/2$å€‹ä¸¦ã¹ã¦ã¿ã‚Œã°åˆ†ã‹ã‚Šã¾ã™ï¼
   \[
   \mathcal{H} = \sum_{n=1}^{N'} \mu' \hat{s}_n^z\cdot H 
   \]
-  ‚È‚éƒnƒ~ƒ‹ƒgƒjƒAƒ“‚ÅC$\hat{s}_n^z$‚ÌŒÅ—L’l$-S,-S+1,\cdots, S-1,S$‚ğl‚¦‚é‚æ‚­‚ ‚éƒ‚ƒfƒ‹‚ğl‚¦‚é‚ÆC’Pƒ‚ÈŒvZ‚ÅŸ‚ª•ª‚©‚è‚Ü‚·D
+  ãªã‚‹ãƒãƒŸãƒ«ãƒˆãƒ‹ã‚¢ãƒ³ã§ï¼Œ$\hat{s}_n^z$ã®å›ºæœ‰å€¤$-S,-S+1,\cdots, S-1,S$ã‚’è€ƒãˆã‚‹ã‚ˆãã‚ã‚‹ãƒ¢ãƒ‡ãƒ«ã‚’è€ƒãˆã‚‹ã¨ï¼Œå˜ç´”ãªè¨ˆç®—ã§æ¬¡ãŒåˆ†ã‹ã‚Šã¾ã™ï¼
   \begin{gather}
   Z = \left[\frac{\sinh\dfrac{2S+1}{2}\beta\mu' H}{\sinh\dfrac 12 \beta \mu' H }\right]^{N'}, \notag\\
   F = -\frac{N'}{\beta}\ln \frac{\sinh\dfrac{2S+1}{2}\beta\mu' H}{\sinh\dfrac 12 \beta \mu' H }, \notag\\
   M = \mu' N'\left[\frac{2S+1}{2}\coth\left(\frac{2S+1}{2}\beta\mu' H\right) - \frac 12 \coth\left(\frac 12 \beta\mu' H\right)\right], \notag \\
   \chi \stackrel{H\to 0}{\longrightarrow} \frac{S(S+1)}{3}\beta\mu'^2 N' . \notag
   \end{gather}
-  –â‘è\textbf{6.}‚Ì$V<0$‚ğÄŒ»‚·‚é‚É‚ÍC$S=1,\mu' = 2\mu, N' = N/2$‚Æ‚·‚ê‚Î$\chi \to (4/3)\beta\mu^2N$‚ªo‚Ü‚·D
+  å•é¡Œ\textbf{6.}ã®$V<0$ã‚’å†ç¾ã™ã‚‹ã«ã¯ï¼Œ$S=1,\mu' = 2\mu, N' = N/2$ã¨ã™ã‚Œã°$\chi \to (4/3)\beta\mu^2N$ãŒå‡ºã¾ã™ï¼
 
-  $V=0$‚Í$S=1/2, \mu' =2\mu, N' = N$‚Æ‚·‚ê‚ÎÄŒ»‚³‚ê‚Ü‚·D
+  $V=0$ã¯$S=1/2, \mu' =2\mu, N' = N$ã¨ã™ã‚Œã°å†ç¾ã•ã‚Œã¾ã™ï¼
   }
 
 \end{enumerate}

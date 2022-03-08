@@ -1,36 +1,36 @@
 %% -*- coding:sjis -*-
 %%
 %% ChangeLog
-%% 2013-07-14, Koichi Murase, ����
+%% 2013-07-14, Koichi Murase, 入力
 %%
-\begin{question}{��P��}{����}
+\begin{question}{第１問}{村瀬}
 
-$A, B$ ��$n$�s$n$��̕��f�s��ł���, $A^2=B^2=E�CAB+BA=O$ �𖞂������̂Ƃ���B
-������, $E$�͒P�ʍs��, $O$ �͑S�Ă̐�����0�ɓ�������s��ł���B�܂�, �s��$C$, $D$����
-�ꂼ�� $C=-iAB�CB=A+iB$ �ɂ���Ē�`����B$i$ �͋����P�ʂł���B���̂Ƃ�, �ȉ�
-�̐ݖ�ɓ�����B
+$A, B$ は$n$行$n$列の複素行列であり, $A^2=B^2=E，AB+BA=O$ を満たすものとする。
+ただし, $E$は単位行列, $O$ は全ての成分が0に等しい零行列である。また, 行列$C$, $D$をそ
+れぞれ $C=-iAB，B=A+iB$ によって定義する。$i$ は虚数単位である。このとき, 以下
+の設問に答えよ。
 \begin{enumerate}
-\item �s��$A$�̌ŗL�l�̎�蓾��l��S�ċ��߂�B
-\item $C^2=E$ �ƂȂ邱��, �܂� $BC+CB=CA+AC=O$ �ƂȂ邱�Ƃ������B
-\item $D^2=0$ ���� $D\ne O$ �ƂȂ邱�Ƃ������B
-\item �ݖ�(3)�̌��ʂɂ��, $D\bm{r}\ne\bm{0}$
-  (������$\bm{0}$�͗�x�N�g��) �ƂȂ�c�x�N�g��$\bm{r}$�����݂���B
-  ������ $\bm{p}=D\bm{r}$ �ɂ��x�N�g�� $\bm{p}$ ���`�����,
-  $\bm{p}\ne\bm{0}$ ���� $D\bm{p}=D^2\bm{r}=\bm{0}$ ���݂����B
-  �܂� $\bm{p}$ ��p����, �x�N�g�� $\bm{q}$ ��,  $\bm{q}=\frac12(A-iB)\bm{p}$ �ɂ���Ē�`����B
+\item 行列$A$の固有値の取り得る値を全て求めよ。
+\item $C^2=E$ となること, また $BC+CB=CA+AC=O$ となることを示せ。
+\item $D^2=0$ かつ $D\ne O$ となることを示せ。
+\item 設問(3)の結果により, $D\bm{r}\ne\bm{0}$
+  (ただし$\bm{0}$は零ベクトル) となる縦ベクトル$\bm{r}$が存在する。
+  ここで $\bm{p}=D\bm{r}$ によりベクトル $\bm{p}$ を定義すると,
+  $\bm{p}\ne\bm{0}$ かつ $D\bm{p}=D^2\bm{r}=\bm{0}$ をみたす。
+  また $\bm{p}$ を用いて, ベクトル $\bm{q}$ を,  $\bm{q}=\frac12(A-iB)\bm{p}$ によって定義する。
   \begin{enumerate}
-  \item �x�N�g�� $\bm{p}, \bm{q}$ ��, �Ƃ��ɍs��$C$�̌ŗL�x�N�g���ɂȂ��Ă��邱�Ƃ�����,
-    ���ꂼ��̌ŗL�l�����߂�B
-  \item �x�N�g�� $\bm{p}, \bm{q}$ �݂͌��ɐ��`�Ɨ��ł��邱�Ƃ��ؖ�����B
+  \item ベクトル $\bm{p}, \bm{q}$ は, ともに行列$C$の固有ベクトルになっていることを示し,
+    それぞれの固有値を求めよ。
+  \item ベクトル $\bm{p}, \bm{q}$ は互いに線形独立であることを証明せよ。
   \end{enumerate}
-\item �ȉ��ł� $n=2$ �Ƃ�, ����(4)�Œ�`���� $\bm{p}, \bm{q}$ ��2�����c�x�N�g���ƂȂ�ꍇ���l����B
+\item 以下では $n=2$ とし, 説明(4)で定義した $\bm{p}, \bm{q}$ が2次元縦ベクトルとなる場合を考える。
   \begin{enumerate}
-  \item $\bm{p}, \bm{q}$����ׂč����2���������s�� $P=(\bm{p}\;\bm{q})$ �͐����ł��邱�Ƃ�, �ݖ�(4)��
-    ���ʂ�p���邱�Ƃɂ���Ď����B
-  \item �s�� $P^{-1}C P$ ���v�Z����B
-  \item �s�� $P^{-1}(A\pm iB)P$ ���v�Z���邱�Ƃɂ����, $P^{-1}AP$ ����� $P^{-1}BP$ �����߂�B
+  \item $\bm{p}, \bm{q}$を並べて作った2次元正方行列 $P=(\bm{p}\;\bm{q})$ は正則であることを, 設問(4)の
+    結果を用いることによって示せ。
+  \item 行列 $P^{-1}C P$ を計算せよ。
+  \item 行列 $P^{-1}(A\pm iB)P$ を計算することによって, $P^{-1}AP$ およぴ $P^{-1}BP$ を求めよ。
   \end{enumerate}
-\item $n=2$�̂Ƃ��D�s�� $A, B, C$ �̋�̌`����g�^����B
+\item $n=2$のとき．行列 $A, B, C$ の具体形を一組与えよ。
 \end{enumerate}
 
 \end{question}

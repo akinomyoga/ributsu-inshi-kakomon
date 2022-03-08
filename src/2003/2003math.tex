@@ -2,69 +2,69 @@
 \usepackage{physpub}
 \usepackage{txfonts}
 
-\newcommand{\pr}[1]{#1^{\,\prime}}  %�v���C��
-\newcommand{\erf}{\mathop{\rm erf}\nolimits} %�덷�֐�
-\newcommand{\diff}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}   %����
-\newcommand{\prt}[2]{\frac{\partial #1}{\partial #2}}   %�Δ���
-\newcommand{\prts}[3]{\frac{\partial^{#3} #1}{\partial {#2}^{#3}}}   %n��Δ���
+\newcommand{\pr}[1]{#1^{\,\prime}}  %プライム
+\newcommand{\erf}{\mathop{\rm erf}\nolimits} %誤差関数
+\newcommand{\diff}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}   %微分
+\newcommand{\prt}[2]{\frac{\partial #1}{\partial #2}}   %偏微分
+\newcommand{\prts}[3]{\frac{\partial^{#3} #1}{\partial {#2}^{#3}}}   %n回偏微分
 
 
 \begin{document}
 
-%%%%%�y���w1 ���z%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{question}{���1}{���쌒}
+%%%%%【数学1 問題】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}{問題1}{藤野健}
 \setcounter{equation}{0}
 
-�ϐ�$x$�ɂ��Ă�2���ȉ��̎����̑������̂Ȃ����`��Ԃ�$V$�Ƃ���B
+変数$x$についての2次以下の次数の多項式のなす線形空間を$V$とする。
 
-���`�ʑ�$F:V \longrightarrow V$���ȉ��̂悤�ɒ�߂�B
+線形写像$F:V \longrightarrow V$を以下のように定める。
 \[
-    \mbox{�C�ӂ�}p(x) \in V \mbox{�ɑ΂���} \quad F(p(x)) = p(ax+b) 
+    \mbox{任意の}p(x) \in V \mbox{に対して} \quad F(p(x)) = p(ax+b) 
 \]
-������$a, \, b$�͒萔�ŁA$a \neq 1$�Ƃ���B�ȉ��̖�ɓ�����B
+ここで$a, \, b$は定数で、$a \neq 1$とする。以下の問に答えよ。
 
 \begin{enumerate}
-%%%%%%�y1�z%%%%%%
-    \item $F(x^2+x+1)$�����߂�B
+%%%%%%【1】%%%%%%
+    \item $F(x^2+x+1)$を求めよ。
 
-%%%%%%�y2�z%%%%%%
-    \item $V$�̊���$e_0(x) = 1, \, e_1(x) = x, \, e_2(x) = x^2$�ƑI�ԁB���̂Ƃ�$F$�̕\���s��$M, ���Ȃ킿$
+%%%%%%【2】%%%%%%
+    \item $V$の基底を$e_0(x) = 1, \, e_1(x) = x, \, e_2(x) = x^2$と選ぶ。このとき$F$の表現行列$M, すなわち$
 \[
     (F(e_0(x)), F(e_1(x)), F(e_2(x))) = (e_0(x), \, e_1(x), \, e_2(x)) M
 \]
-�ƂȂ�s��$M$�����߂�B
+となる行列$M$を求めよ。
 
-%%%%%%�y3�z%%%%%%
-    \item ���`�ʑ�$F$�̌ŗL�l�A�ŗL�x�N�g�������߂�B
+%%%%%%【3】%%%%%%
+    \item 線形写像$F$の固有値、固有ベクトルを求めよ。
 
-%%%%%%�y4�z%%%%%%
-    \item �C�ӂ̎��R��$k$�ɂ��āA$F$��$e_1(x)$��$k$���p�����ē�����$V$�̌������߂�B
+%%%%%%【4】%%%%%%
+    \item 任意の自然数$k$について、$F$を$e_1(x)$に$k$回作用させて得られる$V$の元を求めよ。
 
-%%%%%%�y5�z%%%%%%
-    \item �C�ӂ̎��R��$k$�ɂ��āA$F$��$e_2(x)$��$k$���p�����ē�����$V$�̌������߂�B
+%%%%%%【5】%%%%%%
+    \item 任意の自然数$k$について、$F$を$e_2(x)$に$k$回作用させて得られる$V$の元を求めよ。
 \end{enumerate}
 
 \end{question}
 
-%%%%%�y���w1 �𓚁z%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%【数学1 解答】%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{answer}{���1}{���쌒}
+\begin{answer}{問題1}{藤野健}
 \setcounter{equation}{0}
 
 \begin{enumerate}
-%%%%%%�y1�z%%%%%%
-    \item $F$�̒�`���
+%%%%%%【1】%%%%%%
+    \item $F$の定義より
 \begin{eqnarray*}
     F(x^2+x+1) & = & (ax + b)^2 + (ax + b) + 1 \\
     & = & a^2x^2 + a(2b+1)x + b^2+b+1
 \end{eqnarray*}
 
-%%%%%%�y2�z%%%%%%
-    \item $F(e_0(x)) = 1, \, F(e_1(x)) = ax+b, \, F(e_2(x)) = a^2x^2 + 2abx + b^2$������
+%%%%%%【2】%%%%%%
+    \item $F(e_0(x)) = 1, \, F(e_1(x)) = ax+b, \, F(e_2(x)) = a^2x^2 + 2abx + b^2$だから
 \[
     (1, \quad ax+b , \quad a^2x^2 + 2abx + b^2) = (1, \quad x , \quad x^2) \, M
 \]
-�ƂȂ�$M$�����߂�΂悢�B�]����
+となる$M$を求めればよい。従って
 \[
     M = \begin{pmatrix}
 	    1 & b & b^2 \\
@@ -72,10 +72,10 @@
 	    0 & 0 & a^2 
 	\end{pmatrix}
 \]
-�ł���B
+である。
 
-%%%%%%�y3�z%%%%%%
-    \item ���`�ʑ�$F$�̌ŗL�l��$\lambda$�A�ŗL�x�N�g����$v(x) = c_0 + c_1 x + c_2 x^2$�Ƃ����B��蕶�ɗ^����ꂽ����p����ƁA�ŗL�x�N�g����
+%%%%%%【3】%%%%%%
+    \item 線形写像$F$の固有値を$\lambda$、固有ベクトルを$v(x) = c_0 + c_1 x + c_2 x^2$とおく。問題文に与えられた基底を用いると、固有ベクトルは
 \[
         \bm{v} = \begin{pmatrix}
 		     c_0 \\
@@ -83,7 +83,7 @@
 		     c_2
 		 \end{pmatrix}
 \]
-�ƕ\���ł���̂ŁA$M \bm{v} = \lambda \bm{v}$�𖞂���$\lambda$��$\bm{v}\neq0$�����߂�΂悢�B�ŗL������$|\lambda I - M | = 0$\,($I$�͒P�ʍs��)�A���Ȃ킿
+と表現できるので、$M \bm{v} = \lambda \bm{v}$を満たす$\lambda$と$\bm{v}\neq0$を求めればよい。固有方程式$|\lambda I - M | = 0$\,($I$は単位行列)、すなわち
 \[
     \begin{vmatrix}
 	\lambda - 1 &          -b & -b^2 \\
@@ -92,7 +92,7 @@
     \end{vmatrix}
 	  = 0
 \]
-�������āA�ŗL�l$\lambda = 1, \, a, \, a^2$�𓾂�B����ɑΉ�����ŗL�x�N�g���̕\���͂��ꂼ��A����
+を解いて、固有値$\lambda = 1, \, a, \, a^2$を得る。これに対応する固有ベクトルの表現はそれぞれ、順に
 \[
     \begin{pmatrix} 
 	1 \\
@@ -110,30 +110,30 @@
 	(a - 1)^2
     \end{pmatrix}
 \]
-�ł���B�܂Ƃ߂�ƁA$F$�̌ŗL�l�ƌŗL�x�N�g���̑g��
+である。まとめると、$F$の固有値と固有ベクトルの組は
 \begin{eqnarray*}
     & \lambda_0 = 1,    \quad & v_0(x) = 1 \\
     & \lambda_1 = a,    \quad & v_1(x) = b + (a-1)x \\
     & \lambda_2 = a^2,  \quad & v_2(x) = b^2 + 2b(a-1)x + (a-1)^2 x^2
 \end{eqnarray*}
-�ł���B
+である。
 
-%%%%%%�y4�z%%%%%%
-    \item $e_1(x) = x$�́A�ŗL�x�N�g����p����
+%%%%%%【4】%%%%%%
+    \item $e_1(x) = x$は、固有ベクトルを用いて
 \[
     e_1(x) = \frac{1}{a-1}(-b \, v_0(x) + v_1(x))
 \]
-�ƕ\����B�]����
+と表せる。従って
 \[
     F^k(e_1(x)) = \frac{1}{a-1}(-b \, {\lambda_0}^k \, v_0(x) + {\lambda_1}^k \, v_1(x)) = \frac{1}{a-1} \left[ b(a^k - 1) + a^k (a - 1) x \right]
 \]
 
-%%%%%%�y5�z%%%%%%
-    \item $e_2(x) = x^2$�́A�ŗL�x�N�g����p����
+%%%%%%【5】%%%%%%
+    \item $e_2(x) = x^2$は、固有ベクトルを用いて
 \[
     e_2(x) = \frac{1}{(a-1)^2}(b^2 \, v_0(x) - 2b \, v_1(x) + v_2(x))
 \]
-�ƕ\����B�]����
+と表せる。従って
 \begin{eqnarray*}
     F^k(e_2(x)) & = &  \frac{1}{(a-1)^2}(b^2 \, {\lambda_0}^k \, v_0(x) - 2b \, {\lambda_1}^k \,v_1(x) + {\lambda_2}^k \, v_2(x)) \\
     & = & \frac{1}{(a-1)^2} \left[ (a^k - 1)^2 b^2 + 2 a^k (a^k - 1)(a - 1) b x + a^{2k} (a - 1)^2 x^2 \right]
@@ -145,95 +145,95 @@
 
 
 
-\begin{question}{���2}{�|���ꏫ}
+\begin{question}{問題2}{竹内一将}
 \begin{enumerate}
 \item
-$u_k(x,t)=\mathrm{e}^{\mathrm{i} kx+\mathrm{i}\omega t}$�Ƃ����B$u=u_k(x,t)$���A
-���̕Δ���������
+$u_k(x,t)=\mathrm{e}^{\mathrm{i} kx+\mathrm{i}\omega t}$とおく。$u=u_k(x,t)$が、
+次の偏微分方程式
 \begin{eqnarray}
  \prt{u}{t} = a^2 \prts{u}{x}{2}  \notag
 \end{eqnarray}
-�𖞂����悤��$\omega$���߂�B
-�������A$a$�𐳂̒萔�A$x$�����$t$�͎����Ƃ���B
+を満たすように$\omega$を定めよ。
+ただし、$a$を正の定数、$x$および$t$は実数とする。
 \item
-1.�œ���ꂽ$u_k(x,t)$��p���āA��̕Δ����������̉���
+1.で得られた$u_k(x,t)$を用いて、上の偏微分方程式の解を
 \begin{eqnarray}
  u(x,t) = \int_{-\infty}^\infty A_k u_k(x,t)\mathrm{d} k  \notag
 \end{eqnarray}
-�Ƃ����B
-�^����ꂽ�֐�$f(x)$�ɑ΂��A��������$u(x,0)=f(x)$���݂����悤��
-$A_k$��$f(x)$��p���ĕ\�킹�B
-�������A$k$�ɂ��Ă̐ϕ��͎��s���Ȃ��Ă悢�B
+とおく。
+与えられた関数$f(x)$に対し、初期条件$u(x,0)=f(x)$をみたすように
+$A_k$を$f(x)$を用いて表わせ。
+ただし、$k$についての積分は実行しなくてよい。
 \item
-$\int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k$�����߂�B
-�������A$y$�͒萔�ŁA$t>0$�Ƃ���B
+$\int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k$を求めよ。
+ただし、$y$は定数で、$t>0$とする。
 \item
-3.�̌��ʂ�p����2.��$k$�ɂ��Ă̐ϕ������s���A
-�����l���̉�$u(x,t)$�����߂�B
+3.の結果を用いて2.の$k$についての積分を実行し、
+初期値問題の解$u(x,t)$を求めよ。
 \item
-$f(x)$�����̂悤�ɗ^�����Ă���Ƃ���B
+$f(x)$が次のように与えられているとする。
 \begin{eqnarray}
  f(x) = \begin{cases}
  U & \text{if $|x| \leq L$}  \\
  0 & \text{if $|x| >L$}
  \end{cases}  \notag
 \end{eqnarray}
-�������A$U$��$L(>0)$�͒萔�Ƃ���B
-���̂Ƃ��A$u(x,t)$��$\erf (z)$��p���ĕ\�킹�B
-�����ŁA�S�Ă̎���$z$�ɂ���
+ただし、$U$と$L(>0)$は定数とする。
+このとき、$u(x,t)$を$\erf (z)$を用いて表わせ。
+ここで、全ての実数$z$について
 \begin{eqnarray}
  \erf (z) = \frac{2}{\sqrt{\pi}} \int_0^z \mathrm{e}^{-y^2} \mathrm{d} y
   \notag
 \end{eqnarray}
-�ƒ�`����B
+と定義する。
 \end{enumerate}
 \end{question}
 
-\begin{answer}{���2}{�|���ꏫ}
+\begin{answer}{問題2}{竹内一将}
 \begin{enumerate}
 \item
 
-$u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$���ӂ̕Δ���������
+$u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$を題意の偏微分方程式
 \begin{eqnarray}
  \prt{u}{t} = a^2 \prts{u}{x}{2}  \ilabel{eq:1}
 \end{eqnarray}
-�ɑ������ƁA
+に代入すると、
 \begin{eqnarray*}
  \prt{u}{t} &=& \mathrm{i}\omega u_k(x,t),  \\
  \prts{u}{x}{2} &=& (\mathrm{i} k)^2 u_k(x,t) = -k^2 u_k(x,t).
 \end{eqnarray*}
-������
+これより
 \begin{eqnarray}
  \mathrm{i} \omega &= -a^2 k^2  \notag \\
  \therefore \omega &= \mathrm{i} a^2 k^2  \ilabel{eq:2}
 \end{eqnarray}
-�Ƌ��߂���B
+と求められる。
 
 \item
 
-�^��
+与式
 \begin{eqnarray}
  u(x,t) = \int_{-\infty}^\infty A_k u_k(x,t) \mathrm{d} k  \ilabel{eq:3}
 \end{eqnarray}
-��$t=0$���������
+に$t=0$を代入すると
 \begin{eqnarray}
  u(x,0) = f(x) = \int_{-\infty}^\infty A_k \mathrm{e}^{\mathrm{i} kx} \mathrm{d} k.  \ilabel{eq:4}
 \end{eqnarray}
-�����Fourier�t�ϊ��ɑ��Ȃ�Ȃ��̂ŁAFourier�ϊ��ɂ��
+これはFourier逆変換に他ならないので、Fourier変換により
 \begin{eqnarray}
  A_k = \frac{1}{2\pi} \int_{-\infty}^\infty f(x) \mathrm{e}^{-\mathrm{i} kx} \mathrm{d} x
   \ilabel{eq:5}
 \end{eqnarray}
-�Ƌ��߂���B
+と求められる。
 
 \item
 
-��ӂ̐ϕ���
+題意の積分を
 \begin{eqnarray}
  g(y) \equiv \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k
   \ilabel{eq:6}
 \end{eqnarray}
-�Ƃ����B����ƁA
+とおく。すると、
 \begin{eqnarray}
  \diff{g}{y}
  &=& \int_{-\infty}^\infty \mathrm{i} k \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k  \notag \\
@@ -242,56 +242,56 @@ $u=u_k(x,t)=\mathrm{e}^{\mathrm{i} kx + \mathrm{i}\omega t}$���ӂ̕Δ���������
  &=& -\frac{\mathrm{i}}{2a^2 t} \left( \left[ \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \right]_{-\infty}^\infty - \mathrm{i} y \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \right) \notag \\
  &=& -\frac{y}{2a^2 t} g(y)  ~~~~(\because t>0) \ilabel{eq:7}
 \end{eqnarray}
-�]���āA
+従って、
 \begin{eqnarray}
  g(y)
  &=& g(0) \exp \left( -\frac{y^2}{4a^2 t} \right) \notag \\
  &=& \frac{1}{a} \sqrt{\frac{\pi}{t}} \exp \left( -\frac{y^2}{4a^2 t} \right).
- ~~~~\text{�i��Gauss�ϕ��j}
+ ~~~~\text{（∵Gauss積分）}
 \end{eqnarray}
-�ȏォ��A��ӂ̐ϕ���
+以上から、題意の積分は
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k
  = \frac{1}{a} \sqrt{\frac{\pi}{t}} \exp \left( -\frac{y^2}{4a^2 t} \right)
   \ilabel{eq:8}
 \end{eqnarray}
-�ł���B
+である。
 
-\item[�i�ʉ��j] \mbox{}
+\item[（別解）] \mbox{}
 
-�ϕ�
+積分
 $\displaystyle{\int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{d} x}$
-���v�Z����B������$a,b$�͒萔�ł���A$a>0$�ł���B
-�����͕֋X�㓱�����������ł���A��ŗ^����ꂽ�����Ƃ͊֌W���Ȃ��B
+を計算する。ここで$a,b$は定数であり、$a>0$である。
+これらは便宜上導入した文字であり、問で与えられた文字とは関係がない。
 
-���āA�l���Ă���ϕ���ό`�����
+さて、考えている積分を変形すると
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{d} x
  &=& \int_{-\infty}^\infty \mathrm{e}^{-a \left( x-\frac{\mathrm{i} b}{2a} \right)^2 -\frac{b^2}{4a}} \mathrm{d} x  \notag \\
  &=& \mathrm{e}^{-\frac{b^2}{4a}} \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x
  ~~~~\left( \alpha \equiv \frac{b}{2a} \right) \ilabel{eq:a1}
 \end{eqnarray}
-�ƂȂ�B
-�����ŁA�}\iref{2003math2-1}�̂悤�Ȑϕ��o�H$C$���l���A���f�ϕ�
+となる。
+そこで、図\iref{2003math2-1}のような積分経路$C$を考え、複素積分
 $\displaystyle{\oint_C \mathrm{e}^{-a z^2} \mathrm{d} z}$
-���v�Z����B������$X$�͏\���傫�����̐��ł���B
-�܂��A�}\iref{2003math2-1}�ł�$\alpha>0$�Ƃ��Čo�H��`���Ă��邪�A
-$\alpha<0$�̏ꍇ���{���I�ɓ����ł���B
+を計算する。ここで$X$は十分大きい正の数である。
+また、図\iref{2003math2-1}では$\alpha>0$として経路を描いているが、
+$\alpha<0$の場合も本質的に同じである。
 \begin{figure}[bp]
  \begin{center}
   \includegraphics[width=0.4\hsize,clip]{2003math2-1.eps}
  \end{center}
- \caption{3.�i�ʉ��j�ɂ�����ϕ��o�H}
+ \caption{3.（別解）における積分経路}
  \ilabel{2003math2-1}
 \end{figure}%
 
-�܂��A$\mathrm{e}^{-az^2}$�͎���Ƃ��됳��������A
-Cauchy�̐ϕ��藝���
+まず、$\mathrm{e}^{-az^2}$は至るところ正則だから、
+Cauchyの積分定理より
 \begin{eqnarray}
  \oint_C \mathrm{e}^{-a z^2} \mathrm{d} z = 0.  \ilabel{eq:a3}
 \end{eqnarray}
-����A�ϕ��o�H��$C=C_1+C_2+C_3+C_4$�ƕ������A
-���̊e�X�ɂ���$X \to \infty$�ɂ�����ϕ���]�������
+一方、積分経路を$C=C_1+C_2+C_3+C_4$と分解し、
+その各々について$X \to \infty$における積分を評価すると
 \begin{eqnarray}
  && \int_{C_1} \mathrm{e}^{-az^2} \mathrm{d} z = \int_{-X}^X \mathrm{e}^{-ax^2} \mathrm{d} x \to \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x
   \notag \\
@@ -299,34 +299,34 @@ Cauchy�̐ϕ��藝���
  && \left| \int_{C_2} \mathrm{e}^{-az^2} \mathrm{d} z \right| \leq \max_{z \in C_2} \left| \mathrm{e}^{-az^2} \right| \cdot \int_{C_2} \left| \mathrm{d} z \right| = \mathrm{e}^{-a(X^2 - \alpha^2)} \cdot \alpha \to 0  \notag \\
  && \left| \int_{C_4} \mathrm{e}^{-az^2} \mathrm{d} z \right| \leq \max_{z \in C_4} \left| \mathrm{e}^{-az^2} \right| \cdot \int_{C_4} \left| \mathrm{d} z \right| = \mathrm{e}^{-a(X^2 - \alpha^2)} \cdot \alpha \to 0  \notag
 \end{eqnarray}
-�ƂȂ�B
-�]���āA$X \to \infty$��
+となる。
+従って、$X \to \infty$で
 \begin{eqnarray}
  \oint_C \mathrm{e}^{-az^2} \mathrm{d} z
  \to \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x - \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x  \ilabel{eq:a4}
 \end{eqnarray}
-�����藧�B
+が成り立つ。
 
-�ȏ�A(\iref{eq:a3})(\iref{eq:a4})��Gauss�ϕ��̌�������
+以上、(\iref{eq:a3})(\iref{eq:a4})とGauss積分の公式から
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{-a(x-\mathrm{i}\alpha)^2} \mathrm{d} x
  = \int_{-\infty}^\infty \mathrm{e}^{-ax^2} \mathrm{d} x = \sqrt{\frac{\pi}{a}}  \ilabel{eq:a6}
 \end{eqnarray}
-����������B�����(\iref{eq:a1})���
+が成立する。これと(\iref{eq:a1})より
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{-ax^2 + \mathrm{i} bx} \mathrm{d} x = \mathrm{e}^{-\frac{b^2}{4a}} \sqrt{\frac{\pi}{a}}  \ilabel{eq:a7}
 \end{eqnarray}
-�ł��邩��A���߂�ׂ��ϕ���
+であるから、求めるべき積分は
 \begin{eqnarray}
  \int_{-\infty}^\infty \mathrm{e}^{\mathrm{i} ky} \mathrm{e}^{-a^2 k^2 t} \mathrm{d} k
  = \frac{1}{a} \sqrt{\frac{\pi}{t}} \exp \left( -\frac{y^2}{4a^2 t} \right)
   \ilabel{eq:a8}
 \end{eqnarray}
-�ł���B
+である。
 
 \item
 
-(\iref{eq:3})(\iref{eq:5})���
+(\iref{eq:3})(\iref{eq:5})より
 \begin{eqnarray}
  u(x,t)
  &=& \frac{1}{2\pi} \int_{-\infty}^\infty \mathrm{d} k \int_{-\infty}^\infty \mathrm{d} \pr{x}
@@ -341,11 +341,11 @@ Cauchy�̐ϕ��藝���
  &=& \frac{1}{2a\sqrt{\pi t}} \int_{-\infty}^\infty \mathrm{d} \pr{x} f(\pr{x})
     \exp \left[ -\frac{(x-\pr{x})^2}{4a^2 t} \right]  \ilabel{eq:9}
 \end{eqnarray}
-�Ƌ��܂�B
+と求まる。
 
 \item
 
-��ӂ��
+題意より
 \begin{eqnarray}
  u(x,t)
  &=& \frac{U}{2a\sqrt{\pi t}} \int_{-L}^L \mathrm{d} \pr{x}
@@ -356,7 +356,7 @@ Cauchy�̐ϕ��藝���
  &=& \frac{U}{2} \left[ \erf \left( \frac{-x+L}{2a\sqrt{t}} \right) 
     -\erf \left( \frac{-x-L}{2a\sqrt{t}} \right) \right]  \ilabel{eq:10}
 \end{eqnarray}
-�ƕ\�����B
+と表される。
 \end{enumerate}
 \end{answer}
 

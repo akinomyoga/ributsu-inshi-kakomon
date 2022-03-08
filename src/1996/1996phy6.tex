@@ -14,12 +14,12 @@
 %%-----------------------------------------------------------------------------
 %% 2013-07-21, KM <murase@nt.phys.s.u-tokyo.ac.jp>
 %%
-%% $B85!9(B \uchi, \uphi $BEy$H$$$&%3%^%s%I$rDj5A$7$F!"%.%j%7%cJ8;z$N0LCV$,JQ99$5$l$F$$$?!#(B
-%% $B$7$+$7!"$=$NMM$JJQ99$r9T$&M}M3$O$J$$$H;W$o$l$k$N$G!"0J2<$N%3%^%s%I$rGQ;_$7$?!#(B
+%% 元々 \uchi, \uphi 等というコマンドを定義して、ギリシャ文字の位置が変更されていた。
+%% しかし、その様な変更を行う理由はないと思われるので、以下のコマンドを廃止した。
 %% \def\uchi{\raisebox{0.5ex}{$\chi$}}
 %% \def\uphi{\raisebox{0.5ex}{$\varphi$}}
 %%
-%% $B$b$785!9$N2rEz$NMM$K%.%j%7%cJ8;z$N0LCV$rJQ99$7$?$1$l$P0J2<$N%3%a%s%H$r30$9;v!#(B
+%% もし元々の解答の様にギリシャ文字の位置を変更したければ以下のコメントを外す事。
 %% \let\inshioriginalchi\chi
 %% \let\inshioriginalvarphi\varphi
 %% \def\chi{\raisebox{0.5ex}{$\inshioriginalchi$}}
@@ -27,63 +27,63 @@
 %%
 %%-----------------------------------------------------------------------------
 
-\begin{question}{$B@l96(B $BLdBj(B6}{}
-$B0lMML)EY(B $\rho_0$ $B$GHs05=L@-$N1UE)$r9M$($h$&!#1UE)$O!"$"$k=i4|>r7o(B
-$B$N$b$H$G$=$NFbIt$K12$N$J$$N.$l$r@8$8!";~4V$H$H$b$K7A$rJQ$($F$$$/(B
-$B$b$N$H$9$k!#(B
+\begin{question}{専攻 問題6}{}
+一様密度 $\rho_0$ で非圧縮性の液滴を考えよう。液滴は、ある初期条件
+のもとでその内部に渦のない流れを生じ、時間とともに形を変えていく
+ものとする。
 \begin{subquestions}
 
 \SubQuestion
-  $B1UE)FbIt$NB.EYJ,I[$r(B $\Vec{v}(\Vec{r},t)$ $B$H$7$F!"0J2<$NLd$KEz$($h!#(B
+  液滴内部の速度分布を $\Vec{v}(\Vec{r},t)$ として、以下の問に答えよ。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $BO"B3$NJ}Dx<0$rMQ$$$F!"Hs05=L@-$N>r7o$r(B $\Vec{v}(\Vec{r},t)$ 
-    $B$KBP$9$k<0$H$7$FI=$;!#$^$?!"N.$l$K12$,$J$$$H$-$K$O!"(B
-    $\Vec{v} = -\Grad{\chi}$ $B$H$J$kB.EY%]%F%s%7%c%k(B $\chi(\Vec{r},t)$
-    $B$,B8:_$7$F%i%W%i%9$NJ}Dx<0(B
+    連続の方程式を用いて、非圧縮性の条件を $\Vec{v}(\Vec{r},t)$ 
+    に対する式として表せ。また、流れに渦がないときには、
+    $\Vec{v} = -\Grad{\chi}$ となる速度ポテンシャル $\chi(\Vec{r},t)$
+    が存在してラプラスの方程式
 %
     \begin{equation}
       \Laplacian{\chi (\Vec{r},t)} = 0 \eqname{Q1}
     \end{equation}
 %
-    $B$rK~$?$9$3$H$r<($;!#(B
+    を満たすことを示せ。
 
   \SubSubQuestion
-    $B>e<0$N2r$O(B
+    上式の解は
 %
     \begin{equation}
       \chi(\Vec{r},t) = \sum_{\ell m} a_{\ell m}(t)f_\ell(r)Y_{\rm\ell m}(\theta,\varphi) \eqname{Q2}
     \end{equation}
 %
-    $B$H=q$1$k!#$3$N$H$-!"F07B4X?t$O(B
+    と書ける。このとき、動径関数は
 %
     \begin{equation}
       \Bigl\{ \frac{1}{r^2}\Deriver{}{r}r^2\Deriver{}{r} - \frac{\ell(\ell+1)}{r^2} \Bigr\} f_\ell(r) = 0 \eqname{Q3}
     \end{equation}
 
 %
-    $B$K=>$&!#$3$NJ}Dx<0$N1UE)FbIt$G@5B'$J2r$O(B $f_\ell(r)=r^\ell$$B$G(B
-    $B$"$k$3$H$r<($;!#(B\\
-    $B$=$N:]!"B>$NFHN)2r$O86E@(B $(r=0)$ $B$G@5B'$G$J$$$3$H$r3N$+$a$h!#(B
+    に従う。この方程式の液滴内部で正則な解は $f_\ell(r)=r^\ell$で
+    あることを示せ。\\
+    その際、他の独立解は原点 $(r=0)$ で正則でないことを確かめよ。
 
   \end{subsubquestions}
 
 \SubQuestion
-  $B1UE)$N=E?4$+$i(B$(\theta,\varphi)$ $BJ}8~$r8+$?$H$-!"I=LL$^$G$N5wN%$,(B
+  液滴の重心から$(\theta,\varphi)$ 方向を見たとき、表面までの距離が
 %
   \begin{equation}
     R(\theta,\varphi,t) = R_0 + q(t)Y_{\rm 20}(\theta,\varphi)
     \eqname{Q4}
   \end{equation}
 %
-  $B$HJQF0$9$k>l9g$r9M$($k!#0J2<$G$O!"JQF0$NBg$-$5(B $\Norm{q(t)}$ $B$,(B
-  $R_0$$B$KHf$Y$F==J,$K>.$5$$$b$N$H$9$k!#(B
+  と変動する場合を考える。以下では、変動の大きさ $\Norm{q(t)}$ が
+  $R_0$に比べて十分に小さいものとする。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $B1UE)I=LL$^$G$N5wN%$O!"FbIt$+$iI=LL$X8~$+$C$F1UBN$,N.$l$k$3$H$K(B
-    $B$h$C$FJQ2=$9$k!#$=$3$G!"(B
+    液滴表面までの距離は、内部から表面へ向かって液体が流れることに
+    よって変化する。そこで、
 %
     \begin{equation}
       \Partial{}{t} R(\theta,\varphi,t)%
@@ -91,31 +91,31 @@
       \eqname{Q5}
     \end{equation}
 %
-    $B$N4X78$,@.$jN)$D$H$7$F!"B.EY%]%F%s%7%c%k(B $\chi(\Vec{r},t)$ $B$r(B 
-    $\dot{q}(t) \left( \equiv \tDeriver{q}{t} \right) $ $B$rMQ$$$F(B
-    $BI=$;!#$?$@$7!"JQ7A$OHy>.$J$N$G!"1&JU$G(B $r=R$ $B$r(B $r=R_0$ $B$H(B
-    $B6a;w$7$FNI$$$b$N$H$9$k!#(B
+    の関係が成り立つとして、速度ポテンシャル $\chi(\Vec{r},t)$ を 
+    $\dot{q}(t) \left( \equiv \tDeriver{q}{t} \right) $ を用いて
+    表せ。ただし、変形は微小なので、右辺で $r=R$ を $r=R_0$ と
+    近似して良いものとする。
 
   \SubSubQuestion
-    $B1UE)FbIt$NB.EYJ,I[(B $(v_x,v_y,v_z)$ $B$r!"(B$Y_{20}(\theta,\varphi)%
+    液滴内部の速度分布 $(v_x,v_y,v_z)$ を、$Y_{20}(\theta,\varphi)%
     = \sqrt{\ds \frac{5}{16\pi}}(3\cos^2\theta - 1)$
-    $B$r;H$C$F5a$a$h!#<!$K!"1UE)FbIt$NA41?F0%(%M%k%.!<$r7W;;$;$h!#(B
-    $B$?$@$7!"@QJ,$OJQ7A$,>.$5$$$H$7$F!"H>7B(B $R_0$ $B$N5eFb$G9T$J$($PNI$$!#(B
+    を使って求めよ。次に、液滴内部の全運動エネルギーを計算せよ。
+    ただし、積分は変形が小さいとして、半径 $R_0$ の球内で行なえば良い。
 
   \SubSubQuestion
-    $BBN@Q$rJ]B8$7$?>e5-$NJQ7A$K$H$b$J$$!"1UE)$NI=LL@Q$O5e7A$N$H$-(B
-    $B$h$j(B $2q^2(t)$ $B$@$1A}2C$9$k$3$H$,CN$i$l$F$$$k!#1UE)$NI=LLD%NO$r(B
-    $\sigma$ $B$H$7$F!"JQ7A$K$h$k%]%F%s%7%c%k!&%(%M%k%.!<$NJQ7A$r5a$a$h!#(B
+    体積を保存した上記の変形にともない、液滴の表面積は球形のとき
+    より $2q^2(t)$ だけ増加することが知られている。液滴の表面張力を
+    $\sigma$ として、変形によるポテンシャル・エネルギーの変形を求めよ。
 
   \end{subsubquestions}
 
 \SubQuestion
-  $B$3$3$G!"NL;RE*%5%$%:$N1UE)$N1?F0$r9M$($h$&!#(B
+  ここで、量子的サイズの液滴の運動を考えよう。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $B>e5-(B {\bf 2}$B$N1UE)$NJQ7A$KH<$&%O%_%k%H%K%"%s$O!"$*8_$$$K@5=`6&Lr(B
-    $B$J1i;;;R(B $\hq$$B!"(B$\hp$$B$rMQ$$$F(B
+    上記 {\bf 2}の液滴の変形に伴うハミルトニアンは、お互いに正準共役
+    な演算子 $\hq$、$\hp$を用いて
 %
     \begin{equation}
       \Operator{H}%
@@ -123,7 +123,7 @@
       \eqname{Q6}
     \end{equation}
 %
-    $B$HI=$5$l$k!#$3$3$G!"(B
+    と表される。ここで、
 %
     \begin{equation}
       \Operator{q}%
@@ -135,9 +135,9 @@
       \eqname{Q7}
     \end{equation}
 %
-    $B$N4X78$K$"$k1i;;;R(B $\had$ $B$*$h$S(B $\ha$
-    ($B8r494X78$O(B $[\ha,\,\had] = 1$ )$B$rF3F~$9$l$P!"(B
-    $B$=$N%O%_%k%H%K%"%s$O(B
+    の関係にある演算子 $\had$ および $\ha$
+    (交換関係は $[\ha,\,\had] = 1$ )を導入すれば、
+    そのハミルトニアンは
 %
     \begin{equation}
      \Operator{H}%
@@ -145,14 +145,14 @@
       \eqname{Q8}
     \end{equation}
 %
-    $B$H=q$1$k!#(B$M$ $B$*$h$S(B $\omega$ $B$r(B $\rho_0$,$R_0$,$\sigma$ $B$r(B
-    $BMQ$$$FI=$;!#(B
+    と書ける。$M$ および $\omega$ を $\rho_0$,$R_0$,$\sigma$ を
+    用いて表せ。
 
   \SubSubQuestion
-    $B%O%$%<%s%Y%k%/I=<($N1i;;;R(B
+    ハイゼンベルク表示の演算子
     $\haH(t) \equiv%
     e^{i\hH t/\hbar} \ha e^{-i\hH t/\hbar}$
-    $B$N1?F0J}Dx<0$r9M$($F!"(B
+    の運動方程式を考えて、
 %
     \begin{equation}
       \haH(t)%
@@ -160,10 +160,10 @@
       \eqname{Q9}
     \end{equation}
 %
-    $B$,@.$jN)$D$3$H$r<($;!#(B
+    が成り立つことを示せ。
 
   \SubSubQuestion
-    $B1i;;;R(B $\ha$ $B$N8GM->uBV(B $\Ket{z_0}$;
+    演算子 $\ha$ の固有状態 $\Ket{z_0}$;
 %
     \begin{equation}
       \ha\Ket{z_0} = z_0 \Ket{z_0}, \hspace{20mm}%
@@ -171,53 +171,53 @@
       \eqname{Q10}
     \end{equation}
 %
-    $B$r9M$($k!#(B$A_0$ $B$O<BDj?t$G!"(B$R_0$ $B$KHf$Y$l$P==J,$K>.$5$$CM$G(B
-    $B$"$k$H$9$k!#$3$N(B $\Ket{z_0}$ $B$r=i4|>uBV$H$9$k>uBV(B
-    $\Ket{\psi(t)} (= e^{-i\hH t/\hbar}\Ket{z_0}$ $B$O!"(B
-    $BG$0U$N;~9o$K$*$$$F$b$d$O$j(B $\ha$ $B$N8GM->uBV$G$"$k(B
-    $B$3$H$r<($;!#$^$?!"$=$N8GM-CM(B $z(t)$ $B$r5a$a$h!#(B
+    を考える。$A_0$ は実定数で、$R_0$ に比べれば十分に小さい値で
+    あるとする。この $\Ket{z_0}$ を初期状態とする状態
+    $\Ket{\psi(t)} (= e^{-i\hH t/\hbar}\Ket{z_0}$ は、
+    任意の時刻においてもやはり $\ha$ の固有状態である
+    ことを示せ。また、その固有値 $z(t)$ を求めよ。
 
   \SubSubQuestion
-    $B>uBV(B $\Ket{\psi(t)}$ $B$K$*$1$k(B $\hq$ $B$*$h$S(B
-    $\hp$ $B$N4|BTCM$r5a$a!"(B$A_0$ $B$,2?$r0UL#$9$k$+$K$D$$$F(B
-    $B=R$Y$h!#$^$?!"(B $A_0 \to 0$ $B$N$H$-!"%(%M%k%.!<$NCM$,$I$&$J$k$+(B
-    $B$rEz$($h!#(B
+    状態 $\Ket{\psi(t)}$ における $\hq$ および
+    $\hp$ の期待値を求め、$A_0$ が何を意味するかについて
+    述べよ。また、 $A_0 \to 0$ のとき、エネルギーの値がどうなるか
+    を答えよ。
 
   \end{subsubquestions}
 \end{subquestions}
 \end{question}
 
-\begin{answer}{$B@l96(B $BLdBj(B6}{}
+\begin{answer}{専攻 問題6}{}
 \begin{subanswers}
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    $BO"B3$NJ}Dx<0$O!"(B
+    連続の方程式は、
 %
     \[ \Div{\rho\Vec{v}}+\Deriver{\rho}{t}=0 \]
 %
-    $B$G$"$j!"Hs05=L@-$h$j(B $\rho={\rm const}$ $B$7$?$,$C$F(B $\Grad{\rho}=0$
-    $B$G$"$k!#12L5$7$J$N$G(B $\Vec{v}$$B$rG$0U$N7PO)$G<~2s@QJ,$7$F$b(B$0$$B!#(B
-    $B$h$C$F!"(B2$BE@4V$NG$0U$N7PO)$N@QJ,$NCM$O0lDj$H$J$j!"(B$\Vec{v}$$B$K(B
-    $BBP$9$k%]%F%s%7%c%k(B$\Vec{v}=-\Grad{\chi}$$B$,B8:_$9$k!#(B
-    $B$3$l$N(B$\Div{}$$B$r7W;;$9$k$H!"0J2<$NDL$j%i%W%i%9$NJ}Dx<0(B\eqhref{Q1}
-    $B$,<($5$l$k!#(B
+    であり、非圧縮性より $\rho={\rm const}$ したがって $\Grad{\rho}=0$
+    である。渦無しなので $\Vec{v}$を任意の経路で周回積分しても$0$。
+    よって、2点間の任意の経路の積分の値は一定となり、$\Vec{v}$に
+    対するポテンシャル$\Vec{v}=-\Grad{\chi}$が存在する。
+    これの$\Div{}$を計算すると、以下の通りラプラスの方程式\eqhref{Q1}
+    が示される。
 %
     \[ \Div{\Vec{v}}=-\Div{\Grad{\chi}} =-\Laplacian{\chi} =0 \]
 %
   \SubSubAnswer
-    $f_\ell(r)=r^\lambda\sum_{n}a_nr^{n}\quad(a_0=1)$$B$H2>Dj$7!"(B
-    $B$3$l$r<0(B\eqhref{Q3}$B$KBeF~$9$k!#(B
+    $f_\ell(r)=r^\lambda\sum_{n}a_nr^{n}\quad(a_0=1)$と仮定し、
+    これを式\eqhref{Q3}に代入する。
 %
     \[ \sum_n \{ (\lambda+n)(\lambda+n+1)%
                -\ell (\ell +1)\} a_nr^{\lambda+n}%
      - \sum_n \ell (\ell +1) a_nr^{\lambda+n} = 0 \]
     \[ \Yueni \{ (\lambda+n)(\lambda+n+1)-\ell (\ell +1) \}a_n=0 \]
 %
-    $n=0$$B$N9`$K4X$7$F$O(B$a_0=1$$B$H$7$F$$$k$N$G(B
-    $\lambda=\ell ,-\ell -1$$B$H$J$k!#0lHL$N(B$n$$B$G$O!"(B$a_n=0(n>0)$$B$H$J$k!#(B
-    $B$^$?!"(B$\lambda=-\ell -1$$B$G$O(B$r=0$$B$G(B$f$$B$,@5B'$G$J$$!#$7$?$,$C$F!"(B 
-    $f_\ell(r)=r^\ell$$B$G$"$k!#(B
+    $n=0$の項に関しては$a_0=1$としているので
+    $\lambda=\ell ,-\ell -1$となる。一般の$n$では、$a_n=0(n>0)$となる。
+    また、$\lambda=-\ell -1$では$r=0$で$f$が正則でない。したがって、 
+    $f_\ell(r)=r^\ell$である。
 
   \end{subsubanswers}
 
@@ -225,7 +225,7 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    $BA0Ld$N7k2L$H<0(B\eqhref{Q2},\eqhref{Q4}$B$r<0(B\eqhref{Q5}$B$KMQ$$$k$H(B
+    前問の結果と式\eqhref{Q2},\eqhref{Q4}を式\eqhref{Q5}に用いると
 %
     \[ \dot{q}(t)Y_{20}(\theta, \varphi)
        = - \Partial{}{r}\sum_{\ell m}%
@@ -234,21 +234,21 @@
        = - \sum_{\ell m}a_{\ell m}(t)%
            \ell R_0^{\ell -1}Y_{\ell m}(\theta, \varphi) \]
 %
-    $Y_{\ell m}$$B$ND>8r@-$h$j:G1&JU$NOB$O(B$(\ell ,m)=(2,0)$$B0J30$G$O(B
-    $a_{\ell m}=0$$B$G$"$k!#$h$C$F!"(B
+    $Y_{\ell m}$の直交性より最右辺の和は$(\ell ,m)=(2,0)$以外では
+    $a_{\ell m}=0$である。よって、
 %
     \[ \dot{q}(t)Y_{20}(\theta, \varphi)
        = -2R_0a_{20}(t)Y_{20}(\theta, \varphi) \hspace{15mm}%
        \Yueni%
        a_{20}(t) = -\frac{\dot{q}(t)}{2R_0} \]
 %
-    $B$G$"$k!#$h$C$F(B$\chi$$B$O<0(B\eqhref{Q2}$B$h$j<!$NDL$j!#(B
+    である。よって$\chi$は式\eqhref{Q2}より次の通り。
 %
     \[ \chi = a_{20}(t)r^2Y_{20}(\theta, \varphi)%
              = -\frac{r^2}{2R_0}\dot{q}Y_{20}(\theta, \varphi) \]
 %
   \SubSubAnswer
-    $B$R$?$9$i7W;;$9$k!#(B
+    ひたすら計算する。
 %
     \begin{eqnarray*}
       \chi%
@@ -263,7 +263,7 @@
         =  \frac{5\dot{q}^2}{16\pi R_0^2}r^2(3\cos^2\theta+1)
     \end{eqnarray*}
 %
-    $B$h$C$F1?F0%(%M%k%.!<(B$K$$B$O!"(B
+    よって運動エネルギー$K$は、
 %
     \[
       K%
@@ -279,9 +279,9 @@
     \]
 
   \SubSubAnswer
-    $(\mbox{$BI=LLD%NO(B})=\sigma=\Partial{U}{S}\Bigm|_v$$B$h$j!"$3$NBN@Q$rJ](B
-    $BB8$7$?JQ7A$K$*$1$k%]%F%s%7%c%k%(%M%k%.!<$NJQ2=$r(B$\Delta U$$B!"I=(B
-    $BLL@Q$NJQ2=$r(B$\Delta S$$B$H$9$k$H!"(B
+    $(\mbox{表面張力})=\sigma=\Partial{U}{S}\Bigm|_v$より、この体積を保
+    存した変形におけるポテンシャルエネルギーの変化を$\Delta U$、表
+    面積の変化を$\Delta S$とすると、
     \[\Delta U=\sigma \Delta S=2\sigma q^2\]
 
   \end{subsubanswers}
@@ -290,21 +290,21 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    {\bf 2}(iii)$B$^$G$h$j!"(B $B8EE5E*%O%_%k%H%K%"%s$O!"(B 
+    {\bf 2}(iii)までより、 古典的ハミルトニアンは、 
 %
     \[H=2\sigma q^2+\frac{R_0^3\rho_0}{4}\dot{q}^2\]
 %
-    $\dot{q}$$B$H(B$p$$B$NBP1~$rC5$k$?$a!"(B $\dot{q}=\alpha p$$B$H$*$/$H!"(B 
+    $\dot{q}$と$p$の対応を探るため、 $\dot{q}=\alpha p$とおくと、 
 %
     \[H=2\sigma q^2+\frac{R_0^3\rho_0}{4}\alpha^2p^2\]
 %
-    $p,q$$B$O@5=`6&Lr$JJQ?t$G$"$k$+$i!"(B
+    $p,q$は正準共役な変数であるから、
 %
     \[ \dot{q}  = \Partial{H}{p} \quad\Longleftrightarrow\quad%
        \alpha p = \frac{R_0^3\rho_0}{2}\alpha^2p \hspace{10mm}%
        \Yueni \alpha=\frac{2}{R_0^3\rho_0} \]
 %
-    $B$7$?$,$C$F!"(B 
+    したがって、 
 %
     \[ H=2\sigma q^2+\frac{p^2}{R_0^3\rho_0} \hspace{15mm}%
        \Yueni%
@@ -315,7 +315,7 @@
        \omega = \sqrt{\frac{8\sigma}{R_0^3\rho_0}} \]
 
   \SubSubAnswer
-    $BM?$($i$l$?(B$\haH$$B$N;~4VHyJ,$r7W;;$9$k$H(B
+    与えられた$\haH$の時間微分を計算すると
 %
     \begin{eqnarray*}
       \Deriver{\haH}{t}%
@@ -326,39 +326,39 @@
         = -i\omega \haH
     \end{eqnarray*}
 %
-    $t=0$$B$G(B$\haH=\ha$$B$J$N$G!"@QJ,$7$F(B
+    $t=0$で$\haH=\ha$なので、積分して
 %
     \[\haH=e^{-i\omega t}\ha\]
 
 
   \SubSubAnswer
-    $BA0Ld$N7k2L$h$j!"(B
+    前問の結果より、
 %
     \[ e^{i\hH t/\hbar}\ha e^{-i\hH t/\hbar} = e^{-i\omega t}\ha \]
 %
-    $B$3$l$K!"(B$\Ket{z_0}$$B$r$+$1$k$H!"(B 
+    これに、$\Ket{z_0}$をかけると、 
 %
     \[ e^{i\hH t/\hbar}\ha e^{-i\hH t/\hbar}\Ket{z_0}      = e^{-i\omega t}\ha \Ket{z_0}%
        \quad\Longleftrightarrow\quad%
        e^{i\hH t/\hbar}\ha \Ket{\psi(t)} = e^{-i\omega t}z_0\Ket{z_0} \]
 %
-    $BN>JU$K(B$e^{-i\hH t/\hbar}$$B$r$+$1$k$3$H$K$h$C$F!"(B 
+    両辺に$e^{-i\hH t/\hbar}$をかけることによって、 
 %
     \[ \ha\Ket{\psi(t)}%
        =  e^{-i\hH t/\hbar}e^{-i\omega t}z_0\Ket{z_0}
        =  z_0 e^{-i\omega t}\Ket{\psi(t)} \]
 %
-    $B$7$?$,$C$F!"(B $\Ket{\psi(t)}$$B$O(B$\ha$$B$N8GM->uBV!#(B $B8GM-CM(B$z(t)$$B$O(B
-    $z_0e^{-i\omega t}$ $B$G$"$k$3$H$,$o$+$k!#(B
+    したがって、 $\Ket{\psi(t)}$は$\ha$の固有状態。 固有値$z(t)$は
+    $z_0e^{-i\omega t}$ であることがわかる。
 
 
   \SubSubAnswer
-    $BA0Ld$h$j(B
+    前問より
 %
     \[ \ha\Ket{\psi}  = z_0 e^{-i\omega t}\Ket{\psi} \hspace{15mm}%
        \Bra{\psi}\had = \Bra{\psi} z_0^{\ast} e^{+i\omega t} \]
 %
-    $B$h$C$F(B
+    よって
 %
     \[ \Mean{\had} = \Bracket{\psi}{\had}{\psi}%
                    = \Bracket{\psi}{z_0^{\ast} e^{+i\omega t}}{\psi}%
@@ -369,7 +369,7 @@
                    = z_0 e^{-i\omega t}%
                    = +i\sqrt{\frac{M\omega}{2\hbar}}A_0 e^{-i\omega t} \]
 %
-    $B$7$?$,$C$F!"(B
+    したがって、
 %
     \[ \Mean{\hq}  = i\sqrt{\frac{\hbar}{2M\omega}}\Bigl(\Mean{\had}+\Mean{\ha}\Bigr)%
                    = i\sqrt{\frac{\hbar}{2M\omega}}i\sqrt{\frac{M\omega}{2\hbar}}A_0(-e^{+i\omega t}+e^{-i\omega t})%
@@ -378,13 +378,13 @@
                    = i\sqrt{\frac{\hbar M\omega}{2}}i\sqrt{\frac{M\omega}{2\hbar}}A_0(-e^{+i\omega t}-e^{-i\omega t})%
                    = M\omega A_0 \cos{\omega t} \]
 %
-    $B$3$l$O1UE)$N?6I}(B$A_0$$B$N?6F0$rI=$7$F$$$k!#(B
-    $B$3$N1UE)$N%(%M%k%.!<(B$E$$B$NJ?6Q$O(B
+    これは液滴の振幅$A_0$の振動を表している。
+    この液滴のエネルギー$E$の平均は
 %
     \[ \Mean{E} = \Bracket{\psi}{\hat{H}}{\psi}%
                 = \hbar\omega \left<\psi\right|\hat{a}^\dagger\hat{a}+\frac{1}{2}\left|\psi\right> = \frac{M\omega^2}{2}A_0^2 + \frac{\hbar\omega}{2} \]
 %
-    $A_0=0$$B$N>uBV$ONmE@?6F0$rI=$9!#(B
+    $A_0=0$の状態は零点振動を表す。
   \end{subsubanswers}
 \end{subanswers}
 \end{answer}

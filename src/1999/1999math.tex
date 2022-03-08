@@ -3,41 +3,41 @@
 
 \begin{document}
 
-\begin{question}{$B650i(B $B?t3X(B}{}
-%$BBh#1Ld(B
+\begin{question}{教育 数学}{}
+%第１問
 \begin{subquestions}
 \SubQuestion
-2$B<!856u4V$K$*$1$k%Y%/%H%k>l(B$\Vec{E}(x,y)$$B$N3F@.J,(B$E_x(x,y),\ E_y(x,y)$$B$O!"I,MW$J3,?t$^$GHyJ,2DG=$G$"$k$H$7$F!"0J2<$N@_Ld$KEz$($h!#(B
+2次元空間におけるベクトル場$\Vec{E}(x,y)$の各成分$E_x(x,y),\ E_y(x,y)$は、必要な階数まで微分可能であるとして、以下の設問に答えよ。
 
 \begin{subsubquestions}
 \SubSubQuestion
-$\dfrac{\del E_y}{\del x}-\dfrac{\del E_x}{\del y}=0$$B$N$H$-!"$"$k%9%+%i!<>l(B$\varphi(x,y)$$B$,B8:_$7$F!"(B\\
-$\Vec{E} = \Grad \varphi = \left( \dfrac{\del \varphi}{\del x},\dfrac{\del \varphi}{\del y} \right)$\quad $B$HI=$;$k$3$H$r<($;!#(B
+$\dfrac{\del E_y}{\del x}-\dfrac{\del E_x}{\del y}=0$のとき、あるスカラー場$\varphi(x,y)$が存在して、\\
+$\Vec{E} = \Grad \varphi = \left( \dfrac{\del \varphi}{\del x},\dfrac{\del \varphi}{\del y} \right)$\quad と表せることを示せ。
 
-$BC"$7!"<!$N4X78$rMQ$$$FNI$$!#(B
+但し、次の関係を用いて良い。
 \[
 \iint_S \left( \frac{\del E_y}{\del x}-\frac{\del E_x}{\del y} \right) \d{x}\d{y} = \oint_C \Vec{E}\cdot\d{\Vec{r}}
 =\oint_C (E_x\d{x}+E_y\d{y})
 \]
 
-$B$3$3$G(BS$B$OJD$8$?F;(BC$B$G0O$^$l$kNN0h$NFbIt$G$"$j!"@~@QJ,$N8~$-$OH?;~7W2s$j$G$"$k!#(B
+ここでSは閉じた道Cで囲まれる領域の内部であり、線積分の向きは反時計回りである。
 \begin{center}
 \includegraphics[clip]{1999math-1.eps}
 \end{center}
 
 \SubSubQuestion
-$\Vec{E}=(x^2-y^2,-2xy)$$B$N$H$-(B$\dfrac{\del E_y}{\del x}-\dfrac{\del E_x}{\del y}=0$$B$H$J$k$3$H$r<($7!"@_Ld(B(i)$B$K$*$1$k(B$\varphi(x,y)$$B$r5a$a$h!#(B
+$\Vec{E}=(x^2-y^2,-2xy)$のとき$\dfrac{\del E_y}{\del x}-\dfrac{\del E_x}{\del y}=0$となることを示し、設問(i)における$\varphi(x,y)$を求めよ。
 
 \SubSubQuestion
-$BE@(B$(x,y)$$B$K$*$1$k@\@~$,!"@_Ld(B(ii)$B$N(B$\Vec{E}(x,y)$$B$HJ?9T$K$J$k6J@~72(B$\varPsi(x,y)=a\quad (a=\text{$BDj?t(B})$$B$r7hDj$;$h!#(B
+点$(x,y)$における接線が、設問(ii)の$\Vec{E}(x,y)$と平行になる曲線群$\varPsi(x,y)=a\quad (a=\text{定数})$を決定せよ。
 
 \end{subsubquestions}
 
-%$BBh#2Ld(B
+%第２問
 \SubQuestion
 \begin{subsubquestions}
 \SubSubQuestion
-$B9TNs(B
+行列
 \[
 \Mat{A} = \begin{pmatrix}
 	0 & 1 & 0\\
@@ -45,11 +45,11 @@ $\Vec{E}=(x^2-y^2,-2xy)$$B$N$H$-(B$\dfrac{\del E_y}{\del x}-\dfrac{\del E_x}{\
 	0 & 1 & 0
 	\end{pmatrix}
 \]
-$B$N8GM-CM$H8GM-%Y%/%H%k$rA4$F5a$a$h!#$?$@$7!"8GM-%Y%/%H%k$O@55,2=$;$h!#(B
+の固有値と固有ベクトルを全て求めよ。ただし、固有ベクトルは正規化せよ。
 
 \SubSubQuestion
 \def\root2{\cfrac{1}{\sqrt{2}}}
-$B<!$N9TNs(B
+次の行列
 \[
 \Mat{X} = \begin{pmatrix}
 	\root2 & \root2 & 0\\
@@ -57,109 +57,109 @@ $\Vec{E}=(x^2-y^2,-2xy)$$B$N$H$-(B$\dfrac{\del E_y}{\del x}-\dfrac{\del E_x}{\
 	0 & 0 & 1
 	\end{pmatrix}
 \]
-$B$K$h$j!"@_Ld(B(i)$B$N9TNs(B$\Mat{A}$$B$rJQ49$7$FF@$i$l$k9TNs(B$\Mat{B}=\Mat{XAX^\dagger}$$B$r9M$($k!#$?$@$7!"(B$\Mat{X^\dagger}$$B$O(B$\Mat{X}$$B$N%(%k%_!<%H6&Lr9TNs$G$"$k!#9TNs(B$\Mat{B}$$B$N8GM-CM!"8GM-%Y%/%H%k$r<($;!#$?$@$7!"8GM-%Y%/%H%k$O@55,2=$;$h!#(B
+により、設問(i)の行列$\Mat{A}$を変換して得られる行列$\Mat{B}=\Mat{XAX^\dagger}$を考える。ただし、$\Mat{X^\dagger}$は$\Mat{X}$のエルミート共役行列である。行列$\Mat{B}$の固有値、固有ベクトルを示せ。ただし、固有ベクトルは正規化せよ。
 
 
 \SubSubQuestion
-$B%(%k%_!<%H9TNs(B$\Mat{A}=(a_{ij})\quad (i,j=1,\ldots,n)$$B$N8GM-CM$r(B$\alpha_i \quad (i=1,\ldots,n)$$B$H$9$k!#$=$l$i$K4X$7$F<!$N(B2$B$D$NNL!"(B
+エルミート行列$\Mat{A}=(a_{ij})\quad (i,j=1,\ldots,n)$の固有値を$\alpha_i \quad (i=1,\ldots,n)$とする。それらに関して次の2つの量、
 \[
 F = \sum_{i=1}^n |\alpha_i|^2 \quad,\quad G = \sum_{i,j=1}^n |a_{ij}|^2
 \]
-$B$r9M$($k!#@_Ld(B(i)$B$N(B$\Mat{A}$$B$KBP$7$F(B$F$$B$H(B$G$$B$r5a$a$h!#(B
+を考える。設問(i)の$\Mat{A}$に対して$F$と$G$を求めよ。
 
 \SubSubQuestion
-$B@_Ld(B(iii)$B$N(B$F$$B$H(B$G$$B$N4X78$r!"0lHL$N%(%k%_!<%H9TNs(B$\Mat{A}$$B$KBP$7$F=R$Y$h!#(B
+設問(iii)の$F$と$G$の関係を、一般のエルミート行列$\Mat{A}$に対して述べよ。
 
 \end{subsubquestions}
 
-%$BBh(B3$BLd(B
+%第3問
 \SubQuestion
-$B;~9o(B$t=0$$B$K$*$$$F(B$x=0$$B$K6/$5(B1$B$NG.$r2C$($?$H$-$N!"(B1$B<!856u4V$K$*$1$k$=$N8e$NG.$NEAF3$O!"J}Dx<0!"(B
+時刻$t=0$において$x=0$に強さ1の熱を加えたときの、1次元空間におけるその後の熱の伝導は、方程式、
 \begin{equation}
-\left( \kappa^2 \frac{\del^2}{\del x^2} - \frac{\del}{\del t} \right) G(x,t) = -\delta(x)\delta(t) \qquad \text{($\kappa$$B$O@5Dj?t(B)} \eqname{Q3-1}
+\left( \kappa^2 \frac{\del^2}{\del x^2} - \frac{\del}{\del t} \right) G(x,t) = -\delta(x)\delta(t) \qquad \text{($\kappa$は正定数)} \eqname{Q3-1}
 \end{equation}
-$B$N2r(B$G(x,t)$$B$K$h$C$F5-=R$5$l$k!#$?$@$7!"(B$\delta(x)$$B$O%G%#%i%C%/$N%G%k%?4X?t$G$"$k!#$^$?(B$t=-\infty$$B$G(B$G(x,t)=0$$B$H$9$k!#(B
+の解$G(x,t)$によって記述される。ただし、$\delta(x)$はディラックのデルタ関数である。また$t=-\infty$で$G(x,t)=0$とする。
 
 \begin{subsubquestions}
 \SubSubQuestion
-$G(x,t)$$B$N%U!<%j%(JQ49(B$g(k,\omega)$$B$r<!$N<0$GDj5A$9$k(B:
+$G(x,t)$のフーリエ変換$g(k,\omega)$を次の式で定義する:
 \begin{equation}
 G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\omega)e^{i(kx-\omega t)}\d{k}\d{\omega}\eqname{Q3-2}
 \end{equation}
-$B$3$N$H$-(B$g(k,\omega)$$B$NK~$?$9$Y$-J}Dx<0$r<0(B\eqhref{Q3-1}$B$h$jF3$-!"(B$g(k,\omega)$$B$r5a$a$h!#(B
+このとき$g(k,\omega)$の満たすべき方程式を式\eqhref{Q3-1}より導き、$g(k,\omega)$を求めよ。
 
 \SubSubQuestion
-$B@_Ld(B(i)$B$G5a$a$?(B$g(k,\omega)$$B$r<0(B\eqhref{Q3-2}$B$KBeF~$7!"(B$\omega$$B@QJ,$r<B9T$;$h!#(B
+設問(i)で求めた$g(k,\omega)$を式\eqhref{Q3-2}に代入し、$\omega$積分を実行せよ。
 
 \SubSubQuestion
-$B@_Ld(B(ii)$B$KB3$$$F(B$k$$B@QJ,$r<B9T$7!"(B$G(x,t)$$B$r5a$a$h!#$?$@$7!"(B
+設問(ii)に続いて$k$積分を実行し、$G(x,t)$を求めよ。ただし、
 \begin{equation}
 \int_{-\infty}^{\infty} e^{-\alpha^2}\d{\alpha} = \sqrt{\pi}
 \end{equation}
-$B$rMQ$$$F$h$$!#(B
+を用いてよい。
 
 \end{subsubquestions}
 
 \end{subquestions}
 \end{question}
-\begin{answer}{$B650i(B $B?t3X(B}{}
+\begin{answer}{教育 数学}{}
 \begin{subanswers}
 \SubAnswer
 \begin{subsubanswers}
 \SubSubAnswer
 \[ \oint_C (E_x dx + E_y dy) = \iint_S \left(\frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y}\right)dxdy = 0 \]
-$B$N;~!"8GDjE@(B$O(x_0,y_0)$$B$+$i(B$P(x,y)$$B$^$G$N@~@QJ,$O7PO)$K0M$i$J$$$+$i(B
+の時、固定点$O(x_0,y_0)$から$P(x,y)$までの線積分は経路に依らないから
 \[ \varphi (x,y) = \int^P_O (E_x dx + E_y dy)  \]
-$B$H$*$1$k!#$3$N>l9g!"@~@QJ,$,7PO)$K0M$i$J$$$N$G!"$^$:(B$x$$B<4$KJ?9T$K(B$(x_0,y_0)\to (x,y_0)$$B$HF0$+$7!"<!$K(B$y$$B<4$KJ?9T$K(B$(x,y_0)\to (x,y)$$B$HF0$+$97PO)$r<h$k$H!"(B
+とおける。この場合、線積分が経路に依らないので、まず$x$軸に平行に$(x_0,y_0)\to (x,y_0)$と動かし、次に$y$軸に平行に$(x,y_0)\to (x,y)$と動かす経路を取ると、
 \[
 \varphi (x,y) = \int_{x_0}^{x} E_x(x,y_0) dx + \int_{y_0}^{y} E_y(x,y) dy
 \]
-$B$H=q$/$3$H$,$G$-$k!#=>$C$F!"$3$N<0$h$j!"(B
+と書くことができる。従って、この式より、
 \begin{align*}
 \frac{\del \varphi}{\del x} &= E_x(x,y_0) + \int_{y_0}^{y} \frac{\del E_y}{\del x} dy\\
 &= E_x(x,y_0) + \int_{y_0}^{y} \frac{\del E_x}{\del y} dy \qquad \left(\because \frac{\del E_y}{\del x}-\frac{\del E_x}{\del y}=0\right)\\
 &= E_x(x,y_0) + E(x,y) - E_x(x,y_0)\\
 &= E_x(x,y)
 \end{align*}
-$B$^$?!"(B
+また、
 \[
 \frac{\del \varphi}{\del y} = E_y(x,y)
 \]
-$B$,F@$i$l$k!#$h$C$F!"(B
+が得られる。よって、
 \[
 \Vec{E} = \Grad \varphi = \left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y}\right)
 \]
-$B$H=q$1$k!#(B
+と書ける。
 
 
 \SubSubAnswer
 \[ \frac{\partial E_y}{\partial x} = -2y, \quad \frac{\partial E_x}{\partial y} = -2y. \qquad \therefore \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} =0 \]
           \begin{align*}
           \varphi (x,y) &= \int^{(x,y)}_O \Vec{E} \cdot {\d{\Vec{r}}} + \varphi(0,0) \\
-                        &= \int^{(x,0)}_O E_{x}dx + \int^{(x,y)}_{(x,0)} E_{y}dy + C \quad (C$B$ODj?t(B)\\
+                        &= \int^{(x,0)}_O E_{x}dx + \int^{(x,y)}_{(x,0)} E_{y}dy + C \quad (Cは定数)\\
                         &= \int^{(x,0)}_{(0,0)} (x^{2} - y^{2}) dx + \int^{(x,y)}_{(x,0)} (-2xy)dy  + C  \\
                         &= \frac{1}{3}x^3 - xy^2 + C
           \end{align*}
           
           
 \SubSubAnswer
-          $\varPsi (x,y) -a = 0$$B$NK!@~$,(B$\Vec{E}(x,y)=(x^2-y^2,-2xy)$$B$HD>8r$9$l$PNI$$!#(B
+          $\varPsi (x,y) -a = 0$の法線が$\Vec{E}(x,y)=(x^2-y^2,-2xy)$と直交すれば良い。
           \[ \nabla [\varPsi (x,y) - a] \cdot \Vec{E}(x,y) = 0 \]
-          $B$3$3$GNc$($P(B
+          ここで例えば
           \begin{align}
           \frac{\partial \varPsi}{\partial x} &= 2xy \eqname{A1-3}\\
           \frac{\partial \varPsi}{\partial y} &= x^2 - y^2 \eqname{A1-4}
           \end{align}
-          $B$r<h$k$3$H$,$G$-$k!#(B\eqhref{A1-3}$B$h$j(B
-\[ \varPsi (x,y) = x^2 y + C(y)$B!!!!!J(BC(y)$B$O(By$B$@$1$N4X?t!K(B\]
-          $B$3$l$r(B\eqhref{A1-4}$B$KBeF~$7$F(B
+          を取ることができる。\eqhref{A1-3}より
+\[ \varPsi (x,y) = x^2 y + C(y)　　（C(y)はyだけの関数）\]
+          これを\eqhref{A1-4}に代入して
           \begin{align*}
           x^2 + C^\prime (y) &= x^2 - y^2 \\
-                C^\prime (y) &= -y^2 \qquad \therefore C(y) = -\frac{1}{3}y^3 + c$B!!!J(Bc$B$ODj?t!K(B
+                C^\prime (y) &= -y^2 \qquad \therefore C(y) = -\frac{1}{3}y^3 + c　（cは定数）
           \end{align*}
 \[ \therefore \varPsi (x,y) = x^2 y - \frac{1}{3}y^3 + c \]
-          $B$h$C$F5a$a$k6J@~72$O(B
-\[ \varPsi (x,y) = x^2 y - \frac{1}{3}y^3 = a$B!!!!!J(Ba$B$ODj?t!K(B\]
+          よって求める曲線群は
+\[ \varPsi (x,y) = x^2 y - \frac{1}{3}y^3 = a　　（aは定数）\]
 
 \end{subsubanswers}
 
@@ -169,19 +169,19 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
 \SubSubAnswer
 \[\det(\Mat{A} - \lambda \Mat{E}) = \lambda ^2 (1 - \lambda) + 2\lambda 
                          = -\lambda (\lambda - 2)(\lambda + 1) = 0 \] 
-  $B$h$j8GM-CM$O(B$-1,0,2$.\\
-  $B8GM-CM$,(B$-1$$B$N;~!"D9$5(B$1$$B$N8GM-%Y%/%H%k$H$7$F(B
+  より固有値は$-1,0,2$.\\
+  固有値が$-1$の時、長さ$1$の固有ベクトルとして
               $\displaystyle \frac{1}{\sqrt{3}}
               \vect{1}{-1}{1}$,\\
-  $B8GM-CM$,(B$0$$B$N;~!"D9$5(B$1$$B$N8GM-%Y%/%H%k$H$7$F(B
+  固有値が$0$の時、長さ$1$の固有ベクトルとして
               $\displaystyle \frac{1}{\sqrt{2}}
               \vect{1}{0}{-1}$,\\
 
-  $B8GM-CM$,(B$2$$B$N;~!"D9$5(B$1$$B$N8GM-%Y%/%H%k$H$7$F(B
+  固有値が$2$の時、長さ$1$の固有ベクトルとして
               $\displaystyle \frac{1}{\sqrt{6}}
               \vect{1}{2}{1}$ 
-  $B$,$H$l$k!#(B\\
-  $B$h$C$F(B
+  がとれる。\\
+  よって
 	\[
             \frac{1}{\sqrt{3}}
               \vect{1}{-1}{1}
@@ -192,7 +192,7 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
             \frac{1}{\sqrt{6}}
               \vect{1}{2}{1}
 	\]
-  $B$,5a$a$k@55,2=$5$l$?8GM-%Y%/%H%k$G$"$k!#(B
+  が求める正規化された固有ベクトルである。
 
 \SubSubAnswer
       \begin{align*}
@@ -220,12 +220,12 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
       \therefore \Mat{X}^{\dagger} = \Mat{\Mat{X^{-1}}}
       \]
       
-      \textbf{(i)}$B$G5a$a$?3F8GM-%Y%/%H%k$r(B
+      \textbf{(i)}で求めた各固有ベクトルを
             $\displaystyle
               \Vec{a} \equiv \frac{1}{\sqrt{3}}\vect{1}{-1}{1},\quad
               \Vec{b} \equiv \frac{1}{\sqrt{2}}\vect{1}{0}{-1},\quad
               \Vec{c} \equiv \frac{1}{\sqrt{6}}\vect{1}{2}{1} $
-      $B$H$*$-!"(B$\Mat{P} = (\Vec{a},\Vec{b},\Vec{c})$$B$H$7$F9TNs(B\Mat{P}$B$rDj$a$k$H!"(B
+      とおき、$\Mat{P} = (\Vec{a},\Vec{b},\Vec{c})$として行列\Mat{P}を定めると、
       \[
       \Mat{A}\Mat{P} = \Mat{A} (\Vec{a},\Vec{b},\Vec{c}) = (\Vec{a},\Vec{b},\Vec{c})
                 \begin{pmatrix}
@@ -235,18 +235,18 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
                 \end{pmatrix}
          \equiv \Mat{P}\Mat{Q} 
       \]
-      $B$H$J$C$F$$$k$N$G!"(B
+      となっているので、
 	$\Mat{A} = \Mat{P} \Mat{Q} \Mat{P^{-1}}$
-      $B$H=q$1$k!#(B
+      と書ける。
       \begin{align*}
       \Mat{B} = \Mat{X}\Mat{A}\Mat{X^{\dagger}} = \Mat{X}\Mat{A}\Mat{X^{-1}} &= \Mat{X}(\Mat{P}\Mat{Q}\Mat{P^{-1}})\Mat{X^{-1}} \\ &=
  \Mat{X}\Mat{P}\Mat{Q}(\Mat{X}\Mat{P})^{-1}
       \end{align*}
-      $B$G$"$k$N$G!"(B
+      であるので、
       \[
       \Mat{B}(\Mat{X}\Mat{P}) = \Mat{X}\Mat{P}\Mat{Q}
       \]
-      $B$h$C$F(B
+      よって
       \begin{align*}
       \Mat{B} (\Mat{X}\Vec{a},\Mat{X}\Vec{b},\Mat{X}\Vec{c}) &=
       (\Mat{X}\Vec{a},\Mat{X}\Vec{b},\Mat{X}\Vec{c})
@@ -257,14 +257,14 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
       \end{pmatrix}\\
         &= (-1\cdot\Mat{X}\Vec{a},0\cdot\Mat{X}\Vec{b},2\cdot\Mat{X}\Vec{c})
       \end{align*}
-      $B$H=q$1$k$N$G!"(B\Mat{B}$B$N8GM-CM$O(B$-1,0,2$$B$G$"$j!"(B$\Mat{X}\Vec{a}$B!"(B\Mat{X}\Vec{b}$B!"(B\Mat{X}\Vec{c}$$B$O(B$\Mat{B}$$B$N8GM-%Y%/%H%k$H$J$C$F$$$k!#$^$?(B
+      と書けるので、\Mat{B}の固有値は$-1,0,2$であり、$\Mat{X}\Vec{a}、\Mat{X}\Vec{b}、\Mat{X}\Vec{c}$は$\Mat{B}$の固有ベクトルとなっている。また
       \begin{align*}
       (\Mat{X}\Vec{a},\Mat{X}\Vec{a}) &= (\Vec{a},\Mat{X^{\dagger}}\Mat{X}\Vec{a}) \\
-                                &= (\Vec{a},\Vec{a})$B!!!!!!(B(\because \Mat{X^{\dagger}}\Mat{X} = \Mat{E}) \\
-                                &= 1$B!!!!!!!!!!(B(\because\Vec{a}$B$OC10L%Y%/%H%k(B)
+                                &= (\Vec{a},\Vec{a})　　　(\because \Mat{X^{\dagger}}\Mat{X} = \Mat{E}) \\
+                                &= 1　　　　　(\because\Vec{a}は単位ベクトル)
       \end{align*}
-      $B$h$C$F(B$\Mat{X}\Vec{a}$$B$OC10L%Y%/%H%k$G$"$k$3$H$,8@$($k!#(B\\
-      $B0J>e$h$j!"(B$\Mat{X}\Vec{a}$B!"(B\Mat{X}\Vec{b}$B!"(B\Mat{X}\Vec{c}$$B$O(B$\Mat{B}$$B$N@55,2=$5$l$?8GM-%Y%/%H%k$G$"$k$3$H$,8@$($k!#$h$C$F5a$a$k%Y%/%H%k$O!"(B
+      よって$\Mat{X}\Vec{a}$は単位ベクトルであることが言える。\\
+      以上より、$\Mat{X}\Vec{a}、\Mat{X}\Vec{b}、\Mat{X}\Vec{c}$は$\Mat{B}$の正規化された固有ベクトルであることが言える。よって求めるベクトルは、
       \[
       \Mat{X}\Vec{a} = \frac{1}{\sqrt{3}} \vect{0}{\sqrt{2}}{1} ,\qquad
       \Mat{X}\Vec{b} = \frac{1}{2} \vect{-1}{1}{-\sqrt{2}} ,\qquad
@@ -291,21 +291,21 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
 \end{array}
 \right)
 \]
-$B$H$*$/!#(B
+とおく。
 
-$B%(%k%_!<%H9TNs(B$\Mat{A}$$B$O%f%K%?%j9TNs(B$\Mat{U}$$B$rMQ$$$F!"(B
+エルミート行列$\Mat{A}$はユニタリ行列$\Mat{U}$を用いて、
 \[
 \Mat{U^\dagger A U} = \Mat{B}
 \]
-$B$N$h$&$KBP3Q2=$G$-$k!#(B
+のように対角化できる。
 
-$B$^$:!"(B
+まず、
 \begin{equation}
 \sum_{i,j=1}^n |b_{ij}|^2 = \sum_{i=1}^n |\alpha_i|^2 = F \eqname{F}
 \end{equation}
-$B$,@.$jN)$D!#(B
+が成り立つ。
 
-$B0J2<$G$O!"OB5-9f$rL@5-$7$J$$>l9g$r=|$$$F$O!"F1$8E:;z$,(B2$BEY8=$l$?$H$-$K$OOB$r<h$k$b$N$H$9$k$H!"(B
+以下では、和記号を明記しない場合を除いては、同じ添字が2度現れたときには和を取るものとすると、
 \begin{align}
 \sum_{i,j=1}^n |b_{ij}|^2 &= \sum_{i,j=1}^n |(\Mat{U^\dagger A U})_{ij}|^2 \nonumber\\
 &= (\Mat{U^\dagger A U})_{ij}\overline{(\Mat{U^\dagger A U})}_{ij} \nonumber\\
@@ -315,18 +315,18 @@ G(x,t) = \frac{1}{(2\pi)^2} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(k,\
 &= G \eqname{G}
 \end{align}
 
-$B$3$3$G!"%f%K%?%j9TNs$K4X$9$k<!$N@-<A$rMQ$$$?!#(B
+ここで、ユニタリ行列に関する次の性質を用いた。
 \begin{align*}
 \Mat{U}^\dagger &= \Mat{U}^{-1}\\
 \overline{\Mat{U}}^\dagger &= \Trans{\Mat{U}}\\
 \overline{\Mat{U}} &= \Trans{\left(\Mat{U}^{-1}\right)\!\!}
 \end{align*}
 
-\eqhref{F}\eqhref{G}$B$h$j!"(B
+\eqhref{F}\eqhref{G}より、
 \[
 F = G
 \]
-$B$,@.$jN)$D!#(B
+が成り立つ。
 
 
 
@@ -336,61 +336,61 @@ F = G
 \SubAnswer
 \begin{subsubanswers}
       \SubSubAnswer
-      \eqhref{Q3-2}$B<0$H(B
+      \eqhref{Q3-2}式と
       \[
       \delta (x)\delta (t) = \frac{1}{(2 \pi)^2}\int^{\infty}_{-\infty}dk\int^{\infty}_{-\infty}d\omega \ e^{i(kx-\omega t)}
       \]
-      $B$r(B\eqhref{Q3-1}$B<0$KBeF~$9$k$H!"(B
+      を\eqhref{Q3-1}式に代入すると、
       \[
       \int^{\infty}_{-\infty}dk\int^{\infty}_{-\infty}d\omega (-\kappa^2 k^2 + i\omega) g(k,\omega)e^{i(kx-\omega t)} = - \int^{\infty}_{-\infty}dk\int^{\infty}_{-\infty}d\omega e^{i(kx-\omega t)}
       \]
-      $B=>$C$F!"(B$g(k,\omega)$$B$NK~$?$9$Y$-J}Dx<0$O!"(B
+      従って、$g(k,\omega)$の満たすべき方程式は、
       \[
       (\kappa^2 k^2 - i\omega) g(k,\omega) = 1
       \]
-      $B=>$C$F!"(B
+      従って、
       \[
        g(k,\omega) = \frac{1}{\kappa^2 k^2 - i\omega}
       \]
-      $B$G$"$k!#(B
+      である。
       
       
 \SubSubAnswer
       
-      \textbf{(i)}$B$G5a$a$?(B$g(k,\omega)$$B$r(B\eqhref{Q3-2}$B$KBeF~$9$k$H!"(B
+      \textbf{(i)}で求めた$g(k,\omega)$を\eqhref{Q3-2}に代入すると、
       \[
       G(x,t) = \frac{1}{(2 \pi)^2}\int^{\infty}_{-\infty}dk\int^{\infty}_{-\infty}d\omega \frac{1}{\kappa^2 k^2 - i\omega} e^{i(kx-\omega t)}
       \]
-      $B$3$l$r(B$\omega$$B$K$D$$$F@QJ,$9$k!#:#!"(B
+      これを$\omega$について積分する。今、
       \[
       I=\frac{1}{2 \pi}\int^{\infty}_{-\infty}d\omega \frac{e^{-i\omega t}}{\kappa^2 k^2 - i\omega}
       \]
-      $B$J$k(B$I$$B$r9M$($k$H$9$k!#(B$z=\kappa^2 k^2 - i\omega$$B$H$*$/$H!"(B
+      なる$I$を考えるとする。$z=\kappa^2 k^2 - i\omega$とおくと、
       \[
       \begin{cases}
          \displaystyle I = \frac{i}{2 \pi} \int^{r-i\infty}_{r+i\infty}\!dz\ \frac{e^{zt}}{z}e^{-\kappa^2 k^2 t} \\
          r = \kappa^2 k^2
       \end{cases}
       \]
-      $B$H$J$k!#$5$F!"%9%F%C%W4X?t(B$\theta (t)$$B$O!"(B
+      となる。さて、ステップ関数$\theta (t)$は、
       \[
       \theta (t) = \frac{1}{2\pi i}\int^{R+i\infty}_{R-i\infty}\!dz\ \frac{e^{zt}}{z}=
       \begin{cases}
-       1$B!!(B(t>0) \\
-       0$B!!(B(t<0)$B!!!!!!(B(R$B$OG$0U$N<B?t(B)
+       1　(t>0) \\
+       0　(t<0)　　　(Rは任意の実数)
        \end{cases}
       \]
-      $B$H$$$&$3$H$,!"N1?tDjM}$+$iJ,$+$k!#=>$C$F(B$I$$B$O!"(B
+      ということが、留数定理から分かる。従って$I$は、
       \[
       I = \theta (t) e^{-\kappa^2 k^2 t}
       \]
-      $B$G$"$k!#=>$C$F!"(B
+      である。従って、
       \[
       G(x,t) = \frac{1}{2\pi}\int^{\infty}_{-\infty}\!dk\ \theta (t)e^{-\kappa^2 k^2 t}e^{ikx}
       \]
       
 \SubSubAnswer
-      $B@_Ld(B\textbf{(ii)}$B$N7k2L$h$j(B
+      設問\textbf{(ii)}の結果より
 \begin{align*}
       G(x,t) &= \frac{1}{2\pi} \theta (t) \int^{\infty}_{-\infty}dk\ \exp\left[-\kappa^2 t\left(k-\frac{ix}{2\kappa^2 t}\right)^2\right] \exp\left(-\frac{x^2}{4\kappa^2 t}\right) \\
              &= \frac{1}{2\pi} \theta (t) \sqrt{\frac{\pi}{\kappa^2 t}} \exp\left(-\frac{x^2}{4\kappa^2 t}\right)

@@ -3,27 +3,27 @@
 
 \begin{document}
 
-\begin{question}{$B@l96(B $BLdBj(B2}{}
+\begin{question}{専攻 問題2}{}
 
 % Definition of local macros
 \def\Iint#1{\int_{-\infty}^{+\infty}\!\!\!{#1}\,}
 \def\Isum#1{\sum_{{#1}=-\infty}^{\infty}}
 
-$BIT=cJ*$K$h$k8GBNCf$NEE;R$NB+G{LdBj$r9M$($k!#4JC1$N$?$a$K!"3J;RDj?t$,(B
- $a$ $B$N0l<!857k>=$H$7!"3J;RE@$O(B
- $x = na$; $n = 0, \pm 1, \pm 2, \cdots$ $B$G!"IT=cJ*$O(B $x = 0$ $B$K(B
-$B$"$k$H$9$k!#(B
+不純物による固体中の電子の束縛問題を考える。簡単のために、格子定数が
+ $a$ の一次元結晶とし、格子点は
+ $x = na$; $n = 0, \pm 1, \pm 2, \cdots$ で、不純物は $x = 0$ に
+あるとする。
 
 \begin{center}
   \mbox{\includegraphics[clip]{1996phy2-1.eps}}
 \end{center}
 
-$B40A47k>=$N>l9g$K!"3J;RE@$K$"$k%$%*%s$+$i$N%]%F%s%7%c%k$r(B
- $V_{\rm ion}(x)$ $B$H$7!"(B $x = 0$ $B$K$"$kIT=cJ*$K$h$k%]%F%s%7%c%k(B
- $V_{\rm impurity}(x)$ $B$O!"(B$V_{\rm ion}(x)$ $B$K(B $\Delta V(x)$ $B$,(B
-$B2C$o$C$?$b$N$H$9$k!#(B
- $V_{\rm ion}(x)$ $B$d(B $V_{\rm impurity}(x)$ $B$N35N,$O2<?^$N$h$&$G$"$k$,!"(B
-$BK\Ld$G$O6&$K%G%k%?4X?t7?$K4JN,2=$9$k!#(B
+完全結晶の場合に、格子点にあるイオンからのポテンシャルを
+ $V_{\rm ion}(x)$ とし、 $x = 0$ にある不純物によるポテンシャル
+ $V_{\rm impurity}(x)$ は、$V_{\rm ion}(x)$ に $\Delta V(x)$ が
+加わったものとする。
+ $V_{\rm ion}(x)$ や $V_{\rm impurity}(x)$ の概略は下図のようであるが、
+本問では共にデルタ関数型に簡略化する。
 
 \begin{center}
  \mbox{\includegraphics[clip]{1996phy2-2.eps}}
@@ -33,25 +33,25 @@
 
 \begin{subquestions}
 \SubQuestion
-  $B$^$:!"(B$V_{\rm ion}(x) \equiv 0$$B!"$9$J$o$A!"(B1 $B<!85$N<+M31?F0(B
-  $B$r$9$k<ANL(B $m$ $B$NEE;R$,(B 
+  まず、$V_{\rm ion}(x) \equiv 0$、すなわち、1 次元の自由運動
+  をする質量 $m$ の電子が 
   $ \Delta V(x) = -\frac{\hbar^2}{m \lambda_0} \delta (x) $
-  $B$K$h$C$FB+G{$5$l$kLdBj$r9M$($k!#(B 
-  $B$3$3$G!"(B$\lambda_0 > 0$ $B$H$9$k!#(B
+  によって束縛される問題を考える。 
+  ここで、$\lambda_0 > 0$ とする。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $BB+G{%(%M%k%.!<(B $E_0$ $B$NEE;R$NGHF04X?t(B $\phi_0(x)$ $B$KBP$9$k(B
-    $B%7%e%l!<%G%#%s%,!<J}Dx<0$r=q$-2<$;!#(B
+    束縛エネルギー $E_0$ の電子の波動関数 $\phi_0(x)$ に対する
+    シュレーディンガー方程式を書き下せ。
 
   \SubSubQuestion
-    $B$3$NJ}Dx<0$K%U!<%j%(JQ49(B
+    この方程式にフーリエ変換
     \begin{equation}
         \phi_0(x) = \Iint{\frac{\d{k}}{2 \pi}} e^{-ikx}\phi_0(k)
         \eqname{Q1}
     \end{equation}
-    $B$r;\$7!"(B$k$ $B6u4V$G$N%7%e%l!<%G%#%s%,!<J}Dx<0$,<!$N$h$&$K(B
-    $B=q$1$k$3$H$r<($;!#(B
+    を施し、$k$ 空間でのシュレーディンガー方程式が次のように
+    書けることを示せ。
     \begin{equation}
         \frac{\hbar^2 k^2}{2m}\phi_0(k)
       - \frac{\hbar^2}{m \lambda_0} \Iint{\frac{\d{k^\prime}}{2 \pi}} \phi_0(k^\prime)
@@ -60,43 +60,43 @@
     \end{equation}
 
   \SubSubQuestion
-    $E_0$ $B$r(B $-\frac{\hbar^2 \kappa^2}{2m}$ $B$H=q$/$H!"(B
-    $\phi_0(k)$ $B$O(B
+    $E_0$ を $-\frac{\hbar^2 \kappa^2}{2m}$ と書くと、
+    $\phi_0(k)$ は
     \begin{equation}
         \phi_0(k) = \frac{C_0}{k^2 + \kappa ^2}
         \eqname{Q3}
     \end{equation}
-    $B$H=q$1$k!#$3$3$G!"Dj?t(B $C_0$ $B$O(B
+    と書ける。ここで、定数 $C_0$ は
     \begin{equation}
         C_0 = \frac{2}{\lambda_0} \Iint{\frac{\d{k}}{2 \pi}} \phi_0(k)
         \eqname{Q4}
     \end{equation}
-    $B$G$"$k!#(B $B<0(B\eqhref{Q3}$B$H(B $B<0(B\eqhref{Q4}$B$H$rAH$_9g$o$;$F(B
-    $\kappa$ $B$r5a$a$h!#(B
-    $B$^$?!"(B$E_0$ $B$r(B $\lambda_0$ $B$N4X?t$H$7$F5a$a$h!#(B
+    である。 式\eqhref{Q3}と 式\eqhref{Q4}とを組み合わせて
+    $\kappa$ を求めよ。
+    また、$E_0$ を $\lambda_0$ の関数として求めよ。
  
   \SubSubQuestion
-    $\phi_0(k)$ $B$N%U!<%j%(5UJQ49(B $\phi_0(x)$ $B$r(B $\lambda_0$ $B$r(B
-    $B%Q%i%a!<%?$H$7$F5a$a$h!#(B
-    $B$=$7$F!"(B$\phi_0(x)$ $B$N35MW$r?^<($7!"(B$\lambda_0$ $B$NJ*M}E*$J0UL#$r(B
-    $B=R$Y$h!#$J$*!"GHF04X?t$r5,3J2=$9$kI,MW$O$J$$!#(B
+    $\phi_0(k)$ のフーリエ逆変換 $\phi_0(x)$ を $\lambda_0$ を
+    パラメータとして求めよ。
+    そして、$\phi_0(x)$ の概要を図示し、$\lambda_0$ の物理的な意味を
+    述べよ。なお、波動関数を規格化する必要はない。
 
   \end{subsubquestions}
 \newpage
 \SubQuestion
-  $B<!$K!"(B$\Delta V(x) \equiv 0$ $B$N40A40l<!857k>=$r9M$($k!#$9$J$o$A!"(B
-  $\lambda > 0$ $B$H$7$F!"(B
+  次に、$\Delta V(x) \equiv 0$ の完全一次元結晶を考える。すなわち、
+  $\lambda > 0$ として、
   \begin{equation}
     V_{\rm ion}(x) = -\frac{\hbar^2}{m \lambda} \Isum{n} \delta(x-na)
     \eqname{Q5}
   \end{equation}
-  $B$N>l9g$K!"(B{\bf 1}. $B$K=>$$!"(B$k$ $B6u4V$G$NEE;R$NGHF04X?t(B $\phi (k)$$B$r(B
-  $B;H$C$F8GM-CMLdBj$r2r$3$&!#(B
+  の場合に、{\bf 1}. に従い、$k$ 空間での電子の波動関数 $\phi (k)$を
+  使って固有値問題を解こう。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $B%(%M%k%.!<(B $\varepsilon$ $B$NEE;R$N(B $\phi (x)$ $B$r7h$a$k(B
-    $B%7%e%l!<%G%#%s%,!<J}Dx<0$O<!$N$h$&$K$J$k$3$H$r<($;!#(B
+    エネルギー $\varepsilon$ の電子の $\phi (x)$ を決める
+    シュレーディンガー方程式は次のようになることを示せ。
     \begin{equation}
         \frac{\hbar^2 k^2}{2m}\phi(k) 
       - \frac{\hbar^2}{m \lambda a} 
@@ -104,35 +104,35 @@
       = \varepsilon \ \phi(k)
         \eqname{Q6}
     \end{equation}
-    $B$J$*!"<!$N%]%"%=%s$NOB8x<0$KCm0U$;$h!#(B
+    なお、次のポアソンの和公式に注意せよ。
     \begin{equation}
         \Isum{n} e^{inx} = 2 \pi \Isum{n} \delta(x-2\pi n)
         \eqname{Q7}
     \end{equation}
 
   \SubSubQuestion
-    $ \varepsilon = - \frac{\hbar^2 \kappa^2}{2m} $$B$H=q$/$H!"(B
-    $ -\frac{\pi}{a} < k < \frac{\pi}{a} $$B$rK~$?$9G$0U$N(B
-    $k$ $B$d@0?t(B $n$ $B$KBP$7$F!"(B
+    $ \varepsilon = - \frac{\hbar^2 \kappa^2}{2m} $と書くと、
+    $ -\frac{\pi}{a} < k < \frac{\pi}{a} $を満たす任意の
+    $k$ や整数 $n$ に対して、
     \begin{equation}
         \phi(k - \frac{2 \pi}{a} n) 
         = \frac{C_k}{(k - \frac{2 \pi}{a} n )^2 + \kappa^2}
         \eqname{Q8}
     \end{equation}
-    $B$H=q$1$k!#(B $B$3$3$G!"(B$k$ $B$K$O$h$k$,!"(B$n$ $B$K$O$h$i$J$$?t(B
-    $C_k$ $B$O(B
+    と書ける。 ここで、$k$ にはよるが、$n$ にはよらない数
+    $C_k$ は
     \begin{equation}
         C_k = \frac{2}{\lambda a} 
         \Isum{n} \phi(k-\frac{2\pi}{a} n)
         \eqname{Q9}
     \end{equation}
-    $B$G$"$k!#(B $B$3$l$+$i!"(B$\kappa$ $B$H(B $k$ $B$H$O<!$N4X78$G7k$S$D$/(B
-    $B$3$H$r<($;!#(B
+    である。 これから、$\kappa$ と $k$ とは次の関係で結びつく
+    ことを示せ。
     \begin{equation}
         \cos(ak) = \cosh(a\kappa) - \frac{1}{\kappa\lambda}\sinh(a\kappa)
         \eqname{Q10}
     \end{equation}
-    $B$J$*!"(B$u, v > 0$ $B$H$7$F!"<!$N8x<0$r;H$C$F$b$h$$!#(B
+    なお、$u, v > 0$ として、次の公式を使ってもよい。
     \begin{equation}
         \Isum{n} \frac{v}{(n - u)^2 + v^2}
         = \pi \frac{\sinh(2\pi v)}{\cosh(2\pi v) - \cos(2\pi u)}
@@ -140,50 +140,50 @@
     \end{equation}
 
   \SubSubQuestion
-    $B<0(B\eqhref{Q10}$B$+$i!"(B$\lambda <\!\!\!< a$ $B$N>l9g!"(B
+    式\eqhref{Q10}から、$\lambda <\!\!\!< a$ の場合、
     $ -\frac{\pi}{a} < k < \frac{\pi}{a} $ 
-    $B$NHO0O$NG$0U$N(B $k$ $B$KBP$7$F!"(B$\kappa$ $B$O6a;wE*$K(B
+    の範囲の任意の $k$ に対して、$\kappa$ は近似的に
     \begin{equation}
         \kappa = \frac{1}{\lambda} \bigl[ 1 + 2 e^{-a/\lambda} \cos(ak) \bigr]
         \eqname{Q12}
     \end{equation}
-    $B$N$h$&$KM?$($i$l$k$3$H$r<($;!#(B
+    のように与えられることを示せ。
 
   \SubSubQuestion
-    $B<0(B\eqhref{Q12}$B$+$i!"(B$k$ $B$N4X?t$H$7$F$N%(%M%k%.!<$N8GM-CM(B
-    $\varepsilon_k$ ($BJ,;64X78(B)$B$,7h$a$i$l$k!#(B
+    式\eqhref{Q12}から、$k$ の関数としてのエネルギーの固有値
+    $\varepsilon_k$ (分散関係)が決められる。
     $ \Norm{k} \ll \frac{\pi}{a} $
-    $B$N>l9g$K$O!"$=$l$O<!$N<0$K<($9$h$&$J<+M3EE;R$NJ,;64X78$KN`;w$7$?(B
-    $B7A$r;}$D$3$H$r<($;!#(B
+    の場合には、それは次の式に示すような自由電子の分散関係に類似した
+    形を持つことを示せ。
     \begin{equation}
       \varepsilon_k = \varepsilon_0 + \frac{\hbar^2 k^2}{2m^{\ast}}
       \eqname{Q13}
     \end{equation}
-    $B$3$N$H$-!"(B $\varepsilon_0$ $B$dEE;R$NM-8z<ANL(B $m^\ast$ $B$O(B
-    $B$I$N$h$&$KM?$($i$l$k$+!#(B
+    このとき、 $\varepsilon_0$ や電子の有効質量 $m^\ast$ は
+    どのように与えられるか。
 
   \end{subsubquestions}
 
 \SubQuestion
-  $B:G8e$K!"(B$\Delta V(x) \neq 0$ $B$G(B $V_{\rm ion}(x) \neq 0$ $B$N>l9g$r(B
-  $B9M$($k!#$3$l$^$G$N$h$&$K!"(B$k$ $B6u4V$G$N%7%e%l%G%#%s%,!<J}Dx<0$+$i(B
-  $B=PH/$9$k$H!"(B$x = 0$ $B$K$"$kIT=cJ*$KJa$i$($i$l$?EE;R$NB+G{%(%M%k%.!<(B
-  $\bar{E}_0$ $B$,0lHLE*$K5a$a$i$l$k!#$7$+$7!"$3$l$^$G$N7k2L$r$h$/(B
-  $B9M;!$9$l$P!"<!$N#2$D$N6K8BE*$J>l9g$K$O(B $\bar{E}_0$ $B$NCM$OM=B,$G$-$k!#(B
-  $B$=$NM=B,CM$r5-$7!"$=$N$h$&$KM=B,$7$?M}M3$r=q$1!#(B
+  最後に、$\Delta V(x) \neq 0$ で $V_{\rm ion}(x) \neq 0$ の場合を
+  考える。これまでのように、$k$ 空間でのシュレディンガー方程式から
+  出発すると、$x = 0$ にある不純物に捕らえられた電子の束縛エネルギー
+  $\bar{E}_0$ が一般的に求められる。しかし、これまでの結果をよく
+  考察すれば、次の２つの極限的な場合には $\bar{E}_0$ の値は予測できる。
+  その予測値を記し、そのように予測した理由を書け。
 
   \begin{subsubquestions}
   \SubSubQuestion
-    $\lambda \ll a$$B!"3n$D!"(B$\lambda_0 \ll a$ $B$N>l9g!#(B
+    $\lambda \ll a$、且つ、$\lambda_0 \ll a$ の場合。
 
   \SubSubQuestion
-    $\lambda \ll a \ll \lambda_0$ $B$N>l9g!#(B
+    $\lambda \ll a \ll \lambda_0$ の場合。
 
   \end{subsubquestions}
 
 \end{subquestions}
 \end{question}
-\begin{answer}{$B@l96(B $BLdBj(B2}{}
+\begin{answer}{専攻 問題2}{}
 % Definition of local macros 
 \def\Iint#1{\int_{-\infty}^{+\infty}\!\!\!{#1}\,}
 \def\Isum#1{\sum_{{#1}=-\infty}^{\infty}}
@@ -198,8 +198,8 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    $\IDelta V$ $B$N%]%F%s%7%c%kCf$N%(%M%k%.!<(B$E_0$$B$NEE;R$N(B
-    Schr\"{o}dinger$BJ}Dx<0$O0J2<$NDL$j!#(B
+    $\IDelta V$ のポテンシャル中のエネルギー$E_0$の電子の
+    Schr\"{o}dinger方程式は以下の通り。
 %
     \begin{equation}
       -\frac{\hbar^2}{2m}\Deriver{^2}{x^2}\phi_0(x)%
@@ -209,7 +209,7 @@
 %
 
   \SubSubAnswer
-    $B<0(B\eqhref{A1}$B$N3F9`$N(B$\phi_0(x)$$B$K<0(B\eqhref{Q1}$B$rBeF~$9$k$H!"(B
+    式\eqhref{A1}の各項の$\phi_0(x)$に式\eqhref{Q1}を代入すると、
 %
     \[ %
        \Iint{\frac{\d{k}}{2 \pi}} \frac{\hbar^2k^2}{2m} e^{-ikx}\phi_0(k)%
@@ -217,48 +217,48 @@
        \delta(x)\Iint{\frac{\d{k}}{2 \pi}} e^{-ikx}\phi_0(k)
      = E_0 \Iint{\frac{\d{k}}{2 \pi}} e^{-ikx}\phi_0(k) \]
 %
-    $B3F9`$K(B $e^{ik'x}$$B$r$+$1$F(B$x$$B$G@QJ,$9$k$H(B
+    各項に $e^{ik'x}$をかけて$x$で積分すると
 %
-    \[ \mbox{[$BBh(B1$B9`(B]}\Longrightarrow%
+    \[ \mbox{[第1項]}\Longrightarrow%
         %
         \Iint{\bqquad\d{x}}\Iint{\frac{\d{k}}{2 \pi}} \frac{\hbar^2k^2}{2m}%
         e^{-i(k-k')x}\phi_0(k)%
      =  \Iint{\bqquad\d{k}}\frac{\hbar^2k^2}{2m}\delta(k-k')\phi_0(k)%
      =  \frac{\hbar^2k^{\prime 2}}{2m}\phi_0(k') \]
-    \[ \mbox{[$BBh(B2$B9`(B]}\Longrightarrow%
+    \[ \mbox{[第2項]}\Longrightarrow%
        \frac{\hbar^2}{m\lambda_0}%
        \Iint{\bqquad\d{x}}\delta(x)\Iint{\frac{\d{k}}{2 \pi}}%
        e^{-i(k-k')x}\phi_0(k)%
      = \frac{\hbar^2}{m\lambda_0}%
        \Iint{\frac{\d{k}}{2 \pi}} \phi_0(k) \]
-    \[ \mbox{[$BBh(B3$B9`(B]}\Longrightarrow%
+    \[ \mbox{[第3項]}\Longrightarrow%
        E_0 \Iint{\bqquad\d{x}}\Iint{\frac{\d{k}}{2 \pi}}%
        e^{-i(k-k')x}\phi_0(k)%
      = E_0 \Iint{\bqquad\d{k}} \delta(k-k')\phi_0(k)%
      = E_0 \phi_0(k') \]
 %
-    $B$h$C$F<0(B\eqhref{A1}$B$NA4BN$N$3$N7W;;$N7k2L$O!"(B
+    よって式\eqhref{A1}の全体のこの計算の結果は、
 %
     \[ \frac{\hbar^2k^{\prime 2}}{2m}\phi_0(k')%
        -\frac{\hbar^2}{m\lambda_0}%
         \Iint{\frac{\d{k}}{2 \pi}} \phi_0(k)%
       = E_0 \phi_0(k') \]
 %
-    $k,k'$$B$N5-9f$rF~$l49$($k$3$H$G<0(B\eqhref{Q2}$B$,<($5$l$k!#(B
+    $k,k'$の記号を入れ換えることで式\eqhref{Q2}が示される。
 
 
   \SubSubAnswer
     \parbox[t]{100mm}{
-    $B<0(B\eqhref{Q2}$B$G(B $E_0=-\frac{\hbar^2 \kappa^2}{2m}$$B$H$*$$$F@0M}$9$k$3$H$K(B
-    $B$h$j<!<0$rF@$k!#(B
+    式\eqhref{Q2}で $E_0=-\frac{\hbar^2 \kappa^2}{2m}$とおいて整理することに
+    より次式を得る。
 %
     \[ \phi_0(k) =%
         \frac{2m}{\hbar^2(k^2+\kappa^2)}\cdot%
         \frac{\hbar^2}{m\lambda_0}\Iint{\frac{\d{k'}}{2 \pi}} \phi_0(k')\]
 %
-    $B$3$3$G<0(B\eqhref{Q4}$B$NDj5A$G(B$C_0$$B$rMQ$$$k$H<0(B\eqhref{Q3}$B$H$J$k!#(B
-    $B<0(B\eqhref{Q4}$B$N(B$\phi_0(x)$$B$K<0(B\eqhref{Q3}$B$rBeF~$7$F!"(B$C_0\neq 0$ $B$G(B
-    $B$"$k$N$G(B$ C_0 $$B$G3d$C$F@0M}$9$k$H(B
+    ここで式\eqhref{Q4}の定義で$C_0$を用いると式\eqhref{Q3}となる。
+    式\eqhref{Q4}の$\phi_0(x)$に式\eqhref{Q3}を代入して、$C_0\neq 0$ で
+    あるので$ C_0 $で割って整理すると
 %
     \[ \lambda_0\pi = \Iint{\d{k}}\frac{1}{k^2+\kappa^2} \]
 %
@@ -267,30 +267,30 @@
       \mbox{\includegraphics[clip]{1996phy2-3.eps}}
     \end{center}}\\
 %
-    $B$3$N@QJ,$O1&?^$N7PO)$NJ#AG@QJ,$K3HD%$9$k$3$H$,$G$-$k!#(B
-    $B$h$C$FN1?tDjM}$K$h$j(B
+    この積分は右図の経路の複素積分に拡張することができる。
+    よって留数定理により
 %
     \[ \Iint{\d{k}}\frac{1}{k^2+\kappa^2}%
        = \oint_\ucycle\d{k}\frac{1}{k^2+\kappa^2}%
        = 2\pi i \lim_{k\to +i\kappa}(k-i\kappa)\frac{1}{k^2+\kappa^2}%
        = \frac{\pi}{\kappa} \]
 %
-   $B$H$J$k$N$G7k6I(B
+   となるので結局
 %
     \[ \kappa =  \frac{1}{\lambda_0} \hspace{15mm}%
         E_0   = -\frac{\hbar^2}{2m\lambda_0^2} \]
 %
-    $B$G$"$k$3$H$,$o$+$k!#(B
+    であることがわかる。
 
   \SubSubAnswer
     \parbox[t]{100mm}{
-    $B<0(B\eqhref{Q1}$B$N(B$\phi_0(x)$$B$K<0(B\eqhref{Q3}$B$rBeF~$9$k$H(B
+    式\eqhref{Q1}の$\phi_0(x)$に式\eqhref{Q3}を代入すると
 %
     \[  \phi_0(x)%
         = \frac{C_0}{2\pi}\Iint{\d{k}}\frac{e^{-ikx}}{k^2+\kappa^2} \]
 %
-    $B$3$N@QJ,$O(B$x$$B$N@5Ii$K$h$C$F1&?^$N$h$&$K(B$2$$B<o$N7PO)$NJ#AG@QJ,$K(B
-    $B3HD%$9$k$3$H$,$G$-$k!#$h$C$FN1?tDjM}$K$h$j(B
+    この積分は$x$の正負によって右図のように$2$種の経路の複素積分に
+    拡張することができる。よって留数定理により
 %
     }\parbox[t]{50mm}{
     \begin{center}\vspace*{-25mm}
@@ -298,27 +298,27 @@
     \end{center}}
 
 \newpage
-    \[ \hspace{-5mm}\mbox{($x\ge0$$B$N>l9g(B)}\quad%
+    \[ \hspace{-5mm}\mbox{($x\ge0$の場合)}\quad%
        \Iint{\d{k}}\frac{e^{-ikx}}{k^2+\kappa^2}%
        = \oint_\dcycle \d{k}\frac{e^{-ikx}}{k^2+\kappa^2}%
        = -2\pi i \lim_{k\to -i\kappa}(k+i\kappa)%
          \frac{e^{-ikx}}{k^2+\kappa^2}%
        = \pi\frac{e^{-\kappa x}}{\kappa} \]
-    \[ \hspace{-5mm}\mbox{($x<0$$B$N>l9g(B)}\quad%
+    \[ \hspace{-5mm}\mbox{($x<0$の場合)}\quad%
        \Iint{\d{k}}\frac{e^{-ikx}}{k^2+\kappa^2}%
        = \oint_\ucycle \d{k}\frac{e^{-ikx}}{k^2+\kappa^2}%
        = +2\pi i \lim_{k\to +i\kappa}(k-i\kappa)%
          \frac{e^{-ikx}}{k^2+\kappa^2}%
        = \pi\frac{e^{+\kappa x}}{\kappa} \]
 %
-    $B$H$J$k$N$G7k6I(B
+    となるので結局
 %
     \[  \phi_0(x)%
         = \frac{C_0}{2\kappa} e^{-\kappa |x|}%
         = \frac{C_0\lambda_0}{2} e^{-\frac{|x|}{\lambda_0}} \]
 %
-    $B$,F@$i$l$k!#(B$\lambda_0$$B$OGHF04X?t$N9-$,$j$NDxEY$rI=$7$F$$$k(B
-    $B$3$H$,$o$+$k!#(B
+    が得られる。$\lambda_0$は波動関数の広がりの程度を表している
+    ことがわかる。
 
     \begin{center}
       \mbox{\includegraphics[clip]{1996phy2-5.eps}}
@@ -330,7 +330,7 @@
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    Schr\"{o}dinger$BJ}Dx<0$O<0(B\eqhref{A1}$B$HF1MM$K!"(B
+    Schr\"{o}dinger方程式は式\eqhref{A1}と同様に、
 %
     \begin{equation}
       -\frac{\hbar^2}{2m}\Deriver{^2}{x^2}\phi(x)%
@@ -338,18 +338,18 @@
       = \varepsilon \phi(x) \eqname{A2}
     \end{equation}
 %
-    $B$G$"$k!#@_Ld(B{\bf 1}(ii)$B$HF1MM$K%U!<%j%(JQ49$rBeF~$7$F(B
-    $e^{ik'x}$$B$r$+$1$F(B$x$$B$G@QJ,$9$k!#(B
-    $B$3$3$G<0(B\eqhref{A2}$B$N:8JUBh(B2$B9`$K$D$$$F$N$3$N7W;;$KCmL\$9$k!#(B
+    である。設問{\bf 1}(ii)と同様にフーリエ変換を代入して
+    $e^{ik'x}$をかけて$x$で積分する。
+    ここで式\eqhref{A2}の左辺第2項についてのこの計算に注目する。
 %
-    \[ \mbox{[$BBh(B2$B9`(B]}\Longrightarrow%
+    \[ \mbox{[第2項]}\Longrightarrow%
         \frac{\hbar^2}{m\lambda}%
         \Iint{\bqquad\d{x}}e^{ik'x}\sum_n\delta(x\!-\!na)%
         \Iint{\frac{\d{k}}{2 \pi}} e^{-ikx}\phi(k)%
       = \frac{\hbar^2}{m\lambda}%
         \sum_n \Iint{\frac{\d{k}}{2 \pi}} e^{-i(k-k')na}\phi(k) \]
 %
-    $B$3$3$G<0(B\eqhref{Q7}$B$N%R%s%H$K$h$j!"(B
+    ここで式\eqhref{Q7}のヒントにより、
 %
     \begin{eqnarray*}
       \hspace{10mm}%
@@ -363,33 +363,33 @@
           \sum_n \phi(k'-\frac{2\pi}{a}n)
     \end{eqnarray*}
 %
-    $B$h$C$F<0(B\eqhref{A2}$B$NA4BN$N$3$N7W;;$N7k2L$O!"(B
+    よって式\eqhref{A2}の全体のこの計算の結果は、
 %
     \[ \frac{\hbar^2k^{\prime 2}}{2m}\phi(k')%
         -\frac{\hbar^2}{m\lambda a}\sum_n\phi(k'-\frac{2\pi}{a}n)%
         = \varepsilon\phi(k') \]
 %
-    $k,k'$$B$N5-9f$rF~$l49$($k$3$H$G<0(B\eqhref{Q6}$B$,<($5$l$k!#(B
+    $k,k'$の記号を入れ換えることで式\eqhref{Q6}が示される。
 
   \SubSubAnswer
-    $\phi$$B$r<0(B\eqhref{Q8},\eqhref{Q9}$B$+$i>C5n$7$F(B $C_k \neq 0$$B$h$j(B
+    $\phi$を式\eqhref{Q8},\eqhref{Q9}から消去して $C_k \neq 0$より
 %
     \[ 1 = \frac{2}{\lambda a}\sum_n%
            \frac{1}{(k-\frac{2\pi}{a}n)^2+\kappa^2}%
          = \frac{1}{\lambda\pi\kappa} \sum_n%
            \frac{(a\kappa/2\pi)}{(n-(ak/2\pi))^2+(a\kappa/2\pi)^2} \]
 %
-    $B$rF@$k!#$3$N<0$O<0(B\eqhref{Q11}$B$N%R%s%H$K$h$j!"(B
+    を得る。この式は式\eqhref{Q11}のヒントにより、
 %
     \[ 1 = \frac{1}{\lambda\kappa}%
            \frac{\sinh{(a\kappa)}}{\cosh{(a\kappa)}-\cos{(ak)}} \]
 %
-    $B$H$J$k!#$3$l$h$j<0(B\eqhref{Q10}$B$,F3$+$l$k!#(B
+    となる。これより式\eqhref{Q10}が導かれる。
 
   \SubSubAnswer
-    $B@_Ld(B{\bf 1}$B$HF1MM$K(B$\kappa \sim 1/\lambda$ $B$H2>Dj$9$l$P(B
-    $\lambda \ll a$$B$N>r7o$O(B $1\sim \lambda\kappa \ll a\kappa$
-    $B$H$J$k!#$3$N>r7o$N$b$H$G<0(B\eqhref{Q10}$B$r6a;w$9$k$H(B
+    設問{\bf 1}と同様に$\kappa \sim 1/\lambda$ と仮定すれば
+    $\lambda \ll a$の条件は $1\sim \lambda\kappa \ll a\kappa$
+    となる。この条件のもとで式\eqhref{Q10}を近似すると
 %
     \begin{eqnarray*}
       \cos{(ak)} &=&  \frac{e^{a\kappa}+e^{-a\kappa}}{2}%
@@ -403,23 +403,23 @@
               \sim  \frac{1}{\lambda}(1+2e^{-a\kappa}\cos{(ak)})
     \end{eqnarray*} 
 %
-    $B$3$N(B $\kappa$ $B$r:F$S(B $e^{-a\kappa}$ $B$N(B $\kappa$ $B$KBeF~$9$k$3$H$G(B
+    この $\kappa$ を再び $e^{-a\kappa}$ の $\kappa$ に代入することで
 %
     \[ \kappa \sim \frac{1}{\lambda}%
                    \bigl[1+2e^{-\frac{a}{\lambda}}\cos{(ak)}\bigr] \]
 %
-    $B$,F@$i$l<0(B\eqhref{Q12}$B$,<($5$l$?!#(B
+    が得られ式\eqhref{Q12}が示された。
 
 
   \SubSubAnswer
-    $\varepsilon_k$$B$O(B
+    $\varepsilon_k$は
 %
     \[ \varepsilon_k%
         = -\frac{\hbar^2\kappa^2}{2m}%
         = -\frac{\hbar^2}{2m\lambda^2}%
            \bigl[1+2e^{-\frac{a}{\lambda}}\cos{(ak)}\bigr]^2 \]
 %
-    $B$G$"$k!#(B$ak\ll 1$$B$N>r7o$G$3$l$r(B$ak$$B$N(B$2$$B<!$^$GE83+$9$k$H!"(B
+    である。$ak\ll 1$の条件でこれを$ak$の$2$次まで展開すると、
 %
     \begin{eqnarray*}
       \varepsilon_k%
@@ -435,7 +435,7 @@
                +\frac{\hbar^2k^2(1+2e^{-\frac{a}{\lambda}})e^{-\frac{a}{\lambda}}a^2}{m\lambda^2}
     \end{eqnarray*}
 %
-    $B$h$C$F<0(B\eqhref{Q13}$B$N7A$G(B$\varepsilon_k$$B$,I=$5$l!"(B
+    よって式\eqhref{Q13}の形で$\varepsilon_k$が表され、
 %
     \[ \varepsilon_0%
        = -\frac{\hbar^2 (1+2e^{-\frac{a}{\lambda}})^2}{2m\lambda^2}
@@ -444,18 +444,18 @@
        = \frac{m\lambda^2 e^{\frac{a}{\lambda}}}%
               {2a^2(1+2e^{-\frac{a}{\lambda}})} \]
 %
-    $B$HI=$5$l$k!#(B
+    と表される。
 
   \end{subsubanswers}
 
 \SubAnswer
   \begin{subsubanswers}
   \SubSubAnswer
-    $\lambda_0$$B$d(B$\lambda$$B$OEE;R$N9-$,$j$rI=$7$F$$$k$H;W$o$l$k!#(B
-    $B$=$l$,3J;R4V3V$h$j$b$:$C$H>.$5$$$N$G!"IT=cJ*86;R$K$H$i$($i$l$?(B
-    $BEE;R$O(B$x=0$$B$K6I:_$7$F$$$k!#$h$C$F$=$NEE;R$N?6Iq$$$O@_Ld(B{\bf 1}
-    $B$G5a$a$?>u67$H$[$\F1$8$G$"$k!#$?$@$7%]%F%s%7%c%k$OIT=cJ*$K$h$k(B
-    $B$b$N$H7k>=$N(B$x=a$$BIU6a$N$b$N$K$h$k$b$N$NOB$G$"$k!#$9$J$o$A!"(B
+    $\lambda_0$や$\lambda$は電子の広がりを表していると思われる。
+    それが格子間隔よりもずっと小さいので、不純物原子にとらえられた
+    電子は$x=0$に局在している。よってその電子の振舞いは設問{\bf 1}
+    で求めた状況とほぼ同じである。ただしポテンシャルは不純物による
+    ものと結晶の$x=a$付近のものによるものの和である。すなわち、
 %
     \[ V_{\rm ion}(x) + \Delta V(x)%
        = -\frac{\hbar^2}{m \lambda} \delta (x)%
@@ -463,22 +463,22 @@
        = -\frac{\hbar^2}{m \lambda^{\ast}} \delta (x) \hspace{15mm}%
        {\rm where} \quad \frac{1}{\lambda^{\ast}} = \frac{1}{\lambda} + \frac{1}{\lambda_0} \]
 %
-    $B$h$C$FEE;R$N%(%M%k%.!<$O(B $\bar{E}_0$$B$O@_Ld(B{\bf 1}(iii)$B$r;29M$K$7$F(B
+    よって電子のエネルギーは $\bar{E}_0$は設問{\bf 1}(iii)を参考にして
 %
     \[ \bar{E}_0 = -\frac{\hbar^2}{2m\lambda^{\ast 2}} \]
 %
-    $B$H$J$k!#(B
+    となる。
 
   \SubSubAnswer
-    $BEE;R$OA0LdF1MM$K(B$x=0$$B$N86;R$K6I:_$7$F$$$k$,!"IT=cJ*$N%]%F%s%7%c%k$O(B
-    $B7k>=$N$=$l$K$/$i$Y$F==J,>.$5$$$N$GL5;k$G$-$k!#$h$C$FEE;R$N?6Iq$$$O(B
-    $B@_Ld(B{\bf 1}$B$G5a$a$?>u67$H$[$\F1$8$G$"$k!#$?$@$7%]%F%s%7%c%k$O(B
-    $B7k>=$N(B$x=a$$BIU6a$N$b$N$G$"$k!#$h$C$F%(%M%k%.!<$O(B $\bar{E}_0$$B$O(B
-    $B@_Ld(B{\bf 1}(iii)$B$r;29M$K$7$F(B
+    電子は前問同様に$x=0$の原子に局在しているが、不純物のポテンシャルは
+    結晶のそれにくらべて十分小さいので無視できる。よって電子の振舞いは
+    設問{\bf 1}で求めた状況とほぼ同じである。ただしポテンシャルは
+    結晶の$x=a$付近のものである。よってエネルギーは $\bar{E}_0$は
+    設問{\bf 1}(iii)を参考にして
 %
     \[ \bar{E}_0 = -\frac{\hbar^2}{2m\lambda^{2}} \]
 %
-    $B$H$J$k!#(B
+    となる。
 
   \end{subsubanswers}
 

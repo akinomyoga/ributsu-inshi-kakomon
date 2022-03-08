@@ -1,7 +1,7 @@
 \newcommand{\trd}[1]{{}^{\dag}\hspace{-1mm}#1}
 \newcommand{\pdif}[2]{\frac{\partial #1}{\partial #2}}
 
-\begin{answer}{‘æ‚P–â}{Îì}
+\begin{answer}{ç¬¬ï¼‘å•}{çŸ³å·}
 \begin{enumerate}
 \item 
   \begin{eqnarray}
@@ -34,10 +34,10 @@
 \end{enumerate}
 \end{answer}
 
-\begin{answer}{‘æ‚Q–â}{Îì}
+\begin{answer}{ç¬¬ï¼’å•}{çŸ³å·}
 \begin{enumerate}
 \item 
-  $\delta y(x_0)=\delta y(x_1)=0$‹y‚ÑA$(\delta y)^{\prime}=\delta y^{\prime}$‚É’ˆÓ‚µ‚Ä•ÏŒ`‚·‚é‚Æ
+  $\delta y(x_0)=\delta y(x_1)=0$åŠã³ã€$(\delta y)^{\prime}=\delta y^{\prime}$ã«æ³¨æ„ã—ã¦å¤‰å½¢ã™ã‚‹ã¨
   \begin{eqnarray}
   \delta S &=& \int_{x_0}^{x_1}\delta F(y(x),y^{\prime}(x))dx\\
   &=& \int_{x_0}^{x_1} \left( \pdif{F(y(x),y^{\prime}(x))}{y}\delta y + \pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\delta y^{\prime}\right) dx\\
@@ -45,21 +45,21 @@
   &&+ \left[\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\delta y\right]_{x_0}^{x_1}\\
   &=& \int_{x_0}^{x_1} \left( \pdif{F(y(x),y^{\prime}(x))}{y} - \frac{d}{dx}\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}}\right)\delta y dx
   \end{eqnarray}
-  ‚±‚±‚Å‹É’l‚ğæ‚é‚½‚ß‚É‚Í\\
+  ã“ã“ã§æ¥µå€¤ã‚’å–ã‚‹ãŸã‚ã«ã¯\\
   \begin{equation}
   \delta S = 0
   \end{equation}
-  ‚±‚ê‚Í\\
+  ã“ã‚Œã¯\\
   \begin{eqnarray}
   \pdif{F(y(x),y^{\prime}(x))}{y} - \frac{d}{dx}\pdif{F(y(x),y^{\prime}(x))}{y^{\prime}} &=& 0
   \end{eqnarray}
 \item 
-  F‚Ì‘S”÷•ª‚Ì®\\
+  Fã®å…¨å¾®åˆ†ã®å¼\\
   \begin{eqnarray}
   \frac{dF}{dx} = \pdif{F}{y}y^{\prime} + \pdif{F}{y^{\prime}}\frac{dy^{\prime}}{dx}
   \end{eqnarray}
-  ‚É’ˆÓ‚µ‚Ä\\
-  (20)‚É$y^{\prime}$‚ğ‚©‚¯‚Ä(21)‚ğ‘ã“ü‚·‚ê‚Î\\
+  ã«æ³¨æ„ã—ã¦\\
+  (20)ã«$y^{\prime}$ã‚’ã‹ã‘ã¦(21)ã‚’ä»£å…¥ã™ã‚Œã°\\
   \begin{eqnarray}
   0=\pdif{F}{y}y^{\prime}-y^{\prime}\frac{d}{dx}\pdif{F}{y^{\prime}} &=& \frac{dF}{dx} - \pdif{F}{y^{\prime}}\frac{dy^{\prime}}{dx}-y^{\prime}\frac{d}{dx}\pdif{F}{y^{\prime}}\\
   &=& \frac{d}{dx}\left(F-y^{\prime}\pdif{F}{y^{\prime}} \right)\\
@@ -73,7 +73,7 @@
   \begin{equation}
   F = 2\pi y\sqrt{1+y^{\prime 2}}
   \end{equation}
-  ‚ğ(24)‚É‘ã“ü‚µ‚Ä\\
+  ã‚’(24)ã«ä»£å…¥ã—ã¦\\
   \begin{eqnarray}
   y\sqrt{1+y^{\prime 2}}-\frac{yy^{\prime 2}}{\sqrt{1+y^{\prime 2}}} &=& C\\
   \frac{y}{\sqrt{1+y^{\prime 2}}} &=& C\\
@@ -84,25 +84,25 @@
   \xi = \frac{x}{C}\\
   \eta = \frac{y}{C}
   \end{eqnarray}
-  ‚Æ‚¨‚­‚Æ(29)‚Í\\
+  ã¨ãŠãã¨(29)ã¯\\
   \begin{eqnarray}
   \eta^2 = 1+\eta^{\prime 2}
   \end{eqnarray}
-  $y(x)$‚ªÅ¬’l‚ğ‚Æ‚éÀ•W‚ğ$(l,C)$‚Æ‚¨‚­((28)‚æ‚è$y^{\prime}=0‚Ì‚Æ‚«y=C(>0)$)\\
-  $x \geq l(\xi \geq l/C)$‚Ìê‡ŒX‚«‚Í³‚¾‚Æl‚¦‚ç‚ê‚é‚Ì‚Å(32)‚©‚ç\\
+  $y(x)$ãŒæœ€å°å€¤ã‚’ã¨ã‚‹åº§æ¨™ã‚’$(l,C)$ã¨ãŠã((28)ã‚ˆã‚Š$y^{\prime}=0ã®ã¨ãy=C(>0)$)\\
+  $x \geq l(\xi \geq l/C)$ã®å ´åˆå‚¾ãã¯æ­£ã ã¨è€ƒãˆã‚‰ã‚Œã‚‹ã®ã§(32)ã‹ã‚‰\\
   \begin{eqnarray}
   \sqrt{\eta^2 - 1} &=& \frac{d\eta}{d\xi}\\
   \int_1^{\eta}\frac{d\eta}{\sqrt{\eta^2-1}}&=&\int_{l/C}^{\xi}d\xi\\
   \ln(\eta+\sqrt{\eta^2-1})&=&\xi - l\\
   \eta &=& \cosh(\xi-\frac{l}{C})\\
   \end{eqnarray}
-  $x \leq l(\xi \leq l/C)$‚Ìê‡‚à“¯—l‚É‚µ‚Ä\\
+  $x \leq l(\xi \leq l/C)$ã®å ´åˆã‚‚åŒæ§˜ã«ã—ã¦\\
   \begin{eqnarray}
   -\sqrt{\eta^2 - 1} &=& \frac{d\eta}{d\xi}\\
   -\int_1^{\eta}\frac{d\eta}{\sqrt{\eta^2-1}}&=&\int_{l/C}^{\xi}d\xi\\
   \eta &=& \cosh(\xi-\frac{l}{C})\\
   \end{eqnarray}
-  ‚æ‚Á‚Ä\\
+  ã‚ˆã£ã¦\\
   \begin{eqnarray}
   y = C\cosh(\frac{x-l}{C})
   \end{eqnarray}

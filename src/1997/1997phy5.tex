@@ -3,40 +3,40 @@
 
 \begin{document}
 
-\begin{question}{$B@l96(B $BLdBj(B5}{}
+\begin{question}{専攻 問題5}{}
 
-$BJ*<A$N7k>=9=B$$d3J;RDj?t$r5a$a$?$j!"C17k>=$NJ}0L$rD4$Y$k4JJX$JJ}K!$H$7$FMQ$$$i$l$k#X@~2s@^<L??K!$NBeI=E*$J$b$N$K!"%i%&%(K!$H%G%P%$!&%7%e%i!<K!$,$"$k!#$3$l$i$O!"$=$NL\E*!"MQ$$$k#X@~$N<oN`!";nNA$J$I$K82Cx$J0c$$$,$"$k!#(B
+物質の結晶構造や格子定数を求めたり、単結晶の方位を調べる簡便な方法として用いられるＸ線回折写真法の代表的なものに、ラウエ法とデバイ・シュラー法がある。これらは、その目的、用いるＸ線の種類、試料などに顕著な違いがある。
 
 \begin{subquestions}
 \SubQuestion
-$B>e5-$N#2J}K!$N$=$l$>$l$K$D$$$F!"$=$NL\E*!"MQ$$$k#X@~!";nNA$NJL$r=R$Y$h!#(B
+上記の２方法のそれぞれについて、その目的、用いるＸ線、試料の別を述べよ。
 \end{subquestions}
 
-$B7k>=$NC10LK&!JC10L3J;R!K$N#3NG$rI=$94pK\%Y%/%H%k(B$\Vec{a_1}$,$\Vec{a_2}$,$\Vec{a_3}$$B$H(B
+結晶の単位胞（単位格子）の３稜を表す基本ベクトル$\Vec{a_1}$,$\Vec{a_2}$,$\Vec{a_3}$と
 \[ \Vec{a_i}\cdot \Vec{b_j}=\delta_{ij}\]
-$B$N4X78$K$"$k%Y%/%H%k(B$\Vec{b_1}$,$\Vec{b_2}$,$\Vec{b_3}$$B$r4pK\%Y%/%H%k$H$9$k3J;R$r5U3J;R$H$$$&!#$^$?!"(B$g_1$,$g_2$,$g_3$$B$r@0?t$H$9$k$H$-!"%Y%/%H%k(B
+の関係にあるベクトル$\Vec{b_1}$,$\Vec{b_2}$,$\Vec{b_3}$を基本ベクトルとする格子を逆格子という。また、$g_1$,$g_2$,$g_3$を整数とするとき、ベクトル
 \[ \Vec{g}=g_1\Vec{b_1}+g_2\Vec{b_2}+g_3\Vec{b_3} \]
-$B$r5U3J;R%Y%/%H%k$H$$$&!#7k>=$N3J;RLL!J86;RLL!K$rI=$9$N$K$O!"%_%i!<;X?t$,MQ$$$i$l$k!#%_%i!<;X?t(B$(g_1,g_2,g_3)$$B$GI=$5$l$k3J;RLL$O!"5U3J;R%Y%/%H%k(B$\Vec{g}$$B$K?bD>$G$"$j!"8_$$$KAG$J%_%i!<;X?t(B$(g_1,g_2,g_3)$$B$GI=$5$l$k3J;RLL$NLL4V3V$O!"(B
+を逆格子ベクトルという。結晶の格子面（原子面）を表すのには、ミラー指数が用いられる。ミラー指数$(g_1,g_2,g_3)$で表される格子面は、逆格子ベクトル$\Vec{g}$に垂直であり、互いに素なミラー指数$(g_1,g_2,g_3)$で表される格子面の面間隔は、
 \[ d=1/|\Vec{g}| \]
-$B$GM?$($i$l$k!#(B
+で与えられる。
 
-$BF~<M#X@~$*$h$S!"H?<M#X@~$NGH?t%Y%/%H%k$r$=$l$>$l!"(B$\Vec{k_0}$$B$*$h$S(B$\Vec{k}$$B$H$9$k$H!"7k>=$K$h$k6/$$2s@^$,5/$-$k>r7o$O%i%&%($N>r7o(B
+入射Ｘ線および、反射Ｘ線の波数ベクトルをそれぞれ、$\Vec{k_0}$および$\Vec{k}$とすると、結晶による強い回折が起きる条件はラウエの条件
 \[ \Vec{k}-\Vec{k_0}=\Vec{g} \]
-$B$GM?$($i$l$k!#$3$3$G!"(B$\Vec{g}$$B$OG$0U$N5U3J;R%Y%/%H%k$G$"$k!#(B
+で与えられる。ここで、$\Vec{g}$は任意の逆格子ベクトルである。
 
 \begin{subquestions}[2]
 \SubQuestion
-$B%i%&%($N>r7o$+$i%V%i%C%0$N>r7o$,F3$+$l$k$3$H$r<($;!#(B
+ラウエの条件からブラッグの条件が導かれることを示せ。
 \end{subquestions}
 
-$BC10LK&$NCf$K(B$n$$B8D$N86;R$r4^$`7k>=$+$i$N2s@^@~$N?6I}$O!"86;R(B$i$$B$N86;R;6Mp0x;R$r(B$f_i(\Vec{g})$$B$H$7$F!"9=B$0x;R(B
+単位胞の中に$n$個の原子を含む結晶からの回折線の振幅は、原子$i$の原子散乱因子を$f_i(\Vec{g})$として、構造因子
 \[ F(\Vec{g})=\sum_{i=1}^n f(\Vec{g})\exp(2\pi i \Vec{g}\cdot \Vec{r_i}) \]
-$B$KHfNc$9$k!#$3$3$G!"(B$\Vec{r_i}$$B$O!"86;R(B$i$$B$N0LCV%Y%/%H%k$G$"$k!#(B
+に比例する。ここで、$\Vec{r_i}$は、原子$i$の位置ベクトルである。
 
 \begin{subquestions}[3]
 \SubQuestion
 \parbox[t]{70mm}{
-$B1&?^$N$h$&$KC10LK&$r$H$k$H$-!"LL?4N)J}!J(Bfcc$B!K9=B$$*$h$SBN?4N)J}!J(Bbcc$B!K9=B$$N$=$l$>$l$K$D$$$F!"GHD9(B$\lambda$$B$N#X@~%V%i%C%0H?<M$N%_%i!<;X?t$r%V%i%C%03Q$N>.$5$$J}$+$i#3$D$:$D5s$2$h!#$?$@$7!"7k>=3XE*$KF1Ey$JH?<M$O$R$H$D$H?t$($k!#(B}\parbox[t]{50mm}{\vspace*{-5mm}
+右図のように単位胞をとるとき、面心立方（fcc）構造および体心立方（bcc）構造のそれぞれについて、波長$\lambda$のＸ線ブラッグ反射のミラー指数をブラッグ角の小さい方から３つずつ挙げよ。ただし、結晶学的に同等な反射はひとつと数える。}\parbox[t]{50mm}{\vspace*{-5mm}
 \begin{center}
 \includegraphics[clip,height=45mm,width=40mm]{1997phy5-1.eps}
 \end{center}
@@ -47,10 +47,10 @@
 }
 \end{subquestions}
 
-\parbox[t]{110mm}{$B1&$NI=$O!"F<!J(Bfcc$B9=B$!K$*$h$SE4!J(Bbcc$B9=B$!K$r;nNA$H$7$F!"2s@^$5$l$?%b%j%V%G%s$N(B${\rm{K}}_\alpha$$B@~!JGHD9(B0.71$B"r!K$K$D$$$F!"(B$\sin\theta_B$$B!J(B$\theta_B$$B$O%V%i%C%03Q!K$NCM$r>.$5$$J}$+$i#4$DJB$Y$?$b$N$G$"$k!#(B}\parbox[t]{50mm}{\vspace*{-7mm}
+\parbox[t]{110mm}{右の表は、銅（fcc構造）および鉄（bcc構造）を試料として、回折されたモリブデンの${\rm{K}}_\alpha$線（波長0.71Å）について、$\sin\theta_B$（$\theta_B$はブラッグ角）の値を小さい方から４つ並べたものである。}\parbox[t]{50mm}{\vspace*{-7mm}
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
-$B=g0L(B & $B;nNA#A(B & $B;nNA#B(B \\ \hline 
+順位 & 試料Ａ & 試料Ｂ \\ \hline 
 1 & 0.175 & 0.170 \\ \hline
 2 & 0.248 & 0.196 \\ \hline 
 3 & 0.303 & 0.278 \\  \hline
@@ -61,11 +61,11 @@
 
 \begin{subquestions}[4]
 \SubQuestion
-$B;nNA#A$OF<!&E4$N$I$A$i$+!#(B
+試料Ａは銅・鉄のどちらか。
 \end{subquestions}
 
 \parbox[t]{110mm}{
-NaCl$B$O4d1v7?!J1&?^!K$N7k>=9=B$$r$J$7!"@5%$%*%s$"$k$$$OIi%$%*%s$N$_$,$D$/$kI{3J;R$O$H$b$KLL?4N)J}3J;R$G$"$k!#2<?^$O!"(BNaCl$B$K$h$C$F2s@^$5$l$?F<$N(B${\rm{K}}_\alpha$$B@~$N6/EYJ,I[$G$"$k!#(B}\parbox[t]{50mm}{\vspace*{-10mm}
+NaClは岩塩型（右図）の結晶構造をなし、正イオンあるいは負イオンのみがつくる副格子はともに面心立方格子である。下図は、NaClによって回折された銅の${\rm{K}}_\alpha$線の強度分布である。}\parbox[t]{50mm}{\vspace*{-10mm}
 \begin{center}
 \includegraphics[clip,height=40mm,width=40mm]{1997phy5-3.eps}
 \end{center}
@@ -73,7 +73,7 @@ NaCl$B$O4d1v7?!J1&?^!K$N7k>=9=B$$r$J$7!"@5%$%*%s$"$k$$$OIi%$%*%s$N$_$,$D$/$kI{3
 
 \begin{subquestions}[5]
 \SubQuestion
-$B2<?^$K$*$$$F!"%T!<%/#1!&#4$N6/EY$O!"#2!&#3!&#5$KHf$Y$F6KC<$K>.$5$$!#$3$N$h$&$J6/EYJ,I[$,8=$l$kM}M3$r@bL@$;$h!#(B
+下図において、ピーク１・４の強度は、２・３・５に比べて極端に小さい。このような強度分布が現れる理由を説明せよ。
 
 \begin{center}
 \includegraphics[clip,height=70mm,width=100mm]{1997phy5-4.eps}
@@ -81,31 +81,31 @@ NaCl$B$O4d1v7?!J1&?^!K$N7k>=9=B$$r$J$7!"@5%$%*%s$"$k$$$OIi%$%*%s$N$_$,$D$/$kI{3
 
 \end{subquestions}
 \end{question}
-\begin{answer}{$B@l96(B $BLdBj(B5}{}
+\begin{answer}{専攻 問題5}{}
 \begin{subanswers}
 
 \SubAnswer  
-$B$^$H$a$k$H<!$N$h$&$K$J$k!#(B
+まとめると次のようになる。
  
 \begin{tabular}{|c||p{5cm}|p{5cm}|} \hline
-    & $B%i%&%(K!(B & $B%G%P%$!&%7%e%i!<K!(B \\ \hline\hline
-$BL\E*(B& $B7k>=$NBP>N@-$rD4$Y$?$j!"4{CN7k>=$NJ}8~$rD4$Y$k!#(B& $B7k>=$N3J;RDj?t!&9=B$Ey$r7hDj$9$k!#(B\\ \hline
-$BMQ$$$k#X@~(B  & $BO"B3#X@~!JGr?'#X@~!K(B & $BC1?'#X@~(B \\ \hline
-$B;nNA(B & $BC17k>=(B & $BJ4Kv>u7k>=(B  \\ \hline
+    & ラウエ法 & デバイ・シュラー法 \\ \hline\hline
+目的& 結晶の対称性を調べたり、既知結晶の方向を調べる。& 結晶の格子定数・構造等を決定する。\\ \hline
+用いるＸ線  & 連続Ｘ線（白色Ｘ線） & 単色Ｘ線 \\ \hline
+試料 & 単結晶 & 粉末状結晶  \\ \hline
 \end{tabular}
 
 \SubAnswer
 \parbox[t]{100mm}{
-$\Vec{g}=(ng_1,ng_2,ng_3)=n\Vec{g_0}$$B$N7A$K!"(B$g_1,g_2,g_3$$B$,8_$$$KAG$K$J$k$h$&$J@0?t(B$n$$B$r$H$k!#(B$|\Vec{k}|=|\Vec{k_0}|=\frac{1}{\lambda}$$B$J$N$G!"(B
+$\Vec{g}=(ng_1,ng_2,ng_3)=n\Vec{g_0}$の形に、$g_1,g_2,g_3$が互いに素になるような整数$n$をとる。$|\Vec{k}|=|\Vec{k_0}|=\frac{1}{\lambda}$なので、
 \[ |\Vec{k}-\Vec{k_0}|^2=|\Vec{g}|^2 \Longleftrightarrow 4\frac{1}{\lambda}^2 \sin^2\theta =\frac{n^2}{d^2} \Longleftrightarrow n\lambda =2d\sin\theta \]
-$B$h$C$F!"%V%i%C%0$NH?<M$N8x<0$,F@$i$l$?!#(B}\parbox[t]{60mm}{\vspace*{-10mm}
+よって、ブラッグの反射の公式が得られた。}\parbox[t]{60mm}{\vspace*{-10mm}
 \begin{center}
 \includegraphics[clip,height=30mm,width=50mm]{1997phy5-5.eps}
 \end{center}
 }
 
 \SubAnswer
-$B:#!"(Bbcc$B!JBN?4N)J}!K$NC10LK&$H$7$F?^$NN)J}BN$r9M$($k!#(B $B$3$NC10LK&$K$O#2$D$NF1<oN3;R$,(B$(0,0,0)$$B$H(B$(\frac{1}{2},\frac{1}{2},\frac{1}{2})$$B$KF~$C$F$$$k$H9M$($i$l$k$N$G!"(B$f_{(0,0,0)}(\Vec{g})=f_{(\frac{1}{2},\frac{1}{2},\frac{1}{2})}(\Vec{g}) \equiv f(g)$$B$H$7$F!"(B
+今、bcc（体心立方）の単位胞として図の立方体を考える。 この単位胞には２つの同種粒子が$(0,0,0)$と$(\frac{1}{2},\frac{1}{2},\frac{1}{2})$に入っていると考えられるので、$f_{(0,0,0)}(\Vec{g})=f_{(\frac{1}{2},\frac{1}{2},\frac{1}{2})}(\Vec{g}) \equiv f(g)$として、
 \begin{eqnarray*} 
 F(\Vec{g})& = & f(g)\{1+\exp(i\pi(g_1+g_2+g_3)) \\
     & = & f(g)\times
@@ -115,9 +115,9 @@ F(\Vec{g})& = & f(g)\{1+\exp(i\pi(g_1+g_2+g_3)) \\
 \end{array}\right.
 \end{eqnarray*}
 
-$|\Vec{g_1}|<|\Vec{g_2}| \Longleftrightarrow |\theta_1|<|\theta_2|$$B$+$i!"(B$|\Vec{g}|$$B$N>.$5$$$b$N$+$i#3$D5s$2$l$PNI$$!#C"$7!"(B$g_1,g_2,g_3$$B$NF~$lBX$($NAH$_9g$o$;$GEy$7$/$J$C$?$j!"@5Ii$,5UE>$7$F$$$k$b$N$O!"F1Ey$JH?<M$H$J$k$N$G!"=|$+$J$1$l$P$J$i$J$$!#$^$?!"(B$F(\Vec{g})$$B$,(B$0$$B$K$J$j>e$N>CLGB'$rK~$?$9$b$N$O!"H?<M$7$J$$$3$H$r0UL#$9$k$N$G=|$+$M$P$J$i$J$$!#$h$C$F!"5a$a$k%_%i!<;X?t$O(B$(1,1,0),(2,0,0),(2,1,1)$$B$G$"$k!#(B
+$|\Vec{g_1}|<|\Vec{g_2}| \Longleftrightarrow |\theta_1|<|\theta_2|$から、$|\Vec{g}|$の小さいものから３つ挙げれば良い。但し、$g_1,g_2,g_3$の入れ替えの組み合わせで等しくなったり、正負が逆転しているものは、同等な反射となるので、除かなければならない。また、$F(\Vec{g})$が$0$になり上の消滅則を満たすものは、反射しないことを意味するので除かねばならない。よって、求めるミラー指数は$(1,1,0),(2,0,0),(2,1,1)$である。
 
-fcc$B$N>l9g$b!"F1MM$K#3$D$NF1<oN3;R$,B8:_$7$F$$$k$H9M$($F!"(B
+fccの場合も、同様に３つの同種粒子が存在していると考えて、
 \begin{eqnarray*}
 F(\Vec{g}) & = & f(g)(1+\exp(i\pi(g_2+g_3))+\exp(i\pi(g_3+g_1))+\exp(i\pi(g_1+g_2)) \\
            & = & f(g)(1+(-1)^{(g_2+g_3)}+(-1)^{(g_3+g_1)}+(-1)^{(g_1+g_2)}) \\
@@ -127,12 +127,12 @@ F(\Vec{g}) & = & f(g)(1+\exp(i\pi(g_2+g_3))+\exp(i\pi(g_3+g_1))+\exp(i\pi(g_1+g_
 0 & \quad & g_1,g_2,g_3 & \quad & {\mbox{Otherwise}} \\
 \end{array}\right.
 \end{eqnarray*}
-bcc$B$HF1MM$K$7$F!"5a$a$k%_%i!<;X?t$O!"(B$(1,1,1),(2,0,0),(2,2,0)$$B$H$J$k!#(B
+bccと同様にして、求めるミラー指数は、$(1,1,1),(2,0,0),(2,2,0)$となる。
 
 \SubAnswer
-\parbox[t]{70mm}{{\bf{2}}$B$N7W;;$+$i!"(B{\bf{3}}$B$G$b$H$a$?%V%i%C%03Q(B$\theta_B$$B$N>.$5$$$b$N$+$i!"(B$\theta_{B1},\theta_{B2}$$B$H$9$k$H!"(B$\sin\theta_B$$B$NHf$O!"(B
+\parbox[t]{70mm}{{\bf{2}}の計算から、{\bf{3}}でもとめたブラッグ角$\theta_B$の小さいものから、$\theta_{B1},\theta_{B2}$とすると、$\sin\theta_B$の比は、
 \[ \frac{\sin\theta_{B1}}{\sin\theta_{B2}}=\frac{|\Vec{g_1}|}{|\Vec{g_2}|} \]
-$B$N4X78$,$"$k$N$G!"M?$($i$l$?I=$N?tCM$K$D$$$F!"7W;;$9$k$H!"1&I=$N$h$&$K$J$k!#(B}
+の関係があるので、与えられた表の数値について、計算すると、右表のようになる。}
 \parbox[t]{80mm}{\vspace*{-5mm}
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|} \hline
@@ -144,9 +144,9 @@ fcc &      &    & $\sqrt{3}$ & $\sqrt{2}$ \\ \hline
 \end{tabular}\end{center}
 }
 
-$B$h$C$F!"(BA$B$r(Bbcc$B!"(BB$B$r(Bfcc$B$HH=CG$9$Y$-$G$"$k!#$h$C$F!"(BA$B$,E4$G$"$k!#(B
+よって、Aをbcc、Bをfccと判断すべきである。よって、Aが鉄である。
 \SubAnswer
-{\bf{3}}$B$HF1MM$K$7$F!"?^$NN)J}BN$rC10LK&$H9M$($k$H!"(B$\forall f_i(\Vec{g})\{\Vec{r_i}$B$K(B{\rm{Cl}}$B86;R$,B8:_$7$F$$$k!#(B\} \equiv f_{\rm{Cl}}$$B!"(B$\forall f_i(\Vec{g})\{\Vec{r_i}$B$K(B{\rm{Na}}$B86;R$,B8:_$7$F$$$k!#(B\} \equiv f_{\rm{Na}}$$B$H=q$/$3$H$K$9$k$H!"(B
+{\bf{3}}と同様にして、図の立方体を単位胞と考えると、$\forall f_i(\Vec{g})\{\Vec{r_i}に{\rm{Cl}}原子が存在している。\} \equiv f_{\rm{Cl}}$、$\forall f_i(\Vec{g})\{\Vec{r_i}に{\rm{Na}}原子が存在している。\} \equiv f_{\rm{Na}}$と書くことにすると、
 \begin{eqnarray*}
 F(\Vec{g}) & = & f_{\rm{Cl}}(1+(-1)^{g_2+g_3}+(-1)^{g_3+g_1}+(-1)^{g_1+g_2})+f_{\rm{Na}}((-1)^{g_1}+(-1)^{g_2}+(-1)^{g_3}+(-1)^{g_1+g_2+g_3}) \\
     & = & \left\{ \begin{array}{ccc}
@@ -156,16 +156,16 @@ F(\Vec{g}) & = & f_{\rm{Cl}}(1+(-1)^{g_2+g_3}+(-1)^{g_3+g_1}+(-1)^{g_1+g_2})+f_{
 \end{array}\right.
 \end{eqnarray*}
 \parbox[t]{70mm}{
-\rm{Na}$B!"(B\rm{Cl}$B$KBP$7$F;6Mp0x;R$,Bg$-$/0[$J$k860x$O9M$($i$l$J$$$+$i!"(B$|f_{\rm{Na}}+f_{\rm{Cl}}|>|f_{\rm{Na}}-f_{\rm{Cl}}|$$B$H9M$($k$N$,@5$7$$$H;W$o$l$k!#$9$k$H(B$|\Vec{g}|$$B$N>.$5$$$b$N$+$i=g$K!"(B
-$B1&I=$NDL$j!"6v4q@-$H%T!<%/$NBg>.$NBP1~$,$H$l$F$*$j!">e$N?dDj$,@5$7$/!"6/EYJ,I[$r@bL@$G$-$?$3$H$K$J$k!#(B}\parbox[t]{100mm}{\vspace*{-10mm}
+\rm{Na}、\rm{Cl}に対して散乱因子が大きく異なる原因は考えられないから、$|f_{\rm{Na}}+f_{\rm{Cl}}|>|f_{\rm{Na}}-f_{\rm{Cl}}|$と考えるのが正しいと思われる。すると$|\Vec{g}|$の小さいものから順に、
+右表の通り、偶奇性とピークの大小の対応がとれており、上の推定が正しく、強度分布を説明できたことになる。}\parbox[t]{100mm}{\vspace*{-10mm}
 \begin{center}
 \begin{tabular}{|p{20mm}|p{20mm}|p{30mm}|} \hline
-$\Vec{g}$ & $F(\Vec{g})$$B$N>r7o(B & $BFI$_<h$j$N%T!<%/$NBg$-$5(B \\ \hline\hline
-$(1,1,1)$ & {\mbox{All odd}}  &  $B>.(B  \\ \hline
-$(2,0,0)$ & {\mbox{All Even}} &  $BBg(B  \\ \hline
-$(2,2,0)$ & {\mbox{All Even}} &  $BBg(B  \\ \hline
-$(3,1,1)$ & {\mbox{All Odd}}  &  $B>.(B  \\ \hline
-$(2,2,2)$ & {\mbox{All Even}}  &  $BBg(B  \\ \hline
+$\Vec{g}$ & $F(\Vec{g})$の条件 & 読み取りのピークの大きさ \\ \hline\hline
+$(1,1,1)$ & {\mbox{All odd}}  &  小  \\ \hline
+$(2,0,0)$ & {\mbox{All Even}} &  大  \\ \hline
+$(2,2,0)$ & {\mbox{All Even}} &  大  \\ \hline
+$(3,1,1)$ & {\mbox{All Odd}}  &  小  \\ \hline
+$(2,2,2)$ & {\mbox{All Even}}  &  大  \\ \hline
 \end{tabular}\end{center}}
  
 \end{subanswers}

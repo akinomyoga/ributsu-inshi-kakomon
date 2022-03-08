@@ -1,44 +1,44 @@
 %-------------------------------------------------------------------------------
-% 2005�N�x���{ 2006�N�x���w ���w ��� 1
+% 2005年度実施 2006年度入学 数学 問題 1
 %-------------------------------------------------------------------------------
-\begin{question}{��P��}{����}
+\begin{question}{第１問}{村瀬}
 
-���f���𐬕��Ƃ��� $n$ �s1�� ($n\geq1$) �̏c�x�N�g���S�̂̏W�� $\mathbb{C}^n$ �́A$n$ �����̕��f���`��
-�Ԃ��Ȃ��B�Q�̃x�N�g�� $\bm x, \bm y\in\mathbb C^n$ �ɂ��āA���̓��� $(\bm x,\bm y)$ ���A$(\bm x,\bm y)\equiv \bm x^\dag\bm y$ �ɂĒ�`
-����B�������A$\bm x^\dag$ �� $\bm x$ �̃G���~�[�g���� (�]�u�̕��f����) ��\���B$\|\bm x\|\equiv\sqrt{(\bm x,\bm x)}$ �� $\bm x$
-�̃m�����ƌ����B$A$ ��$n$�s$n$��̃G���~�[�g�s��Ƃ��A���̌ŗL�l�͂ǂ���k�ނ��Ȃ��Ƃ�
-��B�ŗL�l $a$ �ɑΉ�����(������)�K�i�����ꂽ�ŗL�x�N�g���� $\bm u_a$ �ƋL���B�����A
+複素数を成分とする $n$ 行1列 ($n\geq1$) の縦ベクトル全体の集合 $\mathbb{C}^n$ は、$n$ 次元の複素線形空
+間をなす。２つのベクトル $\bm x, \bm y\in\mathbb C^n$ について、その内積 $(\bm x,\bm y)$ を、$(\bm x,\bm y)\equiv \bm x^\dag\bm y$ にて定義
+する。ただし、$\bm x^\dag$ は $\bm x$ のエルミート共役 (転置の複素共役) を表す。$\|\bm x\|\equiv\sqrt{(\bm x,\bm x)}$ を $\bm x$
+のノルムと言う。$A$ を$n$行$n$列のエルミート行列とし、その固有値はどれも縮退がないとす
+る。固有値 $a$ に対応する(属する)規格化された固有ベクトルを $\bm u_a$ と記す。即ち、
 \[
   A\bm u_a=a\bm u_a,
   \quad (\bm u_a,\bm u_{a'})=\delta_{a,a'}.
 \]
-�ŗL�l $a$ �͑S�Ď����ł���B�܂��A�S�Ă� $a$ �ɂ��� $\bm u_a$ ���W�߂��W�� $\{\bm u_a\}$ �́A$\mathbb C^n$ �̐��K
-�������S�n�𐬂��B�ȉ��̐ݖ�ɓ�����B
+固有値 $a$ は全て実数である。また、全ての $a$ について $\bm u_a$ を集めた集合 $\{\bm u_a\}$ は、$\mathbb C^n$ の正規
+直交完全系を成す。以下の設問に答えよ。
 \begin{enumerate}
 \item
-  �e�ŗL�l $a$ ���ƂɁA���̍s����`����:
+  各固有値 $a$ ごとに、次の行列を定義する:
   \[P(a)\equiv\bm u_a\bm u_a^\dag.\]
-  ���̂Ƃ��A���̓��������藧�����Ƃ�����:
+  このとき、次の等式が成り立っことを示せ:
   \[P(a)P(a')\equiv\delta_{a,a'}P(a).\]
 \item 
-  �K���ɑI�񂾃x�N�g�� $\bm x$ �ɂ��āA������ $P(a)\bm x$ ���[���x�N�g���łȂ���΁A$P(a)\bm x$
-  �͌ŗL�l $a$ �ɑ΂��� $A$ �̌ŗL�x�N�g���ł��邱�Ƃ������B
+  適当に選んだベクトル $\bm x$ について、もしも $P(a)\bm x$ がゼロベクトルでなければ、$P(a)\bm x$
+  は固有値 $a$ に対する $A$ の固有ベクトルであることを示せ。
 \item 
-  ���̓���������:
+  次の等式を示せ:
   \[A\equiv\sum_a aP(a).\]
-  �����A�C�ӂ� $\bm x\in\mathbb C^n$ �ɂ��āA$A\bm x=\sum_a aP(a)\bm x$ �������B
+  即ち、任意の $\bm x\in\mathbb C^n$ について、$A\bm x=\sum_a aP(a)\bm x$ を示せ。
 \item 
-  �ŗL�l $a$ �̑S�Ăɂ��Ē�`���ꂽ�֐� $f(a)$ ��p���āA���̍s�� $f(A)$ ���`����:
+  固有値 $a$ の全てについて定義された関数 $f(a)$ を用いて、次の行列 $f(A)$ を定義する:
   \[f(A)\equiv\sum_af(a)P(a).\]
-  $f(A)$ �̌ŗL�l�ƌŗL�x�N�g�����A���ꂼ�� $f(a), \bm u_a$ �ŗ^�����邱�Ƃ������B
+  $f(A)$ の固有値と固有ベクトルが、それぞれ $f(a), \bm u_a$ で与えられることを示せ。
 \item 
-$A$ �̍ŏ��ŗL�l�� $a_0$ �Ƃ���B�K���ɑI�񂾃x�N�g�� $\bm x$ �ɂ��āA$P(a_0)\bm x$ ���[���x�N
-�g���łȂ������Ƃ���B���̂Ƃ��A
+$A$ の最小固有値を $a_0$ とする。適当に選んだベクトル $\bm x$ について、$P(a_0)\bm x$ がゼロベク
+トルでなかったとする。このとき、
 \[
   \bm v\equiv\lim_{t\to\infty}\frac{e^{-At}\bm x}{\|e^{-At}\bm x\|}
 \]
-�Ƃ����ƁA$n$ �� $a_0$ �ɑΉ�����ŗL�x�N�g���ł��邱�Ƃ������B�������A$t$ ��C�ӂ̎�
-���Ƃ��āA$f(a)=e^{-at}$ �ƑI�񂾏ꍇ�� $f(A)$ �� $e^{-At}$ �ƋL�����B
+とおくと、$n$ が $a_0$ に対応する固有ベクトルであることを示せ。ただし、$t$ を任意の実
+数として、$f(a)=e^{-at}$ と選んだ場合の $f(A)$ を $e^{-At}$ と記した。
 \end{enumerate}
 \end{question}
 

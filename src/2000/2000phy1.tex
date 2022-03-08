@@ -3,8 +3,8 @@
 \usepackage{txfonts}
 \begin{document}
 
-\begin{question}{$BLdBj(B1}{$B9u>B(B}
-\parbox[b]{100mm}{$B?^$N$h$&$J(B1$B<!85$N0f8M7?%]%F%s%7%c%k(B$U(x)$
+\begin{question}{問題1}{黒沼}
+\parbox[b]{100mm}{図のような1次元の井戸型ポテンシャル$U(x)$
 \[
 U(x)=
 \left\{
@@ -14,74 +14,74 @@ U(x)=
   \end{array}
 \right.
 \]
-$B$NCf$G$N<ANL(B$m$$B$NN3;R$NB+G{>uBV(B($B%(%M%k%.!<(B$E<0$)$B$r9M$($k!#(B}
+の中での質量$m$の粒子の束縛状態(エネルギー$E<0$)を考える。}
 \parbox[t]{60mm}{
 %\includegraphics[width=40mm]{2000phy1-1.eps}
 \input{2000phy1-1.tpc}
 }
 
-%$B86K\$O(Benumerate$B$G=q$$$F$k$_$?$$$J$s$G$H$j$"$($:(B
-%$B86J8$K$J$i$C$F=q$$$F$*$-$^$9!#(B
+%原本はenumerateで書いてるみたいなんでとりあえず
+%原文にならって書いておきます。
 
 \begin{enumerate}
-  \item $B$^$:!"NL;RNO3X$NIT3NDj@-4X78$r;H$C$F$3$NLdBj$r9M$($k!#(B
+  \item まず、量子力学の不確定性関係を使ってこの問題を考える。
 	\begin{enumerate}
-  	  \item \eqname{Q1_1a}$BN3;R$,%]%F%s%7%c%k(B$U$$B$KB+G{$5$l$F$$$k$3$H$+$i!"D>46E*$K$O(B
-  	  	$BN3;R$N0LCV$NIT3NDj@-(B$\Delta x$$B$O(B$a$$BDxEY$@$H9M$($i$l$k!#(B
-  	  	$B$=$3$G!"(B$\Delta x=a$$B$H$7$FN3;R$N1?F0NL$NIT3NDj@-(B$\Delta p$$B$r5a$a$h!#(B
-  	  \item \eqname{Q1_1b}$B1?F0NL$NBg$-$5(B$p$$B$O(B$\Delta p$$B$h$jBg$-$$$H9M$($F!"(B
-  	  	(i) $B$N7k2L$+$iN3;R$NB+G{>uBV$,B8:_$9$k$?$a$K$O%]%F%s%7%c%k$N?<$5(B
-  	  	$U_0$$B$K$I$N$h$&$J>r7o$,I,MW$H;W$o$l$k$+!#(B
-  	  	%\eqhref{Q1a}$B$O$&$^$$$3$HI=<($5$l$J$$$H;W$&$s$GE,Ev$KD>$7$F$M!A(B
+  	  \item \eqname{Q1_1a}粒子がポテンシャル$U$に束縛されていることから、直感的には
+  	  	粒子の位置の不確定性$\Delta x$は$a$程度だと考えられる。
+  	  	そこで、$\Delta x=a$として粒子の運動量の不確定性$\Delta p$を求めよ。
+  	  \item \eqname{Q1_1b}運動量の大きさ$p$は$\Delta p$より大きいと考えて、
+  	  	(i) の結果から粒子の束縛状態が存在するためにはポテンシャルの深さ
+  	  	$U_0$にどのような条件が必要と思われるか。
+  	  	%\eqhref{Q1a}はうまいこと表示されないと思うんで適当に直してね〜
 	\end{enumerate}
-  \item $B<B$O>e$G5a$a$?B+G{>uBV$,B8:_$9$k>r7o$O@5$7$/$J$/!"(B
-  	$B$I$s$J$K@u$$%]%F%s%7%c%k$KBP$7$F$bB+G{>uBV$,B8:_$9$k!#(B	
+  \item 実は上で求めた束縛状態が存在する条件は正しくなく、
+  	どんなに浅いポテンシャルに対しても束縛状態が存在する。	
   	\begin{enumerate}
-  	  \item Schr\"odinger$BJ}Dx<0$r;H$C$FB+G{>uBV(B($E<0$)$B$NGHF04X?t(B$\psi(x)$$B$r5a$a$h!#(B
-  	  	$B$=$N:]!"%(%M%k%.!<(B$E$$B$H(B$U_0,a,m$$B$N4X78<0$rF3$1!#(B
-  	  	($BGHF04X?t$N5,3J2=$O9M$($J$/$F$h$$!#(B)
-  	  \item 1(ii) $B$N7k2L$KH?$7$F$I$N$h$&$J(B$U_0$$B$NCM$KBP$7$F$bB+G{>uBV$,B8:_$9$k$3$H$r<($;!#(B
-  	  \item \eqname{Q1_2c}$U_0\ll \frac{\hbar^2}{ma^2}$$B$N$H$-$K(B$E$$B$r5a$a$h!#(B
-  	  \item 2(iii)$B$N>l9g$KN3;R$,%]%F%s%7%c%k0f8M$N30B&$K$$$k3NN((B$P(|x|>a)$$B$H(B
-  	  	$BFbB&$K$$$k3NN((B$P(|x|<a)$$B$NHf(B$R=P(|x|>a)/P(|x|<a)$$B$r5a$a$h!#(B
-  	  	$B$^$?!"$3$l$+$i(B 1(ii) $B$N9M$(J}$,@5$7$/$J$+$C$?M}M3$r=R$Y$h!#(B
+  	  \item Schr\"odinger方程式を使って束縛状態($E<0$)の波動関数$\psi(x)$を求めよ。
+  	  	その際、エネルギー$E$と$U_0,a,m$の関係式を導け。
+  	  	(波動関数の規格化は考えなくてよい。)
+  	  \item 1(ii) の結果に反してどのような$U_0$の値に対しても束縛状態が存在することを示せ。
+  	  \item \eqname{Q1_2c}$U_0\ll \frac{\hbar^2}{ma^2}$のときに$E$を求めよ。
+  	  \item 2(iii)の場合に粒子がポテンシャル井戸の外側にいる確率$P(|x|>a)$と
+  	  	内側にいる確率$P(|x|<a)$の比$R=P(|x|>a)/P(|x|<a)$を求めよ。
+  	  	また、これから 1(ii) の考え方が正しくなかった理由を述べよ。
 	\end{enumerate}
 \end{enumerate}
 
 
 \end{question}
-\begin{answer}{$BLdBj(B1}{}
+\begin{answer}{問題1}{}
 \begin{enumerate}
   \item 
 	\begin{enumerate}
-  	  \item $BIT3NDj@-4X78$O(B$\Delta x\cdot \Delta p\ge \frac{\hbar}{2}$$B$G$"$k$+$i!"(B
+  	  \item 不確定性関係は$\Delta x\cdot \Delta p\ge \frac{\hbar}{2}$であるから、
   	  	\[
   	  		\Delta p \ge \frac{\hbar}{2\Delta x}=\frac{\hbar}{2a}.
   	  	\]
-  	  \item $BNN0h(B$|x|<a$$B$G$N%(%M%k%.!<$r9M$($k$H!"(B
+  	  \item 領域$|x|<a$でのエネルギーを考えると、
   	  	\[
   	  		E=\frac{p^2}{2m}-U_0
   	  		 \ge \frac{(\Delta p)^2}{2m}-U_0
   	  		 \ge \frac{\hbar^2}{8ma^2}-U_0,
   	  	\]
-  	  	$BB($A!"0J2<$N>r7o$,I,MW$H;W$o$l$k(B;
+  	  	即ち、以下の条件が必要と思われる;
   	  	\[
   	  		U_0 \ge \frac{\hbar^2}{8ma^2}-E.
   	  	\]
 	\end{enumerate}
   \item 
   	\begin{enumerate}
-  	  \item Schr\"odinger$BJ}Dx<0$O(B
+  	  \item Schr\"odinger方程式は
   	  	\[
   			\frac{d^2}{dx^2}\psi(x)=-\frac{2m\left[E-U(x)\right]}{\hbar^2}\psi(x).
   	  	\]
-  	  	$BB+G{>uBV$r9M$($k$N$G(B$-U_0<E<0$$B$G$"$C$F!"(B
+  	  	束縛状態を考えるので$-U_0<E<0$であって、
   	  	\[
   	  		k=\frac{\sqrt{2m|E|}}{\hbar},
   	  		\qquad
   	  		\kappa = \frac{\sqrt{2m(E+U_0)}}{\hbar}
   	  	\]
-  	  	$B$H$*$/$H!"(B$|x|\to +\infty$$B$G(B$\psi(x)\to 0$$B$H$J$j!"$+$DO"B3$J(B$\psi(x)$$B$O0J2<$N7A$K8B$i$l$k!((B
+  	  	とおくと、$|x|\to +\infty$で$\psi(x)\to 0$となり、かつ連続な$\psi(x)$は以下の形に限られる；
   	  	\[
   	  		\psi(x)=\left\{
   					\begin{array}{cc}
@@ -91,63 +91,63 @@ U(x)=
   					\end{array}
 				\right..
   	  	\]
-  	  	$A$$B$O5,3J2=Dj?t$G$"$k$,!"0LAj(B$\delta$$B$K$D$$$F$O!"GHF04X?t$N0LAj$NITDj@-$K$h$C$F(B
-  	  	$-\frac{\pi}{2} \le \delta < \frac{\pi}{2}$$B$r9M$($l$P==J,$G$"$k!#(B
-  	  	$BBP?tHyJ,(B$\frac{d}{dx}\ln\psi(x)=\frac{\psi}{\psi'}$$B$bO"B3$G$J$1$l$P$J$i$J$$$+$i!"(B$x=\mp a$$B$G(B
-  	  	$B$=$N>r7o$r9M$($k$H!"(B
+  	  	$A$は規格化定数であるが、位相$\delta$については、波動関数の位相の不定性によって
+  	  	$-\frac{\pi}{2} \le \delta < \frac{\pi}{2}$を考えれば十分である。
+  	  	対数微分$\frac{d}{dx}\ln\psi(x)=\frac{\psi}{\psi'}$も連続でなければならないから、$x=\mp a$で
+  	  	その条件を考えると、
   	  	\[
   	  		k = \kappa \cot \delta,  
   	  		\qquad
   	  		-k = \kappa \cot (2\kappa a +\delta).
   	  	\]
-  	  	$B$3$l$i(B2$B<0$O$=$l$>$l(B
+  	  	これら2式はそれぞれ
   	  	\[
   	  		0 < \delta < \frac{\pi}{2},
   	  		\qquad
   	  		-\frac{\pi}{2} < 2\kappa a + \delta -n\pi <0 \quad (n=1,2,\cdots)
   	  	\]
-  	  	$B$G$"$k$3$H$r<(:6$7$F$$$k!#$^$?!"4JC1$J=q$-49$($K$h$C$F(B
+  	  	であることを示唆している。また、簡単な書き換えによって
   	  	\[
   	  		\sin \delta = \frac{\hbar\kappa}{\sqrt{2mU_0}},
   	  		\qquad
   	  		\sin (2\kappa a + \delta - n\pi) = -\frac{\hbar\kappa}{\sqrt{2mU_0}}
   	  	\]
-  	  	$B$G$"$k$+$i!"$3$l$i#2<0$+$i(B$\delta$$B$r>C5n$7$F<!$ND61[J}Dx<0$rF@$k!((B
+  	  	であるから、これら２式から$\delta$を消去して次の超越方程式を得る；
 		\begin{equation}
 			\frac{n\pi}{2}=\kappa a + \arcsin \frac{\hbar\kappa}{\sqrt{2mU_0}}.\eqname{Q1_Energy_level}
 		\end{equation}
-  	  	$BC"$7!"(B$0<\arcsin<\frac{\pi}{2}$$B$H$9$k!#>e$ND61[J}Dx<0$N1&JU$O(B
-  	  	$E$$B$NC1D4A}2C4X?t$G$"$k$+$i!"(B$n$$B$NCM$O%(%M%k%.!<=`0L$NDc$$=g$K0lBP0lBP1~$7$F$$$k!#(B
-  	  	$BFC$K!"@5@0?t(B$n$$B$N<h$jF@$kCM$O(B
+  	  	但し、$0<\arcsin<\frac{\pi}{2}$とする。上の超越方程式の右辺は
+  	  	$E$の単調増加関数であるから、$n$の値はエネルギー準位の低い順に一対一対応している。
+  	  	特に、正整数$n$の取り得る値は
   	  	\[
   	  		n=1,\cdots,1+\left[\frac{2a\sqrt{2mU_0}}{\pi\hbar}\right]
   	  	\]
-  	  	$B$G$"$k!#(B($\left[\cdots\right]$$B$O(BGauss$B5-9f$G$"$k!#(B)
-  	  	\item $U_0$$B$NCM$K0M$i$:!"D61[J}Dx<0(B(\eqhref{Q1_Energy_level})$B$K$O(B$n=1$$B$N2r$,I,$:B8:_$9$k!#(B
-  	  	$B<B:]!"(B$n=1$$B$G$OJ}Dx<0$,(B
+  	  	である。($\left[\cdots\right]$はGauss記号である。)
+  	  	\item $U_0$の値に依らず、超越方程式(\eqhref{Q1_Energy_level})には$n=1$の解が必ず存在する。
+  	  	実際、$n=1$では方程式が
   	  	\[
   	  		\cos \kappa a=\frac{\hbar\kappa}{\sqrt{2mU_0}}\equiv \zeta \kappa a,
   	  		\quad
   	  		\zeta \equiv \frac{\hbar}{a\sqrt{2mU_0}}\gg 1 
   	  	\]
-  	  	$B$@$+$i!"D>@~(B$y=\zeta\kappa a$$B$H6J@~(B$y=\cos(\kappa a)$$B$O(B$0<\kappa a<\frac{\pi}{2}$$B$K$*$$$F(B
-  	  	$BI,$:(B1$B$D$N8rE@$r;}$D$3$H$r9M$($l$P2r$NB8:_$OL@$i$+$G$"$k!#(B
-  	  	\item $B>r7o$h$j!"(B$n=1$$B$N=`0L$N$_$,B8:_$9$k!#5a$a$k=`0L(B$E$$B$O(B
-  	  	$B>e$NJ}Dx<0$N2r$G$"$k!#(B
-  	  	$B>r7o$+$i!"(B$\kappa a\ll 1$$B$H9M$($i$l$k$+$i!"(B$\cos \kappa a$$B$r(BTaylor$BE83+$7$F(B
+  	  	だから、直線$y=\zeta\kappa a$と曲線$y=\cos(\kappa a)$は$0<\kappa a<\frac{\pi}{2}$において
+  	  	必ず1つの交点を持つことを考えれば解の存在は明らかである。
+  	  	\item 条件より、$n=1$の準位のみが存在する。求める準位$E$は
+  	  	上の方程式の解である。
+  	  	条件から、$\kappa a\ll 1$と考えられるから、$\cos \kappa a$をTaylor展開して
   	  	\[
   	  		1-\frac{(\kappa a)^2}{2}\simeq \zeta \kappa a.
   	  	\]
-  	  	$B99$K(B$\displaystyle (\kappa a)^2 = \left(\frac{\cos\kappa a}{\zeta}\right)^2 \simeq 1/\zeta^2$
-  	  	$B$H6a;w$9$k$H!"(B
+  	  	更に$\displaystyle (\kappa a)^2 = \left(\frac{\cos\kappa a}{\zeta}\right)^2 \simeq 1/\zeta^2$
+  	  	と近似すると、
   	  	\[
   	  		1-\frac{1}{2\zeta^2} \simeq \zeta \kappa a.
   	  	\]
-  	  	$B$3$l$r2r$$$F!"(B$\displaystyle \frac{ma^2}{\hbar^2}U_0$$B$N(B1$B<!$^$G;D$9$H!"(B
+  	  	これを解いて、$\displaystyle \frac{ma^2}{\hbar^2}U_0$の1次まで残すと、
   	  	\[
   	  		E\simeq -\frac{2ma^2}{\hbar^2}U_0^2.
   	  	\]
-  	  	\item $B$3$3$^$G$G8=$l$?<0$G(B$n=1$$B$H$7$?$b$N$rMQ$$$F!"(B
+  	  	\item ここまでで現れた式で$n=1$としたものを用いて、
   	  	\begin{eqnarray*}
   	  		R&=&\frac{\int_{-\infty}^a|\psi(x)|^2dx+\int_a^\infty |\psi(x)|^2dx}
   	  			{\int_{-a}^a|\psi(x)|^2dx}\\
@@ -156,13 +156,13 @@ U(x)=
   	  		&=&\frac{\hbar^2\kappa^2}{2mU_0ka}\\
   	  		&=&\frac{\hbar^2}{2ma^2U_0}-1.
   	  	\end{eqnarray*}
-  	  	$B>r7o$+$i!"(B$R\gg 1$$B$G$"$k$3$H$OL@$i$+$@$+$i!"AjBPE*$K0f8M$N30$NJ}$,0f8M$NCf$h$jN3;R$NB8:_3NN($OBg$-$/!"(B
-  	  	$BN3;R$N0LCV$NMI$i$.(B$\Delta x$$B$O0f8M$N%9%1!<%k(B$a$$B$h$j$bBg$-$$$O$:$G$"$k!#(B
-  	  	$B=>$C$F(B$\Delta x=a$$B$H$9$k8+@Q$b$j$,2a>.$G$"$C$?0Y$KIT3NDj@-4X78$K$h$k5DO@$O@5$7$/$J$+$C$?$H9M$($i$l$k!#(B
+  	  	条件から、$R\gg 1$であることは明らかだから、相対的に井戸の外の方が井戸の中より粒子の存在確率は大きく、
+  	  	粒子の位置の揺らぎ$\Delta x$は井戸のスケール$a$よりも大きいはずである。
+  	  	従って$\Delta x=a$とする見積もりが過小であった為に不確定性関係による議論は正しくなかったと考えられる。
   	\end{enumerate}
 \end{enumerate}
 
-%$B$H$j$"$($:$3$s$J46$8$G!#(B
+%とりあえずこんな感じで。
 
 \end{answer}
 
